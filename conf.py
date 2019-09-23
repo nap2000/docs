@@ -121,7 +121,7 @@ primary_domain = 'js'
 html_theme = "sphinx_rtd_theme"
 
 # Add logo stuff
-html_logo = '_static/img/smap-logo-wide.png'
+html_logo = '_static/img/smap-logo-wide.jpg'
 html_theme_options = {
     'logo_only': True,
     'display_version': False,
