@@ -19,5 +19,10 @@ This documentation is currently under development and is progressively replacing
 .. toctree::
   :maxdepth: 1
 
+  console.rst
+
+.. toctree::
+  :maxdepth: 1
+
   legacydocs.rst
  
