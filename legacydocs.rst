@@ -1,13 +1,9 @@
-Getting Started With ODK
-=========================
+Legacy Documentation
+====================
 
-This document walks you through a very basic setup process,
-to get you familiar with using Open Data Kit.
-
-You will:
-
-.. contents::
- :local:
+Here are links to the original Google Drive.  Progressively content from these files will be used to create the new online documentation.
 
 
-`1. Introduction.ppt <https://drive.google.com/open?id=0B5_SmpWlQYxvMVZaZEk2MmZuRTg>`_
+`Analyst Training Material <https://drive.google.com/drive/folders/0B5_SmpWlQYxvNExwSFV5X051Yjg>`_
+
+

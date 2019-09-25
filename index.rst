@@ -18,7 +18,6 @@ This documentation is currently under development and is progressively replacing
 
 .. toctree::
   :maxdepth: 1
-  :caption: Old Powerpoint Documentation
 
   legacydocs.rst
  
