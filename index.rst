@@ -17,6 +17,7 @@ This documentation is currently under development and is progressively replacing
   getting-started.rst
 
 .. toctree::
+
   :maxdepth: 1
 
   console.rst
