@@ -7,5 +7,5 @@ submitted result for an Evaluation.
 .. figure::  _images/console.jpg
    :align:   center
 
-   The Console Is
+   The Console
 
