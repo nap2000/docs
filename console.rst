@@ -32,8 +32,7 @@ date between will be shown.
 * **My records:** Records that you have selected for editing.
 * **Unassigned Records:** Records that no one has selected for editing.
 * **Other Records:** Records being edited by other people.
-* **Filter:** This is the advanced filter. For help on how to use this click on the (i) info symbol.  An example might be: ${age} < 25.  This 
-would then only show records where the answer to the question "age" was less than 25.
+* **Filter:** This is the advanced filter. For help on how to use this click on the (i) info symbol.  An example might be: ${age} < 25.  This would then only show records where the answer to the question "age" was less than 25.
 * **Max Records:** The maximum number of records you want to load.  If you set this to 0 then all records will be loaded.  By default this is set
 to 1,000 so that loading does not take too long when you have a lot of data.  If you have a lot of records you may want to apply other 
 filters to find the ones you are interested in.
