@@ -12,18 +12,22 @@ This documentation is currently under development and is progressively replacing
 
 
 .. toctree::
-  :maxdepth: 1
+  :maxdepth: 2
 
   getting-started.rst
 
 .. toctree::
+  :maxdepth: 2
 
-  :maxdepth: 1
+  creating-surveys.rst
+  
+.. toctree::
+  :maxdepth: 2
 
   console.rst
 
 .. toctree::
-  :maxdepth: 1
+  :maxdepth: 2
 
   legacydocs.rst
  
