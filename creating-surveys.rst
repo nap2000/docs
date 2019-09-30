@@ -1,16 +1,18 @@
 Editing Surveys
 ===============
-  
-You put your questions into surveys.  There are two main ways to create these surveys.
+
+.. contents::
+ :local:
+
+You put your questions into surveys. 
+
+Editors
+-------
 
 .. toctree::
   :maxdepth: 1
-
+  
   excel-editor.rst
-  
-.. toctree::
-  :maxdepth: 1
-
   online-editor.rst
   
 Survey Size
