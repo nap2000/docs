@@ -1,5 +1,5 @@
-Creating Surveys
-================
+Editing Surveys
+===============
   
 You put your questions into surveys.  There are two main ways to create these surveys.
 
