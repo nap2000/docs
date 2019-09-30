@@ -1,9 +1,9 @@
-Getting Started With Smap
-=========================
+Getting Started
+===============
 
 This document walks you through some basic steps to get started using Smap.
 
-You will:
+Contents:
 
 .. contents::
  :local:

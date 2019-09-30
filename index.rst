@@ -13,21 +13,12 @@ This documentation is currently under development and is progressively replacing
 
 .. toctree::
   :maxdepth: 2
+  :titlesonly:
 
   getting-started.rst
-
-.. toctree::
-  :maxdepth: 2
-
+  concepts.rst
+  question_types.rst
   creating-surveys.rst
-  
-.. toctree::
-  :maxdepth: 2
-
   console.rst
-
-.. toctree::
-  :maxdepth: 2
-
   legacydocs.rst
  

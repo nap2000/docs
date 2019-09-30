@@ -1,6 +1,9 @@
 Legacy Documentation
 ====================
 
+.. contents::
+ :local:
+ 
 Here are links to the original Google Drive.  Progressively content from these files will be used to create the new online documentation.
 
 
