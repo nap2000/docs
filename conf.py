@@ -128,7 +128,7 @@ primary_domain = 'js'
 #
 
 # Add logo stuff
-html_logo = '_static/img/smap-logo-wide.jpg'
+#html_logo = '_static/img/smap-logo-wide.jpg'
 html_theme_options = {
 }
 html_title = "Smap Docs"

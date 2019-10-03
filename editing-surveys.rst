@@ -12,7 +12,6 @@ You put your questions into surveys.
   
   excel-editor.rst
   online-editor.rst
-  auditing.rst
   
 Survey Size
 -----------

@@ -18,6 +18,7 @@ This documentation is currently under development and is progressively replacing
   concepts.rst
   question_types.rst
   editing-surveys.rst
+  auditing.rst
   console.rst
   legacydocs.rst
  
