@@ -38,7 +38,7 @@ the question name with curly brackets and put a dollar sign in front.
 
 Questions can be in any form. For example you may have a survey that gathers information on
 comapanies and the projects that they are involved in. Hence the data on projects could be in a sub-form.
- The following filter will trigger on a
+The following filter will trigger on a
 company name of "Widgets" that has at least one project with a value over 100,000::
 
    ${company_name} = 'Widgets' and ${project_value} > 100000
@@ -94,9 +94,9 @@ both sides of these operators.
 * <= (Less than or equals)
 * != (Not equals)
 * not
-* - (minus)
-* + (plus)
-* * (times)
+* \- (minus)
+* \+ (plus)
+* \* (times)
 * / (divide)
 * and
 * or
@@ -223,7 +223,7 @@ Period Examples::
   * ${_start} + {23:23:23}
   * now() - ${_upload_time} < {2_days}
   
- Special Terms Examples::
+Special Terms Examples::
 
   * ${image} empty
   * _upload_time > '2017-01-23'

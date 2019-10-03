@@ -6,14 +6,13 @@ Editing Surveys
 
 You put your questions into surveys. 
 
-Editors
--------
-
 .. toctree::
   :maxdepth: 1
+  :hidden:
   
   excel-editor.rst
   online-editor.rst
+  auditing.rst
   
 Survey Size
 -----------
