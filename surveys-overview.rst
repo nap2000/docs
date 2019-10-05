@@ -1,5 +1,5 @@
-Editing Surveys
-===============
+Surveys Overview
+================
 
 .. contents::
  :local:
