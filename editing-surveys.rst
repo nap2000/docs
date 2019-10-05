@@ -3,17 +3,20 @@ Editing Surveys
 
 .. contents::
  :local:
+ 
+Tools
+-----
 
-You put your questions into surveys. 
+1.  Excel Editor
+2.  Online Editor
 
-.. toctree::
-  :maxdepth: 1
-  :hidden:
+The excel editor is most suited to larger complex surveys.  It also allows editing without an internet connection.
+
+The online editor is quicker and simpler than the excel editor but harder to use for large complex surveys.  It also can be
+unreliable when moving questions within the survey, particularly if this is to and from groups.  If you enclounter any problems
+when moving questions export the survey to excel, do the move there and then load the excel survey back onto the server.  
   
-  excel-editor.rst
-  online-editor.rst
-  auditing.rst
-  
+
 Survey Size
 -----------
 Surveys can be as small as 1 question.  There is no specified maxiumum size,  one customer completed a survey that had over 4,500 questions.
