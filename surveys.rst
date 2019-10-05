@@ -5,7 +5,7 @@ Surveys
   :maxdepth: 1
   
   surveys-overview.rst
-  editing-xlsform.rst
+  xls-editor.rst
   online-editor.rst
   references.rst
 
