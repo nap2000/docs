@@ -18,6 +18,7 @@ This documentation is currently under development and is progressively replacing
   concepts.rst
   fieldTask.rst
   surveys.rst
+  admin.rst
   auditing.rst
   console.rst
   legacydocs.rst
