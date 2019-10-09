@@ -4,7 +4,9 @@ Editing in Excel
 .. toctree::
   :maxdepth: 1
   
-  excel-create.rst
+  xls-get-template.rst
+  xls-structure.rst
+  xls-simple-questions.rst
 
 
 

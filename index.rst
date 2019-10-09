@@ -16,11 +16,10 @@ This documentation is currently under development and is progressively replacing
 
   getting-started.rst
   concepts.rst
-  editing-surveys.rst
-  editing-xlsform.rst
-  online-editor.rst
-  references.rst
+  fieldTask.rst
+  surveys.rst
   auditing.rst
   console.rst
   legacydocs.rst
+  support.rst
  
