@@ -21,7 +21,9 @@ to the data collector.
   :header-rows: 1
   :file: tables/simple_questions.csv
 
+.. warning::
 
+  Question names cannot have spaces. Refer to :ref:`question-names` for guidance
 
 
    
