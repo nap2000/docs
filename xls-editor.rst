@@ -7,6 +7,7 @@ Editing in Excel
   xls-get-template.rst
   xls-structure.rst
   xls-simple-questions.rst
+  xls-select-questions.rst
 
 
 
