@@ -16,8 +16,10 @@ This documentation is currently under development and is progressively replacing
 
   getting-started.rst
   concepts.rst
+  fieldTask.rst
   surveys.rst
   auditing.rst
   console.rst
   legacydocs.rst
+  support.rst
  

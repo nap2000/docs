@@ -1,0 +1,15 @@
+Question Type,Answer Input,Example Question Label
+text,Any text response,What is the name of the Householder?
+integer,An integer (i.e. whole number),How many people live in this household?
+decimal,A number containing a decimal point,What is the weight of the child in KG?
+note,Displays the label on the screen but does not allow an input,This section is for mothers
+date,A date,What is the child's date of birth?
+time,A time,What time did the lesson start?
+datetime,Both a date and a time,When did the meeting happen?
+image,Take a picture or upload an image that has already been taken,Take a picture of the well
+video,Record a video,Take a video of the damage
+audio,Record audio,Record the story.  Note audio recording use significantly less disk space than video.
+geopoint,A single GPS point,Record the location
+geotrace,A line,Record the path to the well
+geoshape,An area,Record the area of the farm
+range,Select a number within a range,How would you rate the project implementation from 1 to 10

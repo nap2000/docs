@@ -5,7 +5,7 @@ Template Worksheets
  :local:
  
 The XLS template has up to 5 worksheets.  However by far the most important are the first 2; survey and choices.  Most of the time these
-are the only two worksheets that you will use. 
+are the only two worksheets that you will use. In fact the other 3 worksheets are optional and could be deleted.
 
 .. figure::  _images/structure1.jpg
    :align:   center
