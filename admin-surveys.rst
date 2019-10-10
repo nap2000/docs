@@ -1,5 +1,5 @@
-Survey Management
-=================
+Form Management
+===============
 
 .. contents::
  :local:
