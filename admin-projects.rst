@@ -4,9 +4,10 @@ Projects
 .. contents::
  :local:
  
-Surveys are stored in projects.  In a similar way to the use of directories to store files on a computer, they are the principle mechanism
-for managing large numbers of surveys.  Enumerators can be given access to a project which then gives them access to all the surveys in that 
+Surveys are stored in projects in the same way directories are used to store files on a computer.  They are the principle mechanism
+for managing large numbers of surveys. Enumerators can be given access to a project which then gives them access to all the surveys in that 
 project.
+
 
 Simplify the work environment
 -----------------------------
@@ -18,7 +19,7 @@ Simplify the work environment
 Security
 --------
 
-Restrict access to surveys and their data to authorised users
+You can use projects to restrict access to surveys and their data to authorised users
 
 .. warning::
 
