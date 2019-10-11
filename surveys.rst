@@ -7,6 +7,7 @@ Surveys
   surveys-overview.rst
   xls-editor.rst
   online-editor.rst
+  quality_assurance.rst
   references.rst
 
 

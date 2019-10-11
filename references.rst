@@ -72,6 +72,8 @@ Type:  child_form / parent_form
 Launches another survey from within the current survey. The difference between these is in how the data from the two surveys
 are linked in the results database.  If you don't care about this linkage then either will do.
 
+.. _meta_items:
+
 Meta Items
 ----------
 
