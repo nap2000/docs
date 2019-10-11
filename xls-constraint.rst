@@ -51,8 +51,8 @@ Probably the most important constraint that you can add is to specify that they 
 
 To make a question required::
 
-  Add **yes** to the **required** column
-  Optionally add your own message in the **required_message** column. Usually this is not required
+  Add "yes" to the re"quired" column
+  Optionally add your own message in the "required_message" column
   
 .. figure::  _images/constraint3.jpg
    :align:   center
