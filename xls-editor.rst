@@ -8,6 +8,9 @@ Editing in Excel
   xls-structure.rst
   xls-simple-questions.rst
   xls-select-questions.rst
+  xls-referring-questions.rst
+  xls-relevance.rst
+  xls-constraint.rst
 
 
 

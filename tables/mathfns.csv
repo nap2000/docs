@@ -1,0 +1,26 @@
+operator,usage,example
+Plus,,${a} + ${b}
+Minus,-,${a} - ${b}
+Times,*,${a} * ${b}
+Divide,div,${a} div ${b}
+"Modulus
+Remainder",mod,"3 mod 2
+Results in 1"
+Raise to the power,"pow(a,b)","pow(${width}, 3)
+
+Returns ${width} * ${width} * ${width}"
+Random number,"random()
+
+Returns a random number between 0.0 (inclusive) and 1.0 (exclusive)","round((random()* ${number_children} + 0.5), 0)
+
+Generates a random number between 1 and the number of children in the household. This can be used to select a child for further questions.
+
+It can be combined with the position() function to display the name of the child that has been selected."
+Round to a number of decimal places,"round(a,b)
+
+Rounds the number a to the number of decimals places b","round(${weight_kg}, 2)
+
+round(0.5, 0)is 1"
+Sum of repeating group,sum(nodeset),sum(${weight})
+Maximum,max(nodeset),Maximum value in a repeating group
+Minimum,min(nodeset),Minimum value in a repeating group

@@ -51,7 +51,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Smap'
-copyright = '2019, Neil Penman'
+copyright = '2019, Smap Consulting'
 author = 'Neil Penman'
 
 # The version info for the project you're documenting, acts as replacement for

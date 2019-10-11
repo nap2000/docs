@@ -11,6 +11,7 @@ Select Types
 
 * select_one   			(The user can only select one of the choices)
 * select_multiple       (The user can select multiple choices)
+* rank					(The user can rank the choices, that is order them)
 
 Select One or Select Multiple
 -----------------------------
@@ -53,5 +54,9 @@ The question is linked to its list of choices through the list name.
   There is a space between the question type and the list name but there can be no spaces in the list name or the 
   question name.
 
+Rank
+----
 
+A question of type **rank** is specified just like the other select questions with a list name that links the question to
+its choices.  When the user answers the question they will be asked to drag the choices to re-order them.
    

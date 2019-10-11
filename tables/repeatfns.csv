@@ -1,0 +1,12 @@
+operator,usage,example
+reference a question inside a repeat group,"indexed-repeat(${repeatquestion}, ${repeatgroup}, index)
+
+Index starts from 1","indexed-repeat(${name}, ${geopolygon_a}, 2)
+
+Returns the value for the name question in the second occurrence of the geopolygon_a repeat group."
+Index of current repeat group,position(..),"indexed-repeat(${name}, ${names}, position(..))
+
+Returns the name from the names repeat group at the same location index as the current repeat group."
+Getting the number of repeats,count(),"count(${repeat_name})
+
+Returns the number of repeats"

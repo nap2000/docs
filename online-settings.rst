@@ -1,5 +1,5 @@
-Settings
-========
+Survey Settings
+===============
 
 To change the survey settings select then menu **File** then **Settings**. 
 
@@ -10,7 +10,7 @@ To change the survey settings select then menu **File** then **Settings**.
 
    Settings Dialog
 
-
+The meaning of these settings is described in the reference section :ref:`settings-reference`.
 
 
 

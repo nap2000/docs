@@ -1,0 +1,18 @@
+Function,usage,example
+pulldata,"pulldata(filename, data column, key column, key value)","pulldata('hhdata','members','hhid_key',${hhid})
+
+This retrieves a value from the members column in the hhdata.csv file where the hhid_key column has the value selected for the hhid question.
+
+Available in webforms in version 18.05+"
+coalesce,"coalesce(value, value)","coalesce(${age}, 0)
+
+Coalesce returns the first non empty value out of the values provided in the parameters.This is useful when doing calculations with numbers as if a value was empty, perhaps because the question was not relevant, then the calculation will not work.
+
+In this example the age value is set to 0 if it is empty."
+area,"area(${the_geom})
+
+Where the_geom is the name of a geoshape type question","Note the name of the geoshape needs to be ""the_geom""."
+distance,"distance(${the_geom})
+
+Where the_geom is the name of a geoshape or geotrace question","As for area you should name your geometry question ""the_geom"". The reason being Smap currently converts all geometry questions to that name to simplify GIS analysis. So if you are referencing a question in an ""area"" function using a different name then it will not be found."
+,,

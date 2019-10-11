@@ -1,0 +1,51 @@
+Function,usage,example
+Concatenate Text,"concat(text1, text2, text3 etc)","concat(${name}, ${address}, ${city})
+
+This joins the answers to the name, address and city question. Use it with a ""calculate"" question"
+Join Text,"join(separator, text1, text2, text3 etc)
+This is the same as concatenate text except it adds the ""separator"" text between each of the items of text you are joining","join(';','Details',${name}, ${age})
+
+If the value of name was ""John Smith"" and the value of age was ""26"" then this would set the value of a calculate question to:
+Details;John Smith;26"
+Convert to number,number(${num-plots}),
+Convert to integer,int(${num-plots}),
+Convert to text,string(${num-plots}),
+Get the label for a choice in a select one question,"jr:choice-name(${question name}, '${choice name}').","jr:choice-name(${transport_type}, '${transport_type}')
+
+Note the quotes around the second parameter"
+substring-before,"substring-before(a, b)
+
+Returns everything in ""a"" before the text in ""b""","substring-before('xx-yy', '-')
+returns 'xx'
+
+substring-before(${q}, ' ')
+where ${q} has the value ""Tom Smith"", this will return ""Tom""
+
+Available with fieldTask 5.90"
+aubstring-after,"substring-after(a, b)
+
+Returns everything in ""a"" after the text in ""b""","substring-after('xx-yy', '-')
+returns 'yy'
+
+substring-after(${q}, ' ')
+where ${q} has the value ""Tom Smith"", this will return ""Smith""
+
+Available with fieldTask 5.90"
+translate,"translate(text, abc, XYZ)
+
+text
+The text to evaluate.
+abc
+The string of characters that will be replaced.
+XYZ
+The string of characters used for replacement. The first character inXYZwill replace every occurrence of the first character inabcthat appears intext.","translate('My old car', 'old', 'new')
+will return 'My new car'.
+
+translate('My old car', 'olda', 'newx')
+will return 'My new cxr'.
+
+
+Available with fieldTask 5.90
+
+The usage was taken from the following site which provides more information: https://developer.mozilla.org/en-US/docs/Web/XPath/Functions/translate"
+normalize-space,normalize-space(text),Removes leading and trailing spaces from text and converts multiple spaces into a single space

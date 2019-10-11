@@ -1,0 +1,35 @@
+operator,usage,example,notes
+this current prompt's answer,.,. < 5,"Constraint
+In a constraint, Dot (.) refers to the value in the current question.In this case it must be less than 5"
+not,not(expression),"not(selected(${qname}, 'c'))","Relevant
+A question is relevant as long as 'c' is not selected in question qname"
+and,and,"selected(., 'c') and selected(., 'd')","Constraint
+Both 'c' and 'd' need to be selected in the current question"
+or,or,"selected(., 'c') or selected(., 'd')","Constraint
+Either 'c' or 'd' needs to be selected for the current question"
+greater than,>,. > 10.51,"Constraint
+Current question must be greater than 10.51.
+Can also be combined with equals to make ""greater than or equal""
+>="
+less than,<,. < 10.51,"Constraint
+Current question must be less than 10.51.
+Can also be combined with equals to make ""less than or equal""
+<="
+selected,"selected(xpath/to/node, value)","selected(${qname}, 'n')","Relevant
+Checks if answer in selected prompt is selected
+Note xpath to node can be specified using ${} syntax with the question name"
+count-selected,count-selected(${multiple_choice_q}),count-selected( . ) < 4,"Constraint
+The number of options selected in this question must be less than 4."
+selected-at,"selected-at(${multiple_choice_q}, index)","selected-at(${trips}, 0)","The first selected item will be at index 0, the second at index 1 etc"
+regular expression,"regex(value, expression)","regex(., '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}')","Constraint
+This regex checks for a valid email address"
+equal to,. =,. = number('10'),"Constraint
+Current answer must be equal to 10"
+"Conditional
+(if)","if(condition, a, b)
+
+If the condition is true use ""a""
+otherwise use ""b""","if(${count} < 10, ${count}, 10)","Calculate
+If the count is less than 10 then use it.Perhaps as the number of times a repeat group is to be asked.Otherwise use the value 10.Hence this sets a cap on the value."
+Text Length,string-length(question),string-length(.) < 5,"Constraint
+The length of the text entered in the current question must be less than 5 characters"
