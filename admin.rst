@@ -6,6 +6,7 @@ Administration
   
   admin-surveys.rst
   admin-projects.rst
+  admin-users.rst
   admin-mob-device.rst
   admin-rbac.rst
 
