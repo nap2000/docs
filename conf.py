@@ -139,6 +139,8 @@ html_theme_options = {
 }
 html_title = "Smap Docs"
 
+html_show_sourcelink = False
+
 html_favicon = "_static/img/favicon.ico"
 
 # -- Options for HTMLHelp output ------------------------------------------

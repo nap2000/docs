@@ -1,9 +1,6 @@
 Referring to Questions
 ======================
 
-.. contents::
- :local:  
-
 To refer to another question::
   
   Surround the question name with ${...}

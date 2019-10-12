@@ -1,6 +1,9 @@
 Quality Assurance
 =================
 
+.. contents::
+ :local:  
+ 
 Mobile data collection can provide much higher quality than paper surveys however as the process is different some
 of the techniques you may have used for paper surveys are less easiliy applied and have to be replaced with different 
 quality measures.
