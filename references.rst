@@ -8,6 +8,7 @@ Survey References
   ref_question_types.rst
   ref_meta_items.rst
   ref_expressions.rst
+  ref_appearances.rst
   ref_settings.rst
 
 
