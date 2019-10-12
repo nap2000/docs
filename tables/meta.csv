@@ -8,3 +8,4 @@ phonenumber,The phone number (Rarely works Most phones will not supply this)
 simserial,The number of the SIM card in the phone
 email,The email address of the field user who submitted the results.  Specified in the fieldTask General Settings | User and device identity.
 username,The name of the user who submitted the results.  This does not need to be the same as the user id specified with the password in the server settings.  Specified in the fieldTask General Settings | User and device identity.
+start-geopoint,The location of the first question asked when the survey was first opened

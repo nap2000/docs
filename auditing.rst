@@ -1,3 +1,6 @@
+
+.. _auditing-servey-completion:
+
 Auditing Survey Completion
 ==========================
 
