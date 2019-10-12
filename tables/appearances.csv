@@ -14,9 +14,7 @@ coptic,Shows a Coptic calendar,"Use with type of ""date"""
 ethiopian,Shows an Ethiopian calendar,"Use with type of ""date"""
 islamic,Shows an Islamic calendar,"Use with type of ""date"""
 bikram-sambat,Shows a Nepali date widget,"Use with type of ""date"""
-persian,"Shows a Persian calendar
-
-Field Task 6.32+","Use with type of ""date"""
+persian,Shows a Persian calendar,"Use with type of ""date"""
 placement-map,Allows the user to select a location on a map,"Use with type of ""geopoint"""
 quick,On a select_one question as soon as you select the option the next question will be asked.  It may be easy to enter the wrong value though,"Use with type of ""select_one"" but only if it will be obvious to the user that they have made the wrong choice and will need to swipe back.  For example in cascading selects on location."
 minimal,"On a select_one, or select multiple question this will show the set of options as a ""spinner"". That is on one line.  When you click on the spinner it will expand to allow you to select the options.
@@ -38,8 +36,7 @@ quickcompact-3
 etc",As per the standard compact appearances but with auto advance,
 list,Will show choices horizontally,"Use with type of ""select_one"" or ""select_multiple""."
 numbers,Will show the numeric keyboard for a text question. This can be used to allow numbers longer than 10 digits to be entered.,Use with text questions
-thousands-sep,,"Use on question types; integer, decimal and text with appearance of ""numbers"" to add a thousands separator."
-thousands-sep,,
+thousands-sep,A thousands separator will be added.  The actual separator used will depend on the locale of the phone.,"Use on question types; integer, decimal and text with appearance of ""numbers"" to add a thousands separator."
 likert,Will show a select_one question as a likert scale,"Webforms only, not available in fieldTask. Instead for fieldTask you can use a range type question. These can also be used with Webforms."
 rating,"Will allow the user to select from a series of stars.   The number of stars available for selection is set by the ""end"" parameter in the range question.",Use with range question.
 vertical,Makes a range appear vertically,Use with range questions
@@ -67,13 +64,3 @@ This cannot be included with other appearance options.",This appearance is usefu
 distress,"Shows a thermometer with a scale from 1-10 from which you can select values
 
 Only works on webForms and not in fieldTask",Use with integer questions.
-ex:android,"Calling another android application
-
-Example 1: Send an SMS message
-ex:android.intent.action.SENDTO(uri_data='smsto:5555555', sms_body=${message})
-
-Example 2: Send an email
-ex:android.intent.action.SENDTO(uri_data='mailto:example@example.com?subject=${subject}&body=${message})
-
-Example 3: Make a phone call
-ex:android.intent.action.DIAL(uri_data='tel:5555555')",More information available in the ODK documentation https://docs.opendatakit.org/launch-apps-from-collect/#specifying-a-uri-as-intent-data
