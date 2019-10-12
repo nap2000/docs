@@ -1,3 +1,5 @@
+.. _server-calculations:
+
 Server Calculations
 ===================
 
