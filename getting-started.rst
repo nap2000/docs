@@ -1,12 +1,11 @@
 Getting Started
 ===============
 
-This document walks you through some basic steps to get started using Smap.
-
-Contents:
-
 .. contents::
  :local:
+ 
+This document walks you through some basic steps to get started using Smap.
+
 
 .. _getting-started-create-sg-account:
 

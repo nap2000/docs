@@ -1,6 +1,9 @@
 Users
 =====
 
+.. contents::
+ :local:
+ 
 To get to the user management screen select the **Admin** module and then **Users**.
 
 User Management has multiple tabs not all of them are necessarily related to Users!  You can treat it as a 

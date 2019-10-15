@@ -59,4 +59,22 @@ To make a question required::
    :alt: Required
 
    Required
+   
+Complex constraints on multiple Questions
+-----------------------------------------
+
+Its good to validate a question when the user answers it but sometimes you may want to take into account later questions.
+
+You can add a constraint that forces the user to go back and fix up earlier questions, to do this create a
+
+*  read only question of type “note”
+*  make it mandatory!!!  The user will not be able to get past it.
+*  make the question **relevant** only if there is a problem with answers to previous questions
+*  in the label specify instructions to the data collector on how to resolve the issue
+
+Refer to the example survey “constraint trick question.xls”
+
+
+
+
   

@@ -16,11 +16,13 @@ This documentation is currently under development and is progressively replacing
 
   getting-started.rst
   concepts.rst
+  android.rst
   fieldTask.rst
   surveys.rst
   admin.rst
   auditing.rst
   console.rst
+  examples.rst
   legacydocs.rst
   support.rst
  

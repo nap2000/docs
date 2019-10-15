@@ -11,6 +11,9 @@ Editing in Excel
   xls-referring-questions.rst
   xls-relevance.rst
   xls-constraint.rst
+  xls-groups.rst
+  xls-calculations.rst
+
 
 
 

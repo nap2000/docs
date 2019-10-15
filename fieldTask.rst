@@ -162,7 +162,7 @@ E. Changing the Language
 
 You can change the survey language displayed by selecting **menu** and then **change language** while completing a survey.
 
-F. Mobile Application Settings
+F. FieldTask Settings
 ------------------------------
 
 There are many settings that you can configure on the device using **menu** and **general settings**.  Many of these can
