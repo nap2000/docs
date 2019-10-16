@@ -49,3 +49,7 @@ Available with fieldTask 5.90
 
 The usage was taken from the following site which provides more information: https://developer.mozilla.org/en-US/docs/Web/XPath/Functions/translate"
 normalize-space,normalize-space(text),Removes leading and trailing spaces from text and converts multiple spaces into a single space
+Text Length,string-length(question),"string-length(.) < 5
+
+Constraint
+The length of the text entered in the current question must be less than 5 characters"

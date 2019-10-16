@@ -13,6 +13,8 @@ Editing in Excel
   xls-constraint.rst
   xls-groups.rst
   xls-calculations.rst
+  xls-languages.rst
+  xls-repeats.rst
 
 
 

@@ -46,9 +46,6 @@ Can be used to provide help if the user is online","Use with text questions.  Pu
 horizontal,"Will show select choices in multiple columns
 
 Webforms only, not available in fieldTask",Use with select  questions
-multiline,"Will show a text entry question on multiple lines
-
-Webforms only, not available in fieldTask.  Use the ""rows"" parameter for FieldTask to specify the enumber of rows.",Use with text questions.
 phoneonly,"Will not add the data into the results database.
 
 Allows you to collect sensitive data such as names that can be referenced while the data is being collected but are not then removed after the data is submitted.",

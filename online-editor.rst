@@ -5,6 +5,7 @@ Editing Online
   :maxdepth: 1
   
   online-settings.rst
+  online-required.rst
 
 
 

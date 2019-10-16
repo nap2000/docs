@@ -22,7 +22,17 @@ All the questions between **begin group** and **end group** are within the group
 *  To put all questions in a group onto the same screen add **form-list** as an appaearance
 *  In the special case where all the questions are select_one or select multiple and they refer to the same
    list then you can put them into a table setting an appearance of **table-list**
+   
+.. note::
 
+  An end group type question does not need a name.  However it is a good idea to give it the same name
+  as the question of type "begin group".  "end group" and "end repeat" are the only question types that
+  do not need a unique name.
+
+.. note::
+
+  A "begin group" question does not need a label.  If you do include a label then it will be shown at the top of the
+  screen in FieldTask for every question in the group.
 
 
 

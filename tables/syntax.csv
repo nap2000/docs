@@ -31,5 +31,3 @@ Current answer must be equal to 10"
 If the condition is true use ""a""
 otherwise use ""b""","if(${count} < 10, ${count}, 10)","Calculate
 If the count is less than 10 then use it.Perhaps as the number of times a repeat group is to be asked.Otherwise use the value 10.Hence this sets a cap on the value."
-Text Length,string-length(question),string-length(.) < 5,"Constraint
-The length of the text entered in the current question must be less than 5 characters"
