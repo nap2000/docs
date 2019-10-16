@@ -11,6 +11,7 @@ Survey References
   ref_appearances.rst
   ref_parameters.rst
   ref_settings.rst
+  ref-styles.rst
 
 
 
