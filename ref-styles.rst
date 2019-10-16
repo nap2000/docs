@@ -1,3 +1,5 @@
+..  _formatting:
+
 Formatting
 ==========
 
@@ -47,3 +49,9 @@ HTML
   :widths: 30,40,40,50
   :header-rows: 1
   :file: tables/html.csv
+  
+Example
+-------
+
+The following example survey combines both markdown and HTML. 
+`Formatting labels <https://docs.google.com/spreadsheets/d/1Jvxjc990GxFufGUUYg33zqL1p-Jw1YHaOmBXjRimfeQ/edit?usp=sharing>`_

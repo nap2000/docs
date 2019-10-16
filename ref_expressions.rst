@@ -42,6 +42,8 @@ Date Formats
 11.	%3    :   milliseconds padded with 0
 12.	%a    :   short text day (English)   
 
+.. _text_functions:
+
 Text Functions
 --------------
 

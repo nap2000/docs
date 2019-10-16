@@ -76,12 +76,12 @@ One function deserves special mention because it is so useful.  We may want to c
 number of questions into a simple score that we can use in relevance to determine further questions or to
 determine services that should be provided.
 
-For example::
+For example the requirement might be::
 
   If a child is still breast feeding and the child eats solids more than 3 times per day then the feeding 
   score is "good" else it is "bad".
   
-The if() function looks like this::
+The implementation with an if() function would then look like this::
 
   if(condition, true response, false response)
   
@@ -146,7 +146,14 @@ and then we convert that into the hunger scale as shown below:
    :alt:     Hunger Score Calculation
    
    Hunger Score Calculation
-  
+   
+Dynamic Text Calculation
+------------------------
+
+Text functions can be used to dynamicly create guidance text that includes formatting::
+
+  calculate hunger_msg  concat('The hunger scale is <font color="blue">', ${hunger_scale}, '</font>')  
+
 
 
 
