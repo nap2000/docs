@@ -21,6 +21,7 @@ This documentation is currently under development and is progressively replacing
   fieldTask.rst
   surveys.rst
   admin.rst
+  analysis.rst
   auditing.rst
   console.rst
   examples.rst

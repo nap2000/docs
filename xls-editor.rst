@@ -15,3 +15,4 @@ Editing in Excel
   xls-calculations.rst
   xls-languages.rst
   xls-repeats.rst
+  xls-cascading-selects.rst
