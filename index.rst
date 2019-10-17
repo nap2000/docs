@@ -1,5 +1,4 @@
-.. Smap documentation master file, created by
-   sphinx-quickstart on Sun Sep 22 09:45:45 2019.
+.. Smap documentation master file
 
 Welcome to Smap's documentation!
 ================================

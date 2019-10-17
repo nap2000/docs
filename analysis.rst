@@ -4,8 +4,14 @@
 Analysis
 ========
 
-.. contents::
- :local:
+.. toctree::
+  :maxdepth: 1
+  
+  analysis-export.rst
+  analysis-reports.rst
+  analysis-dashboard.rst
+ 
+ 
 
 
 

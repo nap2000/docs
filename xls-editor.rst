@@ -14,5 +14,5 @@ Editing in Excel
   xls-groups.rst
   xls-calculations.rst
   xls-languages.rst
-  xls-repeats.rst
   xls-cascading-selects.rst
+  xls-repeats.rst
