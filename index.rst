@@ -22,6 +22,7 @@ This documentation is currently under development and is progressively replacing
   admin.rst
   analysis.rst
   auditing.rst
+  server_expressions.rst
   console.rst
   examples.rst
   legacydocs.rst

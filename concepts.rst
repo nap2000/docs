@@ -7,6 +7,7 @@ Concepts
 
   keys.rst
   server-calculations.rst
+  groups.rst
 
 
 

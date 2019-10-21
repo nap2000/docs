@@ -20,8 +20,8 @@ To get here select the menus *Modules* and then *Console*.
    
 Records are shown in order with most recent at the top.  
    
-Changing the records in the table
----------------------------------
+Changing the records displayed
+------------------------------
 
 The top half of the page contains the filters.  These are:
 
@@ -55,3 +55,35 @@ Sorting
 +++++++
 
 Clicking on a column heading will sort on that column.  Clicking again will change the sort direction.
+
+Editing a record
+----------------
+
+1.  Select the oversight survey that has the questions to be changed,  the available oversight surveys are those
+    surveys in the same group as the main survey
+2.  Select the record to be edited
+3.  Lock the record.  Only the person who has locked a record, and therefore assigned it to themselves, can
+    edit the record.  Administrators can assign records, including those currently locked, to someone else.
+4.  Click on the edit button
+
+.. figure::  _images/console2.jpg
+   :align:   center
+   :alt: The console Edit Page
+
+   Console Edit Page
+   
+On the console edit page questions are placed in 2 columns. The ones shown on the left are read only. They are the questions in the
+main survey where there is no question in the oversight survey with the same name.  The questions on the right are the questions
+form the oversight survey and can have their answer changed.  
+
+Hence if you want to be able to change the answer to a question in the main survey then you will need to have a question of the same
+name in the oversight survey. To add data to the main survey the question in the oversight survey would not be in the main survey.
+
+History Tab
++++++++++++
+
+Clicking on the history tab will show the changes that have been made to the record.  
+
+.. note:: This tab was previously called events.
+
+

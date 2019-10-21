@@ -1,5 +1,5 @@
-Form Management
-===============
+Survey Management
+=================
 
 .. contents::
  :local:
@@ -26,8 +26,12 @@ Creating Surveys
 If you are creating a brand new survey using the XLS Form editor then you can first download a template by clicking on the 
 **Download Template** button.
 
-When creating a survey you have the option of grouping it with existing surveys.  Refer to the relevant section in
-concepts for more details.
+Clicking on the **Create new Form** button will show a dialog where you can select the XLS file and specify a name for 
+your survey.
+
+The dialog also includes the option of grouping the new survey with an existing surveys.  Refer to :ref:`survey_groups` for details 
+on what this means. Only do this if you want to the new survey to share a common table with an existing survey. To add the
+new survey to a group select the name of the survey you want to group it with from the drop down.
 
 Replacing Surveys
 -----------------
