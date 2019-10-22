@@ -128,6 +128,23 @@ Date Intervals
 * {n_seconds}
 * {hh:mm:ss}
 
+Converting to a different type
+------------------------------
+
+Calculations are always stored on the server as 'text' type answers.  However the data inside them can be in many types
+integer, decimal, text, date.  It depends on the calculation that was performed.  So you might have a calculate questions that
+creates an integer value, for example a calcualtion of age.   If you then try to do a server calculation such as ${age} + 10 
+this will fail because age is treated as text.  You can use the following **cast** functions to tell the system which type
+you actually want to use
+
+*  cast(${question} as integer)
+*  cast(${question} as decimal) 
+
+Examples::
+
+  cast(${age} as integer) < 10
+  cast(${age} as decimal) / 2
+
 Other
 -----
 
