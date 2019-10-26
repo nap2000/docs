@@ -1,10 +1,29 @@
+.. _languages:
+
 Languages
 =========
 
-Surveys can contain translations into multiple languages.  You will need to create a separate “label” and “hint” 
-column in the survey worksheet for each language.  
+.. contents::
+ :local:
 
-You will also need a separate “label” column for each language in the choices worksheet.
+Surveys can contain translations into multiple languages.  You can specify languages for the following columns
+
+*  **survey label** (required for multi-language)
+*  **survey hint** (required for multi-language)
+*  **choices label** (required for multi-language)
+*  survey guidance_hint
+*  survey constraint_message
+*  survey required_message
+*  survey media::image
+*  survey media::audio
+*  survey media::video 
+*  choices media::image
+*  choices media::audio
+*  choices media::video 
+
+If you specify multiple languages for any of the first 3 columns then you will need to specify the languages for all of those first 3. The remaining
+columns are completely optional and most often, even when you have multiple languages in your survey, you will not need to specify a value per language
+for them.
 
 Single Languages
 ----------------
@@ -75,5 +94,32 @@ To force the direction as Left to Right even when the language is arabic then in
   label::language(ltr)
   
 
+Optional Language Columns
+-------------------------
 
+*  survey guidance_hint
+*  survey constraint_message
+*  survey required_message
+*  survey media::image
+*  survey media::audio
+*  survey media::video 
+*  choices media::image
+*  choices media::audio
+*  choices media::video 
 
+These can be added in the same way as the required language columns.   Copy the column and add the language identifier for each. 
+
+.. note:
+
+  If you use the guidance_hint column then it will need to have the same languages specified as the hint column.  The
+  other optional columns do not need to have a language specified in which case they will apply for all languages.
+
+However these are used less often with multiple languages.  Often in data collection there will be a single language that the enumerator will understand.  guidance_hint, 
+constraint_msg and required_message can all be simply put in this one language as the contents are not generally 
+read out to the interviewee.  Also the required_message is rarely used as the default usually suffices.
+
+It is also true of the media columns that they are often not required to be set in multiple languages.  Certainly if you are using images you may 
+be able to ensure that your pictures are language
+independent.  With Audio and Video there would presumably be a language dependence however this is only required if there is more than 
+one language used among the people being interviewed.  For many surveys where multiple languages are used there are two languages
+one for the analysts and the second the interviewees.  In these cases only audio in the interviewee language would be required.

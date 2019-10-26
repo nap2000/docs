@@ -1,5 +1,5 @@
 
-.. _auditing-servey-completion:
+.. _auditing-survey-completion:
 
 Auditing Survey Completion
 ==========================

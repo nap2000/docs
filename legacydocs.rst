@@ -1,3 +1,5 @@
+.. _legacy:
+
 Legacy Documentation
 ====================
 

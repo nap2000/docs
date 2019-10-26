@@ -41,6 +41,12 @@ alternative message in the **constraint_message** column.
 
    Constraint Message
    
+If your survey has multiple languages and you want to show a different constraint message for each language then replicate the constraint_message
+column for each language and change the headers to include the language name::
+
+  constraint_message::german
+  constraint_message::kiswahili
+
 Making the Question Required
 ----------------------------
 
@@ -51,7 +57,7 @@ Probably the most important constraint that you can add is to specify that they 
 
 To make a question required::
 
-  Add "yes" to the re"quired" column
+  Add "yes" to the "required" column
   Optionally add your own message in the "required_message" column
   
 .. figure::  _images/constraint3.jpg

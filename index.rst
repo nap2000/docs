@@ -1,11 +1,11 @@
 .. Smap documentation master file
 
-Welcome to Smap's documentation!
-================================
+Welcome to the Smap documentation
+=================================
 
-:dfn:`Smap Consulting` (Smap) provides tools for Evaluation, Monitoring and Case Management.
+:dfn:`Smap Consulting` (Smap) provides tools for  a wide range of :ref:`applications` including Evaluation, Monitoring, Guidance and Case Management.
 
-This documentation is currently under development and is progressively replacing the old google drive with its powerpoint files.  
+This documentation is currently under development and is progressively replacing the :ref:`legacy`.  
 
 
 .. toctree::
@@ -24,6 +24,8 @@ This documentation is currently under development and is progressively replacing
   auditing.rst
   server_expressions.rst
   console.rst
+  tasks.rst
+  notifications.rst
   examples.rst
   legacydocs.rst
   support.rst

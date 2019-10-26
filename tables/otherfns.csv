@@ -15,4 +15,4 @@ Where the_geom is the name of a geoshape type question","Note the name of the ge
 distance,"distance(${the_geom})
 
 Where the_geom is the name of a geoshape or geotrace question","As for area you should name your geometry question ""the_geom"". The reason being Smap currently converts all geometry questions to that name to simplify GIS analysis. So if you are referencing a question in an ""area"" function using a different name then it will not be found."
-,,
+once,once(${age}),The value will only be evaluated once while the form is open.  This is useful for setting dynamic default values that you want to get an initial value but after that the value should be set by the user.

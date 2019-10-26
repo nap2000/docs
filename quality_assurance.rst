@@ -59,7 +59,7 @@ option in the tools menu of the online editor.
 Auditing
 --------
 
-Use :ref:`auditing-servey-completion` to detect poor quality or fraudulent data entry.
+Use :ref:`auditing-survey-completion` to detect poor quality or fraudulent data entry.
 
 Hints
 -----

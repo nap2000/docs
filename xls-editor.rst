@@ -8,6 +8,7 @@ Editing in Excel
   xls-structure.rst
   xls-simple-questions.rst
   xls-select-questions.rst
+  xls-hints.rst
   xls-referring-questions.rst
   xls-relevance.rst
   xls-constraint.rst
@@ -16,3 +17,4 @@ Editing in Excel
   xls-languages.rst
   xls-cascading-selects.rst
   xls-repeats.rst
+  xls-default-values.rst
