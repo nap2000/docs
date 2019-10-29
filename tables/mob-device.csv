@@ -5,7 +5,15 @@ Delete submitted results from the phone,"on, off or set on phone",From a securit
 Backward Navigation,"set on phone, disable, enable",By default the enumerator can swipe backwards to change a previously entered value.  This can be disabled here.
 Screen Navigation,"set on phone, horizontal swipes, buttons, swipes and buttons.",By default the enumerator will swipe to the right to go to the next question.  However you can change this to forward and backward buttons or a combination of the two.
 Maximum pixels of the long edige of an image,A number,"This is a very useful setting to reduce the size of images that have to be sent over the network and stored on the server.  The image will be scaled according to this setting so if your image on the phone is 2,000 pixels by 1,000 pixels and you set a value here of 500 then the submitted image will be 500 pixels by 250 pixels."
-Password Policy,"Never require logon, Require logon on application start, Require logon periodically.",By default the enumerator never has to logon to the device.  As long as  valid credentials have been set then they can continue to use the device without knowing what those are.  You can specify that they have to logon in order to use the app when starting the app.  This logon can happen offline as well as online.  If periodic logon is specified then you can specify the number of days between logons.
+Password Policy,"Set to:
+
+*  Never require logon
+*  Require logon on application start
+*  Require logon periodically.","By default the enumerator never has to logon to the device.  In this case as long as  valid credentials have been set then they can continue to use the device without knowing what those are.  
+
+Alternatively you can specify that they have to logon in order to use the app when starting the app.  This logon can happen offline as well as online.  
+
+If periodic logon is specified then you can specify the number of days between logons."
 Maximum number of tasks to download,A number,If a user has been allocated hundreds of tasks you may not want to download all of them.  This limits the number and is ordered by due date ascending.
 Enable ODK style menus,yes or no,"The recommended way to update the device is to use the refresh button.  However if this is enabled then you can also use the ODK menus to ""get a blank form"", ""Fill a blank form"" etc."
 Enable ODK admin menu,yes or no,By default this is disabled.  The ODK admin menu allows you to change the configuration of a device and then lock it down.  Instead of using this it is recommended to use these server settings.

@@ -18,3 +18,4 @@ Editing in Excel
   xls-cascading-selects.rst
   xls-repeats.rst
   xls-default-values.rst
+  xls-media.rst

@@ -166,4 +166,4 @@ F. FieldTask Settings
 ------------------------------
 
 There are many settings that you can configure on the device using **menu** and **general settings**.  Many of these can
-also be specified on the server.  If specified on the server the settings will override those on the phone for all devices.
+also be specified on the server (:ref:`mobile-device-settings`).  If specified on the server the settings will override those on the phone for all devices.

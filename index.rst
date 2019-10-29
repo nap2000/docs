@@ -18,6 +18,7 @@ This documentation is currently under development and is progressively replacing
   applications.rst
   android.rst
   fieldTask.rst
+  webforms.rst
   surveys.rst
   admin.rst
   analysis.rst

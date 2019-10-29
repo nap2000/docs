@@ -1,3 +1,5 @@
+.. _mobile-device-settings:
+
 Mobile Device Settings
 ======================
 
