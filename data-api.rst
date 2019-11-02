@@ -13,14 +13,12 @@ a user id and password.  If you are already logged on to the server then you sho
   user: api
   password: api
 
-Multiple Records
-----------------
+Data End Points in JSON
+-----------------------
 
 .. http:get:: /api/v1/data
 
-  :synposis: Returns available end points.   For each url in the response ``data`` can be replaced with ``data.csv`` 
-	to return the data
-	in a CSV file.
+  :synposis: Returns available end points.   
   
   **Example response**:
   
@@ -66,9 +64,26 @@ Multiple Records
 		}
 	]
 	
+  :query filename: The name of the file. Default is ``forms.csv``.
   :reqheader Authorization: basic
   :statuscode 200: no error
-	
+
+Data End Points in CSV
+----------------------
+
+.. http:get:: /api/v1/data.csv
+
+  :synposis: Returns available end points in a CSV file.
+  
+  **Example response**:
+  
+  https://sg.smap.com.au/api/v1/data.csv
+
+.. _survey-data-json:
+
+Survey Data in JSON
+-------------------
+
 .. http:get:: /api/v1/data(survey ident)
 
   :synposis: Returns data for the specified survey. The example shows 
@@ -135,7 +150,8 @@ Multiple Records
 		}
 		}
 	]
-	
+
+
   :query start: Retrieve data starting from the specified key
   :query limit: The number of records to retrieve
   :query form: Retrieve data for a sub-form.  The available subforms are shown in the returned data from the /api/v1/data call.
@@ -154,3 +170,17 @@ Multiple Records
   :statuscode 200: no error
   :statuscode 404: not authorised
 
+Survey Data in CSV
+------------------
+
+.. http:get:: /api/v1/data.csv/(survey ident)
+
+  :synposis: Returns data for the specified survey. The example shows 
+  
+  **Example response**:
+  
+  https://sg.smap.com.au/api/v1/data.csv/s193_18568?links=true
+
+  All parameters in :ref:`survey-data-json` can be used.
+  
+  :query filename: The name of the file. Default is ``data.csv``.
