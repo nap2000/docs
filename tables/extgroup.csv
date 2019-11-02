@@ -1,0 +1,5 @@
+type,name,label,appearance,body::intent
+begin group,agroup,multiple questions,field-list,"org.xxxx.myapp(param1='a', param2='b')"
+text,atext,some text question,,
+decimal,adecimal,Some decimal question,,
+end group,,,,

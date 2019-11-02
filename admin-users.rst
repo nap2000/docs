@@ -6,6 +6,10 @@ Users
  
 To get to the user management screen select the **Admin** module and then **Users**.
 
+.. warning::
+
+  The **admin** security group is required in order to access the users page.
+
 User Management has multiple tabs not all of them are necessarily related to Users!  You can treat it as a 
 general management portal. To actually manage your users select the first tab **Users**.
 
@@ -18,7 +22,7 @@ general management portal. To actually manage your users select the first tab **
    
 The top part of the tab has a number of filters that you can use to restrict the list of users.  This can be useful
 if you have a lot of users.  You can also use it to verify which users are assigned to a particular project or role.
-You can fitler on:
+You can filter on:
 
 *  Security group
 *  Projects
@@ -45,14 +49,14 @@ User Details
    
    User Details
    
-*  ident.  This is readonly.  Once a user has an ident with which they logon to the system then this cannot
+*  **ident**.  This is readonly.  Once a user has an ident with which they logon to the system then this cannot
    be changed.
-*  Name.  The user name.
-*  Current Organisation.  If you have organisation administration privilege then you can move a user
+*  **Name**.  The user name.
+*  **Current Organisation**.  If you have organisation administration privilege then you can move a user
    to a different organisation.
-*  Enterprise.  If you have the enterprise administration privilege then you can move a user to a different 
+*  **Enterprise**.  If you have the enterprise administration privilege then you can move a user to a different 
    enterprise.
-*  Email.  Set the users email address.
+*  **Email**.  Set the users email address.
 
 If you are editing a user then you will see a **reset password** checkbox that allows you to change their password.
 
@@ -65,10 +69,13 @@ If you select "send email" then the new user will get an email asking them to se
 use this option when creating analyst or admin users.  If you select specify password then you can set the password
 for the new user.  This may be appropriate if you are creating "enumerator" users.
 
-::
-  Admin and Analyst users should all have their own accounts that they do not share. In addition they should
-  specify strong passwords.  If the user only has enumerator privilege then you may decide to allow multiple
-  enumerators to share the same account.  
+.. note::
+
+  Admin and Analyst users have access to collected data and should all have their own accounts that they do not share. In addition they should
+  specify strong passwords.  
+
+  However if the user only has enumerator privilege then you may decide to allow multiple
+  enumerators to share the same account. This may simplify administration of devices shared by multiple users. 
 
 .. _security-groups:
 
@@ -85,6 +92,8 @@ Specify the security groups that they user belongs to. These include:
 *  enterprise admin.  Can create and move between enterprises.
 *  security.  Can create and assign security roles
 *  view data.  Can view data but not modify it.
+
+Refer to :ref:`organisational-hierarchy` for an overview of how these security groups can be used to compartmentalise data.
 
 Projects
 +++++++++

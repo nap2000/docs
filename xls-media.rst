@@ -1,3 +1,5 @@
+.. _media:
+
 Questions with Media
 ====================
 

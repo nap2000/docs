@@ -8,8 +8,8 @@ Contents:
 
 .. _install-fieldtask:
 
-A. Install FieldTask
---------------------
+Install FieldTask
+-----------------
 
 If you are going to be using Android phones or Tablets to complete surveys then you will want to install FieldTask on these devices.  Alternatively
 you can complete surveys in browsers using Webforms.
@@ -93,8 +93,8 @@ not make any phone calls on your behalf.
   The message shown if you don't accept the above permission is from ODK Collect which is the tool that FieldTask uses to fill in 
   a form.
 
-B. Main Screen
---------------
+Main Screen
+-----------
 
 On the fieldTask main screen there are 3 tabs
 
@@ -135,8 +135,8 @@ Tasks in different states will be shown in a different color:
 Shows the location of tasks on the map.  A short press on the task will show its name and open a menu that allows you to use
 google maps to plan a route to that task.  A long press on the task in the map will open it for editing.
 
-C. Synchronising with the Server
---------------------------------
+Synchronising with the Server
+-----------------------------
 
 Press the **refresh** button on the main screen to synchronise the device with the server.  This will:
 
@@ -150,20 +150,34 @@ Press the **refresh** button on the main screen to synchronise the device with t
    
    Refresh Button
  
-D.  Adding notes
-----------------
+Adding notes
+------------
 
 You can add free form notes to any question by selecting **menu** and then **Add comment** while completing a survey.
 Although the question name is included in the note automatically,  a single note for the entire survey is actually created.  
 All the notes you add for each question get combined.  They can then be seen in the survey notes column when viewing results.
 
-E. Changing the Language
-------------------------
+Changing the Language
+---------------------
 
 You can change the survey language displayed by selecting **menu** and then **change language** while completing a survey.
 
-F. FieldTask Settings
-------------------------------
+FieldTask Settings
+------------------
 
 There are many settings that you can configure on the device using **menu** and **general settings**.  Many of these can
 also be specified on the server (:ref:`mobile-device-settings`).  If specified on the server the settings will override those on the phone for all devices.
+
+Playing Media Questions
+-----------------------
+
+If an audio or video file is added to a question (:ref:`media`) then an icon will be shown that the user can seelect to play the media.
+
+.. figure::  _images/ftmedia.jpg
+   :align:   center
+   :alt:     Playing media
+   :width:   300
+
+   Playing Media
+
+If the media is set to auto play then the text of the question will show as blue and the icon will be grayed out while the file is playing.

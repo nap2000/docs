@@ -1,3 +1,5 @@
+.. _xls-editor:
+
 Editing in Excel
 ================
 
@@ -19,3 +21,4 @@ Editing in Excel
   xls-repeats.rst
   xls-default-values.rst
   xls-media.rst
+  xls-launching-apps.rst

@@ -8,6 +8,12 @@ Surveys are stored in projects in the same way directories are used to store fil
 for managing large numbers of surveys. Enumerators can be given access to a project which then gives them access to all the surveys in that 
 project.
 
+To get to the project page select the menu **modules** then **admin** then **users** then select the **projects** tab.
+
+.. warning::
+
+  The **admin** security group is required in order to access the projects page.
+
 
 Simplify the work environment
 -----------------------------

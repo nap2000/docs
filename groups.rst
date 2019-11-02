@@ -1,7 +1,7 @@
 .. _survey_groups:
 
-Groups
-======
+Survey Group
+============
 
 .. contents::
  :local:

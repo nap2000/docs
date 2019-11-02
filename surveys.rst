@@ -8,11 +8,5 @@ Surveys
   xls-editor.rst
   online-editor.rst
   quality_assurance.rst
-  shared_resources.rst
+  external-applications.rst
   references.rst
-
-
-
-
-
-

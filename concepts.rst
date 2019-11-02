@@ -8,6 +8,7 @@ Concepts
   keys.rst
   server-calculations.rst
   groups.rst
+  organisation-hierarchy.rst
 
 
 

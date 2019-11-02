@@ -10,6 +10,7 @@ Administration
   admin-mob-device.rst
   admin-rbac.rst
   admin-shared-resources.rst
+  admin-server.rst
 
-You need to have at least the **admin** security group to acess these administration functions. Some functions require the **Organisational Administrator**
-security group.
+You need to have at least the **admin** security group to acess these administration functions. Some functions require the **Organisational Administrator**,
+**Enterprise Administrator** or **Server Administrator** security group.
