@@ -23,10 +23,11 @@ This documentation is currently under development and is progressively replacing
   admin.rst
   analysis.rst
   auditing.rst
-  server_expressions.rst
+  server-expressions.rst
   console.rst
   tasks.rst
   notifications.rst
+  server-apis.rst
   examples.rst
   legacydocs.rst
   support.rst
