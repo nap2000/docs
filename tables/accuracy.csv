@@ -1,0 +1,2 @@
+type,name,label,body::accuracyThreshold
+geopoint,location,Location,500

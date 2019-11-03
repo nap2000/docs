@@ -28,7 +28,7 @@ Data End Points in JSON
   
 	HTTP/1.1 200 OK
 	Vary: Accept
-	Content-Type: text/javascript
+	Content-Type: application/json
 	
 	[
 	  {
@@ -64,7 +64,6 @@ Data End Points in JSON
 		}
 	]
 	
-  :query filename: The name of the file. Default is ``forms.csv``.
   :reqheader Authorization: basic
   :statuscode 200: no error
 
@@ -78,6 +77,8 @@ Data End Points in CSV
   **Example response**:
   
   https://sg.smap.com.au/api/v1/data.csv
+
+  :query filename: The name of the file. Default is ``forms.csv``.
 
 .. _survey-data-json:
 
@@ -96,7 +97,7 @@ Survey Data in JSON
   
 	HTTP/1.1 200 OK
 	Vary: Accept
-	Content-Type: text/javascript
+	Content-Type: application/json
 	
 	[
 		{
@@ -152,6 +153,7 @@ Survey Data in JSON
 	]
 
 
+  :query links: Return URL links to other API calls on the data
   :query start: Retrieve data starting from the specified key
   :query limit: The number of records to retrieve
   :query form: Retrieve data for a sub-form.  The available subforms are shown in the returned data from the /api/v1/data call.
@@ -165,10 +167,16 @@ Survey Data in JSON
 		This information is available through the separate audit API.
   :query merge_select_multiple: Set to ``yes`` to combine all the selected choices for a select multiple into a single column / Json 
 		text property.
-  :query geojson: 	Set to ``yes`` for the data to be returned in geoJson format rather than the kobo api format.
+  :query sort: 	question name to sort on
+  :query dirn: 	Sort direction, either ``asc`` or ``desc``
+  :query key: 	The key to filter by.  A key will need to have been specified for this survey.
+  :query tz:    The timezone for example ``Australia/Brisbane``.  All date time and date answers will be returned in this time zone.
+  :query geom_question: When using geojson=yes, and if you have more than one geometry in the main form, then you can specify the 
+                name of the geometry question to use as the GeoJson geometry here.
+  :query filter: Advanced filter.  For example  &filter=${q1} > 10
   :reqheader Authorization: basic
   :statuscode 200: no error
-  :statuscode 404: not authorised
+  :statuscode 401: not authorised
 
 Survey Data in CSV
 ------------------
@@ -184,3 +192,35 @@ Survey Data in CSV
   All parameters in :ref:`survey-data-json` can be used.
   
   :query filename: The name of the file. Default is ``data.csv``.
+
+Single Record
+-------------
+
+.. http:get:: /api/v1/data(survey ident)/(instance key)
+
+  :synposis: Get data for the specified instance. The instance key can be found in the :ref:`survey-data-json` API call.
+  
+  **Example response**:
+  
+  https://sg.smap.com.au/api/v1/data/s1313_16851/uuid:dce538eb-ea90-44f1-b022-7481fad8fe47
+
+  .. sourcecode:: http
+  
+	HTTP/1.1 200 OK
+	Vary: Accept
+	Content-Type: application/json
+	
+	{
+	"values": {
+	"q1": "Joe",
+	"q2": "23",
+	"q3": "https://sg.smap.com.au/attachments/s193_1778/82c362f4-8ce5-4fe2-a915-5e3cd2f8ff1c.jpg",
+	"instanceid": "uuid:832ed325-4ad3-46b0-9f99-7d1ebda1cdad"
+	}
+	}
+
+  :reqheader Authorization: basic
+  :statuscode 200: no error
+  :statuscode 401: not authorised
+  :statuscode 404: not found
+

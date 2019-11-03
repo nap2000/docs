@@ -22,3 +22,4 @@ Editing in Excel
   xls-default-values.rst
   xls-media.rst
   xls-launching-apps.rst
+  xls-gps-accuracy.rst

@@ -162,6 +162,12 @@ Special Terms
 * ${_device} (The device identifier that submitted the results)
 * ${_user} (The logon identifier of the user that submitted the results)
 * ${prikey} (The unique record number of submitted data)
+* ${_version} (The version number of the survey that was used to submit a record)
+
+Note the ${_version} value is of type text, hence if you want to use this in a filter you may need to cast it.  For example::
+
+  cast(${_version} as integer) > 3
+
 
 
 Examples
