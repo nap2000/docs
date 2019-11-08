@@ -5,6 +5,7 @@ Administration
   :maxdepth: 1
   
   admin-surveys.rst
+  admin-organisations.rst
   admin-projects.rst
   admin-users.rst
   admin-mob-device.rst

@@ -1,7 +1,7 @@
 .. _xls-editor:
 
-Editing in Excel
-================
+Editing in a Spreadsheet
+========================
 
 .. toctree::
   :maxdepth: 1

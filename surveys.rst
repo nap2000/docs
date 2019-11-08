@@ -8,5 +8,6 @@ Surveys
   xls-editor.rst
   online-editor.rst
   quality_assurance.rst
+  change-history.rst
   external-applications.rst
   references.rst

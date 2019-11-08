@@ -59,6 +59,14 @@ Clicking on a column heading will sort on that column.  Clicking again will chan
 Editing a record
 ----------------
 
+Using an Oversight Surveys
+++++++++++++++++++++++++++
+
+Restricting editing of records to using oversight surveys provides a lot of control over what can and cannot be changed.
+For example you may have a survey that is used to record customer feedback.  The back office staff are allowed to change
+the original status and add comments and resolution but they cannot change any other information collected in the original
+feedback.  In this case the oversight form will just have the questions that the back office staff can change.
+
 1.  Select the oversight survey that has the questions to be changed,  the available oversight surveys are those
     surveys in the same group as the main survey
 2.  Select the record to be edited
@@ -79,11 +87,59 @@ form the oversight survey and can have their answer changed.
 Hence if you want to be able to change the answer to a question in the main survey then you will need to have a question of the same
 name in the oversight survey. To add data to the main survey the question in the oversight survey would not be in the main survey.
 
+Using a webform
++++++++++++++++
+
+If the user has the **enum** security privilege then they can click on the green webform button at the top of the page.  This will 
+open the main survey populated with data from the record.  The user can then make changes and submit in the normal webform way.
+
 History Tab
-+++++++++++
+-----------
 
 Clicking on the history tab will show the changes that have been made to the record.  
 
-.. note:: This tab was previously called events.
+.. figure::  _images/console3.jpg
+   :align:   center
+   :alt: Record History
 
+   ord History
+   
+In the case above there has been one change to the record.  That change only affected a single question.
 
+If you click on the button labelled "1 Changes" then the change is shown.  In this case the work area was adjusted, The old work
+area being the blue square while the new work area is the red square.  
+
+.. note::
+
+  Of course if more than one value in the survey had changed then the label of the button would indicate the number of changes.
+
+.. figure::  _images/console4.jpg
+   :align:   center
+   :alt: Record Change Detail
+
+   Record Change Detail
+   
+The history tab show changes, tasks and notifications associated with a record.  You can select **sliders** at the top left
+of the history page to filter / show these event types.
+
+Assigning Tasks
+---------------
+
+When editing a record the user can request that somebody else update the record by assigning a task.   To do this click on 
+the **Add Task** button.  A dialog will be shown with similar options as for adding an ad-hoc task.  (:ref:`editing-adding-tasks`).
+
+The differences compared to the task management page are:
+
+1.  The task is automatically set to update the existing record.
+2.  The list of surveys that you can select for the task are restricted to those in the current survey group.  All of these surveys
+    can work on the current record wheras other surveys not in the survey group cannot.
+3.  A task group with the same name as the selected survey will be created automatically to hold this task.
+
+Tasks assigned to a record will be shown in the History tab where you can see their status and edit them.
+
+Sending Notifications
+---------------------
+
+An email notification can be sent with an attached PDF or a link to a Webform containing the record data. This notification
+will also be shown in the record history.  Next to the notification will be shown a button labelled "Resend" that can be clicked
+to resend a notification.

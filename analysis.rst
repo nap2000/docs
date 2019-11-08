@@ -4,6 +4,8 @@
 Analysis
 ========
 
+To get to the analysis page select **Modules** then **Analysis**.
+
 .. toctree::
   :maxdepth: 1
   

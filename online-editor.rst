@@ -1,5 +1,7 @@
-Editing Online
-==============
+.. _online-editor:
+
+Online Editor
+=============
 
 .. toctree::
   :maxdepth: 1
@@ -7,7 +9,3 @@ Editing Online
   online-settings.rst
   online-question-properties.rst
   online-required.rst
-
-
-
-

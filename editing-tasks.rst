@@ -40,7 +40,7 @@ For the task you want to edit click on the button with the edit icon in the edit
    :alt:     Select task from calendar view
    
    Select task from calendar view
-   
+
 Adding a Task
 -------------
 
@@ -71,9 +71,9 @@ The **complete all** checkbox can be selected if you want all assigned users to 
 
 5. Set the start date and time of the task and the end date and time.
 
-6.  Add guidance.  This is a free form text field.  If the task was originally created as an automatic task from
-    submitted data then this will be filled with the address data, that is answers to questions in the submitted survey.
-	However when editing the task you can enter any text.
+6. Add guidance.  This is a free form text field.  If the task was originally created as an automatic task from
+   submitted data then this will be filled with the address data, that is answers to questions in the submitted survey.
+   However when editing the task you can enter any text.
 	
 7.  Set the location of the task
 
@@ -110,3 +110,5 @@ coordinates and/or NFC id.
 
 If you are assigning a lot of tasks and you want the task to only be visible if the user is close to it then specify a 
 download distance.
+
+9.  If this task updates a record of data then you can click on the button "Show in Console" to view the record in the console.
