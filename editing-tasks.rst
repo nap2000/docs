@@ -65,6 +65,8 @@ The option of assigning to users of a **role** is only available when creating t
 
 The **complete all** checkbox can be selected if you want all assigned users to complete the task.
 
+The **Self Assign** checkbox can be selected if you want to allow users to accept a task themselves.
+
 4.  Optionally set the task to persist in fieldTask.  If this checkbox is set then the task will stay in FieldTask even after the user
     has completed it.  The user can then complete the task multiple times and when they are finished they can **reject it** by doing a 
     long press on the task name.

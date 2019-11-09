@@ -85,7 +85,7 @@ Data End Points in CSV
 Survey Data in JSON
 -------------------
 
-.. http:get:: /api/v1/data(survey ident)
+.. http:get:: /api/v1/data/(survey ident)
 
   :synposis: Returns data for the specified survey. The example shows 
   
@@ -196,7 +196,7 @@ Survey Data in CSV
 Single Record
 -------------
 
-.. http:get:: /api/v1/data(survey ident)/(instance key)
+.. http:get:: /api/v1/data/(survey ident)/(instance key)
 
   :synposis: Get data for the specified instance. The instance key can be found in the :ref:`survey-data-json` API call.
   

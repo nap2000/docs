@@ -7,3 +7,5 @@ Server APIs
   :maxdepth: 1
   
   data-api.rst
+  admin-api.rst
+  audit-api.rst
