@@ -9,3 +9,4 @@ Server APIs
   data-api.rst
   admin-api.rst
   audit-api.rst
+  tasks-api.rst

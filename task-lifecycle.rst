@@ -30,6 +30,9 @@ These are tasks that are assigned to a user who has been setup on the system.
 #.  **Acknowledge Cancel**.  The next time the FieldTask user refreshes their task list then any cancelled tasks will become
     deleted and no longer show in their task list.
 
+.. note:
+
+  An unassigned task is referred to as "new" in the :ref:`tasks-api`
 
 Email Tasks
 -----------

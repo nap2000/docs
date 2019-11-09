@@ -146,6 +146,17 @@ Because this service returns data in GeoJSON format it can easily be analyzed in
 #.  Paste the URL that returns your audit data into the URI field
 #.  Select the basic authentication tab and enter your username and password
 #.  Press the **Add** button
+#.  Press **Close**.  Your layer should have been added.
+
+Once you have a vector layer in your GIS you can analyse by, for example, setting the size of the point proportional to the time
+taken to answer the question.  
+
+.. figure::  _images/api3.jpg
+   :align:   center
+   :alt:     Audit data in QGIS
+
+   Audit data in QGIS
+   
 
 Raw Audit Log File
 ------------------
@@ -185,5 +196,3 @@ in your time zone you can use the following formula::
   Then add the timezone effect which is the number of hours difference from UTC divided by 24
   
   
-
-#.  

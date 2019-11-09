@@ -106,6 +106,8 @@ Resources
   curl -u xxxx -i -X POST -H "Content-Type: multipart/form-data" -F "data=@phone.jpg" https://sg.smap.com.au/surveyKPI/upload/media
   
  :query survey_id: The id of a survey if you want the media file to only be available to that survey.
+
+.. _projects-api:
  
 Projects
 --------
@@ -206,8 +208,10 @@ Submissions
   :reqheader Authorization: basic
   :statuscode 200: no error
   
-Timezones
----------
+.. _timezone:
+
+Timezone
+--------
 
 .. http:get:: /surveyKPI/utility/timezones
 
