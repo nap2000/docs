@@ -1,0 +1,22 @@
+Function,usage,example
+lookup_choices,This function can be used instead of search in appearance.  It takes the same parameters as search. However the csv file is not downloaded.  This can be useful when you have very large reference files.,"lookup_choices('children', 'matches', 'class_v', ${class}, 'enrolled_v', ${enrolled})
+
+Not available in web forms "
+lookup_image_labels,"lookup_image_labels(picture)
+
+This has no counterpart in offline mode.  It can be used to call AWS Rekognition service to identify objects in a picture. Use in a calculation.
+
+The image must be a jpg file.
+
+To make this useful for your project you would probably want to create your own AI tool to recognise patterns in data and ask the fieldTask development team to add that as a service.","lookup_image_labels(${a_picture})
+
+Not available in web forms"
+get_media,"Download a media file from a server.   This media file can then be used as the default value for an image, video or audio question.
+Use in a calculation to set an image as an intial value to a question.
+","Use a select to identify a base image to be downloaded and then annotated.
+
+1)	Select a picture to edit.  The value of the select is the URL of the image.
+2)	In a calculate have: get_media(${image_select_question}, '/main/image_show_question').  This will download the selected image
+3)	Have an image question with appearance of annotate"" and a calculation of ${calculate_question_name}. 
+
+Because of the way ODK evaluates calculations when the user saves the form using the naïve approach above will cause the modified image not to be sent.  Refer to the example form for an approach that will work."""

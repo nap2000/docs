@@ -217,6 +217,8 @@ Task List
   :reqheader Authorization: basic
   :statuscode 200: no error
   
+.. _single-task:
+
 Details of a Single Task
 ------------------------
 
@@ -266,3 +268,31 @@ Details of a Single Task
 	
     :reqheader Authorization: basic
     :statuscode 200: no error
+
+Create a Task
+-------------
+	
+.. http:post:: /api/v1/tasks
+
+  :synposis: Create a task. The payload is a JSON object and can use the same attributes as returned by :ref:`single-task`
+
+  **Example request**:
+
+  .. sourcecode:: http
+
+    HTTP/1.1 200 OK
+    Vary: Accept
+    Content-Type: application/json
+
+    {
+       "tg_id": 226,
+       "name": "Assign to neil",
+       "form_ident": "s38_722",
+       "assignee_ident": "neil",
+       "initial_data_source": "none",
+       "from": "2019-04-15 01:48:17",
+       "to": "2019-04-15 02:48:17"
+    }		   
+  
+
+  

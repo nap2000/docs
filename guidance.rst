@@ -20,7 +20,7 @@ This delivers very significant benefits beyond what is possible with conventiona
 
 #.  A consistent high quality implementation of policy by staff guided by their phone
 #.  Reduced need for basic training.  The forms on the phones can train the staff as they deliver the service as well as
-    guide them in how to delvier that service.  This allows
+    guide them in how to deliver that service.  This allows
     an organisation to focus its training on more advanced human development.
 #.  A dramatic shortening of the time betweeen identifying the need for a program and having the required capabilities to roll 
     that program out.

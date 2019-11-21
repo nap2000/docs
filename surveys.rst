@@ -10,4 +10,6 @@ Surveys
   quality_assurance.rst
   change-history.rst
   external-applications.rst
+  groups.rst
+  launch-survey-from-survey.rst
   references.rst
