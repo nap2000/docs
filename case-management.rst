@@ -7,3 +7,4 @@ Case Management
   cm-overview.rst
   keys.rst
   sub_form_kp.rst
+  launch-survey-from-survey.rst
