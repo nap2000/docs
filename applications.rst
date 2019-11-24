@@ -7,5 +7,5 @@ Applications
   :maxdepth: 1
   
   me.rst
-  guidance.rst
+  mwa.rst
   case-management.rst

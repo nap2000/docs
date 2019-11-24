@@ -1,6 +1,11 @@
+.. _launch-survey:
+
 Launch a Survey from inside a Survey
 ====================================
 
+.. contents::
+ :local:
+ 
 While completing a survey you may find that another survey also needs to be completed.  You can launch this second survey from 
 within the survey you are currently filling in, complete it, and then be
 returned automatically to your location in the first survey.  

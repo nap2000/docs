@@ -4,13 +4,13 @@ Survey References
 .. toctree::
   :maxdepth: 1
   
-  ref_question_names.rst
-  ref_question_types.rst
-  ref_meta_items.rst
-  ref_expressions.rst
-  ref_appearances.rst
-  ref_parameters.rst
-  ref_settings.rst
+  ref-question-names.rst
+  ref-question-types.rst
+  ref-meta-items.rst
+  ref-expressions.rst
+  ref-appearances.rst
+  ref-parameters.rst
+  ref-settings.rst
   ref-styles.rst
 
 
