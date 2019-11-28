@@ -7,3 +7,4 @@ Mobile Workforce Assistance
   mwa-overview.rst
   mwa-formatting.rst
   mwa-charts.rst
+  mwa-time-series-fn.rst

@@ -11,7 +11,7 @@ however the data is then used immediately to provide context relevant advice to 
    :align:   center
    :alt:     Mobile Workforce Assistance
 
-   Mobile WOrkforce Assistance
+   Mobile Workforce Assistance
 
 With MWA we can put organisational procedures and training directly into the mobile devices that the field staff use to complete their
 work.  
