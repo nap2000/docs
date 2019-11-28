@@ -13,6 +13,9 @@ a user id and password.  If you are already logged on to the server then you sho
   user: api
   password: api
 
+
+.. _data-api-json:
+
 Data End Points in JSON
 -----------------------
 
@@ -160,6 +163,7 @@ Survey Data in JSON
 		This call will return the key for the parent form in the "parkey" attribute so that its data can be combined with that of
 		the main form.
   :query start_parkey: Parent key to start from.  Only useful when working with subform data.
+  :query parkey: Parent key.  return records in the subform that belong to the specified parent.
   :query bad: One of ``yes`` return deleted records, ``only`` Only return deleted records, ``none`` do not return deleted (default)
   :query audit: set to ``yes`` to return audit data. This data is the time in milliseconds that the user took to answer each question. 
 		You can also specify in the settings for the form that the GPS coordinates where each question was answered should be included. 

@@ -12,6 +12,7 @@ Administration
   admin-rbac.rst
   admin-shared-resources.rst
   admin-server.rst
+  admin-delete.rst
 
 You need to have at least the **admin** security group to acess these administration functions. Some functions require the **Organisational Administrator**,
 **Enterprise Administrator** or **Server Administrator** security group.

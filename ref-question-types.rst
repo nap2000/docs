@@ -33,7 +33,7 @@ Chart
 
 Type:  chart
 
-Shows a chart in the survey. Settings for the graph are specified in the question parameters.
+Shows a chart in the survey. Settings for the graph are specified in the question parameters. More details are available in :ref:`charts`
 
 Not available in Webforms.
  
@@ -43,4 +43,7 @@ Child Form / Parent Form
 Type:  child_form / parent_form
 
 Launches another survey from within the current survey. The difference between these is in how the data from the two surveys
-are linked in the results database.  If you don't care about this linkage then either will do.
+are linked in the results database.  If you don't care about linking the data between the two surveys then either type will do.
+Detailed information on using these question types is available in :ref:`launch-survey`.
+
+Not available in Webforms.

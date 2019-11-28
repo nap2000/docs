@@ -1,18 +1,25 @@
-Keys
-====
+.. _survey_keys:
 
-Keys uniquely identify a record of data.  These can be constructed automatically from the answers to questions in the
-survey. 
+Survey Keys
+===========
 
-A very simple case is when the key is recognised externally to Smap.  For example an identify number.  Then the key 
+Keys uniquely identify a record of data which can represent a "case".  
+
+These can be constructed automatically from the answers to questions in the
+survey.  A very simple case is when the key is recognised externally to Smap.  For example an identify number.  Then the key 
 could be specified as::
 
   ${id_no}
   
-Once you have specified a key then you can specify a **key policy**. 
+Once you have specified a key then you can specify a **key policy** for your survey. 
 
-Key Policy
-----------
+Survey Key Policy
+-----------------
+
+none
+++++ 
+
+This is the default policy.  New records are simply appended even if that creates a duplicate key.
 
 merge
 +++++ 
@@ -85,7 +92,8 @@ In the XLSForm editor use the settings sheet.
 *  THe key goes under the heading **key**
 *  The key policy goes under the heading **key_policy**
 
+Direct Updates
+--------------
 
-
-
-
+A record can be selected to be updated directly either in a task or directly from the console or analysis page.  In this case the old record is
+always replaced.  This happens even if the survey has a key and a different key policy such as "merge".

@@ -143,3 +143,36 @@ Sending Notifications
 An email notification can be sent with an attached PDF or a link to a Webform containing the record data. This notification
 will also be shown in the record history.  Next to the notification will be shown a button labelled "Resend" that can be clicked
 to resend a notification.
+
+Drilling Down to Related Data
+-----------------------------
+
+The console shows one form of data at a time.  It does not attempt to merge data from a sub form into a parent form. Instead if you have
+sub forms in your survey then you can drill down to see their data.  You can also drill down to data in other surveys that can be launched from the 
+survey you are viewing in the console.
+
+
+When you select a record, if there is data that can be drilled down to see then you a drill down button will appear above the data.
+
+.. figure::  _images/dd1.png
+   :align:   center
+   :alt: Select a record
+
+   Select a Record
+   
+After clicking on the Drill Down button, the data in the sub form that is connected to the selected record will be shown.  An **Up** button will now
+also be shown.  If you can't drill down any further the **Drill Down** button will be hidden.
+
+.. figure::  _images/dd2.jpg
+   :align:   center
+   :alt: Sub form records
+
+   Sub form records
+
+After clicking on **Up** and selecting a different record then drilling down again we can see the data related to the newly selected record.
+
+.. figure::  _images/dd3.jpg
+   :align:   center
+   :alt: Sub form records with a different parent
+
+   Sub form records with a different parent

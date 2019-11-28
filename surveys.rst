@@ -10,4 +10,5 @@ Surveys
   quality_assurance.rst
   change-history.rst
   external-applications.rst
+  groups.rst
   references.rst

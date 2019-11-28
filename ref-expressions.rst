@@ -78,6 +78,15 @@ sub form you are referring to.  These functions can assist.
   :header-rows: 1
   :file: tables/repeatfns.csv
 
+Online
+------
+
+.. csv-table:: Online Functions:
+  :width: 80
+  :widths: 20,20,40
+  :header-rows: 1
+  :file: tables/online.csv
+  
 Other
 -----
 

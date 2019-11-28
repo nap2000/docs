@@ -67,6 +67,26 @@ Once you have set the style to **pages** then every question will appear on its 
 a **back** button to navigate.  You can then use groups with the field-list appearance to put multiple questions on 
 a single page in exactly the same way that you can do for fieldTask.
 
-  
 Styling Webforms Itself
 -----------------------
+
+Webform style options can be found on the users page in the "Webform Options" tab.  
+
+.. figure::  _images/webforms4.jpg
+   :align:   center
+   :width: 	 600px
+   :alt:     Webforms Styling Options
+
+   Styling WebForms
+
+
+.. note::
+
+  If you have "organisational admin" privilege then you won't see the above tab instead you can change the webform style in the organisations
+  tab by selecting the organisation that you want to modify.
+  
+The following properties can be changed:
+
+*  The page background colour
+*  The paper background colour
+*  The position of the footer icon

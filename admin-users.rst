@@ -15,7 +15,7 @@ general management portal. To actually manage your users select the first tab **
 
 .. figure::  _images/users.jpg
    :align:   center
-   :width:   500px
+   :width:   600px
    :alt:     User Management
    
    User Management
@@ -34,8 +34,8 @@ Add User
 
 Click on the green **Add User** button to add a user.
 
-Edit a User
------------
+Edit 
+-----
 
 Click on the user's name to edit their details.
 
@@ -44,7 +44,7 @@ User Details
 
 .. figure::  _images/users1.jpg
    :align:   center
-   :width:   300px
+   :width:   500px
    :alt:     User Details
    
    User Details
@@ -92,6 +92,12 @@ Specify the security groups that they user belongs to. These include:
 *  enterprise admin.  Can create and move between enterprises.
 *  security.  Can create and assign security roles
 *  view data.  Can view data but not modify it.
+*  view own data.  Can view their own data, that is data records that they submitted.
+
+.. note::
+
+  The view own data security group can currently only be used to access data using the data API (:ref:`survey-data-json`).  However if the user also
+  has the "manage" security privilege then they can see their data in the console.
 
 Refer to :ref:`organisational-hierarchy` for an overview of how these security groups can be used to compartmentalise data.
 
