@@ -15,7 +15,7 @@ values for a specified column separated by colons.
   Chart means the data is returned as a timeseries, self tells the function to get previously collected data from its own survey.
 
 The chart function is just the pulldata function where the identifier of the containing the data is preceeded by "chart\_". 
-For example all of the following
+For example the following
 pulldata requests will retreive data in a format that can be used by a chart::
 
   pulldata('chart_self', 'sales', 'region', 'region 1')
