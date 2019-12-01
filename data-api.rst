@@ -169,6 +169,8 @@ Survey Data in JSON
 		You can also specify in the settings for the form that the GPS coordinates where each question was answered should be included. 
 		There is a thid level of audit where every change made to a question during the course of an interview is recorded. 
 		This information is available through the separate audit API.
+  :query meta: set to ``yes`` to return meta data and preloads including prikey, instanceid, user, upload time.  Set to ``no`` to
+        not return this data. The default is ``yes``
   :query merge_select_multiple: Set to ``yes`` to combine all the selected choices for a select multiple into a single column / Json 
 		text property.
   :query sort: 	question name to sort on
@@ -223,6 +225,8 @@ Single Record
 	}
 	}
 
+  :query meta: set to ``yes`` to return meta data and preloads including prikey, instanceid, user, upload time.  The default is ``no``
+  :query tz:    The timezone for example ``Australia/Brisbane``.  All date time and date answers will be returned in this time zone.
   :reqheader Authorization: basic
   :statuscode 200: no error
   :statuscode 401: not authorised

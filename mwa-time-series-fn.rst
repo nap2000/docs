@@ -27,8 +27,9 @@ second example will retrieve sales data matching the specified region in the sur
 
 .. note::
 
-  The filter column is required as it is a part of the pulldata function.  Hence you could not kust ask for all the sales
-  data in the survey.  This is because pulldata normally expect to just return a value for a single record.  When getting chart
+  The filter column is required as it is a part of the pulldata function.  Hence you could not just ask for all the sales
+  data in the survey.  This is because pulldata normally expects to just return a value for a single record hence it requires the 
+  filter question.  When getting chart
   data however we allow values for multiple records to be returned.
   
 Detailed Example
