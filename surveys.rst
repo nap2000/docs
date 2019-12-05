@@ -11,4 +11,5 @@ Surveys
   change-history.rst
   external-applications.rst
   groups.rst
+  survey-identifier.rst
   references.rst

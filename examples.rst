@@ -12,4 +12,10 @@ XLS example surveys
 *  `Dynamic Images (FieldTask version) <https://docs.google.com/spreadsheets/d/1WEoARXBgcmbRzgvrDK7lyCsjiU7AhCWq4dondDkY5Pw/edit?usp=sharing>`_
 
 
+Looking up Data
+---------------
+
+*  `Looking up data in Sub-Forms (Repeating Groups) <https://drive.google.com/drive/u/0/folders/16dI2RPsMadTQTRLi_pIuZJ8XIJPjqdoA>`_
+
+
 
