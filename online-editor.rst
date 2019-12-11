@@ -7,6 +7,7 @@ Online Editor
   :maxdepth: 1
   
   online-create.rst
+  online-layout.rst
   online-edit.rst
   online-settings.rst
   online-question-properties.rst
