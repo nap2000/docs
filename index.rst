@@ -27,6 +27,7 @@ This documentation is currently under development and is progressively replacing
   console.rst
   tasks.rst
   notifications.rst
+  pdfs.rst
   server-apis.rst
   examples.rst
   legacydocs.rst

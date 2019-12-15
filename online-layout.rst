@@ -4,7 +4,7 @@ Layout
 .. _contents:
   :local:
 
-The online editor is layed out in 5 panels:
+The online editor has 5 panels:
 
 #.  Questions
 #.  Menu Bar
@@ -17,7 +17,7 @@ Panel 1 - Questions
 
 The questions panel is shown when the survey is opened for editing.  It contains the questions in the survey alsong with blue buttons for adding
 new questions.  The last button in the panel is labelled "Add new question" and this adds a question at the end of the survey.  The smaller
-unlabelled blue button between each question also adds a new question at the location of the button.
+unlabelled blue buttons between each question also adds a new question at the location of the button.
  
 .. figure::  _images/layout1.jpg
    :align:   center
@@ -37,7 +37,8 @@ Panel 2 - Menu Bar
 The menu bar has the following items:
 
 *  The name of the survey being edited
-*  Modules. This menu item appears on all Smap Server web pages and allows you to navigate between the modules on the server including the editor, administration and analysis
+*  Modules. This menu item appears on all Smap Server web pages and allows you to navigate between the modules on the server including 
+   the editor, admin, analysis and tasks.
 *  File.
 
    *  Save. Save the changes you have made to the form
@@ -87,3 +88,44 @@ panel and drop it on one of the blue **Add Question** buttons to add the questio
    
    Question Types
    
+Panel 4 - Choices
+-----------------
+
+The choices panel replaces the question panel when you click on the edit button of a select question.
+
+.. figure::  _images/layout4.jpg
+   :align:   center
+   :alt: Selecting the Choices Panel
+   
+   Selecting the Choices Panel
+   
+The choices panel for that question is then displayed and you can add, edit and delete choices. Click on the button labelled "back"
+to go back to the questions panel.
+
+.. figure::  _images/layout5.jpg
+   :align:   center
+   :alt: Choices Panel
+   
+   Choices Panel
+
+Panel 5 - Choice Lists
+----------------------
+
+The online editor allows you to continue using choice lists as you can in the XLS Form editor.   To select the choice list panel
+click on the toggle button.  As this is a toggle button it's label shows what is currently selected and not what you will see when you
+click on it.  So in the questions panel this button will be labelled "Questions".
+
+.. figure::  _images/layout6.jpg
+   :align:   center
+   :alt: Selecting the Choice List Panel
+   
+   Selecting the Choice List Panel
+   
+Once in the choice list panel you can manage your lists of choices.   Click on the toggle button, now labelled "Choices" to go back
+to the questions panel.
+
+.. figure::  _images/layout7.jpg
+   :align:   center
+   :alt: Choice List Panel
+   
+   Choice List Panel
