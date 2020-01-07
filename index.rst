@@ -16,6 +16,7 @@ This documentation is currently under development and is progressively replacing
   getting-started.rst
   concepts.rst
   applications.rst
+  integration.rst
   android.rst
   fieldTask.rst
   webforms.rst

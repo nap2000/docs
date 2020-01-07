@@ -5,9 +5,4 @@ Case Management
   :maxdepth: 1
 
   cm-overview.rst
-  keys.rst
-  sub_form_kp.rst
-  launch-survey-from-survey.rst
-  pulldata-from-subforms.rst
-  
-
+  cm-extending-surveys.rst
