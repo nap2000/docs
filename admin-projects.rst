@@ -50,6 +50,14 @@ Project Management
    surveys inside a project will need to have been erased before you can delete it.
 *  To edit a project click on the name of the project
 
-When you create a project you are automatically added as a user of that project.  To add or remove other users you need to
+.. figure::  _images/adminProjects2.jpg
+   :align:   center
+   :width:   400px
+   :alt:     Project Details
+
+   Project Details
+
+When you create a project you are automatically added as a user of that project.  You can add other users by clicking on the "Users" link
+in the project details dialog.  Alternatively you can
 go to the **Users** tab and update the settings for each affected user.
 
