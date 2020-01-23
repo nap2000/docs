@@ -1,0 +1,6 @@
+﻿type,name,label,relevant,calculation
+,,,,
+select_one sectors,sector,Which sector?,,
+integer,age,What is your age?,,
+calculate,max_age,,,"pulldata('ref_data', 'max_age', 'sector', ${sector})"
+select_one yes_no,enroll,Do you want to enroll?,${age} <= ${max_age},
