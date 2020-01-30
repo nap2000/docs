@@ -1,3 +1,5 @@
+.. _external-applications:
+
 Launching Apps from a Survey
 ============================
 

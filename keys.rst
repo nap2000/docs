@@ -53,7 +53,7 @@ Discard
 +++++++
 
 The new record will be discarded.  This prevents updates to records so should probably not be a common option.
-I can be used when you want the first record submitted for a key to be the authoratative record.
+It can be used when you want the first record submitted for a key to be the authoratative record.
 
 Replace
 +++++++

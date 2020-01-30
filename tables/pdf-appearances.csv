@@ -1,0 +1,52 @@
+Appearance,Result,Comments
+pdf-no,Question will not be included in a generated PDF,
+pdflabelw_##,Set the width of the question label.  Replace '##' with a number from 0 to 10.  ,Setting the width to 10 will make the question answer appear on the next line.
+pdfheight_##,Set the height of the box allowed for the question answer.  This is in points.,This value only applies when exporting a blank template.  If there is data in the export then the size of the data will determine the height of the box.  A value of 150 would be roughly 10 rows.
+pdfcols_##_##_##....,"This sets the number of columns in which to place the data.
+
+Each ## is a column.  Replace each one with a number indicating the width of the column, all of these numbers should add up to 10.  Hence the maximum number of columns is 10.","For example:
+    pdfcols_3_4_3
+    3 columns
+
+pdfcols_5_5
+    Two equal sized columns
+
+pdfcols_10
+    Single column
+
+The column settings apply to the question that you add the appearance to, and all subsequent questions until it is overridden by another pdfcols appearance."
+pdflabelbg_##_##_##,Sets the background color for the label.  Use Hex RGB values,"For example:
+pdflabelbg_FF_00_00
+Set the background to red."
+pdfvaluebg_##_##_##,Sets the background color for the value.  Use Hex RGB values,"For example:
+pdfvaluebg _FF_00_00
+Set the background of the value cell to red."
+pdfmarkercolor_##_##_##,Sets the color for the marker used to show location on maps.  Use Hex RGB values,"For example:
+pdmarkercolor_00_FF_00
+Set the background to blue."
+pdfspace_##,Insert a gap in the table before this question.,The spacing is in points. 1/72 of an inch.
+pdfnewpage,Start the question on a new page,
+pdflabelcaps,Put the label in capitals,
+pdflabelbold,Make the label bold,
+pdfaddto_xxxxx,replace xxxxx with the name of another question.  The answer to the question that has this appearance will be appended to the answer of the specified question.,Answers from different question are comma separated.  Commonly you would use this on an 'other please specify' question and you would also set the appearance 'pdfno' so that the other response appears with the select question.
+pdfapp,Put the question in an appendix after all the other questions,
+pdfmap_xxxx,Replace xxxx with the id of the mapbox map that you want to show in your PDF exports,"You will need to set a map box id if you are running your own server.  
+
+The Mapbox vector map style ids can be found here. https://docs.mapbox.com/api/maps/#styles"
+pdflocation_xxxx,"Replace xxxx with the default location and zoom of your map in the format:
+    longitude, latitude, zoom","Use with maps
+
+Example:
+pdflocation_121,14.6,16
+
+Would create a default map of part of Manila."
+pdfzoom_xx,"The longitude, latitude of the data being displayed will be combined with the specified zoom value to show the map","Use with maps
+
+Available zoom levels will depend on the map you are showing.  Often between 1 and 21.
+
+Example pdfzoom _5"
+pdfbarcode,Show the data as a barcode,
+pdfhyperlink,Show a link for a picture question instead of the image,
+pdfvalue,Show the value for a choice rather than its label,"Use with select and select one questions
+
+By default, when displaying data from a select question, the labels of the selected choices are shown.  If this appearance is added to the select question then the values of the choice are shown."

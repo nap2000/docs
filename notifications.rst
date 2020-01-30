@@ -21,6 +21,7 @@ The following can trigger a notification:
 
 *  A submission.  A result submitted from a survey.
 *  A task reminder.  If a task has not been completed within the specified time.
+*  A console update.  When a question is set to a specific value from the console.
 
 Target
 ------
@@ -50,7 +51,7 @@ The remaining settings will vary depending on the selections made for **trigger*
 Submission Trigger
 ++++++++++++++++++
 
-Settings are:
+Trigger specific settings are:
 
 *  Survey whose submission triggers the notifications
 *  Filter. Restrict which records will trigger a notification.  For example:  "${age} > 80"
@@ -58,10 +59,27 @@ Settings are:
 Task Reminder Trigger
 +++++++++++++++++++++
 
-Settings are:
+Trigger specific settings are:
 
 *  Task Group that contains the tasks that will trigger this notification.
 *  Interval.  Duration after the task is created that the reminder will be sent if the task is not completed.
+
+Console Update Trigger
+++++++++++++++++++++++
+
+Trigger specific settings are:
+
+*  The same triggers as per submission.  That is specify the survey that is being updated and any filters on which records trigger the update.
+*  The oversight survey that is making the change.
+*  The question in the oversight survey that when updated triggers the notification.
+*  The value of the update question.
+
+.. note::
+
+  The filters are evaluated after an update is applied.  Hence if you have an update notification that is triggered when status is set to "critical"
+  and you add a filter that this only applies to "region 1".  Then if the user updates a record and sets the status to "critical" and the region to "region 2"
+  then the notification will not be triggered.  However if they set the region to "region 1" or it was already "region 1" then the notification will be
+  triggered 
 
 Email Target
 ++++++++++++

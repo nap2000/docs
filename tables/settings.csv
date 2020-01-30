@@ -1,4 +1,4 @@
-Setting Name,Description,Online Editor
+Setting Name,Description,Location in Online Editor
 default_language,The language that will be shown by default when the survey is opened,Setting Dialog
 instance_name,"A name created for each survey instance.  The name can include references to other questions such as ""concat(\\'my_survey_\\', ${hh_head})"" which would combine the answer to the hh_head question with the text \\'my_survey_\\' to create the instance name.  The generated value is also used as the name of the instance that is shown on the  tablet's main screen.  Note you must use concat() or join() in order to combine text into an instance name.",Setting Dialog
 style,"Set to **theme-grid**, **pages** or leave blank.   Style only affects the appearance of the survey in WebForms.  **theme-grid** will lay the questions out in a grid format.  **pages** will show each group of questions on a new page and add next/back buttons to the page.",Settings Dialog
@@ -9,3 +9,5 @@ hide_on_device,"When set to ""yes"" the survey will be downloaded to the mobile 
 timing_data,Set to yes or no.  When set to yes audit data recording the time spent in each question will be recorded.,Settings Dialog
 audit_location_data,Set to yes or no. When set to yes the location that each question is answered will be recorded.  Note this setting requires timing_data to also be set to yes.,Settings Dialog
 track_changes,Set to yes or no.  When set to yes every change made to a question during completion of a survey will be recorded.,Settings Dialog
+data_survey,Set to yes or no.  When set to yes the survey can be used to collect data. The default is yes.,Settings Dialog
+oversight_survey,Set to yes or no.  When set to yes the survey can be used to update results in the console.  The default is yes.,Settings Dialog

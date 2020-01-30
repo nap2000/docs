@@ -16,6 +16,7 @@ This documentation is currently under development and is progressively replacing
   getting-started.rst
   concepts.rst
   applications.rst
+  integration.rst
   android.rst
   fieldTask.rst
   webforms.rst
@@ -27,6 +28,7 @@ This documentation is currently under development and is progressively replacing
   console.rst
   tasks.rst
   notifications.rst
+  pdfs.rst
   server-apis.rst
   examples.rst
   legacydocs.rst

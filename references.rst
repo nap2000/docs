@@ -12,6 +12,7 @@ Survey References
   ref-parameters.rst
   ref-settings.rst
   ref-styles.rst
+  ref-pdf-appearances.rst
 
 
 

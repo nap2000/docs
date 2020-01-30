@@ -56,5 +56,5 @@ If AWS is to be used to send the SMS messages then enter the word **aws** into t
 
 .. warning::
 
-  SMS messaging may result in a cost.  Hence it cannot be set up at the organisational level and can only be specified in the
-  server settings.
+  SMS messaging may result in a cost.  Hence it cannot be set up at the organisational level and can only be 
+  enabled in the server settings.

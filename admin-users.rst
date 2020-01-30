@@ -87,7 +87,8 @@ Specify the security groups that they user belongs to. These include:
 *  admin:  Can manage users and passwords
 *  analyst: Can view, modify or delete collected data.
 *  enum: Can download surveys and submit data
-*  manage: Can access the console
+*  manage data: Can access the console
+*  manage tasks: Can create and manage tasks
 *  org admin.  Organisational Administrator. Can create and move between organisations.
 *  enterprise admin.  Can create and move between enterprises.
 *  security.  Can create and assign security roles
@@ -119,15 +120,4 @@ Organisation
 If multiple organisations are selected then the user will be able to move between them using their profile.
 You can use this option to give a user the ability to change organisation even if they do not have the **org admin**
 privilege.
-
-
-
-
-
-
-
-
-
-
-
 

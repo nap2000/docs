@@ -1,5 +1,5 @@
-Editing a Survey
-================
+Editing an Existing Survey
+==========================
 
 From Survey Management
 ----------------------

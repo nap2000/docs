@@ -10,7 +10,7 @@ Audit Data End Points
 
 .. http:get:: /api/v1/audit
 
-  :synposis: get a list of services to retrieve audit data
+  :synopsis: get a list of services to retrieve audit data
   
   **Example response**:
   
@@ -196,3 +196,45 @@ in your time zone you can use the following formula::
   Then add the timezone effect which is the number of hours difference from UTC divided by 24
   
   
+FieldTask Refresh Log
+---------------------
+
+.. http:get:: /api/v1/audit/refresh/log
+
+  :synopsis: Get a list of all calls from fieldTask to refresh the list of forms and tasks. Responds with the user ident, the refresh time, the time on the device and the difference in time between the server and the mobile device.
+  
+  **Example response**:
+  
+  https://sg.smap.com.au/api/v1/audit/refresh/log
+  
+  .. sourcecode:: http
+  
+	HTTP/1.1 200 OK
+	Vary: Accept
+	Content-Type: application/json
+	
+	[
+	  {
+	    "id": 65,
+	    "user": "neil",
+	    "refresh_time": "2020-01-11 21:47:18",
+	    "device_time": "2020-01-11 21:47:10",
+	    "server_ahead": "00:00:08.602204"
+	  },
+	  {
+	    "id": 64,
+	    "user": "neil",
+	    "refresh_time": "2020-01-11 21:44:39",
+	    "device_time": "1970-01-01 00:00:00",
+	    "server_ahead": "18272 days 21:44:39.059854"
+	  }
+	]
+	
+  :query user: The user ident to retrieve
+  :query start: The id to start from
+  :query limit: The number of records to return
+  :query tz: Timezone
+
+  :reqheader Authorization: basic
+  :statuscode 200: no error
+
