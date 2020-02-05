@@ -15,3 +15,4 @@ Online Editor
   online-choice-filters.rst
   online-settings.rst
   online-required.rst
+  online-translations.rst

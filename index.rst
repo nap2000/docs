@@ -29,7 +29,7 @@ This documentation is currently under development and is progressively replacing
   tasks.rst
   notifications.rst
   pdfs.rst
-  server-apis.rst
+  apis.rst
   examples.rst
   legacydocs.rst
   support.rst

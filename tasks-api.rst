@@ -12,7 +12,7 @@ Task Groups
 
 .. http:get:: /api/v1/tasks/groups/(project id)
 
-  :synposis: get a list of task groups in a project.  You can use the :ref:`projects-api` request with a query parameter of `links=true` to get a list of available task groups URLs
+  :synposis: get a list of task groups in a project.  You can use the :ref:`tasks-api` request with a query parameter of `links=true` to get a list of available task groups URLs
   
   **Example response**:
   
@@ -210,7 +210,7 @@ Task List
   :query limit: The number of tasks to return.
   :query sort: The property to sort on. This can be one of `id` (the default) or `scheduled` the scheduled start of the task.
   :query dirn: The direction of sort.  One of `asc` or `desc`
-  :query tz: :ref:`timezone`
+  :query tz: The timezone for example ``Australia/Brisbane``.  All date time and date answers will be returned in this time zone.
   :query status: A comma separated list of status values.  These can include `new`, `accepted`, `late`, `unsent`, `unsubscribed`, 
                  `submitted`, `rejected`, `cancelled`, `deleted`, `pending`, `error`, `blocked`. Refer to :ref:`task-lifecycle` for details
                  on how a task gets a status value.
@@ -274,7 +274,7 @@ Create a Task
 	
 .. http:post:: /api/v1/tasks
 
-  :synposis: Create a task. The payload is a JSON object and can use the same attributes as returned by :ref:`single-task`
+  :synposis: Create a task. The payload is a JSON object and can use the same attributes as returned by :ref:`single-task`.  The payload is sent as x-www-form-urlencoded content with a key of "task".
 
   **Example request**:
 
@@ -282,12 +282,12 @@ Create a Task
 
     HTTP/1.1 200 OK
     Vary: Accept
-    Content-Type: application/json
+    Content-Type: application/x-www-form-urlencoded
 
-    {
+    task = {
        "tg_id": 226,
        "name": "Assign to neil",
-       "form_ident": "s38_722",
+       "survey_ident": "s38_722",
        "assignee_ident": "neil",
        "initial_data_source": "none",
        "from": "2019-04-15 01:48:17",

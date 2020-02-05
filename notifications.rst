@@ -67,7 +67,10 @@ Trigger specific settings are:
 Console Update Trigger
 ++++++++++++++++++++++
 
-Trigger specific settings are:
+In this case the objective is to send a notification when an update is made to the survey via the console.  For example an administrator
+might approve a request.  The notification will be sent only when a specific value is set in a specific question.
+
+The settings are:
 
 *  The same triggers as per submission.  That is specify the survey that is being updated and any filters on which records trigger the update.
 *  The oversight survey that is making the change.
