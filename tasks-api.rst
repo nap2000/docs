@@ -274,7 +274,7 @@ Create a Task
 	
 .. http:post:: /api/v1/tasks
 
-  :synposis: Create a task. The payload is a JSON object and can use the same attributes as returned by :ref:`single-task`.  The payload is sent as x-www-form-urlencoded content with a key of "task".
+  :synposis: Create a task. The payload is a JSON object and can use the same attributes as returned by :ref:`single-task`.  The payload is sent as x-www-form-urlencoded content with a key of "task".  Use :ref:`single-task` API call to get templates for the data that can be posted. 
 
   **Example request**:
 
@@ -295,4 +295,71 @@ Create a Task
     }		   
   
 
+  **Example request 2**:
+
+  .. sourcecode:: http
+
+    HTTP/1.1 200 OK
+    Vary: Accept
+    Content-Type: application/x-www-form-urlencoded
+
+    {
+      "tg_id": 4d": 4,
+      "name": "xxxx : A project : geopoint",
+      "form_id": 37,
+      "survey_ident": "s1_37",
+      "assignee_ident": "neil",
+      "generate_user": false,
+      "initial_data_source": "task",
+      "update_id": "uuid:7df6eb5f-c4b0-4837-9063-09653078782a",
+      "from": "2020-02-06 01:37:42",
+      "repeat": false,
+      "repeat_count": 0,
+      "lon": 153.013277,
+      "lat": -27.445506,
+      "complete_all": true,
+      "assign_auto": false,
+      "initial_data": {
+        "values": {
+          "q1": "hello 2",
+          "instanceid": "uuid:7df6eb5f-c4b0-4837-9063-09653078782a"
+        },
+        "point_geometry": {
+          "coordinates": [
+            153.013277,
+            -28.445506
+          ],
+          "altitude": 0,
+          "accuracy": 0,
+          "type": "Point"
+        }
+      },
+      "show_dist": 0,
+      "id": 9,
+      "tg_name": "xxxx",
+      "p_id": 0,
+      "a_id": 9,
+      "survey_name": "geopoint",
+      "blocked": false,
+      "assignee": 2,
+      "assignee_name": "neil",
+      "status": "accepted"
+    }
   
+  In this second example the task "id" is specified hence the existing task will be updated. Also this example includes initial data for form to use.
+
+  **Example Response:**
+
+    A link to a webform that will complete the created task is returned
+
+    .. sourcecode:: http
+
+      HTTP/1.1 200 OK
+        Vary: Accept
+        Content-Type: application/json
+
+        {
+	    "links": {
+	        "webform": "https://sg.smap.com.au/webForm/s1554_20361?assignment_id=2216"
+	    }
+	}
