@@ -12,6 +12,7 @@ To get to the analysis page select **Modules** then **Analysis**.
   analysis-export.rst
   analysis-reports.rst
   analysis-dashboard.rst
+  analysis-backup.rst
  
  
 

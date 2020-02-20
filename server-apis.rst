@@ -11,3 +11,5 @@ Server APIs
   audit-api.rst
   tasks-api.rst
   users-api.rst
+  log-api.rst
+  email-subscriptions-api.rst

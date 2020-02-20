@@ -1,0 +1,3 @@
+type,name,label,default
+username,uname,,
+text,uname_confirm,Confirm your name,${uname}

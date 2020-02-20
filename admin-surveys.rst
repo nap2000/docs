@@ -33,6 +33,8 @@ The dialog also includes the option of grouping the new survey with an existing 
 on what this means. Only do this if you want to the new survey to share a common table with an existing survey. To add the
 new survey to a group select the name of the survey you want to group it with from the drop down.
 
+.. _replacing-surveys:
+
 Replacing Surveys
 -----------------
 
@@ -78,6 +80,9 @@ Deleting Surveys
    :align:   center
    :alt: Deleting Surveys
    
+
+.. _restoring-surveys:
+
 Restoring Surveys
 -----------------
 

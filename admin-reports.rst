@@ -35,3 +35,11 @@ This report show all the notifications that have currently been set up to respon
   Access from the Form Management Page
   Select the "Notification Report"
 
+Resource Utilisation Report
+---------------------------
+
+Shows the resources in shared resources including CSV files, images, video and audio.  Shows the surveys that are using these resources::
+
+  Access from the Form Management Page
+  Select the "Resource Utilisation Report"
+

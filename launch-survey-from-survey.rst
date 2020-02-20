@@ -70,8 +70,8 @@ You will then be asked to add parameters.
 #.  Select Auto Play if you want the class survey to be launched without the user having to press a button.
 
 
-Launch a Child Survey
-+++++++++++++++++++++
+Example 2 - Launch a Child Survey
++++++++++++++++++++++++++++++++++
 
 Alterntively you may be completing a survey on classes and realise that you have not registered a child that you want to enroll in the class.
 Follow the same steps as for creating the parent survey but this time select the **child survey / form** question type.   When you are asked
@@ -89,8 +89,11 @@ Other Considerations
 Commonly you will not want the user to start up a "launched" survey independently.  You can hide launched surveys 
 so that they are not directly visible in fieldTask.  To do this go to the survey settings and select "Hide on device".
 
-Tutorial - Launching a Child Survey
------------------------------------
+Tutorial - Launching a Parent Survey
+------------------------------------
+
+In this example the user will be filling out details on a pupil.  When it comes to adding the class, if the class does not exist, then 
+they will launch the class form to add it and also to automatically add the pupil as being a member of that class.
 
 1. First create a survey called "Class". Add some questions including a text question called class_id.  Edit the keys for this survey
 and set the key to "${class_id}".

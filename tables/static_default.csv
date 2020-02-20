@@ -1,0 +1,2 @@
+type,name,label,default
+select_one food_group,food_group,Which food group was this?,legumes
