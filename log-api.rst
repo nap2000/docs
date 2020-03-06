@@ -1,5 +1,5 @@
-Log API
-=======
+Log
+===
 
 .. contents::
  :local:

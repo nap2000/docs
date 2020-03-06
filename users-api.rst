@@ -1,5 +1,5 @@
-Users API
-=========
+Users
+=====
 
 .. contents::
  :local:
@@ -10,7 +10,7 @@ User Locations
 
 .. http:get:: /api/v1/users/locations
 
-  :synopsis: Returns the locations of users when they last refreshed fieldTask
+  :synopsis: Returns the locations of users when they last refreshed fieldTask, (refer to :ref:`projects-api` for a web service call that returns projects)
   
   **Example response**:
   
@@ -44,7 +44,8 @@ User Locations
 	  "message": ""
 	}
 	
-  :query tz: Timezone
+  :query text tz: Timezone
+  :query integer project: Project ID 
   :reqheader Authorization: basic
   :statuscode 200: no error
 

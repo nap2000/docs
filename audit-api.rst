@@ -1,5 +1,5 @@
-Audit API
-=========
+Audit
+=====
 
 .. contents::
  :local:

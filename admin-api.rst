@@ -1,5 +1,5 @@
-Admin API
-=========
+Admin
+=====
 
 .. contents::
  :local:
@@ -105,7 +105,7 @@ Resources
   
   curl -u xxxx -i -X POST -H "Content-Type: multipart/form-data" -F "data=@phone.jpg" https://sg.smap.com.au/surveyKPI/upload/media
   
- :query survey_id: The id of a survey if you want the media file to only be available to that survey.
+  :query survey_id: The id of a survey if you want the media file to only be available to that survey.
 
 .. _projects-api:
  
@@ -194,15 +194,15 @@ Submissions
 	}
 	]
 	
-  :query limit:  	Set to the number of records that you want to see. Since data is returned latest first then if you specify the limit as 10 you will see the last 10 submissions.
-  :query start: The id to start from (upload id). If you specify a start of 1,000 and a limit of 2 then uploads 999 and 998 
+  :query integer limit:  	Set to the number of records that you want to see. Since data is returned latest first then if you specify the limit as 10 you will see the last 10 submissions.
+  :query integer start: The id to start from (upload id). If you specify a start of 1,000 and a limit of 2 then uploads 999 and 998 
                  will be returned. Note the id you specify in start will not be returned. You can use this parameter to page 
                  through the data setting the value of start to the oldest submission returned in the previous query.
-  :query stopat: When set do not go past the specified upload id. The data for the specified upload id is not returned. 
+  :query integer stopat: When set do not go past the specified upload id. The data for the specified upload id is not returned. 
                  You can use this when reading the data as a feed. For example if you call the service and the latest submission 
                  has an id of 1001, then if you call the service again with stopat=1001 you will only get the new submissions.
-  :query user: Return the submissions for the specified user.
-  :query tz: Set to a valid time zone. (Refer to timezones api call to get a list of valid time zones). The upload time will be 
+  :query text user: Return the submissions for the specified user.
+  :query text tz: Set to a valid time zone. (Refer to timezones api call to get a list of valid time zones). The upload time will be 
                 returned in this time zone.
   :query boolean links: Return links to other submission related data.
   :reqheader Authorization: basic
@@ -262,7 +262,7 @@ Get a PDF of a submitted Record
   :synposis: Returns a PDF of the data in the submission. You can use the data API passing a parameter of links=true to see the URLs that will return a PDF of data.
   
   :query instance:  (Required) The instance id of the record you want to retrieve.  
-  :query tz: Set to a valid time zone.
+  :query string tz: Set to a valid time zone.
   :reqheader Authorization: basic
   :statuscode 200: no error
   

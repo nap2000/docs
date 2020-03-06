@@ -12,4 +12,5 @@ Server APIs
   tasks-api.rst
   users-api.rst
   log-api.rst
-  email-subscriptions-api.rst
+  people-api.rst
+  mailout-api.rst

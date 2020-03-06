@@ -1,7 +1,7 @@
 .. _tasks-api:
 
-Tasks API
-=========
+Tasks
+=====
 
 .. contents::
  :local:

@@ -1,5 +1,5 @@
-Email Subscriptions API
-=======================
+People
+======
 
 .. contents::
  :local:

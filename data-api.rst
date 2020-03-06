@@ -1,5 +1,5 @@
-Data API
-========
+Data
+====
 
 .. contents::
  :local:
