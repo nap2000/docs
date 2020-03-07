@@ -33,6 +33,7 @@ Get Mailouts
           }
         ]
 	
+  :query boolean links: Return links to other mailout related data.
   :reqheader Authorization: basic
   :statuscode 200: no error
 
@@ -117,4 +118,45 @@ Get Email Totals
 
   :reqheader Authorization: basic
   :statuscode 200: no error
+
+Create/Edit a Mailout
+---------------------
+	
+.. http:post:: /api/v1/mailout
+
+  :synposis: To edit an existing mailout the payload is a JSON object with the same attributes as returned by :ref:`get-mailouts`.  To create a new mailout remove the mailout id. The payload is sent as x-www-form-urlencoded content with a key of "mailout".  
+
+  **Example request**:
+
+  .. sourcecode:: http
+
+    HTTP/1.1 200 OK
+    Vary: Accept
+    Content-Type: application/x-www-form-urlencoded
+
+    mailout = {
+       "survey_ident": s17_119,
+       "name": "Here is a new mailout",
+       "subject": "Mailout on Program Approach",
+       "content": "Dear ${name},\n\nPlease complete\n\nRegards Karen"
+    }		   
+  
+
+  **Example Response:**
+
+     Details on the mailout created are returned.  This will be the same as the passed in details except the `id` of the mailout will be added
+
+     .. sourcecode:: http
+
+       HTTP/1.1 200 OK
+       Vary: Accept
+       Content-Type: application/json
+
+       {
+         "id": 12,
+         "survey_ident": s17_119,
+         "name": "Here is a new mailout",
+         "subject": "Mailout on Program Approach",
+         "content": "Dear ${name},\n\nPlease complete\n\nRegards Karen"
+       }		   
 
