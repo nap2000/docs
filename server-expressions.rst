@@ -19,7 +19,7 @@ Use the same approach that is used for referring to questions in a relevance. Th
 the question name with curly brackets and put a dollar sign in front.
 
 Questions can be in any form. For example you may have a survey that gathers information on
-comapanies and the projects that they are involved in. Hence the data on projects could be in a sub-form.
+companies and the projects that they are involved in. Hence the data on projects could be in a sub-form.
 The following filter will trigger on a
 company name of "Widgets" that has at least one project with a value over 100,000::
 
@@ -155,9 +155,9 @@ Special Terms
 
 * is null (Test to see if an answer was <b>not</b> given to a media or geopoint question)
 * is not null (Test to see if an answer was given to a media or geopoint question)
-* _upload_time (The date that the survey was uploaded to the server)
-* _start (The time the survey was started)
-* _end (The time the survey ended)
+* ${_upload_time} (The date that the survey was uploaded to the server)
+* ${_start} (The time the survey was started)
+* ${_end} (The time the survey ended)
 * ${_hrk} (The generated unique key for the record)
 * ${_device} (The device identifier that submitted the results)
 * ${_user} (The logon identifier of the user that submitted the results)

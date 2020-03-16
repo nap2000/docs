@@ -6,3 +6,4 @@ Case Management
 
   cm-overview.rst
   cm-extending-surveys.rst
+  cm-examples.rst

@@ -17,5 +17,5 @@ This will return the projects that you have access to and links to get more data
   tasks-api.rst
   users-api.rst
   log-api.rst
-  people-api.rst
-  mailout-api.rst
+  contacts-api.rst
+  campaign-api.rst

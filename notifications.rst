@@ -93,9 +93,21 @@ Settings are:
 *  Email.  The email address.
 *  A question that contains the email address. (If the trigger is a submission of a completed survey)
 *  Subject.  The subject of the email.
-*  Content.  The body content of the email.  Data from the submission can be included in both the subject and the content
-   using the ${question_name} syntax
+*  Content.  The body content of the email.  
    
+The subject and message content can be customised using data from the submitted results.  Use the following placeholders in either:
+
+*  ${username} :  The user who submitted the results.
+*  ${surveyname) : The name of the survey
+*  ${hrk} : The key that is created on the server
+*  ${instancename} : The instance name that is generated on the server
+*  ${device} : The device IMEI used to submit the results
+*  ${questionname} : Where questionname is the name of any question in the survey.  
+
+For example::
+
+  ${username} has submitted ${surveyname} with a value of age of ${age}.
+  
 SMS Target
 ++++++++++
 
