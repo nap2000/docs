@@ -7,6 +7,7 @@ Concepts
 
   server-calculations.rst
   organisation-hierarchy.rst
+  emails.rst
 
 
 

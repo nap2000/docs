@@ -1,17 +1,17 @@
-Mailout
-=======
+Campaigns
+=========
 
 .. contents::
  :local:
 
 .. _get-mailouts:
 
-Get Mailouts
-------------
+Get Campaigns
+-------------
 
 .. http:get:: /api/v1/mailout/(survey ident) 
 
-  :synopsis: Returns the mailouts that use the specified survey
+  :synopsis: Returns the mailouts that use the specified survey. A list of surveys can be found using :ref:`surveys-api`.
   
   **Example response**:
   
@@ -37,8 +37,10 @@ Get Mailouts
   :reqheader Authorization: basic
   :statuscode 200: no error
 
-Get Mailout Emails
-------------------
+.. _get-campaign-emails:
+
+Get Campaign Emails
+-------------------
 
 .. http:get:: /api/v1/mailout/(mailout id)/emails 
 
@@ -119,8 +121,8 @@ Get Email Totals
   :reqheader Authorization: basic
   :statuscode 200: no error
 
-Create/Edit a Mailout
----------------------
+Create/Edit a Campaign
+----------------------
 	
 .. http:post:: /api/v1/mailout
 
@@ -160,3 +162,53 @@ Create/Edit a Mailout
          "content": "Dear ${name},\n\nPlease complete\n\nRegards Karen"
        }		   
 
+
+Create a Campaign Email
+-----------------------
+	
+.. http:post:: /api/v1/mailout/(campaign id)/email
+
+  :synposis: The payload is a JSON object with the same attributes as returned by :ref:`get-campaign-emails`.  The payload is sent as x-www-form-urlencoded content with a key of "email". Optionally a second payload item with a key of **action** and values of either "email", "manual" or "none" can be included.  If the action is set to email then an email is sent immediately. Alternatively if the action is set to "manual" the URL to complete the form will be returned.  If the **action** is not set, or is set to "none", then the email is added to the campaign to be sent by a user using the user interface.
+
+  **Example request**:
+
+  .. sourcecode:: http
+
+     HTTP/1.1 200 OK
+     Vary: Accept
+     Content-Type: application/x-www-form-urlencoded
+
+     email = {
+       "email": "neilpenman@gmail.com",
+       "name": "Neil",
+       "initialData": {
+         "values": {
+           "street": "Collins Street"
+          }
+       }
+     }
+
+     action=manual
+  
+
+  **Example Response:**
+
+     Where the action is "manual" details on the campaign email will be returned. Otherwise an empty JSON object will be returned
+
+     .. sourcecode:: http
+
+       HTTP/1.1 200 OK
+       Vary: Accept
+       Content-Type: application/json
+
+       {
+         "id": 22,
+         "email": "neilpenmanx@gmail.com",
+         "name": "Neil",
+         "url": "https://ubuntu1804.smap.com.au/webForm/action/u5c7d9fae-4e12-47a0-bf09-c1fb273faa20",
+         "initialData": {
+           "values": {
+             "street": "Collins Street"
+             }
+          }
+       }

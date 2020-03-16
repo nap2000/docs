@@ -27,6 +27,7 @@ This documentation is currently under development and is progressively replacing
   server-expressions.rst
   console.rst
   tasks.rst
+  campaigns.rst
   notifications.rst
   pdfs.rst
   apis.rst

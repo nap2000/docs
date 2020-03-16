@@ -1,5 +1,5 @@
-People
-======
+Contacts
+========
 
 .. contents::
  :local:
