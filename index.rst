@@ -31,6 +31,7 @@ This documentation is currently under development and is progressively replacing
   pdfs.rst
   apis.rst
   examples.rst
+  tips.rst
   legacydocs.rst
   support.rst
  

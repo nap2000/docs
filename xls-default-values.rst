@@ -4,24 +4,75 @@ Default Values
 .. contents::
  :local:
 
-Dynamic Values
---------------
+Static Values
+-------------
+
+A static default is set when the the form is first opened.  
+
+.. note::
+
+  To add a staric default; place the default value in the default column without using quotation marks.
+
+.. csv-table:: Static Default:
+  :width: 240
+  :widths: 80,40,80,40
+  :header-rows: 1
+  :file: tables/static_default.csv
+  
+In the above example the default value for the select one question is set to legumes.  
+
+Special Static Defaults
++++++++++++++++++++++++
+
+You can use one of these special values in the default column.
+
+.. csv-table:: Special Static Default Values:
+  :width: 100
+  :widths: 50,50
+  :header-rows: 1
+  :file: tables/special_static_default.csv
+
+Referring to Preloads
++++++++++++++++++++++
+
+Because a static default value is set when the form is first opened there is no point referring to the answers to other question in order
+to set the default value.  For that you will need to use a dynamic default.  However you can refer to a preload.  So for example you
+may specify a preload to get the users name and you can then use that preload value in a static default.
+
+.. csv-table:: Using Preloads in Static Defaults:
+  :width: 240
+  :widths: 80,40, 80, 40
+  :header-rows: 1
+  :file: tables/preload_static_default.csv
+
+
+Dynamic Defaults
+----------------
 
 A dynamic default value is specified in the **calculation** column for a question.  Hence you can set the initial answer to a question
 based on the answer to a preceeding question.
   
 .. warning::
 
-  For fieldTask dynamic default values have to be wrapped in the once() function as otherwise they will be recalculated when the
-  user saves the form and any changes the user has made will be lost.
+  Calculations in FieldTask are updated every time their source changes and also just before the survey is saved. This can cause lots of issues when using them
+  to set default values.  For example if you had a dynamic default calculation of ${number_girls} to set the default value for a question on how many girls go 
+  to school then the answer (to how many girls go to school) will be reset back to the default value when the form is saved.  
 
-  For example:  once(${q2})
+To avoid the problem of recalculation of defaults when the form is saved  wrap the calculation in the once() function::  
+
+  once(${number_girls}) 
+
+Now the default value is set when the question is shown. Once the answer has been set then it will not be changed again by the calculation.
+
+.. note::
+
+  Webforms does not have the above issues with dynamic defaults and you **should not** wrap the default calculation in the once() function.
   
 Dynamic Images
 --------------
 
 Images are a special case because you can dynamically specify an image URL as the default value of a question.  If the Android device or
-WebForm is online this image will then be downloaded.  One application of this might be if you had a image question with an appearance of
+WebForm is online this image will then be downloaded.  One application of this might be if you had an image question with an appearance of
 **annotate**.  The image URL can be selected from a list of drawing schematics, the selected image would then be downloaded and the user would be
 able to annotate the selected schematic.
 
