@@ -36,7 +36,10 @@ Example::
 
 .. figure::  _images/campaign.jpg
    :align:   center
+   :width:  500px
    :alt: The campaign page
+
+   The campaign page
 
 Adding Email Recipients
 -----------------------
@@ -79,6 +82,8 @@ Sending Emails
 
 Press the button "Email Unsent" to send all of your emails.
 
+Alternatively if you have already sent emails and some of them failed, perhaps because the user was unsubscribed, then you can press the "Retry" button.
+This will send all unsent emails and will also try and send those with an unsubscribed or error status.  
 
 Completing a Mailout Survey
 ---------------------------
@@ -96,4 +101,38 @@ same message as each mailout survey can only be completed once.
 .. figure::  _images/mailout1.png
    :align:   center
    :width: 200px
-   :alt: Replacing a Survey
+   :alt: Page shown after a mailout survey has been completed
+
+   Completion Page
+
+Adding initial Data
+-------------------
+
+Each survey sent can be personalised to the recipient by using intial data.   You can do this by adding extra columns to the spreadsheet that has your list
+of recipients.  Each column name should correspond to the name of the question that you want to pre-populate.
+
+In the following simple example a single question is prepopulated with the currently understood address of the recipient.
+
+.. figure::  _images/mailout2.jpg
+   :align:   center
+   :width: 500px
+   :alt: Adding initial data to a mailout survey
+
+"address" might be a text question in which case when the user completes the survey they will see that address as the default answer for the question. 
+Alternatively you can pre-populate calculation questions and use these to control the logic of how the survey is completed using relevance.
+
+You can add as many columns as you want in order to pre-populate as many questions as required.  However the following column names are
+reserved. So if you have one of these as a question name you won't be able to pre-populate it:
+
+*  email
+*  name
+*  status
+*  status_details
+
+Viewing details of an email mailout
+-----------------------------------
+
+If you select an email in the table then you can press the **Details** button.  This will show the URL of the link that the user selects to complete the survey.
+You can then copy this URL and send it to the recipient by other means if they are having trouble accessing it.
+
+The details popup will also show the initial data to be applied to the survey in JSON format. 

@@ -23,11 +23,14 @@ Create a notification for the survey
 #.  Specify a filter: ${confirm_copy} = 'yes'
 #.  Specify a PDF attachment
 #.  In the Email Meta Item drop down select "Submitter".
-#.  Optionally specify some text for the email subject or conten
+#.  Optionally specify some text for the email subject or content
 
 So assuming that the name of the question that asks the user if they want a copy is "confirm_copy" and the value of the choice is "yes" then a copy of the 
 answers should be sent to any respondent who selects that option.
 
 .. figure::  _images/submitter.jpg
    :align:   center
+   :width:  500px
    :alt: Setting up a notification to send a copy of submitted results back to the submitter
+
+   Notification Dialog

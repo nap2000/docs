@@ -1,6 +1,6 @@
 
-Tips
-====
+Tips and Tutorials
+==================
 
 .. toctree::
   :maxdepth: 1
@@ -8,4 +8,4 @@ Tips
   tips-online.rst
   tips-old-survey.rst
   tips-provide-copy-of-answers-to-respondent.rst
- 
+  tips-followup-surveys.rst 
