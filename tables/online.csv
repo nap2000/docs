@@ -2,7 +2,7 @@ Function,usage,example
 lookup,This function can be used instead of pulldata in calculations.  It takes the same parameters as pulldata. However the csv file is not downloaded.  This can be useful when you have very large reference files.,"lookup('hhdata','members','hhid_key',${hhid})
 
 Not available in web forms "
-lookup_choices,This function can be used instead of search in appearance.  It takes the same parameters as search. However the csv file is not downloaded.  This can be useful when you have very large reference files.,"lookup_choices('children', 'matches', 'class_v', ${class}, 'enrolled_v', ${enrolled})
+lookup_choices,This function can be used instead of the search() function. Both this and search() are placed in appearance.  It takes the same parameters as search. However the csv file is not downloaded.  This can be useful when you have very large reference files.,"lookup_choices('children', 'matches', 'class_v', ${class}, 'enrolled_v', ${enrolled})
 
 Not available in web forms "
 lookup_image_labels,"lookup_image_labels(picture)

@@ -59,8 +59,8 @@ Clicking on a column heading will sort on that column.  Clicking again will chan
 Editing a record
 ----------------
 
-Using an Oversight Surveys
-++++++++++++++++++++++++++
+Using Oversight Surveys
++++++++++++++++++++++++
 
 Restricting editing of records to using oversight surveys provides a lot of control over what can and cannot be changed.
 For example you may have a survey that is used to record customer feedback.  The back office staff are allowed to change
@@ -87,6 +87,20 @@ form the oversight survey and can have their answer changed.
 Hence if you want to be able to change the answer to a question in the main survey then you will need to have a question of the same
 name in the oversight survey. To add data to the main survey the question in the oversight survey would not be in the main survey.
 
+Oversight survey specific configuration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For the most part an oversight survey is the same as a normal survey and you just specify it in the consolse as being used as an oversight survey,
+in other words for editing data in the console.  To allow a survey to be used in this way it needs to be loaded into the same group as the survey
+whose data you are editing.
+
+There are some configuration settings you can use with oversight surveys:
+
+#.  In the survey settings make it explicit that the survey is for oversight.  If you do this the survey will not be downloaded to fieldTask or
+    made available via Web Forms.  Conversely you can specify that a survey is for data collection only so that it cannot be selected as the editing
+    survey in the console.
+#.  For a text question specify a source parameter which points to an image question.  For example:  "source=issue_photo".  This will cause the text
+    question to be automatically populated with labels identified in the the image.  The AWS Rekognition service is used to do this.
 Using a webform
 +++++++++++++++
 
