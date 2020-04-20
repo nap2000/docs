@@ -107,3 +107,47 @@ Select the user whose activity you want to show.
 .. note::
 
   Only for "User Activity" subjects.
+
+
+Map Panels
+----------
+
+Whole of Survey View
++++++++++++++++++++++
+
+It is not necessary to select a question.  Just select the survey and save.  The resultant map will show you all the locations at which data
+was collected.  If you click on a point it will show details of the data at that point.
+
+Map view of a select question
++++++++++++++++++++++++++++++
+
+When creating the map panel specify a question to analyse.  This works best for select_one or select_multiple type questions.
+
+.. figure::  _images/analysis5.jpg
+   :align:   center
+   :width:   300px
+   :alt:     Showing a map view that shows results for a selected question
+   
+   Question level map view
+
+The locations are colour coded according to relative frequency:
+
+*  Red: High
+*  Orange
+*  Yellow
+*  Green
+*  Blue: Low
+
+These frequency values apply to one of the choices in the question.  To view the results for a different choice select that choice in the aside to the
+right of the map.
+
+If a location only contains a single record then the location will be coloured either "red" the choice was selected or "blue" the choice was not selected.  
+However if you have more than one record clusted at a single location then you will see the range of colours described above depending on the percentage
+of times that choice was selected.
+
+.. figure::  _images/analysis6.jpg
+   :align:   center
+   :width:   300px
+   :alt:     Showing a map view with clustering
+   
+   Question level map view zoomed out to show clustering

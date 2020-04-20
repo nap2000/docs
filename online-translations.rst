@@ -1,3 +1,6 @@
+
+..  _online-translations:
+
 Translations
 ============
 
@@ -16,3 +19,7 @@ the **Save** button.
    
    Translating
 
+Automated Translations
+----------------------
+
+Select the menu "Tools" and then "Auto Translate" to use AWS translate to automatically translate languages.  (:ref:`language-codes`)

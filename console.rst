@@ -101,6 +101,77 @@ There are some configuration settings you can use with oversight surveys:
     survey in the console.
 #.  For a text question specify a source parameter which points to an image question.  For example:  "source=issue_photo".  This will cause the text
     question to be automatically populated with labels identified in the the image.  The AWS Rekognition service is used to do this.
+
+Annotating Answers
+^^^^^^^^^^^^^^^^^^
+
+You may have collected image, audio or video data and you want to label that media or transcribe it into text.  If it is a text question
+you may want to translate that response into a different language.  You can do this with oversight surveys.
+
+To do this:
+
+#.  Create a text question in an oversight survey to hold the annotation
+#.  Add a parameter source with a value of the name of the question that you want to translate.  For example: "source=comment".
+#.  Setting the rows parameter to something like 5, will also make it easier for the user to type in the annotation
+
+Having done this when you edit a record in the console the source question will be shown next to the annotation question so that you can 
+easily update one from the other.
+
+Example 1. Translate a text answer
+##################################
+
+.. figure::  _images/annotation1.jpg
+   :align:   center
+   :alt: Showing the process of annotating a text response
+
+   Annotating a text response
+   
+.. note:: 
+
+  The user has unselected "Form Data" at top left so that they can focus on the questions that are in the oversight form.
+ 
+Example 2. Transcribe an audio recording
+########################################
+
+.. figure::  _images/annotation2.jpg
+   :align:   center
+   :alt: Showing the process of transcribing an audio response
+
+   Transcribe an audio response
+   
+Example 3. Transcribe a video recording
+#######################################
+
+.. figure::  _images/annotation3.jpg
+   :align:   center
+   :alt: Showing the process of transcribing a video response
+
+   Transcribe a video response
+   
+Automatic Translation
+#####################
+
+The translation can be done automatically by `AWS Translate  <https://aws.amazon.com/translate>`_.  The following additional parameters
+need to be added to the question in the oversight form that is going to show the translation:
+
+#.  Add the parameter: auto=yes
+#.  Add a paramater **from_lang** with the value set to the language code of the source language
+#.  Add a parameter **to_lang** with the value set to the language code of the language you are translating to
+
+:ref:`language-codes` 
+
+Automatic Audio Transcription
+#############################
+
+Audio can be done transcribed automatically using `AWS Transcribe  <https://aws.amazon.com/transcribe/>`_.  The following additional parameters
+need to be added to the text question in the oversight form that is going to show the transcription:
+
+#.  Add the parameter: auto=yes
+#.  Add a paramater **from_lang** with the value set to the language code of the audio file
+
+:ref:`language-codes-audio` 
+
+
 Using a webform
 +++++++++++++++
 
@@ -116,7 +187,7 @@ Clicking on the history tab will show the changes that have been made to the rec
    :align:   center
    :alt: Record History
 
-   ord History
+   Record History
    
 In the case above there has been one change to the record.  That change only affected a single question.
 
@@ -190,3 +261,18 @@ After clicking on **Up** and selecting a different record then drilling down aga
    :alt: Sub form records with a different parent
 
    Sub form records with a different parent
+
+
+.. _language-codes-audio:
+
+Languages Supported for Automatic Transcription
+-----------------------------------------------
+
+The languages available for automatic transcription differ from the languages that can be automaticaly translated.  There are less languages
+supported however some languages have many dialects that are not included in the list of languages for translation.
+
+.. csv-table:: Transcription Languages:
+  :width: 100
+  :widths: 20,80
+  :header-rows: 1
+  :file: tables/transcribe.csv

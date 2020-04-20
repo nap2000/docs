@@ -212,3 +212,38 @@ Create a Campaign Email
              }
           }
        }
+
+Initial data for surveys with repeating groups can be posted using the format::
+
+    class Instance {
+	public HashMap<String, String> values = new HashMap<>();	 	
+        public HashMap<String, ArrayList<Instance>> repeats;	
+    }
+    
+    In the following example the survey has a top level form with question q1. Then a subform called "q2"
+    with question "q2.1".
+
+     .. sourcecode:: http
+
+       HTTP/1.1 200 OK
+       Vary: Accept
+       Content-Type: application/json
+
+    {
+        "email": "neilpenman@gmail.com",
+        "name": "Tom",
+        "initialData": { 
+            "values": { 
+              "q1": "panda" 
+            }, 
+            repeats: { 
+              "q2": [
+                { 
+                   "values": { 
+                      "q2.1": "bear" 
+                   } 
+                }
+              ] 
+            } 
+        }
+    }

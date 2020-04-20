@@ -123,3 +123,50 @@ be able to ensure that your pictures are language
 independent.  With Audio and Video there would presumably be a language dependence however this is only required if there is more than 
 one language used among the people being interviewed.  For many surveys where multiple languages are used there are two languages
 one for the analysts and the second the interviewees.  In these cases only audio in the interviewee language would be required.
+
+Setting the Language Code
+-------------------------
+
+If you know the code for a language you can include it in the name in brackets.  For example::
+
+  English (en)
+  Spanish (es)
+
+Adding the language code tells the system explicitley what the language is which allows it to do automatic translations for certain languages.  See the next section.
+
+Automatic Translations
+----------------------
+
+You can automatically translate some languages when you upload a form.  To do this in the settings sheet add a
+column with a heading "auto_translate" and set the cell beneath that to "yes" or "true".  Then on load
+
+*  The first language in your survey is used as the source language
+
+*  Any empty labels, hints, constraint messages, required messages and guidance in the remaining languages will
+   be translated from the source language.  Hence if you have already specified a translation it will not be 
+   overwritten
+
+Languages are only considered for auto translation if they have been specified using one of the supported
+language codes.  See below.
+
+..  _language-codes:
+
+Supported Languages for Translation
++++++++++++++++++++++++++++++++++++
+
+.. csv-table:: Translation Languages:
+  :width: 100
+  :widths: 20,80
+  :header-rows: 1
+  :file: tables/translate.csv
+
+Resolving Translation Errors
+++++++++++++++++++++++++++++
+
+The automatic translations are done using AWS transcribe and there will certainly be errors that will need to be resolved.  Any feedback on the 
+usefulness of automatic translation for specific languages is welcome.
+
+When creating a survey in a local language there are always issues with the translation.  These could be because there have been changes to
+the survey since the translation was done, misunderstandings of context by the translator.  The data collectors may also find the translation difficult
+to understand, unclear or be culturally insensitive for the specific location of the assessment. These issues can be resolved using the :ref:`online-translations` 
+page of the online editor during training of the data collectors.  
