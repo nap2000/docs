@@ -21,6 +21,28 @@ Media / CSV Files
 Maps
 ----
 
+Maps from `Mapbox <https://www.mapbox.com/maps/>`_ can be used as the basemap for a map view on the analysis page or the console map. These maps
+can be one of the standard maps:
+
+*  mapbox/light-v10
+*  mapbox/dark-v10
+*  mapbox/streets-v11
+*  mapbox/outdoors-v11
+*  mapbox/satellite-streets-v11
+
+Alternatively you can design your own maps that are customised to your requirements using the Mapbox Studio.  You will need you own account on Mapbox to  
+design your own maps and you will need to set the key for that mapbox account in your organisation settings.
+
+To add a shared map click on the "Add Map" button and then fill in the dialog shown below.  For the Map Id you can use one of the standard mapbox Id's listed
+above.
+
+.. figure::  _images/sharedResources2.jpg
+   :align:   center
+   :width:    300px
+   :alt:     Dialog for adding a shared map
+
+   Add Map Dialog
+
 Locations
 ---------
 

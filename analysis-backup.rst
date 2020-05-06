@@ -30,6 +30,14 @@ Backup
    
 3. Click on the **Backup** button or the **Backup with Images** button
 
+A dialog will be shown that allows you to enter the first and last record number (prikey) that are to be downloaded.  This is optional
+unless the number of records exceeds the limits which are:
+
+*  Backing up with images:  500
+*  Standard backup: 10,000
+
+If you just enter the starting record number then all records up to the last one will be backed up.
+
 The data will be downloaded into a zip file. 
 
 4.  If you are going to archive the data then you should also download the survey template from the survey management page.

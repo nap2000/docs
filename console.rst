@@ -158,6 +158,8 @@ need to be added to the question in the oversight form that is going to show the
 #.  Add a paramater **from_lang** with the value set to the language code of the source language
 #.  Add a parameter **to_lang** with the value set to the language code of the language you are translating to
 
+The above parameters are required in addition to the "source" parameter identifying the question that contains the original text.
+
 :ref:`language-codes` 
 
 Automatic Audio Transcription
@@ -169,8 +171,21 @@ need to be added to the text question in the oversight form that is going to sho
 #.  Add the parameter: auto=yes
 #.  Add a paramater **from_lang** with the value set to the language code of the audio file
 
+The above parameters are required in addition to the "source" parameter identifying the question that contains the original audio file.
+
 :ref:`language-codes-audio` 
 
+Automatic Labelling of Images
+#############################
+
+Images can be labelled automatically using `AWS Rekognition  <https://aws.amazon.com/rekognition/>`_.  The following additional parameters
+need to be added to the text question in the oversight form that is going to show the transcription:
+
+#.  Add the parameter: auto=yes
+
+The above parameter is required in addition to the "source" parameter identifying the question that contains the original image file.
+
+:ref:`language-codes-audio` 
 
 Using a webform
 +++++++++++++++

@@ -105,6 +105,21 @@ Constants
 * date values enclosed in single quotes and in the following format yyyy-mm-dd.  Note
   that you need to enter two characters for months and days.
 
+Example::
+
+  2020-04-01
+
+Single Quotes in Text
+---------------------
+
+You might want to search for the name of a person that contains a single quote in their name such as 'Akeola. In cases like this add an 
+extra quote.  The system will then realise that '' means its a quote inside the text and not the end of the text. For example you may
+specify an advanced filter as::
+
+  ${first_name} like '%''Akeola%'
+
+
+This feature is available with Smap Version 20.04
 
 Date Formats
 -------------
