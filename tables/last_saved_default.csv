@@ -1,0 +1,2 @@
+type,name,label,default
+text,street_name,Street,${last-saved#street_name}

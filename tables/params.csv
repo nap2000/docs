@@ -12,6 +12,7 @@ auto,auto=yes,"Use to automatically launch the following questions:
 *  image (appearance must include new)"
 chart_type,chart_type=horizontal_bar,"Use with question types of chart. Currently there is only one chart type supported which is ""horizontal_bar"".  If you don't specify any value then a line chart will be shown."
 end,end=5,Use with range questions to set the end point of a range.  (start and step parameters must also be included)
+from_lang,from_lang=es,The language to translate from or transcribe from audio. :ref:`language-codes`.  For transcription there are a different set of the language codes that also include the dialect.  :ref:`language-codes-audio`
 form_identifier,form_identifier=s12_234,"Use on Parent Form and Child Form types.
 
 
@@ -60,3 +61,4 @@ start,start=1,"Use with range questions to set the starting point of a range.  (
 
 If you specify a decimal number then the answer will be recorded as decimal"
 step,step=0.5,Use with range questions to set the step increment of a range.  (start and end parameters must also be included)
+to_lang,to_lang=th,The language to translate to.   :ref:`language-codes`.  

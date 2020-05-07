@@ -4,4 +4,5 @@ Example Applications
 .. toctree::
   :maxdepth: 1
 
-  cmx-labelling.rst
+  ea-medical-clinics.rst
+  ea-accountability.rst

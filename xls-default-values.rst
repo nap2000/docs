@@ -46,6 +46,29 @@ may specify a preload to get the users name and you can then use that preload va
   :file: tables/preload_static_default.csv
 
 
+Referring to the last saved value
++++++++++++++++++++++++++++++++++
+
+If you are conducting multiple interviews where you have to enter the same answers each time then you can
+default the answer to the one given in the previous interview.  The obvious use for this is for addresses. For example if you are interviewing
+20 people in a town then the town name will be the same for each person. 
+
+Specify the following in the default column::
+
+  ${last-saved#question_name}
+
+Replace "question_name" with the name of the previously answered question that you want to get the default value from.
+
+.. csv-table:: Example of Last Saved
+  :width: 240
+  :widths: 80,40, 40, 80
+  :header-rows: 1
+  :file: tables/last_saved_default.csv
+
+.. warning::
+
+  Requires fieldTask 6.100 or above and Smap Server 20.04 or above
+
 Dynamic Defaults
 ----------------
 

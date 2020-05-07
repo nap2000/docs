@@ -1,9 +1,9 @@
 .. _xls_examples:
 
-Examples
-========
+Example Surveys
+===============
 
-All surveys are in a spreadsheet.
+All the example surveys below are stored in a spreadsheet.
 
 General Surveys
 ---------------
