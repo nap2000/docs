@@ -1,10 +1,10 @@
+.. _install-fieldtask:
+
 Installation
 ============
 
 .. contents::
  :local:
-
-.. _install-fieldtask:
 
 If you are going to be using Android phones or Tablets to complete surveys then you will want to install FieldTask on these devices.  Alternatively
 you can complete surveys in browsers using Webforms.

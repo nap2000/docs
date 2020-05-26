@@ -75,6 +75,6 @@ On most screens you can select a project which will change the surveys and other
 Install Field Task on your Android Devices
 ------------------------------------------
 
-:ref:`install-fieldTask`
+:ref:`install-fieldtask`
 
 

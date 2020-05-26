@@ -175,6 +175,16 @@ The above parameters are required in addition to the "source" parameter identify
 
 :ref:`language-codes-audio` 
 
+Medical Transcriptions
+######################
+
+If the audio file contains medical terms then you can add some additional parameters to use `AWS Transcribe  Medical <https://aws.amazon.com/transcribe/medical>`_
+
+#.  Add the parameter: medical=yes
+#.  Set the audio type to either "dictation" or "conversation":  med_type=dictation
+
+Only US English is supported as a language for madical transcriptions.
+
 Automatic Labelling of Images
 #############################
 
