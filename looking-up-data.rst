@@ -149,9 +149,9 @@ Filter the data
 
 The filter function can be one of:
 
-#.  contains
-#.  startswith
-#.  endswith
+#.  contains    (fieldTask only)
+#.  startswith  (fieldTask only)
+#.  endswith    (fieldTask only)
 #.  matches
 #.  in
 #.  not in

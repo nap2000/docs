@@ -1,6 +1,9 @@
 Accountability and Feedback
 ===========================
 
+.. contents::
+ :local:
+
 This product uses a standard data collection form and oversight forms to support organisations that want to collect 
 feedback or complaints and then respond to it.
 

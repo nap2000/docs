@@ -38,4 +38,4 @@ Welcome to the Smap documentation
   tips.rst
   legacydocs.rst
   support.rst
- 
+  server-admin.rst 
