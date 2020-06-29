@@ -1,0 +1,8 @@
+﻿type,name,label::language,repeat_count,calculation
+,,,,
+text,class,Enter class,,
+calculate,count,,,"pulldata('linked_s30_268', 'first_name', 'enrolled_in', ${class}, -1, 'contains')"
+begin repeat,attendence,Attendance,int(${count}),
+calculate,name,,,"pulldata('linked_s30_268', 'first_name', 'enrolled_in', ${class}, position(..), 'contains')"
+note,name_note,Child is ${name},,
+end repeat,attendence,,,

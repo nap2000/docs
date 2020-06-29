@@ -4,7 +4,7 @@ Server Administration
 .. contents::
  :local:
 
-These notes apply if you have installed your own version of the Smap Server.  If you are using one of our hosted servers then you don not need to worry
+These notes apply if you have installed your own version of the Smap Server.  If you are using one of our hosted servers then you do not need to worry
 about this page.
 
 Server Requirements
@@ -91,7 +91,7 @@ Create a bucket to store backups of uploaded media files.  The files in this buc
 AWS Properties File
 +++++++++++++++++++
 
-A properties file is required. This is mainly used for automatic synchronisation of fieldTask but it needs to be present for other AWS services as well::  
+An properties file is required. This is really only used for automatic synchronisation of fieldTask but it needs to be present for other AWS services as well::  
 
   Create the file at /smap_bin/resources/properties/aws.properties
   Add the line:  userDevices_region=us-east-1

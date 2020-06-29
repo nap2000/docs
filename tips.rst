@@ -9,3 +9,4 @@ Tips and Tutorials
   tips-old-survey.rst
   tips-provide-copy-of-answers-to-respondent.rst
   tips-followup-surveys.rst 
+  regex.rst
