@@ -217,12 +217,12 @@ Selecting Multiple Values
 
 To select multiple values you can use two additional parameters:
 
-#.  An index into the record you want.  the index of a record starts from 1, however there are two special values:
+1.  An index into the record you want.  the index of a record starts from 1, however there are two special values:
 
   *  **-1**  - Get the count of the number of matching records
   *  **0**   - Get all the matching values separated by a space
 
-#.  A filter function to select the data you want to include
+2.  A filter function to select the data you want to include
 
   *  contains
   *  startswith
@@ -239,8 +239,11 @@ General Syntax::
 
   The index is a number and so it does not have quotation marks.
 
+By using these parameters you no longer need to specify a unique key as the 'COLUMN IN SOURCE TO FILTER ON'.  Instead you can get data from multiple
+rows that match the filter function.
+
 The following examples are for the scenario where a child can be enrolled in multiple classes using a select multiple.  So the class codes
-are space separated.  ${class} is the answer from a question that asks identifies a class, the pulldata functions then get the children
+are space separated.  ${class} is the answer from a question that identifies the class; the pulldata functions then get the children
 enrolled in that class::
 
   pulldata('linked_s30_268', 'first_name', 'enrolled_in', ${class}, -1, 'contains')
