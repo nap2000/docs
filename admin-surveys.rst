@@ -143,3 +143,9 @@ The link button will show in dark blue when there for all surveys that have a pu
 
 The link can be copied and emailed to someone so that they can complete a survey without having to have an account on the 
 server.
+
+.. warning::
+
+  The public link does not expire.  If you want to stop submissions from anonymous users you can delete the link by clicking on the **Get Link**
+  button and then selecting **delete**.
+

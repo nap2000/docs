@@ -14,6 +14,7 @@ Administration
   admin-server.rst
   admin-delete.rst
   admin-reports.rst
+  admin-logs.rst
 
 You need to have at least the **admin** security group to acess these administration functions. Some functions require the **Organisational Administrator**,
 **Enterprise Administrator** or **Server Administrator** security group.

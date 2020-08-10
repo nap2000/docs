@@ -6,11 +6,66 @@ Question Types
  
 Smap supports all the ODK question types as well as additional types specific to Smap.
 
-ODK Question types
-------------------
+text
+----
 
-*  `text <http://docs.opendatakit.org/form-question-types/#default-text-widget>`_
-*  `integer <https://docs.opendatakit.org/form-question-types/#integer-widget>`_
+*  type:  text
+
+**Parameters:**
+
+*  rows:   Set the number of rows of text shown in the form
+
+**Appearances:**
+
+*  numbers:  Shows the numeric keyboard 
+*  thousands-sep:  Inserts a separator between thousands when "numbers" is also used
+*  hidden:  Hide the widget in fieldTask
+
+**Availability:**
+
+*  FieldTask: yes
+*  Webforms:  yes
+
+**Example**
+
+.. csv-table:: 
+  :width: 70
+  :widths: 10,10,10
+  :header-rows: 1
+  :file: tables/widget-text.csv 
+
+.. figure::  _images/widget-text.jpg
+   :align: center
+   :width: 300px
+
+   Text widget with 5 rows
+
+integer
+-------
+
+*  type:  integer
+
+**Appearances:**
+
+*  thousands-sep:  Inserts a separator between thousands 
+*  hidden:  Hide the widget in fieldTask
+
+**Availability:**
+
+*  FieldTask: yes
+*  Webforms:  yes
+
+**Example**
+
+.. csv-table:: 
+  :width: 70
+  :widths: 10,10,10
+  :header-rows: 1
+  :file: tables/widget-integer.csv 
+
+Other ODK Question types
+------------------------
+
 *  `decimal <https://docs.opendatakit.org/form-question-types/#decimal-widget>`_
 *  `date and time and datetime <https://docs.opendatakit.org/form-question-types/#date-and-time-widgets>`_
 *  `select and select_one <https://docs.opendatakit.org/form-question-types/#select-widgets>`_

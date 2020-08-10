@@ -1,2 +1,3 @@
 default,comment
 now(),Sets a date or date-time question type to the current date/time
+The name of an image in shared resources,"Use this with questions of type ""image"".  The image from shared resources will then be set as the default value and you can use an appearance of ""annotate"" to allow a user to edit this image."

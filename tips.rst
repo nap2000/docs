@@ -10,3 +10,4 @@ Tips and Tutorials
   tips-provide-copy-of-answers-to-respondent.rst
   tips-followup-surveys.rst 
   regex.rst
+  many-forms.rst
