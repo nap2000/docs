@@ -1,0 +1,6 @@
+type,name,label,list name
+begin matrix,nutrition,items,food_groups
+select_one yn,available,Available,
+integer,quantity,Quantity,
+text,comment,Comment,
+end matrix,,,
