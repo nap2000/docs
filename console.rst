@@ -342,6 +342,31 @@ After clicking on **Up** and selecting a different record then drilling down aga
 
 .. _language-codes-audio:
 
+Styling the output
+------------------
+
+The color of a data cell can be set using style lists. There are two steps to this:
+
+1. First specify your style list in the **styles** worksheet of an XLSForm
+
+.. csv-table:: Styles Worksheet
+  :header: list_name, value, color
+
+  status,success,green
+  status,failure,red
+
+2. Second specify the style list for a question to use in the column **style list** of the survey worksheet
+
+.. csv-table:: Survey Worksheet
+  :header: type, name, label, style list
+
+  text,project_report,What is the status of the project?, status
+
+.. figure::  _images/console-styles.jpg
+   :align:   center
+
+   Styled output
+
 Reports
 -------
 
