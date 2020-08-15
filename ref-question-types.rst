@@ -2,7 +2,7 @@ Question Types
 ==============
 
 .. contents::
- :depth: 2
+ :depth: 1
  :local:  
  
 text
@@ -22,6 +22,7 @@ than the 9 character limit of the **integer** type.
 
 *  numbers:  Shows the numeric keyboard 
 *  thousands-sep:  Inserts a separator between thousands when "numbers" is also used
+*  url:  Allows the user to open a URL.  Specify the url in the **default** column
 *  hidden:  Hide the widget in fieldTask
 
 **Availability:**
@@ -32,16 +33,49 @@ than the 9 character limit of the **integer** type.
 **Example**
 
 .. csv-table:: Survey Worksheet
-  :width: 30
-  :widths: 10,10,10
-  :header-rows: 1
-  :file: tables/widget-text.csv 
+  :header: type, name, label, parameters
+
+  text, comment, Any comments?, rows=5
 
 .. figure::  _images/widget-text.jpg
    :align: center
    :width: 300px
 
-   Text widget with 5 rows
+   Text widget in fieldTask with 5 rows
+
+.. figure::  _images/widget-text-webform.jpg
+   :align: center
+
+   Text widget in webforms with 5 rows
+
+.. note::
+
+  There is a limit of 4,000 characters on the amount of text that can be entered into a **text** question in webforms.  However there is
+  no corresponding limit in fieldTask.
+
+note
+----
+
+**Type**
+  note
+
+A read only note to the user.  
+
+Notes can be used to provide guidance to the user.  This could some simple text that is specified
+in the survey template.  For example::
+
+  The following questions are about health
+
+However they can also be dynamically constructed to provide context sensitive help.  To do this use the ${question_name} syntax
+within the label of the note.  The question referred to can be a calculate that creates the text by combining answers from multiple 
+questions.
+
+.. csv-table:: Survey Worksheet
+  :header: type, name, label, calculation
+
+  text, name, What is your name?,
+  calculate, calculate_guidance,  , "concat('Tell ', ${name}, ' that they are doing well')"
+  note, guidance, ${calculate_guidance}, 
 
 integer
 -------
@@ -129,6 +163,9 @@ A bearing widget captures the compass reading and stores it as a decimal type.
 date, time and datetime
 ------------------------
 
+.. contents::
+  :local:
+
 Default date type
 +++++++++++++++++
 
@@ -208,9 +245,6 @@ Only records the year.
 
 Date widgets with non-Gregorian calendars
 +++++++++++++++++++++++++++++++++++++++++
-
-.. contents::
-  :local:
 
 .. note::
 
@@ -333,12 +367,74 @@ Records the date and time
   dateTime
 
 **Appearance:**
-  no-calendar
+  no-calendar: Shows a spinner rather than the full calendar
 
 .. csv-table:: Survey Worksheet
   :header: type, name, label
 
   dateTime, started, When did you start the project?
+
+Select Widgets
+--------------
+
+.. contents::
+  :local:
+
+Single select widget
+++++++++++++++++++++
+
+**Type**
+  select_one
+
+**Appearance:**
+
+*  minimal: Shows a modal dropdown that expands when selected by the user. Useful when showing multiple questions on one page.
+*  autoadvance:  Immediately go to the next page after a choice is selected.  Only use this appearance if it is immediately obvious to the user that the correct selection was made
+*  autocomplete:  Adds a text box above the choices. If you type into this text box the choices are filtered.  Use with large lists.
+*  likert: Show the choices in a likert scale
+*  compact:  shows the choices in a compact grid.  This is particularly useful when you have only images for the choices rather than text labels.
+*  compact-{x}:  As per **compact** however replace {x} with the number of columns that you want.
+*  quickcompact: Combines compact and auto advance
+*  quickcompact-{x}: Combines compact with columns and auto advance
+
+.. csv-table:: Survey Worksheet
+  :header: type, name, label
+
+  select_one countries,country,Select a country
+
+.. csv-table:: Choices Worksheet
+  :header: list_name, name, label
+
+  countries,mali,Mali
+  countries,png,Papua New Guinea
+  countries,australia,Australia
+  countries,vanuatu,Vanuatu
+
+Multi select widget
++++++++++++++++++++
+
+**Type**
+  select
+
+**Appearance:**
+
+*  minimal: Shows a modal dropdown that expands when selected by the user. Useful when showing multiple questions on one page.
+*  autocomplete:  Adds a text box above the choices. If you type into this text box the choices are filtered.  Use with large lists.
+*  compact:  shows the choices in a compact grid.  This is particularly useful when you have only images for the choices rather than text labels.
+*  compact-{x}:  As per **compact** however replace {x} with the number of columns that you want.
+
+.. csv-table:: Survey Worksheet
+  :header: type, name, label
+
+  select countries,country,Select some countries
+
+.. csv-table:: Choices Worksheet
+  :header: list_name, name, label
+
+  countries,mali,Mali
+  countries,png,Papua New Guinea
+  countries,australia,Australia
+  countries,vanuatu,Vanuatu
 
 Image 
 -----
@@ -566,7 +662,6 @@ the header.  Hence the matrix type is not a real type as it is converted into mu
 Other ODK Question types
 ------------------------
 
-*  `select and select_one <https://docs.opendatakit.org/form-question-types/#select-widgets>`_
 *  `rank <https://docs.opendatakit.org/form-question-types/#rank-widget>`_
 *  `geopoint, geotrace and geoshape <https://docs.opendatakit.org/form-question-types/#location-widgets>`_
 *  `audio <https://docs.opendatakit.org/form-question-types/#audio-widget>`_
@@ -574,5 +669,4 @@ Other ODK Question types
 *  `file upload <https://docs.opendatakit.org/form-question-types/#file-upload-widget>`_
 *  `barcode <https://docs.opendatakit.org/form-question-types/#barcode-widget>`_
 *  `range <https://docs.opendatakit.org/form-question-types/#range-widgets>`_
-*  `note <https://docs.opendatakit.org/form-question-types/#note-widget>`_
  
