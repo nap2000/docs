@@ -312,7 +312,7 @@ Only records the year.
   date,birth_year,What year were you born?,year
 
 
-Date widgets with non-Gregorian calendars
+date widgets with non-Gregorian calendars
 +++++++++++++++++++++++++++++++++++++++++
 
 .. note::
@@ -404,8 +404,8 @@ Persian calendar
    :align: center
    :width: 300px
 
-Time widget
-+++++++++++
+time
+++++
 
 Records the time of day.
 
@@ -427,8 +427,8 @@ Records the time of day.
 
   time, arrived, What time did the parcel arrive?
 
-Datetime widget
-+++++++++++++++
+datetime
+++++++++
 
 Records the date and time
 
@@ -482,6 +482,8 @@ single select
 multi select
 ++++++++++++
 
+Allows the user to select multiple answers from a choice list.
+
 **Type**
   select
 
@@ -505,14 +507,65 @@ multi select
   countries,australia,Australia
   countries,vanuatu,Vanuatu
 
-Image 
+rank
+++++
+
+This widget allows you to rank choices in order.
+
+**Type**
+  rank
+
+.. csv-table:: Survey Worksheet
+  :header: type, name, label
+
+  rank importance,importance,Rank the issues in order of importance
+
+.. csv-table:: Choices Worksheet
+  :header: list_name, name, label
+
+  importance,food,Food
+  importance,shelter,Shelter
+  importance,water,Water
+  importance,security,Security
+
+.. figure::  _images/widget-rank-before.jpg
+   :align: center
+   :width: 300px
+   :alt: The rank widget opened showing the choices that can be re-ordered
+
+   rank widget before re-ordering
+
+.. figure::  _images/widget-rank-after.jpg
+   :align: center
+   :width: 300px
+   :alt: The rank widget opened showing the choices after they have been re-ordered
+
+   rank widget after re-ordering
+
+Viewing Recorded Rankings
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+When results are exported in the default spreadsheet format they qill be shown in multiple columns.  One for each choice.  The column headings will be take from 
+the question name with the addition of "1", "2", "3" etc.  The first column will contain the choice that was ranked first and so on.
+
+.. figure::  _images/widget-rank-export.jpg
+   :align: center
+   :width: 500px
+   :alt: The chosen ranking shown in a report
+
+   Spreadsheet report of rankings
+
+In other view of the collected data, such as in the console, the rankings will be shown in compressed format where they are all placed in a single column, in rank order, with a space between each
+value.
+
+image 
 -----
 
 .. contents::
  :local:
 
-image
-+++++
+Taking a Picture
+++++++++++++++++
 
 **Type**
   image
@@ -524,7 +577,7 @@ Captures an image either using the camera or by selecting from the device galler
 
   image,picture_of_tree,Take a picture of the tree
 
-Image with annotation
+image with annotation
 +++++++++++++++++++++
 
 Draw on an image after it has been captured. An additional button labelled "Markup Image" is shown that is
@@ -548,7 +601,7 @@ enabled after the image is captured.
 
    Annotate Type
 
-Image as a drawing 
+image as a drawing 
 ++++++++++++++++++
 
 **Type**
@@ -564,7 +617,7 @@ This is similar to annotate except the user draws on a blank canvas.
 
   image,draw_farm_layout,Draw a plan of the farm
 
-Image as a signature
+image as a signature
 ++++++++++++++++++++
 
 **Type**
@@ -627,7 +680,7 @@ You can use the above answer in relevance for following questions. For example::
 
 Commonly select_one questions with yes/no choices are used instead of Acknowledge
 
-.. csv-table:: survey
+.. csv-table:: Survey Sheet
   :header: type, name, label, relevance
 
   acknowledge,ack,Select to confirm participation
@@ -647,6 +700,22 @@ In WebForms a radio button is used instead of a checkbox.
    :alt: The trigger widget shown in WebForms after the checkbox has been selected
 
    Acknowledge widget in WebForms
+
+Printer widget
+--------------
+
+**Type**
+  text
+
+**Required appearance**
+  printer:org.opendatakit.sensors.ZebraPrinter
+
+Connects to an external label printer, and prints labels that can contain a barcode, a QR code, or text.
+
+.. csv-table:: Survey Sheet
+  :header: type, name, label, appearance, calculation
+
+   text,printer_widget,Printer widget,printer:org.opendatakit.sensors.ZebraPrinter, "concat('123456789','<br>’,'QR CODE','<br>','Text')"
 
 range
 -----
@@ -833,7 +902,6 @@ the header.  Hence the matrix type is not a real type as it is converted into mu
 Other ODK Question types
 ------------------------
 
-*  `rank <https://docs.opendatakit.org/form-question-types/#rank-widget>`_
 *  `geopoint, geotrace and geoshape <https://docs.opendatakit.org/form-question-types/#location-widgets>`_
 *  `audio <https://docs.opendatakit.org/form-question-types/#audio-widget>`_
 *  `video <https://docs.opendatakit.org/form-question-types/#video-widgets>`_
