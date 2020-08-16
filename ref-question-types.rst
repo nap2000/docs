@@ -114,7 +114,7 @@ a text question with the **numbers** appearance if you need more.
 
 **Appearances:**
 
-*  thousands-sep:  Inserts a separator between thousands 
+*  thousands-sep:  (Optional) Inserts a separator between thousands 
 
 **Availability:**
 
@@ -160,13 +160,82 @@ A bearing widget captures the compass reading and stores it as a decimal type.
 
    Bearing
 
+barcode
+-------
+
+**Type**
+  barcode
+
+**Appearances:**
+
+*  front:  (Optional) Use the front facing camera
+
+Reads a barcode using the camera.
+
+The following barcode formats are supported:
+
+- UPC-A
+- UPC-E
+- EAN-8
+- EAN-13
+- Code 39
+- Code 93
+- Code 128
+- Codabar
+- ITF
+- RSS-14
+- RSS-Expanded
+- QR Code
+- Data Matrix
+- Aztec (beta)
+- PDF 417 (beta)
+- MaxiCode
+
+The flash can be used as a light source when scanning barcodes in a poorly lit environment.
+
+.. csv-table:: survey
+  :header: type, name, label
+
+  barcode, product, Scan the products barcode
+
+.. figure::  _images/widget-barcode.jpg
+   :align: center
+   :width: 300px
+   :alt: Recording a bar code using the rear facing camera
+
+   barcode
+
+nfc
+---
+
+**Type**
+  barcode
+
+**Required Appearances:**
+nfc  
+
+Reads the id on an NFC chip
+
+.. csv-table:: survey
+  :header: type, name, label, appearance
+
+  barcode, product, Scan the products NFC chip, nfc
+
+.. figure::  _images/widget-nfc.jpg
+   :align: center
+   :width: 300px
+   :alt: Recording an nfc id
+
+   nfc
+
+
 date, time and datetime
 ------------------------
 
 .. contents::
   :local:
 
-Default date type
+default date type
 +++++++++++++++++
 
 **Type**
@@ -186,9 +255,9 @@ Default date type
    :align: center
    :width: 300px
 
-   Default Date type
+   Default date type
 
-Date widget with spinner input
+date widget with spinner input
 ++++++++++++++++++++++++++++++
 
 A more compact date widget that makes it easy to select dates that are far from the current (or default) date.
@@ -210,7 +279,7 @@ A more compact date widget that makes it easy to select dates that are far from 
 
    Default Date type
 
-Month and year only
+month and year only
 +++++++++++++++++++
 
 Only records the month and the year.
@@ -226,7 +295,7 @@ Only records the month and the year.
 
   date,birth_month,What month were you born?,month-year
 
-Year only
+year only
 +++++++++
 
 Only records the year.
@@ -374,14 +443,14 @@ Records the date and time
 
   dateTime, started, When did you start the project?
 
-Select Widgets
---------------
+select
+------
 
 .. contents::
   :local:
 
-Single select widget
-++++++++++++++++++++
+single select
++++++++++++++
 
 **Type**
   select_one
@@ -410,8 +479,8 @@ Single select widget
   countries,australia,Australia
   countries,vanuatu,Vanuatu
 
-Multi select widget
-+++++++++++++++++++
+multi select
+++++++++++++
 
 **Type**
   select
@@ -442,8 +511,8 @@ Image
 .. contents::
  :local:
 
-Default image widget
-++++++++++++++++++++
+image
++++++
 
 **Type**
   image
@@ -545,7 +614,7 @@ In the parameters column add ``max-pixels=`` followed by the maximum length of t
 Acknowledge / Trigger
 ---------------------
 
-type
+**Type**
   trigger or acknowledge
 
 You can use a type of either **trigger** or **acknowlwdge**, they work the same way.  A single checkbox
@@ -579,7 +648,109 @@ In WebForms a radio button is used instead of a checkbox.
 
    Acknowledge widget in WebForms
 
- 
+range
+-----
+
+These widgets allow the user to select a numeric value within a range of numbers shown on a line.
+
+**Type**
+  range
+
+**Parameters**
+
+  start:  The starting number
+  end: The last number
+  step: The increment between numbers
+
+.. contents::
+  :local:
+
+Range widget with integers
+++++++++++++++++++++++++++
+
+If all three parameter values are integers then input will also be stored as an integer.
+
+.. csv-table:: Survey Worksheet
+  :header: type, name, label, parameters
+
+  range, eggs, number_of_eggs, How many eggs are there?, start=0;end=48;step=12
+
+.. figure::  _images/widget-range-int.jpg
+   :align: center
+   :width: 300px
+   :alt: A range widget shown in fieldTask with a start point of 0, end of 48 and step of 12. 36 has been selected as the answer
+
+   Integer Range widget in fieldTask
+
+.. figure::  _images/widget-range-int-webform.jpg
+   :align: center
+   :width: 300px
+   :alt: A range widget shown in Webforms with a start point of 0, end of 48 and step of 12
+
+   Integer Range widget in WebForms
+
+Range widget with decimals
+++++++++++++++++++++++++++
+
+If one or more of the 3 parameters (start, end, step) are decimal then the answer will also be recorded as a decimal value.
+
+Vertical range widget
++++++++++++++++++++++
+
+**Appearance**
+  vertical
+
+.. figure::  _images/widget-range-vertical.jpg
+   :align: center
+   :width: 300px
+   :alt: A vertical range widget shown in fieldTask with a start point of 1, end of 10 and step of 1 
+
+   Vertical Range widget in fieldTask
+
+.. figure::  _images/widget-range-vertical-webform.jpg
+   :align: center
+   :width: 300px
+   :alt: A vertical range widget shown in Webforms with a start point of 1, end of 10 and step of 1
+
+   Vertical Range widget in WebForms
+
+Range widget with picker
+++++++++++++++++++++++++
+
+**Appearance**
+  picker
+
+When **picker** is added as an appearance the answer can be selected from a spinner rather than by clicking at a point on a line. This appearance
+is only available with fieldTask and not with webForm.
+
+.. figure::  _images/widget-range-picker.jpg
+   :width: 300px
+   :align: center
+   :alt: A picker range widget with a start point of 1, end of 10 and step of 1
+
+   Vertical Range widget in WebForms
+
+Range widget with rating
+++++++++++++++++++++++++
+
+**Appearance**
+  rating
+
+When **rating** is specified as the appearance then the range is shown as stars which the user can select.  The number of stars is equal to the value of the
+**end** parameter.  The **start** and **step** parameters are ignored.  Hence the value set is equal to the number of the start selected counting from the left.
+  
+.. csv-table:: Survey Worksheet
+  :header: type, name, label, appearance, parameters
+
+  range, rating, Rate your experience, rating, end=5
+
+.. figure::  _images/widget-range-rating.jpg
+   :width: 300px
+   :align: center
+   :alt: A rating range widget with a start showing 5 stars of which the 4th has been selected
+
+   Rating Range widget in fieldTask
+
 Chart
 -----
  
@@ -667,6 +838,4 @@ Other ODK Question types
 *  `audio <https://docs.opendatakit.org/form-question-types/#audio-widget>`_
 *  `video <https://docs.opendatakit.org/form-question-types/#video-widgets>`_
 *  `file upload <https://docs.opendatakit.org/form-question-types/#file-upload-widget>`_
-*  `barcode <https://docs.opendatakit.org/form-question-types/#barcode-widget>`_
-*  `range <https://docs.opendatakit.org/form-question-types/#range-widgets>`_
  
