@@ -14,5 +14,6 @@ area,"area(${the_geom})
 Where the_geom is the name of a geoshape type question","Note the name of the geoshape needs to be ""the_geom""."
 distance,"distance(${the_geom})
 
-Where the_geom is the name of a geoshape or geotrace question","As for area you should name your geometry question ""the_geom"". The reason being Smap currently converts all geometry questions to that name to simplify GIS analysis. So if you are referencing a question in an ""area"" function using a different name then it will not be found."
+Where the_geom is the name of a geoshape or geotrace question or is a nodest of geopoints","As for area you should name your geometry question ""the_geom"". The reason being Smap currently converts all geometry questions to that name to simplify GIS analysis. So if you are referencing a question in an ""area"" function using a different name then it will not be found."
 once,once(${age}),The value will only be evaluated once while the form is open.  This is useful for setting dynamic default values that you want to get an initial value but after that the value should be set by the user.
+default,default(${age}),"The value will be evaluated every time the dependent questions change. In this example if the answer to the ""age"" question was changed then the value will be reset.  However the value will not be re-evaulated on save of the form.  Hence you can use this to allow the user to override a default value. Available with fieldTask 6.209 and above."
