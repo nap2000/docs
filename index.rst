@@ -19,7 +19,7 @@ Welcome to the Smap documentation
   concepts.rst
   applications.rst
   integration.rst
-  android.rst
+  features.rst
   fieldTask.rst
   webforms.rst
   surveys.rst

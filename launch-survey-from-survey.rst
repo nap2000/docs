@@ -93,18 +93,23 @@ Passing data to the launched survey
 
 Available with Smap Server 20.09+
 
-You can specify the initial data that the launched survey receives as a parameter of the launch form question. For example::
+You can specify the initial data that the launched survey receives in the "initial" parameter. For example::
 
   initial=name:${qname},vegetable:parsnip
 
-The format is 1 or more comma separated defaults consisting of:
+The format is 1 or more comma separated value specifications consisting of:
 
 * The name of the question in the launched form that is going to receive the default value
 * A colon separator
 * The value
 
-This value can be static like "parsnip" in the above example or the value can be taken from the launching form.  In the above example the 
-question called "name" in the launched survey will get its initial value from the question called "qname" in the launching form.
+This value can be static like "parsnip" in the above example or by using the ${} notation you can specify that the value can be taken from the 
+launching form.  In the above example the question called "name" in the launched survey will get its initial value from the question called 
+"qname".
+
+.. note::
+
+  When getting intial data from the launching form you can only refer to data in it's top level form.  That is not within a repeating group.
 
 Tutorial - Launching a Parent Survey
 ------------------------------------

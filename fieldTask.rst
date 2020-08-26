@@ -8,3 +8,4 @@ Field Task
   fieldTask-screens.rst
   fieldTask-using.rst
   fieldTask-tips.rst
+  android.rst
