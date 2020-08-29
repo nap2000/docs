@@ -466,6 +466,11 @@ single select
 *  quickcompact: Combines compact and auto advance
 *  quickcompact-{x}: Combines compact with columns and auto advance
 
+**Parameters:**
+
+*  randomize=true (Will randomly sort the choices each time the question is shown)
+*  seed={an integer}  (Use this with random so that the same initially random order will be shown each time the question is shown in a given form)
+
 .. csv-table:: Survey Worksheet
   :header: type, name, label
 
@@ -494,6 +499,11 @@ Allows the user to select multiple answers from a choice list.
 *  compact:  shows the choices in a compact grid.  This is particularly useful when you have only images for the choices rather than text labels.
 *  compact-{x}:  As per **compact** however replace {x} with the number of columns that you want.
 
+**Parameters:**
+
+*  randomize=true (Will randomly sort the choices each time the question is shown)
+*  seed={an integer}  (Use this with random so that the same initially random order will be shown each time the question is shown in a given form)
+
 .. csv-table:: Survey Worksheet
   :header: type, name, label
 
@@ -514,6 +524,11 @@ This widget allows you to rank choices in order.
 
 **Type**
   rank
+
+**Parameters:**
+
+*  randomize=true (Will randomly sort the choices each time the question is shown)
+*  seed={an integer}  (Use this with random so that the same initially random order will be shown each time the question is shown in a given form)
 
 .. csv-table:: Survey Worksheet
   :header: type, name, label
@@ -557,6 +572,9 @@ the question name with the addition of "1", "2", "3" etc.  The first column will
 
 In other view of the collected data, such as in the console, the rankings will be shown in compressed format where they are all placed in a single column, in rank order, with a space between each
 value.
+
+image map select
+++++++++++++++++
 
 image 
 -----
@@ -849,6 +867,65 @@ Detailed information on using these question types is available in :ref:`launch-
 *  FieldTask: yes
 *  Webforms:  no
 
+Locations
+---------
+
+Location widgets capture one or more points as latitude, longitude, altitude in meters, and accuracy radius in meters. These data items are space separated. 
+For example the following reading represents a lattitude of -18.27, a longitude of 27.32, an altitude of 25 meters and an accuracy of 5.6
+meters: `-18.27 27.32 25 5.6`
+
+Multiple points that form lines or shapes are separated by semicolons.
+
+**Availability:**
+
+*  FieldTask: yes
+*  Webforms:  no
+
+.. contents::
+  :local:
+
+geopoint
+++++++++
+
+records a single point 
+
+**Type**
+  geopoint
+
+Geopoint with a background map
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Type**
+  geopoint
+
+**Appearance**
+  maps 
+
+Geopoint with a user selected location
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Type**
+  geopoint
+
+**Appearance**
+  placement-map
+
+geotrace
+++++++++
+
+Records a line
+
+**Type**
+  geotrace
+
+geoshape
+++++++++
+
+Records a shape.
+
+**Type**
+  geoshape
+
 Matrix
 ------
 
@@ -902,7 +979,6 @@ the header.  Hence the matrix type is not a real type as it is converted into mu
 Other ODK Question types
 ------------------------
 
-*  `geopoint, geotrace and geoshape <https://docs.opendatakit.org/form-question-types/#location-widgets>`_
 *  `audio <https://docs.opendatakit.org/form-question-types/#audio-widget>`_
 *  `video <https://docs.opendatakit.org/form-question-types/#video-widgets>`_
 *  `file upload <https://docs.opendatakit.org/form-question-types/#file-upload-widget>`_
