@@ -177,7 +177,7 @@ Automatic Translation
 The translation can be done automatically by `AWS Translate  <https://aws.amazon.com/translate>`_.  The following additional parameters
 need to be added to the question in the oversight form that is going to show the translation:
 
-#.  Add the parameter: auto=yes
+#.  Add the parameter: auto_annotate=yes
 #.  Add a paramater **from_lang** with the value set to the language code of the source language
 #.  Add a parameter **to_lang** with the value set to the language code of the language you are translating to
 
