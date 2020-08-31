@@ -892,6 +892,18 @@ records a single point
 **Type**
   geopoint
 
+.. csv-table:: survey
+  :header: type, name, label
+
+  geopoint,the_geom,Record Location
+
+.. figure::  _images/widget-location-geopoint.jpg
+   :width: 300px
+   :align: center
+   :alt: Results presented after a geopoint button has been pressed showing location and accuracy
+
+   Results after requesting a geopoint
+
 Geopoint with a background map
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

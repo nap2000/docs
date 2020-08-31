@@ -25,6 +25,7 @@ Looking up Data
 
 *  `Using CSV files <https://drive.google.com/open?id=0B5_SmpWlQYxvcTE0X09XQXM5MzQ>`_
 *  `Looking up data in Sub-Forms (Repeating Groups) <https://drive.google.com/drive/u/0/folders/16dI2RPsMadTQTRLi_pIuZJ8XIJPjqdoA>`_
+*  `Get last survey location <https://docs.google.com/spreadsheets/d/1xyA4dZDOBnOKMlk7IpsRWNQHsmgx8nIiO2l5bPejBjk>`_
 
 Webform Styling
 ---------------
