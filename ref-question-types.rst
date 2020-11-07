@@ -879,10 +879,38 @@ Multiple points that form lines or shapes are separated by semicolons.
 **Availability:**
 
 *  FieldTask: yes
-*  Webforms:  no
+*  Webforms:  yes
 
 .. contents::
   :local:
+
+Multiple Locations in one Form
+++++++++++++++++++++++++++++++
+
+Prior to Smap server version 20.10 you could only put one location widget in each form of a survey.  The reasoning behind this was that in GIS shape 
+files the same restriction applies where each shape file consists of a single location and all the attributes associated with that location.  
+Also the name of each location question was automatically set to "the_geom".  I'm afraid to say this was just done to make the coding easier!
+
+In version 20.10 this restriction has been lifted:
+
+*  You can add multiple location questions in any form as well as the location prelaod in the top level form.
+*  Location questions keep the name that you give them.
+*  When you export a survey as a shape file you can select the location to use.  All other questions are assumed to be attributes of that location. 
+*  When viewing a map of a survey on the analysis page you can select the question to use as the location.
+*  When creating a task from existing data the location of the task is determined automatically.  Firstly it tries to get the first geopoint
+   question in the source survey. If that does not exist it tries to use the location preload that might have been collected automatically. 
+   If that is not set then it will use the first geotrace or geoshape question that it finds.
+*  The map in the console currently uses the first location it finds in the survey.  This will be fixed in a later release.
+
+.. warning::
+
+  You may have an existing survey that you created using a spreadsheet and perhaps you have a geopoint question in that survey which you called "pump_location".
+  Once your server is updated to 20.10 and you use the "replace" button to update the existing survey then a new column will be
+  created in the database called "pump_location" to hold that location data.  However any previously collected data will be stored in a column called "the_geom" and
+  will no longer be accessible.  You will see a warning in red if this happens when you do the replace.  
+
+  In this circumstance,  if you still need to access the old location data, then edit your survey in excel and change the name of the geopoint to "the_geom"
+  Then replace the survey again. 
 
 geopoint
 ++++++++

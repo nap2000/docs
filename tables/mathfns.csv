@@ -13,7 +13,7 @@ Random number,"random()
 
 Returns a random number between 0.0 (inclusive) and 1.0 (exclusive)","round((random()* ${number_children} + 0.5), 0)
 
-Generates a random number between 1 and the number of children in the household. This can be used to select a child for further questions.
+Generates a random number between 1 and the number of children in the household. This can be used to select a child for further questions. (Select a child from a repeat group using the indexed-repeat() function)
 
 It can be combined with the position() function to display the name of the child that has been selected."
 Round to a number of decimal places,"round(a,b)
@@ -24,3 +24,20 @@ round(0.5, 0)is 1"
 Sum of repeating group,sum(nodeset),sum(${weight})
 Maximum,max(nodeset),Maximum value in a repeating group
 Minimum,min(nodeset),Minimum value in a repeating group
+digest,"digest(data, algorithm, encoding method)","digest(${name}, 'SHA-1')
+
+Computes the hash of the data.  This is useful if you do not want to store sensitive information on the server. The hash value of the data can be used as an alternative non identifying standin for the entered value. You can use the appearance phoneonly on the sensitive question so that it is not stored on the server.
+
+The options for the second parameter, algorithm, are 'MD5', 'SHA-1', 'SHA-256', 'SHA-384', 'SHA-512'.
+The third parameter, encoding method,  is optional. By default 'base64' will be used.  The options are 'base64', 'hex'."
+sin,sin(45),Returns the sine of the angle
+cos,cos(45),Returns the cosine of the angle
+tan,tan(45),Returns the tan of the number
+asin,asin(45),Returns the arc sine of the number
+acos,acos(45),Returns the arc cosine of the angle
+atan,atan(${angle}),Returns the arctan of the angle
+atan2,"atan2(${y}, ${x})","Returns the multivalued inverse tangent of y,x"
+sqrt,sqrt(${n}),Returns the square root of the number
+exp,exp(${x}),Returns e to the power x
+exp10,exp10(${x}),Returns 10 to the power x
+pi,pi(),Returns an approximation of pi

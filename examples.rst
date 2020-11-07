@@ -27,6 +27,18 @@ Looking up Data
 *  `Looking up data in Sub-Forms (Repeating Groups) <https://drive.google.com/drive/u/0/folders/16dI2RPsMadTQTRLi_pIuZJ8XIJPjqdoA>`_
 *  `Get last survey location <https://docs.google.com/spreadsheets/d/1xyA4dZDOBnOKMlk7IpsRWNQHsmgx8nIiO2l5bPejBjk>`_
 
+Booking Doctor Appointments
++++++++++++++++++++++++++++
+
+Load the two forms below.  After loading "Book" you will need to use the online editor to change the ident of the
+survey that it refers to from the "appearance" of question "q1".  Set this to refer to the "Slots" survey.
+
+Then create some slots that can be booked with various doctors.  Finally use the book survey to book appointments.
+
+*  `Slots <https://docs.google.com/spreadsheets/d/1-U16DkgrA7i8Ms4b_hS3qc6tNx8sRenfhrHQjHIubW8/edit?usp=sharing>`_
+*  `Book <https://docs.google.com/spreadsheets/d/1nq96kSTPAdOmDOYJ9tsTxKChZdA43y6hu2MtsWgNboM/edit?usp=sharing>`_
+
+
 Webform Styling
 ---------------
 
