@@ -160,10 +160,13 @@ Examples::
   cast(${age} as integer) < 10
   cast(${age} as decimal) / 2
 
-Other
------
+Functions
+---------
 
 * now()  (The current date and time)
+* area(${qname})  (The area in square meters of a polygon)
+* distance(${qname})  (The length of a line, in meters)
+* perimeter(${qname})  (The length of the boundary of a polygon, in meters)
 
 Special Terms
 -------------
