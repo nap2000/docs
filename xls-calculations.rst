@@ -154,12 +154,31 @@ Text functions can be used to dynamicly create guidance text that includes forma
 
   calculate hunger_msg  concat('The hunger scale is <font color="blue">', ${hunger_scale}, '</font>')  
 
+.. _trigger-calculation:
 
+Triggering the Calculation 
+--------------------------
 
+Requires Smap Server 21.01 or above.
 
-	
+By default calculations are triggered whenever any of the questions that they refer to changes. They are also 
+re-caclulated when the survey is saved.  You can use the once() function to change this behaviour and only
+calculate the value a single time. Also you can use the default() function wrapped around the calculation to prevent
+it from being re-caclulated on save of the survey.
 
+You can also specify a specific question that will trigger the caclulation when it changes. This way you can 
+update the value of a calculation by answering a question that does not appear in the actual calculation.
 
+This approach works like using the default() option in that the caclulation will not be re-evaulated on save to
+replace any updates the user had made.
 
+.. rubric:: XLSForm that calculates the time at which a question answer was changed
 
+.. csv-table:: survey
+  :header: type, name, label, calculation, trigger
   
+  text, name, Name,
+  dateTime, name_entered_time, Started section at:, now(), ${name}
+
+
+

@@ -240,6 +240,7 @@ default date type
 
 **Type**
   date
+
 **Availability:**
   FieldTask: yes
   Webforms:  yes
@@ -560,7 +561,7 @@ This widget allows you to rank choices in order.
 Viewing Recorded Rankings
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-When results are exported in the default spreadsheet format they qill be shown in multiple columns.  One for each choice.  The column headings will be take from 
+When results are exported in the default spreadsheet format they will be shown in multiple columns.  One for each choice.  The column headings will be take from 
 the question name with the addition of "1", "2", "3" etc.  The first column will contain the choice that was ranked first and so on.
 
 .. figure::  _images/widget-rank-export.jpg
@@ -572,9 +573,6 @@ the question name with the addition of "1", "2", "3" etc.  The first column will
 
 In other view of the collected data, such as in the console, the rankings will be shown in compressed format where they are all placed in a single column, in rank order, with a space between each
 value.
-
-image map select
-++++++++++++++++
 
 image 
 -----
@@ -807,8 +805,12 @@ Range widget with picker
 **Appearance**
   picker
 
-When **picker** is added as an appearance the answer can be selected from a spinner rather than by clicking at a point on a line. This appearance
-is only available with fieldTask and not with webForm.
+**Availability:**
+
+*  FieldTask: yes
+*  Webforms:  no
+ 
+When **picker** is added as an appearance the answer can be selected from a spinner rather than by clicking at a point on a line. 
 
 .. figure::  _images/widget-range-picker.jpg
    :width: 300px
@@ -844,7 +846,7 @@ Chart
 **Type**
   chart
 
-Shows a chart in the survey. Settings for the graph are specified in the question parameters. More details are available in :ref:`charts`
+Shows a chart in the survey. Chart settings are specified in the question parameters. More details are available in :ref:`charts`
 
 **Availability:**
 
@@ -893,7 +895,7 @@ Also the name of each location question was automatically set to "the_geom".  I'
 
 In version 20.10 this restriction has been lifted:
 
-*  You can add multiple location questions in any form as well as the location prelaod in the top level form.
+*  You can add multiple location questions in any form as well as the location preload in the top level form.
 *  Location questions keep the name that you give them.
 *  When you export a survey as a shape file you can select the location to use.  All other questions are assumed to be attributes of that location. 
 *  When viewing a map of a survey on the analysis page you can select the question to use as the location.
@@ -910,7 +912,7 @@ In version 20.10 this restriction has been lifted:
   will no longer be accessible.  You will see a warning in red if this happens when you do the replace.  
 
   In this circumstance,  if you still need to access the old location data, then edit your survey in excel and change the name of the geopoint to "the_geom"
-  Then replace the survey again. 
+  Then replace the survey on you can redo the replace action. 
 
 geopoint
 ++++++++
@@ -1015,6 +1017,67 @@ the header.  Hence the matrix type is not a real type as it is converted into mu
 *  Webforms:  yes
 *  XLSForm: yes
 *  Online Editor: no
+
+Literacy Test
+-------------
+
+**Type**
+  select
+
+**Appearance:**
+
+*  literacy
+
+**body::kb:flash**
+
+* Set to the interval between the *Start* button being pressed and the screen flashing to indicate that reading progress (word reached) should be recorded. 
+
+**Availability:**
+
+*  FieldTask: no
+*  Webforms:  yes
+*  XLSForm: yes
+*  Online Editor: no
+ 
+.. figure::  _images/widget-literacy.jpg
+   :align: center
+   :width: 500px
+   :alt: The literacy widget after the flash timer has gone off which results in a yellow background. Two words are marked as causing problems and are crossed out
+
+   Literacy widget after the flash and before the user marks progress made at point flash occured
+
+#.  When the widget is first shown it appears with a list of the words to be read and a *Start* button.  It is assumed that the interviewee has a list of the 
+    words to be read as well and the enumerator will be recording their reading performance in webForms.
+#.  After the enumerator presses the *Start* button, the timer is started.  This will cause the screen to flash after the specified number of seconds
+    or 60 seconds if no number is specified in body::kb:flash.  During this period the enumerator can select words that the reader finds difficult.
+#.  After the screen flashes the enumerator will be able to select the word that the reader had reached.  They can then continue to select words that the 
+    reader is having trouble with.
+#.  After starting a *Finish* button is shown.  When the enumerator presses *Finish* the timer stops.  They can then record the 
+    final word read.
+
+Viewing Literacy Results
+++++++++++++++++++++++++
+
+When you view the output in the console it appears in its raw format.  That is a number of values spearated by spaces including:
+
+*  The index of the word being read when the screen flashed
+*  The time in seconds elapsed before the Finish button is pressed
+*  The index of the word being read when the Finish button was pressed
+*  The text "null null null null null null null"
+*  A space separated list of the words that were marked as being wrong or difficult for the reader.
+
+Support for literacy widgets has been added to the default Excel export from the analysis page.  This formats the output to make it easier to analyse.
+Four additional columns are automatically added to the export for each literacy widget.  These record:
+
+*  The total time elapsed between pressing Start and Finish
+*  The index of the word being read when the screen flashed
+*  The index of the word being read when the finish button was pressed
+*  The count of words that were marked as being difficult or in error
+
+The recording of which words the reader had trouble with then behaves like any other select question.  If you specify "Compress select multiples" for
+the export then they will be shown as a comma separated list of choice values.  Otherwise a column in the export will be added for each word choice
+and the value will be set to "1" if the word was a problem or "0" if it was not.  This allows you to easily add up the number of times each word
+was marked as a problem.
 
 Other ODK Question types
 ------------------------

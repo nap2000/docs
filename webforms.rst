@@ -31,7 +31,7 @@ Grids
 
 .. figure::  _images/webforms2.jpg
    :align:   center
-   :width: 	 600px
+   :width: 	 200px
    :alt:     Webform styled as a grid
 
    Webform styled as a grid
@@ -41,7 +41,7 @@ select menu **File**, then **Settings** then set style to **Grid**.
 
 .. figure::  _images/webforms3.jpg
    :align:   center
-   :width: 	 400px
+   :width: 	 200px
    :alt:     Enabling Grids in XLSForm
 
    Enabling Grids in XLSForm
@@ -90,3 +90,53 @@ The following properties can be changed:
 *  The page background colour
 *  The paper background colour
 *  The position of the footer icon
+
+Using a Webform offline on a mobile Device
+------------------------------------------
+
+Webforms works offline however you have to make sure that the form is cached on your device before you go into the field and that you 
+can access it. The following instructions assume that you are using Chrome as your browser however Firefox, Safari and other browsers are similar.
+
+1. Logon to the Smap server.  If you are using an account that has enumerator access then you should see the WebForms launch page.
+
+.. figure::  _images/webforms5.jpg
+   :align:   center
+   :width:   200px
+   :alt:     Webforms Launch Page showing Webforms that can be opened
+
+   Webforms Launch Page
+
+2. Select the survey that you want to open
+
+This will show the survey form in your browser. At this point all the files associated with the survey will have been downloaded and cached in your browser so
+that it can be used offline. Next you want to get a link to the survey so you don't need to navigate to the server to find it.
+
+Select the menu for the browser so you can save a link to the survey locally. This menu may appear as 3 vertical dots (shown highlighted
+in the next picture with a red circle).  However it may appear differently depending on the device.
+
+.. figure::  _images/webforms6.jpg
+   :align:   center
+   :width: 	 200px
+   :alt:     Selecting the browser menu after opening a survey
+
+   Selecting the browser menu from a survey
+
+3.  From the browser menu select "Add to home screen"
+
+.. figure::  _images/webforms7.jpg
+   :align:   center
+   :width: 	 200px
+   :alt:     Add to home page screen option in browser menu
+
+   The browser menu extended
+
+4.  An icon for the survey will be saved to your home page
+
+.. figure::  _images/webforms8.jpg
+   :align:   center
+   :width: 	 200px
+   :alt:     Device home page with survey icon
+
+   Survey icon on a device's home page
+
+
