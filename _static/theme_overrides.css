@@ -10,4 +10,8 @@
    .wy-table-responsive {
       overflow: visible !important;
    }
+
+    .wy-side-nav-search {
+        background-color: #2C3D29 !important;
+    }
 }

@@ -16,3 +16,4 @@ Online Editor
   online-settings.rst
   online-required.rst
   online-translations.rst
+  online-tools.rst

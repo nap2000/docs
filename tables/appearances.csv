@@ -36,6 +36,7 @@ quickcompact-2
 quickcompact-3
 etc",As per the standard quickcompact appearances with the addition that you can specify the number of columns to use,
 columns-pack,"Very similar to ""columns"" however the labels are packed in with minimal spacing","Use with type of ""select_one"" or ""select_multiple""."
+horizontal-compact,Shows choices in a select type question horizontally,Only available for webforms
 list,Will show choices horizontally,"Use with type of ""select_one"" or ""select_multiple""."
 numbers,Will show the numeric keyboard for a text question. This can be used to allow numbers longer than 10 digits to be entered.,Use with text questions
 thousands-sep,A thousands separator will be added.  The actual separator used will depend on the locale of the phone.,"Use on question types; integer, decimal and text with appearance of ""numbers"" to add a thousands separator."

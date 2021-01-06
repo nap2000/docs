@@ -43,3 +43,11 @@ Shows the resources in shared resources including CSV files, images, video and a
   Access from the Form Management Page
   Select the "Resource Utilisation Report"
 
+Summary of events by hour
+-------------------------
+
+Shows a count of events recorded in the log for each hour of the selected day
+
+  Access from the Log Management Page
+  Select the "Hourly Summary" report
+

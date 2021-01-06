@@ -1,0 +1,39 @@
+Event,Comments
+create,Something has been created such as a survey or a user
+create pdf,Create a PDF from a data record
+replace,A survey was replaced
+delete,"A survey, project or user was deleted"
+erase,A survey and its data was erased
+restore,A deleted survey was restored
+email,Something to do with emails
+email task,An email task was sent or completed
+error,An error occurred
+notification,A notification was sent
+organisation update,An update was made to an organisation details
+rekognition,A request was made to AWS rekognition
+transcribe,A request was made to AWS transcribe
+transcribe_medical,A request was made to AWS transcribe medical
+translate,A request was made to AWS translate
+reminder,A reminder was sent
+mailout,A mailout email was sent
+view,Data was viewed
+generate report view,Data was viewed in a report
+dashboard view,View data from the analysis dashboard
+user activity view,View user activity data
+user location view,View user location data
+move organisation,An organisation was moved to a different enterprise
+move project,A project was moved to a different organisation
+reject task,A task was rejected
+optin,A user opted in to email notifications
+expired,Something expired
+project,Some project related event
+role,Some role related event
+limit,A limit was exceeded
+API CSV view,Data was viewed by downloading a CSV file
+API view,Data was viewed in JSON format using the API
+API audit view,View audit data using the API
+API single record view,View a single record of data using the API
+Mapbox Request,Request a static map from Mapbox
+submissions,Submission of data
+anonymous submissions,Submission of data from an anonymous webform link
+task submissions,Submission of results from a task

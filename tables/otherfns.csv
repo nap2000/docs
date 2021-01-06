@@ -11,8 +11,12 @@ Coalesce returns the first non empty value out of the values provided in the par
 In this example the age value is set to 0 if it is empty."
 area,"area(${the_geom})
 
-Where the_geom is the name of a geoshape type question","Note the name of the geoshape needs to be ""the_geom""."
+Where the_geom is the name of a geoshape type question",
 distance,"distance(${the_geom})
 
-Where the_geom is the name of a geoshape or geotrace question","As for area you should name your geometry question ""the_geom"". The reason being Smap currently converts all geometry questions to that name to simplify GIS analysis. So if you are referencing a question in an ""area"" function using a different name then it will not be found."
+Where the_geom is the name of a geoshape or geotrace question or is a nodest of geopoints",
 once,once(${age}),The value will only be evaluated once while the form is open.  This is useful for setting dynamic default values that you want to get an initial value but after that the value should be set by the user.
+default,default(${age}),"The value will be evaluated every time the dependent questions change. In this example if the answer to the ""age"" question was changed then the value will be reset.  However the value will not be re-evaulated on save of the form.  Hence you can use this to allow the user to override a default value. Available with fieldTask 6.209 and above."
+uuid,uuid(10),Without the argument this returns an RFC4122 compliant unique number. Optionally an argument can be included to specify the length of the unique number.
+boolean(arg),boolean(arg),"Returns true if the argument is a number other than zero, a text string 1 or more characters in length, an expression that evaluates to true, or a non empty collection. Otherwise it returns false."
+"checklist(min, max, resp1, resp2 etc)","checklist(1,3, ${resp})","Returns true if the number of responses that are exactly the string ""yes"" are between min and max"

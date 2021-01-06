@@ -81,15 +81,23 @@ based on the answer to a preceeding question.
   to set default values.  For example if you had a dynamic default calculation of ${number_girls} to set the default value for a question on how many girls go 
   to school then the answer (to how many girls go to school) will be reset back to the default value when the form is saved.  
 
-To avoid the problem of recalculation of defaults when the form is saved  wrap the calculation in the once() function::  
+To avoid the problem of recalculation of defaults when the form is saved  wrap the calculation in the either the once() function or in
+fieldTask version 6.209 and above you can use the default() function::  
 
   once(${number_girls}) 
+  default(${number_girls})
 
-Now the default value is set when the question is shown. Once the answer has been set then it will not be changed again by the calculation.
+Now the default value is set when the question is shown. 
+
+*  If you use the once function then after the answer has been set it will not be changed again using the default calculation.
+*  If you use the default() function then if the dependencies of the calculation change the value will be reset however it will not be
+   changed either when the form is saved or when the form is initialised. This latter condition is important if you are restoring from a 
+   saved survey or starting a task. 
 
 .. note::
 
-  Webforms does not have the above issues with dynamic defaults and you **should not** wrap the default calculation in the once() function.
+  Webforms does not have the above issues with dynamic defaults and you **should not** wrap the default calculation in the once() function. However
+  you can use the default() function as this will just be ignored.
   
 Dynamic Images
 --------------

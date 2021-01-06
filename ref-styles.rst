@@ -35,7 +35,7 @@ Escaping Markdown
 +++++++++++++++++
 
 The problem with using markdown is that if you want to use a # or a * as part of your label then you might 
-find it disappears and the label gets reformatted.  To resolve this put a “\” in front of::
+find it disappears and the label gets reformatted.  To resolve this put a “\\” in front of::
 
   #
   _

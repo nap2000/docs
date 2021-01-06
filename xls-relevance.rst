@@ -66,3 +66,12 @@ We can use fhe selected functions as shown below
 
    Relevance for other
 
+More Complex Expressions
+------------------------
+
+Expressions can be built up using "and" and "or".  For example::
+
+  ${age} < 10 and ${gender} = 'female'
+  selected(${q}, 'choice1') or selected($q}, 'choice2')
+
+For more information refer to :ref:`expression-reference`

@@ -1,11 +1,13 @@
 .. Smap documentation master file
 
+.. figure::  _images/header.jpg
+   :align:   center
+   :alt:     Banner Image
+
 Welcome to the Smap documentation
 =================================
 
 :dfn:`Smap Consulting` (Smap) provides tools for  a wide range of :ref:`applications` including Evaluation, Monitoring, Guidance and Case Management.
-
-This documentation is currently under development and is progressively replacing the :ref:`legacy`.  
 
 
 .. toctree::
@@ -17,7 +19,7 @@ This documentation is currently under development and is progressively replacing
   concepts.rst
   applications.rst
   integration.rst
-  android.rst
+  features.rst
   fieldTask.rst
   webforms.rst
   surveys.rst
@@ -36,4 +38,3 @@ This documentation is currently under development and is progressively replacing
   tips.rst
   legacydocs.rst
   support.rst
- 

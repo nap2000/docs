@@ -156,8 +156,8 @@ the ${question_name} syntax.
 Task Location
 +++++++++++++
 
-This cannot be set for a **Task Group**.  The GPS coordinates of a task are set from a location question in the source survey.  You can change this
-by editing the individual task. 
+The GPS coordinates of a task are set automatically from location questions in the source survey.  Only location
+questions in the top level form will be used. You can change the allocated location by editing the generated individual task. 
 
 Task Names
 ++++++++++

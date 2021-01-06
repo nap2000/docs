@@ -7,10 +7,9 @@ Launch a Survey from inside a Survey
  :local:
  
 While completing a survey you may find that another survey also needs to be completed.  You can launch this second survey from 
-within the survey you are currently filling in, complete it, and then be
-returned automatically to your location in the first survey.  
+within the first, complete it, and then be returned automatically to your location in that first survey.  
 
-There are many applications for this feature. You could create a survey whose sole purpose was to 
+There are many applications for this feature. For example you could create a survey whose sole purpose was to 
 decide which survey really needs to be completed.
 
 .. note::
@@ -21,17 +20,17 @@ decide which survey really needs to be completed.
 Linking data between the surveys
 --------------------------------
 
-When you launch another survey you may want to be able to connect the data between the launched survey and the survey that is doing the 
-launching.  This is done by specifying a question in one of the surveys that will hold a key pointing to a record in the second survey.
+When you launch another survey you may want to be able to connect the data between the two surveys.
+This is done by specifying a question in one of the surveys that will hold a key pointing to a record in the other.
 
 .. note::
 
-  If you specify a question to hold a linking key then the relationship between the two forms is one to many.  That is a single record in one of
-  the surveys can be referenced by many records in the second.  The question is which survey has the single record and which has the many?  This leads
-  to the concept of a **parent** survey and a **child** survey.  The parent can have many children but in this world of surveys a 
+  If you specify a question to hold a linking key then the relationship between the two surveys is one to many.  That is a single record in one of
+  the surveys can be referenced by many records in the other.  The question is: which survey has the single record and which has the many?  This leads
+  to the concept of a **parent** survey and a **child** survey.  The parent can have many children but, in this world of surveys, a 
   child can have only one parent.
 
-  When launching a new survey you can choose that it be a child or a parent of the current survey.  If you are not linking the data between the
+  When launching a new survey you can choose that it be a child or a parent of the first survey.  If you are not linking the data between the
   surveys then it does not matter which one you choose.  
   
   the following examples are going to be based on the **parent** survey being a class in a school and the **child** survey being a pupil 
@@ -83,11 +82,34 @@ Making use of linkages between Surveys
 If you are analysing your data in a Business Intelligence tool then you can join the data using the key question.  Alternatively in the console
 you can **drill down** from parent survey to child survey or from child survey up to parent survey to see the connected data.
 
-Other Considerations
---------------------
+Hiding the launched Surveys on the phone
+----------------------------------------
 
 Commonly you will not want the user to start up a "launched" survey independently.  You can hide launched surveys 
 so that they are not directly visible in fieldTask.  To do this go to the survey settings and select "Hide on device".
+
+Passing data to the launched survey
+-----------------------------------
+
+Available with Smap Server 20.09+
+
+You can specify the initial data that the launched survey receives in the "initial" parameter. For example::
+
+  initial=name:${qname},vegetable:parsnip
+
+The format is 1 or more comma separated value specifications consisting of:
+
+* The name of the question in the launched form that is going to receive the default value
+* A colon separator
+* The value
+
+This value can be static like "parsnip" in the above example or by using the ${} notation you can specify that the value can be taken from the 
+launching form.  In the above example the question called "name" in the launched survey will get its initial value from the question called 
+"qname".
+
+.. note::
+
+  When getting intial data from the launching form you can only refer to data in it's top level form.  That is not within a repeating group.
 
 Tutorial - Launching a Parent Survey
 ------------------------------------

@@ -20,10 +20,15 @@ To get here select the menus *Modules* and then *Console*.
    
 Records are shown in order with most recent at the top.  
    
-Changing the records displayed
-------------------------------
+.. _console-filters:
 
-The top half of the page contains the filters.  These are:
+Changing the records and columns displayed
+------------------------------------------
+
+Records
++++++++
+
+The top half of the page contains the record filters.  These are:
 
 * **Project:** Choose the project containing the survey.
 * **Survey:** Select the primary survey, that is the one whose data you want to view.
@@ -42,7 +47,7 @@ The top half of the page contains the filters.  These are:
 * **Search:** Only show records which have the specified text somewhere within them.
 
 Select Filters
-++++++++++++++
+^^^^^^^^^^^^^^
 
 A drop down select is automatically created for each question of type select_one and placed underneath the colum that it filters.
 
@@ -52,9 +57,27 @@ A drop down select is automatically created for each question of type select_one
    A select filter on gender
 
 Sorting
-+++++++
+^^^^^^^
 
 Clicking on a column heading will sort on that column.  Clicking again will change the sort direction.
+
+Columns
++++++++
+
+Click on the settings button, as shown below, in order to access the columns dialog.
+
+.. figure::  _images/console_settings.jpg
+   :align:   center
+
+   The settings button
+   
+The dialog allows you to select the columns that are shown, those that should be shown as a barcode and whether the value of a barcode should
+also be included in reports.
+
+.. figure::  _images/console-columns.jpg
+   :align:   center
+
+   The columns dialog
 
 Editing a record
 ----------------
@@ -154,7 +177,7 @@ Automatic Translation
 The translation can be done automatically by `AWS Translate  <https://aws.amazon.com/translate>`_.  The following additional parameters
 need to be added to the question in the oversight form that is going to show the translation:
 
-#.  Add the parameter: auto=yes
+#.  Add the parameter: auto_annotate=yes
 #.  Add a paramater **from_lang** with the value set to the language code of the source language
 #.  Add a parameter **to_lang** with the value set to the language code of the language you are translating to
 
@@ -175,6 +198,16 @@ The above parameters are required in addition to the "source" parameter identify
 
 :ref:`language-codes-audio` 
 
+Medical Transcriptions
+######################
+
+If the audio file contains medical terms then you can add some additional parameters to use `AWS Transcribe  Medical <https://aws.amazon.com/transcribe/medical>`_
+
+#.  Add the parameter: medical=yes
+#.  Set the audio type to either "dictation" or "conversation":  med_type=dictation
+
+Only US English is supported as a language for madical transcriptions.
+
 Automatic Labelling of Images
 #############################
 
@@ -192,6 +225,35 @@ Using a webform
 
 If the user has the **enum** security privilege then they can click on the green webform button at the top of the page.  This will 
 open the main survey populated with data from the record.  The user can then make changes and submit in the normal webform way.
+
+Updating Multiple Records at once
++++++++++++++++++++++++++++++++++
+
+You can select multiple records using your mouse and the shift or the control key after which the "Bulk Change" button will be shown.
+
+.. figure::  _images/console-bulk1.jpg
+   :align:   center
+   :alt: Showing console after selecting multiple records
+
+   Multiple Records Selected for a Bulk Change
+
+A page is then displayed that allows you to make changes to all selected records.
+
+.. note::
+
+  Select Multiple questions behave differently to other questions.   Rather than setting the final value of the question in all the records
+  you are allowed to either add a selected choice to all records or remove a selected choice.  Hence the value you can select is a select one
+  question.  You can then optionally specify the "clear" checkbox to remove the selected choice.
+
+.. warning::
+
+  Batch updates do not require you to reserve the record.  Hence you can update a record that someone else is working on.
+
+.. warning::
+
+  If the permitted values of a select question are determined by another value in the record then the values you can select
+  will be determined by the first record that you are updating.  This might allow you then to set invalid values for other 
+  records.
 
 History Tab
 -----------
@@ -279,6 +341,52 @@ After clicking on **Up** and selecting a different record then drilling down aga
 
 
 .. _language-codes-audio:
+
+Styling the output
+------------------
+
+The color of a data cell can be set using style lists. There are two steps to this:
+
+1. First specify your style list in the **styles** worksheet of an XLSForm
+
+.. csv-table:: Styles Worksheet
+  :header: list_name, value, color
+
+  status,success,green
+  status,failure,red
+
+2. Second specify the style list for a question to use in the column **style list** of the survey worksheet
+
+.. csv-table:: Survey Worksheet
+  :header: type, name, label, style list
+
+  text,project_report,What is the status of the project?, status
+
+.. figure::  _images/console-styles.jpg
+   :align:   center
+
+   Styled output
+
+Reports
+-------
+
+Reports created from the console use the same filters (:ref:`console-filters`) that are used to determine what is displayed on the screen.  
+
+.. figure::  _images/console-reports1.jpg
+   :align:   center
+   :alt: Sub form records with a different parent
+
+   Reports accessible from the console
+
+As shown in the picture there are 3 console specific reports available (Note the menu item simply labelled reports takes you to the reports module and
+is not connected to what is shown on the console).
+
+*  Summary Report.  Creates a spreadsheet report with a worksheet for each question.  These worksheets format the data so that it can be readily turned
+   into charts.
+*  Word Download.  Downloads the current records and columns into a word document.  QR codes will be shown in this report.  All reports are generated in 
+   landscape mode.  You should reduce the number of columns to less than 10 before proceeding.
+*  Spreadsheet Download.  Downloads the current records into a spreadsheet.
+
 
 Languages Supported for Automatic Transcription
 -----------------------------------------------

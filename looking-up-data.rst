@@ -149,9 +149,9 @@ Filter the data
 
 The filter function can be one of:
 
-#.  contains
-#.  startswith
-#.  endswith
+#.  contains    (fieldTask only)
+#.  startswith  (fieldTask only)
+#.  endswith    (fieldTask only)
 #.  matches
 #.  in
 #.  not in
@@ -206,3 +206,56 @@ General Syntax::
 
   pulldata('SOURCE', 'COLUMN IN SOURCE TO RETRIEVE', 'COLUMN IN SOURCE TO FILTER ON', 'FILTER VALUE')
   
+.. _multi-value-pulldata:
+
+Selecting Multiple Values
++++++++++++++++++++++++++
+
+.. warning::
+
+  This feature is available in fieldTask 6.200 and above.  It is not available in Webforms.
+
+To select multiple values you can use two additional parameters:
+
+1.  An index into the record you want.  the index of a record starts from 1, however there are two special values:
+
+  *  **-1**  - Get the count of the number of matching records
+  *  **0**   - Get all the matching values separated by a space
+
+2.  A filter function to select the data you want to include
+
+  *  contains
+  *  startswith
+  *  endswith
+  *  matches
+  *  in
+  *  not in 
+
+General Syntax::
+
+  pulldata('SOURCE', 'COLUMN IN SOURCE TO RETRIEVE', 'COLUMN IN SOURCE TO FILTER ON', 'FILTER VALUE', index, 'FILTER FUNCTION')
+
+.. note::
+
+  The index is a number and so it does not have quotation marks.
+
+By using these parameters you no longer need to specify a unique key as the 'COLUMN IN SOURCE TO FILTER ON'.  Instead you can get data from multiple
+rows that match the filter function.
+
+The following examples are for the scenario where a child can be enrolled in multiple classes using a select multiple.  So the class codes
+are space separated.  ${class} is the answer from a question that identifies the class; the pulldata functions then get the children
+enrolled in that class::
+
+  pulldata('linked_s30_268', 'first_name', 'enrolled_in', ${class}, -1, 'contains')
+  pulldata('linked_s30_268', 'first_name', 'enrolled_in', ${class}, 0, 'contains')
+  pulldata('linked_s30_268', 'first_name', 'enrolled_in', ${class}, 4, 'contains')
+
+The first example gets the number of children in the class.  This could be used as the repeat_count for a "begin repeat" that shows data on
+each enrolled child.  The second example gets all of the children's first names as a space separated list. The third example gets the fourth child
+in the list.  You can use this last example inside a "begin repeat" where you replace "4" with "position(..).
+
+Using pulldata from within a repeating group
+--------------------------------------------
+
+You can also look up repeating data in subforms for reference.  In this case in your new form you can have a repeating group that looks
+up the corresponding data in the reference repeating group. Details here (:ref:`pulldata-subforms`)

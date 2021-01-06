@@ -23,7 +23,29 @@ Use online search and lookup::
   search()  =>  lookup_choices()
   pulldata()  =>  lookup()
 
-You just need to change the function name, the parameters remain the same.
+You just need to change the function name, the parameters can remain the same. However lookup_choices has some extensions and can do more than search()
+
+lookup_choices extensions
++++++++++++++++++++++++++
+
+This is available with Smap Server version 20.09.
+
+In addition to the parameters available with search() (:ref:`looking-up-data`), you can use 'eval' to evaluate an expression::
+
+  lookup_choices('linked_s10_231', 'eval', '#{q4} > now()')
+
+In the above example all choices in the survey with the ident 'linked_s_231' where q4 is a date in the future are returned.
+
+.. note::
+
+  What's with the #{q4} instead of ${q4}? The #{question name} means to get the question in the survey that is being looked up.  If you use ${question name}
+  then the question is assumed to be in the survey that the user is filling in.
+
+An example using both ${} and #{}::
+
+  lookup_choices('linked_s10_231', 'eval', '#{end_date} < ${project_date}')
+
+in the above example choices are rturned where the end_date question in the looked up survey has a date earlier than the answer to the project_date question.
 
 Comments
 --------

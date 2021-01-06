@@ -1,5 +1,5 @@
 Appearance,Result,Comments
-pdf-no,Question will not be included in a generated PDF,
+pdfno,Question will not be included in a generated PDF,
 pdflabelw_##,Set the width of the question label.  Replace '##' with a number from 0 to 10.  ,Setting the width to 10 will make the question answer appear on the next line.
 pdfheight_##,Set the height of the box allowed for the question answer.  This is in points.,This value only applies when exporting a blank template.  If there is data in the export then the size of the data will determine the height of the box.  A value of 150 would be roughly 10 rows.
 pdfcols_##_##_##....,"This sets the number of columns in which to place the data.
@@ -15,6 +15,7 @@ pdfcols_10
     Single column
 
 The column settings apply to the question that you add the appearance to, and all subsequent questions until it is overridden by another pdfcols appearance."
+pdfhiderepeatinglabels,In subforms only the label for the first record will be shown,Set this on each question in a subform that you want to have this behaviour
 pdflabelbg_##_##_##,Sets the background color for the label.  Use Hex RGB values,"For example:
 pdflabelbg_FF_00_00
 Set the background to red."
@@ -50,3 +51,4 @@ pdfhyperlink,Show a link for a picture question instead of the image,
 pdfvalue,Show the value for a choice rather than its label,"Use with select and select one questions
 
 By default, when displaying data from a select question, the labels of the selected choices are shown.  If this appearance is added to the select question then the values of the choice are shown."
+pdfhideindex,Hide the indentation and repeat index shown in sub fomrs,Use with begin repeat questions

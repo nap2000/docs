@@ -22,7 +22,7 @@ calculation then the answer shown will change for all previously collected data.
   performed in a survey are fixed once the data is submitted.  So if you update the survey to change the calculation the 
   values calculated for already collected data will not change.
   
-Calculations are defined using :ref:`expression-reference`.  The one exception is when using the if() expression which is specific to 
+Calculations are defined using :ref:`server-expressions`.  The one exception is when using the if() expression which is specific to 
 server calculations.
 
 Excel Editor

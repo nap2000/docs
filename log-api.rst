@@ -47,3 +47,70 @@ Log
   :reqheader Authorization: basic
   :statuscode 200: no error
 
+.. http:get:: /api/v1/log/organisation/{year}/{month}/{day}
+
+  :synopsis: get the number of events per organisation for a day
+  
+  **Example response**:
+  
+  https://sg.smap.com.au/api/v1/log/organisation/2020/07/04
+  
+  .. sourcecode:: http
+  
+        HTTP/1.1 200 OK
+        Vary: Accept
+        Content-Type: application/json
+	
+        [
+            {
+                "organisation": "Smap",
+                "events": {
+                    "API view": 104,
+                    "erase": 3,
+                    "create": 2,
+                    "Update": 1,
+                    "delete": 2,
+                    "email": 1
+                }
+            }
+        ]
+
+  :query tz:    The timezone for example ``Australia/Brisbane``.  All date time and date answers will be returned in this time zone.
+  :reqheader Authorization: basic
+  :statuscode 200: no error
+
+.. http:get:: /api/v1/log/hourly/{year}/{month}/{day}
+
+  :synopsis: get a count of log events over each hour of a specific day
+  
+  **Example response**:
+  
+  https://sg.smap.com.au/api/v1/log/hourly/2020/07/04
+  
+  .. sourcecode:: http
+  
+        HTTP/1.1 200 OK
+        Vary: Accept
+        Content-Type: application/json
+	
+        [
+            {
+                "hour": 10,
+                "events": {
+                    "erase": 2
+                }
+            },
+            {
+                "hour": 15,
+                "events": {
+                    "API view": 1,
+                    "erase": 1,
+                    "delete": 2
+                }
+            }
+        ]	
+
+  :query tz:    The timezone for example ``Australia/Brisbane``.  All date time and date answers will be returned in this time zone.
+  :reqheader Authorization: basic
+  :statuscode 200: no error
+

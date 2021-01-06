@@ -1,0 +1,9 @@
+list_name,name,label
+food_groups,vegetables,Vegetables
+food_groups,protein,Protein
+food_groups,fruit,Fruit
+food_groups,dairy,Dairy
+food_groups,sugar,Fats and sugar
+,,
+yn,yes,yes
+yn,no,no

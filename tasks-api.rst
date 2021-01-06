@@ -402,3 +402,7 @@ Create a Task
             "webform": "https://ubuntu1804.smap.com.au/webForm/s1_37?taskkey=13&assignment_id=0"
         }
       }
+
+  :query preserveInitialData: When updating an existing task that already has initial data you can choose to not include initial_data
+         and to set this parameter to either preserve the existing data or clear it.  One of `true` or `false`
+

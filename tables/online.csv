@@ -22,4 +22,4 @@ Use in a calculation to set an image as an intial value to a question.
 2)	In a calculate have: get_media(${image_select_question}, '/main/image_show_question').  This will download the selected image
 3)	Have an image question with appearance of annotate"" and a calculation of ${calculate_question_name}. 
 
-Because of the way ODK evaluates calculations when the user saves the form using the naive approach above will cause the modified image not to be sent.  Refer to the dynamic image examples in the examples for an approach that will work."""
+Because of the way calculations are evaluated, when the user saves the form using the naive approach above will cause the modified image not to be sent.  Refer to the dynamic image examples in the examples for an approach that will work."""

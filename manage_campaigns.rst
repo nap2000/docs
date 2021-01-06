@@ -85,6 +85,18 @@ Press the button "Email Unsent" to send all of your emails.
 Alternatively if you have already sent emails and some of them failed, perhaps because the user was unsubscribed, then you can press the "Retry" button.
 This will send all unsent emails and will also try and send those with an unsubscribed or error status.  
 
+Getting the survey links
+------------------------
+
+You may want to a link to a survey using your own email server or perhaps in an SMS message.  However these links are normally
+only generated when the "Email Unsent" button is pressed.  To immediately generate the links press the "Generate Links" button.
+
+.. warning::
+
+  The links will expire after 30 days so you should only generate them when you are ready to collect data.
+
+Once the links have been generated you can view them by editing an individual mailout or by exporting all the mailouts to a spreadsheet.
+
 Completing a Mailout Survey
 ---------------------------
 
@@ -136,3 +148,9 @@ If you select an email in the table then you can press the **Details** button.  
 You can then copy this URL and send it to the recipient by other means if they are having trouble accessing it.
 
 The details popup will also show the initial data to be applied to the survey in JSON format. 
+
+Exporting emails in the campaign
+--------------------------------
+
+All email, their status for the campaign and the survey link for each email can be exported to a spreadsheet.  Select the menu **File** 
+and then **Export Emails XLS**
