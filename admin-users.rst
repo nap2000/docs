@@ -10,7 +10,7 @@ To get to the user management screen select the **Admin** module and then **User
 
   The **admin** security group is required in order to access the users page.
 
-User Management has multiple tabs.  The first one, **users** contains the list of acutal users, the remaining tabs
+User Management has multiple tabs.  The first one, **users** contains the list of actual users, the remaining tabs
 can be used to group and mange the users by project, role, organisation and enterprise. 
 
 .. figure::  _images/users.jpg

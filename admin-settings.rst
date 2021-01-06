@@ -4,8 +4,8 @@ Settings
 .. contents::
  :local:
 
-Appaearance
------------
+Appearance
+----------
 
 Server
 ------
