@@ -13,6 +13,8 @@ To get to the analysis page select **Modules** then **Analysis**.
   analysis-reports.rst
   analysis-dashboard.rst
   analysis-backup.rst
+  analysis-modify.rst
+  analysis-review.rst
  
  
 

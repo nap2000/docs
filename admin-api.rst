@@ -107,6 +107,39 @@ Resources
   
   :query survey_id: The id of a survey if you want the media file to only be available to that survey.
 
+.. _users-simple-api:
+ 
+Users (Simple)
+--------------
+
+.. http:get:: /surveyKPI/userList/simple
+
+  :synposis: Get a list of users in the current organisation of the user making the API call.
+  
+  **Example response**:
+  
+
+  .. sourcecode:: http
+  
+	HTTP/1.1 200 OK
+	Vary: Accept
+	Content-Type: application/json
+	
+        [
+          {
+            "id": 2,
+            "ident": "neil",
+            "name": "Neil Penman"
+          },
+          {
+            "id": 3,
+            "ident": "tom",
+            "name": "Tom"
+          }
+        ]
+	
+  :statuscode 200: no error
+
 .. _projects-api:
  
 Projects
@@ -211,13 +244,13 @@ Surveys
 Submissions
 -----------
 
-.. http:get:: /api/v1/admin/submissions
+.. http:get:: /api/v1/submissions
 
   :synposis: A list of submissions in the calling user's organisation. The data is always returned as latest first
   
   **Example response**:
   
-  https://sg.smap.com.au/api/v1/admin/aubmissions
+  https://sg.smap.com.au/api/v1/submissions
   
   .. sourcecode:: http
   
@@ -271,6 +304,7 @@ Submissions
   :query text tz: Set to a valid time zone. (Refer to timezones api call to get a list of valid time zones). The upload time will be 
                 returned in this time zone.
   :query boolean links: Return links to other submission related data.
+  :query text survey_ident: Only return data for the specified survey (version 21.01+)
   :reqheader Authorization: basic
   :statuscode 200: no error
   
