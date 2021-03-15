@@ -5,11 +5,15 @@ Organisations
  :local:
  
 Organisations are managed on one of the tabs of the users page.  To get to it select the menus; **Modules** then **Admin** then **Users**
-then the **Organisations** tab.
+then the **Organisations** tab.  Organisations can be used to compartmentalise work further than just using projects.  Each organisation
+can have multiple projects within it.  The main value that organisations bring is that an administrator cannot move to a different
+organisation unless they are given explicit permission to do so, either by an organisational administrator or the administrator who created
+the organisation.
 
 .. warning::
 
-  You will need organisational administration privilege to see this page.
+  If you have organisational administration privilege then you will see all of the organisations on the server listed on this tab.  Otherwise,
+  if you administrator privilege you will see the organisations that you have created..
   
 Settings
 --------
@@ -45,3 +49,14 @@ Click on the name of the organisation.  This will open a dialog to edit the sett
 	  
    *  Set the default language for the organisation. As for timezone normally the user's language is used.
 
+Moving between organisations
+----------------------------
+
+When you click on the user profile menu. (The icon that looks like a person's head and shoulders) you will see a dialog that includes the
+name of the organisation that you are currently in.  If you access other organisations then you can select a different organisation in this
+dialog to move to it.
+
+Providing permission to move to another organisation
+----------------------------------------------------
+
+This is done in the users tab.  Select a user for editing then you can specify which organisations they can access.

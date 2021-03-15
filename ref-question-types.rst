@@ -1079,10 +1079,128 @@ the export then they will be shown as a comma separated list of choice values.  
 and the value will be set to "1" if the word was a problem or "0" if it was not.  This allows you to easily add up the number of times each word
 was marked as a problem.
 
+.. _audio:
+
+Audio
+-----
+
+.. contents::
+ :local:
+
+Default audio widget
+++++++++++++++++++++
+
+**Type**
+  audio
+
+Records audio using the device's microphone or a connected external microphone. This default audio widget uses an wxternal audio recording application. Most
+androids come pre-installed with one however you can also install an application from the play store. 
+
+.. figure::  _images/audio1.jpg
+   :align: center
+   :width: 300
+   :alt: The FieldTask screen showing the button to select in order to start recording
+
+   Question using the default audio widget
+
+.. rubric:: XLSForm
+
+.. csv-table:: survey
+  :header: type, name, label
+
+  audio, summation, Record the issue summation
+
+.. _built-in-audio-recording:
+
+Using the built-in audio recorder
++++++++++++++++++++++++++++++++++
+
+**Type**
+  audio
+
+**Parameters:**
+
+*  quality:   Set the :ref:`audio-quality`
+
+
+Added in FieldTask version 6.300
+
+The built-in audio recorder makes it possible to record audio while filling out other questions and will continue recording even if the user switches to another app or if the phone screen is locked. To use the built-in audio recorder specify the audio quality for the audio question. 
+
+.. figure::  _images/audio2.jpg
+   :align: center
+   :width: 300
+   :alt: The FieldTask screen showing the built in audio recorder and some other questions that are completed while the recording is running
+
+   Question using the built in audio recorder
+
+When built-in audio recording is enabled and recording is initiated, a recording control bar appears at the top of the screen.  If the pause button is tapped, recording is temporarily suspended and the button icon changes to a microphone. When the microphone is tapped, recording is resumed. After the stop button is tapped, the recording is ended and can no longer be modified.
+
+.. tip::
+
+  Short audio files can be quite small compared to video and high resolution images however a long recording can become large. If this is likely to be an issue then you can consider changing your audio quality settings. 
+
+  Android devices can make many sounds during use and these will be included in recordings. We recommend turning off sounds from button presses, camera shutters and notifications before recording.
+
+Other questions can be included on the same screen as a built-in recording question. This makes it possible to answer other questions while recording. To do this, put the questions in a group that has an appearance of `field-list`.
+
+During recording, the user is prevented from leaving the current question screen. However, you can use other applications or lock the device screen.
+
+To replace the audio captured, first delete the current file and then record again.
+
+In some rare cases such as the device running out of space, the recording may complete successfully but not be attached to the form. If this happens, a dialog will be displayed explaining that the file is available but needs to be accessed manually. You can find these files in the ``recordings`` folder of the FieldTask directory. This folder is never cleared so you should delete these files once you have retrieved them.
+
+.. _audio-quality:
+
+Audio quality
+^^^^^^^^^^^^^
+
+The quality of audio recordings can be customized using the ``quality`` parameter. If a ``quality`` is specified, then the built-in recorder is used unless the quality is set to `external`. If no ``quality`` is specified then external or internal audio recorder is used based on the value set in the form managmenet settings.
+
+.. list-table::
+   :header-rows: 1
+
+   * - Value
+     - Extension
+     - Encoding
+     - Bit rate
+     - Sample rate
+     - File size
+   * - normal
+     - .m4a
+     - AAC
+     - 64kbps
+     - 32kHz
+     - ~30MB/hour
+   * - low
+     - .m4a
+     - AAC
+     - 24kbps
+     - 32kHz
+     - ~11MB/hour
+   * - voice-only
+     - .amr
+     - AMR
+     - 12.2kbps
+     - 8kHz
+     - ~5MB/hour
+
+.. tip::
+
+  ``voice-only`` can be used for one-on-one interviews in a quiet place. ``low`` will sound compressed but speech is generally intelligible. ``normal`` is similar to typical podcast settings.
+
+.. rubric:: XLSForm
+
+In the parameters column, write ``quality=`` followed by the desired value.
+
+.. csv-table:: survey
+ :header: type, name, label, parameters
+
+ audio,interview,Start the recording before commencing the interview,quality=voice-only
+
 Other ODK Question types
 ------------------------
 
-*  `audio <https://docs.opendatakit.org/form-question-types/#audio-widget>`_
 *  `video <https://docs.opendatakit.org/form-question-types/#video-widgets>`_
 *  `file upload <https://docs.opendatakit.org/form-question-types/#file-upload-widget>`_
  

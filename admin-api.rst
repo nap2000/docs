@@ -378,5 +378,23 @@ Edit a submission in a Webform
   :reqheader Authorization: basic
   :statuscode 200: no error
 
+Change current organisation
+---------------------------
 
+.. http:get:: /api/v1/users/organisation/(organisation name)
+
+  :synposis: Set the users organisation to the value specified in "organisation name". Available in server version 21.03+.
+  
+  **Example response**:
+  
+  https://sg.smap.com.au/api/v1/users/organisation/head%20office
+  
+  .. sourcecode:: http
+  
+	HTTP/1.1 200 OK
+	Vary: Accept
+	
+  
+  :reqheader Authorization: basic
+  :statuscode 200: no error
  
