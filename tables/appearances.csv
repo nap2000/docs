@@ -1,25 +1,10 @@
 Appearance,Result,Comments
-field-list,Questions appear on one screen,Use on groups
-table-list,Questions appear as a grid,Use on groups. All the questions in the group need to be select_one or all select_multiple and refer to the same list name
-label,Shows the labels only for a select question horizontally.,"You can use this to create your own table list within a field-list.   You would then add additional select questions with the appearance ""list-nolabel""."
-list-nolabel,Shows the question text for a select question and allows you to select a choice but it does not show the choice labels.,Usually you would add the choice labels above using a question with appearance label
 annotate,Allows annotation of photographs,"Use with type of ""image"""
-draw,User draws an image with their finger,"Use with type of ""image"""
-signature,User signs with their finger,"Use with type of ""image"""
-selfie,The camera will be opened in selfie mode,"Use with type of ""image"""
-no-calendar,Shows the simple date selector rather than the calendar view,"Use with type of ""date"" and also with ""date time"""
-month-year,Allows only the month and year to be selected.,"Use with type of ""date"""
-year,Allows only the year to be selected,"Use with type of ""date"""
-coptic,Shows a Coptic calendar,"Use with type of ""date"""
-ethiopian,Shows an Ethiopian calendar,"Use with type of ""date"""
-islamic,Shows an Islamic calendar,"Use with type of ""date"""
-bikram-sambat,Shows a Nepali date widget,"Use with type of ""date"""
-persian,Shows a Persian calendar,"Use with type of ""date"""
-placement-map,Allows the user to select a location on a map,"Use with type of ""geopoint"""
-quick,On a select_one question as soon as you select the option the next question will be asked.  It may be easy to enter the wrong value though,"Use with type of ""select_one"" but only if it will be obvious to the user that they have made the wrong choice and will need to swipe back.  For example in cascading selects on location."
-minimal,"On a select_one, or select multiple question this will show the set of options as a ""spinner"". That is on one line.  When you click on the spinner it will expand to allow you to select the options.
+autocomplete,A search box will be added to select one and select multiple questions,Use with select_one and select_multiple
+bearing,"A compass bearing will be recorded
 
-Useful if you have multiple select questions in a group with appearance field-list.","Use with type of ""select_one"" or ""select_multiple""."
+fieldTask only",Use with questions of type decimal
+bikram-sambat,Shows a Nepali date widget,"Use with type of ""date"""
 columns,"Will show options as a grid. Checkboxes or radio buttons will still be shown unless the ""no-buttons"" appearance is also used.
 
 Can be used with media files added to options to allow the user to select from a set of icons or images arranged in columns.","Use with type of ""select_one"" or ""select_multiple""."
@@ -27,7 +12,38 @@ Can be used with media files added to options to allow the user to select from a
 columns-2
 columns-3
 etc",As for columns with the addition that the number specifies the number of columns.,Use when adding pictures to options.
+columns-pack,"Very similar to ""columns"" however the labels are packed in with minimal spacing","Use with type of ""select_one"" or ""select_multiple""."
+coptic,Shows a Coptic calendar,"Use with type of ""date"""
+distress,"Shows a thermometer with a scale from 1-10 from which you can select values
+
+Only works on webForms and not in fieldTask",Use with integer questions.
+draw,User draws an image with their finger,"Use with type of ""image"""
+ethiopian,Shows an Ethiopian calendar,"Use with type of ""date"""
+field-list,Questions appear on one screen,Use on groups
+hidden,"Does not show the question in fieldTask.
+
+This cannot be included with other appearance options.",This appearance is useful when you are using tasks and have generated a task that refers to previously collected data.  You may want to use some of that data in calculations but otherwise not show it.
+horizontal-compact,Shows choices in a select type question horizontally,Only available for webforms
+islamic,Shows an Islamic calendar,"Use with type of ""date"""
+label,Shows the labels only for a select question horizontally.,"You can use this to create your own table list within a field-list.   You would then add additional select questions with the appearance ""list-nolabel""."
+likert,Will show a select_one question as a likert scale,"Webforms only, not available in fieldTask. Instead for fieldTask you can use a range type question. These can also be used with Webforms."
+list,Will show choices horizontally,"Use with type of ""select_one"" or ""select_multiple""."
+list-nolabel,Shows the question text for a select question and allows you to select a choice but it does not show the choice labels.,Usually you would add the choice labels above using a question with appearance label
+minimal,"On a select_one, or select multiple question this will show the set of options as a ""spinner"". That is on one line.  When you click on the spinner it will expand to allow you to select the options.
+
+Useful if you have multiple select questions in a group with appearance field-list.","Use with type of ""select_one"" or ""select_multiple""."
+month-year,Allows only the month and year to be selected.,"Use with type of ""date"""
+new,"Will remove the ""choose file"" button from an image question",Use on image and annotate questions.
+new-front,Use the front facing camera and require a new video to be taken,"Use with type of ""video"""
 no-buttons,Will not show the checkbox or radio buttons with choices,"Use with select questions that have the ""columns"", ""columns-n"" or ""columns-pack"" appearance"
+no-calendar,Shows the simple date selector rather than the calendar view,"Use with type of ""date"" and also with ""date time"""
+numbers,Will show the numeric keyboard for a text question. This can be used to allow numbers longer than 10 digits to be entered.,Use with text questions
+persian,Shows a Persian calendar,"Use with type of ""date"""
+phoneonly,"Will not add the data into the results database.
+
+Allows you to collect sensitive data such as names that can be referenced while the data is being collected but are not then removed after the data is submitted.",
+placement-map,Allows the user to select a location on a map,"Use with type of ""geopoint"""
+quick,On a select_one question as soon as you select the option the next question will be asked.  It may be easy to enter the wrong value though,"Use with type of ""select_one"" but only if it will be obvious to the user that they have made the wrong choice and will need to swipe back.  For example in cascading selects on location."
 quickcompact,"Will show options as a grid and also auto advance. Checkboxes or radio buttons will not be shown.
 
 Can be used with media files added to options to allow the user to select from a compact set of icons.","Use with type of ""select_one"" or ""select_multiple""."
@@ -35,29 +51,14 @@ Can be used with media files added to options to allow the user to select from a
 quickcompact-2
 quickcompact-3
 etc",As per the standard quickcompact appearances with the addition that you can specify the number of columns to use,
-columns-pack,"Very similar to ""columns"" however the labels are packed in with minimal spacing","Use with type of ""select_one"" or ""select_multiple""."
-horizontal-compact,Shows choices in a select type question horizontally,Only available for webforms
-list,Will show choices horizontally,"Use with type of ""select_one"" or ""select_multiple""."
-numbers,Will show the numeric keyboard for a text question. This can be used to allow numbers longer than 10 digits to be entered.,Use with text questions
-thousands-sep,A thousands separator will be added.  The actual separator used will depend on the locale of the phone.,"Use on question types; integer, decimal and text with appearance of ""numbers"" to add a thousands separator."
-likert,Will show a select_one question as a likert scale,"Webforms only, not available in fieldTask. Instead for fieldTask you can use a range type question. These can also be used with Webforms."
 rating,"Will allow the user to select from a series of stars.   The number of stars available for selection is set by the ""end"" parameter in the range question.",Use with range question.
-vertical,Makes a range appear vertically,Use with range questions
+read_nfc,"If the question type is ""barcode"" then the NFC reader will be opened",
+selfie,The camera will be opened in selfie mode,"Use with type of ""image"""
+signature,User signs with their finger,"Use with type of ""image"""
+table-list,Questions appear as a grid,Use on groups. All the questions in the group need to be select_one or all select_multiple and refer to the same list name
+thousands-sep,A thousands separator will be added.  The actual separator used will depend on the locale of the phone.,"Use on question types; integer, decimal and text with appearance of ""numbers"" to add a thousands separator."
 url,"Will open a url in the phone's browser.  The url to open is specified in the default column of the xlsForm.
 
 Can be used to provide help if the user is online","Use with text questions.  Put the URL in the ""default"" column"
-phoneonly,"Will not add the data into the results database.
-
-Allows you to collect sensitive data such as names that can be referenced while the data is being collected but are not then removed after the data is submitted.",
-new,"Will remove the ""choose file"" button from an image question",Use on image and annotate questions.
-read_nfc,"If the question type is ""barcode"" then the NFC reader will be opened",
-bearing,"A compass bearing will be recorded
-
-fieldTask only",Use with questions of type decimal
-autocomplete,A search box will be added to select one and select multiple questions,Use with select_one and select_multiple
-hidden,"Does not show the question in fieldTask.
-
-This cannot be included with other appearance options.",This appearance is useful when you are using tasks and have generated a task that refers to previously collected data.  You may want to use some of that data in calculations but otherwise not show it.
-distress,"Shows a thermometer with a scale from 1-10 from which you can select values
-
-Only works on webForms and not in fieldTask",Use with integer questions.
+vertical,Makes a range appear vertically,Use with range questions
+year,Allows only the year to be selected,"Use with type of ""date"""

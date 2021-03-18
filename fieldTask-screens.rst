@@ -31,15 +31,6 @@ phone can be disabled by a setting in the **Mobile App Options** tab on the user
 Incomplete instances can be opened for editing.  If you do a long press on an incomplete instance or task then you can **reject** it. 
 Effectively it will be deleted.  You need to provide a reason for this action.
 
-Tasks in different states will be shown in a different color:
-
-*  Rejected / Deleted:  Brown
-*  Late:  Red
-*  In progress: Yellow
-*  Submitted: Greeen
-*  Finalised: Purple
-
-
 3. Map
 ++++++
 

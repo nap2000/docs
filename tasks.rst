@@ -13,3 +13,5 @@ To get to task select **Modules** and then **Tasks**.  Tasks can be assigned to 
   viewing-tasks.rst
   editing-tasks.rst
   self-assign.rst
+  task-ft.rst
+  task-wf.rst

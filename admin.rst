@@ -8,6 +8,7 @@ Administration
   admin-organisations.rst
   admin-projects.rst
   admin-users.rst
+  admin-mobiles.rst 
   admin-settings.rst
   admin-rbac.rst
   admin-shared-resources.rst

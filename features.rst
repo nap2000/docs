@@ -19,6 +19,10 @@ Surveys
   lookup local reference data in a csv file, yes, yes
   auto label images, yes, yes
   audit (timing; location per question; question changes), yes, no
+  image questions, yes, yes
+  video questions, yes, yes
+  audio questions, yes, yes
+  recording audio while completing the survey, yes, no, FieldTask 6.300 - SmapServer 21.03
 
 Administration
 --------------
@@ -48,6 +52,7 @@ Case Management
   Notification Messages
   Console
   Audit trail of all changes
+  Transcription of video and audio to text
 
 Connectivity
 ------------

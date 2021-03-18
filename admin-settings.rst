@@ -67,7 +67,7 @@ The server tab is only shown to users who have the server owner group.  It can b
 There is also a section on setting a server wide custom style sheet.  The approach is identical to that for the per organisation style sheet described in the
 appearance tab.
 
-.. mobile-device-settings:
+.. _mobile-device-settings:
 
 Mobile App Options
 ------------------

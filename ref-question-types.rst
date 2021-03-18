@@ -491,7 +491,7 @@ multi select
 Allows the user to select multiple answers from a choice list.
 
 **Type**
-  select
+  select_multiple
 
 **Appearance:**
 
@@ -508,7 +508,7 @@ Allows the user to select multiple answers from a choice list.
 .. csv-table:: Survey Worksheet
   :header: type, name, label
 
-  select countries,country,Select some countries
+  select_multiple countries,country,Select some countries
 
 .. csv-table:: Choices Worksheet
   :header: list_name, name, label
@@ -1022,7 +1022,7 @@ Literacy Test
 -------------
 
 **Type**
-  select
+  select_multiple
 
 **Appearance:**
 
@@ -1031,6 +1031,15 @@ Literacy Test
 **body::kb:flash**
 
 * Set to the interval between the *Start* button being pressed and the screen flashing to indicate that reading progress (word reached) should be recorded. 
+
+The words to be read are listed in the choices worksheet.
+
+.. rubric:: XLSForm
+
+.. csv-table:: survey
+  :header: type, name, label, body::kb:flash
+
+  select_multiple word_list, literacy_question, Assess literacy proficiency, 30
 
 **Availability:**
 
@@ -1187,20 +1196,171 @@ The quality of audio recordings can be customized using the ``quality`` paramete
 
 .. tip::
 
-  ``voice-only`` can be used for one-on-one interviews in a quiet place. ``low`` will sound compressed but speech is generally intelligible. ``normal`` is similar to typical podcast settings.
+   We recommend always using ``low`` or ``normal`` unless you have very tight bandwith concerns. These two quality settings produce audio that can be transcribed using `Smap's powerful transcription capability <https://www.smap.com.au/docs/console.html#annotating-answers>`_. 
 
 .. rubric:: XLSForm
 
-In the parameters column, write ``quality=`` followed by the desired value.
+In the parameters column, enter ``quality=`` followed by the desired quality. The online editor also supports setting the quality for audio questions.
 
 .. csv-table:: survey
  :header: type, name, label, parameters
 
- audio,interview,Start the recording before commencing the interview,quality=voice-only
+ audio,interview,Start the recording before commencing the interview,quality=low
 
-Other ODK Question types
-------------------------
+.. _external-app-audio-widget:
 
-*  `video <https://docs.opendatakit.org/form-question-types/#video-widgets>`_
-*  `file upload <https://docs.opendatakit.org/form-question-types/#file-upload-widget>`_
- 
+Getting audio from a custom external app
+++++++++++++++++++++++++++++++++++++++++
+
+**Type**
+  audio
+
+**Appearance:**
+
+*  ex: followed by the identifier of the application that you want to launch
+
+Added in FieldTask version 6.300
+
+
+.. note::
+
+  This external app can be different from the external application that is launched by default to record audio.  You can specify exactly the application that you
+  want rather than any application that responds to a request to record some audio.
+
+.. seealso:: :doc:`external-applications`
+
+.. rubric:: XLSForm
+
+.. csv-table:: survey
+  :header: type, name, label, appearance
+
+  audio, some_audio, Specific External Audio, ex:com.example.getaudio
+
+.. _video:
+
+Video widgets
+-------------
+
+.. tip::
+	
+  Videos can be large.   Be very careful before adding video questions and test that you have enough bandwidth and disk space on the
+  Android devices.   You can specify in the settings that only low resolution videos should be taken.  This can also be done in the :ref:`mobile-device-settings`  
+  for the organisation so that it applies to all devices automatically.
+
+.. contents::
+ :local:
+
+.. _default-video-widget:
+
+Default video widget
+++++++++++++++++++++
+
+**Type**
+  video
+
+Records video, using the device camera.
+
+.. rubric:: XLSForm
+
+.. csv-table:: survey
+  :header: type, name, label
+
+  video, vehicle_traffic, Please record a video of the traffic
+
+
+.. _self-portrait-video-widget:
+
+Front facing camera video
+++++++++++++++++++++++++++
+
+**Type**
+  video
+**Appearance**
+  new-front
+
+Records video, using the front-facing camera. The `Choose Video` button is not displayed.
+
+.. rubric:: XLSForm
+
+.. csv-table:: survey
+  :header: type, name, label, appearance
+
+  video, front-video, Video yourself reading the question, new-front
+
+.. _external-app-video-widget:
+
+External app video widget
++++++++++++++++++++++++++
+
+**Type**
+  video
+
+**Appearance:**
+
+*  ex: followed by the identifier of the application that you want to launch
+
+Added in FieldTask version 6.300
+
+
+.. seealso:: :doc:`external-applications`
+
+.. rubric:: XLSForm
+
+.. csv-table:: survey
+  :header: type, name, label, appearance
+
+  video, some_video, Specific External Video, ex:com.example.getvideo
+
+
+Files
+-----
+
+.. warning::
+	
+  Files can contain malware so make sure you use an antivirus scanner before opening any file uploaded to the server.  
+
+.. contents::
+ :local:
+
+.. _default-file-widget:
+
+Default file upload
++++++++++++++++++++
+
+**Type**
+  file
+
+.. rubric:: XLSForm
+
+.. csv-table:: survey
+  :header: type, name, label
+
+  file, supporting_doc, Please select the supporting documentation
+
+
+.. _external-app-file-widget:
+
+External app file widget
++++++++++++++++++++++++++
+
+**Type**
+  file
+
+**Appearance:**
+
+*  ex: followed by the identifier of the application that you want to launch
+
+Added in FieldTask version 6.300
+
+
+Calls an external application to get a file for upload.  You can create your own custom apps to get verified binary files to include in a survey response.
+`
+.. seealso:: :doc:`external-applications`
+
+.. rubric:: XLSForm
+
+.. csv-table:: survey
+  :header: type, name, label, appearance
+
+  file, supporting_doc, Select the test results to include, ex:com.example.gettestresults
+
