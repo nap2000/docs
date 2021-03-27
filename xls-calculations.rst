@@ -161,16 +161,16 @@ Triggering the Calculation
 
 Requires Smap Server 21.01 or above.
 
-By default calculations are triggered whenever any of the questions that they refer to changes. They are also 
-re-caclulated when the survey is saved.  You can use the once() function to change this behaviour and only
+By default calculations are triggered whenever any of the questions that they refer to change. They are also 
+re-calculated when the survey is saved.  You can use the once() function to change this behaviour and only
 calculate the value a single time. Also you can use the default() function wrapped around the calculation to prevent
-it from being re-caclulated on save of the survey.
+it from being re-calculated on save of the survey.
 
-You can also specify a specific question that will trigger the caclulation when it changes. This way you can 
+You can also specify a specific question that will trigger the calculation when it changes. This way you can 
 update the value of a calculation by answering a question that does not appear in the actual calculation.
 
-This approach works like using the default() option in that the caclulation will not be re-evaulated on save to
-replace any updates the user had made.
+This approach works like using the default() option in that the calculation will not be re-evaluated on save and hence
+any updates the user has made will be preserved.
 
 .. rubric:: XLSForm that calculates the time at which a question answer was changed
 

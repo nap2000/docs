@@ -214,6 +214,11 @@ nfc
 **Required Appearances:**
 nfc  
 
+**Availability:**
+
+*  FieldTask: yes
+*  Webforms:  yes
+
 Reads the id on an NFC chip
 
 .. csv-table:: survey
@@ -1129,7 +1134,7 @@ Using the built-in audio recorder
 
 **Parameters:**
 
-*  quality:   Set the :ref:`audio-quality`
+*  quality:   Refer to :ref:`audio-quality`
 
 
 Added in FieldTask version 6.300

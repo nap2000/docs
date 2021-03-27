@@ -113,7 +113,7 @@ name in the oversight survey. To add data to the main survey the question in the
 Oversight survey specific configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For the most part an oversight survey is the same as a normal survey and you just specify it in the consolse as being used as an oversight survey,
+For the most part an oversight survey is the same as a normal survey and you just specify it in the console as being used as an oversight survey,
 in other words for editing data in the console.  To allow a survey to be used in this way it needs to be loaded into the same group as the survey
 whose data you are editing.
 
@@ -171,8 +171,16 @@ Example 3. Transcribe a video recording
 
    Transcribe a video response
    
+Automation
+##########
+
+.. warning::
+
+  Automatic translations, transcriptions, and image labelling using AWS services for which they charge a fee.  Hence its use is restricted on servers hosted
+  by Smap.  If you need this feature contact us to organise for the restriction to be lifted.
+
 Automatic Translation
-#####################
+^^^^^^^^^^^^^^^^^^^^^
 
 The translation can be done automatically by `AWS Translate  <https://aws.amazon.com/translate>`_.  The following additional parameters
 need to be added to the question in the oversight form that is going to show the translation:
@@ -186,7 +194,7 @@ The above parameters are required in addition to the "source" parameter identify
 :ref:`language-codes` 
 
 Automatic Audio Transcription
-#############################
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Audio can be done transcribed automatically using `AWS Transcribe  <https://aws.amazon.com/transcribe/>`_.  The following additional parameters
 need to be added to the text question in the oversight form that is going to show the transcription:
@@ -199,7 +207,7 @@ The above parameters are required in addition to the "source" parameter identify
 :ref:`language-codes-audio` 
 
 Medical Transcriptions
-######################
+^^^^^^^^^^^^^^^^^^^^^^
 
 If the audio file contains medical terms then you can add some additional parameters to use `AWS Transcribe  Medical <https://aws.amazon.com/transcribe/medical>`_
 
@@ -209,7 +217,7 @@ If the audio file contains medical terms then you can add some additional parame
 Only US English is supported as a language for madical transcriptions.
 
 Automatic Labelling of Images
-#############################
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Images can be labelled automatically using `AWS Rekognition  <https://aws.amazon.com/rekognition/>`_.  The following additional parameters
 need to be added to the text question in the oversight form that is going to show the transcription:
@@ -248,9 +256,6 @@ A page is then displayed that allows you to make changes to all selected records
 .. warning::
 
   Batch updates do not require you to reserve the record.  Hence you can update a record that someone else is working on.
-
-.. warning::
-
   If the permitted values of a select question are determined by another value in the record then the values you can select
   will be determined by the first record that you are updating.  This might allow you then to set invalid values for other 
   records.
