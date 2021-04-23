@@ -23,9 +23,10 @@ Doing things with images
 Looking up Data
 ---------------
 
-*  `Using CSV files <https://drive.google.com/open?id=0B5_SmpWlQYxvcTE0X09XQXM5MzQ>`_
+*  `Getting select choices from a CSV file <https://drive.google.com/open?id=0B5_SmpWlQYxvcTE0X09XQXM5MzQ>`_
 *  `Looking up data in Sub-Forms (Repeating Groups) <https://drive.google.com/drive/u/0/folders/16dI2RPsMadTQTRLi_pIuZJ8XIJPjqdoA>`_
 *  `Get last survey location <https://docs.google.com/spreadsheets/d/1xyA4dZDOBnOKMlk7IpsRWNQHsmgx8nIiO2l5bPejBjk>`_
+*  `Getting select choices from a repeat <https://docs.google.com/spreadsheets/d/1J0L0hr6CfKWyhIOdGj4yJFx3MseuheXoaubD6Cy2PvE/edit?usp=sharing>`_
 
 Booking Doctor Appointments
 +++++++++++++++++++++++++++

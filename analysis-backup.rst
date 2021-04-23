@@ -78,9 +78,28 @@ Data backups are in a zip file which consists of:
 *  An excel spreadsheet containing all the data.  One worksheet per form / sub form
 *  Optionally all the images
 
+..  warning::
+
+  Excel files in "Strict OOXML" format cannot be imported.
+
 Importing Custom Data
 ---------------------
 
 Creating your own data for importing is straightforward.  The easiest way is to create a template for your data by backing up the 
 survey that you want to import into.  You can do this even if there is no data in the survey.  You can then add your data to the downloaded
 zip file and import.
+
+Naming Requirements
++++++++++++++++++++
+
+By backing up the survey you will get a template that has the correct names for columns and worksheets.  However if you want to create your own:
+
+*  Use the question name as the header on each column
+*  Put the data for the main form into a worksheet called ``d_main``
+*  Put the data for sub forms into worksheets called ``d_{form name}``. The form name is the name of the "begin repeat" question
+
+Linking data between forms
+++++++++++++++++++++++++++
+
+If you only have one form then you can ignore the "prikey" column.  However if you have sub forms then a sub form will have another column called
+"parkey".  Put the prikey value from the parent record in the parkey column to link the records in the subform to its parent.

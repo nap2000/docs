@@ -72,7 +72,7 @@ Replace SOURCE with "linked\_"  followed by the ident of the survey.  In the fol
 
 .. note::
 
-  The online eidtor will guide you through accessing another survey's data.  For example to look up choices in another survey select
+  The online editor will guide you through accessing another survey's data.  For example to look up choices in another survey select
   appearance, click on the edit button and then select the **search** tab.  You can then look up available surveys without having to 
   know their "ident".  However if you are entering the survey ident into an XLSForm then you can get it from the online editor.  Select the menu
   **File** and then **Info**.
@@ -259,3 +259,15 @@ Using pulldata from within a repeating group
 
 You can also look up repeating data in subforms for reference.  In this case in your new form you can have a repeating group that looks
 up the corresponding data in the reference repeating group. Details here (:ref:`pulldata-subforms`)
+
+Local Data
+----------
+
+Available with FieldTask Version 6.400.
+
+Normally when you reference data in other surveys you are looking up data that is stored on the server.  However you may need to complete
+multiple surveys in a location without an internet connection and you may want to reference data that was entered in another survey but has not been submitted
+yet.  Form version 6.400 the local unsubmitted data is included in data returned from a search() or a pulldata() function. This happens transparently and
+no further action on your part is requuired.  
+
+

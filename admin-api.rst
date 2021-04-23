@@ -180,6 +180,9 @@ Projects
 Surveys
 -------
 
+Get
++++
+
 .. http:get:: /api/v1/admin/surveys/(project id)
 
   :synposis: Get a list of surveys. Projects can be found using :ref:`projects-api`.
@@ -241,6 +244,25 @@ Surveys
   :reqheader Authorization: basic
   :statuscode 200: no error
   
+Upload
+++++++
+
+
+
+.. http:post:: /surveyKPI/upload/surveytemplate
+
+  :synposis: Upload a survey template in the spreadsheet format
+  
+  **Example request**:
+  
+  curl -u xxxx -i -X POST -H "Content-Type: multipart/form-data" -F "fileupload=@file.xlsx" -F templateName=name -F projectId=10 -F groupsurvey=0 https://sg.smap.com.au/surveyKPI/upload/surveytemplate
+
+  :query fileupload: The name of the spreadsheet to upload
+  :query templateName: The name to call the uploaded survey
+  :query: projectId: The id of the project to store the survey in
+  :query: groupsurvey: The id of the survey that you want to group this new survey with.  (optional). If you do include it set it to zero to specify no group
+
+
 Submissions
 -----------
 

@@ -202,5 +202,5 @@ texinfo_documents = [
      'Miscellaneous'),
 ]
 
-
+smartquotes = False
 

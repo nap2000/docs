@@ -52,7 +52,7 @@ Audio is recorded while the survey is open.  It will record all sound during sur
   Ethical and legal considerations need to be considered before enabling background audio recording.
 
 Turning off background recording
---------------------------------
+++++++++++++++++++++++++++++++++
 
 If the data collector needs to turn off background recording during survey completion then they can do this using the menu.  Audio recording stops and any previously recorded audio is deleted. Recording can't be resumed during the current survey filling session. Switching the audio recording option back on indicates that the next survey filling session should be recorded. If audit question changes in :ref:`auditing-survey-completion` is enabled, then a ``background audio disabled`` event will be logged if a data collector switches off recording and a ``background audio enabled`` event will be logged if a data collector switches it back on.
 

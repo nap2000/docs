@@ -455,6 +455,13 @@ select
 .. contents::
   :local:
 
+Select questions questions have a type (for select one, select multiple etc) and then in the type column, separated by a space, they have
+a name that identifies where the choices come from.  Choices can be sourced from:
+
+*  A choice list in the survey
+*  A CSV file or another survey
+*  Data in a subform (begin repeat) in the same survey
+
 single select
 +++++++++++++
 
@@ -578,6 +585,34 @@ the question name with the addition of "1", "2", "3" etc.  The first column will
 
 In other view of the collected data, such as in the console, the rankings will be shown in compressed format where they are all placed in a single column, in rank order, with a space between each
 value.
+
+.. _choices-from-repeat:
+
+Getting choices from a repeat
++++++++++++++++++++++++++++++
+
+Requires Smap Server version 21.04
+
+If you have collected data using a repeat then you can generate a follow up select question using values from this repeat. Types supported:
+
+*  select_one
+*  select_multiple
+
+After specifying the type add the question name that you want to use to create the select list. This is placed where you would normally put the ``list name``.  
+If you want to filter the choices then put the filter criteria into the ``choice_filter`` column.
+
+.. csv-table:: Survey Worksheet
+  :header: type, name, label, choice_filter
+  
+  begin repeat members, Member, 
+  text, name, Person's name,
+  integer, age, Person's age,
+  end repeat members, , 
+
+  select_one ${name}, oldest,Select the oldest person,
+  select_one ${name}, oldest_child,Select the oldest child, ${age} < 18
+
+`Example form that includes selection from a repeat <https://docs.google.com/spreadsheets/d/1J0L0hr6CfKWyhIOdGj4yJFx3MseuheXoaubD6Cy2PvE/edit?usp=sharing>`_
 
 image 
 -----
@@ -1240,6 +1275,12 @@ Added in FieldTask version 6.300
   :header: type, name, label, appearance
 
   audio, some_audio, Specific External Audio, ex:com.example.getaudio
+
+
+Background Audio
+++++++++++++++++
+
+If you want to automatically record audio while the survey is being completed then you need :ref:`meta_items`.
 
 .. _video:
 

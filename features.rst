@@ -23,6 +23,7 @@ Surveys
   video questions, yes, yes
   audio questions, yes, yes
   recording audio while completing the survey, yes, no, FieldTask 6.300 - SmapServer 21.03
+  :ref:`choices-from-repeat`,yes, yes, SmapServer 21.04
 
 Administration
 --------------
