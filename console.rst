@@ -171,6 +171,8 @@ Example 3. Transcribe a video recording
 
    Transcribe a video response
    
+.. _automation:
+
 Automation
 ##########
 

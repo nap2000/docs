@@ -12,6 +12,8 @@ General Surveys
 *  `Formatting labels <https://docs.google.com/spreadsheets/d/1Jvxjc990GxFufGUUYg33zqL1p-Jw1YHaOmBXjRimfeQ/edit?usp=sharing>`_
 *  `Charts <https://drive.google.com/drive/folders/1wtKdEw70CAvrC8UGCalfVvDeC8A1obPs>`_
 
+.. _dynamic-images:
+
 Doing things with images
 ------------------------
 

@@ -160,6 +160,8 @@ A bearing widget captures the compass reading and stores it as a decimal type.
 
    Bearing
 
+.. _barcode-questions:
+
 barcode
 -------
 
@@ -204,6 +206,8 @@ The flash can be used as a light source when scanning barcodes in a poorly lit e
    :alt: Recording a bar code using the rear facing camera
 
    barcode
+
+.. _nfc-questions:
 
 nfc
 ---
@@ -614,6 +618,8 @@ If you want to filter the choices then put the filter criteria into the ``choice
 
 `Example form that includes selection from a repeat <https://docs.google.com/spreadsheets/d/1J0L0hr6CfKWyhIOdGj4yJFx3MseuheXoaubD6Cy2PvE/edit?usp=sharing>`_
 
+.. _image:
+
 image 
 -----
 
@@ -909,6 +915,8 @@ Detailed information on using these question types is available in :ref:`launch-
 *  FieldTask: yes
 *  Webforms:  no
 
+.. _locations:
+
 Locations
 ---------
 
@@ -1007,6 +1015,8 @@ Records a shape.
 
 **Type**
   geoshape
+
+.. _matrix:
 
 Matrix
 ------

@@ -1,3 +1,5 @@
+.. _fieldtask-api:
+
 FieldTask APIs
 ==============
 

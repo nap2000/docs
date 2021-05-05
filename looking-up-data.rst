@@ -17,6 +17,8 @@ Data can be sourced from:
 In the remainder of this document the source of the data will be written as *SOURCE*.  Replace this with the name of the CSV file or the 
 identifier of the survey that contains your data.
 
+.. _looking-up-data-csv:
+
 Using CSV Files
 +++++++++++++++
 
@@ -60,6 +62,8 @@ Replace SOURCE with the name of the file without the CSV extension.  In the foll
 
   search('locations')
   search('locations', 'matches', 'region_v', ${region})
+
+.. _looking-up-data-survey:
 
 Using another Survey as the Source
 ----------------------------------
@@ -260,14 +264,26 @@ Using pulldata from within a repeating group
 You can also look up repeating data in subforms for reference.  In this case in your new form you can have a repeating group that looks
 up the corresponding data in the reference repeating group. Details here (:ref:`pulldata-subforms`)
 
+.. _looking-up-data-local:
+
 Local Data
 ----------
 
-Available with FieldTask Version 6.400.
+Available with FieldTask Version 6.400 and SmapServer version 21.05
 
-Normally when you reference data in other surveys you are looking up data that is stored on the server.  However you may need to complete
-multiple surveys in a location without an internet connection and you may want to reference data that was entered in another survey but has not been submitted
-yet.  Form version 6.400 the local unsubmitted data is included in data returned from a search() or a pulldata() function. This happens transparently and
-no further action on your part is requuired.  
+Normally when you reference data in other surveys you are looking up data that is stored on the server and has then been copied onto your device.  
+However you may need to complete multiple surveys in a location without an internet connection and while at that remote location 
+you may want to reference data that was entered in another survey but has not been submitted yet.  
+
+Surveys have local data searching turned off by default as it could potentially result in significantly longer load times for a survey in cases where
+the device has been used offline for a significant period of time and their are hundreds of unsent results.  
+
+To turn local data searching on with the online editor select the menu ``file`` and then ``settings``.  In the settings dialog select the checkbox
+labelled "Lookup local, unsent data on device".
+
+To enable local data searching using the xlsForm editor set a value of "yes" in the column "search_local_data" in the settings worksheet (:ref:`settings-reference`).
+
+Values from the local unsubmitted data will then be included in data returned from a search() or a pulldata() function. This happens transparently and
+no further action on your part is required.  
 
 

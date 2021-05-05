@@ -1,3 +1,5 @@
+.. _organisations:
+
 Organisations
 =============
 

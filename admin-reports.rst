@@ -1,3 +1,5 @@
+.. _admin-reports:
+
 Administration Reports
 ======================
 
@@ -26,6 +28,7 @@ Survey or Device::
   Select "Usage Report"
   Select the month
   Optionally select a detailed breakdown
+  Optionally include temporary users such as for anonymous logons and email tasks
 
 Notification Report
 -------------------

@@ -43,3 +43,32 @@ For email mailouts the opt in email is the first email that the person is sent. 
 opted in.
 
 For notifications a special opt in email is sent allowing the user to confirm their email address.
+
+Troubleshooting
+---------------
+
+There can be several reasons why an email is not sent.  The recipient may never have responded to an opt in email, or they have unsubscribed or perhaps the 
+email address is wrong.  To investigate these issues you can.
+
+Review the status of contacts
++++++++++++++++++++++++++++++
+
+Select the ``modules`` menu then ``Campaigns`` and then contacts.  This will show the status of all email addresses that you are using.  Key statuses are:
+
+*  Pending.  The person at the email address has not responded to an opt in message
+*  Unsubscribed.  The person has unsubscribed from receiving email messages.
+
+In the first case you can go to the monitoring page and resend the opt in message.  In the second case you will need to contact the person through some other
+channel as Smap will not send an email to an unsubscribed address. (other than an invitation to logon to a new account).  The person who owns the email address
+can then go to the server home page and select "Subscribe" to resubscribe to emails.
+
+Review opt in messages
+++++++++++++++++++++++
+
+Select the ``modules`` menu and then ``monitoring`` and then set the source to ``opt in messages``.  If you specify "Show" as "last 200".  Then the 
+last 200 sent outstanding optin email messages will be shown.  You can select "retry" to resend them.
+
+Review Notifications
+++++++++++++++++++++
+
+Also on the monitoring page set the souce to "notifications".  You can then see the status of each email notification and can retry failed ones.

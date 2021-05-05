@@ -25,6 +25,7 @@ Usage
   :query boolean project: Show usage by project
   :query boolean survey: Show usage by survey
   :query boolean device: Show usage by device
+  :query boolean inc_temp: Include temporary and anonymous users (Requires Smap Server 21.05)
 
   **Example response**:
   

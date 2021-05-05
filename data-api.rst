@@ -204,7 +204,10 @@ Single Record
 
 .. http:get:: /api/v1/data/(survey ident)/(instance key)
 
-  :synposis: Get data for the specified instance. The instance key can be found in the :ref:`survey-data-json` API call.
+  :synposis: Get data for the specified instance. The instance key can be found in the :ref:`survey-data-json` API call. Two output 
+    formats are available.  Probably the more useful format is the hierarchy view (Smap Server 21.05). In this format repeats are included inside 
+    their parent records. Specify the hierarchy parameter in order to get this format.  In the alternate default format the values from repeating 
+    records are separated out from their parent.  
   
   **Example response**:
   
@@ -216,17 +219,53 @@ Single Record
 	Vary: Accept
 	Content-Type: application/json
 	
-	{
-	"values": {
-	"q1": "Joe",
-	"q2": "23",
-	"q3": "https://sg.smap.com.au/attachments/s193_1778/82c362f4-8ce5-4fe2-a915-5e3cd2f8ff1c.jpg",
-	"instanceid": "uuid:832ed325-4ad3-46b0-9f99-7d1ebda1cdad"
-	}
-	}
+    {
+      "values": {
+        "country": "Mozambique",
+        "instanceid": "uuid:debf717e-99a0-4b87-994f-b90ef2339317"
+      },
+      "repeats": {
+        "cities": [
+          {
+            "values": {
+            "city": "Maputo"
+            }
+          },
+          {
+            "values": {
+            "city": "Massinga"
+            }
+          }
+        ]
+      }
+    }
+
+  **Example response with hierarchy parameter set**:
+  
+  https://sg.smap.com.au/api/v1/data/s1313_16851/uuid:dce538eb-ea90-44f1-b022-7481fad8fe47?hierarchy=yes
+
+  .. sourcecode:: http
+  
+	HTTP/1.1 200 OK
+	Vary: Accept
+	Content-Type: application/json
+	
+    {
+      "cities": [
+        {
+        "city": "Maputo"
+        },
+        {
+        "city": "Massinga"
+        }
+      ],
+      "instanceid": "uuid:debf717e-99a0-4b87-994f-b90ef2339317",
+      "country": "Mozambique"
+    }
 
   :query meta: set to ``yes`` to return meta data and preloads including prikey, instanceid, user, upload time.  The default is ``no``
   :query tz:    The timezone for example ``Australia/Brisbane``.  All date time and date answers will be returned in this time zone.
+  :query hierarchy:    set to ``yes`` to see the response as a hierarchy of json objects (Requires Smap Server 21.05)
   :reqheader Authorization: basic
   :statuscode 200: no error
   :statuscode 401: not authorised
