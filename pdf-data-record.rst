@@ -13,10 +13,16 @@ Create a Data PDF using a Template
 Create and style the PDF template in a PDF editor then use **Prepare Form** to add the form fields that will be populate
 by data from the submitted record.
 
+Specify PDF form fields as placeholders to be replaced by data from the survey.  Each form field should be given 
+the name of the question that contains the data to be inserted at that location.
+
 *  Use a text field for text, integer, barcode, select questions.
 *  Use an image field for location questions such as geopoint, geotrace, geoshape and start-geopoint
 *  Use an image field for image questions
 *  Set the name of the field to the name of the question
+
+Repeating Data
++++++++++++++++
 
 Where questions are inside a repeating group you need to identify which iteration of the repeat you want to show.  The field name
 should be set to  repeat_name[i].question_name where i is repeat record you want to show.  For example::
@@ -24,6 +30,17 @@ should be set to  repeat_name[i].question_name where i is repeat record you want
   members[0].name  
   Will be filled with the name from the first entry in the members sub form.
   
+Special Question Names
+++++++++++++++++++++++
+
+*  _hrk:  The generated unique key for the record
+*  prikey:  The primary key of the record
+*  user: The user who submitted the record
+*  _start:  The start time of the survey
+*  _end:  The end time of the survey
+*  _device:  The device identifier that submitted the record
+*  instancename: The generated instance name
+
 Generate PDF Data Record
 ------------------------
 

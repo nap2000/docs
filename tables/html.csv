@@ -10,5 +10,6 @@ Font style,"<font face=""cursive""></font>",The text between the font's will be 
 New Line,<br/>,Adds a new line to the text.  Without the <br/> the following text will appear on the same line even if you press carriage return.,"Line 1<br/>
 Line 2"
 Link,[a link](http://example.com),Add a selectable link to a web page.  If the phone is connected to a network then the user can use this to look up some help or other reference material.,a link
+Center a heading,"Add 'style=""text-align: center""' to the heading",,"<h2 style=""text-align: center;"">Health Section</h2>"
 ,,,
 Blue Heading 1,"<h1><font color=""blue"">New Section</font></h1>",You can combine style commands as shown here.  Note that the <h1> command has to be outside of the <font> command otherwise the color will remain black.,

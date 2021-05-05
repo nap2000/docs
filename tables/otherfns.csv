@@ -11,10 +11,10 @@ Coalesce returns the first non empty value out of the values provided in the par
 In this example the age value is set to 0 if it is empty."
 area,"area(${the_geom})
 
-Where the_geom is the name of a geoshape type question",
+Returns the area in square meters. Where the_geom is the name of a geoshape type question or a nodeset of geopoint questions.",
 distance,"distance(${the_geom})
 
-Where the_geom is the name of a geoshape or geotrace question or is a nodest of geopoints",
+Returns the distance in meters of a nodeset of geopoint questions, or a line or the perimeter of a shape.  ",
 once,once(${age}),The value will only be evaluated once while the form is open.  This is useful for setting dynamic default values that you want to get an initial value but after that the value should be set by the user.
 default,default(${age}),"The value will be evaluated every time the dependent questions change. In this example if the answer to the ""age"" question was changed then the value will be reset.  However the value will not be re-evaulated on save of the form.  Hence you can use this to allow the user to override a default value. Available with fieldTask 6.209 and above."
 uuid,uuid(10),Without the argument this returns an RFC4122 compliant unique number. Optionally an argument can be included to specify the length of the unique number.

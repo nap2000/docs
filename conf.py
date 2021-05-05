@@ -52,7 +52,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Smap'
-copyright = '2019, Smap Consulting'
+copyright = '2019, Smap Consulting. Some technical aspects of the documentation may include material from ODK docs, https://docs.getodk.org'
 author = 'Neil Penman'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -202,5 +202,5 @@ texinfo_documents = [
      'Miscellaneous'),
 ]
 
-
+smartquotes = False
 

@@ -8,8 +8,7 @@ Other Documentation
 -------------------
 
 *  `Smap Website <https://www.smap.com.au>`_
-*  `Announcements of new functionality <https://blog.smap.com.au>`_
-*  `Zarkman website <http://zarkman.com>`_
+*  `Smap announcements of new functionality <https://blog.smap.com.au>`_
 *  `You Tube Videos <https://www.youtube.com/user/ianaf4you/videos>`_
 *  `xlsform <http://xlsform.org>`_
 *  `ODK Forum <https://forum.opendatakit.org/>`_

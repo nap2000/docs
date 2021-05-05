@@ -8,12 +8,14 @@ Administration
   admin-organisations.rst
   admin-projects.rst
   admin-users.rst
-  admin-mob-device.rst
+  admin-mobiles.rst 
+  admin-settings.rst
   admin-rbac.rst
   admin-shared-resources.rst
   admin-server.rst
   admin-delete.rst
   admin-reports.rst
+  admin-monitor.rst
   admin-logs.rst
   server-admin.rst 
 

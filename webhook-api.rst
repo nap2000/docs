@@ -1,0 +1,50 @@
+.. _webhooks:
+
+Web Hooks
+========s
+
+.. toctree::
+  :maxdepth: 1
+  
+A web hook allows you to call a web service in an external system when an event happens on the Smap server.  For example when a submission is received
+a :ref:`callback URL<callback-url>` that you have specified can be called with the results of that submission.  
+
+.. _callback-url:
+
+Getting the callback URL
+------------------------
+
+The external system you are going to call needs to generate the callback URL.  There are many tools such as 
+`Zapier<https://zapier.com/>`_ that can be used to do this.  When Smap calls the callback URL a Zapier workflow is started.
+This can process the data and send it to one of the thousands of different applications that have interfaces to Zapier.
+
+User name and password
+++++++++++++++++++++++
+
+Smap supports Basic authentication of webhook calls.  Hence you can optionally add a user name and password.  Often this is not required as
+callback URLs generally include a long sequence of random characters so as long as you do not publicise the URL it should be secure.
+
+Monitoring
+----------
+
+Calls and their status, sucessfull or otherwise can be monitored on the ``Monitoring`` page in the Admin module.  Select a source of "Notifications" and
+then specify ``Show`` as "last 200".
+
+Data Submission Web Hooks
+-------------------------
+
+Adding
+++++++
+
+These web hooks are added on the notifications page which is in the tasks module. After clicking the ``Add`` button specify the target of the notification
+as a Web Hook. You will then be able to specify the callback URL and optionally a user name and password.  The trigger of the notification can be set to:
+
+*  Submission.  New results submitted to the server.
+*  Task Reminder.  A task has not been completed within the alloted time.
+*  Console update.  The data has been changed using the console.
+
+Filtering
++++++++++
+
+Notifications are for specific surveys.  You may also want to add a filter, especially if you are receiving thousands of submissions per day.  
+

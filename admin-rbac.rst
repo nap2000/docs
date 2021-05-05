@@ -1,3 +1,5 @@
+.. _rbac:
+
 Role Based Access Control
 =========================
 
@@ -68,14 +70,17 @@ Remember what is important about a role is not its name but the way it links a s
 2. Assign the role to a user
 ++++++++++++++++++++++++++++
 
-Select the users tab, then select the user that you want to assign the role. If you have the **security** privilege
+You can add or remove users from a role inside the role details dialog.  Open the role for editing then click on 
+"Users" to show the list of available users that can have the role.
+
+ALternatively elect the users tab, then select the user that you want to assign the role. If you have the **security** privilege
 then you will see a section in the dialog labelled **Roles**.  Select the roles that you want to assign to the user.
 
 .. figure::  _images/roles2.jpg
    :align:   center
    :alt:     Assigning a role to a user
    
-   Assigining a Role to a Users
+   Assigning a Role to a Users
    
 3. Assign the role to a form (Online Editor)
 ++++++++++++++++++++++++++++++++++++++++++++

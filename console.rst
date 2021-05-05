@@ -113,7 +113,7 @@ name in the oversight survey. To add data to the main survey the question in the
 Oversight survey specific configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For the most part an oversight survey is the same as a normal survey and you just specify it in the consolse as being used as an oversight survey,
+For the most part an oversight survey is the same as a normal survey and you just specify it in the console as being used as an oversight survey,
 in other words for editing data in the console.  To allow a survey to be used in this way it needs to be loaded into the same group as the survey
 whose data you are editing.
 
@@ -171,13 +171,23 @@ Example 3. Transcribe a video recording
 
    Transcribe a video response
    
+.. _automation:
+
+Automation
+##########
+
+.. warning::
+
+  Automatic translations, transcriptions, and image labelling using AWS services for which they charge a fee.  Hence its use is restricted on servers hosted
+  by Smap.  If you need this feature contact us to organise for the restriction to be lifted.
+
 Automatic Translation
-#####################
+^^^^^^^^^^^^^^^^^^^^^
 
 The translation can be done automatically by `AWS Translate  <https://aws.amazon.com/translate>`_.  The following additional parameters
 need to be added to the question in the oversight form that is going to show the translation:
 
-#.  Add the parameter: auto_annotate=yes
+#.  Add the parameter: auto_annotate=true
 #.  Add a paramater **from_lang** with the value set to the language code of the source language
 #.  Add a parameter **to_lang** with the value set to the language code of the language you are translating to
 
@@ -186,7 +196,7 @@ The above parameters are required in addition to the "source" parameter identify
 :ref:`language-codes` 
 
 Automatic Audio Transcription
-#############################
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Audio can be done transcribed automatically using `AWS Transcribe  <https://aws.amazon.com/transcribe/>`_.  The following additional parameters
 need to be added to the text question in the oversight form that is going to show the transcription:
@@ -199,7 +209,7 @@ The above parameters are required in addition to the "source" parameter identify
 :ref:`language-codes-audio` 
 
 Medical Transcriptions
-######################
+^^^^^^^^^^^^^^^^^^^^^^
 
 If the audio file contains medical terms then you can add some additional parameters to use `AWS Transcribe  Medical <https://aws.amazon.com/transcribe/medical>`_
 
@@ -209,7 +219,7 @@ If the audio file contains medical terms then you can add some additional parame
 Only US English is supported as a language for madical transcriptions.
 
 Automatic Labelling of Images
-#############################
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Images can be labelled automatically using `AWS Rekognition  <https://aws.amazon.com/rekognition/>`_.  The following additional parameters
 need to be added to the text question in the oversight form that is going to show the transcription:
@@ -248,9 +258,6 @@ A page is then displayed that allows you to make changes to all selected records
 .. warning::
 
   Batch updates do not require you to reserve the record.  Hence you can update a record that someone else is working on.
-
-.. warning::
-
   If the permitted values of a select question are determined by another value in the record then the values you can select
   will be determined by the first record that you are updating.  This might allow you then to set invalid values for other 
   records.
@@ -378,14 +385,15 @@ Reports created from the console use the same filters (:ref:`console-filters`) t
 
    Reports accessible from the console
 
-As shown in the picture there are 3 console specific reports available (Note the menu item simply labelled reports takes you to the reports module and
-is not connected to what is shown on the console).
+As shown in the picture there are 3 console specific reports available which have been highligted with a red border. (Note the menu item simply labelled reports 
+takes you to the reports module and is not connected to what is shown on the console. Also the menu item labelled "local reports" contains custom reports added 
+for your application, by default there will be no reports listed under this drop down).
 
 *  Summary Report.  Creates a spreadsheet report with a worksheet for each question.  These worksheets format the data so that it can be readily turned
    into charts.
-*  Word Download.  Downloads the current records and columns into a word document.  QR codes will be shown in this report.  All reports are generated in 
+*  Word Download (blue button).  Downloads the current records and columns into a word document.  QR codes will be shown in this report.  All reports are generated in 
    landscape mode.  You should reduce the number of columns to less than 10 before proceeding.
-*  Spreadsheet Download.  Downloads the current records into a spreadsheet.
+*  Spreadsheet Download (Green button).  Downloads the current records into a spreadsheet.
 
 
 Languages Supported for Automatic Transcription

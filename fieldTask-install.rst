@@ -82,9 +82,3 @@ If you don't accept this, when opening a form, then you will see a message stati
 permission is used only to get the identifier for the android device, its *device id*.  This information is critical for
 quality assurance as it identifies which device submitted which survey results.   However there is no need to worry FieldTask will 
 not make any phone calls on your behalf.
-
-.. note::
-
-  The message shown if you don't accept the above permission is from ODK Collect which is the tool that FieldTask uses to fill in 
-  a form.
-

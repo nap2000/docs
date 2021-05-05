@@ -53,7 +53,7 @@ Constraints
 Restrict the entry of data to sensible and consistent values.  However this will not prevent the enumerator from entering a feasible but
 wrong value so you are still largely dependent on the skills and dedication of enumerators for accuracy.
 
-Make all questions that required.  Except those that shouldn't be required such as notes.   You can use the "Set all questions required"
+Make all questions required except those that shouldn't be required such as read only questions, notes, begin group and begin repeat.   You can use the "Set all questions required"
 option in the tools menu of the online editor. 
 
 Auditing
@@ -73,10 +73,25 @@ Finally after the data is collected if you identify problems, in particular with
 the analysis module to fix them.  You can also edit results in the console.  Both of these approaches create an audit log of all changes made.
 
 
+Testing
+-------
 
+Thorough testing of your survey can prevent problems in the field.  The following suggestions seem to represent good practice:
 
-
-
-
-
-
+*  Use webforms for quick testing of your survey
+*  Always test with fieldTask as well if you will be using it. Some questions may work differently in fieldTask.
+*  When testing with fieldTask swipe backwards to change response and see what effect that has.  For example you may select an 'other' option in a 
+   question and then expect to see a 'Please specify question'. After confirming that, then you can swipe back, change the selection and verify that the
+   'Please specify' is not shown.
+*  You can also use the jump feature in fieldTask to quickly go to an area of the survey that you want to test
+*  Commonly people leave questions as 'not required' while testing so that they can focus testing on parts of the survey at a time.  Once you are ready
+   to train the enumerators then you can 'Mark all questions required' in the online editor
+*  Use enumerator training to get feedback on the phrasing and appropriateness of questions.  It is common to make many changes to questions during
+   enumerator training.
+*  Design 'edge cases' for enumerators to try out during training.  For example to try an interview where the household head is 14 years old.
+*  Review results submitted by enumerators to see if they look reasonable and that the enumerators understand the questions.  I worked on one
+   survey where responses to a question on loan amounts were often '1' or '2'.  The question was being interpreted as the number of loans a person
+   had rather than the total amount of money they had borrowed.
+*  Try and review results and get feedback from enumerators as soon as possible after real data has started being collected.  It is not uncommon
+   for problems to be found in a survey when the survey encounters the real world.  Then you can update the survey using the online editor or the
+   'replace' button and get the enumerators to refresn fieldTask.  This will not affect data already collected.

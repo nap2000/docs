@@ -13,7 +13,7 @@ Getting to the survey management page
 -------------------------------------
 
 As Survey Management is the default page of the Administration module you can get to it by select Modules and the then Admin.  
-Alternatively if you are already in Administration but on a different page, select the “Form” menu.
+Alternatively if you are already in Administration but on a different page, select the “Forms" menu.
 
    
 Creating Surveys

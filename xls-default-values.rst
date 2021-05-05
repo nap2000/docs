@@ -81,8 +81,7 @@ based on the answer to a preceeding question.
   to set default values.  For example if you had a dynamic default calculation of ${number_girls} to set the default value for a question on how many girls go 
   to school then the answer (to how many girls go to school) will be reset back to the default value when the form is saved.  
 
-To avoid the problem of recalculation of defaults when the form is saved  wrap the calculation in the either the once() function or in
-fieldTask version 6.209 and above you can use the default() function::  
+To avoid the problem of recalculation of defaults when the form is saved  wrap the calculation in the either the once() function or in fieldTask version 6.209 and above you can use the default() function::  
 
   once(${number_girls}) 
   default(${number_girls})
@@ -99,6 +98,9 @@ Now the default value is set when the question is shown.
   Webforms does not have the above issues with dynamic defaults and you **should not** wrap the default calculation in the once() function. However
   you can use the default() function as this will just be ignored.
   
+You can also use :ref:`trigger-calculation` to get the same result as you can set the trigger to be the referenced
+question from which you are getting the default.  The calculation will then only be updated when that value changes.
+
 Dynamic Images
 --------------
 
@@ -132,10 +134,12 @@ FieldTask
 Only one parameter is required for get_media() which is the URL of the image.  Then the calculation question is specified in the 
 calculation column of the target question::
 
-  calculate  q2   if(string-length(${q1}) > 0, get_media(${q1}, '/main/q3'), '')
-  image      q3   once(${q2})
+  calculate  q2   if(string-length(${q1}) > 0, get_media(${q1}, ''), '')
+  image      q3   default(${q2})
   
-Remember the dynamic default value is wrapped in a once() function so that it only gets set once.
+The dynamic default value should be wrapped in a default() or once() function so that it does not get changed when the form is saved. default()
+is usually better as it would allow the url of the image to be re-calculated and a new image applied whereas if once() is used then once the image
+is set it cannot be changed without manually clearing the answer.
 
 `Example survey for Dynamic Images (FieldTask Version) <https://docs.google.com/spreadsheets/d/1WEoARXBgcmbRzgvrDK7lyCsjiU7AhCWq4dondDkY5Pw/edit?usp=sharing>`_
 

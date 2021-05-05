@@ -160,6 +160,8 @@ A bearing widget captures the compass reading and stores it as a decimal type.
 
    Bearing
 
+.. _barcode-questions:
+
 barcode
 -------
 
@@ -205,6 +207,8 @@ The flash can be used as a light source when scanning barcodes in a poorly lit e
 
    barcode
 
+.. _nfc-questions:
+
 nfc
 ---
 
@@ -213,6 +217,11 @@ nfc
 
 **Required Appearances:**
 nfc  
+
+**Availability:**
+
+*  FieldTask: yes
+*  Webforms:  yes
 
 Reads the id on an NFC chip
 
@@ -240,6 +249,7 @@ default date type
 
 **Type**
   date
+
 **Availability:**
   FieldTask: yes
   Webforms:  yes
@@ -449,6 +459,13 @@ select
 .. contents::
   :local:
 
+Select questions questions have a type (for select one, select multiple etc) and then in the type column, separated by a space, they have
+a name that identifies where the choices come from.  Choices can be sourced from:
+
+*  A choice list in the survey
+*  A CSV file or another survey
+*  Data in a subform (begin repeat) in the same survey
+
 single select
 +++++++++++++
 
@@ -490,7 +507,7 @@ multi select
 Allows the user to select multiple answers from a choice list.
 
 **Type**
-  select
+  select_multiple
 
 **Appearance:**
 
@@ -507,7 +524,7 @@ Allows the user to select multiple answers from a choice list.
 .. csv-table:: Survey Worksheet
   :header: type, name, label
 
-  select countries,country,Select some countries
+  select_multiple countries,country,Select some countries
 
 .. csv-table:: Choices Worksheet
   :header: list_name, name, label
@@ -560,7 +577,7 @@ This widget allows you to rank choices in order.
 Viewing Recorded Rankings
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-When results are exported in the default spreadsheet format they qill be shown in multiple columns.  One for each choice.  The column headings will be take from 
+When results are exported in the default spreadsheet format they will be shown in multiple columns.  One for each choice.  The column headings will be take from 
 the question name with the addition of "1", "2", "3" etc.  The first column will contain the choice that was ranked first and so on.
 
 .. figure::  _images/widget-rank-export.jpg
@@ -573,8 +590,35 @@ the question name with the addition of "1", "2", "3" etc.  The first column will
 In other view of the collected data, such as in the console, the rankings will be shown in compressed format where they are all placed in a single column, in rank order, with a space between each
 value.
 
-image map select
-++++++++++++++++
+.. _choices-from-repeat:
+
+Getting choices from a repeat
++++++++++++++++++++++++++++++
+
+Requires Smap Server version 21.04
+
+If you have collected data using a repeat then you can generate a follow up select question using values from this repeat. Types supported:
+
+*  select_one
+*  select_multiple
+
+After specifying the type add the question name that you want to use to create the select list. This is placed where you would normally put the ``list name``.  
+If you want to filter the choices then put the filter criteria into the ``choice_filter`` column.
+
+.. csv-table:: Survey Worksheet
+  :header: type, name, label, choice_filter
+  
+  begin repeat members, Member, 
+  text, name, Person's name,
+  integer, age, Person's age,
+  end repeat members, , 
+
+  select_one ${name}, oldest,Select the oldest person,
+  select_one ${name}, oldest_child,Select the oldest child, ${age} < 18
+
+`Example form that includes selection from a repeat <https://docs.google.com/spreadsheets/d/1J0L0hr6CfKWyhIOdGj4yJFx3MseuheXoaubD6Cy2PvE/edit?usp=sharing>`_
+
+.. _image:
 
 image 
 -----
@@ -807,8 +851,12 @@ Range widget with picker
 **Appearance**
   picker
 
-When **picker** is added as an appearance the answer can be selected from a spinner rather than by clicking at a point on a line. This appearance
-is only available with fieldTask and not with webForm.
+**Availability:**
+
+*  FieldTask: yes
+*  Webforms:  no
+ 
+When **picker** is added as an appearance the answer can be selected from a spinner rather than by clicking at a point on a line. 
 
 .. figure::  _images/widget-range-picker.jpg
    :width: 300px
@@ -844,7 +892,7 @@ Chart
 **Type**
   chart
 
-Shows a chart in the survey. Settings for the graph are specified in the question parameters. More details are available in :ref:`charts`
+Shows a chart in the survey. Chart settings are specified in the question parameters. More details are available in :ref:`charts`
 
 **Availability:**
 
@@ -866,6 +914,8 @@ Detailed information on using these question types is available in :ref:`launch-
 
 *  FieldTask: yes
 *  Webforms:  no
+
+.. _locations:
 
 Locations
 ---------
@@ -893,7 +943,7 @@ Also the name of each location question was automatically set to "the_geom".  I'
 
 In version 20.10 this restriction has been lifted:
 
-*  You can add multiple location questions in any form as well as the location prelaod in the top level form.
+*  You can add multiple location questions in any form as well as the location preload in the top level form.
 *  Location questions keep the name that you give them.
 *  When you export a survey as a shape file you can select the location to use.  All other questions are assumed to be attributes of that location. 
 *  When viewing a map of a survey on the analysis page you can select the question to use as the location.
@@ -910,7 +960,7 @@ In version 20.10 this restriction has been lifted:
   will no longer be accessible.  You will see a warning in red if this happens when you do the replace.  
 
   In this circumstance,  if you still need to access the old location data, then edit your survey in excel and change the name of the geopoint to "the_geom"
-  Then replace the survey again. 
+  Then replace the survey on you can redo the replace action. 
 
 geopoint
 ++++++++
@@ -966,6 +1016,8 @@ Records a shape.
 **Type**
   geoshape
 
+.. _matrix:
+
 Matrix
 ------
 
@@ -1016,10 +1068,355 @@ the header.  Hence the matrix type is not a real type as it is converted into mu
 *  XLSForm: yes
 *  Online Editor: no
 
-Other ODK Question types
-------------------------
+Literacy Test
+-------------
 
-*  `audio <https://docs.opendatakit.org/form-question-types/#audio-widget>`_
-*  `video <https://docs.opendatakit.org/form-question-types/#video-widgets>`_
-*  `file upload <https://docs.opendatakit.org/form-question-types/#file-upload-widget>`_
+**Type**
+  select_multiple
+
+**Appearance:**
+
+*  literacy
+
+**body::kb:flash**
+
+* Set to the interval between the *Start* button being pressed and the screen flashing to indicate that reading progress (word reached) should be recorded. 
+
+The words to be read are listed in the choices worksheet.
+
+.. rubric:: XLSForm
+
+.. csv-table:: survey
+  :header: type, name, label, body::kb:flash
+
+  select_multiple word_list, literacy_question, Assess literacy proficiency, 30
+
+**Availability:**
+
+*  FieldTask: no
+*  Webforms:  yes
+*  XLSForm: yes
+*  Online Editor: no
  
+.. figure::  _images/widget-literacy.jpg
+   :align: center
+   :width: 500px
+   :alt: The literacy widget after the flash timer has gone off which results in a yellow background. Two words are marked as causing problems and are crossed out
+
+   Literacy widget after the flash and before the user marks progress made at point flash occured
+
+#.  When the widget is first shown it appears with a list of the words to be read and a *Start* button.  It is assumed that the interviewee has a list of the 
+    words to be read as well and the enumerator will be recording their reading performance in webForms.
+#.  After the enumerator presses the *Start* button, the timer is started.  This will cause the screen to flash after the specified number of seconds
+    or 60 seconds if no number is specified in body::kb:flash.  During this period the enumerator can select words that the reader finds difficult.
+#.  After the screen flashes the enumerator will be able to select the word that the reader had reached.  They can then continue to select words that the 
+    reader is having trouble with.
+#.  After starting a *Finish* button is shown.  When the enumerator presses *Finish* the timer stops.  They can then record the 
+    final word read.
+
+Viewing Literacy Results
+++++++++++++++++++++++++
+
+When you view the output in the console it appears in its raw format.  That is a number of values spearated by spaces including:
+
+*  The index of the word being read when the screen flashed
+*  The time in seconds elapsed before the Finish button is pressed
+*  The index of the word being read when the Finish button was pressed
+*  The text "null null null null null null null"
+*  A space separated list of the words that were marked as being wrong or difficult for the reader.
+
+Support for literacy widgets has been added to the default Excel export from the analysis page.  This formats the output to make it easier to analyse.
+Four additional columns are automatically added to the export for each literacy widget.  These record:
+
+*  The total time elapsed between pressing Start and Finish
+*  The index of the word being read when the screen flashed
+*  The index of the word being read when the finish button was pressed
+*  The count of words that were marked as being difficult or in error
+
+The recording of which words the reader had trouble with then behaves like any other select question.  If you specify "Compress select multiples" for
+the export then they will be shown as a comma separated list of choice values.  Otherwise a column in the export will be added for each word choice
+and the value will be set to "1" if the word was a problem or "0" if it was not.  This allows you to easily add up the number of times each word
+was marked as a problem.
+
+.. _audio:
+
+Audio
+-----
+
+.. contents::
+ :local:
+
+Default audio widget
+++++++++++++++++++++
+
+**Type**
+  audio
+
+Records audio using the device's microphone or a connected external microphone. This default audio widget uses an wxternal audio recording application. Most
+androids come pre-installed with one however you can also install an application from the play store. 
+
+.. figure::  _images/audio1.jpg
+   :align: center
+   :width: 300
+   :alt: The FieldTask screen showing the button to select in order to start recording
+
+   Question using the default audio widget
+
+.. rubric:: XLSForm
+
+.. csv-table:: survey
+  :header: type, name, label
+
+  audio, summation, Record the issue summation
+
+.. _built-in-audio-recording:
+
+Using the built-in audio recorder
++++++++++++++++++++++++++++++++++
+
+**Type**
+  audio
+
+**Parameters:**
+
+*  quality:   Refer to :ref:`audio-quality`
+
+
+Added in FieldTask version 6.300
+
+The built-in audio recorder makes it possible to record audio while filling out other questions and will continue recording even if the user switches to another app or if the phone screen is locked. To use the built-in audio recorder specify the audio quality for the audio question. 
+
+.. figure::  _images/audio2.jpg
+   :align: center
+   :width: 300
+   :alt: The FieldTask screen showing the built in audio recorder and some other questions that are completed while the recording is running
+
+   Question using the built in audio recorder
+
+When built-in audio recording is enabled and recording is initiated, a recording control bar appears at the top of the screen.  If the pause button is tapped, recording is temporarily suspended and the button icon changes to a microphone. When the microphone is tapped, recording is resumed. After the stop button is tapped, the recording is ended and can no longer be modified.
+
+.. tip::
+
+  Short audio files can be quite small compared to video and high resolution images however a long recording can become large. If this is likely to be an issue then you can consider changing your audio quality settings. 
+
+  Android devices can make many sounds during use and these will be included in recordings. We recommend turning off sounds from button presses, camera shutters and notifications before recording.
+
+Other questions can be included on the same screen as a built-in recording question. This makes it possible to answer other questions while recording. To do this, put the questions in a group that has an appearance of `field-list`.
+
+During recording, the user is prevented from leaving the current question screen. However, you can use other applications or lock the device screen.
+
+To replace the audio captured, first delete the current file and then record again.
+
+In some rare cases such as the device running out of space, the recording may complete successfully but not be attached to the form. If this happens, a dialog will be displayed explaining that the file is available but needs to be accessed manually. You can find these files in the ``recordings`` folder of the FieldTask directory. This folder is never cleared so you should delete these files once you have retrieved them.
+
+.. _audio-quality:
+
+Audio quality
+^^^^^^^^^^^^^
+
+The quality of audio recordings can be customized using the ``quality`` parameter. If a ``quality`` is specified, then the built-in recorder is used unless the quality is set to `external`. If no ``quality`` is specified then external or internal audio recorder is used based on the value set in the form managmenet settings.
+
+.. list-table::
+   :header-rows: 1
+
+   * - Value
+     - Extension
+     - Encoding
+     - Bit rate
+     - Sample rate
+     - File size
+   * - normal
+     - .m4a
+     - AAC
+     - 64kbps
+     - 32kHz
+     - ~30MB/hour
+   * - low
+     - .m4a
+     - AAC
+     - 24kbps
+     - 32kHz
+     - ~11MB/hour
+   * - voice-only
+     - .amr
+     - AMR
+     - 12.2kbps
+     - 8kHz
+     - ~5MB/hour
+
+.. tip::
+
+   We recommend always using ``low`` or ``normal`` unless you have very tight bandwith concerns. These two quality settings produce audio that can be transcribed using `Smap's powerful transcription capability <https://www.smap.com.au/docs/console.html#annotating-answers>`_. 
+
+.. rubric:: XLSForm
+
+In the parameters column, enter ``quality=`` followed by the desired quality. The online editor also supports setting the quality for audio questions.
+
+.. csv-table:: survey
+ :header: type, name, label, parameters
+
+ audio,interview,Start the recording before commencing the interview,quality=low
+
+.. _external-app-audio-widget:
+
+Getting audio from a custom external app
+++++++++++++++++++++++++++++++++++++++++
+
+**Type**
+  audio
+
+**Appearance:**
+
+*  ex: followed by the identifier of the application that you want to launch
+
+Added in FieldTask version 6.300
+
+
+.. note::
+
+  This external app can be different from the external application that is launched by default to record audio.  You can specify exactly the application that you
+  want rather than any application that responds to a request to record some audio.
+
+.. seealso:: :doc:`external-applications`
+
+.. rubric:: XLSForm
+
+.. csv-table:: survey
+  :header: type, name, label, appearance
+
+  audio, some_audio, Specific External Audio, ex:com.example.getaudio
+
+
+Background Audio
+++++++++++++++++
+
+If you want to automatically record audio while the survey is being completed then you need :ref:`meta_items`.
+
+.. _video:
+
+Video widgets
+-------------
+
+.. tip::
+	
+  Videos can be large.   Be very careful before adding video questions and test that you have enough bandwidth and disk space on the
+  Android devices.   You can specify in the settings that only low resolution videos should be taken.  This can also be done in the :ref:`mobile-device-settings`  
+  for the organisation so that it applies to all devices automatically.
+
+.. contents::
+ :local:
+
+.. _default-video-widget:
+
+Default video widget
+++++++++++++++++++++
+
+**Type**
+  video
+
+Records video, using the device camera.
+
+.. rubric:: XLSForm
+
+.. csv-table:: survey
+  :header: type, name, label
+
+  video, vehicle_traffic, Please record a video of the traffic
+
+
+.. _self-portrait-video-widget:
+
+Front facing camera video
+++++++++++++++++++++++++++
+
+**Type**
+  video
+**Appearance**
+  new-front
+
+Records video, using the front-facing camera. The `Choose Video` button is not displayed.
+
+.. rubric:: XLSForm
+
+.. csv-table:: survey
+  :header: type, name, label, appearance
+
+  video, front-video, Video yourself reading the question, new-front
+
+.. _external-app-video-widget:
+
+External app video widget
++++++++++++++++++++++++++
+
+**Type**
+  video
+
+**Appearance:**
+
+*  ex: followed by the identifier of the application that you want to launch
+
+Added in FieldTask version 6.300
+
+
+.. seealso:: :doc:`external-applications`
+
+.. rubric:: XLSForm
+
+.. csv-table:: survey
+  :header: type, name, label, appearance
+
+  video, some_video, Specific External Video, ex:com.example.getvideo
+
+
+Files
+-----
+
+.. warning::
+	
+  Files can contain malware so make sure you use an antivirus scanner before opening any file uploaded to the server.  
+
+.. contents::
+ :local:
+
+.. _default-file-widget:
+
+Default file upload
++++++++++++++++++++
+
+**Type**
+  file
+
+.. rubric:: XLSForm
+
+.. csv-table:: survey
+  :header: type, name, label
+
+  file, supporting_doc, Please select the supporting documentation
+
+
+.. _external-app-file-widget:
+
+External app file widget
++++++++++++++++++++++++++
+
+**Type**
+  file
+
+**Appearance:**
+
+*  ex: followed by the identifier of the application that you want to launch
+
+Added in FieldTask version 6.300
+
+
+Calls an external application to get a file for upload.  You can create your own custom apps to get verified binary files to include in a survey response.
+`
+.. seealso:: :doc:`external-applications`
+
+.. rubric:: XLSForm
+
+.. csv-table:: survey
+  :header: type, name, label, appearance
+
+  file, supporting_doc, Select the test results to include, ex:com.example.gettestresults
+

@@ -1,3 +1,5 @@
+.. _looking-up-data-survey-online:
+
 Looking up data Online
 ======================
 
