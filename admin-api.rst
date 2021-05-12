@@ -186,7 +186,7 @@ Get
 
 .. http:get:: /api/v1/admin/surveys/(project id)
 
-  :synposis: Get a list of surveys. Projects can be found using :ref:`projects-api`.
+  :synposis: Get a list of surveys with details on each within the specified project. Projects can be found using :ref:`projects-api`.
   
   **Example response**:
   
@@ -245,10 +245,56 @@ Get
   :reqheader Authorization: basic
   :statuscode 200: no error
   
+Get Accessible
+++++++++++++++
+
+.. http:get:: /surveyKPI/surveys/idents
+
+  :synposis: Get a list of survey names and their identifier and project name that are accessible by the calling user. (version 21.05+)
+  
+  **Example response**:
+  
+  https://sg.smap.com.au/surveyKPI/surveys/idents
+  
+  .. sourcecode:: http
+  
+	HTTP/1.1 200 OK
+	Vary: Accept
+	Content-Type: application/json
+	
+            [
+                {
+                    "id": 296,
+                    "project": "A project",
+                    "name": "Audit this",
+                    "ident": "s1_20363"
+                },
+                {
+                    "id": 298,
+                    "project": "A project",
+                    "name": "Beneficiary List",
+                    "ident": "s1_21255"
+                },
+                {
+                    "id": 299,
+                    "project": "A project",
+                    "name": "Geotrace Line Form_ Draft (4)",
+                    "ident": "s1_30057"
+                },
+                {
+                    "id": 321,
+                    "project": "A project",
+                    "name": "Literacy_Assessment_test",
+                    "ident": "s1_29888"
+                }
+            ]
+
+  :query boolean links: Return links to other survey related data.
+  :reqheader Authorization: basic
+  :statuscode 200: no error
+  
 Upload
 ++++++
-
-
 
 .. http:post:: /surveyKPI/upload/surveytemplate
 

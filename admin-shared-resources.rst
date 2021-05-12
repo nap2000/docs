@@ -18,6 +18,10 @@ Shared resources are made available to all surveys in an organisation.  They con
 Media / CSV Files
 -----------------
 
+Images, video, audio and CSV files loaded here can be used by any survey.
+
+.. _shared-maps:
+
 Maps
 ----
 

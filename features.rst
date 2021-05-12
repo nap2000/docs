@@ -60,6 +60,7 @@ Geospatial
 
   Data is stored in PostGIS; a PostgreSQL database with geospatial extensions, 
   :ref:`Point; Line and Area type location data can be collected<locations>`,
+  :ref:`Specify custom base maps when visualising location data on the server<shared-maps>`,
 
 Analysis
 --------
@@ -70,7 +71,7 @@ Analysis
 
   Data is stored in a PostgreSQL relational database,
   :ref:`An internal dashboard is included which easily allows the creation of table; map; chart and image views of data. This is particularly useful for doing quality assurance and gaining quick insights into the data without requiring the effort and expense to setup a full featured BI tool<dashboard>`,
-  Integration with external dashboards such as PowerBI and Tableau using the data API,
+  Integration with external dashboards such as PowerBI and Tableau using the data API. `example live dashboard <https://www.meqadata.com/ul-reading-camps-bangladesh>`_,
   Embedding of AWS Quicksight dashboards within the server.  This allows you to use the Smap Server to authenticate users and control access to the dashbaord
   
 
@@ -110,3 +111,4 @@ Connectivity
 
   :ref:`Server APIs that allow programmatic access to collected data as well as other data such as survey definitions and adminstration information such as users and projects<apis>`,
   :ref:`APIs for the FieldTask Android App that support customisation and extension of the capabilities of the app<fieldtask-api>`,
+  :ref:`Call web hooks when an event happens such as a data submission or data is updated.<webhooks>`, Smap Server 21.05
