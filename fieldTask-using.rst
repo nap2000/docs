@@ -19,6 +19,48 @@ Press the **refresh** button on the main screen to synchronise the device with t
    
    Refresh Button
  
+Starting a Survey Form
+----------------------
+
+Select the "Forms" tab, as shown circled below, and then tap the survey that you want to complete.
+
+.. figure::  _images/ftLaunch.jpg
+   :align:   center
+   :alt:     Tap on a survey form to launch
+   :width:   300
+   
+   Launch Survey
+ 
+Finding the Survey
+------------------
+
+If you have a lot of forms on your phone then it may be hard to find the one you want to open.  However you can use 
+"search" or "order by" to make the survey form easier to find.  These buttone are circled in the image below.
+
+.. figure::  _images/ftSearch.jpg
+   :align:   center
+   :alt:     Use "order by" or "search" to find the form you want
+   :width:   300
+   
+   Find a survey form
+
+**Order By**.  You can order survey forms by:
+
+  * Name Ascending
+  * Name Descending
+  * Order Downloaded Ascending
+  * Order Downloaded Descending
+  * Project Name Ascending
+  * Project Name Descending
+
+**Search**.  When you type some characters into the search bar, only those survey forms that contain that 
+sequence of characters in their name are shown.
+
+.. note::
+
+  It is good practice to only have the single survey that an enumerator needs to complete on the phone.  The
+  fewer surveys that they have to choose from the less likely the wrong survey will be completed.
+
 Adding notes
 ------------
 

@@ -24,6 +24,32 @@ then the **Organisations** tab.
   If you have organisational administration privilege then you will see all of the organisations on the server listed on this tab.  Otherwise,
   if you administrator privilege you will see the organisations that you have created.
   
+.. _organisational-hierarchy:
+
+Organisational Hierarchy
+------------------------
+
+Surveys and data are stored in a hierarchical structure. The security groups possesed by a user determines how high in that structure they
+can go. 
+
+.. figure::  _images/concept1.jpg
+   :align:   center
+   :alt:     Organisational Hierarchy
+
+   Organisational Hierarchy
+   
+Hence if a user has the **admin** security group then they can create and add themselves to projects.  However unless they have
+the **organisation** privilege they cannot access projects in a different organisation.  The same applies to a user with the
+**organisation** privilege.  They can create and access different organisations and all the projects within those organisations
+however they cannot access organisations or projects in a different enterprise.
+
+Private Organisations
+---------------------
+
+You need the `organisational administration` privilege to manage all of the organisations on the server. However any administrator can
+add new organisations that only they (and the organisational administrator) has access to.  These are known as "private organisations".  They work 
+exactly the same as an organisation created by the org administrator except that the admin who created them can also manage them.
+
 Settings
 --------
 
@@ -88,3 +114,4 @@ Providing permission to move to another organisation
 ----------------------------------------------------
 
 This is done in the users tab.  Select a user for editing then you can specify which organisations they can access.
+

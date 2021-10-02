@@ -17,7 +17,6 @@ The use of digital technologies for data collection has been shown to reduce cos
   :hidden:
 
   getting-started.rst
-  concepts.rst
   applications.rst
   integration.rst
   features.rst

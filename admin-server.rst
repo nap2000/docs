@@ -54,6 +54,11 @@ For example::
 
 If AWS is to be used to send the SMS messages then enter the word **aws** into this field.
 
+SMS messages can be initiated using a notification.  Once you have specified the URL of your SMS provider here, an option of `SMS` for the target
+of a notification will be selectable.  In the notification you can specify the number to be called or a question in the submitted data that
+contains the number.  The message to be sent can be specified in the "content" section of the notification.  You can include items from the 
+submitted data in the content by using the ${question_name} syntax.
+
 .. warning::
 
   SMS messaging may result in a cost.  Hence it cannot be set up at the organisational level and can only be 

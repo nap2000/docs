@@ -12,3 +12,6 @@ Tips and Tutorials
   regex.rst
   many-forms.rst
   tips-data-not-appearing.rst
+  server-calculations.rst
+  emails.rst
+  quotes.rst

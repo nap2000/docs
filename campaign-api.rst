@@ -29,7 +29,8 @@ Get Campaigns
             "survey_ident": "s17_119",
             "name": "A Mailout",
             "subject": "Survey on Attitudes",
-            "content": "Dear ${name},\n\nThe form can be accessed from the following link: ${url}.  Thankyou for taking part.\n\nRegards\n\nSally"
+            "content": "Dear ${name},\n\nThe form can be accessed from the following link: ${url}.  Thankyou for taking part.\n\nRegards\n\nSally",
+            "multiple_submit": false
           }
         ]
 	
@@ -140,7 +141,8 @@ Create/Edit a Campaign
        "survey_ident": s17_119,
        "name": "Here is a new mailout",
        "subject": "Mailout on Program Approach",
-       "content": "Dear ${name},\n\nPlease complete\n\nRegards Karen"
+       "content": "Dear ${name},\n\nPlease complete\n\nRegards Karen",
+       "multiple_submit": true
     }		   
   
 

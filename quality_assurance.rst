@@ -16,12 +16,18 @@ quality measures.
    
 .. note::
 
-  Having a field supervisor check surveys is possible with Smap however it is not as often uses as it is with paper surveys.  You can:
+  Having a field supervisor check surveys is possible with Smap however it is not as often used as it is with paper surveys.  You can:
   
   *  Enable opening the surveys for review by selecting that option in the Mobile App settings on the users page
   *  The supervisor can then open each instance and review it on the phone
   *  They won't be able to make changes to the answers but they will be able to add notes to each question
   
+Required Questions
+------------------
+
+It is easy for an enumerator to jump past a question by mistake unless all of the questions are made required.  This is strongly recommended.  Read only
+questions however should not be "required".
+
 Relevance
 ---------
 
@@ -69,7 +75,7 @@ Provide hints to the enumertors in how to ask questions.
 Data Cleaning
 -------------
 
-Finally after the data is collected if you identify problems, in particular with the responses to text questions use ** Data Cleaning** in 
+Finally after the data is collected if you identify problems, in particular with the responses to text questions use **Data Cleaning** in 
 the analysis module to fix them.  You can also edit results in the console.  Both of these approaches create an audit log of all changes made.
 
 

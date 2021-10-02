@@ -164,7 +164,7 @@ Requires Smap Server 21.01 or above.
 By default calculations are triggered whenever any of the questions that they refer to change. They are also 
 re-calculated when the survey is saved.  You can use the once() function to change this behaviour and only
 calculate the value a single time. Also you can use the default() function wrapped around the calculation to prevent
-it from being re-calculated on save of the survey.
+it from being re-calculated on save of the survey. (details :ref:`here<expression-reference-other>`)
 
 You can also specify a specific question that will trigger the calculation when it changes. This way you can 
 update the value of a calculation by answering a question that does not appear in the actual calculation.

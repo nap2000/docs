@@ -143,6 +143,8 @@ Date Intervals
 * {n_seconds}
 * {hh:mm:ss}
 
+.. _server-expressions-cast:
+
 Converting to a different type
 ------------------------------
 

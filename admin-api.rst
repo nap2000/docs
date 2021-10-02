@@ -289,7 +289,6 @@ Get Accessible
                 }
             ]
 
-  :query boolean links: Return links to other survey related data.
   :reqheader Authorization: basic
   :statuscode 200: no error
   

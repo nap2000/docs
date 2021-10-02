@@ -1,0 +1,3 @@
+﻿Params,Calculation,Comments
+3,"pulldata('cities', 'city_label', ""#{country} = 'us' and #{city_label} = 'austin'"")",The csv file 'cities.csv' has a column city_label.  The calculation returns the value in the column 'city_label' of the csv file 'cities.csv' where the value in column 'country' is 'us' and in column 'city' is 'austin'
+3,"if(concat(${country}, ${city_code}) = '', '', pulldata('cities', 'city_label', ""#{country} = ${country} and #{city} = ${city_code}""))",As for the previous example however the search values for country and city_code are the answers to questions.  Here the pulldata function has been put inside an if() function that refers to these filter questions. This will make it recalculate when those filter questions change their answer.

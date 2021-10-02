@@ -15,6 +15,7 @@ Select the **Project** and then the **Survey** that you are going to send.  Then
 *  Enter a name for the campaign
 *  Enter a "Subject" to be included with each email sent
 *  Enter the "content" of the email
+*  Optionally select the checkbox to allow multiple submissions from each email
 
 Layout your email content as you want it to appear to the recipient using multiple lines.  The following special terms can be used:
 
@@ -41,6 +42,12 @@ Example::
 
    The campaign page
 
+.. note::
+
+  For most campaigns you would not select "multiple submissions".  Usually the objective would be to get
+  a person to fill in a form once.  However you may want to create links that can open a form that can be
+  completed any time.  Covid check in forms are a good example of this.  
+
 Adding Email Recipients
 -----------------------
 
@@ -62,7 +69,7 @@ All other columns are interpreted as the names of questions in the top level for
 
 When the spreadseet is ready upload by select the menu **File** and then **Import Emails XLS**.
 
-.. note:
+.. note::
 
   Only emails that are not already in the campaign will be added.  If you select the checkbox "Clear existing unsent emails" then email addresses that have not
   already been sent will be removed. 
@@ -93,7 +100,7 @@ only generated when the "Email Unsent" button is pressed.  To immediately genera
 
 .. warning::
 
-  The links will expire after 30 days so you should only generate them when you are ready to collect data.
+  Single submission links will expire after 30 days so you should only generate them when you are ready to collect data.
 
 Once the links have been generated you can view them by editing an individual mailout or by exporting all the mailouts to a spreadsheet.
 

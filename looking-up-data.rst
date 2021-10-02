@@ -144,6 +144,8 @@ Only this simple form of the search function can be used with WebForms.
 
   Duplicates will be removed.
 
+.. _look-up-filters:
+
 Filter the data
 %%%%%%%%%%%%%%%
 
@@ -153,27 +155,21 @@ Filter the data
 
 The filter function can be one of:
 
-#.  contains    (fieldTask only)
-#.  startswith  (fieldTask only)
-#.  endswith    (fieldTask only)
+#.  contains    (For use in webforms requires smap server 21.08)
+#.  startswith  (For use in webforms requires smap server 21.08)
+#.  endswith    (For use in webforms requires smap server 21.08)
 #.  matches
 #.  in
 #.  not in
+#.  eval        (requires FT6.505 and smap server 21.09)
 
 The filter values for "in" and "not in" should be lists separated by spaces. Use it with filter values that come from select multiple questions.
 
-Example 1::
+.. warning
 
-  search('locations', 'matches', 'region_v', ${region})
-  search('product', 'in', 'product_category', ${product_category})
-
-Searches locations file for all rows where the region_v column is the same is the answer to the "region" question
-
-Example 2::
-
-  search('product', 'in', 'product_category', ${product_category})
-
-Returns all products whose category is in the list of product categories that are selected in the "product_category" select multiple question.
+  Using column names in the CSV file of "name" or "label" to filter on will cause problems in webforms if these are not also the columns
+  that are used for the value and label of the choice.  In other words if you are going to call a CSV column "label" then make sure it does
+  contain the label! 
 
 Double filter the data
 %%%%%%%%%%%%%%%%%%%%%%
@@ -190,27 +186,88 @@ Example::
 
 Returns all records in the children csv file where the "class_v" column has the value "class1" and the "enrolled_v" column has the value "yes".
 
+Examples
+%%%%%%%%
+
+.. csv-table::  Search examples
+  :widths: 1,20,10
+  :header-rows: 1
+  :file: tables/choices-example-list.csv
+
 
 Getting Reference Data with the Pulldata Function
 --------------------------------------------------
 
-The second type of data that you can get from a CSV file or another survey is reference data.  For example you may want to look up the maximum age
-for a program in a particular region.
+The second type of data that you can get from a CSV file or another survey is reference data.  There are 4 different versions with 3,4,5 or 6 arguments.
+
+#.  **3 params:** Get a single value identified using an expression
+#.  **4 params:** Get a single value identified by a specific value in a single filter column 
+#.  **5 params:** Get a result for multiple values identified using an expression
+#.  **6 params:** Get a result for multiple values identified by specific value in a single filter column 
+
+Syntax::
+
+  1. pulldata('source', 'column to retrieve', 'filter expression')
+  2. pulldata('source', 'column to retrieve', 'filter column', 'filter value')
+  3. pulldata('source', 'column to retrieve', 'filter expression', 'index', 'eval')
+  4. pulldata('source', 'column to retrieve', 'filter column', 'filter value', 'index', 'filter type')
+
+.. warning::
+
+  A pulldata function using an "expresion" is not automatically triggered if any of the referenced questions changes their value. However
+  you can force this behaviour by enclosing the pulldata function within an if() function that references the same questions.  The examples
+  below show this approach.
+
+.. note::
+
+  Looking up data for static references may cause problems as the lookup function needs to be triggered
+  by a change in one of its parameters.  For exmaple:   lookup('ref_data', 'name', 'code',  'AAAA1').   So
+  in this example the code is fixed and the lookup will not automatically be triggered.
+
+Support
++++++++
+
+.. csv-table:: Support for looking up data in CSV files and other surveys
+  :header: pulldata version, fieldTask offline, fieldTask online, webForms offline, webForms online
+
+  3 params, v6.503, v6.503, v20.09, v20.09
+  4 params, v6.503, yes, yes, yes
+  5 params, v6.503, 6.503, v20.09, v20.09
+  6 params, v6.503, 6.503, v20.09, v20.09
+
+Examples
+++++++++
+  
+You may want to look up the maximum age for a program in a particular region. This example uses the 4 parameter version.
+In this example we ask what training sector the interviewee is interested in. Then we ask their age.  We then do a lookup in
+the csv file "ref_data.csv" for the maximum allowed age for that sector.  Then if the person qualifies we ask them if they want to enroll.
+
 
 .. csv-table:: Pulldata: 
   :width: 160
   :widths: 20,20,40, 40, 40
   :header-rows: 1
   :file: tables/pulldata-example.csv
-  
-In the above example we ask what training sector the interviewee is interested in. Then we ask their age.  We then do a lookup in
-the csv file "ref_data.csv" for the maximum allowed age for that sector.  Then if the person qualifies we ask them if they want to enroll.
 
-General Syntax::
+Other examples:
 
-  pulldata('SOURCE', 'COLUMN IN SOURCE TO RETRIEVE', 'COLUMN IN SOURCE TO FILTER ON', 'FILTER VALUE')
-  
-.. _multi-value-pulldata:
+.. csv-table:: Pull data examples
+  :widths: 1,20,10
+  :header-rows: 1
+  :file: tables/pulldata-example-list.csv
+
+Online Lookup
++++++++++++++
+
+If you have a network connection when filling in the form then you can replace "pulldata" with "lookup".  All other parameters remain the same.
+For example::
+
+  lookup('source', 'column to retrieve', 'filter expression')
+  lookup('source', 'column to retrieve', 'filter column', 'filter value')
+
+When you have very large amounts of reference data lookup can be more practical. Refer to 
+`this article <https://blog.smap.com.au/performance-issues-when-looking-up-reference-data//>`_ 
+for a discussion on why this is the case.
 
 Selecting Multiple Values
 +++++++++++++++++++++++++
@@ -223,10 +280,16 @@ To select multiple values you can use two additional parameters:
 
 1.  An index into the record you want.  the index of a record starts from 1, however there are two special values:
 
-  *  **-1**  - Get the count of the number of matching records
-  *  **0**   - Get all the matching values separated by a space
+In FieldTask version 6.500 and above you can also use the following aggregation functions instead of the index:
 
-2.  A filter function to select the data you want to include
+  *  **sum** - The sum of all the records
+  *  **mean** - The mean or average of the values
+  *  **min** - The minimum value
+  *  **max** - The maximum value
+  *  **count** - The count of the number of matching records
+  *  **list** - All the matching values separated by a space
+ 
+2.  A filter type to select the data you want to include
 
   *  contains
   *  startswith
@@ -241,7 +304,7 @@ General Syntax::
 
 .. note::
 
-  The index is a number and so it does not have quotation marks.
+  Where the index is a number it does not have quotation marks.
 
 By using these parameters you no longer need to specify a unique key as the 'COLUMN IN SOURCE TO FILTER ON'.  Instead you can get data from multiple
 rows that match the filter function.
@@ -258,13 +321,18 @@ The first example gets the number of children in the class.  This could be used 
 each enrolled child.  The second example gets all of the children's first names as a space separated list. The third example gets the fourth child
 in the list.  You can use this last example inside a "begin repeat" where you replace "4" with "position(..).
 
-Using pulldata from within a repeating group
---------------------------------------------
+Notes on Filter Expressions and Evaluations
+-------------------------------------------
 
-You can also look up repeating data in subforms for reference.  In this case in your new form you can have a repeating group that looks
-up the corresponding data in the reference repeating group. Details here (:ref:`pulldata-subforms`)
+When using an expression to filter data you can use the ${question name} syntax to refer to questions in the current survey as usual. However to 
+refer to columns in the csv file or referenced survey use #{column name}.
 
-.. _looking-up-data-local:
+You can also enclose the expression in double quotes.  This allows you to use single quotes around text values.  For example  "${city} = 'london'"
+
+When using an expression to get data may need to "cast" values to integer or decimal.  
+This is because all CSV data is stored as text. For example if you have a filter expression like "#{age} < ${max_age}". 
+Here #{age} is the age value in the csv table and you will need to change your expression to "cast( #{age} as integer ) < ${max_age}". 
+Refer to :ref:`server-expressions-cast` for more details.
 
 Local Data
 ----------

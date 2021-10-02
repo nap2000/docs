@@ -64,6 +64,14 @@ Trigger specific settings are:
 *  Task Group that contains the tasks that will trigger this notification.
 *  Interval.  Duration after the task is created that the reminder will be sent if the task is not completed.
 
+.. note::
+
+  The email address to be used for a reminder can be specified directly in the notification, as it can for any other email notification,
+  and this is the most reliable approach to use.  You can optionally specify that the email address comes from a question in the source survey 
+  that triggered the task.  However this will only
+  work if in the task group for "Initial Data" you specified "Pre-populate form with existing data" or "Update existing results".  
+  If you specified "No Initial Data"  then the data for the email question is not retained in the task and it can't be used in a reminder notification.
+
 Console Update Trigger
 ++++++++++++++++++++++
 

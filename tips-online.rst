@@ -47,7 +47,13 @@ An example using both ${} and #{}::
 
   lookup_choices('linked_s10_231', 'eval', '#{end_date} < ${project_date}')
 
-in the above example choices are rturned where the end_date question in the looked up survey has a date earlier than the answer to the project_date question.
+in the above example choices are returned where the end_date question in the looked up survey has a date earlier than the answer to the project_date question.
+
+An example using text values enclosed in single quotes::
+
+  lookup_choices('linked_s10_231', 'eval', "#{project} = 'A1'")
+
+In the above example the quotes around the expression have been changed to double quotes
 
 Comments
 --------

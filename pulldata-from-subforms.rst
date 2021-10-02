@@ -23,7 +23,7 @@ Use the 6 parameter version of the pulldata function.  :ref:`multi-value-pulldat
   :file: tables/pulldata.csv
   
 
-Old Way (Obsolete)
+Old Way (obsolete)
 ------------------
 
 .. warning::
@@ -35,9 +35,6 @@ Old Way (Obsolete)
 
   `Example Survey <https://drive.google.com/drive/u/0/folders/16dI2RPsMadTQTRLi_pIuZJ8XIJPjqdoA>`_. This survey  shows comments from 
   previous visits and then gets a comment from the current visit.
-
-Specifying Repeating Pulldata
-+++++++++++++++++++++++++++++
 
 To look up data from another survey you will need its identifier. (:ref:`survey-ident`). For a normal pull data this identifier just needs
 to be specified in a **search** function or **pulldata** function in order to get lookup data in the survey.  However in this case, since 
@@ -61,8 +58,8 @@ key value will be returned.
 
    Specifying Repeating Pulldata
 
-Resultant CSV File
-++++++++++++++++++
+Resultant CSV File (obsolete)
++++++++++++++++++++++++++++++
 
 
 .. figure::  _images/sf_pd2.jpg
@@ -82,8 +79,8 @@ The other columns contain the data that you request in your pulldata() functions
 In the _data_key column are the unique keys that the pulldata function can use to extract the data.
 Where the record is for data within a begine repeat then these have an “_” and a number appended to the key.  So in the example above the key value of “1” has two repeating records with key values “1_1” and “1_2”
 
-The pulldata function
-+++++++++++++++++++++
+The pulldata function (obsolete)
+++++++++++++++++++++++++++++++++
 
 Identify the form using::
 
