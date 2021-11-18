@@ -201,7 +201,7 @@ FieldTask Refresh Log
 
 .. http:get:: /api/v1/audit/refresh/log
 
-  :synopsis: Get a list of all calls from fieldTask to refresh the list of forms and tasks. Responds with the user ident, the refresh time, the time on the device and the difference in time between the server and the mobile device.
+  :synopsis: Get a list of all calls from fieldTask to refresh the list of forms and tasks. Responds with the user ident, the refresh time, the time on the device and the difference in time between the server and the mobile device, the device id and the version of fieldTask.  To show the fieldTask version requires Smap 21.11 and FieldTask 6.515.
   
   **Example response**:
   
@@ -219,14 +219,17 @@ FieldTask Refresh Log
 	    "user": "neil",
 	    "refresh_time": "2020-01-11 21:47:18",
 	    "device_time": "2020-01-11 21:47:10",
-	    "server_ahead": "00:00:08.602204"
+	    "server_ahead": "00:00:08.602204",
+	    "deviceid": "fielTask:yufdiashfdsaf",
+	    "appversion": "6.515"
 	  },
 	  {
 	    "id": 64,
 	    "user": "neil",
 	    "refresh_time": "2020-01-11 21:44:39",
 	    "device_time": "1970-01-01 00:00:00",
-	    "server_ahead": "18272 days 21:44:39.059854"
+	    "server_ahead": "18272 days 21:44:39.059854",
+	    "deviceid": "fielTask:dsgfgfdgfdgdfd"
 	  }
 	]
 	

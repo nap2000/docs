@@ -104,7 +104,7 @@ question from which you are getting the default.  The calculation will then only
 Dynamic Images
 --------------
 
-Images are a special case because you can dynamically specify an image URL as the default value of a question.  If the Android device or
+You can dynamically specify an image URL as the default value of a question.  If the Android device or
 WebForm is online this image will then be downloaded.  One application of this might be if you had an image question with an appearance of
 **annotate**.  The image URL can be selected from a list of drawing schematics, the selected image would then be downloaded and the user would be
 able to annotate the selected schematic.

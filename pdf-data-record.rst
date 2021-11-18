@@ -17,8 +17,9 @@ Specify PDF form fields as placeholders to be replaced by data from the survey. 
 the name of the question that contains the data to be inserted at that location.
 
 *  Use a text field for text, integer, barcode, select questions.
-*  Use an image field for location questions such as geopoint, geotrace, geoshape and start-geopoint
-*  Use an image field for image questions
+*  Use a **pushbutton** field for location questions such as geopoint, geotrace, geoshape and start-geopoint
+*  Use a **pushbutton** field for image questions
+*  Use a **pushbutton** field for compound location questions
 *  Set the name of the field to the name of the question
 
 Repeating Data
@@ -68,4 +69,11 @@ image shows this with the location of a geopoint shown using the (default) red p
    
    Location of start-geopoint in PDF
 
+Special Compound Question Views
+-------------------------------
 
+Multiple geopoint questions can be combined onto a map or an abstract image in a pdf.  These compound views are quite specialised and used for
+cable or pipe maintenance.  The two views are:
+
+*  :ref:`compound-map-widget`
+*  :ref:`compound-image-widget`

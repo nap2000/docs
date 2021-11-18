@@ -33,6 +33,7 @@ The use of digital technologies for data collection has been shown to reduce cos
   notifications.rst
   pdfs.rst
   apis.rst
+  privacy.rst
   examples.rst
   example-applications.rst
   tips.rst

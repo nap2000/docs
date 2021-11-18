@@ -1420,3 +1420,83 @@ Calls an external application to get a file for upload.  You can create your own
 
   file, supporting_doc, Select the test results to include, ex:com.example.gettestresults
 
+Server Side Calculations
+------------------------
+
+These question types can be defined in a survey but they are not used to complete a survey. Instead they can calculate additional derived
+information when the survey results are analysed or exported from the server.
+
+.. _compound-map-widget:
+
+Compound PDF Map
+++++++++++++++++
+
+**Type**
+  pdf_field
+
+**Appearance:**
+
+*  pdflinemap, followed by the names of the geopoint questions to include in the compound image.
+
+Added in Smap Server version 21.11
+
+This question type has a sepecific purpose which is to represent cable segments and the location of faults along that segment. When a PDF 
+is created for a survey that contains it, the geopoint values for the specifed questions are combined onto a single map. The appearance 
+contains the names of the geopoints. These are in order:
+
+*  The location of the start of the cable segment
+*  The location of the end of the cable segment
+*  The location of a fault
+*  The location of another fault etc
+
+.. rubric:: XLSForm
+
+.. csv-table:: survey
+  :header: type, name, label, appearance
+
+  pdf_field, fault_location, Location of faults, pdflinemap_p1_p2_f
+
+In the above example the geopoint question p1 will identify the start of the cable or pipe, p2 the end and f the location of the fault(s).
+
+.. figure::  _images/pdf_field1.jpg
+   :align: center
+   :width: 300
+   :alt: A compound map generated in a pdf showing a line with a fault on it
+
+   A compound map showing a cable/pipe and faults
+
+Each question name is separated by an underscore "_". If the fault question is in a repeat then multiple faults will be included for each sub form record.
+
+.. _compound-image-widget:
+
+Compound PDF Image
+++++++++++++++++++
+
+**Type**
+  pdf_field
+
+**Appearance:**
+
+*  pdflineimage, followed by the names of the geopoint questions to include in the compound image.
+
+Added in Smap Server version 21.11
+
+Just like the compound map this question represents cable segments and the location of faults along that segment. The representation is just
+a little more abstract than the map.
+
+.. rubric:: XLSForm
+
+.. csv-table:: survey
+  :header: type, name, label, appearance
+
+  pdf_field, fault_location, Location of faults, pdflineimage_p1_p2_f
+
+In the above example the geopoint question p1 will identify the start of the cable or pipe, p2 the end and f the location of the fault(s).
+
+.. figure::  _images/pdf_field2.jpg
+   :align: center
+   :width: 300
+   :alt: A compound image generated in a pdf showing a line with a fault on it
+
+   A compound image showing a cable/pipe and faults
+
