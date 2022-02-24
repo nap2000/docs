@@ -34,6 +34,32 @@ If your version of ubuntu does not have the multiverse and universe repositories
   cd smap/install
   sudo ./install.sh
 
+After the installation script finishes you should be able to logon with your browser using::
+
+  ident: admin
+  password: admin
+
+If you have not set up an https certificate yet then the connection will be via http and you will be asked to enter your password 3 times.  
+Using https you will not have that problem.
+
+Using a different location
+++++++++++++++++++++++++++
+
+By default all files are installed under /smap in the root directory.  
+
+To use a different location, or a
+different drive, you can either add a symbolic link from /smap to that location or you do not want to put
+anything in the / directory then you can specify a different location at install time.
+
+Logical link::
+
+  Before running install, or you can do it after installing and copy the contents of /smap to the new location
+  ln -s /smap /new location
+
+Install to a custom location::
+
+  Before running install edit the install.sh script and set "filelocn" to the location that you want to use
+  Then run install.sh
 
 Updating
 --------
@@ -47,7 +73,7 @@ Updating
   tar -zxf {tar file}
   cd smap/deploy
   sudo ./patchdb.sh
-  sudh ./deploy
+  sudh ./deploy.sh
 
 patchdb will update the database.  deploy.sh will replace the programs.  When you run deploy it will cause an outage of around 20 seconds for your users.
 
@@ -95,6 +121,34 @@ Application logs::
 Subscriber logs::
 
   /var/log/subscribers/subscriber_default_upload.log
+
+Network Encryption
+------------------
+
+Generally I use certbot.
+
+install Certbot as per https://certbot.eff.org 
+If there are any issues then install certbot-auto https://certbot.eff.org/docs/install.html 
+
+Then::
+
+  sudo certbot --apache certonly
+
+Apache > 2.4.7  
+
+  SSLCertificateFile    /etc/letsencrypt/live/{domain name}/fullchain.pem
+  SSLCertificateKeyFile /etc/letsencrypt/live/{domain name}/privkey.pem
+
+Create directory /var/log/certbot
+
+Setup Renewal
++++++++++++++
+
+As root Crontab::
+
+  44 19 * * * certbot renew >> /var/log/certbot/renew.log 2 >&1
+
+Check for logs in /var/log/letsencrypt/letsencrypt.log
 
 AWS
 ---
@@ -159,4 +213,47 @@ An properties file is required. This is really only used for automatic synchroni
   Create the file at /smap_bin/resources/properties/aws.properties
   Add the line:  userDevices_region=us-east-1
 
+Disk Storage
+------------
 
+Files are stored in /smap by default although this can be changed at install time.  The subfolders contain the 
+following directories:
+
+*  **uploadedSurveys**.  This is the raw XML files and attachments submitted to complete a survey form.
+*  **attachments**.  After processing attachments submitted with a survey form are stored here.
+*  **media**.  Media files that are part of survey forms.  For example, images shown as choices.
+*  **templates**.  Uploaded XLS files and PDF templates
+*  **temp**.  Temporary files generated for downloads.  
+*  **settings**.  Settings files used to manage the system.
+
+Reducing disk usage
++++++++++++++++++++
+
+temp
+^^^^
+
+Temporary files older than a day can be deleted as the download will have well and truly completed by then.
+
+uploadedSurveys
+^^^^^^^^^^^^^^^
+
+After a submitted survey form has been sucessfully processed the contents of the XML file will be in the database
+and any attachments will be in the attachments folder.  So deleting old files in uploadedSurveys will free u
+significant disk space.  There are some issues to consider though:
+
+*  If there is a problem applying the submitted file to the database then you may need to fix that problem and then re-process.  So if you are confident that you will monitor and resolve all issues within say a week then you could set an automatic script to delete files from uploadedSurveys that are older than that.  Of course if you miss that timeframe you could lose some data.
+
+*  Recovery.  The survey submissions may have been sucessfully processed but you might delete all of that data.  No problem you can undelete.  However you might then go further and erase all of your data.  At this point you have 100 days to "restore" using the data in uploadedSurveys to re-appy the submissions.  If this data has been deleted then you cannot do that and you will need to restore from backups.
+
+Archiving files to long term storage
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Files in uploadedSurveys can be replicated to a long term low cost storage solution such as Azure Blob, or
+AWS S3.  Then they can eb deleted. Then when you need to recover they can be replicated back.
+
+Files in attachments can also be replicated to long term storage and deleted.  You can then configure the
+Apache web server to serve the attachments from the long term storage location.  For example with AWS S3::
+
+  SSLProxyEngine on
+  ProxyPass         /attachments https://{region}.amazonaws.com/{bucket}/attachments
+  ProxyPassReverse  /attachments https://{region}.amazonaws.com/{bucket}/attachments

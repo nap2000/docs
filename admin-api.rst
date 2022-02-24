@@ -9,23 +9,24 @@ This API provides access to administration functions.  To use these functions yo
 Usage
 -----
 
-.. http:get:: /surveyKPI/adminreport/usage/(int: year)/(int: month)
+.. http:get:: /surveyKPI/adminreport/usage/(int: year)/(int: month)/(string: userIdent)
 
-  :synposis: The usage API allows you to view the number of submissions made by each user in a `month`. These can be further broken down by `project`, `survey` and `device`.
+  :synposis: The usage API allows you to view the number of submissions made by each user in a `month`. These can be further broken down by `project`, `survey` and `device`. The API request stopped working in version 21.11 as this reporting usage for all users became too lengthy.  The reports generated from the user interface now run in the background and can later be downloaded from the reports page.  However this API call is back in version 21.12 with the addition of one more path parameter for the user ident. So it now downloads usage for only a single user.
   
   **Example request**:
 
   .. sourcecode:: http
 
-    GET /surveyKPI/adminreport/usage/2018/1 HTTP/1.1
+    GET /surveyKPI/adminreport/usage/2018/1/sal HTTP/1.1
     Host: sg.smap.com.au
-    Accept: xlsx
+    Download: xlsx
 
 
   :query boolean project: Show usage by project
   :query boolean survey: Show usage by survey
   :query boolean device: Show usage by device
-  :query boolean inc_temp: Include temporary and anonymous users (Requires Smap Server 21.05)
+  :query boolean inc_temp: Include temporary and anonymous users
+  :query int o_id: Organisation Id.  Can be used if the calling user has organisational administration privilege to get details on a user in a different organisation
 
   **Example response**:
   

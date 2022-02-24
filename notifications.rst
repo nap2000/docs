@@ -59,6 +59,14 @@ Trigger specific settings are:
 Task Reminder Trigger
 +++++++++++++++++++++
 
+Task reminders can be specified for a task group.  All tasks created in that task group will then
+have reminders associated with them.
+
+.. warning::
+
+  Only task groups that contain tasks generated automatically from submissions to a survey can have 
+  a reminder.  Ad-hoc task groups cannot as the tasks can be for multiple surveys.
+
 Trigger specific settings are:
 
 *  Task Group that contains the tasks that will trigger this notification.

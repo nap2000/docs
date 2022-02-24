@@ -66,3 +66,4 @@ start,start=1,"Use with range questions to set the starting point of a range.  (
 If you specify a decimal number then the answer will be recorded as decimal"
 step,step=0.5,Use with range questions to set the step increment of a range.  (start and end parameters must also be included)
 to_lang,to_lang=th,The language to translate to.   :ref:`language-codes`.  
+allow-mock-accuracy,allow-mock-accuracy=true,Use with location questions when you are using an external GPS device and want to get the accuracy from that device

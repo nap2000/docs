@@ -1478,11 +1478,12 @@ Compound PDF Image
 **Appearance:**
 
 *  pdflineimage, followed by the names of the geopoint questions to include in the compound image.
+*  pdftl, followed by questions that set traffic light colors
 
 Added in Smap Server version 21.11
 
 Just like the compound map this question represents cable segments and the location of faults along that segment. The representation is just
-a little more abstract than the map.
+a little more abstract than the map.  However traffic light indicators can also be added to the output.
 
 .. rubric:: XLSForm
 
@@ -1500,3 +1501,42 @@ In the above example the geopoint question p1 will identify the start of the cab
 
    A compound image showing a cable/pipe and faults
 
+
+Traffic Lights
+--------------
+
+Multiple appearances starting with pdftl can be used to add traffic lights to the image.
+
+.. figure::  _images/pdf_field3.jpg
+   :align: center
+   :width: 300
+   :alt: A compound image that includes traffic light indicators
+
+   A compound image annotated with traffic light indicators
+
+
+Colors are set by the answers to questions.  Usually calculate question could be used to generate the color. For example a question may have one of the following values:
+
+*  red
+*  orange
+*  yellow
+*  green
+*  white
+*  black
+*  #af04b1
+
+Custom rgb values need to be preceeded by a hash (#).  Examples::
+
+  pdftl_q1_q2   creates a traffic light with two colors
+  pdftl_high_medium_low    creates a traffic light with three colors
+
+Optionally annotations can be added to the traffic lights.  These annotations are an X, that is a cross through the light and a label that appears under the light.
+These annotations are added by adding a colon after the question identifying the light's color.  Then either the letter x or the letter l followed by the name of the 
+question that determines whether or not the light is crossed out and/ or its label::
+
+  pdftl_q1:xq3:lq4_q2
+  pdftl_q1:xq3_q2:lq4
+  pdftl_q1:xq3:lq4_q2:lq4:xq5
+
+
+To cross out a traffic light the value of the referenced question will need to be "yes" or "true" or "1".

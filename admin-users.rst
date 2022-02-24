@@ -121,3 +121,48 @@ If multiple organisations are selected then the user will be able to move betwee
 You can use this option to give a user the ability to change organisation even if they do not have the **org admin**
 privilege.
 
+Managing Users in Bulk
+----------------------
+
+Users can be exported to a spreadsheet and also imported from a spreadsheet.
+
+Exporting Users
++++++++++++++++
+
+On the users page select the users tab and then the menu "File" and then "Export"
+
+.. figure::  _images/users2.jpg
+   :align:   center
+   :alt:     A spreadsheet with a list of user names and the security groups that they belong to
+   
+   Exported User List
+
+All the users in the organisation will be included in the exported spreadsheet along with their security groups, projects and roles.  The password 
+column will be empty, it is only used when importing a new user.
+
+Importing Users
++++++++++++++++
+
+The exported spreadsheet above, can be used as a template to add new users.  Specify:
+
+*  user ident
+*  name
+*  email
+*  password
+*  security roles - specify "yes" in the security role column if you want the user to have that role
+*  projects - Project names separated by semicolons
+*  roles - Role names separated by semicolons
+*  language - the users default language
+
+Then to import the users select the menu "File" and then "Import".  Select the checkbox if you want the users in the file to replace users currently on
+the system.
+
+.. note::
+
+  Users who have been manually added will not be replaced or modified in a bulk upload.  Hence you can manage bulk users by adding, modifying and deleting them
+  but not manaually added users.
+
+.. Warning::
+
+  When importing in bulk the password is set from the spreadsheet.  Hence i would recommend against using bulk imports to create users who have analyst or admin rights.
+  It is better to add these users manually and allow them to set their own passwords before logging on.

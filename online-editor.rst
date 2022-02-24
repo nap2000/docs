@@ -14,6 +14,7 @@ Online Editor
   online-cascading-selects.rst
   online-choice-filters.rst
   online-settings.rst
+  online-pdftemplates.rst
   online-required.rst
   online-translations.rst
   online-tools.rst

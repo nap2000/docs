@@ -22,11 +22,31 @@ the name of the question that contains the data to be inserted at that location.
 *  Use a **pushbutton** field for compound location questions
 *  Set the name of the field to the name of the question
 
+Attaching a PDF template to a survey
+++++++++++++++++++++++++++++++++++++
+
+This is done in the online editor.  Select the menu tools and then **PDF Templates**.  You can then add one or
+more templates for use with the survey.
+
+For each survey you can specify:
+
+*  A rule which will determine if the pdf is selected automatically when sent after a notification.  These rules follow the format for :ref:`server-expressions`.
+*  A default checkbox.  To make that PDF template the default.
+*  A "Not Available" checkbox which will remove the template from the list of selectable templates.
+
+The PDF template that will be used for a notification or set as the default selected template is found using the following process:
+
+#.  The template whose rule matches data in the submitted record
+#.  The template set as the default template on the templates page for the survey
+#.  A legacy template previously loaded in the setting dialog of the online editor for the survey
+
+If no template is found then a PDF will be generated withut a template.
+
 Repeating Data
 +++++++++++++++
 
 Where questions are inside a repeating group you need to identify which iteration of the repeat you want to show.  The field name
-should be set to  repeat_name[i].question_name where i is repeat record you want to show.  For example::
+should be set to  repeat_name[i].question_name where i is repeat record you want to show (starting from 0).  For example::
 
   members[0].name  
   Will be filled with the name from the first entry in the members sub form.
@@ -77,3 +97,10 @@ cable or pipe maintenance.  The two views are:
 
 *  :ref:`compound-map-widget`
 *  :ref:`compound-image-widget`
+
+Styling a PDF using appearance settings
+---------------------------------------
+
+
+Use :ref:`pdf-appearances-reference` to style the generated PDF.  These appearance settings are mainly used to add styling to a PDF that is generated without
+a template however some also apply to pdf templates.

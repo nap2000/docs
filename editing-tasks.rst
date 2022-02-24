@@ -65,6 +65,14 @@ The option of assigning to users of a **role** is only available when creating t
 
 The **complete all** checkbox can be selected if you want all assigned users to complete the task.
 
+.. note::
+
+  If the complete all checkbox is not selected and you assign a task to multiple people then that does not mean that only the results from the first
+  person to complete will be accepted.  Two people can work on a task simultaneously and submit the results.   However by not selecting **complete all**,
+  once one person has submitted a response, any other assignee who refreshes fieldTask or their web browser will have the task cancelled so they can 
+  not / need not start it.   In the case of email tasks the email cannnot be cancelled and a followup email asking the recipient to disregard the previous
+  email is not sent.  So for email tasks this checkbox has no effect.
+
 The **Self Assign** checkbox can be selected if you want to allow users to accept a task themselves.
 
 4.  Optionally set the task to persist in fieldTask.  If this checkbox is set then the task will stay in FieldTask even after the user

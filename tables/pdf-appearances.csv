@@ -52,3 +52,6 @@ pdfvalue,Show the value for a choice rather than its label,"Use with select and 
 
 By default, when displaying data from a select question, the labels of the selected choices are shown.  If this appearance is added to the select question then the values of the choice are shown."
 pdfhideindex,Hide the indentation and repeat index shown in sub fomrs,Use with begin repeat questions
+pdfshowimage,The choice image will be displayed instead of the choice label.,Use with select one questions that include images in the choice list. Available in v21.12
+pdfstretch,Stretch an image to fit the space it has been allocated.  This only works when exporting to a pdf template.,The ratio between width and height will not be maintained. Available in v21.12.
+pdfbs,Show a date in Bikram Sambat,Note the timezone of Bikram Sambat dates will always be Kathmandu time.

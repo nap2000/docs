@@ -214,9 +214,16 @@ Syntax::
 
 .. warning::
 
-  A pulldata function using an "expresion" is not automatically triggered if any of the referenced questions changes their value. However
-  you can force this behaviour by enclosing the pulldata function within an if() function that references the same questions.  The examples
+  In fieldTask, a pulldata function using an "expresion" is not automatically triggered if any of the 
+  referenced questions changes their value. This means that the pulldata value 
+  will not be updated when you were expecting it to be
+  However you can force this behaviour by enclosing the pulldata function within an if() function 
+  that references the same questions.  The examples
   below show this approach.
+
+Example showing how to force a 3 parameter pulldata to be called::
+
+  if(string-length(${id_no}) > 0, pulldata('source', 'column to retrieve', '#{key} = ${id_no}'), '')
 
 .. note::
 

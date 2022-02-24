@@ -12,3 +12,4 @@ audit_location_data,Set to yes or no. When set to yes the location that each que
 track_changes,Set to yes or no.  When set to yes every change made to a question during completion of a survey will be recorded.,Settings Dialog
 data_survey,Set to yes or no.  When set to yes the survey can be used to collect data. The default is yes.,Settings Dialog
 oversight_survey,Set to yes or no.  When set to yes the survey can be used to update results in the console.  The default is yes.,Settings Dialog
+compress_pdf,"Set to yes or no.  When set to yes, PDFs generated from records submitted with this survey will have their images compressed(Smap Version 21.12+)",Settings Dialog
