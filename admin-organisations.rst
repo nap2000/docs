@@ -50,6 +50,8 @@ You need the `organisational administration` privilege to manage all of the orga
 add new organisations that only they (and the organisational administrator) has access to.  These are known as "private organisations".  They work 
 exactly the same as an organisation created by the org administrator except that the admin who created them can also manage them.
 
+.. _organisations-settings:
+
 Settings
 --------
 
@@ -83,6 +85,8 @@ Click on the name of the organisation.  This will open a dialog to edit the sett
       where reports are generated automatically this information may not be availble and the time zone set here will be used.
 	  
    *  Set the default language for the organisation. As for timezone normally the user's language is used.
+
+   *  Minimum password strength
 
 Moving between organisations
 ----------------------------

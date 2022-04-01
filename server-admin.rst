@@ -257,3 +257,28 @@ Apache web server to serve the attachments from the long term storage location. 
   SSLProxyEngine on
   ProxyPass         /attachments https://{region}.amazonaws.com/{bucket}/attachments
   ProxyPassReverse  /attachments https://{region}.amazonaws.com/{bucket}/attachments
+
+
+Development
+-----------
+
+FieldTask
++++++++++
+
+*  Source code:  https://github.com/smap-consulting/fieldTask4     
+*  Platform:  Android
+*  Software:  Java, Kotlin
+
+Smap Server
++++++++++++
+
+*  Source code: https://github.com/smap-consulting/smapserver2
+*  Platform:  Ubuntu Linux
+*  Database: Postgresql
+*  Application Server: Tomcat
+*  Software:  Java
+
+Web Client
+++++++++++
+
+*  Software:  HTML, Javascript, JQuery, Bootstrap

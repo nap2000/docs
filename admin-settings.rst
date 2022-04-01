@@ -50,6 +50,8 @@ Refer to the following video for a demonstration of the process.
   
  <iframe width="560" height="315" src="https://www.youtube.com/embed/gnFFWl-8DHo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+.. _server-settings:
+
 Server
 ------
 
@@ -63,6 +65,7 @@ The server tab is only shown to users who have the server owner group.  It can b
 *  Email password
 *  Email server port
 *  SMS Url.  Url of service to send SMS messages, or just "aws" if the AWS SMS service is to be used.
+*  Minimum password strength
 
 There is also a section on setting a server wide custom style sheet.  The approach is identical to that for the per organisation style sheet described in the
 appearance tab.
@@ -110,8 +113,8 @@ on-phone setting will be overridden. These settings apply to all fieldTask insta
    (Requires version 21.02+ of the server and 6.302+ of fieldTask)
 *  Enable Geo-fence.  Enables the geo fence feature that can download or show tasks when the user is within a specified perimeter.
 
-Webform Options
----------------
+Webform Settings
+----------------
 
 This tab allows customisation of webform appearance:
 
@@ -122,4 +125,5 @@ This tab allows customisation of webform appearance:
 *  Button text colour
 *  Heading text colour
 *  The webform banner logo
+*  Hiding the "save as draft" checkbox
 

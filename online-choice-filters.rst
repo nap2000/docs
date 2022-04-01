@@ -37,4 +37,8 @@ An explanation of the choice filter rule::
   So this means that any choice that has a value in the liked column that was selected 
   in the fruit_liked question will be shown
 
+Deleting a filter column
+------------------------
 
+As you can see in the above picture there is an "Add Filter Column" button but no "Delete Filter Column" button. 
+Instead to delete a filter column you have to delete all of the values for that column.  

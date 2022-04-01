@@ -86,6 +86,7 @@ both sides of these operators.
 * like (Similar to.  Use the % symbol to match a range of characters.
   Use the _ underscore character to match a single character)
 * not like (returns the rows that do not match)
+* || (concatanetes the text values either side, for example  'a' || 'b' results in 'ab')
 
 Brackets
 --------
@@ -183,6 +184,7 @@ Special Terms
 * ${_user} (The logon identifier of the user that submitted the results)
 * ${prikey} (The unique record number of submitted data)
 * ${_version} (The version number of the survey that was used to submit a record)
+* ${instanceid} (The unique identifier for the record)
 
 Note the ${_version} value is of type text, hence if you want to use this in a filter you may need to cast it.  For example::
 

@@ -1016,6 +1016,30 @@ Records a shape.
 **Type**
   geoshape
 
+geocompound
++++++++++++
+
+Similar to geotrace this type records a line however attributes can also be added to points along the line.  Currently
+these attributes are fixed as "pit" and "fault", in a future release they will be set as parameters.
+
+**Type**
+  geocompound
+
+**Availability:**
+
+*  FieldTask: no
+*  Webforms:  yes
+*  XLSForm: yes
+*  Online Editor: yes
+
+.. figure::  _images/widget-location-geocompound.png
+   :align: center
+   :alt: Geocompound widget being completed in a webform with several marked up points
+
+   Geocompound Widget
+
+Requires version 22.02 of the server.
+
 .. _matrix:
 
 Matrix
@@ -1214,7 +1238,7 @@ In some rare cases such as the device running out of space, the recording may co
 Audio quality
 ^^^^^^^^^^^^^
 
-The quality of audio recordings can be customized using the ``quality`` parameter. If a ``quality`` is specified, then the built-in recorder is used unless the quality is set to `external`. If no ``quality`` is specified then external or internal audio recorder is used based on the value set in the form managmenet settings.
+The quality of audio recordings can be customized using the ``quality`` parameter. If a ``quality`` is specified, then the built-in recorder is used unless the quality is set to `external`. If no ``quality`` is specified then the internal audio recorder is used by default.
 
 .. list-table::
    :header-rows: 1
