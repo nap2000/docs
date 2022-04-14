@@ -99,6 +99,7 @@ Security
   :ref:`Multiple isolated organisations on a single server<organisations>`
   :ref:`Manage access to surveys by teams by using projects<projects>`
   :ref:`rbac`
+  :ref:`password-strength`, 22.04
   `Strong privacy committment <https://smap.com.au/privacy.shtml>`_
 
 

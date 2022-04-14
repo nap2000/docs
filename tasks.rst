@@ -12,6 +12,7 @@ To get to task select **Modules** and then **Tasks**.  Tasks can be assigned to 
   task-groups.rst
   viewing-tasks.rst
   editing-tasks.rst
+  email-tasks.rst
   self-assign.rst
   task-ft.rst
   task-wf.rst

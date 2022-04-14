@@ -30,6 +30,14 @@ Survey or Device::
   Optionally select a detailed breakdown
   Optionally include temporary users such as for anonymous logons and email tasks
 
+Attendance Report
+-----------------
+
+This report show the first time during the day that an enumerator refreshed the phone and the last time as well
+as the duration of time between these two events and the number of completed surveys.  This could be considered
+an indicator of attendance if the enumerators are expected to press refresh at the start of work and then refresh to
+submit data at the end of the days work.
+
 Notification Report
 -------------------
 
