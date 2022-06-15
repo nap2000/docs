@@ -7,3 +7,4 @@ APIs
   server-apis.rst
   fieldTask-api.rst
   webhook-api.rst
+  javarosa-api.rst
