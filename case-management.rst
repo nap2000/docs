@@ -7,6 +7,7 @@ Case Management
   cm-overview.rst
   cm-complete.rst
   cm-alerts.rst
+  cm-escalate.rst
   groups.rst
   keys.rst
   tasks.rst

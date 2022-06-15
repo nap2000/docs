@@ -31,7 +31,8 @@ Notifications can be sent as:
 
 *  An email.
 *  An SMS.  Only if SMS has been enabled in the server settings (:ref:`admin-server`)
-*  Forwarding of a submission on to another Smap server.
+*  Escalation (assignment) of a case to a user.
+*  Forwarding of a submission on to another Smap server. (obsolete)
 
 Adding
 ------

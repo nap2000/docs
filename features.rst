@@ -88,6 +88,7 @@ Case Management
   :ref:`Manage work using the console<console>`,
   Audit trail of all changes,
   :ref:`Automatic labelling of images; translation of text and transcription of audio<automation>`, 
+  :ref:`Automatically escalate cases if they have not been addressed in a specified time or based on the data<case_escalation>`, v20.06 
 
 Security
 --------
@@ -113,3 +114,4 @@ Connectivity
   :ref:`Server APIs that allow programmatic access to collected data as well as other data such as survey definitions and adminstration information such as users and projects<apis>`,
   :ref:`APIs for the FieldTask Android App that support customisation and extension of the capabilities of the app<fieldtask-api>`,
   :ref:`Call web hooks when an event happens such as a data submission or data is updated.<webhooks>`, Smap Server 21.05
+

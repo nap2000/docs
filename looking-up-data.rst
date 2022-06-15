@@ -363,6 +363,8 @@ This is because all CSV data is stored as text. For example if you have a filter
 Here #{age} is the age value in the csv table and you will need to change your expression to "cast( #{age} as integer ) < ${max_age}". 
 Refer to :ref:`server-expressions-cast` for more details.
 
+.. _looking-up-data-local:
+
 Local Data
 ----------
 
