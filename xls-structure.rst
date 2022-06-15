@@ -37,7 +37,7 @@ settings
 --------
 
 The "settings" sheet is where you put overall settings for your survey such as the default language that should be shown when the 
-survey is opened on the mobile device.
+survey is opened on the mobile device. (:ref:`settings-reference`)
 
 styles
 ------
