@@ -8,6 +8,7 @@ Case Management
   cm-complete.rst
   cm-alerts.rst
   cm-escalate.rst
+  cm-device.rst
   groups.rst
   keys.rst
   tasks.rst
