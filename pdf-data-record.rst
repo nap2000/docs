@@ -1,5 +1,5 @@
-PDF Data Record
-===============
+PDFs
+====
 
 .. contents::
  :local:

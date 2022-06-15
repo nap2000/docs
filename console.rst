@@ -44,6 +44,7 @@ The top half of the page contains the record filters.  These are:
 * **Filter:** This is the advanced filter. For help on how to use this click on the (i) info symbol.  An example might be: ${age} < 25.  This would then only show records where the answer to the question "age" was less than 25.
 * **Max Records:** The maximum number of records you want to load.  If you set this to 0 then all records will be loaded.  By default this is set to 1,000 so that loading does not take too long when you have a lot of data.  If you have a lot of records you may want to apply other filters to find the ones you are interested in.
 * **Show Entries:** Show records in pages with the specified number of rows.  This filter is found just above the table on the left.
+* **Include Completed Cases** Include cases that have a completed status and are not assigned to a user.  By default these are not shown.
 * **Search:** Only show records which have the specified text somewhere within them.
 
 Select Filters

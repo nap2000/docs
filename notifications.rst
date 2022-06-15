@@ -22,6 +22,7 @@ The following can trigger a notification:
 *  A submission.  A result submitted from a survey.
 *  A task reminder.  If a task has not been completed within the specified time.
 *  A console update.  When a question is set to a specific value from the console.
+*  A case managmeent alert.
 
 Target
 ------

@@ -43,8 +43,8 @@ In the **Create Survey Dialog** select the checkbox **Base on Existing Form**
 The Survey Editing page will open 
 but this time the survey will be pre-populated with the questions, choices and settings of the source survey.
 
-Create a grouped survey
------------------------
+Adding a survey to a bundle
+---------------------------
 
-Grouped surveys (:ref:`survey_groups`) store their data in the same tables.  Hence to create a grouped survey
+Bundled surveys (:ref:`survey_groups`) store their data in the same tables.  Hence to create a grouped survey
 select the checkbox **Store results in shared table** when creating a new survey based on an existing survey. 

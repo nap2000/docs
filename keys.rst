@@ -60,15 +60,18 @@ Replace
 
 Similar to discard but this time the original record is replaced by the new one.
 
+Specifying keys
+---------------
+
 Generating a unique key
------------------------
++++++++++++++++++++++++
 
 If you don't have an external unique key that you can use then you can generate one from the data in the record, For example::
 
   ${country}-${name}
   
 Unique keys with a serial number
---------------------------------
+++++++++++++++++++++++++++++++++
 
 Sometimes there is not enough information in a survey to guarantee a unique key.  In this case you can use the serial() function
 to guarantee that a submission will be unique. For example::
@@ -82,6 +85,26 @@ The above serial function will add a unique number to every record starting from
   Using serial will make the key policy redundant because every submission will be unique.  However these keys can be used as
   references since they are a unique identifier for a record that can be more human readable than the primary key.
   
+Specifying a non unique sequence number
++++++++++++++++++++++++++++++++++++++++
+
+You may want a sequence number to be created starting from 1 each time another question response changes.
+For example a new sequence number for each product::
+
+  product_a-1
+  product_a-2
+  product_b-1
+  product_a-3
+
+These can be generated using the seq() function::
+
+  ${product}-seq(product)
+
+The function takes a single parameter which is the question name that determine whose values will determine 
+the sequence.  So in the product example there are 3 product_a records.  The next time a record for product_a
+is submitted the sequence number will be 4.  The next time a product_b record is submitted the sequence number
+will be 2.
+
 Specifying the key and key policy
 ---------------------------------
 
@@ -89,7 +112,7 @@ In the online editor select the menu **File** then **Keys**
 
 In the XLSForm editor use the settings sheet.
 
-*  THe key goes under the heading **key**
+*  The key goes under the heading **key**
 *  The key policy goes under the heading **key_policy**
 
 Direct Updates

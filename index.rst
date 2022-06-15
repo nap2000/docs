@@ -31,7 +31,7 @@ The use of digital technologies for data collection has been shown to reduce cos
   tasks.rst
   campaigns.rst
   notifications.rst
-  pdfs.rst
+  pdf-data-record.rst
   apis.rst
   privacy.rst
   examples.rst

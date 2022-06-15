@@ -42,7 +42,7 @@ XLS Options
    choice separated from the others by a space.  If not selected then a column will be exported for each choice with a 
    value of "1" if the choice was selected or "0" if not selected.
 *  Split Lat / Lon.  If selected latitude and longitude for geopoint questions will be put in separate columns.
-*  Embed images in Excel File.  If thumbnails of selected images will be included in the exported excel file. 
+*  Embed images in Excel File.  If selected images will be included in the exported excel file. The size of the images will be set to 300 pixels in width.  Clicking on the image in the spreadseet will open the full size image.
 *  Include Meta Data.  Select to include meta data in the export.
 
 

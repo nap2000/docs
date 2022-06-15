@@ -19,6 +19,52 @@ Server Requirements
 *  2GB of Memory
 *  10GB of disk
 
+Server configuration for Performance
+++++++++++++++++++++++++++++++++++++
+
+Small Server (2 GB RAM)
+#######################
+
+Max connections in postgresql.conf: 400
+
+/var/lib/tomcat[x]/conf/context.xml
+
+*  Max Active Survey Definitions: 60
+*  Max Active Results: 60
+
+/etc/default/tomcat[x]  
+
+*  JAVA_OPTS="-Djava.awt.headless=true -Xms512m -Xmx768m"
+
+Medium Server (4 GB RAM)
+########################
+
+Max connections in postgresql.conf: 600
+
+/var/lib/tomcat[x]/conf/context.xml
+
+*  Max Active Survey Definitions: 100
+*  Max Active Results: 100
+
+/etc/default/tomcat[x]  
+
+*  JAVA_OPTS="-Djava.awt.headless=true -Xms2048m -Xmx3072m"
+
+Large Server (8 GB RAM)
+#######################
+
+Max connections in postgresql.conf: 800
+
+/var/lib/tomcat[x]/conf/context.xml
+
+*  Max Active Survey Definitions: 120
+*  Max Active Results: 120
+
+/etc/default/tomcat[x]  
+
+*  JAVA_OPTS="-Djava.awt.headless=true -Xms4096m -Xmx4096m"
+
+
 Installing
 ----------
 
@@ -178,9 +224,6 @@ Create a credentials file called "credentials" and place it in ~ubuntu/smap/depl
   aws_access_key_id = ....
   aws_secret_access_key = ....
 
-Ubuntu2004
-^^^^^^^^^^
-
 Also create a script file called setcredentials.sh that contains 2 lines::
 
   export AWS_ACCESS_KEY_ID= .....
@@ -249,7 +292,7 @@ Archiving files to long term storage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Files in uploadedSurveys can be replicated to a long term low cost storage solution such as Azure Blob, or
-AWS S3.  Then they can eb deleted. Then when you need to recover they can be replicated back.
+AWS S3.  Then they can be deleted. Then when you need to recover they can be replicated back.
 
 Files in attachments can also be replicated to long term storage and deleted.  You can then configure the
 Apache web server to serve the attachments from the long term storage location.  For example with AWS S3::

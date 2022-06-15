@@ -6,6 +6,17 @@ Looking up Data
 .. contents::
  :local:
 
+Overview
+--------
+
+Lists of choices and reference data can be obtained from sources outside of the survey template.  This allows you to:
+
+*  Update the survey with new choices or reference values without changing the survey template,
+
+*  Share the same data between multiple surveys, for example lists of provinces and districts for a user to select.
+
+*  Use much larger numbers of potential choices and reference values than you could put directly into a survey without making it too slow to load
+
 Sources
 -------
 
@@ -13,6 +24,9 @@ Data can be sourced from:
 
 *  CSV Files
 *  Surveys
+
+CSV files can be used with data that does not change too often as it is a manual process to upload an updated CSV file onto the server.  Data
+sourced from other surveys will be available automatically as soon as the data is submitted to the source survey.
 
 In the remainder of this document the source of the data will be written as *SOURCE*.  Replace this with the name of the CSV file or the 
 identifier of the survey that contains your data.
@@ -66,7 +80,7 @@ Replace SOURCE with the name of the file without the CSV extension.  In the foll
 .. _looking-up-data-survey:
 
 Using another Survey as the Source
-----------------------------------
+++++++++++++++++++++++++++++++++++
 
 Replace SOURCE with "linked\_"  followed by the ident of the survey.  In the following examples the survey ident is s3_23::
 
@@ -78,25 +92,29 @@ Replace SOURCE with "linked\_"  followed by the ident of the survey.  In the fol
 
   The online editor will guide you through accessing another survey's data.  For example to look up choices in another survey select
   appearance, click on the edit button and then select the **search** tab.  You can then look up available surveys without having to 
-  know their "ident".  However if you are entering the survey ident into an XLSForm then you can get it from the online editor.  Select the menu
-  **File** and then **Info**.
+  know their "ident".  
+
+.. note::
+
+  If you are editing your survey in a spreadsheet then you can find "ident" of the survey that you are looking up by again using the 
+  online editor but this time open the file that you want to reference and then select the menu option **File** and then **Info**.  
 
 .. warning::
 
   The survey that is referenced will need to be in the same organisation as the survey doing the referencing.
 
-Choices
--------
+Looking up Choices
+------------------
 
-A select question can get it's choices from a CSV file or another survey.  The approach is similar to using choices from
-the choices sheet but with the difference that the choices list contains the names of the columns that have the choices rather than the choices themselves.
-You will also need to add a "search()" function to the question's **appearance** telling it the source of the data.
+The approach is similar to using choices from the choices sheet but with the difference that the choices list contains the names of the columns 
+that have the choices rather than the choices themselves.  You will also need to add a "search()" function to the question's **appearance** 
+telling it where to get the data.
 
-Column Names
-++++++++++++
+Specifying Column Names
++++++++++++++++++++++++
 
 *  In the name column of the choices list specify the column name that contains the **value** of the choice.  
-*  In the label column of the choices list specify the column name that contains the **label** for the choice.
+*  In the label column(s) of the choices list specify the column name that contains the **label** for the choice.
 
 .. figure::  _images/lookup1.jpg
    :align:   center
@@ -108,6 +126,7 @@ Notes:
 
 *  In the label you can specify multiple column names separated by commas.  The data from each of these columns will then be combined and shown to the user
 *  The value column and the label column can be the same
+*  The choice labels can be in multiple languages as you can specify a different column for each language just as you would normally specify different text for each language
 
 Adding fixed choices
 %%%%%%%%%%%%%%%%%%%%
@@ -129,8 +148,8 @@ The Search Function
 The search function is placed in the **appearance** of the select question and tells the system where the source of data can be found.  This function
 has between 1 and 5 parameters depending on how complex your filtering requirements are:
 
-Simple
-%%%%%%
+Simple (1 parameter)
+%%%%%%%%%%%%%%%%%%%%
 
 ::
 
@@ -146,8 +165,8 @@ Only this simple form of the search function can be used with WebForms.
 
 .. _look-up-filters:
 
-Filter the data
-%%%%%%%%%%%%%%%
+Filter the data (3 parameters)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 ::
 
@@ -171,8 +190,8 @@ The filter values for "in" and "not in" should be lists separated by spaces. Use
   that are used for the value and label of the choice.  In other words if you are going to call a CSV column "label" then make sure it does
   contain the label! 
 
-Double filter the data
-%%%%%%%%%%%%%%%%%%%%%%
+Double filter the data (5 parameters)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Like the normal filter but with an extra "matches".
 
@@ -194,6 +213,7 @@ Examples
   :header-rows: 1
   :file: tables/choices-example-list.csv
 
+for more information on using the **eval** function refer to :ref:`filter-expressions`.
 
 Getting Reference Data with the Pulldata Function
 --------------------------------------------------
@@ -327,6 +347,8 @@ enrolled in that class::
 The first example gets the number of children in the class.  This could be used as the repeat_count for a "begin repeat" that shows data on
 each enrolled child.  The second example gets all of the children's first names as a space separated list. The third example gets the fourth child
 in the list.  You can use this last example inside a "begin repeat" where you replace "4" with "position(..).
+
+.. _filter-expressions:
 
 Notes on Filter Expressions and Evaluations
 -------------------------------------------
