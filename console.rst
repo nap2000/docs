@@ -13,13 +13,40 @@ submitted result for an Evaluation.
 
 To get here select the menus *Modules* and then *Console*.
 
+Data Views
+----------
+
+Table
++++++
+
 .. figure::  _images/console.jpg
    :align:   center
 
    The Console
    
 Records are shown in order with most recent at the top.  
-   
+
+Map
++++
+
+The map show the location of cases if they include GPS coordinates.  Clicking on a location will show the details of the case.
+
+Chart
++++++
+
+.. figure::  _images/cm-charts1.jpg
+   :align:   center
+   :alt:  Shows the 4 charts included in the chart page
+
+   Chart View
+
+The chart tab currently show 4 vertical column charts:
+
+*  Status.  For the cases currently included shows the frequency of each status value.
+*  Assigned.  For the cases currently included shows how many cases are assigned to each person.
+*  Alert.  The frequency of alerts that have been triggered by the cases.
+*  Criticality.  The frequency of occurence of values in the criticality column.
+
 .. _console-filters:
 
 Changing the records and columns displayed
@@ -264,7 +291,7 @@ A page is then displayed that allows you to make changes to all selected records
   records.
 
 History Tab
------------
++++++++++++
 
 Clicking on the history tab will show the changes that have been made to the record.  
 
@@ -293,7 +320,7 @@ The history tab show changes, tasks and notifications associated with a record. 
 of the history page to filter / show these event types.
 
 Assigning Tasks
----------------
++++++++++++++++
 
 When editing a record the user can request that somebody else update the record by assigning a task.   To do this click on 
 the **Add Task** button.  A dialog will be shown with similar options as for adding an ad-hoc task.  (:ref:`editing-adding-tasks`).
@@ -308,7 +335,7 @@ The differences compared to the task management page are:
 Tasks assigned to a record will be shown in the History tab where you can see their status and edit them.
 
 Sending Notifications
----------------------
++++++++++++++++++++++
 
 An email notification can be sent with an attached PDF or a link to a Webform containing the record data. This notification
 will also be shown in the record history.  Next to the notification will be shown a button labelled "Resend" that can be clicked

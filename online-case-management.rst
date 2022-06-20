@@ -15,6 +15,7 @@ Settings
 
 On the settings tab specify:
 
+*  The question that identifies the criticality of the case
 *  The question that holds the status for a case
 *  The status value that indicates that the case is complete
 

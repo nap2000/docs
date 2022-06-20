@@ -1,9 +1,6 @@
 Overview
 ========
 
-.. contents::
-  :local:
-
 A case management system is concerned with managing individual records of data that correspond to something or someone in the 
 real world.  These people or things could be:
 

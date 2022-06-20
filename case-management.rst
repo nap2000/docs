@@ -6,6 +6,7 @@ Case Management
 
   cm-overview.rst
   cm-complete.rst
+  cm-criticality.rst
   cm-alerts.rst
   cm-escalate.rst
   cm-device.rst
