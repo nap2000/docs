@@ -1016,14 +1016,19 @@ Records a shape.
 **Type**
   geoshape
 
+.. _geocompound-widget:
+
 geocompound
 +++++++++++
 
-Similar to geotrace this type records a line however attributes can also be added to points along the line.  Currently
-these attributes are fixed as "pit" and "fault", in a future release they will be set as parameters.
+Similar to geotrace this type records a line however attributes can also be added to points along the line.  To set a marker on a line click on the point 
+and a popup will be shown.  
 
 **Type**
   geocompound
+
+**Appearance**
+  marker:{type}:{name}:{label} 
 
 **Availability:**
 
@@ -1039,6 +1044,21 @@ these attributes are fixed as "pit" and "fault", in a future release they will b
    Geocompound Widget
 
 Requires version 22.02 of the server.
+
+Use of the **marker** appearance required version 22.07 of the server. Multiple marker types can be specified.  
+
+*  type:  must be either **pit** or **fault**.  When a :ref:`compound-image-widget` is drawn the line end points use the locations of **pits**.
+*  name:  The name that will be shown in the drop down list allowing a marker to be associated with a point (no spaces)
+*  label: The stem of the marker label, an index will be added for each occurence of a marker type, for example JC1, JC2 etc.  (no spaces).
+
+.. csv-table:: survey
+  :header: type, name, label, appearance
+
+  geocompound, pipeline_faults, location of faults, marker:pit:Pump:pump marker:fault:Defect:defect
+
+The street addresses of markers can be automatically recorded in other questions that have the same name as a label.  For for example if a label
+is specified as **JC** then the address of the first marker of that type will be stored in a question called **JC1** and so on.  Note only questions
+in the top level of a form will be updated with a marker address.
 
 .. _matrix:
 
@@ -1473,6 +1493,10 @@ contains the names of the geopoints. These are in order:
 *  The location of a fault
 *  The location of another fault etc
 
+.. note::
+
+  This question type is not required to display a map generated from a geocompound question.
+
 .. rubric:: XLSForm
 
 .. csv-table:: survey
@@ -1501,8 +1525,9 @@ Compound PDF Image
 
 **Appearance:**
 
-*  pdflineimage, followed by the names of the geopoint questions to include in the compound image.
+*  pdflineimage, followed by the name of a :ref:`geocompound-widget` question or the names of the geopoint questions to include in the compound image.
 *  pdftl, followed by questions that set traffic light colors
+*  pdflinelocation followed by the marker type and index that you want the location on
 
 Added in Smap Server version 21.11
 
@@ -1514,9 +1539,14 @@ a little more abstract than the map.  However traffic light indicators can also 
 .. csv-table:: survey
   :header: type, name, label, appearance
 
-  pdf_field, fault_location, Location of faults, pdflineimage_p1_p2_f
+  pdf_field, marker_image, Image of markers, pdflineimage_c1
+  pdf_field, marker_image, Image of markers, pdflineimage_p1_p2_f
+  pdf_field, pit_location, Location of pit 2, pdflinelocation_c1_pit_2
 
-In the above example the geopoint question p1 will identify the start of the cable or pipe, p2 the end and f the location of the fault(s).
+In the first example above the locations of the cable endpoints and the faults will be in a geocompound question called "c1".
+In the second example the geopoint question p1 will identify the start of the cable or pipe, p2 the end and f the location of the fault(s). There will be multiple 
+faults if "f" is in a repeat.
+In the third example the GPS coordinates of the second pit in the geocompound question c1 will be displayed.
 
 .. figure::  _images/pdf_field2.jpg
    :align: center

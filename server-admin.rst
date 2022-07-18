@@ -152,6 +152,30 @@ Hence in all but one of your application servers specify in /etc/environment::
 
 This should be specified before you install Smap into the new application server.
 
+Backups
+-------
+
+#.  Archive the contents of /smap.  In particular /smap/media.  The remaining folders under /smap do not contain critical data.
+#.  Backup the two databases: **survey_definitions** and **results** from the postgresql server
+
+Restore
+-------
+
+The database will contain all data submitted to the server with the exception of attachments such as images.  These are stored on the file system.
+To restore the system you will need to:
+
+#.  Copy the archived files from the /smap folder to /smap on the new machine
+#.  Restore the databases from backup
+
+.. note::
+
+  The first step is not necessary if you are archiving attachments and other files to cloud storage and serving attachments directly from there.
+
+Databases
++++++++++
+
+Restore the **survey_definitions** database and the **results** database into the postgresql instance on the new server.
+
 Logs
 ----
 
@@ -273,12 +297,12 @@ Reducing disk usage
 +++++++++++++++++++
 
 temp
-^^^^
+####
 
 Temporary files older than a day can be deleted as the download will have well and truly completed by then.
 
 uploadedSurveys
-^^^^^^^^^^^^^^^
+###############
 
 After a submitted survey form has been sucessfully processed the contents of the XML file will be in the database
 and any attachments will be in the attachments folder.  So deleting old files in uploadedSurveys will free u
@@ -289,7 +313,7 @@ significant disk space.  There are some issues to consider though:
 *  Recovery.  The survey submissions may have been sucessfully processed but you might delete all of that data.  No problem you can undelete.  However you might then go further and erase all of your data.  At this point you have 100 days to "restore" using the data in uploadedSurveys to re-appy the submissions.  If this data has been deleted then you cannot do that and you will need to restore from backups.
 
 Archiving files to long term storage
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+####################################
 
 Files in uploadedSurveys can be replicated to a long term low cost storage solution such as Azure Blob, or
 AWS S3.  Then they can be deleted. Then when you need to recover they can be replicated back.
