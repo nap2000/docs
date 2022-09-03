@@ -2,7 +2,7 @@ Chart Function
 ==============
 
 Often you may find that you want to present trends to a user probably by using a chart. Smap provides a function that will retrieve time series 
-data submitted in Surveys for use in an MWA type survey.   
+data submitted in Surveys that can be presented to the person filling in a survey.   
 
 However the data does not have to be time series.  The function will return previous
 values for a specified column separated by colons.  

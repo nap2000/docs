@@ -23,6 +23,7 @@ field-list,Questions appear on one screen,Use on groups
 hidden,"Does not show the question in fieldTask.
 
 This cannot be included with other appearance options.",This appearance is useful when you are using tasks and have generated a task that refers to previously collected data.  You may want to use some of that data in calculations but otherwise not show it.
+history-map,"Shows previous point, shapes or lines collected a repeat","Use on geopoint, geoshape, geotrace questions inside a repeating group"
 horizontal-compact,Shows choices in a select type question horizontally,Only available for webforms
 islamic,Shows an Islamic calendar,"Use with type of ""date"""
 label,Shows the labels only for a select question horizontally.,"You can use this to create your own table list within a field-list.   You would then add additional select questions with the appearance ""list-nolabel""."

@@ -970,6 +970,20 @@ records a single point
 **Type**
   geopoint
 
+**Appearance:**
+
+*  maps 
+*  placement-map
+*  history-map
+
+The appearance **maps** will show a background map to give context to when the user records their location.
+
+The appearance **placement-map** will allow the user to click on the map to record a location which 
+does not need to be where the user is standing.
+
+The appearance **history-map** can be used on geopoint questions inside a repeat. Previous geopoint values
+added for that question will then be shown in the background for context. Requires FieldTask 6.703 or above.
+
 .. csv-table:: survey
   :header: type, name, label
 
@@ -982,23 +996,6 @@ records a single point
 
    Results after requesting a geopoint
 
-Geopoint with a background map
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-**Type**
-  geopoint
-
-**Appearance**
-  maps 
-
-Geopoint with a user selected location
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-**Type**
-  geopoint
-
-**Appearance**
-  placement-map
 
 geotrace
 ++++++++
@@ -1008,6 +1005,12 @@ Records a line
 **Type**
   geotrace
 
+**Appearance**
+  history-map
+
+The appearance **history-map** can be used on geotrace questions inside a repeat. Previous geotrace values
+added for that question will then be shown in the background for context. Requires FieldTask 6.703 or above.
+
 geoshape
 ++++++++
 
@@ -1015,6 +1018,12 @@ Records a shape.
 
 **Type**
   geoshape
+
+**Appearance**
+  history-map
+
+The appearance **history-map** can be used on geoshape questions inside a repeat. Previous geoshape values
+added for that question will then be shown in the background for context. Requires FieldTask 6.703 or above.
 
 .. _geocompound-widget:
 

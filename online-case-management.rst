@@ -1,14 +1,15 @@
 
 .. _case-management-config:
 
-Case Managment Configuration
-============================
+Case Management Configuration
+=============================
 
 .. contents::
  :local:
  
 Each survey can have settings related to case management.  These settings are common to a bundle (:ref:`survey_groups`) of surveys.  Hence if you change the settings
-for one of the surveys in a bundle it will change the settings for the others. 
+for one of the surveys in a bundle it will change the settings for the others.  To access the case management
+configuration use the online editor and select the menu **Tools** and then **Case Management**.
 
 Settings
 --------
