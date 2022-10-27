@@ -53,12 +53,3 @@ following table shows sample password values and their strength;
 
   All of the above example passwords have been blocked from use if password strength is set above 0
 
-Password strength checking is only applied if the user has one of the following security groups::
-
-*  Server owner
-*  Enterprise Administrator
-*  Security Manager
-*  Administrator
-*  Analyst
-*  View Data
-*  Dashboard

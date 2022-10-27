@@ -157,6 +157,7 @@ you actually want to use
 
 *  cast(${question} as integer)
 *  cast(${question} as decimal) 
+*  cast(${question} as numeric) 
 
 Examples::
 
@@ -166,25 +167,26 @@ Examples::
 Functions
 ---------
 
-* now()  (The current date and time)
-* area(${qname})  (The area in square meters of a polygon)
-* distance(${qname})  (The length of a line, in meters)
-* perimeter(${qname})  (The length of the boundary of a polygon, in meters)
+* now()  *(The current date and time)*
+* area(${qname})  *(The area in square meters of a polygon)*
+* distance(${qname})  *(The length of a line, in meters)*
+* perimeter(${qname})  *(The length of the boundary of a polygon, in meters)*
+* round(cast (${qname} as numeric), n)  *(round a decimal value or a calculation to 'n' decimal places. Note the cast is required even if the question is decimal)*
 
 Special Terms
 -------------
 
-* is null (Test to see if an answer was <b>not</b> given to a media or geopoint question)
-* is not null (Test to see if an answer was given to a media or geopoint question)
-* ${_upload_time} (The date that the survey was uploaded to the server)
-* ${_start} (The time the survey was started)
-* ${_end} (The time the survey ended)
-* ${_hrk} (The generated unique key for the record)
-* ${_device} (The device identifier that submitted the results)
-* ${_user} (The logon identifier of the user that submitted the results)
-* ${prikey} (The unique record number of submitted data)
-* ${_version} (The version number of the survey that was used to submit a record)
-* ${instanceid} (The unique identifier for the record)
+* is null *(Test to see if an answer was <b>not</b> given to a media or geopoint question)*
+* is not null *(Test to see if an answer was given to a media or geopoint question)*
+* ${_upload_time} *(The date that the survey was uploaded to the server)*
+* ${_start} *(The time the survey was started)*
+* ${_end} *(The time the survey ended)*
+* ${_hrk} *(The generated unique key for the record)*
+* ${_device} *(The device identifier that submitted the results)*
+* ${_user} *(The logon identifier of the user that submitted the results)*
+* ${prikey} *(The unique record number of submitted data)*
+* ${_version} *(The version number of the survey that was used to submit a record)*
+* ${instanceid} *(The unique identifier for the record)*
 
 Note the ${_version} value is of type text, hence if you want to use this in a filter you may need to cast it.  For example::
 

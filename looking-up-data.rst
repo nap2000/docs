@@ -340,8 +340,8 @@ The following examples are for the scenario where a child can be enrolled in mul
 are space separated.  ${class} is the answer from a question that identifies the class; the pulldata functions then get the children
 enrolled in that class::
 
-  pulldata('linked_s30_268', 'first_name', 'enrolled_in', ${class}, -1, 'contains')
-  pulldata('linked_s30_268', 'first_name', 'enrolled_in', ${class}, 0, 'contains')
+  pulldata('linked_s30_268', 'first_name', 'enrolled_in', ${class}, "count", 'contains')
+  pulldata('linked_s30_268', 'first_name', 'enrolled_in', ${class}, "list", 'contains')
   pulldata('linked_s30_268', 'first_name', 'enrolled_in', ${class}, 4, 'contains')
 
 The first example gets the number of children in the class.  This could be used as the repeat_count for a "begin repeat" that shows data on

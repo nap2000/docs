@@ -112,6 +112,7 @@ on-phone setting will be overridden. These settings apply to all fieldTask insta
    incomplete instance and the enumerator can open it to continue editing from the tasks tab.  Note incomplete instances are not sent to the server. 
    (Requires version 21.02+ of the server and 6.302+ of fieldTask)
 *  Enable Geo-fence.  Enables the geo fence feature that can download or show tasks when the user is within a specified perimeter.
+*  GeoShape and GeoTrace input method.  If these are set on the server then a dialog is no longer shown to fieldTask users before they start recording points.  This reduces the time required to start recording and allows a consistent approach to recording geo poly types.
 
 Webform Settings
 ----------------
@@ -127,3 +128,9 @@ This tab allows customisation of webform appearance:
 *  The webform banner logo
 *  Hiding the "save as draft" checkbox
 
+Other
+-----
+
+This tab allows you to set other organisation level settings for the organisation that you are currently in:
+
+*  Minimum password strength

@@ -47,6 +47,38 @@ Log
   :reqheader Authorization: basic
   :statuscode 200: no error
 
+.. http:get:: /api/v1/log/organisation/{year}/{month}
+
+  :synopsis: get the number of events per organisation for a month
+  
+  **Example response**:
+  
+  https://sg.smap.com.au/api/v1/log/organisation/2020/07
+  
+  .. sourcecode:: http
+  
+        HTTP/1.1 200 OK
+        Vary: Accept
+        Content-Type: application/json
+	
+        [
+            {
+                "organisation": "Smap",
+                "events": {
+                    "API view": 224,
+                    "erase": 38,
+                    "create": 42,
+                    "Update": 81,
+                    "delete": 56,
+                    "email": 34
+                }
+            }
+        ]
+
+  :query tz:    The timezone for example ``Australia/Brisbane``.  All date time and date answers will be returned in this time zone.
+  :reqheader Authorization: basic
+  :statuscode 200: no error
+
 .. http:get:: /api/v1/log/organisation/{year}/{month}/{day}
 
   :synopsis: get the number of events per organisation for a day

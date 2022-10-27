@@ -10,7 +10,7 @@ Details;John Smith;26"
 Convert to number,number(${num-plots}),
 Convert to integer,int(${num-plots}),
 Convert to text,string(${num-plots}),
-Get the label for a choice in a select one question,"jr:choice-name(${question name}, '${choice name}').","jr:choice-name(${transport_type}, '${transport_type}')
+Get the label for a choice in a select one question,"jr:choice-name(${question name}, '${choice name}')","jr:choice-name(${transport_type}, '${transport_type}')
 
 Note the quotes around the second parameter"
 substring-before,"substring-before(a, b)

@@ -16,7 +16,6 @@ pdfcols_10
     Single column
 
 The column settings apply to the question that you add the appearance to, and all subsequent questions until it is overridden by another pdfcols appearance."
-pdfround_##,Set the number of decimal places.,Use with decimal questions to restrict the number of decimal places that are shown. For example pdfround_2
 pdfheight_##,Set the height of the box allowed for the question answer.  This is in points.,This value only applies when exporting a blank template.  If there is data in the export then the size of the data will determine the height of the box.  A value of 150 would be roughly 10 rows. For example pdfheight_150
 pdfhideindex,Hide the indentation and repeat index shown in sub fomrs,Use with begin repeat questions
 pdfhiderepeatinglabels,In subforms only the label for the first record will be shown,Set this on each question in a subform that you want to have this behaviour
@@ -37,11 +36,14 @@ Would create a default map of part of Manila."
 pdfmap_xxxx,Replace xxxx with the id of the mapbox map that you want to show in your PDF exports,"You will need to set a map box id if you are running your own server.  
 
 The Mapbox vector map style ids can be found here. https://docs.mapbox.com/api/maps/#styles"
+pdfmapsource_xxxx,"Replace xxxx with either ""google"" or ""mapbox"" to specify the source of a static map image to include in the PDF","pdfmapsource_google
+pdfmapsource_mapbox"
 pdfmarkercolor_##_##_##,Sets the color for the marker used to show location on maps.  Use Hex RGB values,"For example:
 pdmarkercolor_00_FF_00
 Set the background to blue."
 pdfnewpage,Start the question on a new page,
 pdfno,Question will not be included in a generated PDF,
+pdfround_##,Set the number of decimal places.,Use with decimal questions to restrict the number of decimal places that are shown. For example pdfround_2
 pdfshowimage,The choice image will be displayed instead of the choice label.,Use with select one questions that include images in the choice list. Available in v21.12
 pdfspace_##,Insert a gap in the table before this question.,The spacing is in points. 1/72 of an inch.
 pdfstretch,Stretch an image to fit the space it has been allocated.  This only works when exporting to a pdf template.,The ratio between width and height will not be maintained. Available in v21.12.
