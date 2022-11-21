@@ -49,6 +49,7 @@ Administration
 
   :ref:`online-editor`,
   :ref:`Offline apreadsheet editor<xls-editor>`,
+  :ref:`A history of all changes made to a survey<change-history>`,
   :ref:`Administration reports including access to forms; usage by user; usage of resources such as reference csv files by surveys; notifications that have been set etc<admin-reports>`,
 
 Geospatial
@@ -82,6 +83,7 @@ Case Management
   :header: Feature, Versions
   :widths: 80,20
 
+  :ref:`Cases <case-management>`,
   :ref:`Tasks<editing-adding-tasks>`,
   Email tasks that can be completed by people who do not have an account on the system and are instead identified by their email address,
   Notification Messages,

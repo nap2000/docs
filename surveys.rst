@@ -11,6 +11,5 @@ Surveys
   using-csv-files.rst
   quality_assurance.rst
   external-applications.rst
-  groups.rst
   survey-identifier.rst
   references.rst

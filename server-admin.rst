@@ -12,9 +12,9 @@ Server Requirements
 
 *  One of the following Ubuntu LTS Server
 
+   *  22.04
    *  20.04
    *  18.04
-   *  16.04
 
 *  2GB of Memory
 *  10GB of disk
@@ -275,10 +275,13 @@ Create a bucket to store backups of uploaded media files.  The files in this buc
 AWS Properties File
 +++++++++++++++++++
 
-An properties file is required. This is really only used for automatic synchronisation of fieldTask but it needs to be present for other AWS services as well::  
+A properties file is required. This is really only used for automatic synchronisation of fieldTask but it needs 
+to be present for other AWS services as well.  Create the file at /smap_bin/resources/properties/aws.properties. 
+Add the lines::  
 
-  Create the file at /smap_bin/resources/properties/aws.properties
-  Add the line:  userDevices_region=us-east-1
+  userDevices_table={the dynamodb table you set up to contain the list of connected fieldTask instances}
+  userDevices_region={the aws region in which you have set up dynamo =db}
+  fieldTask_platform={the platform ARN as required by AWS SNS}
 
 Disk Storage
 ------------

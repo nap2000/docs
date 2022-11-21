@@ -1274,28 +1274,12 @@ The quality of audio recordings can be customized using the ``quality`` paramete
 
    * - Value
      - Extension
-     - Encoding
-     - Bit rate
-     - Sample rate
-     - File size
    * - normal
      - .m4a
-     - AAC
-     - 64kbps
-     - 32kHz
-     - ~30MB/hour
    * - low
      - .m4a
-     - AAC
-     - 24kbps
-     - 32kHz
-     - ~11MB/hour
    * - voice-only
      - .amr
-     - AMR
-     - 12.2kbps
-     - 8kHz
-     - ~5MB/hour
 
 .. tip::
 

@@ -13,3 +13,4 @@ track_changes,Set to yes or no.  When set to yes every change made to a question
 data_survey,Set to yes or no.  When set to yes the survey can be used to collect data. The default is yes.,Settings Dialog
 oversight_survey,Set to yes or no.  When set to yes the survey can be used to update results in the console.  The default is yes.,Settings Dialog
 compress_pdf,"Set to yes or no.  When set to yes, PDFs generated from records submitted with this survey will have their images compressed(Smap Version 21.12+)",Settings Dialog
+read_only_survey,Set to yes or no.  When set to yes the survey will be readonly.,Settings Dialog

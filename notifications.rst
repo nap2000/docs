@@ -48,7 +48,7 @@ The remaining settings will vary depending on the selections made for **trigger*
 
 .. note::
 
-  Notifications can be sent to multiple email addresses and SMS phone numbers.
+  Notifications can be sent to multiple comma separated email addresses and SMS phone numbers.
 
 Submission Trigger
 ++++++++++++++++++
@@ -108,11 +108,15 @@ Email Target
 Settings are:
 
 *  Attach.  Attach a PDF of the record or a link to a Webform containing the data.
-*  Email.  The email address.
+*  Email.  One or more comma separated email addresses
 *  A question that contains the email address. (If the trigger is a submission of a completed survey)
 *  Subject.  The subject of the email.
 *  Content.  The body content of the email.  
    
+.. note::
+
+  Email questions can be of type select multiple or select one.  Enter the email address as the name of the choice
+
 The subject and message content can be customised using data from the submitted results.  Use the following placeholders in either:
 
 *  ${username} :  The user who submitted the results.
