@@ -107,6 +107,17 @@ also be included in reports.
 
    The columns dialog
 
+Assigning a case to a user
+--------------------------
+
+A person with :ref:`Admin<security-groups>` privilege can click on the "Assign User" button to assign the case to 
+any user who has access to the survey. Administrators can reassign cases to different people using this button. They
+can also set a case to "Unassinged" by assigning it to "None".
+
+Any person with :ref:`Analyst or Manage<security-groups>` privilege can click on the "Lock for Editing" button
+to assign themselves to an unassigned case. If the user has finished with a case they can click the "Release" button
+to send it back to unassigned.
+
 Editing a record
 ----------------
 

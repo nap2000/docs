@@ -69,6 +69,8 @@ If you want your CSV file to be only used by a single survey then:
 *  Click on the *Add File* button and select all the CSV files that you want to load
 *  Click on the *Upload* button
 
+.. _looking-up-data-file:
+
 Referring to the file
 %%%%%%%%%%%%%%%%%%%%%
 
@@ -218,41 +220,153 @@ for more information on using the **eval** function refer to :ref:`filter-expres
 Getting Reference Data with the Pulldata Function
 --------------------------------------------------
 
-The second type of data that you can get from a CSV file or another survey is reference data.  There are 4 different versions with 3,4,5 or 6 arguments.
+The second type of data that you can get from a CSV file, or another survey, is reference data.  This is data that
+is "pulled" from a CSV file, or another survey and added as the answer to a calculate question.  
+It can then be treated like any other answer, and be sent to the server, used in a relevance etc.
 
-#.  **3 params:** Get a single value identified using an expression
-#.  **4 params:** Get a single value identified by a specific value in a single filter column 
-#.  **5 params:** Get a result for multiple values identified using an expression
-#.  **6 params:** Get a result for multiple values identified by specific value in a single filter column 
+There are 4 different versions of the pulldata function with 3,4,5 or 6 parameters.
 
-Syntax::
+*  **3 params:** Get a single value identified using an expression
+*  **4 params:** Get a single value identified by a specific value in a single filter column 
+*  **5 params:** Get a result for multiple values identified using an expression
+*  **6 params:** Get a result for multiple values identified by specific value in a single filter column 
 
-  1. pulldata('source', 'column to retrieve', 'filter expression')
-  2. pulldata('source', 'column to retrieve', 'filter column', 'filter value')
-  3. pulldata('source', 'column to retrieve', 'filter expression', 'index', 'eval')
-  4. pulldata('source', 'column to retrieve', 'filter column', 'filter value', 'index', 'filter type')
+The Syntax::
+
+  pulldata('source', 'column to retrieve', 'filter expression')
+  pulldata('source', 'column to retrieve', 'filter column', 'filter value')
+  pulldata('source', 'column to retrieve', 'filter expression', 'index', 'eval')
+  pulldata('source', 'column to retrieve', 'filter column', 'filter value', 'index', 'filter type')
+
+The most commonly used version is the one with 4 parameters.  This is also the standard pulldata version 
+that is used by other data collection tools.
+
+Get a value using a key (4 parameters)
+++++++++++++++++++++++++++++++++++++++
+
+Add a calculate question to your survey and give it a name. For the calculation specify the pulldata function::
+
+  pulldata('source', 'column to retrieve', 'filter column', 'filter value')
+
+#.  The source can be the :ref:`name of a CSV file <looking-up-data-file>`, without its extension or :ref:`the identifier for another survey. <looking-up-data-survey>`
+#.  The column to retrieve is the name of the column in the CSV file whose data you want, or the name of the question in the survey that you are looking up.
+#.  The filter column is the name of the column / question that identifies the value to retrieve.  So if you are looking up the product name using the product code, then this parameter contains the name of the product code column.
+#.  The filter value is the value of the filter name that you want.  So for the product example if the filter value was set to 'a10' then you would expect to get back the product name for the product with code 'a10'.
+
+.. note::
+
+  Looking up data for static references may cause problems as the lookup function needs to be triggered
+  by a change in one of its parameters.  For example:   pulldata('ref_data', 'name', 'code',  'AAAA1').   So
+  in this example the code is fixed and the lookup will not automatically be triggered.
+
+.. _filter-expressions:
+
+Get a value using an expression (3 parameters)
+++++++++++++++++++++++++++++++++++++++++++++++
+
+In this approach the 'filter column' and 'filter value' are replaced by an expression.  This allows much more
+flexibility in how the 'column to retrieve' is selected::
+
+  pulldata('source', 'column to retrieve', 'filter expression')
+
+When using an expression to filter data you can use the ${question name} syntax to refer to questions in the 
+current survey as usual. However to refer to columns in the csv file or referenced survey use #{column name}.
+
+You can also enclose the whole expression in double quotes.  This allows you to use single quotes around text values.  
+For example  "#{city} = 'london'"
+
+When using an expression to get data may need to "cast" values to integer or decimal.  
+This is because all CSV data is stored as text. For example if you have a filter expression like "#{age} < ${max_age}". 
+Here #{age} is the age value in the csv table and you will need to change your expression 
+to "cast( #{age} as integer ) < ${max_age}".  Refer to :ref:`server-expressions-cast` for more details.
 
 .. warning::
 
-  In fieldTask, a pulldata function using an "expresion" is not automatically triggered if any of the 
+  In fieldTask, a pulldata function using an "expression" is not automatically triggered if any of the 
   referenced questions changes their value. This means that the pulldata value 
   will not be updated when you were expecting it to be
   However you can force this behaviour by enclosing the pulldata function within an if() function 
   that references the same questions.  The examples
   below show this approach.
 
-Example showing how to force a 3 parameter pulldata to be called::
+.. csv-table:: Examples of pulldata using expressions
+  :header: pulldata, Comment
 
-  if(string-length(${id_no}) > 0, pulldata('source', 'column to retrieve', '#{key} = ${id_no}'), '')
+  "if(string-length(${product_code}) > 0, pulldata('products', 'product_name', '#{product_code} = ${product_code} '), '')", This is the same as the simple product name lookup that was described for the 4 parameter version of pulldata! Note that we use #{product_code} to refer to the value from the product_code column in the CSV file. We also refer to the answer to the product code question in the survey using the normal ${} syntax. The pulldata() is enclosed inside an if() function so that fieldTask knows to trigger it when the product_code changes.
+  "if(string-length(${product_code}) > 0, pulldata('products', 'product_name', '#{product_code} = ${product_code} and #{region} = ${region}'), '')", Now an example that can't be implemented using the simple 4 parameter version.  This example assumes that product codes can be reused in different regions so to get the right product name you also want to filter by region.
+  "if(string-length(${product_code}) > 0, pulldata('products', 'product_name', ""#{product_code} = ${product_code} and #{region} = ${region} and #{year} = '2022' ""), '')", An additional filter by year has been added. Note that because the year is fixed and enclosed in single quotes we have enclosed the whole expression in double quotes.
 
+Get multiple values (5 and 6 parameters)
+++++++++++++++++++++++++++++++++++++++++
+
+The previous examples just returned a single value.  If more than one record matches a key just the first
+will be returned.  However you can use :ref:`repeating groups <xls-repeats>` to show repeating reference 
+data.
+
+The pulldata functions look like this::
+
+  pulldata('source', 'column to retrieve', 'filter expression', 'index', 'eval')
+  pulldata('source', 'column to retrieve', 'filter column', 'filter value', 'index', 'filter type')
+
+The first version, 5 parameters, adds an 'index' parameter.  The final parameter 'eval' doesn't do anything,
+it is just that there to diffentiate this from from the standard 4 parameter pulldata function.
+
+The second version, 6 parameters, add the 'index' parameter and a 'filter type' to the standard 4 parameter version.
+
+.. warning::
+
+  This feature is available in fieldTask 6.500 and above.  It is not available in Webforms.
+
+Index
+%%%%%
+
+The index starts at 1 and allows you to specify which of the multiple matching values you want. so if the index is 3 you
+will get the answer in the 3rd matching record.
+
+However instead of a number you can use one of the following aggregation functions as the index:
+
+  *  **sum** - The sum of all the records
+  *  **mean** - The mean or average of the values
+  *  **min** - The minimum value
+  *  **max** - The maximum value
+  *  **count** - The count of the number of matching records
+  *  **list** - All the matching values separated by a space
+ 
 .. note::
 
-  Looking up data for static references may cause problems as the lookup function needs to be triggered
-  by a change in one of its parameters.  For exmaple:   lookup('ref_data', 'name', 'code',  'AAAA1').   So
-  in this example the code is fixed and the lookup will not automatically be triggered.
+  Where the index is a number it does not have quotation marks.
 
-Support
-+++++++
+Filter Type
+%%%%%%%%%%%
+
+This is used only with the 6 parameter version and specifies how to filter records.  It works in the same way as the filter function
+in :ref:`search <look-up-filters>`.  In the standard pulldata version this is not needed because the filter type has to be matches
+since only one record should be found.
+
+  *  contains
+  *  startswith
+  *  endswith
+  *  matches
+  *  in
+  *  not in 
+
+Example usage
+%%%%%%%%%%%%%
+
+.. csv-table:: Reviewing Multiple Complaints - 6 parameter version
+  :header: type, name, label, repeat_count, calculation, comment
+  :widths: 10,10,10,10,30,30
+
+  calculate, number_recs, , ,"pulldata('linked_s11_2134', 'complaint_type', 'office', ${office}, 'count', 'matches')", returns the number of records for the selected office. The second parameter is ignored when using an aggregate function for the index.
+  begin_repeat, rpt, Complaints, int(${number_recs}), , Creates a repeat group for each matching complaint.  Note that the repeat count has to be cast to an integer as calculates have text value by default
+  note, type, Complaint Type, , "pulldata('linked_s11_2134', 'complaint_type', 'office', ${office}, position(..), 'matches')", The pulldata function is almost the same as before except this time we are getting the value for the record number that corresponds to the position in the repeat.
+  note, complaint, Complaint, , "pulldata('linked_s11_2134', 'complaint', 'office', ${office}, position(..), 'matches')", This time we get the details of the complaint as the value of the note
+  end_repeat, rpt
+
+.. _looking-up-data-local:
+
+Support in FieldTask and SmapServer
++++++++++++++++++++++++++++++++++++
 
 .. csv-table:: Support for looking up data in CSV files and other surveys
   :header: pulldata version, fieldTask offline, fieldTask online, webForms offline, webForms online
@@ -262,8 +376,8 @@ Support
   5 params, v6.503, 6.503, v20.09, v20.09
   6 params, v6.503, 6.503, v20.09, v20.09
 
-Examples
-++++++++
+More Pulldata Examples
+++++++++++++++++++++++
   
 You may want to look up the maximum age for a program in a particular region. This example uses the 4 parameter version.
 In this example we ask what training sector the interviewee is interested in. Then we ask their age.  We then do a lookup in
@@ -295,75 +409,6 @@ For example::
 When you have very large amounts of reference data lookup can be more practical. Refer to 
 `this article <https://blog.smap.com.au/performance-issues-when-looking-up-reference-data//>`_ 
 for a discussion on why this is the case.
-
-Selecting Multiple Values
-+++++++++++++++++++++++++
-
-.. warning::
-
-  This feature is available in fieldTask 6.200 and above.  It is not available in Webforms.
-
-To select multiple values you can use two additional parameters:
-
-1.  An index into the record you want.  the index of a record starts from 1, however there are two special values:
-
-In FieldTask version 6.500 and above you can also use the following aggregation functions instead of the index:
-
-  *  **sum** - The sum of all the records
-  *  **mean** - The mean or average of the values
-  *  **min** - The minimum value
-  *  **max** - The maximum value
-  *  **count** - The count of the number of matching records
-  *  **list** - All the matching values separated by a space
- 
-2.  A filter type to select the data you want to include
-
-  *  contains
-  *  startswith
-  *  endswith
-  *  matches
-  *  in
-  *  not in 
-
-General Syntax::
-
-  pulldata('SOURCE', 'COLUMN IN SOURCE TO RETRIEVE', 'COLUMN IN SOURCE TO FILTER ON', 'FILTER VALUE', index, 'FILTER FUNCTION')
-
-.. note::
-
-  Where the index is a number it does not have quotation marks.
-
-By using these parameters you no longer need to specify a unique key as the 'COLUMN IN SOURCE TO FILTER ON'.  Instead you can get data from multiple
-rows that match the filter function.
-
-The following examples are for the scenario where a child can be enrolled in multiple classes using a select multiple.  So the class codes
-are space separated.  ${class} is the answer from a question that identifies the class; the pulldata functions then get the children
-enrolled in that class::
-
-  pulldata('linked_s30_268', 'first_name', 'enrolled_in', ${class}, "count", 'contains')
-  pulldata('linked_s30_268', 'first_name', 'enrolled_in', ${class}, "list", 'contains')
-  pulldata('linked_s30_268', 'first_name', 'enrolled_in', ${class}, 4, 'contains')
-
-The first example gets the number of children in the class.  This could be used as the repeat_count for a "begin repeat" that shows data on
-each enrolled child.  The second example gets all of the children's first names as a space separated list. The third example gets the fourth child
-in the list.  You can use this last example inside a "begin repeat" where you replace "4" with "position(..).
-
-.. _filter-expressions:
-
-Notes on Filter Expressions and Evaluations
--------------------------------------------
-
-When using an expression to filter data you can use the ${question name} syntax to refer to questions in the current survey as usual. However to 
-refer to columns in the csv file or referenced survey use #{column name}.
-
-You can also enclose the expression in double quotes.  This allows you to use single quotes around text values.  For example  "${city} = 'london'"
-
-When using an expression to get data may need to "cast" values to integer or decimal.  
-This is because all CSV data is stored as text. For example if you have a filter expression like "#{age} < ${max_age}". 
-Here #{age} is the age value in the csv table and you will need to change your expression to "cast( #{age} as integer ) < ${max_age}". 
-Refer to :ref:`server-expressions-cast` for more details.
-
-.. _looking-up-data-local:
 
 Local Data
 ----------
