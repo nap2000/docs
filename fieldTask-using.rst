@@ -37,6 +37,9 @@ Finding the Survey
 If you have a lot of forms on your phone then it may be hard to find the one you want to open.  However you can use 
 "search" or "order by" to make the survey form easier to find.  These buttone are circled in the image below.
 
+**Search**.  When you type some characters into the search bar, only those survey forms that contain that 
+sequence of characters in their name are shown.
+
 .. figure::  _images/ftSearch.jpg
    :align:   center
    :alt:     Use "order by" or "search" to find the form you want
@@ -53,8 +56,14 @@ If you have a lot of forms on your phone then it may be hard to find the one you
   * Project Name Ascending
   * Project Name Descending
 
-**Search**.  When you type some characters into the search bar, only those survey forms that contain that 
-sequence of characters in their name are shown.
+Tasks instances can be ordered by:
+
+  * Name Ascending
+  * Name Descending
+  * Order Downloaded Ascending
+  * Order Downloaded Descending
+  * Status, finalised first
+  * Status, unfinalized first
 
 .. note::
 
@@ -92,3 +101,40 @@ If an audio or video file is added to a question (:ref:`media`) then an icon wil
    Playing Media
 
 If the media is set to auto play then the text of the question will show as blue and the icon will be grayed out while the file is playing.
+
+Task Actions
+------------
+
+Each task on the tasks tab includes a menu at the right which you can select to show a list of choice for that task.
+
+.. figure::  _images/fttask.jpg
+   :align:   center
+   :alt:     Playing media
+   :width:   300
+
+   Selecting an action for a task
+
+Locate
+++++++
+
+This choice will be enabled if the task has been specified to be completed at a location.  Selecting it will show the location of the task on the map tab.
+
+Call
+++++
+
+
+Directions
+++++++++++
+
+This choice will be enabled if the task has been specified to be completed at a location with coordinates.  Selecting it will open Google maps in directions
+mode with the destination set to the location of the task.
+
+Accept Task
++++++++++++
+
+If a task has been created with the "Self Assign" checkbox set, then a user can accept that task here.
+
+Reject Task
++++++++++++
+
+An assigned task can be rejected by selecting this choice.  A reason for rejecting the task must be specified.  For a case the case will be unassigned.

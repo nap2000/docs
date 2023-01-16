@@ -36,7 +36,7 @@ Using Reference Data in Surveys
   :ref:`Referring to reference data in a csv file while offline<looking-up-data-csv>`, yes, yes
   :ref:`Referring to reference data in another survey while offline<looking-up-data-survey>`, yes, yes
   :ref:`Include local data not submitted to the server in reference data lookups.<looking-up-data-local>`, yes, no, FieldTask 6.400 - SmapServer 21.05
-  :ref:`Lookup repeating data from other surveys or collections of surveys.<pulldata-subforms>`, yes, no, FieldTask 6.200
+  :ref:`Lookup repeating data from other surveys or collections of surveys.<looking-up-data-pulldata>`, yes, no, FieldTask 6.200
   :ref:`Lookup data collected by other surveys while online without requiring an offline copy of the data<looking-up-data-survey-online>`, yes, yes
   :ref:`Lookup images online and use them in a survey (dynamic images)<dynamic-images>`, yes, yes
 
