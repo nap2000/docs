@@ -283,6 +283,24 @@ Add the lines::
   userDevices_region={the aws region in which you have set up dynamo =db}
   fieldTask_platform={the platform ARN as required by AWS SNS}
 
+Automatic Device Synchronisation
+++++++++++++++++++++++++++++++++
+
+Uses AWS Mobile Hub
+
+DynamoDB table
+##############
+
+The dynamoDB table shuld have the following items:
+
+*  registrationid
+*  smapServer
+*  userIdent
+
+Partition Key
+
+*  registrationid
+
 Disk Storage
 ------------
 

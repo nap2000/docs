@@ -18,6 +18,6 @@ Case Management
   console.rst
   sub_form_kp.rst
   launch-survey-from-survey.rst
-  pulldata-from-subforms.rst
+  looking-up-data.rst
   read-only-surveys.rst
   

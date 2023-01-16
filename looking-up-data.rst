@@ -217,11 +217,13 @@ Examples
 
 for more information on using the **eval** function refer to :ref:`filter-expressions`.
 
+.. _looking-up-data-pulldata:
+
 Getting Reference Data with the Pulldata Function
 --------------------------------------------------
 
 The second type of data that you can get from a CSV file, or another survey, is reference data.  This is data that
-is "pulled" from a CSV file, or another survey and added as the answer to a calculate question.  
+is "pulled" from it's source and added as the answer to a calculate question.  
 It can then be treated like any other answer, and be sent to the server, used in a relevance etc.
 
 There are 4 different versions of the pulldata function with 3,4,5 or 6 parameters.
@@ -252,12 +254,6 @@ Add a calculate question to your survey and give it a name. For the calculation 
 #.  The column to retrieve is the name of the column in the CSV file whose data you want, or the name of the question in the survey that you are looking up.
 #.  The filter column is the name of the column / question that identifies the value to retrieve.  So if you are looking up the product name using the product code, then this parameter contains the name of the product code column.
 #.  The filter value is the value of the filter name that you want.  So for the product example if the filter value was set to 'a10' then you would expect to get back the product name for the product with code 'a10'.
-
-.. note::
-
-  Looking up data for static references may cause problems as the lookup function needs to be triggered
-  by a change in one of its parameters.  For example:   pulldata('ref_data', 'name', 'code',  'AAAA1').   So
-  in this example the code is fixed and the lookup will not automatically be triggered.
 
 .. _filter-expressions:
 
@@ -320,10 +316,10 @@ The second version, 6 parameters, add the 'index' parameter and a 'filter type' 
 Index
 %%%%%
 
-The index starts at 1 and allows you to specify which of the multiple matching values you want. so if the index is 3 you
+The index starts at 1 and allows you to specify which of the multiple matching values you want. So if the index is 3 you
 will get the answer in the 3rd matching record.
 
-However instead of a number you can use one of the following aggregation functions as the index:
+Instead of a number you can use one of the following aggregation functions as the index:
 
   *  **sum** - The sum of all the records
   *  **mean** - The mean or average of the values
@@ -354,11 +350,12 @@ Example usage
 %%%%%%%%%%%%%
 
 .. csv-table:: Reviewing Multiple Complaints - 6 parameter version
+  :width: 160
+  :widths: 10,10,10,10,60,60
   :header: type, name, label, repeat_count, calculation, comment
-  :widths: 10,10,10,10,30,30
 
   calculate, number_recs, , ,"pulldata('linked_s11_2134', 'complaint_type', 'office', ${office}, 'count', 'matches')", returns the number of records for the selected office. The second parameter is ignored when using an aggregate function for the index.
-  begin_repeat, rpt, Complaints, int(${number_recs}), , Creates a repeat group for each matching complaint.  Note that the repeat count has to be cast to an integer as calculates have text value by default
+  begin_repeat, rpt, Complaints, int( ${number_recs} ), , Creates a repeat group for each matching complaint.  Note that the repeat count has to be cast to an integer as calculates have text value by default
   note, type, Complaint Type, , "pulldata('linked_s11_2134', 'complaint_type', 'office', ${office}, position(..), 'matches')", The pulldata function is almost the same as before except this time we are getting the value for the record number that corresponds to the position in the repeat.
   note, complaint, Complaint, , "pulldata('linked_s11_2134', 'complaint', 'office', ${office}, position(..), 'matches')", This time we get the details of the complaint as the value of the note
   end_repeat, rpt
