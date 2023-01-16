@@ -6,7 +6,7 @@ Installation
 .. contents::
  :local:
 
-If you are going to be using Android phones or Tablets to complete surveys then you will want to install FieldTask on these devices.  Alternatively
+If you intend to use Android phones or Tablets to complete surveys, then you will want to install FieldTask on these devices.  Alternatively
 you can complete surveys in browsers using Webforms.
 
 You can `get FieldTask from the Google Play store <https://play.google.com/store/apps/details?id=org.smap.smapTask.android>`_.  This is the easiest
@@ -14,26 +14,36 @@ way if you have a google account and are installing it on your own phone or tabl
 quickly.
 
 However if you are installing fieldTask on devices that will be shared then you definitely do not want to use your own google account as the
-phone user will have access to your gmail.  Also setting up google accounts just to install the app is tedious.  In this case a much better approach
+phone user will have access to your gmail.  Also setting up google accounts just to install the app is tedious.  In this case a better approach
 is to download fieldTask from the server.
 
 1. Download
 -----------
 
-In the internet browser on your phone enter the URL of your Smap Server.  If you are using the public server then that would be
-https://sg.smap.com.au.  Then select the FieldTask button.  The application will then be downloaded to your phone.
+For SmapServer 23.01 and above, fieldTask is downloaded from the download menu on the server home page. Using the internet browser on your phone enter the URL of your 
+Smap Server.  If you are using the public server then that would be https://sg.smap.com.au.  Then select the **download** menu and select **FieldTask**.  
+The application will then be downloaded to your phone.
 
-.. figure::  _images/installFT1.jpg
+.. figure::  _images/installFT1b.png
    :align:   center
    :width: 	 200px
    :alt:     Click on the fieldTask icon to download
 
    Download
    
+For versions of the server prior to 23.01 select the FieldTask button.
+
+.. figure::  _images/installFT1.jpg
+   :align:   center
+   :width: 	 200px
+   :alt:     Click on the fieldTask icon to download
+
+   Download the old way
+
 2. Viewing the state of your download
 -------------------------------------
 
-Drag down with your finger from the top of the screen in order to see how your download is progressing.  Then press on
+Drag down with your finger from the top of the screen in order to see how your download is progressing.  Then tap on
 the fieldTask apk to install it or upgrade.
 
 .. figure::  _images/installFT2.png
