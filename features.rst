@@ -22,6 +22,7 @@ Surveys
   audio questions, yes, yes
   :ref:`Read and record barcode and QR codes<barcode-questions>`,yes, no, 
   :ref:`Read and record NFC chip identifiers<nfc-questions>`,yes, no, 
+  :ref:`Read and match finger prints<feature-fingerprints>`,yes, no, SmapServer 23.01
   :ref:`background-audio-recording`, yes, no, FieldTask 6.300 - SmapServer 21.03
   :ref:`choices-from-repeat`,yes, yes, SmapServer 21.04
   :ref:`Matrix layout of questions<matrix>`,no, yes, 
@@ -99,6 +100,7 @@ Security
   :header: Feature, Versions
   :widths: 80,20
 
+  :ref:`Multiple isolated enterprises on a single server<enterprises>`
   :ref:`Multiple isolated organisations on a single server<organisations>`
   :ref:`Manage access to surveys by teams by using projects<projects>`
   :ref:`rbac`

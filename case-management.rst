@@ -20,4 +20,5 @@ Case Management
   launch-survey-from-survey.rst
   looking-up-data.rst
   read-only-surveys.rst
+  cm-threads.rst
   

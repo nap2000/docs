@@ -5,6 +5,7 @@ Tips and Tutorials
 .. toctree::
   :maxdepth: 1
 
+  tips-select-from-repeat.rst
   tips-online.rst
   tips-old-survey.rst
   tips-provide-copy-of-answers-to-respondent.rst

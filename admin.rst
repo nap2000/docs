@@ -5,8 +5,9 @@ Administration
   :maxdepth: 1
   
   admin-surveys.rst
-  admin-organisations.rst
   admin-projects.rst
+  admin-organisations.rst
+  admin-enterprises.rst
   admin-users.rst
   admin-mobiles.rst 
   admin-settings.rst
