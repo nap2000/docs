@@ -105,6 +105,7 @@ Security
   :ref:`Manage access to surveys by teams by using projects<projects>`
   :ref:`rbac`
   :ref:`password-strength`, 22.04
+  :ref:`html-sanitisation`, 23.02
   `Strong privacy committment <https://smap.com.au/privacy.shtml>`_
 
 
