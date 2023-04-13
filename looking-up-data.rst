@@ -167,7 +167,7 @@ Only this simple form of the search function can be used with WebForms.
 
 .. _look-up-filters:
 
-Filter the data (3 parameters)
+Filter the data (4 parameters)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 ::
@@ -192,7 +192,7 @@ The filter values for "in" and "not in" should be lists separated by spaces. Use
   that are used for the value and label of the choice.  In other words if you are going to call a CSV column "label" then make sure it does
   contain the label! 
 
-Double filter the data (5 parameters)
+Double filter the data (6 parameters)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Like the normal filter but with an extra "matches".

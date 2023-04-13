@@ -12,6 +12,10 @@ within the first, complete it, and then be returned automatically to your locati
 There are many applications for this feature. For example you could create a survey whose sole purpose was to 
 decide which survey really needs to be completed.
 
+.. warning::
+
+  Only works with FieldTask and not on WebForms
+
 .. note::
 
   This capability is similar to entering a subform using **begin repeat** (:ref:`xls-repeats`).  However sub forms are included within the main 

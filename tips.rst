@@ -16,3 +16,4 @@ Tips and Tutorials
   server-calculations.rst
   emails.rst
   quotes.rst
+  select-multiple-in-dashboard.rst

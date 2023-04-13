@@ -1,23 +1,17 @@
 .. _mobile_case:
 
-Cases on Mobile Devices
-=======================
+Updating Case Data
+==================
 
 Eligible Cases
 --------------
 
-Cases assigned to the device user that are not complete will be downloaded.
-
-
-.. note::
-
-  If you have not set up :ref:`complete_case` then no cases will be downloaded. However if you want to get cases on devices even without
-  case completion then you can set up a dummy status that will never be met to enable downloads of any assigned case. 
+Any case, or record, assigned to a user will appear in FieldTask or WebForms on the task tab.
 
 Icons
 -----
 
-The case will be shown on the tasks tab as a folder icon with a blue background if un-modified and a purlple background if modified,
+The case will be shown on the tasks tab as a folder icon with a blue background if un-modified and a purple background if modified,
 
 .. figure::  _images/cm-device1.png
    :align:   center

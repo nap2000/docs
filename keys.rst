@@ -3,7 +3,9 @@
 Survey Keys
 ===========
 
-Keys uniquely identify a record of data which can represent a "case".  
+Keys uniquely identify a record of data which can represent a "case". More generally the record can be linked
+to a "real" thing such as a person, some infrastructure or a complaint.  Then if a second record is submitted 
+with the same key, it will be combined with the existing data in a manner determined by the key policy. 
 
 These can be constructed automatically from the answers to questions in the
 survey.  A very simple case is when the key is recognised externally to Smap.  For example an identify number.  Then the key 
@@ -82,8 +84,9 @@ The above serial function will add a unique number to every record starting from
 
 .. note::
 
-  Using serial will make the key policy redundant because every submission will be unique.  However these keys can be used as
-  references since they are a unique identifier for a record that can be more human readable than the primary key.
+  Using serial will make the key policy redundant for new submissions because every new submission will be unique.  
+  However these keys can be used as references since they are a unique identifier for a record that can be more 
+  human readable than the primary key. 
   
 Specifying a non unique sequence number
 +++++++++++++++++++++++++++++++++++++++
