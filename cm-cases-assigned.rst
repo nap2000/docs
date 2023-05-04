@@ -2,7 +2,7 @@
 Cases vs Assigned Records
 =========================
 
-Sometimes we talk about a rocord assigned to a user as a "case", however to be a proper case a survey needs
+Sometimes we talk about a record assigned to a user as a "case", however to be a proper case a survey needs
 to have a status value that can be marked as closed. Here are the differences in more detail.
 
 Assigned Record

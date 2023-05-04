@@ -32,7 +32,6 @@ Notifications can be sent as:
 *  An email.
 *  An SMS.  Only if SMS has been enabled in the server settings (:ref:`admin-server`)
 *  Escalation (assignment) of a case to a user.
-*  Forwarding of a submission on to another Smap server. (obsolete)
 
 Adding
 ------
@@ -110,6 +109,7 @@ Settings are:
 *  Attach.  Attach a PDF of the record or a link to a Webform containing the data.
 *  Email.  One or more comma separated email addresses
 *  A question that contains the email address. (If the trigger is a submission of a completed survey)
+*  A checkbox to send an email to a user assigned to a case
 *  Subject.  The subject of the email.
 *  Content.  The body content of the email.  
    
@@ -143,24 +143,7 @@ Settings are:
 Forwarding Target
 +++++++++++++++++
 
-*  Host.  Where the survey results will be forwarded to. For example https://sg.smap.com.au
-*  User.  The user ident on the remote server
-*  Password. the password of the above user ident.  (See security warning below)
-*  Remote Survey.  The name of the survey on the remote server that the data will be forwarded to.
-
-.. warning::
-
-  The password of the user on the remote server will be stored on the server that you are forwarding from. This password will be
-  accessible by the IT systems administrator of this server.  Hence when setting up forwarding it is recommended that you create an
-  enum account that only has the security group **enum** to receive the forwarded results.  Do not use an administraot or analyst account.
-  
-After selecting a target of "Forwarding" a button will be shown labelled "Refresh Form List".  Once you have entered the
-host, remote user and remote user password, press this button to get a list of the remote surveys that you can send the data
-to. 
-
 .. note::
 
-  The remote survey does not need to be the same as the original survey.  If they are different then only questions in the remote survey
-  that have the same name as a question in the source survey will be updated.
-
+  Forwarding of emails to another server was retired in version 23.02 of the server.
 

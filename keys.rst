@@ -51,13 +51,13 @@ Results in::
   age: 21
   Address: 5 Smith St.
   
-Discard
+discard
 +++++++
 
 The new record will be discarded.  This prevents updates to records so should probably not be a common option.
 It can be used when you want the first record submitted for a key to be the authoratative record.
 
-Replace
+replace
 +++++++
 
 Similar to discard but this time the original record is replaced by the new one.
@@ -108,10 +108,34 @@ the sequence.  So in the product example there are 3 product_a records.  The nex
 is submitted the sequence number will be 4.  The next time a product_b record is submitted the sequence number
 will be 2.
 
+Including static text
++++++++++++++++++++++
+
+You can include some constant, unchanging, text in the key.  This shouldn't be all you use otherwise there will
+only be one unique record in your survey. Although perhaps there may be a use for that.  For example::
+
+  This is the key
+  Key Value - ${id}
+
+Specifying the key directly
++++++++++++++++++++++++++++
+
+Rather than allowing the server to generate a key you can create a question in your survey with a question name of::
+
+  _hrk
+
+This is the special name for the data item that holds the key.  The key policy, merge, discard etc, will still
+be applied but the server won't generate the key value unless it has not been set in your survey.  
+
+This approach is particularly useful when updating a record using another survey in a bundle.  The 
+second survey can look up the unique key to be updated using a search() function.  Then it can store this
+value in a question called _hrk and the original record will be updated.  
+  
 Specifying the key and key policy
 ---------------------------------
 
-In the online editor select the menu **File** then **Keys**
+In the online editor select the menu **Tools** then **Case Management**. Keys are the first tab of the case
+management page.
 
 In the XLSForm editor use the settings sheet.
 
