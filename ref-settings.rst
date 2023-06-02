@@ -4,7 +4,7 @@ Survey Settings
 ===============
 
 The following settings can be specified in the settings worksheet of the XLS editor.  When using the online
-editor they are specified in either the Settings Dialog or Keys Dialog as shown below.
+editor they are specified in either the Settings Dialog or Case Management Dialog as shown below.
 
 .. csv-table:: Settings:
   :width: 80

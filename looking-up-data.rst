@@ -88,7 +88,12 @@ Replace SOURCE with "linked\_"  followed by the ident of the survey.  In the fol
 
 
   search('linked_s3_23')
+  search('linked_self')
   search('linked_s3_23', 'matches', 'region_v', ${region})
+
+.. note::
+
+  Use linked_self to lookup data previously submitted in the same survey
 
 .. note::
 

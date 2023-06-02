@@ -4,7 +4,7 @@ Select Questions
 .. contents::
  :local:
  
-Select questions have choices and you put these choices into the choices sheet then connect them to the question using a "list_name".
+Select questions have choices and you put these choices into the choices sheet then connect them to the question using a "list_name". More details can be found in :ref:`question-types`.
 
 Select Types
 ------------

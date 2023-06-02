@@ -4,7 +4,8 @@ Settings
 .. contents::
  :local:
 
-The settings page is new from version `21.01`, previously it was part of the **users** page.
+The settings page can be accessed from the **Admin** module.  It has multiple tabs that allow you to configure
+various parts of the system.
 
 .. figure::  _images/settings.jpg
    :align:   center
@@ -13,6 +14,11 @@ The settings page is new from version `21.01`, previously it was part of the **u
    
    Settings Tabs
    
+.. note::
+
+  Each survey also has **Settings** which can be specified in the online editor or the settings tab of an XLSForm. 
+  Documentation on these can be found here, :ref:`settings-reference`.
+
 Appearance
 ----------
 
