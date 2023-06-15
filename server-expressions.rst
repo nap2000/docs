@@ -144,6 +144,10 @@ Date Intervals
 * {n_seconds}
 * {hh:mm:ss}
 
+Examples::
+
+  ${_upload_time} > (now() - {30_days})
+
 .. _server-expressions-cast:
 
 Converting to a different type
