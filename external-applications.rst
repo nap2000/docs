@@ -6,6 +6,9 @@ Launching Apps from a Survey
 .. _contents:
   :local:
 
+This page describes how to launch an external application from a form to capture data. Refer to
+:ref:`creating an external app<fcreating-external-app>` for information on how to create these apps.
+
 To Answer a single Question
 ---------------------------
 
