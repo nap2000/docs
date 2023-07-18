@@ -105,9 +105,12 @@ Resources
   
   **Example request**:
   
-  curl -u xxxx -i -X POST -H "Content-Type: multipart/form-data" -F "data=@phone.jpg" https://sg.smap.com.au/surveyKPI/upload/media
+  curl -u xxxx -i -X POST -H "Content-Type: multipart/form-data" -F "data=@phone.jpg" -F "itemName=my_phone" https://sg.smap.com.au/surveyKPI/upload/media
   
-  :query survey_id: The id of a survey if you want the media file to only be available to that survey.
+  :query data: The media file to upload.
+  :query surveyId: (Optional) The id of a survey if you want the media file to only be available to that survey.
+  :query itemName: (Optional, requires version 23.06) The name of the resource. The default is to use the filename without the extension.
+  :query action: (Optional, requires version 23.06) Set to "replace" in order to force replacement of an existing resource with the same name.
 
 .. _users-simple-api:
  

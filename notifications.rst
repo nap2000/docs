@@ -14,25 +14,6 @@ To get to the notifications page select the **Tasks** module and then **Notifica
 
    Notifications Page
    
-Trigger
--------
-
-The following can trigger a notification:
-
-*  A submission.  A result submitted from a survey.
-*  A task reminder.  If a task has not been completed within the specified time.
-*  A console update.  When a question is set to a specific value from the console.
-*  A case managmeent alert.
-
-Target
-------
-
-Notifications can be sent as:
-
-*  An email.
-*  An SMS.  Only if SMS has been enabled in the server settings (:ref:`admin-server`)
-*  Escalation (assignment) of a case to a user.
-
 Adding
 ------
 
@@ -47,18 +28,29 @@ The remaining settings will vary depending on the selections made for **trigger*
 
 .. note::
 
-  Notifications can be sent to multiple comma separated email addresses and SMS phone numbers.
+  Notifications can be sent to multiple comma separated email addresses.
 
-Submission Trigger
-++++++++++++++++++
+Trigger
+-------
 
-Trigger specific settings are:
+The following can trigger a notification:
+
+*  A submission.  A result submitted from a survey.
+*  A task reminder.  If a task has not been completed within the specified time.
+*  A console update.  When a question is set to a specific value from the console.
+*  A case managmeent alert.
+*  A periodic timer. Daily, weekly, monthly or yearly.
+
+Submission
+++++++++++
+
+Settings include:
 
 *  Survey whose submission triggers the notifications
 *  Filter. Restrict which records will trigger a notification.  For example:  "${age} > 80"
 
-Task Reminder Trigger
-+++++++++++++++++++++
+Task Reminder
++++++++++++++
 
 Task reminders can be specified for a task group.  All tasks created in that task group will then
 have reminders associated with them.
@@ -66,9 +58,9 @@ have reminders associated with them.
 .. warning::
 
   Only task groups that contain tasks generated automatically from submissions to a survey can have 
-  a reminder.  Ad-hoc task groups cannot as the tasks can be for multiple surveys.
+  a reminder.
 
-Trigger specific settings are:
+Settings include:
 
 *  Task Group that contains the tasks that will trigger this notification.
 *  Interval.  Duration after the task is created that the reminder will be sent if the task is not completed.
@@ -81,8 +73,8 @@ Trigger specific settings are:
   work if in the task group for "Initial Data" you specified "Pre-populate form with existing data" or "Update existing results".  
   If you specified "No Initial Data"  then the data for the email question is not retained in the task and it can't be used in a reminder notification.
 
-Console Update Trigger
-++++++++++++++++++++++
+Console Update
+++++++++++++++
 
 In this case the objective is to send a notification when an update is made to the survey via the console.  For example an administrator
 might approve a request.  The notification will be sent only when a specific value is set in a specific question.
@@ -101,15 +93,57 @@ The settings are:
   then the notification will not be triggered.  However if they set the region to "region 1" or it was already "region 1" then the notification will be
   triggered 
 
-Email Target
-++++++++++++
+Periodic
+++++++++
+
+Available with Smap 23.07.
+
+Periodic triggers run reports and automatically send them via email. The data in the report will be filterd by dates
+determined by the selected period.
+
+*  Daily: Data from the day before will be included.
+*  Weekly: Data from the previous week will be included.
+*  Monthly: Data from the previous month will be included.
+*  Yearly: Data from the previous year will be included.
+
+.. note::
+
+  Data submitted the same day that the report is generated will not be included.  So you can set a daily report to be created at 10am every monday and it will include data from the previous 7 days up until midnight on Sunday.
+
+.. note::
+
+  If you have set a start and end date in a report run automatically by a periodic notification, then these will be ignored.  However you can still set date ranges in the advanced filter for a report and these will be applied.
+
+The settings are:
+
+*  Report.  The report to run (only xlsx reports are supported). The report must be set up in the reports module as a public report.
+*  Target. Only email is available for periodic notifications
+*  Period. Daily, weekly, monthly or yearly
+*  Time. The time of day at which the trigger should fire
+*  Day of the week. (Only if weekly is set as the period)
+*  Day of the month. (Only if monthly or yearly is set as the period)
+*  Month.  (Only if yearly is set as the period)
+*  Email. A comma separated list of email addresses that should be sent the report
+*  Subject. The email subject.
+*  Content. The email content.
+
+Target
+------
+
+Notifications can be sent as:
+
+*  An email.
+*  An SMS.  Only if SMS has been enabled in the server settings (:ref:`admin-server`)
+*  Escalation (assignment) of a case to a user.
+
+Email
++++++
 
 Settings are:
 
-*  Attach.  Attach a PDF of the record or a link to a Webform containing the data.
+*  Attach.  Attach a PDF of the record or a link to a Webform containing the data. (Not available for periodic triggers).
 *  Email.  One or more comma separated email addresses
-*  A question that contains the email address. (If the trigger is a submission of a completed survey)
-*  A checkbox to send an email to a user assigned to a case
+*  A question that contains the email address. (If the trigger is a submission of a completed survey, not periodic triggrs)
 *  Subject.  The subject of the email.
 *  Content.  The body content of the email.  
    
@@ -130,8 +164,8 @@ For example::
 
   ${username} has submitted ${surveyname} with a value of age of ${age}.
   
-SMS Target
-++++++++++
+SMS
++++
 
 Settings are:
 
@@ -140,10 +174,17 @@ Settings are:
 *  SMS Sender Id.  The ID of the sender that is shown to the user when they receive the SMS message
 *  SMS content
 
-Forwarding Target
-+++++++++++++++++
+Escalation
+++++++++++
 
-.. note::
+An escalation assigns a case to a user.  The word usually means that the case has been reassigned to a different
+user because it has been "escalated" in importance, however it can be used to assign a user to an unassigned case.
 
-  Forwarding of emails to another server was retired in version 23.02 of the server.
+Settings are:
+
+*  User to assign
+*  The survey for the user to complete. The survey needs to be in the same bundle as the survey that triggered the notification.
+
+An escalation can be accompanied by emails.  The settings are similar to the "email" target with the addition of a 
+checkbox that allows you to send the email to the assigned user
 
