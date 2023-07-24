@@ -4,12 +4,13 @@ Deleting and Restoring Data
 .. contents::
  :local:
  
-There are 4 levels of data deletion each one more final than the previous ones.
+There are 5 levels of data deletion each one more final than the previous ones.
 
 #.  Marking as deleted
 #.  Deleting all records
 #.  Deleting the Survey Template and all its records
 #.  Erasing the survey Template and all its records
+#.  Purging of backups
 
 Marking Deleted
 ---------------
@@ -20,6 +21,7 @@ the console unless you specifically request to see them.
 .. note::
 
   Marking records as deleted is the recommended way to delete records that you don't want.  It leaves a clear audit trail and can easily be reversed if necessary.
+  That is the record is never physically deleted unless the survey is deleted.
 
 .. figure::  _images/delete1.jpg
    :align:   center
@@ -127,11 +129,20 @@ on "Erase Forms".
   Erased surveys can only be restored from data backups which requires work by IT operations.  So it won't happen unless you have a
   support contract.
 
+Purging Backups
+---------------
 
-   
-Automatically Deleted Records
------------------------------
+.. note::
 
-When a record is updated then the old record is marked as deleted.  You will see these with a reason that looks like "replaced by 123".  123 in
-this case being the primary key of the new updated record.
+  This applies only to hosted services provided by Smap Consulting.  If you are hosting the server youself
+  then it will be up to you to manage backups and set a backup policy.
+
+Backups of the database, media files, survey templates and the original xml files containing a submission are
+retained for 100 days after the survey is erased, then the backup is removed.
+
+.. warning::
+
+  Erased surveys can only be restored from data backups which requires work by IT operations.  So it won't happen unless you have a
+  support contract.
+
 
