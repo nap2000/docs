@@ -5,7 +5,7 @@ Question Names
 
 Question and choice names should have
 
-*  no spaces (use "_" to separate words)
+*  no spaces (use "_" or "-" to separate words)
 *  use letters only from the english alphabet
 *  can include numbers
 *  can include some punctuation including . - _

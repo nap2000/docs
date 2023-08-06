@@ -54,6 +54,13 @@ The question is linked to its list of choices through the list name.
   There is a space between the question type and the list name but there can be no spaces in the list name or the 
   question name.
 
+.. warning::
+
+  It is better to not allow choice names to have spaces.  If you want spaces in your results then instead you can
+  specify the alternate name / code in the display_name column.  However spaces within the choice name will mostly work
+  with select_one questions, although never with select_multiple.  If you are using these with select_one then when referring
+  to the question in a relevance you will need to use = instead of the selected function.
+
 Rank
 ----
 
