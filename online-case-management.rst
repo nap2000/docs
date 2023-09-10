@@ -31,7 +31,11 @@ On the settings tab specify:
 Alerts
 ------
 
-Alerts have a name and an interval after the case is created when the alert will be raised.
+Each alert has:
+
+*  A name
+*  An interval after the case is created when the alert will be raised
+*  A filter (Optional from release 23.09). If specified this restricts the records that will generate the alert
 
 .. figure::  _images/case2.jpg
    :align:   center
