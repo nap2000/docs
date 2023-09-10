@@ -9,8 +9,8 @@ There are 5 levels of data deletion each one more final than the previous ones.
 #.  Marking as deleted
 #.  Deleting all records
 #.  Deleting the Survey Template and all its records
-#.  Erasing the survey Template and all its records
-#.  Purging of backups
+#.  Erasing the survey Template and all its records (automatic and manual)
+#.  Purging of backups (automatic)
 
 Marking Deleted
 ---------------
@@ -104,8 +104,8 @@ Follow these steps to redirect the failing submissions:
 Deleting the Survey Template
 ----------------------------
 
-On the survey management page you can click the checkbox next to surveys you no longer want and then click the "Delete Forms" button at 
-the bottom of the page.  The surveys and all their data will be deleted.
+On the survey management page you can click the checkbox next to surveys you no longer want and then click the 
+"Delete Forms" button at the bottom of the page.  The surveys and all their data will be deleted.
 
 Restoring Deleted Surveys
 +++++++++++++++++++++++++
@@ -121,13 +121,16 @@ you want to restore and click the "Restore Forms" button.
 Erasing Survey Templates
 ------------------------
 
-Only deleted surveys can be erased.  Follow the steps for restoring deleted surveys but instead of clicking on "Restore Forms" click
-on "Erase Forms".  
+Only deleted surveys can be erased, this happens automatically after 100 days, however you can manually erase a deleted 
+survey at any time.  Follow the steps for restoring deleted surveys but instead of 
+clicking on "Restore Forms" click on "Erase Forms". The data has now been removed from the production
+server and only exists in backups. As these backups are purged after 100 days the timer is ticking if you
+change your mind and want to get the data back.  
 
 .. warning::
 
-  Erased surveys can only be restored from data backups which requires work by IT operations.  So it won't happen unless you have a
-  support contract.
+  Erased surveys can only be restored from data backups which requires work by IT operations.  
+  So it won't happen unless you have a support contract.
 
 Purging Backups
 ---------------
@@ -138,11 +141,6 @@ Purging Backups
   then it will be up to you to manage backups and set a backup policy.
 
 Backups of the database, media files, survey templates and the original xml files containing a submission are
-retained for 100 days after the survey is erased, then the backup is removed.
-
-.. warning::
-
-  Erased surveys can only be restored from data backups which requires work by IT operations.  So it won't happen unless you have a
-  support contract.
-
+retained for 100 days after the survey is erased, then the backup is purged.  The data is now gone for good and cannot
+be recovered.
 

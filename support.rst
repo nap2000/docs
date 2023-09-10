@@ -15,6 +15,9 @@ respond within 24 hours.
 Policies
 --------
 
+These policies apply to servers hosted by Smap Consulting and not servers running the Smap application hosted by third 
+parties or yourself.
+
 *  `Privacy Policy <https://www.smap.com.au/privacy.shtml>`_
 *  `Fraud Policy <https://www.smap.com.au/fraud_policy.shtml>`_
 
