@@ -10,7 +10,7 @@ about this page.
 Server Requirements
 -------------------
 
-*  One of the following Ubuntu LTS Server
+*  One of the following Ubuntu LTS Server versions
 
    *  22.04
    *  20.04
@@ -80,13 +80,18 @@ If your version of ubuntu does not have the multiverse and universe repositories
   cd smap/install
   sudo ./install.sh
 
+If the installer asks "Which services should be restarted", click ok, accepting the default values.
+
 After the installation script finishes you should be able to logon with your browser using::
 
   ident: admin
   password: admin
 
-If you have not set up an https certificate yet then the connection will be via http and you will be asked to enter your password 3 times.  
-Using https you will not have that problem.
+If you have not set up an https certificate yet then the connection will be via http and you will be asked to enter your password 4 times.
+Using https you will not have that problem.  If you can access the server now you should prioritise the addition of an SSL certificate as
+using only http some features will not work.
+
+refer to (:ref:`network-encryption`)
 
 Using a different location
 ++++++++++++++++++++++++++
@@ -191,6 +196,9 @@ Application logs::
 Subscriber logs::
 
   /var/log/subscribers/subscriber_default_upload.log
+
+
+_network-encryption:
 
 Network Encryption
 ------------------
