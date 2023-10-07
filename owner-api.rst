@@ -12,6 +12,7 @@ Queue State
 .. http:get:: /api/v1/queues/(text: queue name)
 
   :synposis: The queue state API allows you to view the real time status of the specified queue name.  This is one of 's3upload' or 'submissions'
+
   **Example request**:
 
   .. sourcecode:: http

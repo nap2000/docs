@@ -30,8 +30,10 @@ the console unless you specifically request to see them.
 
    Marking Records Deleted in the Console
    
-The :ref:`console` can be used.  Select the record you want to delete and then click the delete button. You can optionally
-enter a reason.
+The :ref:`console` can be used to mark a record as deleted.  Select the record and then click the delete button. 
+You can optionally enter a reason. This can also be done in a table view on the analysis page. There use the right mouse button
+to click on the cell in the column labeled "Marked Bad".  This column has a green or red background depending on whether or
+not the record has been deleted.
 
 Restoring Records marked as Deleted
 +++++++++++++++++++++++++++++++++++
@@ -73,8 +75,8 @@ Underneath the "Delete Data" button is the "Restore Data" button.  This will res
   Because the records are restored from the initial raw submissions, if you have done any data cleaning or updated the data via the console
   then these changes will be lost.
   
-Recovering (Level 2)
-++++++++++++++++++++
+Uploading data to a deleted survey
+++++++++++++++++++++++++++++++++++
 
 What if you have deleted a survey more than 100 days ago when you realise that a phone has some unsubmitted results. (Deleted surveys are erased after 100 days). 
 Or perhaps you manually erased the deleted survey in case it had sensitive data recorded in it.  In this case you can send the submitted results to any other

@@ -198,7 +198,7 @@ Subscriber logs::
   /var/log/subscribers/subscriber_default_upload.log
 
 
-_network-encryption:
+.. _network-encryption:
 
 Network Encryption
 ------------------

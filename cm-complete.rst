@@ -15,6 +15,7 @@ Criticality
 A question in a form can be specified as representing criticality.  You can then create charts showing the 
 criticality of the cases currently in the console.
 (:ref:`case-management-config`)
+
 .. _case_alerts:
 
 Alerts
