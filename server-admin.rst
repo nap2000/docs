@@ -212,7 +212,7 @@ Then::
 
   sudo certbot --apache certonly
 
-Apache > 2.4.7  
+Update the apache ssl configuration file /etc/apache2/sites-available/smap-ssl.conf to identify the certbot certificate files::
 
   SSLCertificateFile    /etc/letsencrypt/live/{domain name}/fullchain.pem
   SSLCertificateKeyFile /etc/letsencrypt/live/{domain name}/privkey.pem
