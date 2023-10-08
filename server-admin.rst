@@ -131,7 +131,7 @@ patchdb will update the database.  deploy.sh will replace the programs.  When yo
 Configuring for remote database
 -------------------------------
 
-#.  Add export DBHOST={remote database address} to /etc/environment
+#.  Add "export DBHOST={remote database address}" to /etc/environment
 #.  Find the "context.xml" file for tomcat.  It should be at /etc/tomcat[version]/context.xml. Then set the URL for the 2 datasources to match the URL of
     your remote database
 #.  Rerun deploy.sh
@@ -218,6 +218,8 @@ Update the apache ssl configuration file /etc/apache2/sites-available/smap-ssl.c
   SSLCertificateKeyFile /etc/letsencrypt/live/{domain name}/privkey.pem
 
 Create directory /var/log/certbot
+
+Edit /etc/apache2/sites-available/smap.conf to uncomment the line that redirect all http requests to https
 
 Setup Renewal
 +++++++++++++
