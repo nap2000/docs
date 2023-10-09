@@ -59,6 +59,7 @@ You should set the repeat count value to 0 for these repeating groups so that th
 For an example of the use of this parameter look at the consulting form in the medical product.
 "
 rows,rows=10,Will set the number of rows to be used for the answer in a text question.
+sentiment,sentiment=yes,Add to an auto annotate text question to get the sentiment in text rather than translate the text
 source,source=audio_q,Specifies another question that will be used as the source data.  This is used on the server for translations and transcriptions.
 stacked,stacked=yes,Use with horizontal bars to stack the data
 start,start=1,"Use with range questions to set the starting point of a range.  (end and step parameters must also be included)

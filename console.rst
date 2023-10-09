@@ -226,7 +226,7 @@ Automatic Translation
 The translation can be done automatically by `AWS Translate  <https://aws.amazon.com/translate>`_.  The following additional parameters
 need to be added to the question in the oversight form that is going to show the translation:
 
-#.  Add the parameter: auto_annotate=true
+#.  Add the parameter: auto_annotate=yes
 #.  Add a paramater **from_lang** with the value set to the language code of the source language
 #.  Add a parameter **to_lang** with the value set to the language code of the language you are translating to
 
@@ -240,7 +240,7 @@ Automatic Audio Transcription
 Audio can be done transcribed automatically using `AWS Transcribe  <https://aws.amazon.com/transcribe/>`_.  The following additional parameters
 need to be added to the text question in the oversight form that is going to show the transcription:
 
-#.  Add the parameter: auto=yes
+#.  Add the parameter: auto_annotate=yes
 #.  Add a paramater **from_lang** with the value set to the language code of the audio file
 
 The above parameters are required in addition to the "source" parameter identifying the question that contains the original audio file.
@@ -252,7 +252,9 @@ Medical Transcriptions
 
 If the audio file contains medical terms then you can add some additional parameters to use `AWS Transcribe  Medical <https://aws.amazon.com/transcribe/medical>`_
 
+#.  Add the parameter: auto_annotate=yes
 #.  Add the parameter: medical=yes
+#.  Add a parameter to identify the source question which must be of type 'audio':  source=qname
 #.  Set the audio type to either "dictation" or "conversation":  med_type=dictation
 
 Only US English is supported as a language for madical transcriptions.
@@ -263,11 +265,28 @@ Automatic Labelling of Images
 Images can be labelled automatically using `AWS Rekognition  <https://aws.amazon.com/rekognition/>`_.  The following additional parameters
 need to be added to the text question in the oversight form that is going to show the transcription:
 
-#.  Add the parameter: auto=yes
+#.  Add the parameter: auto_annotate=yes
+#.  Add a parameter to identify the source question which must be of type 'image':  source=qname
 
 The above parameter is required in addition to the "source" parameter identifying the question that contains the original image file.
 
 :ref:`language-codes-audio` 
+
+Automatic Sentiment Analysis
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A sentiment can be automatically calculated for text responses entered in any of the following languages;
+English, German, Spanish, Italian, Portuguese, French, Japanese, Korean, Hindi, Arabic and Chinese.
+This is done using Amazon Web Services (AWS) Comprehend service. The sentiment can have one of the following
+values; Positive, Negative, Neutral or Mixed. A confidence value in the sentiment can also be generated.
+
+#.  Add the parameter: auto_annotate=yes
+#.  Add the parameter: sentiment=yes
+#.  Add a parameter to identify the source question:  source=qname
+#.  Add a parameter to specify the from language:  from_lang=en
+
+
+The above parameter is required in addition to the "source" parameter identifying the question that contains the original image file.
 
 Using a webform
 +++++++++++++++
