@@ -59,7 +59,24 @@ of a notification will be selectable.  In the notification you can specify the n
 contains the number.  The message to be sent can be specified in the "content" section of the notification.  You can include items from the 
 submitted data in the content by using the ${question_name} syntax.
 
+
 .. warning::
 
   SMS messaging may result in a cost.  Hence it cannot be set up at the organisational level and can only be 
   enabled in the server settings.
+
+API requests per minute
+-----------------------
+
+If set to 0 then there is no limit.  Otherwise this value sets the maximum number of API requests per
+organisation per module per minute.  Currently the API services managed by this limit are:
+
+*  /api/v1/data
+*  /api/v1/data.csv
+*  /surveyKPI/items
+
+Minimum Password Strength
+-------------------------
+
+If set then this will specify the minimum password strength allowed on the server.  The actual strength used
+will be the higher of this value and the minimum password strength of an organisation.
