@@ -455,6 +455,12 @@ Records the date and time
 
   dateTime, started, When did you start the project?
 
+calculate
+---------
+
+Specify the calculation in the calculation column.  This type is not shown to the user so it does not
+have a label.
+
 select
 ------
 
@@ -1461,6 +1467,9 @@ Calls an external application to get a file for upload.  You can create your own
 
 Server Side Calculations
 ------------------------
+
+**Type**
+  server_calculate
 
 These question types can be defined in a survey but they are not used to complete a survey. Instead they can calculate additional derived
 information when the survey results are analysed or exported from the server.

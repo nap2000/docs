@@ -15,10 +15,21 @@ Shared resources are made available to all surveys in an organisation.  They con
 *  Maps used on the server for analysis
 *  Locations
 
-Media / CSV Files
+CSV Files
 -----------------
 
-Images, video, audio and CSV files loaded here can be used by any survey.
+CSV files loaded here can be used by any survey.
+
+*  A CSV file can be added by uploading a CSV file (surprise!) or an XLSX file.
+*  In the upload dialog box you can specify the name that is used to reference the CSV data
+*  You cannot upload a file with the same name as an existing file, instead use the "replace" button to replace the existing file.
+*  A history is kept of changes to each CSV file.  Select the history button next to the shared resource file to view. This history includes the original uploaded file but only for the last 10 uploads.  Earlier uploads are deleted and the download button is disabled.
+*  The download button on the CSV page will download the CSV contents as used in surveys.  If you are editing in an XLSX file, which is recommended, then you can go to the history page and download the latest XLSX version of the data as it was originally uploaded.
+
+Media Files
+-----------------
+
+Images, video, audio files loaded here can be used by any survey.
 
 .. _shared-maps:
 
