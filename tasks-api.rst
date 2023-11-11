@@ -297,6 +297,8 @@ Create a Task
 
   **Example request 2**:
 
+Initial data is included in the task.   In this second example the task "id" is specified hence the existing task will be updated.
+
   .. sourcecode:: http
 
     HTTP/1.1 200 OK
@@ -311,7 +313,6 @@ Create a Task
       "assignee_ident": "neil",
       "generate_user": false,
       "initial_data_source": "task",
-      "update_id": "uuid:7df6eb5f-c4b0-4837-9063-09653078782a",
       "from": "2020-02-06 01:37:42",
       "repeat": false,
       "repeat_count": 0,
@@ -321,8 +322,7 @@ Create a Task
       "assign_auto": false,
       "initial_data": {
         "values": {
-          "q1": "hello 2",
-          "instanceid": "uuid:7df6eb5f-c4b0-4837-9063-09653078782a"
+          "q1": "hello 2"
         },
         "point_geometry": {
           "coordinates": [
@@ -345,8 +345,6 @@ Create a Task
       "assignee_name": "neil",
       "status": "accepted"
     }
-  
-  In this second example the task "id" is specified hence the existing task will be updated. Also this example includes initial data for form to use.
 
   **Example Response:**
 
@@ -375,8 +373,7 @@ Create a Task
           "assign_auto": false,
           "initial_data": {
               "values": {
-                  "q1": "hello 2",
-                  "instanceid": "uuid:7df6eb5f-c4b0-4837-9063-09653078782a"
+                  "q1": "hello 2"
               },
               "point_geometry": {
                   "coordinates": [
@@ -402,6 +399,45 @@ Create a Task
             "webform": "https://ubuntu1804.smap.com.au/webForm/s1_37?taskkey=13&assignment_id=0"
         }
       }
+
+ **Example request 3**:
+
+Initial data is obtained from an existing record.  Hence the initial_data_source is set to "survey" and the
+instanceId of the record to update is included as "update_id".
+
+  .. sourcecode:: http
+
+    HTTP/1.1 200 OK
+    Vary: Accept
+    Content-Type: application/x-www-form-urlencoded
+
+    {
+      "tg_id": 4,
+      "name": "xxxx : A project : geopoint",
+      "form_id": 37,
+      "survey_ident": "s1_37",
+      "assignee_ident": "neil",
+      "generate_user": false,
+      "initial_data_source": "survey",
+      "update_id": "uuid:7df6eb5f-c4b0-4837-9063-09653078782a",
+      "from": "2020-02-06 01:37:42",
+      "repeat": false,
+      "repeat_count": 0,
+      "lon": 153.013277,
+      "lat": -27.445506,
+      "complete_all": true,
+      "assign_auto": false,
+      "show_dist": 0,
+      "id": 9,
+      "tg_name": "xxxx",
+      "p_id": 0,
+      "a_id": 9,
+      "survey_name": "geopoint",
+      "blocked": false,
+      "assignee": 2,
+      "assignee_name": "neil",
+      "status": "accepted"
+    }
 
   :query preserveInitialData: When updating an existing task that already has initial data you can choose to not include initial_data
          and to set this parameter to either preserve the existing data or clear it.  One of `true` or `false`
