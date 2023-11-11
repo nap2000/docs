@@ -304,7 +304,7 @@ Create a Task
     Content-Type: application/x-www-form-urlencoded
 
     {
-      "tg_id": 4d": 4,
+      "tg_id": 4,
       "name": "xxxx : A project : geopoint",
       "form_id": 37,
       "survey_ident": "s1_37",
