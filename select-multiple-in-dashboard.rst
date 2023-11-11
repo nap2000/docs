@@ -18,8 +18,8 @@ here is data from a question asking for the titles applicable to a criminal comp
    Unlawful_Wounding
    In_possession_of_Dangerous_Drug Conveying_of_D/Drugs Stealing_Minor
 
-Exporting for Analsysis
------------------------
+Exporting for Analysis
+----------------------
 
 By default when you export select multiples they are converted into one column per choice, so a question with
 10 choices would be exported in 10 columns.  The value put
