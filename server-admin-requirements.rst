@@ -26,7 +26,7 @@ Max connections in postgresql.conf: 400
 
 /etc/default/tomcat[x]
 
-*  JAVA_OPTS="-Djava.awt.headless=true -Xms512m -Xmx768m"
+*  JAVA_OPTS="-Djava.awt.headless=true -Xms768m -Xmx768m"
 
 Medium Server (4 GB RAM)
 ------------------------

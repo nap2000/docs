@@ -293,7 +293,10 @@ Create a Task
        "from": "2019-04-15 01:48:17",
        "to": "2019-04-15 02:48:17"
     }		   
-  
+
+  Notes:
+
+    #. survey_ident identifies the survey that will be used to complete the task.  You may see the deprecated integer value form_id sometimes also used for this purpose, avoid it if you have the survey identifier.
 
   **Example request 2**:
 
@@ -308,7 +311,6 @@ Initial data is included in the task.   In this second example the task "id" is 
     {
       "tg_id": 4,
       "name": "xxxx : A project : geopoint",
-      "form_id": 37,
       "survey_ident": "s1_37",
       "assignee_ident": "neil",
       "generate_user": false,
@@ -360,7 +362,6 @@ Initial data is included in the task.   In this second example the task "id" is 
         "task": {
           "tg_id": 4,
           "name": "xxxx : A project : geopoint",
-          "form_id": 37,
           "survey_ident": "s1_37",
           "generate_user": false,
           "initial_data_source": "task",
@@ -414,7 +415,6 @@ instanceId of the record to update is included as "update_id".
     {
       "tg_id": 4,
       "name": "xxxx : A project : geopoint",
-      "form_id": 37,
       "survey_ident": "s1_37",
       "assignee_ident": "neil",
       "generate_user": false,
