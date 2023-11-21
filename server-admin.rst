@@ -19,3 +19,4 @@ about this page.
   server-admin-aws.rst
   server-admin-disk.rst
   server-admin-development.rst
+  database.rst
