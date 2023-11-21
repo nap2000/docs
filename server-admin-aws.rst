@@ -67,17 +67,5 @@ Add the lines::
 Automatic Device Synchronisation
 --------------------------------
 
-Uses AWS Mobile Hub
-
-DynamoDB table
-++++++++++++++
-
-The dynamoDB table shuld have the following items:
-
-*  registrationid
-*  smapServer
-*  userIdent
-
-Partition Key
-
-*  registrationid
+Livefarm have contributed a PDF containing a detailed description of the process to set up push notifications to devices.  This can
+be downloaded from here: https://smap-documents.s3.amazonaws.com/studentEnrollment+minimal.pdf.
