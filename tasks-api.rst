@@ -296,6 +296,7 @@ Create a Task
 
   Notes:
 
+    #. tg_id is the task group id within which the task will be created.  You can get the id of task groups using the API to list these.
     #. survey_ident identifies the survey that will be used to complete the task.  You may see the deprecated integer value form_id sometimes also used for this purpose, avoid it if you have the survey identifier.
 
   **Example request 2**:
