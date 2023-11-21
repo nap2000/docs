@@ -38,17 +38,20 @@ Assignments
 
 Assignments hold details on people who have been assigned to complete a task including:
 
-  *  Status
-    * closed
-    * cancelled
-    * complete
-    * deleted
-    * submitted
-    * error
-    * rejected
-    * pending
-    * new
-    * accepted
-  * assignee. The user ident of the person assigned a task
-  * email. The email address on the assignee if this is an email task.
-  * action_link. The URL of assignment details to include in email tasks.
+*  Status
+
+   * closed
+   * cancelled
+   * complete
+   * deleted
+   * submitted
+   * error
+   * rejected
+   * pending
+   * new
+   * accepted
+
+*  assignee. The user ident of the person assigned a task
+*  email. The email address on the assignee if this is an email task.
+*  action_link. The URL of assignment details to include in email tasks.
+
