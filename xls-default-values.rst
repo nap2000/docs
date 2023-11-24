@@ -101,6 +101,29 @@ Now the default value is set when the question is shown.
 You can also use :ref:`trigger-calculation` to get the same result as you can set the trigger to be the referenced
 question from which you are getting the default.  The calculation will then only be updated when that value changes.
 
+Dynamic Defaults in Repeats
+---------------------------
+
+You can use a entered in a previous repeat instance to calculate the default in the next repeat instance.
+Requires version 23.11 of the Smap Server.  An "xpath" expression ise specified as the default value for
+a question inside a repeat.  You can modify the following example to get what you need.
+
+For example in the following survey the value of observation_id will default to "1" for the first instance and
+then increment by 1, for each additional repeat instance.
+
+.. csv-table:: Survey Worksheet
+  :header: type, name, label, default
+
+  begin repeat, observations, Observations,
+  int, observation_id, ID , "if(position(..)=1,1,(${observations}[position() = position(current()/..) - 1]/observation_id)+1)"
+  end repeat
+
+*  "${observations}" refers to the name of the repeat.
+*  "position(current()/..) - 1" refers to a value in the previous repeat instance
+*  "/observation_id" refers to the value in the observation_id question
+*  "+ 1"  adds one to that value
+
+
 Dynamic Images
 --------------
 
