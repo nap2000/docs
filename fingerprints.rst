@@ -25,10 +25,23 @@ This reader plugs into the USB port on the phone which is running fieldTask. Ass
 
 Website:  https://www.mantratec.com/products/Fingerprint-Sensors/MFS100-Fingerprint-Scanner
 
+Mantra MFS500
++++++++++++++
+
+*  Produced by: Mantratec
+*  Cost:  Approximately 80 USD
+
+This reader plugs into the USB port on the phone which is running fieldTask. Assuming this port on the phone is USB-C then you will also need a USB-C to USB-A adapter.
+
+Website:  https://www.mantratec.com/products/Fingerprint-Sensors/MFS500
+
 Reader App
 ----------
 
-Smap Fingerprint reader can be downloaded onto the device from the server home page under the download menu.  
+There are currently two reader apps one for each of the two supported Mantra fingerprint readers.  The MFS500 version is
+going to be updated to support MFS100 as well but we are not there yet.
+
+Smap Fingerprint reader can be downloaded onto the device from the server home page under the download menu.
 To do this use a browser on the device to go to the server home page and select the download menu.
 
 .. figure::  _images/fp-download.jpg
@@ -37,7 +50,16 @@ To do this use a browser on the device to go to the server home page and select 
 
    Downloading the fingerprint reader
 
-This app is an extension of the opensource Keppel app, the extension being to capture fingerprints as an image, Keppel only supports the ISO 19794-4 fingerprint template.
+Old Version - MFS100
+++++++++++++++++++++
+
+This app is an extension of the opensource Keppel app, the extension being to capture fingerprints as an image,
+Keppel only supports the ISO 19794-4 fingerprint template.
+
+New Version - MFS500
+++++++++++++++++++++
+
+A custom reader that uses the MFS500 API.
 
 The form
 --------
