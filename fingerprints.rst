@@ -100,3 +100,28 @@ Matching Algorithm
 Smap is using an open source fingerprint matching tool called `SourceAFIS <https://sourceafis.machinezoo.com/algorithm>`_. Commercial alternatives offer more 
 accurate matching however being open source results in a more sustainable system. Organisations collecting fingerprints should also investigate using fieldTask 
 to collect fingerprints that can be used to train an Artificial Intelligence system to find matches.
+
+Linkage Cache
++++++++++++++
+
+Fingerprint data is stored in a cache, this includes:
+
+*  The fingerprint template generated from the fingerprint image
+*  A link to the original image
+*  The survey identifier
+*  The question containing the data
+*  The instance identifier that identifies the record
+
+This cache will need to be rebuilt when initialising fingerprint matching. From
+then each time a new fingerprint is added to the system it will be inserted into the cache.
+
+Rebuilding the linkage cache will:
+
+*  Get a list of every question that captures a fingerprint
+*  Create a record in the table for every instance in those questions
+
+Fingerprint Templates
++++++++++++++++++++++
+
+Matching is done between fingerprint templates and not images.  The forward batch file computes this for all
+images in the linkage table that do not have a template.

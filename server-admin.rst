@@ -17,6 +17,7 @@ about this page.
   server-admin-logs.rst
   server-admin-network-encryption.rst
   server-admin-aws.rst
+  server-admin-s3.rst
   server-admin-disk.rst
   server-admin-development.rst
   database.rst
