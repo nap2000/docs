@@ -19,13 +19,15 @@ by default the would be **Question Text**.
 
 Then for each question you can toggle the question between required and not required.
 
-
-.. figure::  _images/onlineRequired2.jpg
+.. figure::  _images/onlineRequired2.png
    :align:   center
    :width:   300px
    :alt:     Setting required on each question
    
    Setting required on each question
+
+If a question is set as required then you can optionally add an expression that makes this conditional.  If you
+leave that expression blank then the question will always be required.
 
 Set or unset all questions as required
 --------------------------------------

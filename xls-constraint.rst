@@ -65,6 +65,19 @@ To make a question required::
    :alt: Required
 
    Required
+
+Dynamic Required
+++++++++++++++++
+
+The question can be made required only if a condition is satisfied.  To do this specify an expression in the required column.
+
+.. csv-table:: Survey Worksheet
+  :header: type, name, label, required, required_message
+
+  select_one yes_no, required_q, should the next question be mandatory?
+  text, situation, Describe the situation, ${required_q} = 'yes', You must answer
+
+This works for both FieldTask and WebForms.
    
 Complex constraints on multiple Questions
 -----------------------------------------
