@@ -4,8 +4,8 @@ Making Questions Read Only
 .. contents::
  :local:
 
-Set the property to be edited to **Read Only**. The properties menu shows always the property that is currently selected
-by default this is **Question Text**.
+Set the property to be edited to **Read Only**. The properties menu shows the property that is currently selected
+, the default property is **Question Text**.
 
 Then for each question you can toggle the question between read only and updatable.
 

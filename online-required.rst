@@ -7,8 +7,8 @@ Making Questions Required
 Individual Questions
 --------------------
 
-Set the property to be edited to **Required**. The properties menu shows always the property that is currently selected
-by default this is **Question Text**.
+Set the property to be edited to **Required**. The properties menu shows the property that is currently selected
+, the default property is **Question Text**.
 
 .. figure::  _images/onlineRequired1.jpg
    :align:   center
