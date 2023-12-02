@@ -78,7 +78,26 @@ The question can be made required only if a condition is satisfied.  To do this 
   text, situation, Describe the situation, ${required_q} = 'yes', You must answer
 
 This works for both FieldTask and WebForms.
-   
+
+Making the Question Read Only
+-----------------------------
+
+Often, instead of making a text question read only, the note type is used which has the same effect.  However you
+can make other question types read only by specifying "yes" in the readonly column.
+
+Dynamic Read Only
++++++++++++++++++
+
+The question can be made read only, only if a condition is satisfied.  To do this specify an expression in the readonly column.
+
+.. csv-table:: Survey Worksheet
+  :header: type, name, label, readonly, default
+
+  select_one yes_no, changed, Has the address changed?
+  text, address, Address, ${changed} = 'yes', Fleet Street
+
+This only works for both FieldTask and not WebForms.
+
 Complex constraints on multiple Questions
 -----------------------------------------
 

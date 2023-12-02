@@ -10,6 +10,7 @@ Access the tools from the online editor main menu.
   :maxdepth: 1
 
   online-required.rst
+  online-read-only.rst
   online-translations.rst
   online-validate.rst
   change-history.rst

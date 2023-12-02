@@ -7,23 +7,23 @@ Making Questions Required
 Individual Questions
 --------------------
 
-Select the required property. The properties menu shows always the property that is currently selected
-by default the would be **Question Text**.
+Set the property to be edited to **Required**. The properties menu shows always the property that is currently selected
+by default this is **Question Text**.
 
 .. figure::  _images/onlineRequired1.jpg
    :align:   center
-   :width:   300px
+   :width:   500px
    :alt:     Selecting the required property
-   
+
    Selecting the Required Property
 
 Then for each question you can toggle the question between required and not required.
 
 .. figure::  _images/onlineRequired2.png
    :align:   center
-   :width:   300px
+   :width:   500px
    :alt:     Setting required on each question
-   
+
    Setting required on each question
 
 If a question is set as required then you can optionally add an expression that makes this conditional.  If you
