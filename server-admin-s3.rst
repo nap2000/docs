@@ -60,14 +60,14 @@ Important if may be necessary to specify access to the VPC of the EC2 server (wa
     ]
   }
 
-The access to attachments in the apache config file "smap-volatile.conf" will need to be overridden.
+The access to attachments, in the apache config file "smap-volatile.conf", will need to be overridden.
 The volatile-conf file contains the latest apache http server access rules, however it is a generic file that is used for all installations, it also will get replaced
 every time you deploy an update to the server.
 
 In this case we have to also allow access to attachments from the installed server.  This is required when embedding media into PDF files and when
 media needs to be included in a report. If the media is stored locally this is not a problem as the local file is accessed, however when it is stored
-in S3 permission needs to be provided to call the URL.  We don't want to provide a hardcoded password as this will be viewable in the source, instead we
-want the Apache web server to forward the request if it comes from the local server.  This change should be made to smap-ssl.conf in /etc/apache2-sites-available.  Add
+in S3, permission needs to be provided to call the URL.  We don't want to provide a hardcoded password as this will be viewable in the source, instead we
+want the Apache web server to forward the request if it comes from the local server without requiring a logon.  This change should be made to smap-ssl.conf in /etc/apache2-sites-available.  Add
 the following Location directive directly after the line that includes smap-volatile, so it will look like the following::
 
   Include sites-available/smap-volatile.conf
