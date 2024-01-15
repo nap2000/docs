@@ -25,30 +25,22 @@ Linking data between the surveys
 --------------------------------
 
 When you launch another survey you may want to be able to connect the data between the two surveys.
-This is done by specifying a question in one of the surveys that will hold a key pointing to a record in the other.
+This is done by specifying a question in each of the surveys that will hold a key pointing to the record in the other.
 
 .. note::
 
-  If you specify a question to hold a linking key then the relationship between the two surveys is one to many.  That is a single record in one of
-  the surveys can be referenced by many records in the other.  The question is: which survey has the single record and which has the many?  This leads
-  to the concept of a **parent** survey and a **child** survey.  The parent can have many children but, in this world of surveys, a 
-  child can have only one parent.
+  Adding keys to link two records, one of which is launched from the other, is only available when launching surveys from fieldTask.  When
+  using WebForms these links are not set.
 
-  When launching a new survey you can choose that it be a child or a parent of the first survey.  If you are not linking the data between the
-  surveys then it does not matter which one you choose.  
-  
-  the following examples are going to be based on the **parent** survey being a class in a school and the **child** survey being a pupil 
-  in that school.
-
-Example 1 - Launch the Class Survey(Parent) from a Pupil Survey (Child)
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Example 1 - Launch the Class Survey from a Pupil Survey
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Lets assume you are completing a survey to get details on a pupil and you want to note the class that they are attending.  However that class is not
-currently available to be picked.  Hence the class survey is launched as a **parent form/survey** and you specify that the key created by the 
+currently available to be picked.  Hence you will want to specify that the key created by the
 class survey should be stored in the **class** question of the **Pupil survey**.
 
 The :ref:`online-editor` offers good support for launching surveys.  So first create the Pupil survey using the online editor 
-then add a Parent Survey question type.
+then add a "Launch Survey" question type.
 
 .. figure::  _images/launch1.png
    :align:   center
