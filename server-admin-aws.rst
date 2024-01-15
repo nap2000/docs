@@ -67,5 +67,5 @@ Add the lines::
 Automatic Device Synchronisation
 --------------------------------
 
-Livefarm have contributed a PDF containing a detailed description of the process to set up push notifications to devices.  This can
+A PDF containing a detailed description of the process to set up push notifications to devices can
 be downloaded from here: https://smap-documents.s3.amazonaws.com/SMAP+AWS+Push+Notification+Set-Up.pdf.
