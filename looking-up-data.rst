@@ -276,7 +276,7 @@ current survey as usual. However to refer to columns in the csv file or referenc
 You can also enclose the whole expression in double quotes.  This allows you to use single quotes around text values.  
 For example  "#{city} = 'london'"
 
-When using an expression to get data may need to "cast" values to integer or decimal.  
+Data values may need to be "cast" to integer or decimal types.
 This is because all CSV data is stored as text. For example if you have a filter expression like "#{age} < ${max_age}". 
 Here #{age} is the age value in the csv table and you will need to change your expression 
 to "cast( #{age} as integer ) < ${max_age}".  Refer to :ref:`server-expressions-cast` for more details.
