@@ -25,22 +25,30 @@ Linking data between the surveys
 --------------------------------
 
 When you launch another survey you may want to be able to connect the data between the two surveys.
-This is done by specifying a question in each of the surveys that will hold a key pointing to the record in the other.
+This is done by specifying a question in one of the surveys that will hold a key pointing to a record in the other.
 
 .. note::
 
-  Adding keys to link two records, one of which is launched from the other, is only available when launching surveys from fieldTask.  When
-  using WebForms these links are not set.
+  If you specify a question to hold a linking key then the relationship between the two surveys is one to many.  That is a single record in one of
+  the surveys can be referenced by many records in the other.  The question is: which survey has the single record and which has the many?  This leads
+  to the concept of a **parent** survey and a **child** survey.  The parent can have many children but, in this world of surveys, a
+  child can have only one parent.
 
-Example 1 - Launch the Class Survey from a Pupil Survey
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  When launching a new survey you can choose that it be a child or a parent of the first survey.  If you are not linking the data between the
+  surveys then it does not matter which one you choose.
+
+  the following examples are going to be based on the **parent** survey being a class in a school and the **child** survey being a pupil
+  in that school.
+
+Example 1 - Launch the Class Survey(Parent) from a Pupil Survey (Child)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Lets assume you are completing a survey to get details on a pupil and you want to note the class that they are attending.  However that class is not
-currently available to be picked.  Hence you will want to specify that the key created by the
+currently available to be picked.  Hence the class survey is launched as a **parent form/survey** and you specify that the key created by the
 class survey should be stored in the **class** question of the **Pupil survey**.
 
 The :ref:`online-editor` offers good support for launching surveys.  So first create the Pupil survey using the online editor 
-then add a "Launch Survey" question type.
+then add a Parent Survey question type.
 
 .. figure::  _images/launch1.png
    :align:   center
@@ -59,7 +67,7 @@ You will then be asked to add parameters.
    Set the parameters
    
 #.  Select the survey to launch, in this example its the **class** survey
-#.  Select the question in the child survey in which to store the key. Optional, but since we want to link the pupil to the class 
+#.  Select the question in the child survey in which to store the key. Optional, but since we want to link the pupil to the class
     we are going to do this.  This question has to accept an answer that is of type text.  As well as text questions, select_one,
     calculates, barcodes all store their data as text.	The online editor will present the valid questions that you can select. 
 #.  Select Auto Play if you want the class survey to be launched without the user having to press a button.
@@ -70,7 +78,7 @@ Example 2 - Launch a Child Survey
 
 Alterntively you may be completing a survey on classes and realise that you have not registered a child that you want to enroll in the class.
 Follow the same steps as for creating the parent survey but this time select the **child survey / form** question type.   When you are asked
-where you want to place the key, the questions shown will be from the child survey. 
+where you want to place the key, the questions shown will be from the child survey.
 
 Making use of linkages between Surveys
 ++++++++++++++++++++++++++++++++++++++
@@ -86,6 +94,9 @@ so that they are not directly visible in fieldTask.  To do this go to the survey
 
 Passing data to the launched survey
 -----------------------------------
+
+Initial Data
+++++++++++++
 
 Available with Smap Server 20.09+
 
@@ -106,6 +117,16 @@ launching form.  In the above example the question called "name" in the launched
 .. note::
 
   When getting intial data from the launching form you can only refer to data in it's top level form.  That is not within a repeating group.
+
+Update an existing Record
++++++++++++++++++++++++++
+
+Available with Smap Server 24.01+ Only available with webforms.
+
+You can speify the instance of the record to be updated as a parameter called "instance"::
+
+  instance=${instance_to_update}
+
 
 Tutorial - Launching a Parent Survey
 ------------------------------------
