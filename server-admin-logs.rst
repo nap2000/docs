@@ -16,4 +16,5 @@ Application logs::
 Subscriber logs::
 
   /var/log/subscribers/subscriber_default_upload.log
+  /var/log/subscribers/subscriber_default_forward.log
 
