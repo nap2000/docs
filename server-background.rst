@@ -42,27 +42,31 @@ SubscriberBatch(Upload)
 
 #.  Get pending upload events from the upload_event table (No Limit!)
 #.  For each upload event
+
   *  Uploads the XML file and applies it to the database (SubRelationalDB::upload)
+
     #.  Writes the XML to the database
     #.  Processes Foreign Keys  [Move to async process]
     #.  Apply Submission Events (Notifications, Tasks etc connected to a submission) [Move to separate queue]
     #.  Updates Assignment status [minimal load - leave]
+
   *  Update the uploaded XML files with changes made to media paths
   *  If an S3 bucket is enabled sends the attachments to S3 [The bulk of this is already in a separate queue]
 
 AutoUpdateProcessor
 +++++++++++++++++++
 
-#. Checks for pending asynchronous jobs that have completed. This is currently just for audio transcriptions.  Jobs that
-have taken longer than 24 hours are marked as timed out. The output of completed jobs is written to the results
+#.  Checks for pending asynchronous jobs that have completed. This is currently just for audio transcriptions.  Jobs that have taken longer than 24 hours are marked as timed out. The output of completed jobs is written to the results
 database.
 #.  Gets a list of questions that have requested auto updates from AWS. (AutoUpdateManager::identifyAutoUpdates)
 #.  For each auto update question apply auto updates (AutoUpdateManager::applyAutoUpdates)
+
   *  For each record get the instance id and question value then apply one of:
   *  AUTO_UPDATE_IMAGE
   *  AUTO_UPDATE_AUDIO
   *  AUTO_UPDATE_TEXT
   *  AUTO_UPDATE_SENTIMENT
+
 #.  Then writes result to database, For audio this is just to write a "Pending" status value into the output question
 
 SubscriberBatch(Forward)
@@ -98,11 +102,13 @@ Queues
 #.  Submissions (shown in queue service)
 #.  S3 upload (shown in queue service)
 #.  Messages - topics
+
   *  TOPIC_SUBMISSION, TOPIC_CM_ALERT
   *  TOPIC_REMINDER
   *  EMAIL_TASK - an email generated for a task
   *  TOPIC_MAILOUT - and email for a mailout
   *  TOPIC_PERIODIC - a periodic event
+
 #.  Pending messages
 #.  Sending Mailouts
 #.  Foreign Keys
