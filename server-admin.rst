@@ -15,6 +15,7 @@ about this page.
   server-admin-scaling.rst
   server-admin-backups.rst
   server-admin-logs.rst
+  server-background.rst
   server-admin-network-encryption.rst
   server-admin-aws.rst
   server-admin-s3.rst
