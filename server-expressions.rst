@@ -185,7 +185,7 @@ The syntax for SQL is case - when - else - end. For example::
   case when ${a}=1 then 'one'
     when ${a}=2 then 'two'
     else 'other'
-  emd
+  end
 
 Special Terms
 -------------
