@@ -177,6 +177,16 @@ Functions
 * perimeter(${qname})  *(The length of the boundary of a polygon, in meters)*
 * round(cast (${qname} as numeric), n)  *(round a decimal value or a calculation to 'n' decimal places. Note the cast is required even if the question is decimal)*
 
+Using If then else logic
+------------------------
+
+The syntax for SQL is case - when - else - end. For example::
+
+  case when ${a}=1 then 'one'
+    when ${a}=2 then 'two'
+    else 'other'
+  emd
+
 Special Terms
 -------------
 
