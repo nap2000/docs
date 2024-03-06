@@ -9,6 +9,7 @@ about this page.
 .. toctree::
   :maxdepth: 1
 
+  server-admin-system-overview.rst
   server-admin-requirements.rst
   server-admin-install.rst
   server-admin-updating.rst

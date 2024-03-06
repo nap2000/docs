@@ -1,3 +1,5 @@
+.. _delete-restore:
+
 Deleting and Restoring Data
 ===========================
 
