@@ -40,6 +40,7 @@ The following can trigger a notification:
 *  A console update.  When a question is set to a specific value from the console.
 *  A case managmeent alert.
 *  A periodic timer. Daily, weekly, monthly or yearly.
+*  A Server Calculation change
 
 Submission
 ++++++++++
@@ -126,6 +127,17 @@ The settings are:
 *  Email. A comma separated list of email addresses that should be sent the report
 *  Subject. The email subject.
 *  Content. The email content.
+
+Server Calculation
+++++++++++++++++++
+
+Available with Smap 24.03
+
+In notifications select a trigger of “Server Calculation”. You will also need to specify:
+
+#.  The survey containing the server calculation
+#.  The Server Calculation question
+#.  The value that will trigger the notification. Note this value should be text and quotes are not required.
 
 Target
 ------

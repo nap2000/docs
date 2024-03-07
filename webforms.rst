@@ -139,4 +139,43 @@ in the next picture with a red circle).  However it may appear differently depen
 
    Survey icon on a device's home page
 
+Managing Submissions
+--------------------
+
+Completed surveys are sent immediately, however if there is no network connection they will be put into a queue to be sent
+later.  You may also save a survey as "draft" which will also put it into the queue until you complete it.  To access the
+queue click on the count of unsent records at top left or the "drawer" icon at left.
+
+.. figure::  _images/webforms9.png
+   :align:   center
+   :width: 	 500px
+   :alt:     Clicking on the queue counter on "open drawer" icon to access the webform queue
+
+   Accessing the webform queue
+
+Once you have opened the drawer you can:
+
+#.  View the history of work in webforms
+#.  Select a draft survey to edit it
+#.  OPen a draft survey for editing
+
+WebForms History
+++++++++++++++++
+
+.. figure::  _images/webforms10.png
+   :align:   center
+   :width: 	 500px
+   :alt:     The history of work in webforms in this browser
+
+   WebForms History
+
+The history page shows the surveys that have been completed and submitted over the last 100 days.
+The action can be Submitted, Saved or Deleted. The instanceId is useful for connecting a Submission entry
+in the History to a record in the Console of the server.
+
+Note the webform history is not stored on the server, so if you are reconciling somebody’s work you will
+have to ask them to talk through what they see in their history.
+
+
+
 
