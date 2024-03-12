@@ -22,4 +22,5 @@ about this page.
   server-admin-s3.rst
   server-admin-disk.rst
   server-admin-development.rst
+  server-admin-hosted.rst
   database.rst
