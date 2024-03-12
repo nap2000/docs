@@ -9,7 +9,7 @@ System Overview
    :width: 	 500px
    :alt:     Overview of the system showing the major components
 
-   Case Management Settings
+   System Overview
 
 Firewall
 --------
