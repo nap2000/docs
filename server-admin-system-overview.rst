@@ -84,7 +84,7 @@ Almost certainly you will need more disk for a production system especially if y
 apart from the disk, for most organisations, using Smap for M&E, this small server will be adequate.
 
 Settings
-========
+########
 
 In postgresql.conf::
 
@@ -97,7 +97,6 @@ In /var/lib/tomcat[x]/conf/context.xml::
 In /etc/default/tomcat[x]::
 
   JAVA_OPTS="-Djava.awt.headless=true -Xms512m -Xmx768m"
-
 
 
 Large
