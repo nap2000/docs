@@ -18,13 +18,21 @@ Overview
 
    Hosted Server
 
-
-
 Security
 --------
 
-The following security controls are provided with the hosted server.  If you need higher levels of security it is recmommended that you
+The following security controls are provided with the hosted server.  If you need higher levels of security it is recommended that you
 install your own version of the server.
+
+.. csv-table:: Network Firewall
+  :header: open port, filtering
+
+  22, Only allows connections from a single IP address owned by Snap Consulting.  Logon requires a private certificate owned by Smap.
+  80, Redirected to 443 by the web server
+  443,
+
+All other ports are blocked for inbound access.
+
 
 .. csv-table:: Encryption
   :header: control, done, comment
@@ -49,3 +57,15 @@ install your own version of the server.
   :header: control, done, comment
 
   Privacy Policy,  , https://www.smap.com.au/privacy.shtml
+
+Storage and Backups
+-------------------
+
+The database uses EBS attached disk which has the log files as well as the operating system.  Logs are rotated and then compressed.
+The result is that this usage grows relatively slowly.
+
+Submitted raw XML files as well as attached media are stored temporarily on an expandable network file system.  Expandable because this can
+grow quickly if a lot of large images are submitted.  After processing these files are moved to S3 storage which is substantially lower cost.
+
+Backups and media are stored on S3.  This means that when the user requests to view an image it is served directly by S3.  The S3 bucket is
+configured to only respond to requests originating from the SG public server.
