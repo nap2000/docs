@@ -8,6 +8,18 @@ Hosted Server
 Smap provides a free hosted server at https://sg.smap.com.au for use by individuals, not for profit organisations and any organisation
 which is trying the system out.
 
+Overview
+--------
+
+.. figure::  _images/hosted.png
+   :align:   center
+   :width: 	 500px
+   :alt:     Setup of the Hosted Server
+
+   Hosted Server
+
+
+
 Security
 --------
 
