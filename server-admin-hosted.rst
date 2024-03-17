@@ -18,18 +18,22 @@ Overview
 
    Hosted Server
 
+.. _hosted-security:
+
 Security
 --------
 
 The following security controls are provided with the hosted server.  If you need higher levels of security it is recommended that you
 install your own version of the server.
 
+The server is located in a secure data centre managed by AWS and located in Singapore.
+
 .. csv-table:: Network Firewall
   :header: open port, filtering
 
-  22, Only allows connections from a single IP address owned by Snap Consulting.  Logon requires a private certificate owned by Smap.
-  80, Redirected to 443 by the web server
-  443,
+  22, Used for administration.  Only allows connections from a single IP address owned by Snap Consulting.  Logon requires a private certificate owned by Smap.
+  80, Used by certbot for certificate renewal. Redirected to 443 by the web server
+  443, All access to the system is via encrypted HTTP
 
 All other ports are blocked for inbound access.
 
@@ -57,6 +61,8 @@ All other ports are blocked for inbound access.
   :header: control, done, comment
 
   Privacy Policy,  , https://www.smap.com.au/privacy.shtml
+
+.. _hosted-security:
 
 Storage and Backups
 -------------------

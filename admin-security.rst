@@ -61,3 +61,14 @@ Sanitisation of Webform HTML
 User provided content, such as labels for questions, are sanitised using the OWASP java HTML sanitiser.  This removes all executable
 code from the content and also any HTML elements that are not white listed as permitted for use.  This approach protects webforms from being used for cross site
 scripting attacks while still permitting formatting with headers, bold text etc.
+
+Validation of Names
+-------------------
+
+Names, such as user name or project name, are validated on entry to prevent use of HTML or other unsafe values.  They are also escaped before being shown in a web page.
+
+Logging of changes to data
+--------------------------
+
+All changes to collect data are logged.  The data cleansing tool, which allows for mass changes to text answers, also allows for those changes
+to be reversed automatically.

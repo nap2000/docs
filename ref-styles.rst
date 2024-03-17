@@ -49,7 +49,12 @@ HTML
   :widths: 30,40,40,50
   :header-rows: 1
   :file: tables/html.csv
-  
+
+
+.. note::
+
+  Any HTML entered will be "sanitised" to remove "unsafe" commands
+
 Example
 -------
 

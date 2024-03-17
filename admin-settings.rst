@@ -72,6 +72,7 @@ The server tab is only shown to users who have the server owner group.  It can b
 *  Email server port
 *  SMS Url.  Url of service to send SMS messages, or just "aws" if the AWS SMS service is to be used.
 *  Minimum password strength
+*  Maximum number of API requests per minute
 
 There is also a section on setting a server wide custom style sheet.  The approach is identical to that for the per organisation style sheet described in the
 appearance tab.

@@ -11,14 +11,6 @@ System Overview
 
    System Components
 
-Firewall
---------
-
-Servers hosted by Smap are located in AWS data centres behind an Amazon Network firewall.  Three ports are opened:
-
-*  443:  All access to the system is via encrypted HTTP
-*  80:   Used by certbot for certificate renewal.  The webserver redirects application requests on port 80 to 443
-*  22:   Used for administration.  A private key certificate is required to logon. Generally network access is also restricted to those machines used for administration.
 
 Server
 ------
