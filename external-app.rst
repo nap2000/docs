@@ -6,7 +6,8 @@ Creating an External App
 .. contents::
  :local:
 
-This documentation assumes that you are using Android Studio and developing your app in Java.
+This documentation assumes that you are using Android Studio and developing your app in Java.  To launch the app refer to
+.. seealso:: :doc:`external-applications`
 
 Create Project
 --------------

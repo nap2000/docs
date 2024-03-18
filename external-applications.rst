@@ -12,7 +12,7 @@ This page describes how to launch an external application from a form to capture
 To Answer a single Question
 ---------------------------
 
-Other Android applications can be launched from within FieldTask in order to answer a text, integer or decimal question. The information required to
+Other Android applications can be launched from within FieldTask in order to answer an image, text, integer or decimal question. The information required to
 start the other Android app is placed in the appearance column and consists of::
 
   ex:the_android_intent(parameters)
@@ -22,7 +22,7 @@ For example::
   ex:org.xxxx.myapp(param1='a', param2='b')
 
 You should be able to find the **intent** required and also any parameters in the documentation for the external app.  This app will need to be
-installed on the android..
+installed on the android device.
 
 To Answer Multiple Questions
 ----------------------------
