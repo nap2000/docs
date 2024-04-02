@@ -17,3 +17,4 @@ To get to the analysis page select **Modules** then **Analysis**.
   analysis-modify.rst
   analysis-review.rst
   analysis-uploading-saved-submissions.rst
+  analysis-external-dashboards.rst
