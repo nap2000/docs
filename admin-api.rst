@@ -40,10 +40,12 @@ Usage
 Resources
 ---------
 
-.. http:get:: /surveyKPI/upload/media
+.. http:get:: /api/v1/misc/media
 
   :synposis: Get a list of the media :ref:`shared-resources` available in the users current organisation.  Includes images, video, audio and csv files.
-  
+
+  For server releases prior to 24.04 use the URL: "/surveyKPI/upload/media".
+
   **Example response**:
   
   https://sg.smap.com.au/surveyKPI/upload/media
