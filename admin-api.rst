@@ -19,7 +19,7 @@ Usage
 
   .. sourcecode:: http
 
-    GET /surveyKPI/adminreport/usage/2018/1/sal HTTP/1.1
+    GET /api/v1/misc/adminreport/usage/2018/1/sal HTTP/1.1
     Host: sg.smap.com.au
     Download: xlsx
 
@@ -50,7 +50,7 @@ Resources
 
   **Example response**:
   
-  https://sg.smap.com.au/surveyKPI/upload/media
+  https://sg.smap.com.au/api/v1/misc/media
   
   .. sourcecode:: http
   
@@ -111,7 +111,7 @@ Resources
 
   **Example request**:
   
-  curl -u xxxx -i -X POST -H "Content-Type: multipart/form-data" -F "data=@phone.jpg" -F "itemName=my_phone" https://sg.smap.com.au/surveyKPI/upload/media
+  curl -u xxxx -i -X POST -H "Content-Type: multipart/form-data" -F "data=@phone.jpg" -F "itemName=my_phone" https://sg.smap.com.au/api/v1/misc/media/upload/media
   
   :query data: The media file to upload.
   :query surveyId: (Optional) The id of a survey if you want the media file to only be available to that survey.
@@ -268,7 +268,7 @@ Get Accessible
 
   **Example response**:
   
-  https://sg.smap.com.au/surveyKPI/surveys/idents
+  https://sg.smap.com.au/api/v1/misc/surveys/idents
   
   .. sourcecode:: http
   
@@ -317,7 +317,7 @@ Upload
 
   **Example request**:
   
-  curl -u xxxx -i -X POST -H "Content-Type: multipart/form-data" -F "fileupload=@file.xlsx" -F templateName=name -F projectId=10 -F groupsurvey=0 https://sg.smap.com.au/surveyKPI/upload/surveytemplate
+  curl -u xxxx -i -X POST -H "Content-Type: multipart/form-data" -F "fileupload=@file.xlsx" -F templateName=name -F projectId=10 -F groupsurvey=0 https://sg.smap.com.au/api/v1/misc/upload/surveytemplate
 
   :query fileupload: The name of the spreadsheet to upload
   :query templateName: The name to call the uploaded survey
