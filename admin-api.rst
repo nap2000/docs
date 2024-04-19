@@ -9,7 +9,9 @@ This API provides access to administration functions.  To use these functions yo
 Usage
 -----
 
-.. http:get:: /surveyKPI/adminreport/usage/(int: year)/(int: month)/(string: userIdent)
+.. http:get:: /api/v1/misc/adminreport/usage/(int: year)/(int: month)/(string: userIdent)
+
+  For servier releases prior to 24.04 use "/surveyKPI/adminreport/usage/(int: year)/(int: month)/(string: userIdent)"
 
   :synposis: The usage API allows you to view the number of submissions made by each user in a `month`. These can be further broken down by `project`, `survey` and `device`. The API request stopped working in version 21.11 as this reporting usage for all users became too lengthy.  The reports generated from the user interface now run in the background and can later be downloaded from the reports page.  However this API call is back in version 21.12 with the addition of one more path parameter for the user ident. So it now downloads usage for only a single user.
   
@@ -101,10 +103,12 @@ Resources
   :reqheader Authorization: basic
   :statuscode 200: no error
 
-.. http:post:: /surveyKPI/upload/media
+.. http:post:: /api/v1/misc/media
 
   :synposis: Upload a media file.
-  
+
+  For server releases prior to 24.04 use the URL: "/surveyKPI/upload/media".
+
   **Example request**:
   
   curl -u xxxx -i -X POST -H "Content-Type: multipart/form-data" -F "data=@phone.jpg" -F "itemName=my_phone" https://sg.smap.com.au/surveyKPI/upload/media
@@ -119,10 +123,12 @@ Resources
 Users (Simple)
 --------------
 
-.. http:get:: /surveyKPI/userList/simple
+.. http:get:: /api/v1/misc/userList/simple
 
   :synposis: Get a list of users in the current organisation of the user making the API call.
-  
+
+  For server releases prior to 24.04 use the URL: "surveyKPI/userList/simple".
+
   **Example response**:
   
 
@@ -254,10 +260,12 @@ Get
 Get Accessible
 ++++++++++++++
 
-.. http:get:: /surveyKPI/surveys/idents
+.. http:get:: /api/v1/misc/surveys/idents
 
   :synposis: Get a list of survey names and their identifier and project name that are accessible by the calling user. (version 21.05+)
-  
+
+  For server releases prior to 24.04 use the URL: "/surveyKPI/surveys/idents".
+
   **Example response**:
   
   https://sg.smap.com.au/surveyKPI/surveys/idents
@@ -301,10 +309,12 @@ Get Accessible
 Upload
 ++++++
 
-.. http:post:: /surveyKPI/upload/surveytemplate
+.. http:post:: /api/v1/misc/upload/surveytemplate
 
   :synposis: Upload a survey template in the spreadsheet format
-  
+
+  For server releases prior to 24.04 use the URL: "/surveyKPI/surveys/idents".
+
   **Example request**:
   
   curl -u xxxx -i -X POST -H "Content-Type: multipart/form-data" -F "fileupload=@file.xlsx" -F templateName=name -F projectId=10 -F groupsurvey=0 https://sg.smap.com.au/surveyKPI/upload/surveytemplate
