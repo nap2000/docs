@@ -16,6 +16,11 @@ If your version of ubuntu does not have the multiverse and universe repositories
   cd smap/install
   sudo ./install.sh
 
+Edit the Apache config files::
+
+  This needs to be done to enable some security checks.   Edit smap.conf and smap-ssl.conf in /etc/apache2/sites-available.  Replace all
+  occurences of {hostname} with the domain name that you will be using.  Or delete these rows.
+
 If the installer asks "Which services should be restarted", click ok, accepting the default values.
 
 After the installation script finishes you should be able to logon with your browser using::
@@ -23,9 +28,13 @@ After the installation script finishes you should be able to logon with your bro
   ident: admin
   password: admin
 
-If you have not set up an https certificate yet then the connection will be via http and you will be asked to enter your password 4 times.
-Using https you will not have that problem.  If you can access the server now you should prioritise the addition of an SSL certificate as
-using only http some features will not work.
+..warning::
+  If you have not set up an https certificate yet then the connection will be via http and you will be asked to enter your password 4 times.
+  Using https you will not have that problem.  If you can access the server now you should prioritise the addition of an SSL certificate as
+  using only http some features will not work.
+
+  Also if you are going to test using just an IP address then you will also need to edit the smap.conf file in /etc/apache2/sites-availablei
+  to remove the three lines that check the hostname.
 
 refer to (:ref:`network-encryption`)
 

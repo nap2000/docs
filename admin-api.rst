@@ -397,10 +397,12 @@ Submissions
 Timezone
 --------
 
-.. http:get:: /surveyKPI/utility/timezones
+.. http:get:: /api/v1/misc/timezones
 
   :synposis: Many API calls include a timezone parameter so that dates can be returned in the specified time zone. This api returns the timezones that can be used.
-  
+
+  For server releases prior to 24.04 use the URL: "/surveyKPI/utility/timezones".
+
   **Example response**:
   
   https://sg.smap.com.au/surveyKPI/utility/timezones
@@ -441,10 +443,12 @@ Timezone
 Get a PDF of a submitted Record
 -------------------------------
 
-.. http:get:: /surveyKPI/pdf/(survey ident)
+.. http:get:: /api/v1/misc/pdf/(survey ident)
 
   :synposis: Returns a PDF of the data in the submission. You can use the data API passing a parameter of links=true to see the URLs that will return a PDF of data.
-  
+
+  For server releases prior to 24.04 use the URL: "/surveyKPI/utility/timezones".
+
   :query instance:  (Required) The instance id of the record you want to retrieve.  
   :query string tz: Set to a valid time zone.
   :reqheader Authorization: basic
