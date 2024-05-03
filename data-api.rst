@@ -74,6 +74,7 @@ Data End Points in CSV
 ----------------------
 
 .. http:get:: /api/v1/data.csv
+.. http:get:: /api/v2/data.csv
 
   :synposis: Returns available end points in a CSV file.
   
@@ -89,6 +90,7 @@ Survey Data in JSON
 -------------------
 
 .. http:get:: /api/v1/data/(survey ident)
+.. http:get:: /api/v2/data/(survey ident)
 
   :synposis: Returns data for the specified survey. The example shows 
   
