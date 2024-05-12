@@ -125,11 +125,24 @@ This feature is available with Smap Version 20.04
 Date Formats
 -------------
 
+The default format of dates is:
+
 * 'yyyy-mm-dd'
 
 Hence the thirty first of January, 2018 would be::  
 
   '2018-01-31'
+
+So if you are referring to date values in an expression you should use that format.
+
+Formatting Dates and Date/Time questions
+----------------------------------------
+
+Use the to_char(question, format) function to convert a date or date time question into text with a specified format. For example::
+
+  to_char(${q1},'DD/MM/YYYY')
+
+Values for the format can be found here: `PostgreSQL date formatting <https://www.postgresql.org/docs/current/functions-formatting.html#FUNCTIONS-FORMATTING-DATETIME-TABLE>`_.
 
 Date Intervals
 --------------

@@ -20,6 +20,7 @@ Data End Points in JSON
 -----------------------
 
 .. http:get:: /api/v1/data
+.. http:get:: /api/v2/data
 
   :synposis: Returns available end points.   
   
@@ -74,7 +75,6 @@ Data End Points in CSV
 ----------------------
 
 .. http:get:: /api/v1/data.csv
-.. http:get:: /api/v2/data.csv
 
   :synposis: Returns available end points in a CSV file.
   
@@ -205,6 +205,7 @@ Single Record
 -------------
 
 .. http:get:: /api/v1/data/(survey ident)/(instance key)
+.. http:get:: /api/v2/data/(survey ident)/(instance key)
 
   :synposis: Get data for the specified instance. The instance key can be found in the :ref:`survey-data-json` API call. Two output 
     formats are available.  Probably the more useful format is the hierarchy view (Smap Server 21.05). In this format repeats are included inside 
