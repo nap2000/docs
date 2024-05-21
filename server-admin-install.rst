@@ -4,11 +4,6 @@ Installing
 .. contents::
  :local:
 
-If your version of ubuntu does not have the multiverse and universe repositories then you will need to add them::
-
-  sudo add-apt-repository universe
-  sudo add-apt-repository multiverse
-
 ::
 
   wget {link to tar file}
@@ -28,12 +23,14 @@ After the installation script finishes you should be able to logon with your bro
   ident: admin
   password: admin
 
-..warning::
-  If you have not set up an https certificate yet then the connection will be via http and you will be asked to enter your password 4 times.
-  Using https you will not have that problem.  If you can access the server now you should prioritise the addition of an SSL certificate as
-  using only http some features will not work.
+.. note::
 
-  Also if you are going to test using just an IP address then you will also need to edit the smap.conf file in /etc/apache2/sites-availablei
+  Important!  Due to some security updates you will need to edit the file /etc/apache2/sites-available/smap-ssl.conf.   Replace all
+  occurences of {hostname} with the domain name of your server.  This assumes you are using a domain name.
+
+.. warning::
+
+  If you are going to test using just an IP address then you will also need to edit the smap.conf file in /etc/apache2/sites-availablei
   to remove the three lines that check the hostname.
 
 refer to (:ref:`network-encryption`)
