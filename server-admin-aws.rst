@@ -9,7 +9,8 @@ Access to S3
 
 As ubuntu type::
 
-  sudo apt install awscli
+  For Ubuntu 24.04: sudo snap install aws-cli --classic
+  Older Ubuntu versions: sudo apt install awscli
 
 Get Credentials
 ---------------
@@ -44,13 +45,13 @@ You will need to update the limits on usage for these in the organisations tab o
 S3 Bucket
 +++++++++
 
-Create a bucket to store backups of uploaded media files.  The files in this bucket will also be used for transcribe::
+Create a bucket in S3 to store backups of uploaded media files.  The files in this bucket will also be used for transcribe::
 
-  Create the bucket in your S3 account
-  Create a file in the ubuntu home directory of your server called 'bucket'
-  Specify the bucket name in this file
+  Create the bucket in your S3 account.  This bucket should be dedicated to your server.
+  Create a file in the settings directory where smap was installed called 'bucket'.  The default location would be /smap/settings/bucket
+  Specify the S3 bucket name in this file
   Create another file in the ubuntu home directory called 'region'
-  Specify the AWS region in this file.  FOr example: ap-southeast-2
+  Specify the AWS region in this file.  For example: ap-southeast-2
   run deploy.sh to restart the subscriber so that it now uses the bucket
 
 AWS Properties File
@@ -61,7 +62,7 @@ to be present for other AWS services as well.  Create the file at /smap_bin/reso
 Add the lines::
 
   userDevices_table={the dynamodb table you set up to contain the list of connected fieldTask instances}
-  userDevices_region={the aws region in which you have set up dynamo =db}
+  userDevices_region={the aws region in which you have set up dynamodb}
   fieldTask_platform={the platform ARN as required by AWS SNS}
 
 Automatic Device Synchronisation
