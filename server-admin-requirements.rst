@@ -7,6 +7,7 @@ Server Requirements
 
 *  One of the following Ubuntu LTS Server versions
 
+   *  24.04
    *  22.04
    *  20.04
    *  18.04

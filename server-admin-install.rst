@@ -28,15 +28,10 @@ After the installation script finishes you should be able to logon with your bro
   Important!  Due to some security updates you will need to edit the file /etc/apache2/sites-available/smap-ssl.conf.   Replace all
   occurences of {hostname} with the domain name of your server.  This assumes you are using a domain name.
 
-.. warning::
-
-  If you are going to test using just an IP address then you will also need to edit the smap.conf file in /etc/apache2/sites-availablei
-  to remove the three lines that check the hostname.
-
 refer to (:ref:`network-encryption`)
 
-Using a different location
---------------------------
+Using a different location for files
+------------------------------------
 
 By default all files are installed under /smap in the root directory.
 
