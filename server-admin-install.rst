@@ -18,15 +18,20 @@ Edit the Apache config files::
 
 If the installer asks "Which services should be restarted", click ok, accepting the default values.
 
+.. note::
+
+  Important!  Due to some security updates you will need to edit the file /etc/apache2/sites-available/smap-ssl.conf.   Replace all
+  occurences of {hostname} with the domain name of your server.  This assumes you are using a domain name.
+
 After the installation script finishes you should be able to logon with your browser using::
 
   ident: admin
   password: admin
 
-.. note::
+.. warning::
 
-  Important!  Due to some security updates you will need to edit the file /etc/apache2/sites-available/smap-ssl.conf.   Replace all
-  occurences of {hostname} with the domain name of your server.  This assumes you are using a domain name.
+  You should change the password of the admin user before loading any data.  Alternatively create a new user with all permissions then delete
+  the admin user.
 
 refer to (:ref:`network-encryption`)
 
