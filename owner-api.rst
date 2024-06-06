@@ -26,12 +26,15 @@ Lookup Survey Details
 Queue State
 -----------
 
-.. http:get:: /api/v1/lookup/(text: queue name)
+.. http:get:: /api/v1/queues/(text: queue name)
 
   :synposis: The queue state API allows you to view the real time status of the specified queue name.  This is one of:
 
     * s3upload
     * submissions
+    * restore  (Smap Server 23.06+)
+
+restore is the re-application of previous submissions initiated from the analysis module.
 
   **Example request**:
 
