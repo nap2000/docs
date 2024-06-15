@@ -61,6 +61,13 @@ Click on the name of the organisation.  This will open a dialog to edit the sett
 
 #. Email options. Sets up the email proxy server that this organisation will use.
 
+  *  Email to get Help.  The administrator email.  If set this email address will also be sent emails notifying them of permission changes made to the organisation settings (See below for settings marked as "nodity admin")
+  *  Smtp Host.  The host name of the smtp relay that will forward email messages from the smap server.
+  *  Email domain.
+  *  Email user name
+  *  Email password
+  *  Email server port
+
 #. Appearance
 
    *  Set the Banner logo for webforms
@@ -71,15 +78,15 @@ Click on the name of the organisation.  This will open a dialog to edit the sett
 
 #. Other
 
-   *  Allow results to be edited on the server
+   *  Allow results to be edited on the server (notify admin user if changed)
    
-   *  Allow sending of tasks to email addresses
+   *  Allow sending of tasks to email addresses (notify admin user if changed)
    
-   *  Allow sending of notifications
+   *  Allow sending of notifications (notify admin user if changed)
    
-   *  Allow submissions of data to this organisation
+   *  Allow submissions of data to this organisation (notify admin user if changed)
    
-   *  Allow sending of SMS messages (in notifications)
+   *  Allow sending of SMS messages (in notifications) (notify admin user if changed)
    
    *  Set the default time zone for the organisation.  Ususally time zone is obtained from a user's browser settings. However
       where reports are generated automatically this information may not be availble and the time zone set here will be used.
