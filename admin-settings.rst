@@ -35,26 +35,15 @@ You can:
 Custom Style Sheet
 ++++++++++++++++++
 
-Smap server from version 21.01 uses Bootstrap version 4.5.  The buttons and other elements of the pages
-are styled using the default bootstrap style sheet.  However you can upload alternatives.  Various websites offer 
-themes that you can adapt in order to get the appearance that suits your organisation.  
+The Smap server from version 21.01 uses Bootstrap version 4.5.  The buttons and other elements of the pages
+are styled using the default bootstrap style sheet.  However you can upload your own CSS file that will override
+these styles.
 
-To add a customised stylesheet using `Themestr.app <https://themestr.app/theme>`_ you can:
+To add a customised stylesheet
 
-*  Navigate to the Themestr website
-*  Select a theme palette
-*  Customise the colors, fonts and variables
-*  Select **Download CSS**
-*  Rename the downloaded file to something that is meaningful for you
-*  In the appearance tab click on "Upload a CSS style sheet" 
+*  In the appearance tab click on "Upload a CSS style sheet"
 *  Click on "Select a style sheet" and select the file you just uploaded
 *  Click "Save"
-
-Refer to the following video for a demonstration of the process.
-
-.. raw:: html
-  
- <iframe width="560" height="315" src="https://www.youtube.com/embed/gnFFWl-8DHo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 .. _server-settings:
 
