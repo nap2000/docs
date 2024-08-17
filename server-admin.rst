@@ -24,3 +24,4 @@ about this page.
   server-admin-development.rst
   server-admin-hosted.rst
   database.rst
+  server-admin-sms.rst
