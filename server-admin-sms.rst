@@ -12,12 +12,18 @@ Vonage
 
 #.  Create an account on Vonage
 #.  Purchase one or more numbers for inbound requests
-#.  On API Settings page under SMS settings select “Messages API” this will support WhatsAppp as well as SMS.  Click save changes.
+#.  On API Settings page under SMS settings select “Messages API” this will support WhatsAppp as well as SMS.  
+    Click save changes.
 #.  On the applications page, create a new application
-  #.  Enable messages
-  #.  Specify the inbound URL as https://{your server}/sms/vonage/inbound
-  #.  Specify the status URL as https://{your server}/sms/vonage/status
-  #.  After pressing next link your numbers to this application
-#.	The applications page will display your vonage application id which you will need to enter into the server settings page on smap
-#.	Rename the private key created by vonage as vonage_private.key and update your deployment scripts to place this in /smap_bin/resources/properties/ on the server.  If you place this file in smap/deploy/version1/resources/properties folder in the deployed tar file then it will be automatically copied to the correct location.
+
+    #.  Enable messages
+    #.  Specify the inbound URL as https://{your server}/sms/vonage/inbound
+    #.  Specify the status URL as https://{your server}/sms/vonage/status
+    #.  After pressing next link your numbers to this application
+#.  The applications page will display your vonage application id which you will need to enter into the 
+    server settings page on smap
+#.  Rename the private key created by vonage as vonage_private.key and update your deployment scripts to 
+    place this in /smap_bin/resources/properties/ on the server.  If you place this file in 
+    smap/deploy/version1/resources/properties folder in the deployed tar file then it will be automatically 
+    copied to the correct location.
 

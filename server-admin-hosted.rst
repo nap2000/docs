@@ -62,7 +62,7 @@ All other ports are blocked for inbound access.
 
   Privacy Policy,  , https://www.smap.com.au/privacy.shtml
 
-.. _hosted-security:
+.. _hosted-backups:
 
 Storage and Backups
 -------------------
