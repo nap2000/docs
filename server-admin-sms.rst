@@ -1,11 +1,13 @@
-Set up SMS Conversations
-========================
+.. _sms-server-admin:
+
+Set up SMS Numbers
+==================
 
 .. contents::
  :local:
 
 SMS messages can create a new case and within that case you can converse with the original sender of the SMS.  Currently this feature
-is only supported using the Vonage platform.
+is only supported using the Vonage platform.  Once you have a number Smap can be configured to use it.  Details can be found here: :ref:`sms`
 
 Vonage
 ------

@@ -5,13 +5,13 @@ Administration
   :maxdepth: 1
   
   admin-surveys.rst
-  admin-projects.rst
-  admin-organisations.rst
-  admin-enterprises.rst
   admin-users.rst
+  admin-projects.rst
+  admin-rbac.rst
+  admin-organisations.rst
+  admin-sms.rst
   admin-mobiles.rst 
   admin-settings.rst
-  admin-rbac.rst
   admin-shared-resources.rst
   admin-server.rst
   admin-delete.rst
