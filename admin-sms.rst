@@ -26,3 +26,40 @@ As the server owner navigate to the users page and select the SMS tab.  You will
 
    Add Button
 
+The dialog then allows you to enter the number and select the
+
+.. figure::  _images/sms2.png
+   :align:   center
+   :width:   600px
+   :alt:     The dialog to add a new number
+
+   Add Dialog
+
+ Edit the number
+ ---------------
+
+ Once the number has been added an administrator for that organisation will be able to see the number and edit it.
+
+ .. figure::  _images/sms3.png
+    :align:   center
+    :width:   600px
+    :alt:     A list of SMS numbers available in an organisation
+
+Clicking on the edit button shows the edit dialog. Note there is no "Add" button shown unless the user is also the server owner.
+
+    SMS Numbers List
+
+ .. figure::  _images/sms4.png
+     :align:   center
+     :width:   600px
+     :alt:     The settings dialog showing the survey details that can be associated with a number
+
+     Editing the settings
+
+  The administrator can bow set:
+
+  *  The survey that will be populated when a message is received
+  *  The question in the survey that will be used to store the number that sent the message
+  *  The question in the survey that will be used to store the message
+
+  
