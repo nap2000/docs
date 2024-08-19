@@ -9,6 +9,7 @@ Administration
   admin-projects.rst
   admin-rbac.rst
   admin-organisations.rst
+  admin-enterprises.rst
   admin-sms.rst
   admin-mobiles.rst 
   admin-settings.rst

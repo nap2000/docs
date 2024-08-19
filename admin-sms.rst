@@ -19,7 +19,7 @@ Add a Number
 
 As the server owner navigate to the users page and select the SMS tab.  You will see a button labelled "Add".
 
-.. figure::  _images/sms1.jpg
+.. figure::  _images/sms1.png
    :align:   center
    :width:   600px
    :alt:     The button to add a new number labelled as "Add"
