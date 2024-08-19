@@ -7,7 +7,8 @@ SMS
  :local:  
  
 The SMS numbers that can be used to create cases and record a conversation within a case are set up here.  Only the Vonage cloud platform
-is currently supported as a source of numbers.  Details on how to get a number can be found here :ref:`sms-server-admin`
+is currently supported as a source of numbers.  Details on how to get a number can be found here :ref:`sms-server-admin`.  Requires Smap
+Server version 24.09+.
 
 Adding a number is a two step process.
 
@@ -62,4 +63,4 @@ Clicking on the edit button shows the edit dialog. Note there is no "Add" button
   *  The question in the survey that will be used to store the number that sent the message
   *  The question in the survey that will be used to store the message
 
-  
+
