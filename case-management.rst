@@ -13,5 +13,6 @@ Case Management
   cm-complete.rst
   cm-device.rst
   keys.rst
+  cm-sms.rst
   cm-others.rst
   
