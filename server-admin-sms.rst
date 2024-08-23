@@ -8,6 +8,7 @@ Set up SMS Numbers
 
 SMS messages can create a new case and within that case you can converse with the original sender of the SMS.  Currently this feature
 is only supported using the Vonage platform.  Once you have a number Smap can be configured to use it.  Details can be found here: :ref:`sms`.
+Documentation on how to use SMS messages as part of case managmement can be found here: :ref:`sms_case`.
 Requires Smap Server version 24.09+.
 
 Vonage

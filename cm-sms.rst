@@ -4,7 +4,7 @@ SMS Conversations
 =================
 
 If you have an SMS number from an SMS cloud provider and attach it to a survey then you can receive and send SMS messages. See details
- here on how to set this up: :ref:`sms`. Without cases each inbound message will create a new record in your survey.  However by setting up a
+ here on how to set this up :ref:`sms`. Without cases each inbound message will create a new record in your survey.  However by setting up a
  case you can create a conversation within the case.
 
 Inbound SMS
