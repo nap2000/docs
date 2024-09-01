@@ -4,8 +4,10 @@ SMS Conversations
 =================
 
 If you have an SMS number from an SMS cloud provider and attach it to a survey then you can receive and send SMS messages. See details
- here on how to set this up :ref:`sms`. Without cases each inbound message will create a new record in your survey.  However by setting up a
- case you can create a conversation within the case.
+ here on how to set this up :ref:`sms`. Without cases each inbound message will create a new record in your survey.
+
+If you have not enabled cases for the survey then the messages from each sending number will be placed in their own record.  So you will get a
+single record per number.
 
 Inbound SMS
 -----------
@@ -32,11 +34,11 @@ will be formatted for easy reading
 
    A conversation
 
-   Any response from the sending number will also be added to the conversation.
+Any response from the sending number will also be added to the conversation.
 
-   Closing the case
-   ----------------
+Closing the case
+----------------
 
-   Once the case is closed it will not receive any additional messages.  Instead if a new message is received from the same number it will
-   create a new case as if it was the first time that person had sent a message.
+Once the case is closed it will not receive any additional messages.  Instead if a new message is received from the same number it will
+create a new case as if it was the first time that person had sent a message.
 
