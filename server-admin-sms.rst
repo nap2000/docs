@@ -51,3 +51,16 @@ Vonage
       :alt:     The Vonage API Settings page showing the web hook signature secret
 
       Vonage API Settings Page showing the web hook signature secret
+
+ Diagnosing Issues
+ -----------------
+
+ If SMS messages sent to your number are not arriving try the following steps to diagnose the problem:
+
+ #.  Look in the Smap application logs for errors.
+ #.  Look in the "Server" tab under the monitor page.  This will show incoming messages that are not associated with an organisation.
+     If you have not connected your number to an organisation this is where the problem will become apparent.
+ #.  Check the Apache error log at /var/log/apache/error.log.  If you have not set up the web hook signature secret you will see
+     authentication error messages.
+ #.  Look in the Tomcat logs at /var/log/tomcat/catalina.out for more details and also to see exceptions reported.
+ #.  Check the Vonage logs for inbound SMS messages to make sure the SMS is making it that far.
