@@ -57,13 +57,6 @@ For example::
   ${video_question} empty
   This will find any records where the video question was not answered.
 
-Un-Supported Question Types
----------------------------
-
-The following question types currently cannot be used to filter data
-
-* select_multiple
-
 Operators
 ---------
 
@@ -168,7 +161,7 @@ Converting to a different type
 
 Calculations are always stored on the server as 'text' type answers.  However the data inside them can be in many types
 integer, decimal, text, date.  It depends on the calculation that was performed.  So you might have a calculate questions that
-creates an integer value, for example a calcualtion of age.   If you then try to do a server calculation such as ${age} + 10 
+creates an integer value, for example a calculation of age.   If you then try to do a server calculation such as ${age} + 10
 this will fail because age is treated as text.  You can use the following **cast** functions to tell the system which type
 you actually want to use
 
@@ -176,10 +169,19 @@ you actually want to use
 *  cast(${question} as decimal) 
 *  cast(${question} as numeric) 
 
+You can also use the following to convert text to other types
+
+*  ::timestamptz
+*  ::timestamptz
+*  ::numeric
+*  to_timestamp()
+
 Examples::
 
   cast(${age} as integer) < 10
   cast(${age} as decimal) / 2
+  ${q2} > '2024-09-06 15:00:00+10'::timestamptz
+  ${q2} > to_timestamp('2024-09-06 05:00:00', 'YYYY-MM-DD HH:MI:SS')
 
 Functions
 ---------
@@ -218,8 +220,6 @@ Special Terms
 Note the ${_version} value is of type text, hence if you want to use this in a filter you may need to cast it.  For example::
 
   cast(${_version} as integer) > 3
-
-
 
 Examples
 --------
