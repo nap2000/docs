@@ -15,6 +15,7 @@ start fieldTask this page will be shown and you need to logon.
 
 .. figure::  _images/ftLogin1.png
    :align:   center
+   :class: with-border
    :width:   300px
    :alt:     Showing logon page
 
@@ -29,6 +30,7 @@ Alternatively you can select the switch labelled "Use a token to access the serv
 
 .. figure::  _images/ftLogin2.png
    :align:   center
+   :class: with-border
    :width:   300px
    :alt:     Showing logon page for scanning a QR code
 
@@ -40,6 +42,7 @@ and selecting the the QR button next to the users name.  These buttons will only
 
 .. figure::  _images/ftLogin3.png
    :align:   center
+   :class: with-border
    :width:   300px
    :alt:     User administration page with an arrow pointing to the QR code button
 
@@ -47,6 +50,7 @@ and selecting the the QR button next to the users name.  These buttons will only
 
 .. figure::  _images/ftLogin4.png
    :align:   center
+   :class: with-border
    :width:   300px
    :alt:     Popup showing QR Code
 
@@ -76,6 +80,7 @@ Press the **refresh** button on the main screen to synchronise the device with t
 
 .. figure::  _images/ftRefresh.jpg
    :align:   center
+   :class: with-border
    :alt:     Press refresh to synchronise
    
    Refresh Button
@@ -87,6 +92,7 @@ Select the "Forms" tab, as shown circled below, and then tap the survey that you
 
 .. figure::  _images/ftLaunch.jpg
    :align:   center
+   :class: with-border
    :alt:     Tap on a survey form to launch
    :width:   300
    
