@@ -64,3 +64,7 @@ If SMS messages sent to your number are not arriving try the following steps to 
     authentication error messages.
 #.  Look in the Tomcat logs at /var/log/tomcat/catalina.out for more details and also to see exceptions reported.
 #.  Check the Vonage logs for inbound SMS messages to make sure the SMS is making it that far.
+
+If SMS messages are not being sent try the above steps and also check:
+
+#.  The subscriber logs at /var/log/subscribers

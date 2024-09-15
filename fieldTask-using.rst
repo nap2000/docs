@@ -4,6 +4,63 @@ Using FieldTask
 .. contents::
  :local:
 
+Logging On
+----------
+
+Logon Page
+++++++++++
+
+When you first start fieldTask a logon page will be shown.  Your administrator can also specify on the server that every time you
+start fieldTask this page will be shown and you need to logon.
+
+.. figure::  _images/ftLogin1.png
+   :align:   center
+   :alt:     Showing logon page
+
+   Login Page
+
+You can then specify the URL of your server and enter your username and password to logon.
+
+Scanning a QR Code to logon
+###########################
+
+Alternatively you can select the switch labelled "Use a token to access the server" and then scan a QR code to logon.
+
+.. figure::  _images/ftLogin2.png
+   :align:   center
+   :alt:     Showing logon page for scanning a QR code
+
+   Logon by scanning a QR code
+
+The QR code will set the username and server URL so these are readonly.  You will also not need a password with this approach so that is hidden.
+To start scanning press the "Scan QR Code" button.  An administrator can show the QR code on a screen by navigating to the user administration page
+and selecting the the QR button next to the users name.  These buttons will only be shown for users that have enumerator privilege.
+
+.. figure::  _images/ftLogin3.png
+   :align:   center
+   :alt:     User administration page with an arrow pointing to the QR code button
+
+   Button to show QR Code
+
+.. figure::  _images/ftLogin4.png
+   :align:   center
+   :alt:     Popup showing QR Code
+
+   QR Code to Scan
+
+
+Changing logon details in settings
+++++++++++++++++++++++++++++++++++
+
+If you have to logon every time you open fieldTask then the logon page may be the only one where you set your logon credentials.  However if
+that is not required then you may want to change the server, username, password or token.  This can be done in settings.  Select:
+
+#.  Menu
+#.  General Settings
+#.  Server
+
+You can then change your logon details in the same way you set them on the logon page.
+
 Synchronising with the Server
 -----------------------------
 

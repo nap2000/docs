@@ -170,7 +170,8 @@ The subject and message content can be customised using data from the submitted 
 *  ${hrk} : The key that is created on the server
 *  ${instancename} : The instance name that is generated on the server
 *  ${device} : The device IMEI used to submit the results
-*  ${questionname} : Where questionname is the name of any question in the survey.  
+*  ${questionname} : Where questionname is the name of any question in the survey.
+*  ${assigned} : The person assigned the record as a case.
 
 For example::
 

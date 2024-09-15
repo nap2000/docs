@@ -166,3 +166,25 @@ the system.
 
   When importing in bulk the password is set from the spreadsheet.  Hence i would recommend against using bulk imports to create users who have analyst or admin rights.
   It is better to add these users manually and allow them to set their own passwords before logging on.
+
+
+Managing Users FieldTask Logon tokens
+-------------------------------------
+
+Users of fieldTask can logon using a token.  They can scan this token from a QR code that is displayed on the user management page.
+Users that have the "enumerator" security group will have a QR code button next to their name.you
+
+.. figure::  _images/ftLogin3.png
+   :align:   center
+   :alt:     User administration page with an arrow pointing to the QR code button
+
+   Button to show QR Code
+
+   The administrator can create, delete or refresh tokens.  Deleting or refreshing a token will prevent the existing users that have the
+   token from connecting via fieldTask and they will need to re-scan the token.
+
+   .. figure::  _images/ftLogin4.png
+      :align:   center
+      :alt:     Popup showing QR Code
+
+      QR Code to Scan
