@@ -15,6 +15,7 @@ start fieldTask this page will be shown and you need to logon.
 
 .. figure::  _images/ftLogin1.png
    :align:   center
+   :width:   300px
    :alt:     Showing logon page
 
    Login Page
@@ -28,6 +29,7 @@ Alternatively you can select the switch labelled "Use a token to access the serv
 
 .. figure::  _images/ftLogin2.png
    :align:   center
+   :width:   300px
    :alt:     Showing logon page for scanning a QR code
 
    Logon by scanning a QR code
@@ -38,12 +40,14 @@ and selecting the the QR button next to the users name.  These buttons will only
 
 .. figure::  _images/ftLogin3.png
    :align:   center
+   :width:   300px
    :alt:     User administration page with an arrow pointing to the QR code button
 
    Button to show QR Code
 
 .. figure::  _images/ftLogin4.png
    :align:   center
+   :width:   300px
    :alt:     Popup showing QR Code
 
    QR Code to Scan
