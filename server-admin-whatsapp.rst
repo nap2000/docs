@@ -13,7 +13,6 @@ Vonage
 
 #.  Create an account on Vonage, https://www.vonage.com/
 #.  Login to "Communication APIs"
-#.  If you have already set up an account then get a "subaccount" API key.  You cannot use the same key that you set up for SMS
 #.  Select "External Accounts" and then select "Set up my WhatsApp business account"
 #.  Logon to Facebook
 #.  Enter your business information and press "Next"
@@ -25,6 +24,7 @@ Vonage
 #.  You can then continue to connect your whatsApp number to Vonage
 
     *  Select the phone number that has the whats app account
-    *  Select your subaccount API key, this is probably the one you set up for SMS
+    *  Select your API key, this is probably the one you set up for SMS
     *  Select get my WhatsApp number live
+    *  Follow the prompts
 
