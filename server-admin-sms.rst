@@ -62,9 +62,12 @@ If SMS messages sent to your number are not arriving try the following steps to 
     If you have not connected your number to an organisation this is where the problem will become apparent.
 #.  Check the Apache error log at /var/log/apache/error.log.  If you have not set up the web hook signature secret you will see
     authentication error messages.
+#.  Look in the Apache access log at /var/log/apache/access.log.  You may see 403 responses which indicates that the access was forbidden by
+    the server.
 #.  Look in the Tomcat logs at /var/log/tomcat/catalina.out for more details and also to see exceptions reported.
 #.  Check the Vonage logs for inbound SMS messages to make sure the SMS is making it that far.
 
 If SMS messages are not being sent try the above steps and also check:
 
+#.  Check in monitoring page in the admin module.  Look under the notifications tab.
 #.  The subscriber logs at /var/log/subscribers

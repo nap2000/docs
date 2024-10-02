@@ -25,3 +25,4 @@ about this page.
   server-admin-hosted.rst
   database.rst
   server-admin-sms.rst
+  server-admin-whatsapp.rst
