@@ -314,10 +314,6 @@ it is just that there to diffentiate this from from the standard 4 parameter pul
 
 The second version, 6 parameters, add the 'index' parameter and a 'filter type' to the standard 4 parameter version.
 
-.. warning::
-
-  This feature is available in fieldTask 6.500 and above.  It is not available in Webforms.
-
 Index
 %%%%%
 

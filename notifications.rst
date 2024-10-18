@@ -172,6 +172,7 @@ The subject and message content can be customised using data from the submitted 
 *  ${device} : The device IMEI used to submit the results
 *  ${questionname} : Where questionname is the name of any question in the survey.
 *  ${assigned} : The person assigned the record as a case.
+*  ${url} : The link to a webform if you specified that a webform should be included in the email
 
 For example::
 

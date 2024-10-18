@@ -1,19 +1,21 @@
 .. _sms_case:
 
-SMS Conversations
-=================
+Message Conversations
+=====================
 
-If you have an SMS number from an SMS cloud provider and attach it to a survey then you can receive and send 
+If you have an SMS oe WhatsApp number from a cloud provider and attach it to a survey then you can receive and send
 SMS messages. See details here on how to set this up :ref:`sms`. Without cases each inbound message will create 
-a new record in your survey.  However by setting up a case you can create a conversation within where
+a new record in your survey.  However by setting up a case you can create a conversation within which
 you send and receive messages to a number and all of these messages are kept together in the case.
 
-Inbound SMS
------------
+Inbound Message
+---------------
 
 If there is no open case for the sending number then a new case will be created containing the message. 
-Subsequent messages from the same sending number will be added to the case.  SMS messages from different 
+Subsequent messages from the same sending number will be added to the case.  Messages from different
 numbers will go into their own separate case.
+
+If there are one, or more, open cases for a number then the message will be sent to all of those cases.
 
 Replying
 ---------
@@ -42,3 +44,24 @@ Closing the case
 Once the case is closed it will not receive any additional messages.  Instead if a new message is received from 
 the same number it will create a new case as if it was the first time that person had sent a message.
 
+Sending a message to a specific case
+------------------------------------
+
+When you reply to a message, a reference is automatically appended to your message.  For example "#123".  If the person sending messages to you,
+includes that reference then the message will be sent only to the case that sent the response.
+
+Creating a new case from a message
+----------------------------------
+
+Sometimes, while you are working on a case, the person that sent the first message will send another message that should be in its own case.message
+You can address this by opening the case for editing in the console and clicking on the message that should be moved to its own case.message
+
+.. figure::  _images/sms6.png
+   :align:   center
+   :width:   600px
+   :alt:     A conversation showing a new message unrelated  to the original case
+
+   A conversation with a message that needs moving to its own case
+
+This will open a dialog where you can add a comment and confirm or backout of moving the message.  The comment will be included in the survey notes
+of the new case.
