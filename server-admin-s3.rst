@@ -1,3 +1,5 @@
+.. _s3:
+
 Store Attachments on S3
 =======================
 

@@ -38,9 +38,8 @@ Out of local disk
 -----------------
 
 These can sneak up on you.  Especially if you have been doing text only surveys for a while and then start collecting images
-without specifying a reduced image size.  It will be resolved once you add more disk.
+without specifying a reduced image size.  It will be resolved once you add more disk.  Approaches to saving disk space are
+covered here: :ref:`disk-storage`.
 
 For my servers, when this happens, I use AWS S3 to store media attachments. There are multiple alternatives that provide
- lower cost infinitely expandable storage.  To use S3 you will need to add AWS credentials to your server pointing towards an account that can
- access S3.  You can then add a file called "bucket" in /smap/settings that contains the name of the S3 bucket where your
- attachments will be stored.  Further details can be found here:  :ref:`disk-storage`
+ lower cost infinitely expandable storage. Further details can be found here:  :ref:`s3`
