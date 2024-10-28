@@ -1,3 +1,5 @@
+.. _disk-storage:
+
 Disk Storage
 ============
 

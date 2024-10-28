@@ -37,13 +37,14 @@ The server is located in a secure data centre managed by AWS and located in Sing
 
 All other ports are blocked for inbound access.
 
-
-.. csv-table:: Encryption
+.. csv-table:: Encryption and firewalls
   :header: control, done, comment
 
   Encryption of network data,  Yes, All connections are encrypted. Attempts to connect as HTTP are redirected to HTTPS.
   Encryption of backups, Yes,  Backups are encrypted using PGP.
   Encryption of the database, No,  The database is not encrypted.
+  Network Firewall, Yes, AWS network firewall
+  Application Firewall, Yes, Apache modsecurity
 
 .. csv-table:: Integrity Processes
   :header: control, done, comment

@@ -29,7 +29,7 @@ Vonage
     #.  Link your number to this application
 #.  If you select the application that you created then you will see the application id which you will need to enter into the
     server settings page on smap. (You will need server owner privilege to do this).
-#.  Rename the private key created by Vonage to "Vonage_private.key" and update your deployment scripts to
+#.  Rename the private key created by Vonage to "vonage_private.key" and update your deployment scripts to
     place this in /smap_bin/resources/properties/ on the server.  If you place this file in the
     smap/deploy/version1/resources/properties folder in the deployed tar file then it will be automatically 
     copied to the correct location.
