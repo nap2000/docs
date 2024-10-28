@@ -3,8 +3,8 @@
 Message Conversations
 =====================
 
-If you have an SMS oe WhatsApp number from a cloud provider and attach it to a survey then you can receive and send
-SMS messages. See details here on how to set this up :ref:`sms`. Without cases each inbound message will create 
+If you have an SMS or WhatsApp number from a cloud provider and attach it to a survey then you can receive and send
+messages. See details here on how to set this up :ref:`sms`. Without cases each inbound message will create 
 a new record in your survey.  However by setting up a case you can create a conversation within which
 you send and receive messages to a number and all of these messages are kept together in the case.
 
