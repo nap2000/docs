@@ -15,7 +15,7 @@ start fieldTask this page will be shown and you need to logon.
 
 .. figure::  _images/ftLogin1.png
    :align:   center
-   :class: with-border
+   :class:   with-border
    :width:   300px
    :alt:     Showing logon page
 
