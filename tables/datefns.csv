@@ -31,4 +31,5 @@ date-time(decimal-date-time(${dob})+10)
 
 The date is equal to the date of birth plus 10 days."
 Get todays date,today(),
+Get current date and time. Use this instead of today() when setting the default values for date questions,now(),
 Convert text to date,date('some text)',"constraint="". >= date('2011-11-12')"""
