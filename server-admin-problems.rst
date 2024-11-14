@@ -37,9 +37,9 @@ Maxed Out CPU
 Out of local disk
 -----------------
 
-These can sneak up on you.  Especially if you have been doing text only surveys for a while and then start collecting images
-without specifying a reduced image size.  It will be resolved once you add more disk.  Approaches to saving disk space are
-covered here: :ref:`disk-storage`.
+These can sneak up on you.  Especially if you have been doing text only surveys for a while and then 
+start collecting images without specifying a reduced image size.  It will be resolved once you add more disk.  
+Approaches to saving disk space are covered here: :ref:`disk-storage`.
 
-For my servers, when this happens, I use AWS S3 to store media attachments. There are multiple alternatives that provide
- lower cost infinitely expandable storage. Further details can be found here:  :ref:`s3`
+For my servers, when this happens, I use AWS S3 to store media attachments. There are multiple alternatives 
+that provide lower cost infinitely expandable storage. Further details can be found here:  :ref:`s3`

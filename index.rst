@@ -40,4 +40,4 @@ The use of digital technologies for data collection has been shown to reduce cos
   tips.rst
   legacydocs.rst
   support.rst
-
+  glossary.rst
