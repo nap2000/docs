@@ -27,3 +27,4 @@ about this page.
   server-admin-sms.rst
   server-admin-whatsapp.rst
   server-admin-problems.rst
+  server-admin-customisation.rst

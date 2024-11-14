@@ -50,6 +50,18 @@ Sending a message to a specific case
 When you reply to a message, a reference is automatically appended to your message.  For example "#123".  If the person sending messages to you,
 includes that reference then the message will be sent only to the case that sent the response.
 
+You can specify a reply, associated with the inbound number,  that will automatically be sent if there is more than one open case
+associated with the senders number.  This "reply" can contain the placeholders %s1 and %s2.  These will be replaced by the number of
+open cases and the first message of each open case along with its reference respectively.  For example::
+
+    Hello thank you for your message.  Currently you have %s1 open cases that we are working on (%s2).
+    Please include a # and the reference number to identify to the case you want to to comment on or add #0 to create a new case.
+
+Creating a second case
+----------------------
+
+Add #0 to your message to always create a new case from your message.
+
 Creating a new case from a message
 ----------------------------------
 

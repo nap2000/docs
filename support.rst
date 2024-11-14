@@ -20,6 +20,7 @@ parties or yourself.
 
 *  `Privacy Policy <https://www.smap.com.au/privacy.shtml>`_
 *  `Fraud Policy <https://www.smap.com.au/fraud_policy.shtml>`_
+*  `Glossary <https://www.smap.com.au/docs/glossary.html>`_
 
 
 
