@@ -13,7 +13,7 @@ Surveys
 
   :ref:`charts`, yes, no
   last-saved value retrieval, yes, no
-  launch a survey from within a survey, yes, no
+  :ref:`launch a survey from within a survey<launch-survey>`, yes, yes
   :ref:`Multi-language<languages>`, yes, yes
   works offline, yes, yes,
   audit (timing; location per question; question changes), yes, no

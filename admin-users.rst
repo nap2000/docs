@@ -84,16 +84,17 @@ Security Groups
 
 Specify the security groups that they user belongs to. These include:
 
-*  admin:  Can manage users and passwords
-*  analyst: Can view, modify or delete collected data.
-*  enum: Can download surveys and submit data
-*  manage data: Can access the console
-*  manage tasks: Can create and manage tasks
-*  org admin.  Organisational Administrator. Can create and move between organisations.
-*  enterprise admin.  Can create and move between enterprises.
-*  security.  Can create and assign security roles
-*  view data.  Can view data but not modify it.
-*  view own data.  Can view their own data, that is data records that they submitted.
+*  Administrator:  Can manage users and passwords
+*  Analyst: Can view, modify or delete collected data
+*  Manage Console:  Can assign users in the console (v25.01+)
+*  Enterprise Admin:  Can create enterprises and move between them
+*  Enumerator: Can download surveys and submit data
+*  Manage Data: Can access the console
+*  Manage Tasks: Can create and manage tasks
+*  Organisational Admin:  Can create organisations and move between them
+*  Security Manager:  Can create and assign security roles
+*  View Data.  Can view data but not modify it
+*  View Own Data.  Can view their own data, that is data records that they submitted
 
 .. note::
 

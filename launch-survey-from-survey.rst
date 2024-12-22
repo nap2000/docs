@@ -123,7 +123,7 @@ Update an existing Record
 
 Available with Smap Server 24.01+ Only available with webforms.
 
-You can speify the instance of the record to be updated as a parameter called "instance"::
+You can specify the instance of the record to be updated as a parameter called "instance"::
 
   instance=${instance_to_update}
 

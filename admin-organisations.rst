@@ -22,7 +22,7 @@ then the **Organisations** tab.
 .. tip::
 
   If you have organisational administration privilege then you will see all of the organisations on the server listed on this tab.  Otherwise,
-  if you administrator privilege you will see the organisations that you have created.
+  if you have administrator privilege you will see the organisations that you have created.
   
 .. _organisational-hierarchy:
 

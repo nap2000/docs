@@ -112,9 +112,11 @@ Assigning a case to a user
 
 A person with :ref:`Admin<security-groups>` privilege can click on the "Assign User" button to assign the case to 
 any user who has access to the survey. Administrators can reassign cases to different people using this button. They
-can also set a case to "Unassinged" by assigning it to "None".
+can also set a case to "Unassigned" by assigning it to "None".   From version 25.01 of the server a user can be given the
+security privilege :ref:`Console Admin<security-groups>` and they too can assign users on the console without having all the
+other privileges of an administrator.
 
-Any person with :ref:`Analyst or Manage<security-groups>` privilege can click on the "Lock for Editing" button
+Any person with :ref:`Analyst or Manage Data<security-groups>` privilege can click on the "Lock for Editing" button
 to assign themselves to an unassigned case. If the user has finished with a case they can click the "Release" button
 to send it back to unassigned.
 
