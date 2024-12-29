@@ -11,7 +11,7 @@ Usage
 
 .. http:get:: /api/v1/misc/adminreport/usage/(int: year)/(int: month)/(string: userIdent)
 
-  For servier releases prior to 24.04 use "/surveyKPI/adminreport/usage/(int: year)/(int: month)/(string: userIdent)"
+  For server releases prior to 24.04 use "/surveyKPI/adminreport/usage/(int: year)/(int: month)/(string: userIdent)"
 
   :synposis: The usage API allows you to view the number of submissions made by each user in a `month`. These can be further broken down by `project`, `survey` and `device`. The API request stopped working in version 21.11 as this reporting usage for all users became too lengthy.  The reports generated from the user interface now run in the background and can later be downloaded from the reports page.  However this API call is back in version 21.12 with the addition of one more path parameter for the user ident. So it now downloads usage for only a single user.
   
@@ -27,7 +27,6 @@ Usage
   :query boolean project: Show usage by project
   :query boolean survey: Show usage by survey
   :query boolean device: Show usage by device
-  :query boolean inc_temp: Include temporary and anonymous users
   :query int o_id: Organisation Id.  Can be used if the calling user has organisational administration privilege to get details on a user in a different organisation
 
   **Example response**:
