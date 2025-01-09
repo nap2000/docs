@@ -65,8 +65,8 @@ Add #0 to your message to always create a new case from your message.
 Creating a new case from a message
 ----------------------------------
 
-Sometimes, while you are working on a case, the person that sent the first message will send another message that should be in its own case.message
-You can address this by opening the case for editing in the console and clicking on the message that should be moved to its own case.message
+Sometimes, while you are working on a case, the person that sent the first message will send another message that should be in its own case.
+You can address this by opening the case for viewing, (editing in versions before 25.01). in the console and clicking on the message that should be moved to its own case.
 
 .. figure::  _images/sms6.png
    :align:   center

@@ -3,7 +3,9 @@
 Tasks
 =====
 
-To get to task select **Modules** and then **Tasks**.  Tasks can be assigned to a person in order to complete a blank survey or update an existing record.
+Select **Modules** and then **Tasks**.  Tasks can be assigned to a person in order to complete a blank survey or update an existing record.
+
+Tasks are completed on the WebForms page or in FieldTask.
 
 .. toctree::
   :maxdepth: 1

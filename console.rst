@@ -138,18 +138,11 @@ feedback.  In this case the oversight form will just have the questions that the
     edit the record.  Administrators can assign records, including those currently locked, to someone else.
 4.  Click on the edit button
 
-.. figure::  _images/console2.jpg
-   :align:   center
-   :alt: The console Edit Page
+From version 25.01 of the server this will open the oversight form in a WebForm for editing.  WebForms allow you to include
+relevance rules in your oversight forms just as you do in normal data surveys.  However WebForms do not support the "source" parameter
+of questions that make annotating answers to other questions easy.  Instead you can do this annotation in the "View" mode.
 
-   Console Edit Page
-   
-On the console edit page questions are placed in 2 columns. The ones shown on the left are read only. They are the questions in the
-main survey where there is no question in the oversight survey with the same name.  The questions on the right are the questions
-form the oversight survey and can have their answer changed.  
-
-Hence if you want to be able to change the answer to a question in the main survey then you will need to have a question of the same
-name in the oversight survey. To add data to the main survey the question in the oversight survey would not be in the main survey.
+The user will need **manage data** or **enumerator** security privilege to click on the green edit button to open the oversight form.  T
 
 Oversight survey specific configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -166,11 +159,18 @@ There are some configuration settings you can use with oversight surveys:
 #.  For a text question specify a source parameter which points to an image question.  For example:  "source=issue_photo".  This will cause the text
     question to be automatically populated with labels identified in the the image.  The AWS Rekognition service is used to do this.
 
+View Records and Annotation
+---------------------------
+
+The view button can be clicked even when a record is not locked in order to get a detailed view of the record data.  From version 25.01
+this is also where you will also do annotations.   This means that updates can be made to questions that reference other questions using a
+source parameter even when the user has not locked the record.
+
 Annotating Answers
 ^^^^^^^^^^^^^^^^^^
 
 You may have collected image, audio or video data and you want to label that media or transcribe it into text.  If it is a text question
-you may want to translate that response into a different language.  You can do this with oversight surveys.
+you may want to translate that response into a different language.
 
 To do this:
 
@@ -178,7 +178,7 @@ To do this:
 #.  Add a parameter source with a value of the name of the question that you want to translate.  For example: "source=comment".
 #.  Setting the rows parameter to something like 5, will also make it easier for the user to type in the annotation
 
-Having done this when you edit a record in the console the source question will be shown next to the annotation question so that you can 
+Having done this when you view a record in the console the source question will be shown next to the annotation question so that you can
 easily update one from the other.
 
 Example 1. Translate a text answer
@@ -289,12 +289,6 @@ values; Positive, Negative, Neutral or Mixed. A confidence value in the sentimen
 
 
 The above parameter is required in addition to the "source" parameter identifying the question that contains the original image file.
-
-Using a webform
-+++++++++++++++
-
-If the user has the **enum** security privilege then they can click on the green webform button at the top of the page.  This will 
-open the main survey populated with data from the record.  The user can then make changes and submit in the normal webform way.
 
 Updating Multiple Records at once
 +++++++++++++++++++++++++++++++++
