@@ -82,8 +82,8 @@ then you will see a section in the dialog labelled **Roles**.  Select the roles 
    
    Assigning a Role to a Users
    
-3. Assign the role to a form (Online Editor)
-++++++++++++++++++++++++++++++++++++++++++++
+3. Assign the role to a survey form (Online Editor)
++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Open the survey in the online editor and then select the menu **File** then **Roles**.
 
@@ -142,6 +142,27 @@ Simply select the columns / questions that people with the role can access.
    
    Filtering Columns
 
+Applying filters to whole bundle (Online Editor)
+-------------------------------------------------
+
+This feature is available in server version 25.01+.
+
+When you are editing the roles that apply to a survey you will now see a checkbox labelled "Apply these roles to all surveys in the bundle".
+
+.. figure::  _images/roles_bundle.png
+   :align:   center
+   :width:   300px
+   :alt:     Applying filters to the bundle by selecting a checkbox
+
+If you select this checkbox then the settings for each role that is enabled in the current survey will be applied to all other surveys in the bundle.
+These settings include:
+
+#.  Row filters
+#.  Column filters
+
+So in the above image the row filters and column filters in the CID role for the EOB survey will be applied to all other surveys
+in the bundle that also have the CID role.  Furthermore if you subsequently change the row filters or column filters in any survey then other surveys
+that have that role enabled will be updated.
 
 Assign the role to a Survey (XLS Editor)
 --------------------------------------------

@@ -47,7 +47,8 @@ Submission
 
 Settings include:
 
-*  Survey whose submission triggers the notifications
+*  Trigger from any survey in the selected bundle or from a specific survey
+*  Survey or bundle whose submission triggers the notifications
 *  Filter. Restrict which records will trigger a notification.  For example:  "${age} > 80"
 
 Task Reminder
