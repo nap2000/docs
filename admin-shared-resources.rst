@@ -11,14 +11,14 @@ To get to shared resources select the **Admin** module and then **Shared Resourc
 Shared resources are made available to all surveys in an organisation.  They conist of:
 
 *  Images, Video, Audio that can be included in questions and choices
-*  CSV files that contain reference data accessed using the search() function and the pulldata() function
+*  Spreadsheets that contain reference data accessed using the search() function and the pulldata() function
 *  Maps used on the server for analysis
 *  Locations
 
 Spreadsheets
 ------------
 
-Spreadsheets loaded to the shared resource file contain tables of reference information which can be used
+Spreadsheets loaded as a shared resource file contain tables of reference information which can be used
 to get lists of choices for a select question or lookup a value.   Spreadsheets loaded here can be used by any survey.
 
 *  A spreadsheet can be added by uploading a CSV file or an Excel XLSX file.
