@@ -35,7 +35,7 @@ Also create a script file called setcredentials.sh that contains 2 lines::
   export AWS_ACCESS_KEY_ID= .....
   export AWS_SECRET_ACCESS_KEY = .....
 
-run deploy.sh to copy the credentials file to the locations that it is used.
+run patchdb.sh to copy the credentials file to the locations that it is used.
 
 Using Transcribe, Translate and Rekognition
 -------------------------------------------

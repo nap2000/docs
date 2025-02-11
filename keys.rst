@@ -27,13 +27,20 @@ merge
 +++++ 
 
 Any submissions that match an existing record using the key will be merged.  That is the data in the 
-new record will replace the old record except where the question in the new record was not answered. Then the old
-data will be retained. For Example.
+new record will replace the old record except where the question in the old record was not included in survey that created the new record. Then the old
+data will be retained.
+
+Merge is the default policy when editing using oversight forms in the console.  Note from version 25.01 the behaviour has changed in that an update which
+sets a value to be empty is now applied.  Old values are only merged if they were created by surveys in a bundle that had additional questions not included
+in the new update.
+
+For Example.
 
 Old record::
 
   id: 1
   name: Tom
+  sex: male
   age: 20
   Address: 5 Smith St.
   
@@ -48,8 +55,9 @@ Results in::
 
   id: 1
   name: Tom
+  sex: male      -- This value merged and retained
   age: 21
-  Address: 5 Smith St.
+  Address:       -- This value set to be empty
   
 discard
 +++++++
