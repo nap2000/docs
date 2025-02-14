@@ -38,7 +38,7 @@ The following can trigger a notification:
 *  A submission.  A result submitted from a survey. Including submission from an oversight form (replaces old console update)
 *  A task reminder.  If a task has not been completed within the specified time.
 *  A case managmeent alert.
-*  A periodic timer. Daily, weekly, monthly or yearly.
+*  A periodic timer. Daily, weekly, monthly, quarterly or yearly.
 *  A Server Calculation change
 
 Submission
@@ -105,6 +105,7 @@ determined by the selected period.
 *  Daily: Data from the day before will be included.
 *  Weekly: Data from the previous week will be included.
 *  Monthly: Data from the previous month will be included.
+*  Quarterly: Data from the previous quarter will be included.  (Available in version 25.02+)
 *  Yearly: Data from the previous year will be included.
 
 .. note::
