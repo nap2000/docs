@@ -431,23 +431,12 @@ The color of a data cell can be set using style lists. There are two steps to th
 Reports
 -------
 
-Reports created from the console use the same filters (:ref:`console-filters`) that are used to determine what is displayed on the screen.  
+Reports created from the console use the same filters (:ref:`console-filters`) that are used to determine what is displayed on the screen.  The reports can be accessed by
+selecting the "File" menu option, you can then select Excel or Word format.  Note Word format is not useful if there are many columns.
 
-.. figure::  _images/console-reports1.jpg
-   :align:   center
-   :alt: Sub form records with a different parent
-
-   Reports accessible from the console
-
-As shown in the picture there are 3 console specific reports available which have been highligted with a red border. (Note the menu item simply labelled reports 
-takes you to the reports module and is not connected to what is shown on the console. Also the menu item labelled "local reports" contains custom reports added 
-for your application, by default there will be no reports listed under this drop down).
-
-*  Summary Report.  Creates a spreadsheet report with a worksheet for each question.  These worksheets format the data so that it can be readily turned
-   into charts.
-*  Word Download (blue button).  Downloads the current records and columns into a word document.  QR codes will be shown in this report.  All reports are generated in 
+*  Word. Downloads the current records and columns into a word document.  QR codes will be shown in this report.  All reports are generated in
    landscape mode.  You should reduce the number of columns to less than 10 before proceeding.
-*  Spreadsheet Download (Green button).  Downloads the current records into a spreadsheet.
+*  Excel.  Downloads the current records into a spreadsheet.
 
 
 Languages Supported for Automatic Transcription
