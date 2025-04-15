@@ -35,6 +35,9 @@ In /etc/default/tomcat[x]::
 
   JAVA_OPTS="-Djava.awt.headless=true -Xms512m -Xmx768m"
 
+For Ubuntu 24.04+ update setenv.sh in /usr/share/tomcat9/bin to include::
+
+    export JAVA_OPTS="-Djava.awt.headless=true -Xms512m -Xmx768m"
 
 Medium
 ------
@@ -57,7 +60,7 @@ In /var/lib/tomcat[x]/conf/context.xml::
 
   MaxActive for survey_definitions and results resources:  100
 
-In /etc/default/tomcat[x]::
+In /etc/default/tomcat[x] or setenv.sh(for Ubuntu 24.04+)::
 
   JAVA_OPTS="-Djava.awt.headless=true -Xms2048m -Xmx2048m"
 
