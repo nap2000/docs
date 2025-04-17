@@ -12,7 +12,7 @@ Task Groups
 
 .. http:get:: /api/v1/tasks/groups/(project id)
 
-  :synposis: get a list of task groups in a project.  You can use the :ref:`tasks-api` request with a query parameter of `links=true` to get a list of available task groups URLs
+  :synopsis: get a list of task groups in a project.  You can use the :ref:`tasks-api` request with a query parameter of `links=true` to get a list of available task groups URLs
   
   **Example response**:
   
@@ -96,7 +96,7 @@ Task List
 
 .. http:get:: /api/v1/tasks
 
-  :synposis: get a list of tasks.
+  :synopsis: get a list of tasks.
   
   **Example response**:
   
@@ -224,7 +224,7 @@ Details of a Single Task
 
 .. http:get:: /api/v1/tasks/(task id)
 
-  :synposis: Get the details for a single task.
+  :synopsis: Get the details for a single task.
   
   **Example response**:
   
@@ -274,7 +274,7 @@ Create a Task
 	
 .. http:post:: /api/v1/tasks
 
-  :synposis: Create a task. The payload is a JSON object and can use the same attributes as returned by :ref:`single-task`.  The payload is sent as x-www-form-urlencoded content with a key of "task".  Use :ref:`single-task` API call to get templates for the data that can be posted. 
+  :synopsis: Create a task. The payload is a JSON object and can use the same attributes as returned by :ref:`single-task`.  The payload is sent as x-www-form-urlencoded content with a key of "task".  Use :ref:`single-task` API call to get templates for the data that can be posted.
 
   **Example request**:
 

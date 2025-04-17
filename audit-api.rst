@@ -40,7 +40,7 @@ Per Question Audit Data
 
 .. http:get:: /api/v1/audit/(survey ident)
 
-  :synposis:  Get per question audit data from a survey. (survey ident) is the survey identifier which can be found in the list of services retrieved above. A GeoJson object is returned for each question and includes the time it took for the data collector to answer the question and the gps coordinates of where the question was answered. This data is only returned if "Timing Data" and "Record Location" were enabled for the survey.`
+  :synopsis:  Get per question audit data from a survey. (survey ident) is the survey identifier which can be found in the list of services retrieved above. A GeoJson object is returned for each question and includes the time it took for the data collector to answer the question and the gps coordinates of where the question was answered. This data is only returned if "Timing Data" and "Record Location" were enabled for the survey.`
   
   **Example response**:
   
@@ -163,7 +163,7 @@ Raw Audit Log File
 
 .. http:get:: /api/v1/audit/(survey ident)
 
-  :synposis:  Download the audit file that contains the original audit data before it is processed by the server
+  :synopsis:  Download the audit file that contains the original audit data before it is processed by the server
   
   **Example response**:
   

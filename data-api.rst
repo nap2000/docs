@@ -22,7 +22,7 @@ Data End Points in JSON
 .. http:get:: /api/v1/data
 .. http:get:: /api/v2/data
 
-  :synposis: Returns available end points.   
+  :synopsis: Returns available end points.
   
   **Example response**:
   
@@ -76,7 +76,7 @@ Data End Points in CSV
 
 .. http:get:: /api/v1/data.csv
 
-  :synposis: Returns available end points in a CSV file.
+  :synopsis: Returns available end points in a CSV file.
   
   **Example response**:
   
@@ -92,7 +92,7 @@ Survey Data in JSON
 .. http:get:: /api/v1/data/(survey ident)
 .. http:get:: /api/v2/data/(survey ident)
 
-  :synposis: Returns data for the specified survey. The example shows 
+  :synopsis: Returns data for the specified survey. The example shows
   
   **Example response**:
   
@@ -191,7 +191,7 @@ Survey Data in CSV
 
 .. http:get:: /api/v1/data.csv/(survey ident)
 
-  :synposis: Returns data for the specified survey. The example shows 
+  :synopsis: Returns data for the specified survey. The example shows
   
   **Example response**:
   
@@ -207,7 +207,7 @@ Single Record
 .. http:get:: /api/v1/data/(survey ident)/(instance key)
 .. http:get:: /api/v2/data/(survey ident)/(instance key)
 
-  :synposis: Get data for the specified instance. The instance key can be found in the :ref:`survey-data-json` API call. Two output 
+  :synopsis: Get data for the specified instance. The instance key can be found in the :ref:`survey-data-json` API call. Two output
     formats are available.  Probably the more useful format is the hierarchy view (Smap Server 21.05). In this format repeats are included inside 
     their parent records. Specify the hierarchy parameter in order to get this format.  In the alternate default format the values from repeating 
     records are separated out from their parent.  

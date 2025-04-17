@@ -127,7 +127,7 @@ Create/Edit a Campaign
 	
 .. http:post:: /api/v1/mailout
 
-  :synposis: To edit an existing mailout the payload is a JSON object with the same attributes as returned by :ref:`get-mailouts`.  To create a new mailout remove the mailout id. The payload is sent as x-www-form-urlencoded content with a key of "mailout".  
+  :synopsis: To edit an existing mailout the payload is a JSON object with the same attributes as returned by :ref:`get-mailouts`.  To create a new mailout remove the mailout id. The payload is sent as x-www-form-urlencoded content with a key of "mailout".
 
   **Example request**:
 
@@ -170,7 +170,7 @@ Create a Campaign Email
 	
 .. http:post:: /api/v1/mailout/(campaign id)/email
 
-  :synposis: The payload is a JSON object with the same attributes as returned by :ref:`get-campaign-emails`.  The payload is sent as x-www-form-urlencoded content with a key of "email". Optionally a second payload item with a key of **action** and values of either "email", "manual" or "none" can be included.  If the action is set to email then an email is sent immediately. Alternatively if the action is set to "manual" the URL to complete the form will be returned.  If the **action** is not set, or is set to "none", then the email is added to the campaign to be sent by a user using the user interface.
+  :synopsis: The payload is a JSON object with the same attributes as returned by :ref:`get-campaign-emails`.  The payload is sent as x-www-form-urlencoded content with a key of "email". Optionally a second payload item with a key of **action** and values of either "email", "manual" or "none" can be included.  If the action is set to email then an email is sent immediately. Alternatively if the action is set to "manual" the URL to complete the form will be returned.  If the **action** is not set, or is set to "none", then the email is added to the campaign to be sent by a user using the user interface.
 
   **Example request**:
 

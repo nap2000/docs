@@ -13,7 +13,7 @@ Usage
 
   For server releases prior to 24.04 use "/surveyKPI/adminreport/usage/(int: year)/(int: month)/(string: userIdent)"
 
-  :synposis: The usage API allows you to view the number of submissions made by each user in a `month`. These can be further broken down by `project`, `survey` and `device`. The API request stopped working in version 21.11 as this reporting usage for all users became too lengthy.  The reports generated from the user interface now run in the background and can later be downloaded from the reports page.  However this API call is back in version 21.12 with the addition of one more path parameter for the user ident. So it now downloads usage for only a single user.
+  :synopsis: The usage API allows you to view the number of submissions made by each user in a `month`. These can be further broken down by `project`, `survey` and `device`. The API request stopped working in version 21.11 as this reporting usage for all users became too lengthy.  The reports generated from the user interface now run in the background and can later be downloaded from the reports page.  However this API call is back in version 21.12 with the addition of one more path parameter for the user ident. So it now downloads usage for only a single user.
   
   **Example request**:
 
@@ -43,7 +43,7 @@ Resources
 
 .. http:get:: /api/v1/misc/media
 
-  :synposis: Get a list of the media :ref:`shared-resources` available in the users current organisation.  Includes images, video, audio and csv files.
+  :synopsis: Get a list of the media :ref:`shared-resources` available in the users current organisation.  Includes images, video, audio and csv files.
 
   For server releases prior to 24.04 use the URL: "/surveyKPI/upload/media".
 
@@ -104,7 +104,7 @@ Resources
 
 .. http:post:: /api/v1/misc/media
 
-  :synposis: Upload a media file.
+  :synopsis: Upload a media file.
 
   For server releases prior to 24.04 use the URL: "/surveyKPI/upload/media".
 
@@ -124,7 +124,7 @@ Users (Simple)
 
 .. http:get:: /api/v1/misc/userList/simple
 
-  :synposis: Get a list of users in the current organisation of the user making the API call.
+  :synopsis: Get a list of users in the current organisation of the user making the API call.
 
   For server releases prior to 24.04 use the URL: "surveyKPI/userList/simple".
 
@@ -159,7 +159,7 @@ Projects
 
 .. http:get:: /api/v1/admin/projects
 
-  :synposis: Get a list of projects.
+  :synopsis: Get a list of projects.
   
   **Example response**:
   
@@ -197,7 +197,7 @@ Get
 
 .. http:get:: /api/v1/admin/surveys/(project id)
 
-  :synposis: Get a list of surveys with details on each within the specified project. Projects can be found using :ref:`projects-api`.
+  :synopsis: Get a list of surveys with details on each within the specified project. Projects can be found using :ref:`projects-api`.
   
   **Example response**:
   
@@ -261,7 +261,7 @@ Get Accessible
 
 .. http:get:: /api/v1/misc/surveys/idents
 
-  :synposis: Get a list of survey names and their identifier and project name that are accessible by the calling user. (version 21.05+)
+  :synopsis: Get a list of survey names and their identifier and project name that are accessible by the calling user. (version 21.05+)
 
   For server releases prior to 24.04 use the URL: "/surveyKPI/surveys/idents".
 
@@ -310,7 +310,7 @@ Upload
 
 .. http:post:: /api/v1/misc/upload/surveytemplate
 
-  :synposis: Upload a survey template in the spreadsheet format
+  :synopsis: Upload a survey template in the spreadsheet format
 
   For server releases prior to 24.04 use the URL: "/surveyKPI/surveys/idents".
 
@@ -329,7 +329,7 @@ Submissions
 
 .. http:get:: /api/v1/submissions
 
-  :synposis: A list of submissions in the calling user's organisation. The data is always returned as latest first
+  :synopsis: A list of submissions in the calling user's organisation. The data is always returned as latest first
   
   **Example response**:
   
@@ -398,7 +398,7 @@ Timezone
 
 .. http:get:: /api/v1/misc/timezones
 
-  :synposis: Many API calls include a timezone parameter so that dates can be returned in the specified time zone. This api returns the timezones that can be used.
+  :synopsis: Many API calls include a timezone parameter so that dates can be returned in the specified time zone. This api returns the timezones that can be used.
 
   For server releases prior to 24.04 use the URL: "/surveyKPI/utility/timezones".
 
@@ -444,7 +444,7 @@ Get a PDF of a submitted Record
 
 .. http:get:: /api/v1/misc/pdf/(survey ident)
 
-  :synposis: Returns a PDF of the data in the submission. You can use the data API passing a parameter of links=true to see the URLs that will return a PDF of data.
+  :synopsis: Returns a PDF of the data in the submission. You can use the data API passing a parameter of links=true to see the URLs that will return a PDF of data.
 
   For server releases prior to 24.04 use the URL: "/surveyKPI/utility/timezones".
 
@@ -458,7 +458,7 @@ Edit a submission in a Webform
 
 .. http:get:: /webForm/(survey ident)
 
-  :synposis: Opens the submission in a webform for editing. You can use the data API passing a parameter of links=true to see the URLs.
+  :synopsis: Opens the submission in a webform for editing. You can use the data API passing a parameter of links=true to see the URLs.
   
   :query datakey:  (Required) The column that holds the key of the record.  Usually you would use "instanceid"
   :query datakeyvalue: The value of the key that identified the record.
@@ -470,7 +470,7 @@ Change current organisation
 
 .. http:get:: /api/v1/users/organisation/(organisation name)
 
-  :synposis: Set the users organisation to the value specified in "organisation name". Available in server version 21.03+.
+  :synopsis: Set the users organisation to the value specified in "organisation name". Available in server version 21.03+.
   
   **Example response**:
   
