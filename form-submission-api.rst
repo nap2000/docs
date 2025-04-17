@@ -6,7 +6,7 @@ Submission
 
 .. http:post:: /submission?device={device identifier}
 
-  :synposis: Submit data for a completed form to the server
+  :synopsis: Submit data for a completed form to the server
   
 Contents::
 
