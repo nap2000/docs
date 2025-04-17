@@ -207,10 +207,7 @@ Single Record
 .. http:get:: /api/v1/data/(survey ident)/(instance key)
 .. http:get:: /api/v2/data/(survey ident)/(instance key)
 
-  :synopsis: Get data for the specified instance. The instance key can be found in the :ref:`survey-data-json` API call. Two output
-    formats are available.  Probably the more useful format is the hierarchy view (Smap Server 21.05). In this format repeats are included inside 
-    their parent records. Specify the hierarchy parameter in order to get this format.  In the alternate default format the values from repeating 
-    records are separated out from their parent.  
+  :synopsis: Get data for the specified instance. The instance key can be found in the :ref:`survey-data-json` API call. Two output formats are available.  Probably the more useful format is the hierarchy view (Smap Server 21.05). In this format repeats are included inside their parent records. Specify the hierarchy parameter in order to get this format.  In the alternate default format the values from repeating records are separated out from their parent.  
   
   **Example response**:
   
@@ -222,26 +219,26 @@ Single Record
 	Vary: Accept
 	Content-Type: application/json
 	
-    {
-      "values": {
-        "country": "Mozambique",
-        "instanceid": "uuid:debf717e-99a0-4b87-994f-b90ef2339317"
-      },
-      "repeats": {
-        "cities": [
-          {
-            "values": {
-            "city": "Maputo"
-            }
+        {
+          "values": {
+            "country": "Mozambique",
+            "instanceid": "uuid:debf717e-99a0-4b87-994f-b90ef2339317"
           },
-          {
-            "values": {
-            "city": "Massinga"
-            }
+          "repeats": {
+            "cities": [
+                  {
+                "values": {
+                "city": "Maputo"
+                }
+              },
+              {
+                "values": {
+                "city": "Massinga"
+                }
+              }
+            ]
           }
-        ]
-      }
-    }
+        }
 
   **Example response with hierarchy parameter set**:
   
@@ -253,18 +250,18 @@ Single Record
 	Vary: Accept
 	Content-Type: application/json
 	
-    {
-      "cities": [
         {
-        "city": "Maputo"
-        },
-        {
-        "city": "Massinga"
+          "cities": [
+            {
+            "city": "Maputo"
+            },
+            {
+            "city": "Massinga"
+            }
+          ],
+          "instanceid": "uuid:debf717e-99a0-4b87-994f-b90ef2339317",
+          "country": "Mozambique"
         }
-      ],
-      "instanceid": "uuid:debf717e-99a0-4b87-994f-b90ef2339317",
-      "country": "Mozambique"
-    }
 
   :query meta: set to ``yes`` to return meta data and preloads including prikey, instanceid, user, upload time.  The default is ``no``
   :query tz:    The timezone for example ``Australia/Brisbane``.  All date time and date answers will be returned in this time zone.
