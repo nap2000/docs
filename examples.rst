@@ -17,8 +17,9 @@ General Surveys
 Doing things with images
 ------------------------
 
-*  `Dynamic Images (WebForm version) <https://docs.google.com/spreadsheets/d/1MCi1DcIC0kh4H4Hyq33RJWt3mlWAdPOnG2YQRYgtzWg/edit?usp=sharing>`_
-*  `Dynamic Images (FieldTask version) <https://docs.google.com/spreadsheets/d/1WEoARXBgcmbRzgvrDK7lyCsjiU7AhCWq4dondDkY5Pw/edit?usp=sharing>`_
+*  `Dynamic Images <https://docs.google.com/spreadsheets/d/1n1QQ5zzMT18T1UsoNLMFWu1LxZJcD0X8O1gNe_x3DcI/edit?usp=sharing>`_
+*  `Dynamic Images (WebForm version - Obsolete) <https://docs.google.com/spreadsheets/d/1MCi1DcIC0kh4H4Hyq33RJWt3mlWAdPOnG2YQRYgtzWg/edit?usp=sharing>`_
+*  `Dynamic Images (FieldTask version - Obsolete) <https://docs.google.com/spreadsheets/d/1WEoARXBgcmbRzgvrDK7lyCsjiU7AhCWq4dondDkY5Pw/edit?usp=sharing>`_
 *  `Lookup objects in an image (FieldTask only) <https://docs.google.com/spreadsheets/d/1gYO40raxSKD-GRmcnqOiDlN2A5VBr4Odx1GAfKcHt64/edit?usp=sharing>`_
 
 
