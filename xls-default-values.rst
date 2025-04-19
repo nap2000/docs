@@ -142,7 +142,7 @@ The dynamic default value should be wrapped in a default() or once() function so
 is usually better as it would allow the url of the image to be re-calculated and a new image applied whereas if once() is used then once the image
 is set it cannot be changed without manually clearing the answer.
 
-`Example survey for Dynamic Images <https://docs.google.com/spreadsheets/d/1WEoARXBgcmbRzgvrDK7lyCsjiU7AhCWq4dondDkY5Pw/edit?usp=sharing>`_
+`Example survey for Dynamic Images <https://docs.google.com/spreadsheets/d/1n1QQ5zzMT18T1UsoNLMFWu1LxZJcD0X8O1gNe_x3DcI/edit?usp=sharing>`_
 
 Security Considerations
 +++++++++++++++++++++++
