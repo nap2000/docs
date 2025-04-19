@@ -132,39 +132,17 @@ WebForm is online this image will then be downloaded.  One application of this m
 **annotate**.  The image URL can be selected from a list of drawing schematics, the selected image would then be downloaded and the user would be
 able to annotate the selected schematic.
 
-Use a get_media() function to download the required URL. There are some differences between the way WebForms and FieldTask work.  
-
-WebForms
-++++++++
-
-For webforms the get_media() function takes 2 parameters.  The first is the URL to retrieve and the second one is the path to the
-question that should receive the URL.  This is different from the every other use of dynamic defaults in that the calculation
-places in the result in the specified question.  Hence you don't need to have anything in the calculation column of the target
-question::
-
-  get_media(${q1}, '/main/q3')
- 
-.. note::
-
-  For the second parameter you cannot use the ${} notation. Paths to questions always start with '/main' and then
-  continue with the names of groups and questions each separated by a '/'
-
-`Example survey for Dynamic Images (WebForm version) <https://docs.google.com/spreadsheets/d/1MCi1DcIC0kh4H4Hyq33RJWt3mlWAdPOnG2YQRYgtzWg/edit?usp=sharing>`_
-
-FieldTask
-+++++++++
-
-Only one parameter is required for get_media() which is the URL of the image.  Then the calculation question is specified in the 
+Use a get_image() function to download the required URL. 
+Only one parameter is required for get_image() which is the URL of the image.  Then the calculation question is specified in the 
 calculation column of the target question::
 
-  calculate  q2   if(string-length(${q1}) > 0, get_media(${q1}, ''), '')
-  image      q3   default(${q2})
+  image  imageQuestion   default(if(string-length(${q1}) > 0, get_image(${q1}), ''))
   
 The dynamic default value should be wrapped in a default() or once() function so that it does not get changed when the form is saved. default()
 is usually better as it would allow the url of the image to be re-calculated and a new image applied whereas if once() is used then once the image
 is set it cannot be changed without manually clearing the answer.
 
-`Example survey for Dynamic Images (FieldTask Version) <https://docs.google.com/spreadsheets/d/1WEoARXBgcmbRzgvrDK7lyCsjiU7AhCWq4dondDkY5Pw/edit?usp=sharing>`_
+`Example survey for Dynamic Images <https://docs.google.com/spreadsheets/d/1WEoARXBgcmbRzgvrDK7lyCsjiU7AhCWq4dondDkY5Pw/edit?usp=sharing>`_
 
 Security Considerations
 +++++++++++++++++++++++
@@ -172,5 +150,4 @@ Security Considerations
 Security controls on the server holding the images may prevent their access within a form.  So unless they are on a 
 completely open server you will need to consider access permissions and CORS settings. 
 
-Alternatively if you are accessing images collected by other surveys on the same Smap server then you can use the Smap security 
-controls (projects, RBAC) to control access. 
+Alternatively if you are accessing images collected by other surveys on the same Smap server then you can use the Smap security controls (projects, RBAC) to control access. 
