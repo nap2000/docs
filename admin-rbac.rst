@@ -128,7 +128,39 @@ Example::
 
   ${region} = ‘region_a’
 
-  Only rows with a value of region_a for the region question will now be shown.
+Only rows with a value of region_a for the region question will now be shown.
+
+Permissive and Restrictive row filters
+======================================
+
+The default setting for a row filter is "permissive", however from version 24.06 you will be able to specify that the row
+filter type is "restrictive".  The meaning of these are:
+
+For permissive row filters, if you have two roles with row filters::
+
+    role 1: ${project} = 'a'  (permissive)
+    role 2: ${project} = 'b'  (permissive)
+
+ Then:
+*  if you only have role 1 you can only see data for project "a".
+*  if you only have role 2 you can only see data for project "b"
+*  but if you have both roles you can see data for project "a" and project "b"
+
+In this way a user having more roles can see more data.
+
+However sometimes there are overriding restrictions that you want to apply.  For example if you want to restrict access to sensitive data
+in all projects. Then you can set the row filter type to "restrictive". Expanding on the above example::
+
+        role 1: ${project} = 'a'  (permissive)
+        role 2: ${project} = 'b'  (permissive)
+        role 3: ${sensitive} = 'no' (restrictive)
+
+*  if you have role 1 and role 3 you can only see non sensitive data for project "a".
+*  if you only have role 2 and role 3 you can only see non sensitive data for project "b"
+*  if you have roles 1, 2 and 3 you can see non sensitive data for project "a" and project "b"
+
+So adding role 3 to users always further restricts the records shown it does not expand the records shown to all non sensitive data in abll projects
+which it would do if it was permissive.
 
 Filtering Columns
 +++++++++++++++++
@@ -160,7 +192,7 @@ These settings include:
 #.  Row filters
 #.  Column filters
 
-So in the above image the row filters and column filters in the CID role for the EOB survey will be applied to all other surveys
+In the above image the row filters and column filters in the CID role for the EOB survey will be applied to all other surveys
 in the bundle that also have the CID role.  Furthermore if you subsequently change the row filters or column filters in any survey then other surveys
 that have that role enabled will be updated.
 
