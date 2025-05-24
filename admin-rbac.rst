@@ -1,7 +1,7 @@
 .. _rbac:
 
-Role Based Access Control
-=========================
+Role Based Access Control (RBAC)
+================================
 
 .. contents::
  :local:  
@@ -130,38 +130,6 @@ Example::
 
 Only rows with a value of region_a for the region question will now be shown.
 
-Permissive and Restrictive row filters
-======================================
-
-The default setting for a row filter is "permissive", however from version 24.06 you will be able to specify that the row
-filter type is "restrictive".  The meaning of these are:
-
-For permissive row filters, if you have two roles with row filters::
-
-    role 1: ${project} = 'a'  (permissive)
-    role 2: ${project} = 'b'  (permissive)
-
- Then:
-*  if you only have role 1 you can only see data for project "a".
-*  if you only have role 2 you can only see data for project "b"
-*  but if you have both roles you can see data for project "a" and project "b"
-
-In this way a user having more roles can see more data.
-
-However sometimes there are overriding restrictions that you want to apply.  For example if you want to restrict access to sensitive data
-in all projects. Then you can set the row filter type to "restrictive". Expanding on the above example::
-
-        role 1: ${project} = 'a'  (permissive)
-        role 2: ${project} = 'b'  (permissive)
-        role 3: ${sensitive} = 'no' (restrictive)
-
-*  if you have role 1 and role 3 you can only see non sensitive data for project "a".
-*  if you only have role 2 and role 3 you can only see non sensitive data for project "b"
-*  if you have roles 1, 2 and 3 you can see non sensitive data for project "a" and project "b"
-
-So adding role 3 to users always further restricts the records shown it does not expand the records shown to all non sensitive data in abll projects
-which it would do if it was permissive.
-
 Filtering Columns
 +++++++++++++++++
 
@@ -173,6 +141,40 @@ Simply select the columns / questions that people with the role can access.
    :alt:     Filtering Columns
    
    Filtering Columns
+
+Filter Groups
++++++++++++++
+
+A user can have multiple roles, each of which has a filter.  There are a number of ways you may want to combine these filters. For example
+a survey may have the roles:
+
+*  WASH Project
+*  Food Distribution Project
+*  Shelter Project
+*  Security Level 1
+*  Security Level 2
+*  Security Level 3
+
+A user may be given the roles:
+
+*  WASH Project
+*  Food Distribution Project
+*  Security Level 1
+*  Security Level 2
+
+The expectation would be that this user can see all the records at security levels 1 or 2 for the WASH and Food Distribution projects. They should
+not be able to see anything on the Shelter project at any security level nor anything at Security Level 3 in any project.  This logic can be
+implemented using filter groups.
+
+There are two groups available:
+
+#.  Group A
+#.  Group B
+
+We can start by putting the project roles into group A. Each additional role we add in here increases the number of records that can be
+accessed so the user will be able to see data from all the projects for which they have been given the role.  The security roles
+will need to go into a different group, group B,  so that they restrict the records allowed from group A to the ones that match the
+granted security roles.
 
 Applying filters to whole bundle (Online Editor)
 -------------------------------------------------
