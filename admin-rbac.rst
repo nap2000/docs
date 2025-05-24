@@ -101,11 +101,12 @@ users will need at least one of the roles to access the survey.
 Filtering
 ---------
 
-A user that has a role that is enabled for a survey can access the survey.  
+A user who has a role that is enabled for a survey can access the survey.  
 However you can also restrict the rows and columns that they see.
 
 If the user has more than 1 role enabled for the survey then the can access the union 
-of the columns and rows allowed for each role.
+of the columns and rows allowed for each role. (Assuming the roles are in the same group, see the section
+below on filter groups to see more options for combining roles).
 
 For example role1 allows access to column q1 and role 2 allows access to column q2 then 
 the user will have access only to columns q1 and q2.
