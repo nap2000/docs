@@ -5,6 +5,10 @@ Server Requirements
 .. contents::
  :local:
 
+The following pre-requisites are required by the install script and the infrastructure components that it
+installs.  You can modify this script yourself to use other Linux distros or for a different
+chip architecture.
+
 *  One of the following Ubuntu LTS Server versions
 
    *  24.04
@@ -14,6 +18,7 @@ Server Requirements
 
 *  2GB of Memory
 *  10GB of disk
+*  Chip Architecture: X86
 
 Small Server (2 GB RAM)
 -----------------------

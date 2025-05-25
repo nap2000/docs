@@ -146,6 +146,8 @@ Simply select the columns / questions that people with the role can access.
 Filter Groups
 +++++++++++++
 
+Available with server version 25.05+.
+
 A user can have multiple roles, each of which has a filter.  There are a number of ways you may want to combine these filters. For example
 a survey may have the roles:
 
