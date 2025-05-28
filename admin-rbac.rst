@@ -113,6 +113,8 @@ the user will have access only to columns q1 and q2.
 
 Filtering is specified on the **survey roles** page where you have just enabled a role for a survey.
 
+.. _filtering-rows:
+
 Filtering Rows
 ++++++++++++++
 
@@ -142,6 +144,8 @@ Simply select the columns / questions that people with the role can access.
    :alt:     Filtering Columns
    
    Filtering Columns
+
+.. _filter-groups:
 
 Filter Groups
 +++++++++++++
