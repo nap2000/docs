@@ -49,13 +49,13 @@ select menu **File**, then **Settings** then set style to **Grid**.
 Once grids are enabled you can use **groups** (begin group, end group) to form the questions into the grid you want.
 
 *  Enclose the questions that you want to appear in a single row within a group
-*  Set the width of the group using w1, w2, w3, w4, w5, w6 etc in the appearance column for that group. w4
-   will set the width to 4.  These widths i the group appearance set a number for the width of the row.  When
-   the widths of the questions exceed that number then the question will be shown on the next row.
+*  Set the width of the group using w1, w2, w3, w4, w5, w6, up to a maximum of w10, in the appearance column for that group.
+   w4 is the default value for a group. w8 will set the width to 8.  These widths in the group appearance set a number
+   for the maximum width of the row.  When
+   the widths of a question means that it will not fit on a row then the question will be shown on the next row.
 *  Then set the width of each question in the group also using w1, w2 etc.  Normally you would make these widths
-   add up to the group width.
-   
-`Example Grid WebForm (From Enketo) <https://drive.google.com/file/d/1ppkrE6jmi3AuftMEF9hIt7wZ9NydxIDB/view>`_
+   add up to the group width, however this is not required as any questions too wide to fit will automatically
+   be moved to the next row.
 
 Pages
 +++++
