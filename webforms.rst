@@ -52,8 +52,8 @@ Once grids are enabled you can use **groups** (begin group, end group) to form t
 *  Set the width of the group using w1, w2, w3, w4, w5, w6, up to a maximum of w10, in the appearance column for that group.
    w4 is the default value for a group. w8 will set the width to 8.  These widths in the group appearance set a number
    for the maximum width of the row.  When
-   the widths of a question means that it will not fit on a row then the question will be shown on the next row.
-*  Then set the width of each question in the group also using w1, w2 etc.  Normally you would make these widths
+   the width of a question means that it will not fit on a row then the question will be shown on the next row.
+*  Set the width of each question in the group in their appearance also using w1, w2 etc.  Normally you would make these widths
    add up to the group width, however this is not required as any questions too wide to fit will automatically
    be moved to the next row.
 
