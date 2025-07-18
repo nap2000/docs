@@ -81,7 +81,8 @@ Configuring for a remote database
 ---------------------------------
 
 #.  Add "export DBHOST={remote database address}" to /etc/environment
-#.  Find the "context.xml" file for tomcat.  It should be at /etc/tomcat[version]/context.xml. Then set the URL for the 2 datasources to match the URL of
+#.  Find the "context.xml" file for tomcat.  It should be at /etc/tomcat[version]/context.xml or at /var/lib/tomcat9/conf/context.xml.
+    Then set the URL for the 2 datasources to match the URL of
     your remote database
 #.  Rerun deploy.sh
 

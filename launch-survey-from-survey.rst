@@ -127,6 +127,9 @@ You can specify the instance of the record to be updated as a parameter called "
 
   instance=${instance_to_update}
 
+You can pass initial data, as described above, which will override the data pulled from the instance.
+
+`Video showing how to edit an existing record from webforms <https://youtu.be/1POwyhSK5BI>`_
 
 Tutorial - Launching a Parent Survey
 ------------------------------------

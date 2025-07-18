@@ -18,7 +18,7 @@ chip architecture.
 
 *  2GB of Memory
 *  10GB of disk
-*  Chip Architecture: X86
+*  Chip Architecture: X86 or Arm
 
 Small Server (2 GB RAM)
 -----------------------
