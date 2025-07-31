@@ -33,7 +33,7 @@ Background Audio Recording
 **Availability:**
 
 *  FieldTask: yes
-*  Webforms:  yes
+*  Webforms:  no
 
 Added in FieldTask version 6.300
 

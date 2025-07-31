@@ -53,3 +53,13 @@ Install to a custom location::
 
   Before running install edit the install.sh script and set "filelocn" to the location that you want to use
   Then run install.sh
+
+Further Administrative Actions
+------------------------------
+
+After installation the following further steps may be required:
+
+*  Implement log rotation for tomcat and subscriber logs.  (:ref:`log-rotate`)
+*  Add an SSL certificate
+*  Add AWS CLI command line
+*  Update the configuration of Tomcat and PostgreSQL to tune performance

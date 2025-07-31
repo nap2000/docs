@@ -18,3 +18,20 @@ Subscriber logs::
   /var/log/subscribers/subscriber_default_upload.log
   /var/log/subscribers/subscriber_default_forward.log
 
+.. _log-rotate:
+
+Log Rotation
+------------
+
+Tomcat.  /etc/logrotate.d/tomcat[?].  Should be set up a reasonable configuration would be::
+
+    /var/log/tomcat9/catalina.out {
+      copytruncate
+      daily
+      rotate 10
+      compress
+      delaycompress
+      missingok
+      notifempty
+      create 640 syslog adm
+    }

@@ -37,6 +37,14 @@ Also create a script file called setcredentials.sh that contains 2 lines::
 
 run patchdb.sh to copy the credentials file to the locations that it is used.
 
+Setting up the AWS Command Line Interface
+-----------------------------------------
+
+For example if you want to copy backup files to AWS you can use the bu.sh script in the postgres home directory.
+However you will need to configure the AWS CLI as the postgres user and set the credentials::
+
+    aws configure
+
 Using Transcribe, Translate and Rekognition
 -------------------------------------------
 
