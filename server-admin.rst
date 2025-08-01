@@ -28,3 +28,4 @@ about this page.
   server-admin-whatsapp.rst
   server-admin-problems.rst
   server-admin-customisation.rst
+  server-admin-downloads.rst
