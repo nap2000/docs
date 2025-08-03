@@ -35,7 +35,7 @@ change a question of type integer to text.  If you come across this follow the i
 Question type has changed to an incompatible value
 --------------------------------------------------
 
-The easiest way to fix this is to :ref:`delete-restore-restore` the survey in the analysis module.
+The easiest way to fix this is to :ref:`analysis-delete-restore` the survey in the analysis module.
 
 .. warning::
 

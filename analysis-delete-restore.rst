@@ -1,4 +1,4 @@
-.. _delete-restore:
+.. _analysis-delete-restore:
 
 Deleting and Restoring Data
 ===========================
@@ -21,7 +21,7 @@ Delete
 
 A dialog will be shown that asks if you are really sure you want to do this.
 
-.. _delete-restore-restore:
+.. _analysis-delete-restore-restore:
 
 Restore
 -------
