@@ -60,8 +60,8 @@ Fixing incompatible types using SQL statements
 
 #.  Get the table name using the online editor and selecting the menu "File" and then "Info"
 #.  Open the "results" database
-#.  Get the column name, this will be similar to the question name but all lower case.  in psql use \d {table name}
-#.  Alter the column type in PSQL: alter table {table name} alter column {column name} type {new type}
+#.  Get the column name, this will be similar to the question name but all lower case.  in psql use:: \\d {table name} 
+#.  Alter the column type in PSQL: alter table {table name} alter column {column name} type {new type}. For example: alter column id type text;
 #.  Types could be text, integer, timestamp with timezone or double precision
 #.  If there is incompatible data already in the table you will have to do some conversions to new valid data
 #.  Then go to the monitoring page, select the survey and click on "Re-apply Failed Uploads"
