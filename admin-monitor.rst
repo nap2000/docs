@@ -43,6 +43,8 @@ amount of time ago then you can:
 *  restrict the details to a single survey by selecting the project and then the survey
 *  uncheck the status values that you are not interested in.  For example you may not want to see successful submissions so unchecking that will hopefully remove a lot of the unneeded details
 
+.. _admin_monitor_reapply:
+
 Re-apply failed uploads
 +++++++++++++++++++++++
 
