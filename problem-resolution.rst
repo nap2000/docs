@@ -79,22 +79,22 @@ to compute values at unexpected times.
 
    Calculation Error in FieldTask
 
-   These errors may not occur in webForms as it handles edge conditions such as undefined values
-   differently.
+These errors may not occur in webForms as it handles edge conditions such as undefined values
+differently.
 
-   The first step in problem resolution is to isolate the problem.  In the above image the error
-   is happening in a question called "Date_complainant" inside a repeating group.  Try deleting this
-   question, and any other questions that create errors, until your form is working.
+The first step in problem resolution is to isolate the problem.  In the above image the error
+is happening in a question called "Date_complainant" inside a repeating group.  Try deleting this
+question, and any other questions that create errors, until your form is working.
 
-   Then you can add the questions that cause an error back in, one by one, and examine and adjust their
-   calculations. So in the example above the error was occurring when a "Complainant" was selected.
-   The calculation looked like this::
+Then you can add the questions that cause an error back in, one by one, and examine and adjust their
+calculations. So in the example above the error was occurring when a "Complainant" was selected.
+The calculation looked like this::
 
-       format-date(date(if(${number_recs_complainant} >= position(../..), pulldata('linked_s10_116', 'Date', 'Name_of_Complainant', ${complainant}, position(../..), 'matches'), '')), '%Y-%m-%d %H:%M:%S')
+  format-date(date(if(${number_recs_complainant} >= position(../..), pulldata('linked_s10_116', 'Date', 'Name_of_Complainant', ${complainant}, position(../..), 'matches'), '')), '%Y-%m-%d %H:%M:%S')
 
-   I modified the "if" function to only lookup and format the date if the complainant value was set.
-   That is the value was longer than 0::
+I modified the "if" function to only lookup and format the date if the complainant value was set.
+That is the value was longer than 0::
 
-       format-date(date(if(${number_recs_complainant} >= position(../..) and string-length(${complainant}) > 0, pulldata('linked_s10_116', 'Date', 'Name_of_Complainant', ${complainant}, position(../..), 'matches'), '')), '%Y-%m-%d %H:%M:%S')
+  format-date(date(if(${number_recs_complainant} >= position(../..) and string-length(${complainant}) > 0, pulldata('linked_s10_116', 'Date', 'Name_of_Complainant', ${complainant}, position(../..), 'matches'), '')), '%Y-%m-%d %H:%M:%S')
 
 That did the trick.
