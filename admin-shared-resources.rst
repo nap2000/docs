@@ -8,7 +8,7 @@ Shared Resources
 
 To get to shared resources select the **Admin** module and then **Shared Resources**.
 
-Shared resources are made available to all surveys in an organisation.  They conist of:
+Shared resources are made available to all surveys in an organisation.  They consist of:
 
 *  Images, Video, Audio that can be included in questions and choices
 *  Spreadsheets that contain reference data accessed using the search() function and the pulldata() function

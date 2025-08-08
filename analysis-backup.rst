@@ -47,7 +47,7 @@ Import
 ------
 
 We want to discourage accidental loading of data from an excel file.  Data should really be loaded through the submission of completed
-form instances.  Hence you need to explicitely allow importing of data into a survey.
+form instances.  Hence you need to explicitly allow importing of data into a survey.
 
 1. Open the survey in the online editor.
 2. Click on the menu **File** then **Settings**

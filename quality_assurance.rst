@@ -70,7 +70,7 @@ Use :ref:`auditing-survey-completion` to detect poor quality or fraudulent data 
 Hints
 -----
 
-Provide hints to the enumertors in how to ask questions.
+Provide hints to the enumerators in how to ask questions.
 
 Data Cleaning
 -------------
@@ -84,7 +84,7 @@ Testing
 
 Thorough testing of your survey can prevent problems in the field.  The following suggestions seem to represent good practice:
 
-*  Use webforms for quick testing of your survey
+*  Use webForms for quick testing of your survey
 *  Always test with fieldTask as well if you will be using it. Some questions may work differently in fieldTask.
 *  When testing with fieldTask swipe backwards to change response and see what effect that has.  For example you may select an 'other' option in a 
    question and then expect to see a 'Please specify question'. After confirming that, then you can swipe back, change the selection and verify that the
@@ -100,4 +100,4 @@ Thorough testing of your survey can prevent problems in the field.  The followin
    had rather than the total amount of money they had borrowed.
 *  Try and review results and get feedback from enumerators as soon as possible after real data has started being collected.  It is not uncommon
    for problems to be found in a survey when the survey encounters the real world.  Then you can update the survey using the online editor or the
-   'replace' button and get the enumerators to refresn fieldTask.  This will not affect data already collected.
+   'replace' button and get the enumerators to refresh fieldTask.  This will not affect data already collected.

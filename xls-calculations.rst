@@ -35,7 +35,7 @@ Breaking this down:
 *  All dates store their answers as a count of days since the 1st of January 1970.  
 *  The today() function returns the current date.
 
-Hence if we substract the answer to the **dob** question from todays date we get the number of days since the 
+Hence if we subtract the answer to the **dob** question from today's date we get the number of days since the
 child was born. 
 
 *  We put (today()-${dob}) in brackets because we want it calculated first.  Then we divide by 30.4.  This 
@@ -150,7 +150,7 @@ and then we convert that into the hunger scale as shown below:
 Dynamic Text Calculation
 ------------------------
 
-Text functions can be used to dynamicly create guidance text that includes formatting::
+Text functions can be used to dynamically create guidance text that includes formatting::
 
   calculate hunger_msg  concat('The hunger scale is <font color="blue">', ${hunger_scale}, '</font>')  
 

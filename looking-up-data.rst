@@ -310,7 +310,7 @@ The pulldata functions look like this::
   pulldata('source', 'column to retrieve', 'filter column', 'filter value', 'index', 'filter type')
 
 The first version, 5 parameters, adds an 'index' parameter.  The final parameter 'eval' doesn't do anything,
-it is just that there to diffentiate this from from the standard 4 parameter pulldata function.
+it is just that there to differentiate this from from the standard 4 parameter pulldata function.
 
 The second version, 6 parameters, add the 'index' parameter and a 'filter type' to the standard 4 parameter version.
 

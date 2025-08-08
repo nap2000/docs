@@ -65,3 +65,36 @@ Fixing incompatible types using SQL statements
 #.  Types could be text, integer, timestamp with timezone or double precision
 #.  If there is incompatible data already in the table you will have to do some conversions to new valid data
 #.  Then go to the monitoring page, select the survey and click on "Re-apply Failed Uploads"
+
+Odd errors in Calculations
+--------------------------
+
+Calculations are computed whenever a dependency changes.  This means that you can't use relevance to
+prevent a calculation that uses invalid data and sometimes, if your calculations are complex, they may try
+to compute values at unexpected times.
+
+.. figure::  _images/prob3.jpg
+   :align:   center
+   :alt:     Screenshot from fieldTask showing a calculation error
+
+   Calculation Error in FieldTask
+
+   These errors may not occur in webForms as it handles edge conditions such as undefined values
+   differently.
+
+   The first step in problem resolution is to isolate the problem.  In the above image the error
+   is happening in a question called "Date_complainant" inside a repeating group.  Try deleting this
+   question, and any other questions that create errors, until your form is working.
+
+   Then you can add the questions that cause an error back in, one by one, and examine and adjust their
+   calculations. So in the example above the error was occurring when a "Complainant" was selected.
+   The calculation looked like this::
+
+       format-date(date(if(${number_recs_complainant} >= position(../..), pulldata('linked_s10_116', 'Date', 'Name_of_Complainant', ${complainant}, position(../..), 'matches'), '')), '%Y-%m-%d %H:%M:%S')
+
+   I modified the "if" function to only lookup and format the date if the complainant value was set.
+   That is the value was longer than 0::
+
+       format-date(date(if(${number_recs_complainant} >= position(../..) and string-length(${complainant}) > 0, pulldata('linked_s10_116', 'Date', 'Name_of_Complainant', ${complainant}, position(../..), 'matches'), '')), '%Y-%m-%d %H:%M:%S')
+
+That did the trick.

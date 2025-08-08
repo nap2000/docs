@@ -141,7 +141,7 @@ Purging Backups
 
 .. note::
 
-  This applies only to hosted services provided by Smap Consulting.  If you are hosting the server youself
+  This applies only to hosted services provided by Smap Consulting.  If you are hosting the server yourself
   then it will be up to you to manage backups and set a backup policy.
 
 Backups of the database, media files, survey templates and the original xml files containing a submission are

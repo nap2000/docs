@@ -4,7 +4,7 @@ Background Processes
 .. contents::
  :local:
 
-The installation script configures two background processes to be run automaticall.  They run the same process but with a
+The installation script configures two background processes to be run automatically.  They run the same process but with a
 different parameter::
 
   /smap_bin/subscribers.sh default /smap upload

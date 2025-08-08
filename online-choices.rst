@@ -31,7 +31,7 @@ Editing
 Moving
 ------
 
-Click somewhere in the choice where there is not an editiable field and drag the choice to where you want it to appear in the list.
+Click somewhere in the choice where there is not an editable field and drag the choice to where you want it to appear in the list.
 
 Deleting
 ---------

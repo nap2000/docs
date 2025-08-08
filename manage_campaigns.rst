@@ -27,7 +27,7 @@ Example::
 
   Dear ${name},
 
-  We are conducting a survey on attendees experieces at the recent festival.
+  We are conducting a survey on attendee experiences at the recent festival.
   Are you able to complete the following short survey? ${url}.
 
   thanks
@@ -51,7 +51,7 @@ Example::
 Adding Email Recipients
 -----------------------
 
-Email recipeints are added from a spreadsheet.  To get the spreadsheet format you can select the menu **File** and then **Export Emails XLS**.  If you have not
+Email recipients are added from a spreadsheet.  To get the spreadsheet format you can select the menu **File** and then **Export Emails XLS**.  If you have not
 already added email recipients this exported file will only have a header row.
 
 Add details on each email recipient to the **mailouts** worksheet in the spreadsheet
@@ -114,7 +114,7 @@ The recipient can click on the link to open the survey. Alternatively they can:
 *  If this is the first time they have been included in a mailout they will first get an optin email message.  If they ignore this
    or select unsubscribe then they will not receive the mailout or any other email messages
 
-Once the survey is sucessfully submitted the user will be shown the following comfirmation message.  If they click on the link again they will see the 
+Once the survey is successfully submitted the user will be shown the following confirmation message.  If they click on the link again they will see the
 same message as each mailout survey can only be completed once.
 
 .. figure::  _images/mailout1.png
@@ -127,7 +127,7 @@ same message as each mailout survey can only be completed once.
 Adding initial Data
 -------------------
 
-Each survey sent can be personalised to the recipient by using intial data.   You can do this by adding extra columns to the spreadsheet that has your list
+Each survey sent can be personalised to the recipient by using initial data.   You can do this by adding extra columns to the spreadsheet that has your list
 of recipients.  Each column name should correspond to the name of the question that you want to pre-populate.
 
 In the following simple example a single question is prepopulated with the currently understood address of the recipient.

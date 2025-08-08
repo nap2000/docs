@@ -14,14 +14,14 @@ Installing
 Edit the Apache config files::
 
   This needs to be done to enable some security checks.   Edit smap.conf and smap-ssl.conf in /etc/apache2/sites-available.  Replace all
-  occurences of {hostname} with the domain name that you will be using.  Or delete these rows.
+  occurrences of {hostname} with the domain name that you will be using.  Or delete these rows.
 
 If the installer asks "Which services should be restarted", click ok, accepting the default values.
 
 .. note::
 
   Important!  Due to some security updates you will need to edit the file /etc/apache2/sites-available/smap-ssl.conf.   Replace all
-  occurences of {hostname} with the domain name of your server.  This assumes you are using a domain name.
+  occurrences of {hostname} with the domain name of your server.  This assumes you are using a domain name.
 
 After the installation script finishes you should be able to logon with your browser using::
 

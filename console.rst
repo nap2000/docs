@@ -45,7 +45,7 @@ The chart tab currently show 4 vertical column charts:
 *  Status.  For the cases currently included shows the frequency of each status value.
 *  Assigned.  For the cases currently included shows how many cases are assigned to each person.
 *  Alert.  The frequency of alerts that have been triggered by the cases.
-*  Criticality.  The frequency of occurence of values in the criticality column.
+*  Criticality.  The frequency of occurrence of values in the criticality column.
 
 .. _console-filters:
 
@@ -243,7 +243,7 @@ Audio can be done transcribed automatically using `AWS Transcribe  <https://aws.
 need to be added to the text question in the oversight form that is going to show the transcription:
 
 #.  Add the parameter: auto_annotate=yes
-#.  Add a paramater **from_lang** with the value set to the language code of the audio file
+#.  Add a parameter **from_lang** with the value set to the language code of the audio file
 
 The above parameters are required in addition to the "source" parameter identifying the question that contains the original audio file.
 
@@ -259,7 +259,7 @@ If the audio file contains medical terms then you can add some additional parame
 #.  Add a parameter to identify the source question which must be of type 'audio':  source=qname
 #.  Set the audio type to either "dictation" or "conversation":  med_type=dictation
 
-Only US English is supported as a language for madical transcriptions.
+Only US English is supported as a language for medical transcriptions.
 
 Automatic Labelling of Images
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -355,7 +355,7 @@ The differences compared to the task management page are:
 
 1.  The task is automatically set to update the existing record.
 2.  The list of surveys that you can select for the task are restricted to those in the current survey group.  All of these surveys
-    can work on the current record wheras other surveys not in the survey group cannot.
+    can work on the current record where as other surveys not in the survey group cannot.
 3.  A task group with the same name as the selected survey will be created automatically to hold this task.
 
 Tasks assigned to a record will be shown in the History tab where you can see their status and edit them.

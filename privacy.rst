@@ -69,14 +69,14 @@ If location recording is enabled then every time the user refreshes the "Forms" 
 .. figure::  _images/privacy1.jpg
    :align:   center
    :width:   300px
-   :alt:     A warning message highighted at the bottom of the forms tab
+   :alt:     A warning message highlighted at the bottom of the forms tab
 
    Indicator message that background location recording is in progress
 
 Ending Location Recording
 +++++++++++++++++++++++++
 
-When the user is no longer working they can switch off recording by selectin the menu and then selecting the "Exit" option.  The next time they start the app
+When the user is no longer working they can switch off recording by selecting the menu and then selecting the "Exit" option.  The next time they start the app
 location recording will be re-enabled.
 
 

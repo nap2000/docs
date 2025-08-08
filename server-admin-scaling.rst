@@ -98,7 +98,7 @@ Configuring a second application server
 ---------------------------------------
 
 If you are using a remote database you can add additional application servers for redundancy and performance.  However currently only one of these can
-run the subscriber batch job that applies nore submissions to the database.  Otherwise a lot of false update errors will be reported as multiple subscribers
+run the subscriber batch job that applies submissions to the database.  Otherwise a lot of false update errors will be reported as multiple subscribers
 clash.
 
 Hence in all but one of your application servers specify in /etc/environment::

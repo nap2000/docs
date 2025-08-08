@@ -61,7 +61,7 @@ You can create a database view for each select multiple::
 
   create view regexp_split_to_table(title, '\s+') as title, station from ob;
 
-In the above example I have added police station as a column so the dashboad can present the data broken
+In the above example I have added police station as a column so the dashboard can present the data broken
 down by station.
 
 You can then give permission for your dashboard to access this view in the database. To do this you would need to be 

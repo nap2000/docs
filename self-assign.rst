@@ -11,7 +11,7 @@ press on the task and selecting "Accept the task".
   
 .. figure::  _images/tasks11.jpg
    :align:   center
-   :alt:     Self Assign Task in Task Mangagement
+   :alt:     Self Assign Task in Task Management
 
    Self Assign Task
    

@@ -75,5 +75,5 @@ You can address this by opening the case for viewing, (editing in versions befor
 
    A conversation with a message that needs moving to its own case
 
-This will open a dialog where you can add a comment and confirm or backout of moving the message.  The comment will be included in the survey notes
+This will open a dialog where you can add a comment and confirm or back out of moving the message.  The comment will be included in the survey notes
 of the new case.

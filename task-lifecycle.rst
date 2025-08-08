@@ -62,7 +62,7 @@ similar to the lifecycle of internal task but there are some additional email sp
 #. From the pending State emails are sent automatically.  If the email user has unsubscribed from email notifications then the 
    task will go into **Blocked** state.
 	
-#. Once the email has been sucessfully sent the task goes into the **Assigned** state.
+#. Once the email has been successfully sent the task goes into the **Assigned** state.
 
 Once an email task has entered the assigned state it can be completed by a user.  Email tasks can also be deleted at any
 stage to enter the **Deleted** state.

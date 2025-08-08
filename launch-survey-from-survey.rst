@@ -121,7 +121,7 @@ launching form.  In the above example the question called "name" in the launched
 Update an existing Record
 +++++++++++++++++++++++++
 
-Available with Smap Server 24.01+ Only available with webforms.
+Available with Smap Server 24.01+ Only available with webForms.
 
 You can specify the instance of the record to be updated as a parameter called "instance"::
 

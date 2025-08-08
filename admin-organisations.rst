@@ -70,7 +70,7 @@ Click on the name of the organisation.  This will open a dialog to edit the sett
 
 #. Appearance
 
-   *  Set the Banner logo for webforms
+   *  Set the Banner logo for webForms
    
    *  Set the image for the home page
    
@@ -88,8 +88,8 @@ Click on the name of the organisation.  This will open a dialog to edit the sett
    
    *  Allow sending of SMS messages (in notifications) (notify admin user if changed)
    
-   *  Set the default time zone for the organisation.  Ususally time zone is obtained from a user's browser settings. However
-      where reports are generated automatically this information may not be availble and the time zone set here will be used.
+   *  Set the default time zone for the organisation.  Usually time zone is obtained from a user's browser settings. However
+      where reports are generated automatically this information may not be available and the time zone set here will be used.
 	  
    *  Set the default language for the organisation. As for timezone normally the user's language is used.
 

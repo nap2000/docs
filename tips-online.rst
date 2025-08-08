@@ -6,8 +6,8 @@ Looking up data Online
 .. contents::
  :local:
  
-Situatution
------------
+Situation
+---------
 
 You may find yourself using large reference files to lookup choices using the search() function; or individual data items using the pulldata() function.
 If these files become large and they are updated often then you may experience the following issues:

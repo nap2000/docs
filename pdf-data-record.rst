@@ -40,7 +40,7 @@ The PDF template that will be used for a notification or set as the default sele
 #.  The template set as the default template on the templates page for the survey
 #.  A legacy template previously loaded in the setting dialog of the online editor for the survey
 
-If no template is found then a PDF will be generated withut a template.
+If no template is found then a PDF will be generated without a template.
 
 Repeating Data
 +++++++++++++++
@@ -66,13 +66,13 @@ Generate PDF Data Record
 ------------------------
 
 Style the PDF using appearance options set in the survey.  The online editor offers good support for this.  In the appearance
-editing dialog there is a tab for PDF settings.  Alterntively you can set appearance values by referring to :ref:`pdf-appearances-reference`
+editing dialog there is a tab for PDF settings.  Alternatively you can set appearance values by referring to :ref:`pdf-appearances-reference`
 
 Logo
 ++++
 
 A logo will be shown at the top of the first page.  The default logo can be set in the survey settings.  If not set then the banner logo for
-webforms will be used.  The image selected as the default logo will be scaled to fit 200 pixels long by 50 pixels high.
+webForms will be used.  The image selected as the default logo will be scaled to fit 200 pixels long by 50 pixels high.
 
 Showing start-geopoint
 ----------------------

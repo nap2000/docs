@@ -24,10 +24,10 @@ For example you may use a spreadsheet like the following:
 
   1, FieldTask:V1025HI67UikxlcB, Sally, 2021-03-16
 
-The first column ``number`` can contain a simple unique identifer that you write on a sticker on the back of the device.  Possibly also with the
-name of the organisaiton that the device belongs to.
+The first column ``number`` can contain a simple unique identifier that you write on a sticker on the back of the device.  Possibly also with the
+name of the organisation that the device belongs to.
 
-The second column ``device identifer`` contains the globally unique identifer that is sent to the server with each record submitted.   You can get this
+The second column ``device identifier`` contains the globally unique identifier that is sent to the server with each record submitted.   You can get this
 identifier by:
 
 #.  Ensuring that the "Enable user and identify menu" option in :ref:`mobile-device-settings` is checked. If it wasn't set then set it and press ``refresh`` in FieldTask

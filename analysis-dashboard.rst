@@ -46,7 +46,7 @@ Editing a Panel
    
 Clicking on the settings icon will open the same dialog that was used in creating the panel.  Clicking on the "data view"
 will open a side panel that allows selection of map layers or sub forms in a survey.  For a graph created from
-select question repsonses, the choices that are shown can be selected.
+select question responses, the choices that are shown can be selected.
 
 Panel Settings
 --------------
@@ -150,7 +150,7 @@ These frequency values apply to one of the choices in the question.  To view the
 right of the map.
 
 If a location only contains a single record then the location will be coloured either "red" the choice was selected or "blue" the choice was not selected.  
-However if you have more than one record clusted at a single location then you will see the range of colours described above depending on the percentage
+However if you have more than one record clustered at a single location then you will see the range of colours described above depending on the percentage
 of times that choice was selected.
 
 .. figure::  _images/analysis6.jpg

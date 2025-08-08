@@ -33,7 +33,7 @@ The rules for constructing data and labels are as follows:
 *  Data points are seperated by a single colon  (\:)
 *  X Axis Labels are separated by a single colon  (\:)
 *  Data is separated from labels using double equals  (==)   Note the labels are placed first.
-*  Multiple datasets are seprated using double colon  (\:\:).  Each dataset is shown as a line on a line chart, hence you can have
+*  Multiple datasets are separated using double colon  (\:\:).  Each dataset is shown as a line on a line chart, hence you can have
    multiple lines.
 *  Labels for data sets are separated from X Axis labels using double colon  (\:\:)  Note the X Axis Labels come before data set labels.
 

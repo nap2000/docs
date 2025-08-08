@@ -37,7 +37,7 @@ The following can trigger a notification:
 
 *  A submission.  A result submitted from a survey. Including submission from an oversight form (replaces old console update)
 *  A task reminder.  If a task has not been completed within the specified time.
-*  A case managmeent alert.
+*  A case management alert.
 *  A periodic timer. Daily, weekly, monthly, quarterly or yearly.
 *  A Server Calculation change
 

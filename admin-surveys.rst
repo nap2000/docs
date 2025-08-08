@@ -6,7 +6,7 @@ Survey Management
 
 .. note::
 
-  The terms **survey** and **form** are used interchangably.   However strictly speaking a survey can consist of multiple
+  The terms **survey** and **form** are used interchangeably.   However strictly speaking a survey can consist of multiple
   forms.   A main form and optionally sub-forms that are specified using the "begin repeat" question type.  
   
 Getting to the survey management page

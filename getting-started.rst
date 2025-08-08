@@ -55,7 +55,7 @@ On all screens the first menu option will be for your user profile.
 Here you can set your:
  
 *  Name.  Note this is not the identifier that you use to logon with
-*  Language.  The language of the server.  English, Spanish, French, Hindi, Arabic, Portugese with the 
+*  Language.  The language of the server.  English, Spanish, French, Hindi, Arabic, Portuguese with the
    first two being most complete.  If you want to contribute to translating the server into additional
    languages then contact support.
 *  Your email address.  You will need this if you ever have to reset your password.

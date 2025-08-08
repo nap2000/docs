@@ -102,7 +102,7 @@ Finding the Survey
 ------------------
 
 If you have a lot of forms on your phone then it may be hard to find the one you want to open.  However you can use 
-"search" or "order by" to make the survey form easier to find.  These buttone are circled in the image below.
+"search" or "order by" to make the survey form easier to find.  These buttons are circled in the image below.
 
 **Search**.  When you type some characters into the search bar, only those survey forms that contain that 
 sequence of characters in their name are shown.

@@ -49,6 +49,6 @@ Read only surveys are shown in purple in the administration page and in fieldTas
 Behavior
 --------
 
-Read only surveys will work the same as normal surveys in fieldTask and webforms, with the exception of the 
+Read only surveys will work the same as normal surveys in fieldTask and webForms, with the exception of the
 last page.  Instead of showing a "Save and Exit" button on the last page, the button will just say "Exit".  
 No data will be saved and no data will be sent to the server.

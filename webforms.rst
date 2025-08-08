@@ -9,15 +9,15 @@ WebForms
 Introduction
 ------------
 
-Webforms allows you to complete surveys in a web browser.  The webforms launch page can be found by selecting the menu **modules** then
-**webforms**. To access this page you will need the **enum** security group.  Smap's webforms uses the enketo-core library.
+WebForms allows you to complete surveys in a web browser.  The webForms launch page can be found by selecting the menu **modules** then
+**webforms**. To access this page you will need the **enum** security group.  Smap's webForms uses the enketo-core library.
 
 .. figure::  _images/webforms1.jpg
    :align:   center
    :width: 	 600px
-   :alt:     Launching Webforms
+   :alt:     Launching WebForms
 
-   Launching Webforms
+   Launching WebForms
    
 There are 3 tabs on this page.  The Web Forms tab itself which allows launching of a blank survey.  The tasks tab where tasks
 can be selected for completion.  Finally a settings page where settings that can be changed by a user who only has **enum** privilege
@@ -32,9 +32,9 @@ Grids
 .. figure::  _images/webforms2.jpg
    :align:   center
    :width: 	 200px
-   :alt:     Webform styled as a grid
+   :alt:     WebForm styled as a grid
 
-   Webform styled as a grid
+   WebForm styled as a grid
    
 To enable grids set **theme-grid** as the style in the XLSForm settings sheet.  Alternatively in the online editor
 select menu **File**, then **Settings** then set style to **Grid**.
@@ -67,10 +67,10 @@ Once you have set the style to **pages** then every question will appear on its 
 a **back** button to navigate.  You can then use groups with the field-list appearance to put multiple questions on 
 a single page in exactly the same way that you can do for fieldTask.
 
-Styling Webforms Itself
+Styling WebForms Itself
 -----------------------
 
-Webform style options can be found on the users page in the "Webform Options" tab.  
+WebForm style options can be found on the users page in the "WebForm Options" tab.
 
 .. figure::  _images/webforms4.jpg
    :align:   center
@@ -91,10 +91,10 @@ The following properties can be changed:
 *  The paper background colour
 *  The position of the footer icon
 
-Using a Webform offline on a mobile Device
+Using a WebForm offline on a mobile Device
 ------------------------------------------
 
-Webforms works offline however you have to make sure that the form is cached on your device before you go into the field and that you 
+WebForms works offline however you have to make sure that the form is cached on your device before you go into the field and that you
 can access it. The following instructions assume that you are using Chrome as your browser however Firefox, Safari and other browsers are similar.
 
 1. Logon to the Smap server.  If you are using an account that has enumerator access then you should see the WebForms launch page.
@@ -104,7 +104,7 @@ can access it. The following instructions assume that you are using Chrome as yo
    :width:   200px
    :alt:     Webforms Launch Page showing Webforms that can be opened
 
-   Webforms Launch Page
+   WebForms Launch Page
 
 2. Select the survey that you want to open
 
@@ -173,7 +173,7 @@ The history page shows the surveys that have been completed and submitted over t
 The action can be Submitted, Saved or Deleted. The instanceId is useful for connecting a Submission entry
 in the History to a record in the Console of the server.
 
-Note the webform history is not stored on the server, so if you are reconciling somebody’s work you will
+Note the webForm history is not stored on the server, so if you are reconciling somebody’s work you will
 have to ask them to talk through what they see in their history.
 
 

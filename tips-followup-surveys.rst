@@ -4,8 +4,8 @@ Follow up Survey
 .. contents::
  :local:
  
-Situatution
------------
+Situation
+---------
 
 You may have conducted surveys and recorded the GPS coordinates of each location.  If you then want to do a follow up survey at those locations
 you can create tasks for the data collectors based on the existing data.

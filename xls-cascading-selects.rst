@@ -43,7 +43,7 @@ You can use “and” to refer to multiple filters::
   
 .. note::
 
-  Referring to multiple filter columns in a cascading select is rarely necessry.  You should make all of your codes unique
+  Referring to multiple filter columns in a cascading select is rarely necessary.  You should make all of your codes unique
   irrespective of the actual name of the locality.  For example if you have a parish called "pudo" in both sub county "mucwini"
   and sub county "lagoro" then you should give them different codes such as "pudo_a" and "pudo_b".  In this way as all the parish 
   codes are unique when you specify a choice filter for the village you can just use:

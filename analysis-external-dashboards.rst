@@ -28,7 +28,7 @@ data API's that return data in JSON format.  For PowerBI the approach is as foll
   may fail.  You can however use CSV files if you download them first, then make them available to PowerBI as a 
   proper file.  
   You could do this either in a
-  script that updates the file periodiclly or you could select the option in PowerBI to 
+  script that updates the file periodically or you could select the option in PowerBI to
   upload the CSV file to One Drive.
 
 Static Data

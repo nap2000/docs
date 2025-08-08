@@ -80,7 +80,7 @@ on-phone setting will be overridden. These settings apply to all fieldTask insta
 *  Automatically synchronise.  If set the phone will refresh when a form changes on the server.  The refresh can be specified to occur if connected to wifi only or
    when also connected via a cellular network.  If the option **set on phone** is selected then the enumerator can enable or disable automatic synchronisation
    using the menus on the phone.
-*  Delete submitted results from the phone. After a completed survey has been sucessfully submitted it can be automatically deleted from the device.  This is
+*  Delete submitted results from the phone. After a completed survey has been successfully submitted it can be automatically deleted from the device.  This is
    recommended to improve security.  If you do not select this option then you should manually delete completed forms when you are confident that you have the
    data.
 *  Backward navigation. The ability of the user to go back to a previous question can be blocked using this option.
@@ -91,12 +91,12 @@ on-phone setting will be overridden. These settings apply to all fieldTask insta
    on the server.  The image will be scaled according to this setting, so if the image on the phone is 2,000 by 1,000 pixels and you set a value here of
    **500** then the submitted image will be 500 by 250 pixels.
 *  Password Policy.  How often the user needs to re-logon.  By default the enumerator never has to logon to fieldTask.  In this case as long as valid 
-   credentials have laready been entered they can continue to use the device without knowing what those credentials are.  Using this setting you can
+   credentials have already been entered they can continue to use the device without knowing what those credentials are.  Using this setting you can
    override that default behaviour and require the user to logon every time they use fieldTask.  You can also require periodic logons after the specified 
    number of days has elapsed.
 *  Maximum number of tasks to download.  The tasks are ordered by due date in ascending order.
 *  Enable ODK style menus.  Usually a FieldTask user will just use the menu option "refresh".  However you can also enable to ODK style menus where
-   downloading forms, uploading results etc are sepearate menu options.
+   downloading forms, uploading results etc are separate menu options.
 *  Enable ODK admin menu.  The fieldTask admin menu is generally not used. Instead set admin values on the server as described here.  However you can 
    enable the on device admin menu if you wish.
 *  Enable server settings menu.  The menu to change the server can be disabled with this setting.
@@ -113,7 +113,7 @@ on-phone setting will be overridden. These settings apply to all fieldTask insta
 Webform Settings
 ----------------
 
-This tab allows customisation of webform appearance:
+This tab allows customisation of webForm appearance:
 
 *  Page background colour.
 *  Paper background colour.
@@ -121,7 +121,7 @@ This tab allows customisation of webform appearance:
 *  Button colour.
 *  Button text colour
 *  Heading text colour
-*  The webform banner logo
+*  The webForm banner logo
 *  Hiding the "save as draft" checkbox
 
 Other

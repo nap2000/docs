@@ -18,7 +18,7 @@ To get to the server management screen select the **Admin** module then **Users*
 
    Server Settings
 
-The settings in the server page are defaults that apply to all organisations be default but can ususally be overridden by the
+The settings in the server page are defaults that apply to all organisations be default but can usually be overridden by the
 organisation settings for a single organisation.
 
 Mapbox Key
@@ -31,7 +31,7 @@ real keys).
 Google Map Key
 --------------
 
-Where google maps are used a google map key is requried.  As for Mapbox Google have a free usage threshold after which there
+Where google maps are used a google map key is required.  As for Mapbox Google have a free usage threshold after which there
 will be a charge.
 
 Email Settings

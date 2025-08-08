@@ -92,7 +92,7 @@ The questions in the new survey can be pre-populated with initial data.  There a
 
 1.  No initial data.  A blank new survey will be completed as the task.
 2.  Pre-populate with existing data.  Questions in the new survey with the same name as a question in the existing survey will be intialised
-    with the exisiting data.  The new survey will create a new record.
+    with the existing data.  The new survey will create a new record.
 3.  Update existing results. The new survey will be prepopulated with data from the existing survey however this time the existing record
     will be updated with data from the new survey.  For this option to be viable either the new and existing surveys must be the same or
     they must be in the same :ref:`survey_groups`
@@ -131,7 +131,7 @@ The start time of the task is created from two inputs.
 2.  Plus an interval after that date / time
 
 For example the creation time of the task could be selected with an interval of 2 days.  The task will be created when a record is submitted to the
-exisiting survey. So in this case the user will be requested to complete the new task 2 days after the existing survey is completed.
+existing survey. So in this case the user will be requested to complete the new task 2 days after the existing survey is completed.
 
 The duration of the task can also be specified in minutes, hours or days.
 

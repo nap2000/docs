@@ -48,7 +48,7 @@ When completing a survey in FieldTask the user will be asked a question before t
   If they select yes then another repeat will be added.
   
 However you can configure the survey so that it repeats automatically a specified number of times without asking that question.
-For example you may already have asked how many people are in the houehold in a question called **hh_members**.  Put a reference
+For example you may already have asked how many people are in the household in a question called **hh_members**.  Put a reference
 to that question in the **repeat_count** column in the row that has the **begin repeat** type::
 
   ${hh_members}

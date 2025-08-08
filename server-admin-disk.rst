@@ -27,7 +27,7 @@ Temporary files older than a day can be deleted as the download will have well a
 uploadedSurveys
 +++++++++++++++
 
-After a submitted survey form has been sucessfully processed the contents of the XML file will be in the database
+After a submitted survey form has been successfully processed the contents of the XML file will be in the database
 and any attachments will be in the attachments folder.  So deleting old files in uploadedSurveys will free u
 significant disk space.  There are some issues to consider though:
 

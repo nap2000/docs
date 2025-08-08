@@ -23,7 +23,7 @@ Data is more important
 ----------------------
 
 The above approach is as far as most forms based data collections systems go.   However except in rare cases the data collected by a survey is more
-important than that survey and this data can exist and be used long after that survey has been forgotton.  To preserve the data while changing the 
+important than that survey and this data can exist and be used long after that survey has been forgotten.  To preserve the data while changing the
 survey over time you can "replace the survey" or create "survey variants" that contribute to a single view of the data.  These approaches are described below.
 
 Replacing the Survey
@@ -66,7 +66,7 @@ relevance if:
 
    Group Surveys
 
-The following video walks through an example of using this approch in a scenario where two survey variants are used to collect a single set of
+The following video walks through an example of using this approach in a scenario where two survey variants are used to collect a single set of
 data at two camps.
 
 .. raw:: html

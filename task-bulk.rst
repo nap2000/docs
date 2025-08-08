@@ -12,7 +12,7 @@ Bulk changes to tasks
 .. figure::  _images/bulk_task1.jpg
    :align:   center
    :width:   400px
-   :alt:     List of tassks showing two that have been selected for change
+   :alt:     List of tasks showing two that have been selected for change
 
    Select tasks to change
    

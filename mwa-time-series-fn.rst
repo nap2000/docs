@@ -12,11 +12,11 @@ values for a specified column separated by colons.
   `Example Time Series Survey <https://docs.google.com/spreadsheets/d/1WDvjvLczQ-Z3hBBSnSVawb6Lwiz9ItrfcUH8w70coQQ/edit?usp=sharing>`_. This survey asks
   the user to select a school and then the number of girls and the number of boys in attendance.  It then uses the **pulldata** to get data 
   from "chart_self".
-  Chart means the data is returned as a timeseries, self tells the function to get previously collected data from its own survey.
+  Chart means the data is returned as a time series, self tells the function to get previously collected data from its own survey.
 
 The chart function is just the pulldata function where the identifier of the containing the data is preceeded by "chart\_". 
 For example the following
-pulldata requests will retreive data in a format that can be used by a chart::
+pulldata requests will retrieve data in a format that can be used by a chart::
 
   pulldata('chart_self', 'sales', 'region', 'region 1')
   pulldata('chart_s1_456', 'sales', 'region', 'region 1')

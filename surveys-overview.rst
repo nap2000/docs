@@ -13,13 +13,13 @@ Tools
 The excel editor is most suited to larger complex surveys.  It also allows editing without an internet connection.
 
 The online editor is quicker and simpler than the excel editor but harder to use for large complex surveys.  It also can be
-unreliable when moving questions within the survey, particularly if this is to and from groups.  If you enclounter any problems
+unreliable when moving questions within the survey, particularly if this is to and from groups.  If you encounter any problems
 when moving questions export the survey to excel, do the move there and then load the excel survey back onto the server.  
   
 
 Survey Size
 -----------
-Surveys can be as small as 1 question.  There is no specified maxiumum size,  one customer completed a survey that had over 4,500 questions.
+Surveys can be as small as 1 question.  There is no specified maximum size,  one customer completed a survey that had over 4,500 questions.
 However surveys used for evaluations commonly have around 300 questions.  Surveys used for monitoring would usually be shorter.
 
 Although there is no limit to the size of surveys we can only store the answers for 1,600 questions in a form.  So if you have more

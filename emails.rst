@@ -27,7 +27,7 @@ It is not possible to wake up one morning and decide to unsubscribe.  An unsubsc
 Subscribe
 ---------
 
-If someone wants to recieve emails again they can go to the home page of the server and select subscribe.  They will then be asked to enter 
+If someone wants to receive emails again they can go to the home page of the server and select subscribe.  They will then be asked to enter
 their email address and validate it.  If they are unsubscribed from 1 or more organisations then those organisations will be listed and the
 person can select the ones they want to subscribe to again.
 
@@ -71,4 +71,4 @@ last 200 sent outstanding optin email messages will be shown.  You can select "r
 Review Notifications
 ++++++++++++++++++++
 
-Also on the monitoring page set the souce to "notifications".  You can then see the status of each email notification and can retry failed ones.
+Also on the monitoring page set the source to "notifications".  You can then see the status of each email notification and can retry failed ones.

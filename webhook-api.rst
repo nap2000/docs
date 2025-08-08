@@ -30,7 +30,7 @@ callback URLs generally include a long sequence of random characters so as long 
 Monitoring
 ----------
 
-Calls and their status, sucessfull or otherwise can be monitored on the ``Monitoring`` page in the Admin module.  Select a source of "Notifications" and
+Calls and their status, successful or otherwise can be monitored on the ``Monitoring`` page in the Admin module.  Select a source of "Notifications" and
 then specify ``Show`` as "last 200".
 
 Data Submission Web Hooks

@@ -61,6 +61,6 @@ External applications can be automatically launched as soon as the user gets to 
 
   auto=yes
   
-This will launch the application automatically if navigating in the foward direction (ie not swiping back) and if a value
+This will launch the application automatically if navigating in the forward direction (ie not swiping back) and if a value
 has not already been returned by the external app.
 

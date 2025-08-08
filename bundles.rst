@@ -5,7 +5,7 @@ Grouping surveys into bundles
 
 Multiple surveys can act on a single set of data tables. These tables can contain the details of cases.  Hence a
 case can be created using one survey in a bundle and then updated using a second survey in the same bundle. 
-Commonly a task will be created to get a user to perform the update.  The task can inlude data from the first survey
+Commonly a task will be created to get a user to perform the update.  The task can include data from the first survey
 where the question names are the same. 
 
 A survey can be added to a bundle when it is created using either the spreadsheet editor or the online editor.

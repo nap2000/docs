@@ -49,7 +49,7 @@ Administration
   :widths: 80,20
 
   :ref:`online-editor`,
-  :ref:`Offline apreadsheet editor<xls-editor>`,
+  :ref:`Offline spreadsheet editor<xls-editor>`,
   :ref:`A history of all changes made to a survey<change-history>`,
   :ref:`Administration reports including access to forms; usage by user; usage of resources such as reference csv files by surveys; notifications that have been set etc<admin-reports>`,
 
@@ -109,7 +109,7 @@ Security
   :ref:`html-sanitisation`, 23.02
   :ref:`delete-restore`
   :ref:`logs`
-  `Strong privacy committment <https://smap.com.au/privacy.shtml>`_
+  `Strong privacy commitment <https://smap.com.au/privacy.shtml>`_
 
 
 Connectivity

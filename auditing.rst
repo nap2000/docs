@@ -31,7 +31,7 @@ Once timing is enable you will see some additional options in the settings dialo
 
    Additional Audit Options
 
-You can optionaly also enable these in order to record location and changes to questions.  Once you are done click on the save button
+You can optionally also enable these in order to record location and changes to questions.  Once you are done click on the save button
 to save your new settings.
 
 Enabling in the XLSForm Editor
