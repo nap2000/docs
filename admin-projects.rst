@@ -31,7 +31,7 @@ You can use projects to restrict access to surveys and their data to authorised 
 
 .. warning::
 
-  If a user has the "admin" security group then they will be able to give themselves access to any project in the origanisation. Hence the
+  If a user has the "admin" security group then they will be able to give themselves access to any project in the organisation. Hence the
   use of projects for security is only applicable for non admin users.  
   
 Getting to the project management page

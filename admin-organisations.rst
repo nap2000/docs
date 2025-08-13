@@ -29,7 +29,7 @@ then the **Organisations** tab.
 Organisational Hierarchy
 ------------------------
 
-Surveys and data are stored in a hierarchical structure. The security groups possesed by a user determines how high in that structure they
+Surveys and data are stored in a hierarchical structure. The security groups possessed by a user determines how high in that structure they
 can go. 
 
 .. figure::  _images/concept1.jpg
@@ -61,7 +61,7 @@ Click on the name of the organisation.  This will open a dialog to edit the sett
 
 #. Email options. Sets up the email proxy server that this organisation will use.
 
-  *  Email to get Help.  The administrator email.  If set this email address will also be sent emails notifying them of permission changes made to the organisation settings (See below for settings marked as "nodity admin")
+  *  Email to get Help.  The administrator email.  If set this email address will also be sent emails notifying them of permission changes made to the organisation settings (See below for settings marked as "notify admin")
   *  Smtp Host.  The host name of the smtp relay that will forward email messages from the smap server.
   *  Email domain.
   *  Email user name

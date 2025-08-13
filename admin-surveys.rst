@@ -54,7 +54,7 @@ The alternative to replacing a survey is to:
 2.  Upload the new version with the same name
 
 However if you are making last minute changes to a survey before starting data collection then you run the risk
-that some enumerators may not download the new version.  Then when they try and submit their results thet will be 
+that some enumerators may not download the new version.  Then when they try and submit their results that will be
 blocked because their survey has been deleted. To get around this you would need to un-delete the old version, resubmit and 
 then manually merge the required records from the old version to the new one.  Hence it is again recommended that you use
 **replace** particularly as you approach production in order to prevent these problems.

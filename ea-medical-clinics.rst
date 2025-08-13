@@ -220,7 +220,7 @@ You can also use “roles” to hide columns the register, doctor, nurse forms i
 
 The forms that have been included in the product are much simpler than the ones that you would use in a real medical clinic. 
 However you can take these as the starting point and add more questions or even more forms to meet your needs. If there are additional 
-capabilities that you need for your particular situation then don’t hesitate to contact us at Smap or Zarkman and we will see if the 
+capabilities that you need for your particular situation then don’t hesitate to contact us at Smap and we will see if the
 system can be enhanced accordingly.
 
 The following considerations when designing your form are particularly relevant to creating a “process” using linked forms. 
@@ -287,5 +287,5 @@ most recent first, then you can add a parameter "order=reverse" to the new sub-f
 In the medical clinic process we might have wanted to only see the last consultation. For that case we could have added the parameter 
 “instance_count=1”, to the prev_consultation_rpt sub form.
 
-However we wanted to see all previous consultations so we didn’t do this. But in the consultation_rpt we did not want to see 
+However we wanted to see all previous consultations so we did not do this. But in the consultation_rpt we did not want to see
 any of the previous consultations as this is the sub-form that is going to add the new one. So we added the parameter “instance_count=0”

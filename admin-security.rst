@@ -55,11 +55,11 @@ following table shows sample password values and their strength;
 
 .. _html-sanitisation:
 
-Sanitisation of Webform HTML
+Sanitisation of WebForm HTML
 ----------------------------
 
 User provided content, such as labels for questions, are sanitised using the OWASP java HTML sanitiser.  This removes all executable
-code from the content and also any HTML elements that are not white listed as permitted for use.  This approach protects webforms from being used for cross site
+code from the content and also any HTML elements that are not white listed as permitted for use.  This approach protects webForms from being used for cross site
 scripting attacks while still permitting formatting with headers, bold text etc.
 
 Validation of Names

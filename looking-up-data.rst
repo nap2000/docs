@@ -181,19 +181,19 @@ Filter the data (4 parameters)
 
 The filter function can be one of:
 
-#.  contains    (For use in webforms requires smap server 21.08)
-#.  startswith  (For use in webforms requires smap server 21.08)
-#.  endswith    (For use in webforms requires smap server 21.08)
+#.  contains    (For use in webForms requires Smap server 21.08)
+#.  startswith  (For use in webForms requires Smap server 21.08)
+#.  endswith    (For use in webForms requires Smap server 21.08)
 #.  matches
 #.  in
 #.  not in
-#.  eval        (requires FT6.505 and smap server 21.09)
+#.  eval        (requires FT6.505 and Smap server 21.09, not available in webForms)
 
 The filter values for "in" and "not in" should be lists separated by spaces. Use it with filter values that come from select multiple questions.
 
 .. warning
 
-  Using column names in the CSV file of "name" or "label" to filter on will cause problems in webforms if these are not also the columns
+  Using column names in the CSV file of "name" or "label" to filter on will cause problems in webForms if these are not also the columns
   that are used for the value and label of the choice.  In other words if you are going to call a CSV column "label" then make sure it does
   contain the label! 
 

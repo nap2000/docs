@@ -15,7 +15,7 @@ The online editor has 5 panels:
 Panel 1 - Questions
 -------------------
 
-The questions panel is shown when the survey is opened for editing.  It contains the questions in the survey alsong with blue buttons for adding
+The questions panel is shown when the survey is opened for editing.  It contains the questions in the survey along with blue buttons for adding
 new questions.  The last button in the panel is labelled "Add new question" and this adds a question at the end of the survey.  The smaller
 unlabelled blue buttons between each question also adds a new question at the location of the button.
  
@@ -52,7 +52,7 @@ The menu bar has the following items:
      * Change the form name
      * Move the form to a different project
      * Set the default language
-     * set the name of form instance that is displayed on the fielTask screen, you can incorporate answers to questions in the name using the ${question_name} syntax
+     * set the name of form instance that is displayed on the fieldTask screen, you can incorporate answers to questions in the name using the ${question_name} syntax
      * Allow data from a CSV file to be uploaded into this form
      * Add a PDF template to use when saving the a survey instance
 	 

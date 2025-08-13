@@ -18,7 +18,7 @@ Vonage
 #.  Create an account on Vonage, https://www.vonage.com/
 #.  Login to "Communication APIs"
 #.  Select "Numbers" and purchase one or more numbers for inbound requests
-#.  On the API Settings page, under SMS settings, select “Messages API” this API will support WhatsAppp messages as well as SMS.
+#.  On the API Settings page, under SMS settings, select “Messages API” this API will support WhatsApp messages as well as SMS.
     Click save changes.
 #.  On the applications page, create a new application
 

@@ -12,7 +12,7 @@ Live Data
 ---------
 
 To show live data in a dashboard that automatically updates as more data is collected use the web service 
-data API's that return data in JSON format.  For PowerBI the approach is as follows:
+data APIs that return data in JSON format.  For PowerBI the approach is as follows:
 
 #.  Find the URL that returns data by using /api/v1/data in your browser and then selecting the data link for the survey you are interested in.
 #.  In PowerBI select get data from another source

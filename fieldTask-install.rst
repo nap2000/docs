@@ -7,7 +7,7 @@ Installation
  :local:
 
 If you intend to use Android phones or Tablets to complete surveys, then you will want to install FieldTask on these devices.  Alternatively
-you can complete surveys in browsers using Webforms.
+you can complete surveys in browsers using WebForms.
 
 You can `get FieldTask from the Google Play store <https://play.google.com/store/apps/details?id=org.smap.smapTask.android>`_.  This is the easiest
 way if you have a google account and are installing it on your own phone or tablet.  Search for "fieldTask" with no spaces in order to find it

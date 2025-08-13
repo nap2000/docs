@@ -70,7 +70,7 @@ The **complete all** checkbox can be selected if you want all assigned users to 
   If the complete all checkbox is not selected and you assign a task to multiple people then that does not mean that only the results from the first
   person to complete will be accepted.  Two people can work on a task simultaneously and submit the results.   However by not selecting **complete all**,
   once one person has submitted a response, any other assignee who refreshes fieldTask or their web browser will have the task cancelled so they can 
-  not / need not start it.   In the case of email tasks the email cannnot be cancelled and a followup email asking the recipient to disregard the previous
+  not / need not start it.   In the case of email tasks the email cannot be cancelled and a followup email asking the recipient to disregard the previous
   email is not sent.  So for email tasks this checkbox has no effect.
 
 The **Self Assign** checkbox can be selected if you want to allow users to accept a task themselves.
@@ -113,7 +113,7 @@ Alternatively just click on the map and/or type in the ID of an NFC chip.
    
    Specifying a New Location
 
-When specifying a new lcoation you can optionally update an existing named location or create a new named location with those
+When specifying a new location you can optionally update an existing named location or create a new named location with those
 coordinates and/or NFC id.
 
 8.  Optionally set the download distance

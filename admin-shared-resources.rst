@@ -72,7 +72,7 @@ Select the **Location** tab.
    
 Locations identify where a task should take place.  They consist of GPS Coordinates and/or the ID of an NFC chip that will
 launch the task.  The use of NFC chips allows a much greater precision in identify the task location as the NFC chip may
-be on a particular peice of equipment that needs to be maintained or control access to a room where the survey needs to take
+be on a particular piece of equipment that needs to be maintained or control access to a room where the survey needs to take
 place.
 
 When :ref:`editing-adding-tasks` you can select a named location rather than specifying the GPS coordinates / NFC chip. However

@@ -62,4 +62,4 @@ After installation the following further steps may be required:
 *  Implement log rotation for tomcat and subscriber logs.  (:ref:`log-rotate`)
 *  Add an SSL certificate
 *  Add AWS CLI command line
-*  Update the configuration of Tomcat and PostgreSQL to tune performance
+*  Update the configuration of Tomcat and PostgresSQL to tune performance

@@ -91,7 +91,7 @@ Initial Data
 The questions in the new survey can be pre-populated with initial data.  There are 3 settings:
 
 1.  No initial data.  A blank new survey will be completed as the task.
-2.  Pre-populate with existing data.  Questions in the new survey with the same name as a question in the existing survey will be intialised
+2.  Pre-populate with existing data.  Questions in the new survey with the same name as a question in the existing survey will be initialised
     with the existing data.  The new survey will create a new record.
 3.  Update existing results. The new survey will be prepopulated with data from the existing survey however this time the existing record
     will be updated with data from the new survey.  For this option to be viable either the new and existing surveys must be the same or
@@ -117,7 +117,7 @@ For any of these assignment types the user, role or email addresses can be obtai
   In the hospital case management product a security role is created for each clinic location
   Users with the same role are then assigned follow up tasks such as consultation and dispensing pharmaceuticals
 
-If assigned to an email address then the email recipient will receive a link to a webform that allows them to complete the task.  In this case
+If assigned to an email address then the email recipient will receive a link to a webForm that allows them to complete the task.  In this case
 they do not need to have an account on the Smap server.
 
 The **complete all** checkbox can be selected if you want all assigned users to complete the task.  Otherwise as soon as one user completes the

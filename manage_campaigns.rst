@@ -67,7 +67,7 @@ The columns **status** and **status_details** are ignored.  They are only used w
 
 All other columns are interpreted as the names of questions in the top level form and will be used to set the initial value of that question.
 
-When the spreadseet is ready upload by select the menu **File** and then **Import Emails XLS**.
+When the spreadsheet is ready upload by select the menu **File** and then **Import Emails XLS**.
 
 .. note::
 

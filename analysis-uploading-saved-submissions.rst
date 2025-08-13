@@ -27,7 +27,7 @@ to the sdcard on your phone you will find the completed instances here::
 
   /sdcard/Android/data/org.smap.smapTask.XXXX/files/instances
 
-Where XXXX is the identifier for your varient of the fieldTask App.  
+Where XXXX is the identifier for your variant of the fieldTask App.
 
 Copy the instances folder onto your computer. Then compress it into a zip file.
 

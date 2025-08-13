@@ -161,7 +161,7 @@ the system.
 .. note::
 
   Users who have been manually added will not be replaced or modified in a bulk upload.  Hence you can manage bulk users by adding, modifying and deleting them
-  but not manaually added users.
+  but not manually added users.
 
 .. Warning::
 

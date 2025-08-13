@@ -43,13 +43,13 @@ Then create some slots that can be booked with various doctors.  Finally use the
 *  `Book <https://docs.google.com/spreadsheets/d/1nq96kSTPAdOmDOYJ9tsTxKChZdA43y6hu2MtsWgNboM/edit?usp=sharing>`_
 
 
-Webform Styling
+WebForm Styling
 ---------------
 
 *  `Matrix <https://docs.google.com/spreadsheets/d/15chqbL61l-ywdd0nOhjNspxi6j0laaIqT7pHzCRodoE/edit?usp=sharing>`_
 
-Miscelaneous Surveys
---------------------
+Miscellaneous Surveys
+---------------------
 
 Here are some additional surveys that I commonly use during training. They are located on a google drive.
 

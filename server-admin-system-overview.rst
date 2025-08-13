@@ -34,7 +34,7 @@ Authorisation is performed in the Tomcat Application Server.
 Database
 --------
 
-All data, with the exception of media, is stored in a PostgreSQL database with GIS extensions.
+All data, with the exception of media, is stored in a PostgresSQL database with GIS extensions.
 
 File Storage
 ------------

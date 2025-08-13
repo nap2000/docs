@@ -1,8 +1,8 @@
 Database Design
 ===============
 
-Smap uses a PostgreSQL databases with PostGIS extensions.  Because of the dependence on these geospatial extensions we gave
-up on making the design database independent so there many PostgreSQL specifics in the design.
+Smap uses a PostgresSQL databases with PostGIS extensions.  Because of the dependence on these geospatial extensions we gave
+up on making the design database independent so there many PostgresSQL specifics in the design.
 
 There are two databases:
 

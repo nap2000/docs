@@ -10,7 +10,7 @@ Introduction
 ------------
 
 WebForms allows you to complete surveys in a web browser.  The webForms launch page can be found by selecting the menu **modules** then
-**webforms**. To access this page you will need the **enum** security group.  Smap's webForms uses the enketo-core library.
+**webforms**. To access this page you will need the **enum** security group.  WebForms uses the enketo-core library.
 
 .. figure::  _images/webforms1.jpg
    :align:   center
@@ -149,7 +149,7 @@ queue click on the count of unsent records at top left or the "drawer" icon at l
 .. figure::  _images/webforms9.png
    :align:   center
    :width: 	 500px
-   :alt:     Clicking on the queue counter on "open drawer" icon to access the webform queue
+   :alt:     Clicking on the queue counter on "open drawer" icon to access the webForm queue
 
    Accessing the webform queue
 

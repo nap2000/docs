@@ -36,7 +36,7 @@ Show show details on each submission including error messages select
 
    Submission Details
 
-Select "last (200)" to see details on the last two hundred submissions. If you have a lot of submissions or the problem happened a significnt 
+Select "last (200)" to see details on the last two hundred submissions. If you have a lot of submissions or the problem happened a significant
 amount of time ago then you can:
 
 *  page through these submissions using the buttons labelled ">>>" and to get the previous 200 "<<<"

@@ -55,7 +55,7 @@ All other ports are blocked for inbound access.
 .. csv-table:: Service Levels
   :header: control, done, comment
 
-  Availability,  , We will attempt to make the server available continously (24X7).  There are no planned outages, although these may happen.  In addition server faults may occur randomly and we will attempt to restart the server as soon as possible afterwards.
+  Availability,  , We will attempt to make the server available continuously (24X7).  There are no planned outages, although these may happen.  In addition server faults may occur randomly and we will attempt to restart the server as soon as possible afterwards.
   Backup Recovery Point, 24 hours,  If there is a catastrophic failure of the server then it will be restored from offsite backups.  These backups are moved off site once every 24 hours.  So it is possible that the site will be restored to its state up to 24 hours previously.
 
 .. csv-table:: Privacy

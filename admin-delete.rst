@@ -87,7 +87,7 @@ survey.
 .. note::
 
   Its up to you to make sure that the survey you are sending the data to makes sense.  Generally this should be a later version but it does not
-  have to be.  Data will be added for any questions that have the same name in the deleted survey and the surevey you are sending the results to.
+  have to be.  Data will be added for any questions that have the same name in the deleted survey and the survey you are sending the results to.
   Any other questions are ignored.
 
 Follow these steps to redirect the failing submissions:
@@ -98,7 +98,7 @@ Follow these steps to redirect the failing submissions:
 
 #.  Select **Instances** under show
 
-#.  In the data section you can restrict instances to only those in a specific project. You can also sepcify that only "Errors" are shown
+#.  In the data section you can restrict instances to only those in a specific project. You can also specify that only "Errors" are shown
 
 #.  Find a submission to the deleted survey that has been marked as an error.  Any submission will do because once you have added the redirection
     you can resubmit from the phone(s) and all submissions will be redirected.

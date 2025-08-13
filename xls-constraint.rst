@@ -22,7 +22,7 @@ About Constraints:
 
 .. note::
 
-  In the constraint you specify what the answer must be. Hence in the preceeding example an error message wiil be shown if the age is greater
+  In the constraint you specify what the answer must be. Hence in the preceding example an error message will be shown if the age is greater
   than or equal to 15.
 
 Constraint Message

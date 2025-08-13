@@ -38,7 +38,7 @@ Supported Question Types
 * calculation
 * date
 * datetime
-* acknowldege
+* acknowledge
 
 Question types with minimal support
 -----------------------------------
@@ -79,7 +79,7 @@ both sides of these operators.
 * like (Similar to.  Use the % symbol to match a range of characters.
   Use the _ underscore character to match a single character)
 * not like (returns the rows that do not match)
-* || (concatanetes the text values either side, for example  'a' || 'b' results in 'ab')
+* || (concatenates the text values either side, for example  'a' || 'b' results in 'ab')
 
 Brackets
 --------

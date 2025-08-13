@@ -25,7 +25,7 @@ is no hint telling the enumerator to select all that apply then only one should 
 
    Which select to use?
    
-One of the advantages of using phone based surveys is that the analyst has to explicitely set the type to select_one
+One of the advantages of using phone based surveys is that the analyst has to explicitly set the type to select_one
 or select multiple and it will not be left up to the enumerator.
 
 Specifying

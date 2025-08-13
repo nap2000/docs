@@ -229,7 +229,7 @@ The translation can be done automatically by `AWS Translate  <https://aws.amazon
 need to be added to the question in the oversight form that is going to show the translation:
 
 #.  Add the parameter: auto_annotate=yes
-#.  Add a paramater **from_lang** with the value set to the language code of the source language
+#.  Add a parameter **from_lang** with the value set to the language code of the source language
 #.  Add a parameter **to_lang** with the value set to the language code of the language you are translating to
 
 The above parameters are required in addition to the "source" parameter identifying the question that contains the original text.
@@ -363,7 +363,7 @@ Tasks assigned to a record will be shown in the History tab where you can see th
 Sending Notifications
 +++++++++++++++++++++
 
-An email notification can be sent with an attached PDF or a link to a Webform containing the record data. This notification
+An email notification can be sent with an attached PDF or a link to a WebForm containing the record data. This notification
 will also be shown in the record history.  Next to the notification will be shown a button labelled "Resend" that can be clicked
 to resend a notification.
 
@@ -442,7 +442,7 @@ selecting the "File" menu option, you can then select Excel or Word format.  Not
 Languages Supported for Automatic Transcription
 -----------------------------------------------
 
-The languages available for automatic transcription differ from the languages that can be automaticaly translated.  There are less languages
+The languages available for automatic transcription differ from the languages that can be automatically translated.  There are less languages
 supported however some languages have many dialects that are not included in the list of languages for translation.
 
 .. csv-table:: Transcription Languages:

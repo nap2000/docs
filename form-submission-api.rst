@@ -35,7 +35,7 @@ xml_submission_file::
 
 meta data:: 
 
-  instanceID:  A unique identifer for this submission (required)
+  instanceID:  A unique identifier for this submission (required)
   instanceName: The instance Name (optional)
 
 The following example response is for a form that has 3 questions: q1,q2 and q3.  q2 was not answered, q3 is an image type question.

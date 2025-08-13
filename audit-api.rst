@@ -185,7 +185,7 @@ Audit Log Times
 +++++++++++++++
 
 All times are in milli seconds since 1st January 1970 and are in the UTC timezone.  Spreadsheets store date/time values
-as a numnber of days.   Hence to convert to a spreadsheet date time 
+as a number of days.   Hence to convert to a spreadsheet date time
 in your time zone you can use the following formula::
 
   =C2/(1000*3600*24) + DATE(1970,1,1) + (timezone difference)/24
@@ -220,7 +220,7 @@ FieldTask Refresh Log
 	    "refresh_time": "2020-01-11 21:47:18",
 	    "device_time": "2020-01-11 21:47:10",
 	    "server_ahead": "00:00:08.602204",
-	    "deviceid": "fielTask:yufdiashfdsaf",
+	    "deviceid": "fieldTask:yufdiashfdsaf",
 	    "appversion": "6.515"
 	  },
 	  {

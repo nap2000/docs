@@ -18,5 +18,5 @@ You can do this in choice labels as well as question labels.  Use if this featur
 
 *  To provide contextual information as in the previous example
 *  For **relevance** such as "Skip to question 5 if the age is less than 5"
-*  For **contraints**, such as "The number of children attending school must be less than or equal to the number of children in the house"
+*  For **constraints**, such as "The number of children attending school must be less than or equal to the number of children in the house"
 *  In **calculations**, such as "if age is > 20 then status is adult"

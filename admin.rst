@@ -22,5 +22,5 @@ Administration
   server-admin.rst 
   admin-security.rst 
 
-You need to have at least the **admin** security group to acess these administration functions. Some functions require the **Organisational Administrator**,
+You need to have at least the **admin** security group to access these administration functions. Some functions require the **Organisational Administrator**,
 **Enterprise Administrator** or **Server Administrator** security group.

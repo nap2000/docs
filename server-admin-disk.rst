@@ -33,7 +33,7 @@ significant disk space.  There are some issues to consider though:
 
 *  If there is a problem applying the submitted file to the database then you may need to fix that problem and then re-process.  So if you are confident that you will monitor and resolve all issues within say a week then you could set an automatic script to delete files from uploadedSurveys that are older than that.  Of course if you miss that timeframe you could lose some data.
 
-*  Recovery.  The survey submissions may have been sucessfully processed but you might delete all of that data.  No problem you can undelete.  However you might then go further and erase all of your data.  At this point you have 100 days to "restore" using the data in uploadedSurveys to re-appy the submissions.  If this data has been deleted then you cannot do that and you will need to restore from backups.
+*  Recovery.  The survey submissions may have been successfully processed but you might delete all of that data.  No problem you can undelete.  However you might then go further and erase all of your data.  At this point you have 100 days to "restore" using the data in uploadedSurveys to re-apply the submissions.  If this data has been deleted then you cannot do that and you will need to restore from backups.
 
 Archiving files to long term storage
 ++++++++++++++++++++++++++++++++++++

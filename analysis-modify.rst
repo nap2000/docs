@@ -20,7 +20,7 @@ On the modify page select the text question that you want to review.
 
 .. figure::  _images/clean1.jpg
    :align:   center
-   :alt: A text question selected for cleaning showing some data with misspelt answers.
+   :alt: A text question selected for cleaning showing some data with different spelling.
    
    A text question selected for cleaning
 

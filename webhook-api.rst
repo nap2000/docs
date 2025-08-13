@@ -43,7 +43,7 @@ These web hooks are added on the notifications page which is in the tasks module
 as a Web Hook. You will then be able to specify the callback URL and optionally a user name and password.  The trigger of the notification can be set to:
 
 *  Submission.  New results submitted to the server.
-*  Task Reminder.  A task has not been completed within the alloted time.
+*  Task Reminder.  A task has not been completed within the allowed time.
 *  Console update.  The data has been changed using the console.
 
 Filtering

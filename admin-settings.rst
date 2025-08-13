@@ -110,7 +110,7 @@ on-phone setting will be overridden. These settings apply to all fieldTask insta
 *  Enable Geo-fence.  Enables the geo fence feature that can download or show tasks when the user is within a specified perimeter.
 *  GeoShape and GeoTrace input method.  If these are set on the server then a dialog is no longer shown to fieldTask users before they start recording points.  This reduces the time required to start recording and allows a consistent approach to recording geo poly types.
 
-Webform Settings
+WebForm Settings
 ----------------
 
 This tab allows customisation of webForm appearance:

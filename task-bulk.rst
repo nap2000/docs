@@ -30,4 +30,4 @@ There are 3 options:
 
 #.  Assign user.  Assign a user to all of the selected tasks
 #.  Delete selected.  Delete the selected tasks.
-#.  Set selected as assigned.  The task may have been marked as completed or rejected by a user using this option the task is marked as assigned back to the user so that they can recomplete it.
+#.  Set selected as assigned.  The task may have been marked as completed or rejected by a user using this option the task is marked as assigned back to the user so that they can re-do it.

@@ -51,7 +51,7 @@ and to prevent problems that could happen if a select_one was changed to a selec
 Other Questions
 ---------------
 
-A very common usage of relevance is to show a text question asking the user to "Please specify"  what they mean't by selecting **Other** in
+A very common usage of relevance is to show a text question asking the user to "Please specify"  what they meant by selecting **Other** in
 a choice list.
 
 .. figure::  _images/relevant2.jpg

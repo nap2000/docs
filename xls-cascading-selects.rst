@@ -12,8 +12,8 @@ show the communities that are in the selected region
 Cascading Selects
 -----------------
 
-Choices Worsheet
-++++++++++++++++
+Choices Worksheet
++++++++++++++++++
 
 *  Firstly you need to add some filters to the choices worksheet
 *  These are additional columns where you specify the values that will make an option relevant

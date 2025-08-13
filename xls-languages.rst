@@ -85,7 +85,7 @@ If you include **(rtl)** in the language name then it will be set right to left 
 Also if you include the following language codes the direction will be set Right to Left::
 
   label::arabic
-  label::lanugage(ar)
+  label::language(ar)
   label::language(he)
   label::language(ur)
   
@@ -132,7 +132,7 @@ If you know the code for a language you can include it in the name in brackets. 
   English (en)
   Spanish (es)
 
-Adding the language code tells the system explicitley what the language is which allows it to do automatic translations for certain languages.  See the next section.
+Adding the language code tells the system explicitly what the language is which allows it to do automatic translations for certain languages.  See the next section.
 
 Automatic Translations
 ----------------------

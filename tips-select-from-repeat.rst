@@ -7,7 +7,7 @@ Select ones, or select multiple, from repeats
  :local:
  
 You can create a list of choices for a select_one or select_multiple question from a repeat.  For example if you collected a list of people 
-in a repeat group, you could then ask a question that selects one or more of those people.  This is done by setting the select's listname to
+in a repeat group, you could then ask a question that selects one or more of those people.  This is done by setting the selects listname to
 the name of the question that contains the choice values.  
 
 The results can be filtered by putting the criteria in the choice filter column.

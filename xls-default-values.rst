@@ -11,7 +11,7 @@ A static default is set when the the form is first opened.
 
 .. note::
 
-  To add a staric default; place the default value in the default column without using quotation marks.
+  To add a static default; place the default value in the default column without using quotation marks.
 
 .. csv-table:: Static Default:
   :width: 240
@@ -73,7 +73,7 @@ Dynamic Defaults
 ----------------
 
 A dynamic default value is specified in the **calculation** column for a question.  Hence you can set the initial answer to a question
-based on the answer to a preceeding question.
+based on the answer to a preceding question.
   
 .. warning::
 
@@ -95,7 +95,7 @@ Now the default value is set when the question is shown.
 
 .. note::
 
-  Webforms does not have the above issues with dynamic defaults and you **should not** wrap the default calculation in the once() function. However
+  WebForms does not have the above issues with dynamic defaults and you **should not** wrap the default calculation in the once() function. However
   you can use the default() function as this will just be ignored.
   
 You can also use :ref:`trigger-calculation` to get the same result as you can set the trigger to be the referenced

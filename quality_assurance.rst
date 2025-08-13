@@ -5,7 +5,7 @@ Quality Assurance
  :local:  
  
 Mobile data collection can provide much higher quality than paper surveys however as the process is different some
-of the techniques you may have used for paper surveys are less easiliy applied and have to be replaced with different 
+of the techniques you may have used for paper surveys are less easily applied and have to be replaced with different
 quality measures.
 
 .. figure::  _images/qa1.jpg
@@ -47,7 +47,7 @@ not doing all of your interviews offline before uploading all the data in one go
 *  Does the data look like we would expect? Create charts in the analysis module or export to XLS.
 *  Where was the data collected? If you are not recording location in a question in the survey you could consider using the start-geopoint meta
    question. Refer to :ref:`meta_items`
-*  When was the data collected?  Check the start and end time of the survey.  These are recorded in meta questions which are automatiacally added
+*  When was the data collected?  Check the start and end time of the survey.  These are recorded in meta questions which are automatically added
    to every survey.
 *  How long did the survey take?  Export to XLS and subtract the start time from the end time to see the duration.  You can sort by this new
    column to see which were the shortest and longest surveys.

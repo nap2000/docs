@@ -23,7 +23,7 @@ These are tasks that are assigned to a user who has been setup on the system.
 #.  **Assign or Accept**.  An administrator can assign a task to a user. (Or reassign it to a different user).  If the task
     is unassigned and "Self Assign" was selected, then FieldTask user can accept the task. I then changes to the **Assigned** state.
 #.  **Complete**.  When the assigned user completes the task it goes into the **Completed** state.
-#.  **Reject**.  A user can reject a task that has been assigned to them. If the task was not explicitely assigned to a user
+#.  **Reject**.  A user can reject a task that has been assigned to them. If the task was not explicitly assigned to a user
     but the "Self Assign" checkbox was checked, then if the user rejects the task it stays in the unassigned state but will no
     longer appear in the users task list.
 #.  **Cancel**.  An administrator can cancel a task.  FieldTask users will then see that task as cancelled. 
@@ -47,7 +47,7 @@ similar to the lifecycle of internal task but there are some additional email sp
 
    Email Task Lifecycle
 
-#. **Create Task**.  If the task is initally assigned to an email address then it becomes an email task.  It is not
+#. **Create Task**.  If the task is initially assigned to an email address then it becomes an email task.  It is not
    possible to have an unassigned email task.	
 
    *  If the task was an ad-hoc task or created from a new submission then it goes straight into pending state.

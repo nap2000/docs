@@ -14,7 +14,7 @@ Tasks in different states will be shown in a different color:
 *  Rejected / Deleted:  Brown
 *  Late:  Red
 *  In progress: Blue
-*  Submitted: Greeen
+*  Submitted: Green
 *  Finalised: Purple
 
 .. figure::  _images/tasks-ft1.jpg

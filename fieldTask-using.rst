@@ -130,7 +130,7 @@ Tasks instances can be ordered by:
   * Order Downloaded Ascending
   * Order Downloaded Descending
   * Status, finalised first
-  * Status, unfinalized first
+  * Status, not finalized first
 
 .. note::
 
@@ -158,7 +158,7 @@ also be specified on the server (:ref:`mobile-device-settings`).  If specified o
 Playing Media Questions
 -----------------------
 
-If an audio or video file is added to a question (:ref:`media`) then an icon will be shown that the user can seelect to play the media.
+If an audio or video file is added to a question (:ref:`media`) then an icon will be shown that the user can select to play the media.
 
 .. figure::  _images/ftmedia.jpg
    :align:   center

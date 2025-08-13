@@ -48,7 +48,7 @@ of digits after the decimal place.  So to pretty this up we use the round() func
 *  The round function takes 2 parameters.  round(value, number of places).  In our example we have specified the number
    of places after the decimal point as 1.
   
-We could then show the calculation to the enumerator or use it in arelevance such as::
+We could then show the calculation to the enumerator or use it in a relevance such as::
 
   ${age_months} < 60
 

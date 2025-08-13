@@ -99,7 +99,7 @@ Periodic
 
 Available with Smap 23.07.
 
-Periodic triggers run reports and automatically send them via email. The data in the report will be filterd by dates
+Periodic triggers run reports and automatically send them via email. The data in the report will be filtered by dates
 determined by the selected period.
 
 *  Daily: Data from the day before will be included.
@@ -154,9 +154,9 @@ Email
 
 Settings are:
 
-*  Attach.  Attach a PDF of the record or a link to a Webform containing the data. (Not available for periodic triggers).
+*  Attach.  Attach a PDF of the record or a link to a webForm containing the data. (Not available for periodic triggers).
 *  Email.  One or more comma separated email addresses
-*  A question that contains the email address. (If the trigger is a submission of a completed survey, not periodic triggrs)
+*  A question that contains the email address. (If the trigger is a submission of a completed survey, not periodic triggers)
 *  Subject.  The subject of the email.
 *  Content.  The body content of the email.  
    
@@ -173,7 +173,7 @@ The subject and message content can be customised using data from the submitted 
 *  ${device} : The device IMEI used to submit the results
 *  ${questionname} : Where questionname is the name of any question in the survey.
 *  ${assigned} : The person assigned the record as a case.
-*  ${url} : The link to a webform if you specified that a webform should be included in the email
+*  ${url} : The link to a webForm if you specified that a webForm should be included in the email
 
 For example::
 
