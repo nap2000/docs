@@ -351,15 +351,15 @@ Example usage
 %%%%%%%%%%%%%
 
 .. csv-table:: Reviewing Multiple Complaints - 6 parameter version
-  :width: 160
-  :widths: 10,10,10,10,60,60
-  :header: type, name, label, repeat_count, calculation, comment
+  :width: 150
+  :widths: 10,10,10,60,60
+  :header: type, name, repeat_count, calculation, comment
 
-  calculate, number_recs, , ,"pulldata('linked_s11_2134', 'complaint_type', 'office', ${office}, 'count', 'matches')", returns the number of records for the selected office. The second parameter is ignored when using an aggregate function for the index.
-  begin_repeat, rpt, Complaints, int( ${number_recs} ), , Creates a repeat group for each matching complaint.  Note that the repeat count has to be cast to an integer as calculates have text value by default
-  note, type, Complaint Type, , "pulldata('linked_s11_2134', 'complaint_type', 'office', ${office}, position(..), 'matches')", The pulldata function is almost the same as before except this time we are getting the value for the record number that corresponds to the position in the repeat.
-  note, complaint, Complaint, , "pulldata('linked_s11_2134', 'complaint', 'office', ${office}, position(..), 'matches')", This time we get the details of the complaint as the value of the note
-  end_repeat, rpt
+  calculate, number_recs, ,"pulldata('linked_s11_2134', 'complaint_type', 'office', ${office}, 'count', 'matches')", returns the number of records for the selected office. The second parameter is ignored when using an aggregate function for the index.
+  begin_repeat, rpt, int( ${number_recs} ), , Creates a repeat group for each matching complaint.  Note that the repeat count has to be cast to an integer as calculates have text value by default
+  note, type, , "pulldata('linked_s11_2134', 'complaint_type', 'office', ${office}, position(..), 'matches')", The pulldata function is almost the same as before except this time we are getting the value for the record number that corresponds to the position in the repeat.
+  note, complaint, , "pulldata('linked_s11_2134', 'complaint', 'office', ${office}, position(..), 'matches')", This time we get the details of the complaint as the value of the note
+  end_repeat, rpt, , , ,
 
 .. _looking-up-data-local:
 
