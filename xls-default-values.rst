@@ -67,7 +67,7 @@ Replace "question_name" with the name of the previously answered question that y
 
 .. warning::
 
-  Requires fieldTask 6.100 or above and Smap Server 20.04 or above
+  Available in FieldTask.  Available in WebForms in versions 25.08+
 
 Dynamic Defaults
 ----------------
