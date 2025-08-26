@@ -12,8 +12,8 @@ Add the following to smap-ssl.conf (Inside the virtual host after the Directory 
 
   SSLProxyEngine on
   RequestHeader unset Authorization
-  ProxyPass         /app/attachments https://s3-{region}.amazonaws.com/{bucket}/attachments
-  ProxyPassReverse  /app/attachments https://s3-{region}.amazonaws.com/{bucket}/attachments
+  ProxyPass         /app/attachments https://{bucket}.s3-{region}.amazonaws.com/attachments
+  ProxyPassReverse  /app/attachments https://{bucket}.s3-{region}.amazonaws.com/attachments
 
 
 Add proxy_http to apache2::

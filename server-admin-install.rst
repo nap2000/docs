@@ -63,3 +63,4 @@ After installation the following further steps may be required:
 *  Add an SSL certificate
 *  Add AWS CLI command line
 *  Update the configuration of Tomcat and PostgresSQL to tune performance
+*  Add a swap file.
