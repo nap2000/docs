@@ -29,3 +29,4 @@ about this page.
   server-admin-problems.rst
   server-admin-customisation.rst
   server-admin-downloads.rst
+  server-admin-versions.rst

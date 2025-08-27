@@ -50,6 +50,13 @@ Settings include:
 *  Survey or bundle whose submission triggers the notifications
 *  Filter. Restrict which records will trigger a notification.  For example:  "${age} > 80"
 
+.. note::
+
+    A submission notification is only triggered once for each record of data.  So if a record
+    is updated through a submission from an oversight survey or a task then the notification will
+    not be triggered.  If you want to be notified when an update happens you will need to filter on
+    data values set by an update.
+
 Task Reminder
 +++++++++++++
 
@@ -73,26 +80,6 @@ Settings include:
   that triggered the task.  However this will only
   work if in the task group for "Initial Data" you specified "Pre-populate form with existing data" or "Update existing results".  
   If you specified "No Initial Data"  then the data for the email question is not retained in the task and it can't be used in a reminder notification.
-
-Console Update
-++++++++++++++
-
-In this case the objective is to send a notification when an update is made to the survey via the console.  For example an administrator
-might approve a request.  The notification will be sent only when a specific value is set in a specific question.
-
-The settings are:
-
-*  The same triggers as per submission.  That is specify the survey that is being updated and any filters on which records trigger the update.
-*  The oversight survey that is making the change.
-*  The question in the oversight survey that when updated triggers the notification.
-*  The value of the update question.
-
-.. note::
-
-  The filters are evaluated after an update is applied.  Hence if you have an update notification that is triggered when status is set to "critical"
-  and you add a filter that this only applies to "region 1".  Then if the user updates a record and sets the status to "critical" and the region to "region 2"
-  then the notification will not be triggered.  However if they set the region to "region 1" or it was already "region 1" then the notification will be
-  triggered 
 
 Periodic
 ++++++++
