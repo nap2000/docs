@@ -12,19 +12,13 @@ Every additional hour adds 1/24 to the number","Constraint
 decimal-date-time( . )> (decimal-date-time(${dob}) + 10.0416666)
 
 The entered date time must be more than 10 days and one hour after the date of birth."
-Convert a date to a decimal number,"decimal-date-time(${question})
-
-Useful as part of a date calculation.Every additional day adds one to the number","Constraint
-decimal-date( . )> (decimal-date(${dob}) + 10)
-
-The entered date must be more than 10 days after the date of birth."
 Convert a time to a decimal number,"decimal-time(${question})
 
 Useful as part of a date calculation.Every additional hour adds 1/24 to the number","Constraint
 decimal-time( . )>decimal-time(${time_of_birth}) + 10 div 24
 
 The entered time must be more than 10 hours after the date of birth."
-Convert a decimal number to a date,"date-time(${question})
+Convert a decimal number to a date or date and time,"date-time(${question})
 
 Convert a calculated date back into date format.","Relevant
 date-time(decimal-date-time(${dob})+10)
