@@ -102,7 +102,7 @@ on-phone setting will be overridden. These settings apply to all fieldTask insta
 *  Enable server settings menu.  The menu to change the server can be disabled with this setting.
 *  Enable user and identity menu.  The menu to set user identity can be disabled with this setting.
 *  Disable exit menu.  The exit menu shuts down fieldTask. It can be disabled with this setting.
-*  Allow user to set instance name.  Instance names can be set automatically using collected data. This is specified in the survey.  However if this
+*  Allow user to set instance name.  Instance names can be set automatically using collected data. If you are combining multiple names use concat() or join(). For example **concat(${name}, ' ', ${last_name})**
 *  Allow user to mark a completed form as not finalized.  If enabled then a checkbox labelled **Mark form as finalized**, will be shown when the enumerator finishes a
    survey and gets to the `save` screen.  By default this will always be checked. If the enumerator unchecks this option then the survey will be saved as an
    incomplete instance and the enumerator can open it to continue editing from the tasks tab.  Note incomplete instances are not sent to the server. 

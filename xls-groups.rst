@@ -19,7 +19,7 @@ that indicates its end.
 All the questions between **begin group** and **end group** are within the group.
 
 *  To add relevance to an entire group put it on the **begin group**
-*  To put all questions in a group onto the same screen add **form-list** as an appearance
+*  To put all questions in a group onto the same screen add **field-list** as an appearance
 *  In the special case where all the questions are select_one or select multiple and they refer to the same
    list then you can put them into a table setting an appearance of **table-list**
    
