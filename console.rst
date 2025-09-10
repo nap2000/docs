@@ -293,6 +293,10 @@ The above parameter is required in addition to the "source" parameter identifyin
 Updating Multiple Records at once
 +++++++++++++++++++++++++++++++++
 
+.. note::
+
+  From version 25.10 of the server this function will be restricted to administrators, analysts and security managers.
+
 You can select multiple records using your mouse and the shift or the control key after which the "Bulk Change" button will be shown.
 
 .. figure::  _images/console-bulk1.jpg
