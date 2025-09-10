@@ -167,7 +167,7 @@ this is also where you will also do annotations.   This means that updates can b
 source parameter even when the user has not locked the record.
 
 Annotating Answers
-^^^^^^^^^^^^^^^^^^
+++++++++++++++++++
 
 You may have collected image, audio or video data and you want to label that media or transcribe it into text.  If it is a text question
 you may want to translate that response into a different language.
@@ -182,7 +182,7 @@ Having done this when you view a record in the console the source question will 
 easily update one from the other.
 
 Example 1. Translate a text answer
-##################################
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure::  _images/annotation1.jpg
    :align:   center
@@ -195,7 +195,7 @@ Example 1. Translate a text answer
   The user has unselected "Form Data" at top left so that they can focus on the questions that are in the oversight form.
  
 Example 2. Transcribe an audio recording
-########################################
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure::  _images/annotation2.jpg
    :align:   center
@@ -204,7 +204,7 @@ Example 2. Transcribe an audio recording
    Transcribe an audio response
    
 Example 3. Transcribe a video recording
-#######################################
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure::  _images/annotation3.jpg
    :align:   center
@@ -215,7 +215,7 @@ Example 3. Transcribe a video recording
 .. _automation:
 
 Automation
-##########
+^^^^^^^^^^
 
 .. warning::
 
@@ -223,7 +223,7 @@ Automation
   by Smap.  If you need this feature contact us to organise for the restriction to be lifted.
 
 Automatic Translation
-^^^^^^^^^^^^^^^^^^^^^
+#####################
 
 The translation can be done automatically by `AWS Translate  <https://aws.amazon.com/translate>`_.  The following additional parameters
 need to be added to the question in the oversight form that is going to show the translation:
@@ -237,7 +237,7 @@ The above parameters are required in addition to the "source" parameter identify
 :ref:`language-codes` 
 
 Automatic Audio Transcription
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#############################
 
 Audio can be done transcribed automatically using `AWS Transcribe  <https://aws.amazon.com/transcribe/>`_.  The following additional parameters
 need to be added to the text question in the oversight form that is going to show the transcription:
@@ -250,7 +250,7 @@ The above parameters are required in addition to the "source" parameter identify
 :ref:`language-codes-audio` 
 
 Medical Transcriptions
-^^^^^^^^^^^^^^^^^^^^^^
+######################
 
 If the audio file contains medical terms then you can add some additional parameters to use `AWS Transcribe  Medical <https://aws.amazon.com/transcribe/medical>`_
 
@@ -262,7 +262,7 @@ If the audio file contains medical terms then you can add some additional parame
 Only US English is supported as a language for medical transcriptions.
 
 Automatic Labelling of Images
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#############################
 
 Images can be labelled automatically using `AWS Rekognition  <https://aws.amazon.com/rekognition/>`_.  The following additional parameters
 need to be added to the text question in the oversight form that is going to show the transcription:
@@ -275,7 +275,7 @@ The above parameter is required in addition to the "source" parameter identifyin
 :ref:`language-codes-audio` 
 
 Automatic Sentiment Analysis
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+############################
 
 A sentiment can be automatically calculated for text responses entered in any of the following languages;
 English, German, Spanish, Italian, Portuguese, French, Japanese, Korean, Hindi, Arabic and Chinese.
