@@ -315,7 +315,7 @@ A page is then displayed that allows you to make changes to all selected records
 
 .. warning::
 
-  Batch updates do not require you to reserve the record.  Hence you can update a record that someone else is working on.
+  Bulk updates do not require you to reserve the record.  Hence you can update a record that someone else is working on.
   If the permitted values of a select question are determined by another value in the record then the values you can select
   will be determined by the first record that you are updating.  This might allow you then to set invalid values for other 
   records.

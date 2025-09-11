@@ -15,6 +15,22 @@ Getting to the survey management page
 As Survey Management is the default page of the Administration module you can get to it by select Modules and the then Admin.  
 Alternatively if you are already in Administration but on a different page, select the “Forms" menu.
 
+Types of Surveys
+----------------
+
+Important types of surveys are shown in different colours.
+
+.. figure::  _images/surveyManagement0.jpg
+   :align:   center
+   :alt: Showing 4 different types of survey in different colours
+
+   Four different types of Survey
+
+#.  Oversight. (Orange).  Will not appear in fieldTask.  Can be used in the console to update data in records.
+#.  Data (Blue).  Use to collect data in fieldTask or WebForms.
+#.  Read Only.  (Purple). Can be used in fieldTask and WebForms to view information but will not submit results.
+#.  Hidden. (Pink).  Will not be shown on devices.  Can be used to complete tasks but not new records.
+
    
 Creating Surveys
 ----------------
