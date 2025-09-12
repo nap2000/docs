@@ -6,8 +6,23 @@ Application Change History
 .. contents::
  :local:
 
-25.04.41
+`Download <https://smap-code.s3.us-east-1.amazonaws.com/os_smap_25_09_03_7295.tgz>`_
+
+#.  Set the user name of the user who assigned a case in the history page
+#.  Include additional security groups in the form access report
+#.  Add row filters to the form access report
+#.  Unescape HTML codes when downloading data to XLS from the console
+#.  Require specific security groups before allowing bulk update
+#.  Store multiple column orders in the console for different combinations of survey and oversight form
+#.  Add support for last saved in select questions in webforms
+#.  Only send a notification once per record
+#.  Fix paging in the console at 100
+#.  Close webform tab automatically when opened as a task
+
+25.04.39
 --------
+
+`Download <https://smap-code.s3.us-east-1.amazonaws.com/os_smap_25_04_39_3887.tgz>`_
 
 #.  Include support for last-saved in WebForms
 #.  Reduce size of WebForm code that needs to be downloaded to browser
