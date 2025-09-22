@@ -18,8 +18,6 @@ Alternatively if you are already in Administration but on a different page, sele
 Types of Surveys
 ----------------
 
-Important types of surveys are shown in different colours.
-
 .. figure::  _images/surveyManagement0.jpg
    :align:   center
    :alt: Showing 4 different types of survey in different colours
