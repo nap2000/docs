@@ -6,6 +6,19 @@ Application Change History
 .. contents::
  :local:
 
+25.09.11
+--------
+
+`Download <https://smap-code.s3.us-east-1.amazonaws.com/os_smap_25_09_11_708.tgz>`_
+
+#.  Fix errors in setup scripts used on a new install
+#.  Fix issue with addition of parameters to console queries that may occur if the colums are re-ordered
+#.  Automatically release a record after it is closed
+#.  Remove the record history entry showing a record has been deleted when this is part of an update transaction
+
+25.09.03
+--------
+
 `Download <https://smap-code.s3.us-east-1.amazonaws.com/os_smap_25_09_03_7295.tgz>`_
 
 #.  Set the user name of the user who assigned a case in the history page
