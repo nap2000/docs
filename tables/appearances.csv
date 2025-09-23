@@ -39,6 +39,7 @@ new,"Will remove the ""choose file"" button from an image question",Use on image
 new-front,Use the front facing camera and require a new video to be taken,"Use with type of ""video"""
 no-buttons,Will not show the checkbox or radio buttons with choices,"Use with select questions that have the ""columns"", ""columns-n"" or ""columns-pack"" appearance"
 no-calendar,Shows the simple date selector rather than the calendar view,"Use with type of ""date"" and also with ""date time"""
+no-collapse,Will remove the collapse button that is normally shown with groups and repeats in WebForms,"Use with type of ""begin group"" or ""begin repeat"""
 numbers,Will show the numeric keyboard for a text question. This can be used to allow numbers longer than 10 digits to be entered.,Use with text questions
 persian,Shows a Persian calendar,"Use with type of ""date"""
 phoneonly,"Will not add the data into the results database.
