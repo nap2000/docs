@@ -11,9 +11,6 @@ Application Change History
 
 `Download 25.09.11 <https://smap-code.s3.us-east-1.amazonaws.com/os_smap_25_09_11_708.tgz>`_
 
-Changes
-+++++++
-
 #.  Fix errors in setup scripts used on a new install
 #.  Fix issue with addition of parameters to console queries that may occur if the colums are re-ordered
 #.  Automatically release a record after it is closed
@@ -23,9 +20,6 @@ Changes
 --------
 
 `Download 25.09.03 <https://smap-code.s3.us-east-1.amazonaws.com/os_smap_25_09_03_7295.tgz>`_
-
-Changes
-+++++++
 
 #.  Set the user name of the user who assigned a case in the history page
 #.  Include additional security groups in the form access report
@@ -43,9 +37,6 @@ Version 25.04.39
 
 `Download 25.04.39 <https://smap-code.s3.us-east-1.amazonaws.com/os_smap_25_04_39_3887.tgz>`_
 
-Changes
-+++++++
-
 #.  Include support for last-saved in WebForms
 #.  Reduce size of WebForm code that needs to be downloaded to browser
 #.  Default the user name to the user ident if it is not set when adding a user
@@ -58,9 +49,6 @@ Version 25.04.33
 ----------------
 
 `Download 25.04.33 <https://smap-code.s3.amazonaws.com/os_smap_25_04_33_6357.tgz>`_.
-
-Changes
-+++++++
 
 *  Set a limit on uploaded media of 30MB for each file
 *  Fix a problem generating PDFs when embedded images do not contain meta data allowing rotation
