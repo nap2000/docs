@@ -116,6 +116,26 @@ Select the user whose activity you want to show.
 
   Only for "User Activity" subjects.
 
+Graph Panels
+------------
+
+After you select the survey you must select a question to analyse on the graph. Alongside each question you can select the function that is applied to the
+data.
+
+There are two graph types:
+
+#.  Histograms (Shown as a Pareto chart - limited to the largest 30 values)
+#.  Time series
+
+Question types that can be graphed:
+
+*  select one
+*  select multiple
+*  text
+*  calculates
+*  server calculations
+*  integer
+*  decimal
 
 Map Panels
 ----------
@@ -125,6 +145,8 @@ Whole of Survey View
 
 It is not necessary to select a question.  Just select the survey and save.  The resultant map will show you all the locations at which data
 was collected.  If you click on a point it will show details of the data at that point.
+
+However if you have multiple location questions in a survey then you can select the location question to show on the map.
 
 Map view of a select question
 +++++++++++++++++++++++++++++

@@ -6,6 +6,15 @@ Application Change History
 .. contents::
  :local:
 
+25.10.03
+--------
+
+`Download 25.10.03 <https://smap-code.s3.us-east-1.amazonaws.com/os_smap_25_10_03_5919.tgz>`_
+
+#.  Use text type questions in graphs on the analysis page
+#.  Add a bundle access report
+#.  Add support in the online editor for the no-collapse appearance
+
 25.09.11
 --------
 
