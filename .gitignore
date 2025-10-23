@@ -1,3 +1,5 @@
 _build/
+.venv
 docsenv/
 docs.tgz
+ld.sh
