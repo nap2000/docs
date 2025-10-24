@@ -15,6 +15,6 @@
 
 1. Install ([sphinxcontrib.httpdomain] (https://github.com/sphinx-contrib/httpdomain)).
 
-1. Run the script go.sh.  This will create a tar file containing the documentation
+1. Run the script go.sh.  This will generate the html documentation and create a tar file called docs.tgz containing the documentation
 
 1. Deploy by copying the contents of _build/html to a directory accessible by your web server
