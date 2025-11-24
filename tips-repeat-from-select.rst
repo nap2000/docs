@@ -9,13 +9,13 @@ two repeat instances can be automatically be created to collect further details.
 .. csv-table:: Survey Worksheet
   :header: type, name, label, repeat_count, calculation
 
-  select_multiple experience, experience, What experience do you have,,
+  select_multiple exp, experience, What experience do you have?,,
   begin repeat, exp_repeat, Experience, count-selected(${experience}),
-  calculation,item,,,"jr:choice-name(selected-at(${experience},(position(..)-1)),'${experience}')",
+  calculation,item,,,"jr:choice-name(selected-at(${experience},(position(..)-1)),'${experience}')"
   decimal, exp_years, Years of experience in ${item},,
   text, exp_desc, Describe in detail your experience in ${item},,
   end repeat,,,,
 
-Set the repeat count to the number of selected choices.  Inside the repeat calculate the item name
+Set the repeat count to the number of selected choices.  Inside the repeat, add a calculate to get the item name
 using the jr:choice-name function.
 
