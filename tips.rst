@@ -6,6 +6,7 @@ Tips and Tutorials
   :maxdepth: 1
 
   tips-select-from-repeat.rst
+  tips-repeat-from-select.rst
   tips-online.rst
   tips-old-survey.rst
   tips-provide-copy-of-answers-to-respondent.rst

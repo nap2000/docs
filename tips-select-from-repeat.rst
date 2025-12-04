@@ -12,7 +12,6 @@ the name of the question that contains the choice values.
 
 The results can be filtered by putting the criteria in the choice filter column.
 
-
 .. csv-table:: Survey Worksheet
   :header: type, name, label, choice_filter
 
