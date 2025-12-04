@@ -37,3 +37,16 @@ In the above example the user has selected the option to base the new survey on 
 the two surveys will start out being identical.  The user then selected the option to "store results in a
 shared table" which creates the bundle.  Once the new "Evaluation Survey" is created questions can be deleted 
 and/or added.
+
+Bundle Settings
+---------------
+
+Bundles are related to case management in that they are used to manage cases.  There is a single page to
+specify the settings for a bundle and the case management on that bundle.  You can access this from the
+online editor.  Select the menu "Tools" and then "Bundle and Case Management".  The first two settings are:
+
+*  Bundle Name
+*  Bundle Description
+
+The name will be shown on the survey management page next to surveys in that bundle.  The description will be used by Large Language Models
+to access data from your bundle if you give them permission to do so.
