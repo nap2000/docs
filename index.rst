@@ -7,9 +7,30 @@
 Welcome to the Smap documentation
 =================================
 
-:dfn:`Smap Consulting` (Smap) provides tools for  a wide range of :ref:`applications` including Evaluation, Monitoring, Guidance and Case Management.
+:dfn:`Smap Consulting` (Smap) provides digital tools for a wide range of 
+:ref:`applications` including Evaluation, Monitoring, Guidance, and Case Management.
 
-The use of digital technologies for data collection has been shown to reduce costs, increase quality of the data and reduce the time between data collection and the application of the learning from that data.   However, it is this last advantage, the reduction in time before learning can be applied, that has the potential to have the greatest impact on program outcomes.  If you are using M&E collected data within a “Plan Do Check Action” cycle, or are applying Research and Learning, then using digital data collection can reduce this cycle time to days or even seconds supporting a completely new level of service.  This is because the digital tools that collect data can also be used to implement the results of the learning, closing the loop, and increasing impact. The Smap tools have been designed for exactly this objective.
+Why Digital Data Collection?
+-----------------------------
+
+Digital data collection offers three key advantages over traditional methods:
+
+* **Lower costs** - Reduce expenses associated with paper-based systems
+* **Higher quality data** - Minimize errors and inconsistencies  
+* **Faster insights** - Apply learning from your data immediately
+
+How Smap Goes Further
+---------------------
+
+While all digital tools provide these benefits, Smap is designed to close the loop 
+between data collection and action. Traditional approaches create delays between 
+collecting data and implementing changes—sometimes weeks or months. Smap reduces 
+this cycle time to days or even seconds.
+
+This speed transforms how you work. Whether you're running evaluation cycles 
+(Plan-Do-Check-Act) or research and learning programs, Smap lets you collect data 
+and immediately use those same tools to implement improvements. The result: faster 
+iteration, better decisions, and greater program impact.
 
 .. toctree::
   :maxdepth: 4
