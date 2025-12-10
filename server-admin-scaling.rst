@@ -108,7 +108,7 @@ Hence in all but one of your application servers specify in /etc/environment::
 This should be specified before you install Smap into the new application server.
 
 Apache2 Configuration
---------------------
+---------------------
 
 Apache uses an mpm_event server.  Its configuration is in /etc/apache2/mods-available/mpm_event.conf.  You can modify as required
 and then restart apache2
