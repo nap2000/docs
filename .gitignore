@@ -3,3 +3,4 @@ _build/
 docsenv/
 docs.tgz
 ld.sh
+.claude

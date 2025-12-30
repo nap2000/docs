@@ -111,4 +111,18 @@ Apache2 Configuration
 ---------------------
 
 Apache uses an mpm_event server.  Its configuration is in /etc/apache2/mods-available/mpm_event.conf.  You can modify as required
-and then restart apache2
+and then restart apache2.  THe most important parameter is probably **MaxRequestWorkers**.
+
+Example mpm_event.conf file for a high volume server::
+
+    StartServers            4
+    ServerLimit             30
+    MinSpareThreads         50
+    MaxSpareThreads         75
+    ThreadLimit             64
+    ThreadsPerChild         25
+    MaxRequestWorkers       600
+    MaxConnectionsPerChild  0
+
+Tomcat Configuration
+--------------------
