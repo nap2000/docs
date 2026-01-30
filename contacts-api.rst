@@ -7,7 +7,7 @@ Contacts
 
 .. http:get:: /api/v1/subscriptions
 
-  :synopsis: get subscribed users
+  :synopsis: Get subscribed users.
   
   **Example response**:
   
@@ -15,25 +15,25 @@ Contacts
   
   .. sourcecode:: http
   
-        HTTP/1.1 200 OK
-        Vary: Accept
-        Content-Type: application/json
-	
-        [
-          {
-            "id": 511,
-            "email": "tom@x.com",
-            "name": "Tom Smith",
-            "status": "subscribed",
-          },
-          {
-            "id": 510,
-            "email": "sally@x.com",
-            "name": "Sally",
-            "status": "pending",
-          }
-        ]
+
+    HTTP/1.1 200 OK
+    Vary: Accept
+    Content-Type: application/json
+
+    [
+      {
+        "id": 511,
+        "email": "tom@x.com",
+        "name": "Tom Smith",
+        "status": "subscribed"
+      },
+      {
+        "id": 510,
+        "email": "sally@x.com",
+        "name": "Sally",
+        "status": "pending"
+      }
+    ]
 	
   :reqheader Authorization: basic
   :statuscode 200: no error
-

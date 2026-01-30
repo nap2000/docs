@@ -10,7 +10,7 @@ Audit Data End Points
 
 .. http:get:: /api/v1/audit
 
-  :synopsis: get a list of services to retrieve audit data
+  :synopsis: Get a list of services to retrieve audit data
   
   **Example response**:
   
@@ -40,13 +40,13 @@ Per Question Audit Data
 
 .. http:get:: /api/v1/audit/(survey ident)
 
-  :synopsis:  Get per question audit data from a survey. (survey ident) is the survey identifier which can be found in the list of services retrieved above. A GeoJson object is returned for each question and includes the time it took for the data collector to answer the question and the gps coordinates of where the question was answered. This data is only returned if "Timing Data" and "Record Location" were enabled for the survey.`
+  :synopsis: Get per question audit data from a survey. (survey ident) is the survey identifier which can be found in the list of services retrieved above. A GeoJSON object is returned for each question and includes the time it took for the data collector to answer the question and the GPS coordinates of where the question was answered. This data is only returned if "Timing Data" and "Record Location" were enabled for the survey.
   
   **Example response**:
   
   https://sg.smap.com.au/api/v1/audit/s1554_20361
 
-  Data is returned as GeoJSON
+Data is returned as GeoJSON.
   
   .. sourcecode:: http
   
@@ -163,11 +163,11 @@ Raw Audit Log File
 
 .. http:get:: /api/v1/audit/(survey ident)
 
-  :synopsis:  Download the audit file that contains the original audit data before it is processed by the server
+  :synopsis: Download the audit file that contains the original audit data before it is processed by the server
   
   **Example response**:
   
-  The URL's to the log file can be found by calling the data API with the links=yes query parameter.
+  The URLs to the log file can be found by calling the data API with the links=yes query parameter.
 
   The downloaded file is in CSV format. 
   
@@ -184,7 +184,7 @@ along with the times are recorded.
 Audit Log Times
 +++++++++++++++
 
-All times are in milli seconds since 1st January 1970 and are in the UTC timezone.  Spreadsheets store date/time values
+All times are in milliseconds since 1st January 1970 and are in the UTC timezone. Spreadsheets store date/time values
 as a number of days.   Hence to convert to a spreadsheet date time
 in your time zone you can use the following formula::
 
@@ -201,7 +201,7 @@ FieldTask Refresh Log
 
 .. http:get:: /api/v1/audit/refresh/log
 
-  :synopsis: Get a list of all calls from fieldTask to refresh the list of forms and tasks. Responds with the user ident, the refresh time, the time on the device and the difference in time between the server and the mobile device, the device id and the version of fieldTask.  To show the fieldTask version requires Smap 21.11 and FieldTask 6.515.
+  :synopsis: Get a list of all calls from FieldTask to refresh the list of forms and tasks. Responds with the user ident, the refresh time, the time on the device and the difference in time between the server and the mobile device, the device id and the version of FieldTask. To show the FieldTask version requires Smap 21.11 and FieldTask 6.515.
   
   **Example response**:
   
@@ -240,4 +240,3 @@ FieldTask Refresh Log
 
   :reqheader Authorization: basic
   :statuscode 200: no error
-

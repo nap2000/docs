@@ -12,7 +12,7 @@ Task Groups
 
 .. http:get:: /api/v1/tasks/groups/(project id)
 
-  :synopsis: get a list of task groups in a project.  You can use the :ref:`tasks-api` request with a query parameter of `links=true` to get a list of available task groups URLs
+  :synopsis: Get a list of task groups in a project. You can use the :ref:`tasks-api` request with a query parameter of `links=true` to get a list of available task group URLs.
   
   **Example response**:
   
@@ -96,7 +96,7 @@ Task List
 
 .. http:get:: /api/v1/tasks
 
-  :synopsis: get a list of tasks.
+  :synopsis: Get a list of tasks.
   
   **Example response**:
   
@@ -442,4 +442,3 @@ instanceId of the record to update is included as "update_id".
 
   :query preserveInitialData: When updating an existing task that already has initial data you can choose to not include initial_data
          and to set this parameter to either preserve the existing data or clear it.  One of `true` or `false`
-

@@ -7,7 +7,7 @@ Data
 Introduction
 ------------
 
-This API is based on the Kobo Version 1 API however it has had some significant extensions.  To use the examples you will need to enter
+This API is based on the Kobo Version 1 API; however it has had some significant extensions. To use the examples you will need to enter
 a user id and password.  If you are already logged on to the server then you should see your own data otherwise you can access demo data using::
 
   user: api
@@ -92,7 +92,7 @@ Survey Data in JSON
 .. http:get:: /api/v1/data/(survey ident)
 .. http:get:: /api/v2/data/(survey ident)
 
-  :synopsis: Returns data for the specified survey. The example shows
+  :synopsis: Returns data for the specified survey. The example shows a response.
   
   **Example response**:
   
@@ -161,26 +161,26 @@ Survey Data in JSON
   :query links: Return URL links to other API calls on the data
   :query start: Retrieve data starting from the specified key
   :query limit: The number of records to retrieve
-  :query form: Retrieve data for a sub-form.  The available subforms are shown in the returned data from the /api/v1/data call.
-		This call will return the key for the parent form in the "parkey" attribute so that its data can be combined with that of
-		the main form.
+  :query form: Retrieve data for a sub-form. The available subforms are shown in the returned data from the /api/v1/data call.
+    This call will return the key for the parent form in the "parkey" attribute so that its data can be combined with that of
+    the main form.
   :query start_parkey: Parent key to start from.  Only useful when working with subform data.
-  :query parkey: Parent key.  return records in the subform that belong to the specified parent.
+  :query parkey: Parent key. Return records in the subform that belong to the specified parent.
   :query bad: One of ``yes`` return deleted records, ``only`` Only return deleted records, ``none`` do not return deleted (default)
-  :query audit: set to ``yes`` to return audit data. This data is the time in milliseconds that the user took to answer each question. 
-		You can also specify in the settings for the form that the GPS coordinates where each question was answered should be included. 
-		There is a thid level of audit where every change made to a question during the course of an interview is recorded. 
-		This information is available through the separate audit API.
-  :query meta: set to ``yes`` to return meta data and preloads including prikey, instanceid, user, upload time.  Set to ``no`` to
-        not return this data. The default is ``yes``
-  :query merge_select_multiple: Set to ``yes`` to combine all the selected choices for a select multiple into a single column / Json 
-		text property.
-  :query sort: 	question name to sort on
-  :query dirn: 	Sort direction, either ``asc`` or ``desc``
-  :query key: 	The key to filter by.  A key will need to have been specified for this survey.
-  :query tz:    The timezone for example ``Australia/Brisbane``.  All date time and date answers will be returned in this time zone.
-  :query geom_question: When using geojson=yes, and if you have more than one geometry in the main form, then you can specify the 
-                name of the geometry question to use as the GeoJson geometry here.
+  :query audit: Set to ``yes`` to return audit data. This data is the time in milliseconds that the user took to answer each question.
+    You can also specify in the settings for the form that the GPS coordinates where each question was answered should be included.
+    There is a third level of audit where every change made to a question during the course of an interview is recorded.
+    This information is available through the separate audit API.
+  :query meta: Set to ``yes`` to return metadata and preloads including prikey, instanceid, user, upload time. Set to ``no`` to
+    not return this data. The default is ``yes``.
+  :query merge_select_multiple: Set to ``yes`` to combine all the selected choices for a select multiple into a single column / JSON
+    text property.
+  :query sort: Question name to sort on
+  :query dirn: Sort direction, either ``asc`` or ``desc``
+  :query key: The key to filter by. A key will need to have been specified for this survey.
+  :query tz: The timezone for example ``Australia/Brisbane``. All date/time and date answers will be returned in this time zone.
+  :query geom_question: When using geojson=yes, and if you have more than one geometry in the main form, then you can specify the
+    name of the geometry question to use as the GeoJSON geometry here.
   :query filter: Advanced filter.  For example  &filter=${q1} > 10
   :reqheader Authorization: basic
   :statuscode 200: no error
@@ -270,4 +270,3 @@ Single Record
   :statuscode 200: no error
   :statuscode 401: not authorised
   :statuscode 404: not found
-

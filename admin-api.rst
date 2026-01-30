@@ -4,7 +4,7 @@ Admin
 .. contents::
  :local:
 
-This API provides access to administration functions.  To use these functions you will need **admin** privilege.
+This API provides access to administration functions. To use these functions you will need **admin** privilege.
 
 Usage
 -----
@@ -27,7 +27,7 @@ Usage
   :query boolean project: Show usage by project
   :query boolean survey: Show usage by survey
   :query boolean device: Show usage by device
-  :query int o_id: Organisation Id.  Can be used if the calling user has organisational administration privilege to get details on a user in a different organisation
+  :query int o_id: Organisation ID. Can be used if the calling user has organisational administration privilege to get details on a user in a different organisation
 
   **Example response**:
   
@@ -43,7 +43,7 @@ Resources
 
 .. http:get:: /api/v1/misc/media
 
-  :synopsis: Get a list of the media :ref:`shared-resources` available in the users current organisation.  Includes images, video, audio and csv files.
+  :synopsis: Get a list of the media :ref:`shared-resources` available in the user's current organisation. Includes images, video, audio and csv files.
 
   For server releases prior to 24.04 use the URL: "/surveyKPI/upload/media".
 

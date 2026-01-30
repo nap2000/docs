@@ -7,7 +7,7 @@ Log
 
 .. http:get:: /api/v1/log
 
-  :synopsis: get application log entries
+  :synopsis: Get application log entries.
   
   **Example response**:
   
@@ -27,7 +27,7 @@ Log
             "sName": "",
             "userIdent": "",
             "event": "optin",
-            "note": "x@a.com has un-subscribed from email notifications"
+            "note": "x@a.com has unsubscribed from email notifications"
           },
           {
             "id": 510,
@@ -42,14 +42,14 @@ Log
 	
   :query start: The id of the first record to retrieve
   :query limit: The number of log items to retrieve
-  :query sort:  The column name to sort on. One of `id`, `log_time`, `sId`, `sName`, `userIdent`, `event`, `note`
-  :query dirn: The direction of sort.  One of `asc` or `desc`
+  :query sort: The column name to sort on. One of `id`, `log_time`, `sId`, `sName`, `userIdent`, `event`, `note`
+  :query dirn: The direction of sort. One of `asc` or `desc`
   :reqheader Authorization: basic
   :statuscode 200: no error
 
 .. http:get:: /api/v1/log/organisation/{year}/{month}
 
-  :synopsis: get the number of events per organisation for a month
+  :synopsis: Get the number of events per organisation for a month.
   
   **Example response**:
   
@@ -75,13 +75,13 @@ Log
             }
         ]
 
-  :query tz:    The timezone for example ``Australia/Brisbane``.  All date time and date answers will be returned in this time zone.
+  :query tz: The timezone for example ``Australia/Brisbane``. All date/time and date answers will be returned in this time zone.
   :reqheader Authorization: basic
   :statuscode 200: no error
 
 .. http:get:: /api/v1/log/organisation/{year}/{month}/{day}
 
-  :synopsis: get the number of events per organisation for a day
+  :synopsis: Get the number of events per organisation for a day.
   
   **Example response**:
   
@@ -107,13 +107,13 @@ Log
             }
         ]
 
-  :query tz:    The timezone for example ``Australia/Brisbane``.  All date time and date answers will be returned in this time zone.
+  :query tz: The timezone for example ``Australia/Brisbane``. All date/time and date answers will be returned in this time zone.
   :reqheader Authorization: basic
   :statuscode 200: no error
 
 .. http:get:: /api/v1/log/hourly/{year}/{month}/{day}
 
-  :synopsis: get a count of log events over each hour of a specific day
+  :synopsis: Get a count of log events over each hour of a specific day.
   
   **Example response**:
   
@@ -142,7 +142,6 @@ Log
             }
         ]	
 
-  :query tz:    The timezone for example ``Australia/Brisbane``.  All date time and date answers will be returned in this time zone.
+  :query tz: The timezone for example ``Australia/Brisbane``. All date/time and date answers will be returned in this time zone.
   :reqheader Authorization: basic
   :statuscode 200: no error
-
