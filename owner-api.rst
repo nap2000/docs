@@ -38,6 +38,25 @@ Lookup Survey Details (Survey Id)
     Host: sg.smap.com.au
     Content-Type: application/json
 
+  **Example response**:
+
+  .. sourcecode:: http
+
+	HTTP/1.1 200 OK
+	Vary: Accept
+	Content-Type: application/json
+
+	{
+    "ident": "s2540_52248",
+    "displayName": "submit test",
+    "projectName": "A project",
+    "organisation": "Smap",
+    "enterprise": "Default",
+    "records": 38,
+    "firstDate": "2025-06-21",
+    "lastDate": "2025-10-09"
+    }
+
 Queue State
 -----------
 

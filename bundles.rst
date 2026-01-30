@@ -47,6 +47,6 @@ online editor.  Select the menu "Tools" and then "Bundle and Case Management".  
 
 *  Bundle Name
 *  Bundle Description
-
+\d linked_forms
 The name will be shown on the survey management page next to surveys in that bundle.  The description will be used by Large Language Models
 to access data from your bundle if you give them permission to do so.
