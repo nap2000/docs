@@ -78,10 +78,13 @@ on-phone setting will be overridden. These settings apply to all FieldTask insta
 Mobile security
 +++++++++++++++
 
+*  Force login token. Requires FieldTask to use the server-issued token rather than a stored password.
 *  Password policy. How often the user needs to re-logon. By default the enumerator never has to logon to FieldTask. In this case as long as valid
    credentials have already been entered they can continue to use the device without knowing what those credentials are. Using this setting you can
    override that default behaviour and require the user to logon every time they use FieldTask. You can also require periodic logons after the specified
    number of days has elapsed.
+*  Disable exit and tracking menu. Hides the menu used to exit FieldTask and the tracking controls.
+*  Disable background stop menu. Prevents users from stopping background tracking on the device.
 
 Mobile menus
 ++++++++++++
@@ -130,7 +133,12 @@ Mobile media
 Mobile tracking
 +++++++++++++++
 
+*  Prevent disabling tracking. Locks tracking so it cannot be turned off on the device.
 *  Enable Geo-fence. Enables the geo fence feature that can download or show tasks when the user is within a specified perimeter.
+*  Send location. Controls whether FieldTask sends location updates when refreshing.
+*  Location input method. Sets how FieldTask records points (point, manual, or automatic).
+*  Automatic tracking interval. When input method is automatic, sets the time between points.
+*  Automatic tracking accuracy. When input method is automatic, sets the accuracy threshold in meters.
 *  GeoShape and GeoTrace input method. If these are set on the server then a dialog is no longer shown to FieldTask users before they start recording points. This reduces the time required to start recording and allows a consistent approach to recording geo poly types.
 
 WebForm Settings
