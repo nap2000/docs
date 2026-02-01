@@ -50,21 +50,49 @@ To add a customised stylesheet
 Server
 ------
 
-The server tab is only shown to users who have the server owner group.  It can be used to set parameters for the entire server:
+The server tab is only shown to users who have the server owner group. It can be used to set parameters for the entire server.
 
-*  Mapbox key.  This key can be obtained from https://mapbox.com and allows you to use maps from mapbox as backgrounds.
-*  Google maps key.  A key can be obtained from https://developers.google.com and entered here.  It allows you to use maps and satellite images from google.
-*  Smtp Host.  The host name of the smtp relay that will forward email messages from the smap server.
+Map services
+++++++++++++
+
+*  Mapbox key. This key can be obtained from https://mapbox.com and allows you to use maps from Mapbox as backgrounds.
+*  Google maps key. A key can be obtained from https://developers.google.com and entered here. It allows you to use maps and satellite images from Google.
+*  MapTiler key. A key can be obtained from https://www.maptiler.com and entered here.
+
+Messaging
++++++++++
+
+*  Vonage application ID.
+*  Vonage webhook secret.
+*  SMS URL. URL of service to send SMS messages, or just "aws" if the AWS SMS service is to be used.
+
+Email
++++++
+
+*  Email type. Select SMTP or AWS SES.
+*  AWS region (AWS SES).
+*  SMTP host.
 *  Email domain.
-*  Email user name
-*  Email password
-*  Email server port
-*  SMS Url.  Url of service to send SMS messages, or just "aws" if the AWS SMS service is to be used.
-*  Minimum password strength
-*  Maximum number of API requests per minute
+*  Email user name.
+*  Email password.
+*  Email server port.
 
-There is also a section on setting a server wide custom style sheet.  The approach is identical to that for the per organisation style sheet described in the
-appearance tab.
+Load management
++++++++++++++++
+
+*  Maximum number of API requests per minute.
+*  Maximum API records per request.
+
+Security
+++++++++
+
+*  Minimum password strength.
+*  Allow security managers to delete submissions.
+
+Server custom style sheet
++++++++++++++++++++++++++
+
+This section sets a server wide custom style sheet. The approach is identical to that for the per organisation style sheet described in the appearance tab.
 
 .. _mobile-device-settings:
 
