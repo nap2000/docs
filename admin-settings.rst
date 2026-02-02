@@ -83,6 +83,10 @@ Load management
 *  Maximum number of API requests per minute.
 *  Maximum API records per request.
 
+.. note::
+
+    Changes to these values can take up to a minute to take effect
+
 Security
 ++++++++
 
