@@ -10,10 +10,10 @@ Logging On
 Logon Page
 ++++++++++
 
-When you first start fieldTask a logon page will be shown.  Your administrator can also specify on the server that every time you
-start fieldTask this page will be shown and you need to logon.
+When you first start FieldTask a logon page will be shown. Your administrator can also specify on the server that every time you
+start FieldTask this page will be shown and you need to log on.
 
-.. figure::  _images/ftLogin1.png
+.. figure::  _images/ftLogin1.jpg
    :align:   center
    :class:   with-border
    :width:   300px
@@ -21,14 +21,14 @@ start fieldTask this page will be shown and you need to logon.
 
    Login Page
 
-You can then specify the URL of your server and enter your username and password to logon.
+You can then specify the URL of your server and enter your username and password to log on.
 
-Scanning a QR Code to logon
-###########################
+Scanning a QR Code to log on
+++++++++++++++++++++++++++++
 
-Alternatively you can select the switch labelled "Use a token to access the server" and then scan a QR code to logon.
+Alternatively you can select the switch labelled **Use a token to access the server** and then scan a QR code to log on.
 
-.. figure::  _images/ftLogin2.png
+.. figure::  _images/ftLogin2.jpg
    :align:   center
    :class: with-border
    :width:   300px
@@ -36,9 +36,9 @@ Alternatively you can select the switch labelled "Use a token to access the serv
 
    Logon by scanning a QR code
 
-The QR code will set the username and server URL so these are readonly.  You will also not need a password with this approach so that is hidden.
-To start scanning press the "Scan QR Code" button.  An administrator can show the QR code on a screen by navigating to the user administration page
-and selecting the the QR button next to the users name.  These buttons will only be shown for users that have enumerator privilege.
+The QR code will set the username and server URL so these are read-only. You will also not need a password with this approach so that is hidden.
+To start scanning press the **Scan QR Code** button. An administrator can show the QR code on a screen by navigating to the user administration page
+and selecting the QR button next to the user's name. These buttons will only be shown for users that have enumerator privilege.
 
 .. figure::  _images/ftLogin3.png
    :align:   center
@@ -60,19 +60,19 @@ and selecting the the QR button next to the users name.  These buttons will only
 Changing logon details in settings
 ++++++++++++++++++++++++++++++++++
 
-If you have to logon every time you open fieldTask then the logon page may be the only one where you set your logon credentials.  However if
-that is not required then you may want to change the server, username, password or token.  This can be done in settings.  Select:
+If you have to log on every time you open FieldTask then the logon page may be the only one where you set your logon credentials. However if
+that is not required then you may want to change the server, username, password or token. This can be done in settings. Select:
 
-#.  Menu
-#.  General Settings
-#.  Server
+#.  **Menu**
+#.  **General settings**
+#.  **Server**
 
 You can then change your logon details in the same way you set them on the logon page.
 
 Synchronising with the Server
 -----------------------------
 
-Press the **refresh** button on the main screen to synchronise the device with the server.  This will:
+Press **Refresh** on the main screen to synchronise the device with the server. This will:
 
 1.  Upload any completed instances
 2.  Download any new or changed surveys / forms
@@ -84,11 +84,13 @@ Press the **refresh** button on the main screen to synchronise the device with t
    :alt:     Press refresh to synchronise
    
    Refresh Button
+
+ In FieldTask5 you can also swipe down on the form list or task list to initiate a refresh.
  
 Starting a Survey Form
 ----------------------
 
-Select the "Forms" tab, as shown circled below, and then tap the survey that you want to complete.
+Select the **Forms** tab, as shown circled below, and then tap the survey that you want to complete.
 
 .. figure::  _images/ftLaunch.jpg
    :align:   center
@@ -101,10 +103,10 @@ Select the "Forms" tab, as shown circled below, and then tap the survey that you
 Finding the Survey
 ------------------
 
-If you have a lot of forms on your phone then it may be hard to find the one you want to open.  However you can use 
-"search" or "order by" to make the survey form easier to find.  These buttons are circled in the image below.
+If you have a lot of forms on your phone then it may be hard to find the one you want to open. However you can use
+**Search** or **Order by** to make the form easier to find. These buttons are circled in the image below.
 
-**Search**.  When you type some characters into the search bar, only those survey forms that contain that 
+**Search**. When you type some characters into the search bar, only those forms that contain that
 sequence of characters in their name are shown.
 
 .. figure::  _images/ftSearch.jpg
@@ -123,7 +125,7 @@ sequence of characters in their name are shown.
   * Project Name Ascending
   * Project Name Descending
 
-Tasks instances can be ordered by:
+Task instances can be ordered by:
 
   * Name Ascending
   * Name Descending
@@ -140,19 +142,19 @@ Tasks instances can be ordered by:
 Adding notes
 ------------
 
-You can add free form notes to any question by selecting **menu** and then **Add comment** while completing a survey.
+You can add free form notes to any question by selecting **Menu** and then **Add comment** while completing a survey.
 Although the question name is included in the note automatically,  a single note for the entire survey is actually created.  
 All the notes you add for each question get combined.  They can then be seen in the survey notes column when viewing results.
 
 Changing the Language
 ---------------------
 
-You can change the survey language displayed by selecting **menu** and then **change language** while completing a survey.
+You can change the survey language displayed by selecting **Menu** and then **Change language** while completing a survey.
 
 FieldTask Settings
 ------------------
 
-There are many settings that you can configure on the device using **menu** and **general settings**.  Many of these can
+There are many settings that you can configure on the device using **Menu** and **General settings**. Many of these can
 also be specified on the server (:ref:`mobile-device-settings`).  If specified on the server the settings will override those on the phone for all devices.
 
 Playing Media Questions
@@ -172,7 +174,7 @@ If the media is set to auto play then the text of the question will show as blue
 Task Actions
 ------------
 
-Each task on the tasks tab includes a menu at the right which you can select to show a list of choice for that task.
+Each task on the tasks tab includes a menu at the right which you can select to show a list of choices for that task.
 
 .. figure::  _images/fttask.jpg
    :align:   center
@@ -184,24 +186,26 @@ Each task on the tasks tab includes a menu at the right which you can select to 
 Locate
 ++++++
 
-This choice will be enabled if the task has been specified to be completed at a location.  Selecting it will show the location of the task on the map tab.
+This choice will be enabled if the task has been specified to be completed at a location. Selecting it will show the location of the task on the map tab.
 
 Call
 ++++
+
+If a contact number is available for the task, this opens the phone dialer.
 
 
 Directions
 ++++++++++
 
-This choice will be enabled if the task has been specified to be completed at a location with coordinates.  Selecting it will open Google maps in directions
+This choice will be enabled if the task has been specified to be completed at a location with coordinates. Selecting it will open Google maps in directions
 mode with the destination set to the location of the task.
 
 Accept Task
 +++++++++++
 
-If a task has been created with the "Self Assign" checkbox set, then a user can accept that task here.
+If a task has been created with the **Self Assign** checkbox set, then a user can accept that task here.
 
 Reject Task
 +++++++++++
 
-An assigned task can be rejected by selecting this choice.  A reason for rejecting the task must be specified.  For a case the case will be unassigned.
+An assigned task can be rejected by selecting this choice. A reason for rejecting the task must be specified. For a case the case will be unassigned.
