@@ -23,6 +23,11 @@ start FieldTask this page will be shown and you need to log on.
 
 You can then specify the URL of your server and enter your username and password to log on.
 
+.. note::
+
+    If this is the first time you have logged on to this device then you will need to have internet connectivity so that your user identifier and
+    password can be checked on the server.  However the last 5 logons are remembered and can log on when offline.
+
 Scanning a QR Code to log on
 ++++++++++++++++++++++++++++
 
@@ -85,8 +90,8 @@ Press **Refresh** on the main screen to synchronise the device with the server. 
    
    Refresh Button
 
- In FieldTask5 you can also swipe down on the form list or task list to initiate a refresh.
- 
+In FieldTask5 you can also swipe down on the form list or task list to initiate a refresh.
+
 Starting a Survey Form
 ----------------------
 
