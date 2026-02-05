@@ -9,4 +9,4 @@ fi
 
 mkdir -p _build/html
 make html
-tar -zcf docs.tgz _build/html
+tar -zcf --no-xattrs docs.tgz _build/html
