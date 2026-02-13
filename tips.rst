@@ -11,6 +11,7 @@ Tips and Tutorials
   tips-old-survey.rst
   tips-provide-copy-of-answers-to-respondent.rst
   tips-followup-surveys.rst 
+  tips-launch-survey-tutorial.rst
   regex.rst
   many-forms.rst
   tips-data-not-appearing.rst
