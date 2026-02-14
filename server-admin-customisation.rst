@@ -1,4 +1,4 @@
-.. _server-problems:
+.. _server-customisation:
 
 Customisation
 =============
@@ -15,4 +15,3 @@ Web Pages
 Under the custom directory add "/web".  The contents of this directory will overwrite the web files that are copied to /var/www/smap/.  A good place to start would be to copy
 /var/www/smap/index.html to /web and then edit it.  You can add other html files, javascript files and css files remembering to mirror
 the directory structure under /var/www/smap
-

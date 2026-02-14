@@ -1,7 +1,7 @@
-.. _change-history:
+.. _survey-change-history:
 
-Change History
-==============
+Survey change history
+=====================
 
 .. contents::
  :local:

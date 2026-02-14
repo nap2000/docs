@@ -18,7 +18,7 @@ Task Groups
   
   https://sg.smap.com.au/api/v1/tasks/groups/1554
   
-  .. sourcecode:: http
+  .. code-block:: none
   
 	HTTP/1.1 200 OK
 	Vary: Accept
@@ -104,7 +104,7 @@ Task List
   
   The format of the response is GeoJSON.
   
-  .. sourcecode:: http
+  .. code-block:: none
   
 	HTTP/1.1 200 OK
 	Vary: Accept
@@ -230,7 +230,7 @@ Details of a Single Task
   
   https://sg.smap.com.au/api/v1/tasks
   
-  .. sourcecode:: http
+  .. sourcecode:: text
 
     HTTP/1.1 200 OK
 	Vary: Accept
@@ -278,7 +278,7 @@ Create a Task
 
   **Example request**:
 
-  .. sourcecode:: http
+  .. sourcecode:: text
 
     HTTP/1.1 200 OK
     Vary: Accept
@@ -303,7 +303,7 @@ Create a Task
 
 Initial data is included in the task.   In this second example the task "id" is specified hence the existing task will be updated.
 
-  .. sourcecode:: http
+  .. sourcecode:: text
 
     HTTP/1.1 200 OK
     Vary: Accept
@@ -407,7 +407,7 @@ Initial data is included in the task.   In this second example the task "id" is 
 Initial data is obtained from an existing record.  Hence the initial_data_source is set to "survey" and the
 instanceId of the record to update is included as "update_id".
 
-  .. sourcecode:: http
+  .. sourcecode:: text
 
     HTTP/1.1 200 OK
     Vary: Accept

@@ -1,4 +1,4 @@
-.. _change-history:
+.. _application-change-history:
 
 Application Change History
 ==========================
@@ -63,4 +63,3 @@ Version 25.04.33
 *  Fix a problem generating PDFs when embedded images do not contain meta data allowing rotation
 *  Remove renaming of subscriber logs when deploy script is run.  It is assumed that logrotate will be used instead.
 *  Update Spanish translations
-

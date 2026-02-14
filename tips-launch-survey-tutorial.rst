@@ -34,7 +34,7 @@ Sample surveys as described above can be downloaded from:
 *  `Finished pupil survey <https://docs.google.com/spreadsheets/d/1skiRy3WimY-rPZM8msjTZV93l-qmbxv8Sf7Wn-n4PuU/edit?usp=sharing>`_
 
 Testing
-++++++
++++++++
 
 *  Complete the **Class** survey a couple of times to add some classes.
 *  Complete the **Pupil** survey and select an existing class.
