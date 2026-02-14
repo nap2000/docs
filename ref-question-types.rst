@@ -10,7 +10,7 @@ Question Types
 text
 ----
 
-Use for questions that require a text response.  It can also be used with the numbers appearance to get integer responses that are longer
+Use for questions that require a text response. It can also be used with the numbers appearance to get integer responses that are longer
 than the 9 character limit of the **integer** type.
 
 **Type**
@@ -22,15 +22,15 @@ than the 9 character limit of the **integer** type.
 
 **Appearances:**
 
-*  numbers:  Shows the numeric keyboard 
+*  numbers:  Shows the numeric keyboard
 *  thousands-sep:  Inserts a separator between thousands when "numbers" is also used
-*  url:  Allows the user to open a URL.  Specify the url in the **default** column
-*  hidden:  Hide the widget in fieldTask
+*  url:  Allows the user to open a URL. Specify the URL in the **default** column
+*  hidden:  Hide the widget in FieldTask
 
 **Availability:**
 
 *  FieldTask: yes
-*  Webforms:  yes
+*  Web Forms:  yes
 
 **Example**
 
@@ -48,11 +48,11 @@ than the 9 character limit of the **integer** type.
 .. figure::  _images/widget-text-webform.jpg
    :align: center
 
-   Text widget in webforms with 5 rows
+   Text widget in Web Forms with 5 rows
 
 .. note::
 
-  There is a limit of 4,000 characters on the amount of text that can be entered into a **text** question in webforms.  However there is
+  There is a limit of 4,000 characters on the amount of text that can be entered into a **text** question in Web Forms. However there is
   no corresponding limit in fieldTask.
 
 note
@@ -61,14 +61,14 @@ note
 **Type**
   note
 
-A read only note to the user.  
+A read-only note to the user.
 
-Notes can be used to provide guidance to the user.  This could some simple text that is specified
+Notes can be used to provide guidance to the user. This could be simple text that is specified
 in the survey template.  For example::
 
   The following questions are about health
 
-However they can also be dynamically constructed to provide context sensitive help.  To do this use the ${question_name} syntax
+However they can also be dynamically constructed to provide context-sensitive help. To do this use the ${question_name} syntax
 within the label of the note.  The question referred to can be a calculate that creates the text by combining answers from multiple 
 questions.
 
@@ -82,7 +82,7 @@ questions.
 integer
 -------
 
-Number questions that don't allow a decimal point and are not longer than 9 digits.
+Number questions that do not allow a decimal point and are not longer than 9 digits.
 
 **Type**
   integer
@@ -90,12 +90,12 @@ Number questions that don't allow a decimal point and are not longer than 9 digi
 **Appearances:**
 
 *  thousands-sep:  Inserts a separator between thousands 
-*  hidden:  Hide the widget in fieldTask
+*  hidden:  Hide the widget in FieldTask
 
 **Availability:**
 
 *  FieldTask: yes
-*  Webforms:  yes
+*  Web Forms:  yes
 
 **Example**
 
@@ -108,7 +108,7 @@ Number questions that don't allow a decimal point and are not longer than 9 digi
 decimal
 -------
 
-Number question with a decimal point.  Decimal questions are limited to 14 digits plus the decimal point.  You can use
+Number question with a decimal point. Decimal questions are limited to 14 digits plus the decimal point. You can use
 a text question with the **numbers** appearance if you need more.
 
 **Type**
@@ -116,12 +116,12 @@ a text question with the **numbers** appearance if you need more.
 
 **Appearances:**
 
-*  thousands-sep:  (Optional) Inserts a separator between thousands 
+*  thousands-sep:  (Optional) Inserts a separator between thousands
 
 **Availability:**
 
 *  FieldTask: yes
-*  Webforms:  yes
+*  Web Forms:  yes
 
 **Example**
 
@@ -172,7 +172,7 @@ barcode
 
 **Appearances:**
 
-*  front:  (Optional) Use the front facing camera
+*  front: (Optional) Use the front facing camera
 
 Reads a barcode using the camera.
 
@@ -205,7 +205,7 @@ The flash can be used as a light source when scanning barcodes in a poorly lit e
 .. figure::  _images/widget-barcode.jpg
    :align: center
    :width: 300px
-   :alt: Recording a bar code using the rear facing camera
+   :alt: Recording a barcode using the rear facing camera
 
    barcode
 
@@ -218,14 +218,14 @@ nfc
   barcode
 
 **Required Appearances:**
-nfc  
+*  nfc
 
 **Availability:**
 
 *  FieldTask: yes
-*  Webforms:  yes
+*  Web Forms:  yes
 
-Reads the id on an NFC chip
+Reads the ID on an NFC chip
 
 .. csv-table:: survey
   :header: type, name, label, appearance
@@ -235,7 +235,7 @@ Reads the id on an NFC chip
 .. figure::  _images/widget-nfc.jpg
    :align: center
    :width: 300px
-   :alt: Recording an nfc id
+   :alt: Recording an NFC ID
 
    nfc
 
@@ -254,7 +254,7 @@ default date type
 
 **Availability:**
   FieldTask: yes
-  Webforms:  yes
+   Web Forms:  yes
 
 **Example**
 
@@ -289,7 +289,7 @@ A more compact date widget that makes it easy to select dates that are far from 
    :align: center
    :width: 300px
 
-   Default Date type
+   Default date type
 
 month and year only
 +++++++++++++++++++
@@ -423,9 +423,9 @@ Records the time of day.
 
 .. note::
 
-  The time is stored along with the time zone.  Hence a point in time is recorded.  If you record a time of
-  10:00 am in London then the value is the same as 8pm in Sydney.  If someone in Sydney generates a report 
-  using their local timezone then they will see the result as 8pm.
+  The time is stored along with the time zone. Hence a point in time is recorded. If you record a time of
+  10:00 am in London then the value is the same as 8 pm in Sydney. If someone in Sydney generates a report
+  using their local time zone then they will see the result as 8 pm.
 
   If you want to record a local time then you can use an **integer** type or **decimal** type or a **select_one** type that has
   a list of valid times. A question like "What time did the parcel arrive?" could be recorded with or without timezone depending
@@ -442,7 +442,7 @@ Records the time of day.
 datetime
 ++++++++
 
-Records the date and time
+Records the date and time.
 
 **Type**
   dateTime
@@ -458,7 +458,7 @@ Records the date and time
 calculate
 ---------
 
-Specify the calculation in the calculation column.  This type is not shown to the user so it does not
+Specify the calculation in the calculation column. This type is not shown to the user so it does not
 have a label.
 
 select
@@ -467,7 +467,7 @@ select
 .. contents::
   :local:
 
-Select questions questions have a type (for select one, select multiple etc) and then in the type column, separated by a space, they have
+Select questions have a type (for select one, select multiple etc) and then in the type column, separated by a space, they have
 a name that identifies where the choices come from.  Choices can be sourced from:
 
 *  A choice list in the survey
@@ -483,18 +483,18 @@ single select
 **Appearance:**
 
 *  minimal: Shows a modal dropdown that expands when selected by the user. Useful when showing multiple questions on one page.
-*  autoadvance:  Immediately go to the next page after a choice is selected.  Only use this appearance if it is immediately obvious to the user that the correct selection was made
-*  autocomplete:  Adds a text box above the choices. If you type into this text box the choices are filtered.  Use with large lists.
-*  likert: Show the choices in a likert scale
-*  compact:  shows the choices in a compact grid.  This is particularly useful when you have only images for the choices rather than text labels.
-*  compact-{x}:  As per **compact** however replace {x} with the number of columns that you want.
+*  autoadvance:  Immediately go to the next page after a choice is selected. Only use this appearance if it is immediately obvious to the user that the correct selection was made.
+*  autocomplete:  Adds a text box above the choices. If you type into this text box the choices are filtered. Use with large lists.
+*  likert: Show the choices in a Likert scale
+*  compact:  Shows the choices in a compact grid. This is particularly useful when you have only images for the choices rather than text labels.
+*  compact-{x}:  As per **compact**, however replace {x} with the number of columns that you want.
 *  quickcompact: Combines compact and auto advance
 *  quickcompact-{x}: Combines compact with columns and auto advance
 
 **Parameters:**
 
-*  randomize=true (Will randomly sort the choices each time the question is shown)
-*  seed={an integer}  (Use this with random so that the same initially random order will be shown each time the question is shown in a given form)
+*  randomize=true (Randomly sorts the choices each time the question is shown)
+*  seed={an integer}  (Use this with randomize so that the same initially random order will be shown each time the question is shown in a given form)
 
 .. csv-table:: Survey Worksheet
   :header: type, name, label
@@ -520,14 +520,14 @@ Allows the user to select multiple answers from a choice list.
 **Appearance:**
 
 *  minimal: Shows a modal dropdown that expands when selected by the user. Useful when showing multiple questions on one page.
-*  autocomplete:  Adds a text box above the choices. If you type into this text box the choices are filtered.  Use with large lists.
-*  compact:  shows the choices in a compact grid.  This is particularly useful when you have only images for the choices rather than text labels.
-*  compact-{x}:  As per **compact** however replace {x} with the number of columns that you want.
+*  autocomplete:  Adds a text box above the choices. If you type into this text box the choices are filtered. Use with large lists.
+*  compact:  Shows the choices in a compact grid. This is particularly useful when you have only images for the choices rather than text labels.
+*  compact-{x}:  As per **compact**, however replace {x} with the number of columns that you want.
 
 **Parameters:**
 
-*  randomize=true (Will randomly sort the choices each time the question is shown)
-*  seed={an integer}  (Use this with random so that the same initially random order will be shown each time the question is shown in a given form)
+*  randomize=true (Randomly sorts the choices each time the question is shown)
+*  seed={an integer}  (Use this with randomize so that the same initially random order will be shown each time the question is shown in a given form)
 
 .. csv-table:: Survey Worksheet
   :header: type, name, label
@@ -585,7 +585,7 @@ This widget allows you to rank choices in order.
 Viewing Recorded Rankings
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-When results are exported in the default spreadsheet format they will be shown in multiple columns.  One for each choice.  The column headings will be take from 
+When results are exported in the default spreadsheet format they will be shown in multiple columns. One for each choice. The column headings will be taken from
 the question name with the addition of "1", "2", "3" etc.  The first column will contain the choice that was ranked first and so on.
 
 .. figure::  _images/widget-rank-export.jpg
@@ -595,7 +595,7 @@ the question name with the addition of "1", "2", "3" etc.  The first column will
 
    Spreadsheet report of rankings
 
-In other view of the collected data, such as in the console, the rankings will be shown in compressed format where they are all placed in a single column, in rank order, with a space between each
+In other views of the collected data, such as in the console, the rankings will be shown in compressed format where they are all placed in a single column, in rank order, with a space between each
 value.
 
 .. _choices-from-repeat:
@@ -605,7 +605,7 @@ Getting choices from a repeat
 
 Requires Smap Server version 21.04
 
-If you have collected data using a repeat then you can generate a follow up select question using values from this repeat. Types supported:
+If you have collected data using a repeat then you can generate a follow-up select question using values from this repeat. Types supported:
 
 *  select_one
 *  select_multiple
@@ -628,7 +628,7 @@ If you want to filter the choices then put the filter criteria into the ``choice
 
 .. _image:
 
-image 
+image
 -----
 
 .. contents::
@@ -671,7 +671,7 @@ enabled after the image is captured.
 
    Annotate Type
 
-image as a drawing 
+image as a drawing
 ++++++++++++++++++
 
 **Type**
@@ -701,7 +701,7 @@ Allows the user to draw a signature of their name.
 .. csv-table:: table
   :header: type, name, label, appearance
 
-  image,hh_signature,Ask houeholder to sign the screen,signature
+  image,hh_signature,Ask householder to sign the screen,signature
 
 Other Image appearances and parameters
 ++++++++++++++++++++++++++++++++++++++
@@ -709,8 +709,8 @@ Other Image appearances and parameters
 Require a new image
 ^^^^^^^^^^^^^^^^^^^
 
-The default behavour is to include a button that allows the user to select an existing image rather than taking a new one.
-However by adding the appearance "new" the user is requried to capture a new image.
+The default behaviour is to include a button that allows the user to select an existing image rather than taking a new one.
+However by adding the appearance "new" the user is required to capture a new image.
 
 Self portrait (*selfie*) image 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -720,7 +720,7 @@ the front camera is used by default to capture a selfie.
 
 .. note::
 
-  **selfie** can also be used as the appearance.
+  **selfie** can also be used as the appearance so that the front camera is opened by default.
 
 Reducing the size of images
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -734,21 +734,27 @@ In the parameters column add ``max-pixels=`` followed by the maximum length of t
 
   The proportions of the image are maintained and if the length of the longest side was less than max-pixels the image will not be changed.
 
+Automatically opening the camera
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Add the parameter auto=true to an image widget to automatically start the camera.  This requires the appearance of **new** to also be
+set so that the camera is the only tool that can be opened and the image gallery will not be opened.
+
 Acknowledge / Trigger
 ---------------------
 
 **Type**
   trigger or acknowledge
 
-You can use a type of either **trigger** or **acknowlwdge**, they work the same way.  A single checkbox
-is shwown which the user can "acknowledge" by checking it.  If they do this then the answer stored for
+You can use a type of either **trigger** or **acknowledge**, they work the same way. A single checkbox
+is shown which the user can "acknowledge" by checking it.  If they do this then the answer stored for
 the question is "OK".
 
 You can use the above answer in relevance for following questions. For example::
 
   ${ack} = 'OK'
 
-Commonly select_one questions with yes/no choices are used instead of Acknowledge
+Commonly, select_one questions with yes/no choices are used instead of acknowledge.
 
 .. csv-table:: Survey Sheet
   :header: type, name, label, relevance
@@ -763,7 +769,7 @@ Commonly select_one questions with yes/no choices are used instead of Acknowledg
 
    Acknowledge widget in fieldTask
 
-In WebForms a radio button is used instead of a checkbox.
+In Web Forms a radio button is used instead of a checkbox.
 
 .. figure::  _images/widget-ack-webform.jpg
    :align: center
@@ -785,7 +791,7 @@ Connects to an external label printer, and prints labels that can contain a barc
 .. csv-table:: Survey Sheet
   :header: type, name, label, appearance, calculation
 
-   text,printer_widget,Printer widget,printer:org.opendatakit.sensors.ZebraPrinter, "concat('123456789','<br>’,'QR CODE','<br>','Text')"
+    text,printer_widget,Printer widget,printer:org.opendatakit.sensors.ZebraPrinter, "concat('123456789','<br>','QR CODE','<br>','Text')"
 
 range
 -----
@@ -797,7 +803,7 @@ These widgets allow the user to select a numeric value within a range of numbers
 
 **Parameters**
 
-  start:  The starting number
+  start: The starting number
   end: The last number
   step: The increment between numbers
 
@@ -817,16 +823,16 @@ If all three parameter values are integers then input will also be stored as an 
 .. figure::  _images/widget-range-int.jpg
    :align: center
    :width: 300px
-   :alt: A range widget shown in fieldTask with a start point of 0, end of 48 and step of 12. 36 has been selected as the answer
+   :alt: A range widget shown in FieldTask with a start point of 0, end of 48 and step of 12. 36 has been selected as the answer
 
    Integer Range widget in fieldTask
 
 .. figure::  _images/widget-range-int-webform.jpg
    :align: center
    :width: 300px
-   :alt: A range widget shown in Webforms with a start point of 0, end of 48 and step of 12
+   :alt: A range widget shown in Web Forms with a start point of 0, end of 48 and step of 12
 
-   Integer Range widget in WebForms
+   Integer Range widget in Web Forms
 
 Range widget with decimals
 ++++++++++++++++++++++++++
@@ -849,9 +855,9 @@ Vertical range widget
 .. figure::  _images/widget-range-vertical-webform.jpg
    :align: center
    :width: 300px
-   :alt: A vertical range widget shown in Webforms with a start point of 1, end of 10 and step of 1
+   :alt: A vertical range widget shown in Web Forms with a start point of 1, end of 10 and step of 1
 
-   Vertical Range widget in WebForms
+   Vertical Range widget in Web Forms
 
 Range widget with picker
 ++++++++++++++++++++++++
@@ -862,7 +868,7 @@ Range widget with picker
 **Availability:**
 
 *  FieldTask: yes
-*  Webforms:  no
+*  Web Forms:  no
  
 When **picker** is added as an appearance the answer can be selected from a spinner rather than by clicking at a point on a line. 
 
@@ -879,8 +885,8 @@ Range widget with rating
 **Appearance**
   rating
 
-When **rating** is specified as the appearance then the range is shown as stars which the user can select.  The number of stars is equal to the value of the
-**end** parameter.  The **start** and **step** parameters are ignored.  Hence the value set is equal to the number of the start selected counting from the left.
+When **rating** is specified as the appearance then the range is shown as stars which the user can select. The number of stars is equal to the value of the
+**end** parameter. The **start** and **step** parameters are ignored. Hence the value set is equal to the number of stars selected counting from the left.
   
 .. csv-table:: Survey Worksheet
   :header: type, name, label, appearance, parameters
@@ -905,7 +911,7 @@ Shows a chart in the survey. Chart settings are specified in the question parame
 **Availability:**
 
 *  FieldTask: yes
-*  Webforms:  no
+*  Web Forms:  no
  
 Child Form / Parent Form
 ------------------------
@@ -915,21 +921,21 @@ Child Form / Parent Form
   parent_form
 
 Launches another survey from within the current survey. The difference between these is in how the data from the two surveys
-are linked in the results database.  If you don't care about linking the data between the two surveys then either type will do.
+are linked in the results database. If you don't care about linking the data between the two surveys then either type will do.
 Detailed information on using these question types is available in :ref:`launch-survey`.
 
 **Availability:**
 
 *  FieldTask: yes
-*  Webforms:  no
+*  Web Forms:  no
 
 .. _locations:
 
 Locations
 ---------
 
-Location widgets capture one or more points as latitude, longitude, altitude in meters, and accuracy radius in meters. These data items are space separated. 
-For example the following reading represents a lattitude of -18.27, a longitude of 27.32, an altitude of 25 meters and an accuracy of 5.6
+Location widgets capture one or more points as latitude, longitude, altitude in meters, and accuracy radius in meters. These data items are space-separated.
+For example the following reading represents a latitude of -18.27, a longitude of 27.32, an altitude of 25 meters and an accuracy of 5.6
 meters: `-18.27 27.32 25 5.6`
 
 Multiple points that form lines or shapes are separated by semicolons.
@@ -937,7 +943,7 @@ Multiple points that form lines or shapes are separated by semicolons.
 **Availability:**
 
 *  FieldTask: yes
-*  Webforms:  yes
+*  Web Forms:  yes
 
 .. contents::
   :local:
@@ -945,46 +951,46 @@ Multiple points that form lines or shapes are separated by semicolons.
 Multiple Locations in one Form
 ++++++++++++++++++++++++++++++
 
-Prior to Smap server version 20.10 you could only put one location widget in each form of a survey.  The reasoning behind this was that in GIS shape 
-files the same restriction applies where each shape file consists of a single location and all the attributes associated with that location.  
-Also the name of each location question was automatically set to "the_geom".  I'm afraid to say this was just done to make the coding easier!
+Prior to Smap server version 20.10 you could only put one location widget in each form of a survey. The reasoning behind this was that in GIS shape
+files the same restriction applies where each shape file consists of a single location and all the attributes associated with that location.
+Also the name of each location question was automatically set to "the_geom". I'm afraid to say this was just done to make the coding easier!
 
 In version 20.10 this restriction has been lifted:
 
 *  You can add multiple location questions in any form as well as the location preload in the top level form.
 *  Location questions keep the name that you give them.
-*  When you export a survey as a shape file you can select the location to use.  All other questions are assumed to be attributes of that location. 
+*  When you export a survey as a shape file you can select the location to use. All other questions are assumed to be attributes of that location.
 *  When viewing a map of a survey on the analysis page you can select the question to use as the location.
-*  When creating a task from existing data the location of the task is determined automatically.  Firstly it tries to get the first geopoint
-   question in the source survey. If that does not exist it tries to use the location preload that might have been collected automatically. 
+*  When creating a task from existing data the location of the task is determined automatically. Firstly it tries to get the first geopoint
+   question in the source survey. If that does not exist it tries to use the location preload that might have been collected automatically.
    If that is not set then it will use the first geotrace or geoshape question that it finds.
-*  The map in the console currently uses the first location it finds in the survey.  This will be fixed in a later release.
+*  The map in the console currently uses the first location it finds in the survey. This will be fixed in a later release.
 
 .. warning::
 
   You may have an existing survey that you created using a spreadsheet and perhaps you have a geopoint question in that survey which you called "pump_location".
   Once your server is updated to 20.10 and you use the "replace" button to update the existing survey then a new column will be
-  created in the database called "pump_location" to hold that location data.  However any previously collected data will be stored in a column called "the_geom" and
-  will no longer be accessible.  You will see a warning in red if this happens when you do the replace.  
+  created in the database called "pump_location" to hold that location data. However any previously collected data will be stored in a column called "the_geom" and
+  will no longer be accessible. You will see a warning in red if this happens when you do the replace.
 
-  In this circumstance,  if you still need to access the old location data, then edit your survey in excel and change the name of the geopoint to "the_geom"
-  Then replace the survey on you can redo the replace action. 
+  In this circumstance, if you still need to access the old location data, edit your survey in Excel and change the name of the geopoint to "the_geom".
+  Then replace the survey so you can redo the replace action.
 
 geopoint
 ++++++++
 
-records a single point 
+Records a single point.
 
 **Type**
   geopoint
 
 **Appearance:**
 
-*  maps 
+*  maps
 *  placement-map
 *  history-map
 
-The appearance **maps** will show a background map to give context to when the user records their location.
+The appearance **maps** will show a background map to give context when the user records their location.
 
 The appearance **placement-map** will allow the user to click on the map to record a location which 
 does not need to be where the user is standing.
@@ -1038,8 +1044,8 @@ added for that question will then be shown in the background for context. Requir
 geocompound
 +++++++++++
 
-Similar to geotrace this type records a line however attributes can also be added to points along the line.  To set a marker on a line click on the point 
-and a popup will be shown.  
+Similar to geotrace this type records a line, however attributes can also be added to points along the line. To set a marker on a line click on the point
+and a pop-up will be shown.
 
 **Type**
   geocompound
@@ -1050,7 +1056,7 @@ and a popup will be shown.
 **Availability:**
 
 *  FieldTask: no
-*  Webforms:  yes
+*  Web Forms:  yes
 *  XLSForm: yes
 *  Online Editor: yes
 
@@ -1062,20 +1068,20 @@ and a popup will be shown.
 
 Requires version 22.02 of the server.
 
-Use of the **marker** appearance required version 22.07 of the server. Multiple marker types can be specified.  
+Use of the **marker** appearance requires version 22.07 of the server. Multiple marker types can be specified.
 
 *  type:  must be either **pit** or **fault**.  When a :ref:`compound-image-widget` is drawn the line end points use the locations of **pits**.
-*  name:  The name that will be shown in the drop down list allowing a marker to be associated with a point (no spaces)
-*  label: The stem of the marker label, an index will be added for each occurence of a marker type, for example JC1, JC2 etc.  (no spaces).
+*  name:  The name that will be shown in the drop-down list allowing a marker to be associated with a point (no spaces)
+*  label: The stem of the marker label, an index will be added for each occurrence of a marker type, for example JC1, JC2 etc. (no spaces).
 
 .. csv-table:: survey
   :header: type, name, label, appearance
 
   geocompound, pipeline_faults, location of faults, marker:pit:Pump:pump marker:fault:Defect:defect
 
-The street addresses of markers can be automatically recorded in other questions that have the same name as a label.  For for example if a label
-is specified as **JC** then the address of the first marker of that type will be stored in a question called **JC1** and so on.  Note only questions
-in the top level of a form will be updated with a marker address.
+The street addresses of markers can be automatically recorded in other questions that have the same name as a label. For example if a label
+is specified as **JC** then the address of the first marker of that type will be stored in a question called **JC1** and so on. Note only questions
+in the top-level of a form will be updated with a marker address.
 
 .. _matrix:
 
@@ -1090,11 +1096,11 @@ The **begin matrix** type is a convenient way to show questions in a matrix stru
    Matrix Widget
 
 
-To create the matrix, group the questions that will appear horizontally, however instead of using **begin group/end group** use **begin matrix/end matrix**. 
+To create the matrix, group the questions that will appear horizontally, however instead of using **begin group/end group** use **begin matrix/end matrix**.
 Because these questions are appearing horizontally there will be a limit to how many you can fit on the screen comfortably.
 
 Then specify the rows of the matrix in a choice list in the choices worksheet.  Put the name of the choice list used by the matrix in the
-"list name" column of the survey worsheet.  As these choices create the rows of the matrix you can add as many as you like and the matrix will 
+"list name" column of the survey worksheet. As these choices create the rows of the matrix you can add as many as you like and the matrix will
 simply extend down the page.
 
 Finally in the settings sheet, under "style" add "theme-grid".
@@ -1164,34 +1170,34 @@ The words to be read are listed in the choices worksheet.
    :width: 500px
    :alt: The literacy widget after the flash timer has gone off which results in a yellow background. Two words are marked as causing problems and are crossed out
 
-   Literacy widget after the flash and before the user marks progress made at point flash occured
+   Literacy widget after the flash and before the user marks progress made at point flash occurred
 
-#.  When the widget is first shown it appears with a list of the words to be read and a *Start* button.  It is assumed that the interviewee has a list of the 
-    words to be read as well and the enumerator will be recording their reading performance in webForms.
-#.  After the enumerator presses the *Start* button, the timer is started.  This will cause the screen to flash after the specified number of seconds
+#.  When the widget is first shown it appears with a list of the words to be read and a *Start* button. It is assumed that the interviewee has a list of the
+    words to be read as well and the enumerator will be recording their reading performance in Web Forms.
+#.  After the enumerator presses the *Start* button, the timer is started. This will cause the screen to flash after the specified number of seconds
     or 60 seconds if no number is specified in body::kb:flash.  During this period the enumerator can select words that the reader finds difficult.
-#.  After the screen flashes the enumerator will be able to select the word that the reader had reached.  They can then continue to select words that the 
+#.  After the screen flashes the enumerator will be able to select the word that the reader had reached. They can then continue to select words that the
     reader is having trouble with.
-#.  After starting a *Finish* button is shown.  When the enumerator presses *Finish* the timer stops.  They can then record the 
+#.  After starting a *Finish* button is shown. When the enumerator presses *Finish* the timer stops. They can then record the
     final word read.
 
 Viewing Literacy Results
 ++++++++++++++++++++++++
 
-When you view the output in the console it appears in its raw format.  That is a number of values spearated by spaces including:
+When you view the output in the console it appears in its raw format. That is a number of values separated by spaces including:
 
 *  The index of the word being read when the screen flashed
 *  The time in seconds elapsed before the Finish button is pressed
 *  The index of the word being read when the Finish button was pressed
 *  The text "null null null null null null null"
-*  A space separated list of the words that were marked as being wrong or difficult for the reader.
+*  A space-separated list of the words that were marked as being wrong or difficult for the reader.
 
-Support for literacy widgets has been added to the default Excel export from the analysis page.  This formats the output to make it easier to analyse.
-Four additional columns are automatically added to the export for each literacy widget.  These record:
+Support for literacy widgets has been added to the default Excel export from the analysis page. This formats the output to make it easier to analyse.
+Four additional columns are automatically added to the export for each literacy widget. These record:
 
 *  The total time elapsed between pressing Start and Finish
 *  The index of the word being read when the screen flashed
-*  The index of the word being read when the finish button was pressed
+*  The index of the word being read when the Finish button was pressed
 *  The count of words that were marked as being difficult or in error
 
 The recording of which words the reader had trouble with then behaves like any other select question.  If you specify "Compress select multiples" for
@@ -1213,8 +1219,8 @@ Default audio widget
 **Type**
   audio
 
-Records audio using the device's microphone or a connected external microphone. This default audio widget uses an wxternal audio recording application. Most
-androids come pre-installed with one however you can also install an application from the play store. 
+Records audio using the device's microphone or a connected external microphone. This default audio widget uses an external audio recording application. Most
+Android devices come pre-installed with one however you can also install an application from the Play Store.
 
 .. figure::  _images/audio1.jpg
    :align: center
@@ -1250,15 +1256,15 @@ The built-in audio recorder makes it possible to record audio while filling out 
 .. figure::  _images/audio2.jpg
    :align: center
    :width: 300
-   :alt: The FieldTask screen showing the built in audio recorder and some other questions that are completed while the recording is running
+   :alt: The FieldTask screen showing the built-in audio recorder and some other questions that are completed while the recording is running
 
-   Question using the built in audio recorder
+   Question using the built-in audio recorder
 
-When built-in audio recording is enabled and recording is initiated, a recording control bar appears at the top of the screen.  If the pause button is tapped, recording is temporarily suspended and the button icon changes to a microphone. When the microphone is tapped, recording is resumed. After the stop button is tapped, the recording is ended and can no longer be modified.
+When built-in audio recording is enabled and recording is initiated, a recording control bar appears at the top of the screen. If the pause button is tapped, recording is temporarily suspended and the button icon changes to a microphone. When the microphone is tapped, recording is resumed. After the stop button is tapped, the recording is ended and can no longer be modified.
 
 .. tip::
 
-  Short audio files can be quite small compared to video and high resolution images however a long recording can become large. If this is likely to be an issue then you can consider changing your audio quality settings. 
+  Short audio files can be quite small compared to video and high resolution images however a long recording can become large. If this is likely to be an issue then you can consider changing your audio quality settings.
 
   Android devices can make many sounds during use and these will be included in recordings. We recommend turning off sounds from button presses, camera shutters and notifications before recording.
 
@@ -1291,7 +1297,7 @@ The quality of audio recordings can be customized using the ``quality`` paramete
 
 .. tip::
 
-   We recommend always using ``low`` or ``normal`` unless you have very tight bandwith concerns. These two quality settings produce audio that can be transcribed using `Smap's powerful transcription capability <https://www.smap.com.au/docs/console.html#annotating-answers>`_. 
+   We recommend always using ``low`` or ``normal`` unless you have very tight bandwidth concerns. These two quality settings produce audio that can be transcribed using `Smap's powerful transcription capability <https://www.smap.com.au/docs/console.html#annotating-answers>`_.
 
 .. rubric:: XLSForm
 
@@ -1344,8 +1350,8 @@ Video widgets
 
 .. tip::
 	
-  Videos can be large.   Be very careful before adding video questions and test that you have enough bandwidth and disk space on the
-  Android devices.   You can specify in the settings that only low resolution videos should be taken.  This can also be done in the :ref:`mobile-device-settings`  
+  Videos can be large. Be very careful before adding video questions and test that you have enough bandwidth and disk space on the
+  Android devices. You can specify in the settings that only low resolution videos should be taken. This can also be done in the :ref:`mobile-device-settings`
   for the organisation so that it applies to all devices automatically.
 
 .. contents::
@@ -1442,7 +1448,7 @@ Default file upload
 .. _external-app-file-widget:
 
 External app file widget
-+++++++++++++++++++++++++
++++++++++++++++++++++++++++
 
 **Type**
   file
@@ -1454,8 +1460,7 @@ External app file widget
 Added in FieldTask version 6.300
 
 
-Calls an external application to get a file for upload.  You can create your own custom apps to get verified binary files to include in a survey response.
-`
+Calls an external application to get a file for upload. You can create your own custom apps to get verified binary files to include in a survey response.
 .. seealso:: :doc:`external-applications`
 
 .. rubric:: XLSForm
@@ -1488,8 +1493,8 @@ Compound PDF Map
 
 Added in Smap Server version 21.11
 
-This question type has a sepecific purpose which is to represent cable segments and the location of faults along that segment. When a PDF 
-is created for a survey that contains it, the geopoint values for the specifed questions are combined onto a single map. The appearance 
+This question type has a specific purpose which is to represent cable segments and the location of faults along that segment. When a PDF
+is created for a survey that contains it, the geopoint values for the specified questions are combined onto a single map. The appearance
 contains the names of the geopoints. These are in order:
 
 *  The location of the start of the cable segment
@@ -1573,7 +1578,7 @@ Multiple appearances starting with pdftl can be used to add traffic lights to th
    A compound image annotated with traffic light indicators
 
 
-Colors are set by the answers to questions.  Usually calculate question could be used to generate the color. For example a question may have one of the following values:
+Colors are set by the answers to questions. Usually a calculate question could be used to generate the color. For example a question may have one of the following values:
 
 *  red
 *  orange
@@ -1583,7 +1588,7 @@ Colors are set by the answers to questions.  Usually calculate question could be
 *  black
 *  #af04b1
 
-Custom rgb values need to be preceeded by a hash (#).  Examples::
+Custom RGB values need to be preceded by a hash (#). Examples::
 
   pdftl_q1_q2   creates a traffic light with two colors
   pdftl_high_medium_low    creates a traffic light with three colors

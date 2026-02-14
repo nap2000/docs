@@ -9,19 +9,20 @@ Launch a Survey from inside a Survey
 While completing a survey you may find that another survey also needs to be completed. You can launch this second survey from
 within the first, complete it, and then be returned automatically to your location in that first survey.
 
-Use cases
----------
-
-* Create a survey whose sole purpose is to decide which survey needs to be completed.
-
-.. warning::
-
-  Only works with FieldTask and not on Web Forms.
-
 .. note::
 
   This capability is similar to entering a subform using **begin repeat** (:ref:`xls-repeats`). However sub forms are included within the main
   survey whereas here we are starting a completely different survey.
+
+Use cases
+---------
+
+* Create a survey whose sole purpose is to decide which survey needs to be completed.  In this case you can use either the "Parent Form"
+  or the "Child Form" and the **type** of the question that will launch the survey.  These types are only important when you want to link
+  data between the two surveys for analysis.
+* Launch a form to enter details on an item that is referenced by your current form.  For example you to record details of a meeting and in
+  that meeting launch a separate "action items" survey to record details on each action item.  In your analysis dashboard you will still want
+  to view action items grouped by meeting as well as viewing details on all the action items so they need to be linked.
 
 Linking data between the surveys
 --------------------------------
@@ -43,7 +44,7 @@ This is done by specifying a question in one of the surveys that will hold a key
   in that school.
 
 Example 1 - Launch the Class Survey (Parent) from a Pupil Survey (Child)
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Let's assume you are completing a survey to get details on a pupil and you want to note the class that they are attending. However that class is not
 currently available to be picked. Hence the class survey is launched as a **parent form/survey** and you specify that the key created by the
@@ -75,14 +76,14 @@ You will then be asked to add parameters.
 #.  Select Auto Play if you want the class survey to be launched without the user having to press a button.
 
 Example 2 - Launch a Child Survey
-++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++
 
 Alternatively you may be completing a survey on classes and realise that you have not registered a child that you want to enroll in the class.
 Follow the same steps as for creating the parent survey but this time select the **child survey / form** question type. When you are asked
 where you want to place the key, the questions shown will be from the child survey.
 
 Making use of linkages between Surveys
-+++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++
 
 If you are analysing your data in a Business Intelligence tool then you can join the data using the key question. Alternatively in the console
 you can **drill down** from parent survey to child survey or from child survey up to parent survey to see the connected data.
@@ -97,7 +98,7 @@ Passing data to the launched survey
 -----------------------------------
 
 Initial Data
-+++++++++++
+++++++++++++
 
 Available with Smap Server 20.09+
 
@@ -120,7 +121,7 @@ launching form. In the above example the question called "name" in the launched 
   When getting initial data from the launching form you can only refer to data in its top level form. That is not within a repeating group.
 
 Update an existing Record
-++++++++++++++++++++++++
++++++++++++++++++++++++++
 
 Available with Smap Server 24.01+. Only available with Web Forms.
 
