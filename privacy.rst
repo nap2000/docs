@@ -20,7 +20,7 @@ Specific questions can be location questions which ask the user to record the lo
 Survey Background Questions
 +++++++++++++++++++++++++++
 
-You can also specify that location be captured in the background while a survey is in progress.  This can be be done by adding a location preload that records the 
+You can also specify that location be captured in the background while a survey is in progress. This can be done by adding a location preload that records the
 location where the survey is started or by specifying an audit option to record the location of where all questions are asked in the background.
 
 When either of these techniques are used a message will be shown when the survey is opened::
@@ -78,7 +78,6 @@ Ending Location Recording
 
 When the user is no longer working they can switch off recording by selecting the menu and then selecting the "Exit" option.  The next time they start the app
 location recording will be re-enabled.
-
 
 
 

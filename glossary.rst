@@ -6,7 +6,7 @@ Glossary
 
   API, Application Programming Interface.  A URL that can be called by a program to get data or make an update.
   Bundled Form,  A form that updates the same table of data as another form. :ref:`survey_groups`
-  Case, A record of data that has a status can can be marked as closed.
+  Case, A record of data that has a status can be marked as closed.
   Console, A module on the server that allows the user to view and update data records.
   Conversation,  A series of messages from and to SMS and WhatsApp about a case.
   Excel Editor, Using Excel to create and modify the definition of a survey so that it can be uploaded to the server.
@@ -21,7 +21,6 @@ Glossary
   Survey, The process of interviewing people and recording their responses.  Sometimes the word is used to refer to just the questions used in that interview.
   Survey Form, A form containing questions used to complete a survey.  "Form" on its own also has this meaning.
   WebForm, A form that is completed in a web browser.
-
 
 
 

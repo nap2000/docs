@@ -7,7 +7,7 @@ Default Values
 Static Values
 -------------
 
-A static default is set when the the form is first opened.  
+A static default is set when the form is first opened.
 
 .. note::
 

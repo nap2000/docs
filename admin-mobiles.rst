@@ -13,7 +13,7 @@ distributed to enumerators during the enumerator training.  This situation is th
 Tracking who has a device
 -------------------------
 
-It is good practice to to record who has received which device so that lost or damaged devices can be accounted for. It is also useful to know
+It is good practice to record who has received which device so that lost or damaged devices can be accounted for. It is also useful to know
 which device submitted a completed survey.  This is particularly true if you are not giving enumerators individual logons and hence the only way
 to identify the enumerator is by the device that has been given to them.
 
@@ -33,4 +33,3 @@ identifier by:
 #.  Ensuring that the "Enable user and identify menu" option in :ref:`mobile-device-settings` is checked. If it wasn't set then set it and press ``refresh`` in FieldTask
 #.  In FieldTask select ``menu`` then ``General Settings`` then ``User and device identity`` then ``Form metadata``
 #.  The device identifier will be shown on the screen
-

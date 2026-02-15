@@ -17,7 +17,7 @@ data APIs that return data in JSON format.  For PowerBI the approach is as follo
 #.  Find the URL that returns data by using /api/v1/data in your browser and then selecting the data link for the survey you are interested in.
 #.  In PowerBI select get data from another source
 #.  Select web as the source
-#.  Enter the URL that that you found in step 1
+#.  Enter the URL that you found in step 1
 #.  Remove "?links=true" from the URL as it is only useful for browsing for data
 
 .. warning::
@@ -35,6 +35,5 @@ Static Data
 -----------
 
 You can get access to data manually using the approach for live data.  You can also import data from exported spreadsheets.
-
 
 

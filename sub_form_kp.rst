@@ -45,7 +45,7 @@ Example 1 - Append sub form records
   *  If a new photograph of that equipment is taken, (in the main form) then you want that to replace the existing photo.
   *  So a key of the equipment id is specified with a key policy of "merge".
   *  However each time you use the survey you want to record a new meter reading and append it to all the other readings.
-  *  In this case you can put the meter reading in a "begin repeat" group and and leave the sub form key policy unspecified (none) or set to "append" 
+  *  In this case you can put the meter reading in a "begin repeat" group and leave the sub form key policy unspecified (none) or set to "append"
      which will append new records.
 
 Example 2 - Merge sub form records
@@ -58,5 +58,4 @@ This example is based on the `medical clinics product <http://www.smap.com.au/me
   *  Set the survey key of both surveys to the patient identifier.  This is specified in the survey settings.
   *  Set the survey key policy on both surveys to merge.  
   *  In the second dispensing survey, add the parameter "key_policy=merge" to the **begin repeat** that contains the results of the consultation.
-
 
