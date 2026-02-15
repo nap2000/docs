@@ -4,12 +4,14 @@ Tutorial - Launching a Parent Survey
 ====================================
 
 In this example the user will be filling out details on a pupil. When it comes to adding the class, if the class does not exist, then
-they will launch the class form to add it and also to automatically add the pupil as being a member of that class.
+they will launch the class form to add it and also to automatically add the pupil as being a member of that class.  All of these
+instructions assume that you are using the online editor.
 
 1. First create a survey called "Class". Add some questions including a text question called class_id. Edit the keys for this survey
-   and set the key to "${class_id}".
+   and set the key to "${class_id}" and the **Key Policy** to "merge".  **Keys**, for a survey, can be specified in the online editor by selecting the menu **Tools** and then
+   **Bundle and Case Management** and then selecting the **Keys** tab.
 
-2. Using the online editor create a survey called "Pupil". Add some questions that you might want to record about the pupil such as their
+2. Create a survey called "Pupil". Add some questions that you might want to record about the pupil such as their
    name.
 
 3. Now in the Pupil form we are going to select the class attended by the pupil. Add a question called "class" of type select_one and specify that it
@@ -21,12 +23,19 @@ they will launch the class form to add it and also to automatically add the pupi
   The online editor will guide you through getting a choice list from another survey. To do this edit the appearance for the select question
   and select the **search** tab.
 
-4. Create a question of type select_one with a label "Is a new class needed?".
+.. figure::  _images/launch-2-1.png
+   :align:   center
+   :width:   400px
+   :alt:     A dialog configured to get a list of class ids from a survey called "Class"
 
-5. Add a question of type "parent_form". Make it relevant only if a new class is needed. Edit the parameters to specify:
+   Specifying how to get the list of classes from the class survey
 
-*  Survey to launch: Set to "Class"
-*  Question to store the returned key: Set this to the question in the Pupil form also called "class".
+4. Create a question of type select_one and two choices "Yes" and "No", with a label "Is a new class needed?".
+
+5. Add a question of type **parent_form**. Make it relevant only if a new class is needed. Edit the parameters to specify:
+
+  *  Survey to launch: Set to "Class"
+  *  Question to store the returned key: Set this to the question in the Pupil form also called "class".
 
 Sample surveys as described above can be downloaded from:
 
@@ -65,10 +74,3 @@ Testing
    :width:   600px
    :alt:     Pupil Data
 
-   Pupil Data
-
-.. note::
-
-  The Pupil data contains a value for the question that launched the class form. This question was called "launch" in the
-  example survey. The value in this question is used by the Smap system during the linking of
-  the data in the two surveys and it can be ignored for analysis.
