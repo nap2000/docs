@@ -157,7 +157,7 @@ There are some configuration settings you can use with oversight surveys:
     made available via Web Forms.  Conversely you can specify that a survey is for data collection only so that it cannot be selected as the editing
     survey in the console.
 #.  For a text question specify a source parameter which points to an image question.  For example:  "source=issue_photo".  This will cause the text
-  question to be automatically populated with labels identified in the image. The AWS Rekognition service is used to do this.
+    question to be automatically populated with labels identified in the image. The AWS Rekognition service is used to do this.
 
 View Records and Annotation
 ---------------------------
