@@ -6,16 +6,21 @@ Completing tasks using FieldTask
 Tasks can be managed in FieldTask on the ``Tasks`` tab and, if the task has a location, then on the ``Map`` tab.  Completed and in-progress instances
 of surveys are also shown on these tabs.  They can be considered as local tasks created by the device user when they open a survey.
 
+.. _task-states:
+
 Task States
 -----------
 
-Tasks in different states will be shown in a different color:
+Tasks in different states will be shown with a different icon and in a different color:
 
-*  Rejected / Deleted:  Brown
-*  Late:  Red
-*  In progress: Blue
-*  Submitted: Green
-*  Finalised: Purple
+*  Rejected / Deleted:  Brown (Form Icon)
+*  Late:  Red (Form Icon)
+*  In progress: Blue (Form Icon)
+*  Submitted: Green (cloud icon)
+*  Finalised: Purple (Form Icon)
+*  An unmodified case: Blue (Folder icon)
+*  A modified case: Purple (Folder icon)
+*  An orphan: Grey (Form Icon). Orphan instances are completed surveys that cannot be sent to the server because the survey on the server has been blocked or deleted
 
 .. figure::  _images/tasks-ft1.jpg
    :align: center

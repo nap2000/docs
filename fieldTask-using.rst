@@ -77,7 +77,8 @@ You can then change your logon details in the same way you set them on the logon
 Synchronising with the Server
 -----------------------------
 
-Press **Refresh** on the main screen to synchronise the device with the server. This will:
+Press **Refresh** on the main screen to synchronise the device with the server. In FieldTask5 you can also swipe down on the form list or task list to initiate a refresh.
+This will:
 
 1.  Upload any completed instances
 2.  Download any new or changed surveys / forms
@@ -90,7 +91,9 @@ Press **Refresh** on the main screen to synchronise the device with the server. 
    
    Refresh Button
 
-In FieldTask5 you can also swipe down on the form list or task list to initiate a refresh.
+In the tasks tab, the icons of completed instances will change from purple to green when they have been sent to the server.  Any instances with a green icon
+will be removed.  If an instance cannot be sent because it's survey is blocked or has been deleted, then it will stay on the device and will be
+shown with a grey icon.
 
 Starting a Survey Form
 ----------------------
