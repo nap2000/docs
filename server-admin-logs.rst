@@ -35,3 +35,16 @@ Tomcat.  /etc/logrotate.d/tomcat[?].  Should be set up a reasonable configuratio
       notifempty
       create 640 syslog adm
     }
+
+Subscribers.  /etc/logrotate.d/subscribers.  Should be set up a reasonable configuration would be::
+
+    /var/log/subscribers/*.log {
+        copytruncate
+        daily
+        rotate 10
+        compress
+        missingok
+        size 5M
+    }
+
+Note the subscribers log directory should be owned by tomcat and have permissions 0750
