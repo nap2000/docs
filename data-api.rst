@@ -166,7 +166,7 @@ Survey Data in JSON
     the main form.
   :query start_parkey: Parent key to start from.  Only useful when working with subform data.
   :query parkey: Parent key. Return records in the subform that belong to the specified parent.
-  :query bad: One of ``yes`` return deleted records, ``only`` Only return deleted records, ``none`` do not return deleted (default)
+  :query get_bad: Set to ``true``` or ``yes`` to return deleted records
   :query audit: Set to ``yes`` to return audit data. This data is the time in milliseconds that the user took to answer each question.
     You can also specify in the settings for the form that the GPS coordinates where each question was answered should be included.
     There is a third level of audit where every change made to a question during the course of an interview is recorded.
