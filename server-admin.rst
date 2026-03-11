@@ -10,10 +10,9 @@ about this page.
   :maxdepth: 1
 
   server-admin-system-overview.rst
-  server-admin-requirements.rst
+  server-admin-scaling.rst
   server-admin-install.rst
   server-admin-updating.rst
-  server-admin-scaling.rst
   server-admin-backups.rst
   server-admin-logs.rst
   server-background.rst
