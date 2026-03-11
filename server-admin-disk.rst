@@ -47,3 +47,8 @@ Apache web server to serve the attachments from the long term storage location. 
   SSLProxyEngine on
   ProxyPass         /attachments https://{region}.amazonaws.com/{bucket}/attachments
   ProxyPassReverse  /attachments https://{region}.amazonaws.com/{bucket}/attachments
+
+Implement log rotation
+++++++++++++++++++++++
+
+The subscriber batch jobs and Tomcat can generate a lot of log data.  :ref:`log-rotate` should be used to prevent the disk being consumed.
