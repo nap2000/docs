@@ -86,8 +86,8 @@ Periodic
 
 Available with Smap 23.07.
 
-Periodic triggers run reports and automatically send them via email. The data in the report will be filtered by dates
-determined by the selected period.
+Periodic triggers run reports and automatically send them by email. Report
+data is filtered by dates determined by the selected period.
 
 *  Daily: Data from the day before will be included.
 *  Weekly: Data from the previous week will be included.
@@ -101,11 +101,14 @@ determined by the selected period.
 
 .. note::
 
-  If you have set a start and end date in a report run automatically by a periodic notification, then these will be ignored.  However you can still set date ranges in the advanced filter for a report and these will be applied.
+  If you set a start and end date in a report that is run automatically by a
+  periodic notification, these dates are ignored. However, date ranges set in
+  the report's advanced filters are still applied.
 
 The settings are:
 
-*  Report.  The report to run (only xlsx reports are supported). The report must be set up in the reports module as a public report.
+*  Report. The report to run (only XLS reports are supported). The report
+   must be set up as a public report in the Reports module.
 *  Target. Only email is available for periodic notifications
 *  Period. Daily, weekly, monthly or yearly
 *  Time. The time of day at which the trigger should fire
@@ -189,4 +192,3 @@ Settings are:
 
 An escalation can be accompanied by emails.  The settings are similar to the "email" target with the addition of a 
 checkbox that allows you to send the email to the assigned user
-

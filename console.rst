@@ -435,12 +435,15 @@ The color of a data cell can be set using style lists. There are two steps to th
 Reports
 -------
 
-Reports created from the console use the same filters (:ref:`console-filters`) that are used to determine what is displayed on the screen.  The reports can be accessed by
-selecting the "File" menu option, you can then select Excel or Word format.  Note Word format is not useful if there are many columns.
+Reports created from the console use the same filters
+(:ref:`console-filters`) used to determine what is displayed on the screen.
+To download a report, select the **File** menu and then select Excel or Word
+format. Word format is not useful if there are many columns.
 
-*  Word. Downloads the current records and columns into a word document.  QR codes will be shown in this report.  All reports are generated in
-   landscape mode.  You should reduce the number of columns to less than 10 before proceeding.
-*  Excel.  Downloads the current records into a spreadsheet.
+*  Word. Downloads the current records and columns into a Word document. QR
+   codes are shown in this report. All reports are generated in landscape
+   mode. Reduce the number of columns to fewer than 10 before proceeding.
+*  Excel. Downloads the current records into a spreadsheet.
 
 
 Languages Supported for Automatic Transcription

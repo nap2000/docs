@@ -6,7 +6,11 @@ Administration Reports
 .. contents::
  :local:  
  
-There are a number of handy reports that can help you understand what is happening on your server.
+There are several useful reports that can help you understand what is
+happening on your server.
+
+Where a report takes longer to run, it is generated in the background and can
+be downloaded later from the Reports module.
 
 Form Access Report
 ------------------
@@ -21,8 +25,9 @@ This shows who has access to a survey and what level of access they have.  If th
 Usage Report
 ------------
 
-This report shows the number of surveys completed by each user for a month and for all time. Optionally this can be broken down by project, 
-Survey or Device::
+This report shows the number of surveys completed by each user for a month and
+for all time. Optionally, this can be broken down by project, survey, or
+device::
 
   Access from the Form Management Page
   Select "Usage Report"
@@ -33,15 +38,17 @@ Survey or Device::
 Attendance Report
 -----------------
 
-This report show the first time during the day that an enumerator refreshed the phone and the last time as well
-as the duration of time between these two events and the number of completed surveys.  This could be considered
-an indicator of attendance if the enumerators are expected to press refresh at the start of work and then refresh to
-submit data at the end of the days work.
+This report shows the first time during the day that an enumerator refreshed
+the phone and the last time, as well as the duration between these events and
+the number of completed surveys. This can be used as an indicator of
+attendance if enumerators are expected to press refresh at the start of work
+and then refresh again to submit data at the end of the day's work.
 
 Notification Report
 -------------------
 
-This report show all the notifications that have currently been set up to respond to submitted data::
+This report shows all notifications currently set up to respond to submitted
+data::
 
   Access from the Form Management Page
   Select the "Notification Report"
@@ -49,7 +56,8 @@ This report show all the notifications that have currently been set up to respon
 Resource Utilisation Report
 ---------------------------
 
-Shows the resources in shared resources including CSV files, images, video and audio.  Shows the surveys that are using these resources::
+This report shows resources in Shared Resources, including CSV files, images,
+video, and audio. It also shows which surveys use these resources::
 
   Access from the Form Management Page
   Select the "Resource Utilisation Report"
@@ -57,8 +65,8 @@ Shows the resources in shared resources including CSV files, images, video and a
 Summary of events by hour
 -------------------------
 
-Shows a count of events recorded in the log for each hour of the selected day
+This report shows a count of events recorded in the log for each hour of the
+selected day.
 
   Access from the Log Management Page
   Select the "Hourly Summary" report
-
