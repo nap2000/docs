@@ -46,6 +46,7 @@ iteration, better decisions, and greater program impact.
   surveys.rst
   admin.rst
   analysis.rst
+  reports.rst
   auditing.rst
   server-expressions.rst
   console.rst

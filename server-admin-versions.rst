@@ -6,12 +6,12 @@ Application Change History
 .. contents::
  :local:
 
-25.10.43
+25.10.44
 --------
 
 Release date: 2026-03-08
 
-`Download 25.10.43 <https://smap-code.s3.us-east-1.amazonaws.com/os_smap_25_10_43_5252.tgz.>`_
+`Download 25.10.44 <https://smap-code.s3.us-east-1.amazonaws.com/os_smap_25_10_44_2056.tgz>`_
 
 #.  Make processing of key queue more robust
 #.  Add _assigned as a column that can be filled when importing data
@@ -22,6 +22,7 @@ Release date: 2026-03-08
 #.  Update the version of the Tomcat application server
 #.  Add counts for sub forms in survey lookup
 
+Note this release was patched on 2026-03-13 from version 43 to 44 to fix a bug.
 
 25.10.37
 --------

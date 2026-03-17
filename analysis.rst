@@ -10,7 +10,6 @@ To get to the analysis page select **Modules** then **Analysis**.
   :maxdepth: 1
   
   analysis-export.rst
-  analysis-reports.rst
   analysis-dashboard.rst
   analysis-backup.rst
   analysis-delete-restore.rst
