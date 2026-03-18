@@ -42,7 +42,7 @@ A key difference between reports and simple exports is that a report link
 can be sent to someone who does not have an account on the system. They can
 use the URL to download the latest data.
 
-Reports can also be attached to periodic notifications. In this case, any
+Reports can also be attached to./ periodic notifications. In this case, any
 date range set in the report is ignored. The notification date range is
 used instead.
 

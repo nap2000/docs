@@ -6,33 +6,41 @@ Dashboard
 .. contents::
  :local:
  
-The purpose of the dashboard is to give a quick insight into the data for Quality Assurance. They are not a
-substitute for an analysis system such as Excel, or a GIS.
+The purpose of the dashboard is to give a quick insight into the data for Quality Assurance. They are also useful in order
+to provide a view of ongoing operations.  They are not a
+substitute for a data analysis system such as Excel, or a GIS.
+
+Also they do not have drill down capability for problem identification instead an AI tool can be used to identify cause and impact if an anomaly is
+shown in the dashboard.
 
 Managing Panels
 ---------------
+
+Panels have buttons at their top right to resize them, edit their settings and delete.  These buttons are only visible when you hover your mouse over the panel.
 
 Adding Panels
 +++++++++++++
 
 .. figure::  _images/analysis1.jpg
    :align:   center
-   :width:   300px
+   :width:   500px
    :alt:     Adding a Panel
    
    Adding a Panel
    
-Click on one of the add panel buttons for graph, table, map or image chart types... _integration:
+Select the add **Add Panel** menu and then select one of the panel types; graph, table, map or image.
 
 Resizing a Panel
 ++++++++++++++++
 
 .. figure::  _images/analysis2.jpg
    :align:   center
-   :width:   300px
+   :width:   500px
    :alt:     Resizing a Panel
    
    Resizing a Panel
+
+Panels can be one of two sizes. Either expanded to the size of the screen or minimised so that multiple panels can be viewed at once.
    
 Editing a Panel
 +++++++++++++++
@@ -44,9 +52,14 @@ Editing a Panel
    
    Editing a Panel
    
-Clicking on the settings icon will open the same dialog that was used in creating the panel.  Clicking on the "data view"
+Clicking on the settings icon will open the same dialog that was used in creating the panel.  Clicking on the "data view" drawer
 will open a side panel that allows selection of map layers or sub forms in a survey.  For a graph created from
 select question responses, the choices that are shown can be selected.
+
+Closing a Panel
++++++++++++++++
+
+A panel can be closed by clicking on the **X** at top right.
 
 Panel Settings
 --------------
@@ -101,31 +114,29 @@ roles if the dashboard user does not have one.
 Survey
 ++++++
 
-Select the survey whose data you want to show.
-
-.. note::
-
-  This option is only used with "data" subjects.
+Select the survey whose data you want to show. This option is only used with "data" subjects.
 
 User
 ++++
 
-Select the user whose activity you want to show.
-
-.. note::
-
-  Only for "User Activity" subjects.
+Select the user whose activity you want to show.  Only for "User Activity" subjects.
 
 Graph Panels
 ------------
 
 After you select the survey you must select a question to analyse on the graph. Alongside each question you can select the function that is applied to the
-data.
+data.  This can be either:
+
+*  Percent (The percentage of responses that had this value or the percentage of responses withing the group that had this value)
+*  Count (Counts of responses with this value)
 
 There are two graph types:
 
 #.  Histograms (Shown as a Pareto chart - limited to the largest 30 values)
-#.  Time series
+#.  Pie Charts
+
+Data will be shown as a time series if you select a time interval.  For example if you select an interval of *week* then the values as they change on a
+week by week basis will be shown.
 
 Question types that can be graphed:
 
@@ -168,7 +179,7 @@ The locations are colour coded according to relative frequency:
 *  Green
 *  Blue: Low
 
-These frequency values apply to one of the choices in the question.  To view the results for a different choice select that choice in the aside to the
+These frequency values apply to one of the choices in the question.  To view the results for a different choice select that choice in the drawer to the
 right of the map.
 
 If a location only contains a single record then the location will be coloured either "red" the choice was selected or "blue" the choice was not selected.  
@@ -181,6 +192,22 @@ of times that choice was selected.
    :alt:     Showing a map view with clustering
    
    Question level map view zoomed out to show clustering
+
+Table Panels
+------------
+
+These are useful for seeing all the data collected in a survey.  They will show 200 records at a time but you can page
+through all the records using the advance **>>>** and go back **<<<>** buttons.
+
+If you open the drawer on the table panel then you can select an option to hide the meta data, you can also apply actions to the data such as backing it
+up or importing new data. Refer to :doc:`analysis-archive`,
+:doc:`analysis-delete-restore`, and :doc:`analysis-backup`.
+
+Filters
+-------
+
+Filters can be applied.  These can be a date range filter where you select the date question and then from date and to date.  You can also specify
+an **advanced** to filter on data values.
 
 Automatic Refresh
 -----------------
