@@ -234,6 +234,19 @@ If you open the drawer on a table panel, you can apply actions to the data,
 such as backing it up or importing new data. Refer to :doc:`analysis-archive`,
 :doc:`analysis-delete-restore`, and :doc:`analysis-backup`.
 
+Image panels
+------------
+
+Image panels will show the images in a survey.  An image thumbnail is shown at the bottom of the panel and you
+can select this in order to see the full size image.
+
+.. figure::  _images/analysis7.jpg
+   :align:   center
+   :width:   300px
+   :alt:     Showing an image panel
+
+   An image panel
+
 Filters
 -------
 
