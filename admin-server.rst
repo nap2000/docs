@@ -4,13 +4,13 @@ Server
 ======
 
 .. contents::
- :local:
+  :local:
 
 .. warning::
 
   The **server** security group is required in order to access the server management page.
   
-To get to the server management screen select the **Admin** module then **Users** then select the **Server** tab.
+To open the server management screen, select **Admin**, then **Users**, and then the **Server** tab.
   
 .. figure::  _images/adminServer1.jpg
    :align:   center
@@ -18,32 +18,54 @@ To get to the server management screen select the **Admin** module then **Users*
 
    Server Settings
 
-The settings in the server page are defaults that apply to all organisations be default but can usually be overridden by the
-organisation settings for a single organisation.
+The settings on the server page are defaults that apply to all organisations by default, but they can usually be overridden in
+an individual organisation's settings.
+
+The server security group
+-------------------------
+
+This security group indicates that the user owns the server and can therefore change server-wide settings or monitor
+server-level events. You cannot set this security group through the user interface. Instead, run SQL directly:
+
+#. Connect to the ``survey_definitions`` database.
+#. Get the user ID for the user who should have server administration rights:
+
+   .. code-block:: sql
+
+      select id from users where ident = '{user_ident}';
+
+   Replace ``{user_ident}`` with the user's ident.
+
+#. Update the ``user_group`` table. The numeric identifier of the owner security group is ``9``:
+
+   .. code-block:: sql
+
+      insert into user_group (u_id, g_id) values (123, 9);
+
+   Replace ``123`` with the user ID from the previous step.
 
 Mapbox Key
 ----------
 
-The key for the mapbox account which provides many of the maps used by the server.  Each mapbox key is permitted a number of
-free map accesses per month after which there will be a charge. (Note the Mapbox and Google keys in the above image are not 
-real keys).
+This is the key for the Mapbox account used by many of the server maps. Each Mapbox key allows a number of free map requests
+per month, after which charges apply. (The Mapbox and Google keys in the image above are not real keys.)
 
 Google Map Key
 --------------
 
-Where google maps are used a google map key is required.  As for Mapbox Google have a free usage threshold after which there
-will be a charge.
+Where Google Maps is used, a Google Maps key is required. As with Mapbox, Google provides a free usage threshold, after which
+charges apply.
 
 Email Settings
 --------------
 
-Smtp Host, Email Domain, Email user name, Email password, Email Server port are all used when setting up the email server.
+``SMTP Host``, ``Email Domain``, ``Email Username``, ``Email Password``, and ``Email Server Port`` are used when configuring
+the email server.
 
 SMS Url
 -------
 
-This can be set to a URL that will be used to send SMS notifications.   The URL should have a placeholder for the phone 
-number and the message.  
+Set this to the URL used to send SMS notifications. The URL should include placeholders for the phone number and message.
 
 * ${phone}
 * ${msg}
@@ -52,24 +74,24 @@ For example::
 
   https://sms.provider.com/send?user=auser&password=apassword&number=${phone}&msg=${msg}
 
-If AWS is to be used to send the SMS messages then enter the word **aws** into this field.
+If AWS is used to send SMS messages, enter **aws** in this field.
 
-SMS messages can be initiated using a notification.  Once you have specified the URL of your SMS provider here, an option of `SMS` for the target
-of a notification will be selectable.  In the notification you can specify the number to be called or a question in the submitted data that
-contains the number.  The message to be sent can be specified in the "content" section of the notification.  You can include items from the 
-submitted data in the content by using the ${question_name} syntax.
+SMS messages can be sent from notifications. Once you set the SMS provider URL here, ``SMS`` becomes available as a notification
+target. In the notification, you can specify the destination number directly or provide a question in submitted data that
+contains the number. Define the message text in the notification ``content`` section. You can insert submitted data values
+using ``${question_name}``.
 
 
 .. warning::
 
-  SMS messaging may result in a cost.  Hence it cannot be set up at the organisational level and can only be 
+  SMS messaging may result in a cost. Therefore it cannot be set up at the organisational level and can only be
   enabled in the server settings.
 
 API requests per minute
 -----------------------
 
-If set to 0 then there is no limit.  Otherwise this value sets the maximum number of API requests per
-organisation per module per minute.  Currently the API services managed by this limit are:
+If set to 0, there is no limit. Otherwise, this value sets the maximum number of API requests per organisation,
+per module, per minute. The API services currently managed by this limit are:
 
 *  /api/v1/data
 *  /api/v1/data.csv
@@ -78,5 +100,5 @@ organisation per module per minute.  Currently the API services managed by this 
 Minimum Password Strength
 -------------------------
 
-If set then this will specify the minimum password strength allowed on the server.  The actual strength used
-will be the higher of this value and the minimum password strength of an organisation.
+If set, this specifies the minimum password strength allowed on the server. The enforced strength is the higher of
+this value and the organisation-level minimum password strength.

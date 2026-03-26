@@ -85,7 +85,8 @@ Queue State
 
     * s3upload
     * submissions
-    * restore  (Smap Server 24.06+)
+    * message
+    * restore
 
   Restore is the re-application of previous submissions initiated from the analysis module.
 

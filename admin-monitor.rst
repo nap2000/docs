@@ -74,3 +74,8 @@ Shows number of new cases created per day and the number closed for the selected
    :alt:     The monitoring page showing cases created and closed per day as a bar chart
 
    Cases
+
+Client Errors
+-------------
+
+Written to tomcat log.  Search for these with the string "client-error"
