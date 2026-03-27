@@ -6,6 +6,18 @@ Application Change History
 .. contents::
  :local:
 
+26.03.08
+--------
+
+Release date: 2026-03-27
+
+`Download 26.03.08 <https://smap-code.s3.us-east-1.amazonaws.com/os_smap_26_03_08_6949.tgz>`_
+
+#.  Add a tab for servers on the monitoring page.  This shows queue activity include whether queues are running or stopped
+#.  Removed the logging of "heartbeats" for queues in the subscriber logs.  The number of logs written by default reduced. `The log level for the subscriber can now be specified. <https://www.smap.com.au/docs/server-admin-logs.html#setting-a-log-level>`_
+#.  Improve appearance of analysis page
+#.  Add Pie Charts as a charting option on the analysis page
+
 25.10.44
 --------
 

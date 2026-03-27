@@ -26,6 +26,7 @@ Application logs::
     Edit the Tomcat conf/logging.properties file and set
 
     .level = SEVERE or WARNING or INFO or CONFIG or FINE or ALL or OFF
+    A restart is then required to pick up this change
 
 Subscriber logs::
 
@@ -33,6 +34,7 @@ Subscriber logs::
 
     Edit the file smap-logging.properties in the directory {base_path}/settings. {base_path} is usually "/smap"
     Set smap.log.level=INFO or SEVERE or WARNING or FINE
+    The subscriber will pick up the change within 30 seconds - no need for a restart
 
 .. _log-rotate:
 
