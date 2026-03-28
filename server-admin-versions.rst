@@ -6,17 +6,20 @@ Application Change History
 .. contents::
  :local:
 
-26.03.08
+26.03.09
 --------
 
 Release date: 2026-03-27
 
-`Download 26.03.08 <https://smap-code.s3.us-east-1.amazonaws.com/os_smap_26_03_08_6949.tgz>`_
+`Download 26.03.09 <https://smap-code.s3.us-east-1.amazonaws.com/os_smap_26_03_09_360.tgz>`_
 
 #.  Add a tab for servers on the monitoring page.  This shows queue activity include whether queues are running or stopped
 #.  Removed the logging of "heartbeats" for queues in the subscriber logs.  The number of logs written by default reduced. `The log level for the subscriber can now be specified. <https://www.smap.com.au/docs/server-admin-logs.html#setting-a-log-level>`_
 #.  Improve appearance of analysis page
 #.  Add Pie Charts as a charting option on the analysis page
+
+Patches:
+*  2026-03-29. Fix a bug affecting the online editor when choices are added to a select question from a CSV file.
 
 25.10.44
 --------
@@ -27,10 +30,10 @@ Release date: 2026-03-08
 
 #.  Make processing of key queue more robust
 #.  Add _assigned as a column that can be filled when importing data
-#.  Add support for accepting and rejecting self assigned tasks on the webforms page
+#.  Add support for accepting and rejecting self assigned tasks on the WebForms page
 #.  Fix issue in counting tasks so that self assigned ones are counted
-#.  Improve consistency of URLs in email campaign mailouts
-#.  Fix an issue preventing the resending of email campaign mailouts
+#.  Improve consistency of URLs in email campaign mail outs
+#.  Fix an issue preventing the resending of email campaign mail outs
 #.  Update the version of the Tomcat application server
 #.  Add counts for sub forms in survey lookup
 

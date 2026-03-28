@@ -96,7 +96,7 @@ Security
 *  Turnstile Secret Key
 
 If you specify the Turnstile keys and add your server domain to the domains protected by your Cloudflare account then Turnstile protection will be added
-to public forms.
+to public forms.  This feature is available in version 26.03.09+.
 
 Server custom style sheet
 +++++++++++++++++++++++++

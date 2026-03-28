@@ -164,6 +164,8 @@ server.
   If your administrator has set the Turnstile keys in server settings, a Turnstile control is added to the public form to validate that the user
   is not a bot.
 
+  Available in version 26.03.09+.
+
 .. warning::
 
   The public link does not expire.  If you want to stop submissions from anonymous users you can delete the link by clicking on the **Get Link**
