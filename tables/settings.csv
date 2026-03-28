@@ -15,3 +15,4 @@ oversight_survey,Set to yes or no.  When set to yes the survey can be used to up
 my_reference_data,"Set to yes or no.  When set to yes other surveys, when looking up data in this survey, will only see data that the enumerator uploaded.  The default is no.",Settings Dialog
 compress_pdf,"Set to yes or no.  When set to yes, PDFs generated from records submitted with this survey will have their images compressed(Smap Version 21.12+)",Settings Dialog
 read_only_survey,Set to yes or no.  When set to yes the survey will be readonly.,Settings Dialog
+turnstile,"Set to yes or no.  When set to yes, Cloudflare Turnstile bot protection will be added to a public form link to this survey",Settings Dialog

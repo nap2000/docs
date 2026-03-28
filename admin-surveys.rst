@@ -12,8 +12,8 @@ Survey Management
 Getting to the survey management page
 -------------------------------------
 
-As Survey Management is the default page of the Administration module you can get to it by select Modules and the then Admin.  
-Alternatively if you are already in Administration but on a different page, select the “Forms" menu.
+As Survey Management is the default page of the Administration module, you can open it by selecting **Modules** and then **Admin**.
+Alternatively, if you are already in Administration but on a different page, select the "Forms" menu.
 
 Types of Surveys
 ----------------
@@ -24,10 +24,10 @@ Types of Surveys
 
    Four different types of Survey
 
-#.  Oversight. (Orange).  Will not appear in fieldTask.  Can be used in the console to update data in records.
-#.  Data (Blue).  Use to collect data in fieldTask or WebForms.
-#.  Read Only.  (Purple). Can be used in fieldTask and WebForms to view information but will not submit results.
-#.  Hidden. (Pink).  Will not be shown on devices.  Can be used to complete tasks but not new records.
+#.  Oversight (orange). Does not appear in FieldTask. Can be used in the console to update data in records.
+#.  Data (blue). Used to collect data in FieldTask or WebForms.
+#.  Read only (purple). Can be used in FieldTask and WebForms to view information but does not submit results.
+#.  Hidden (pink). Not shown on devices. Can be used to complete tasks but not new records.
 
    
 Creating Surveys
@@ -43,8 +43,8 @@ If you are creating a brand new survey using the XLS Form editor then you can fi
 Clicking on the **Create new Form** button will show a dialog where you can select the XLS file and specify a name for 
 your survey.
 
-The dialog also includes the option of grouping the new survey with an existing surveys.  Refer to :ref:`survey_groups` for details 
-on what this means. Only do this if you want to the new survey to share a common table with an existing survey. To add the
+The dialog also includes the option of grouping the new survey with an existing survey. Refer to :ref:`survey_groups` for details
+on what this means. Only do this if you want the new survey to share a common table with an existing survey. To add the
 new survey to a group select the name of the survey you want to group it with from the drop down.
 
 .. _replacing-surveys:
@@ -105,7 +105,7 @@ all the previously collected data accessible again.
 
 .. warning::
 
-   If you delete a survey then it will be automatically **erased** after 90 days.   After that you will not be able to restored
+   If you delete a survey then it will be automatically **erased** after 90 days. After that you will not be able to restore
    the data or the survey definition.
    
 .. figure::  _images/surveyManagement3.jpg
@@ -145,21 +145,26 @@ Click the checkbox next to the survey name in the **blocked** column.
 This will prevent the uploading of results to the server.  Also the survey will no longer be available to download to phones
 and when the user of FieldTask presses the refresh button it will be deleted from their device.
 
-If the user has results on their phone that belong to a survey that has been **blocked** then when they try to 
-submit they will see a **Not Found** message.  That is the survey was not found.  If you want these results you can un-block
-and ask the enumerator to re-submit.
+If the user has results on their phone that belong to a survey that has been **blocked**, when they try to
+submit they will see a **Not Found** message because the survey is unavailable. If you want these results you can unblock
+the survey and ask the enumerator to resubmit.
 
 Public Links to WebForms
 ------------------------
 
-You can get a public link to a WebForm.  To do this click on the **Get Link** button.  You can then add or delete the link for the survey.
-The link button will show in dark blue when there for all surveys that have a public link.
+You can get a public link to a WebForm. To do this click on the **Get Link** button. You can then add or delete the link for the survey.
+The link button shows in dark blue for surveys that have a public link.
 
 The link can be copied and emailed to someone so that they can complete a survey without having to have an account on the 
 server.
+
+.. note::
+
+  To prevent bots filling in the form, select the "Enable Cloudflare Turnstile anti-bot protection for public form URL" checkbox in :ref:`server-settings`.
+  If your administrator has set the Turnstile keys in server settings, a Turnstile control is added to the public form to validate that the user
+  is not a bot.
 
 .. warning::
 
   The public link does not expire.  If you want to stop submissions from anonymous users you can delete the link by clicking on the **Get Link**
   button and then selecting **delete**.
-

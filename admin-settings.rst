@@ -36,10 +36,10 @@ Custom Style Sheet
 ++++++++++++++++++
 
 The Smap server from version 21.01 uses Bootstrap version 4.5.  The buttons and other elements of the pages
-are styled using the default bootstrap style sheet.  However you can upload your own CSS file that will override
+are styled using the default Bootstrap style sheet.  However you can upload your own CSS file that will override
 these styles.
 
-To add a customised stylesheet
+To add a customised stylesheet:
 
 *  In the appearance tab click on "Upload a CSS style sheet"
 *  Click on "Select a style sheet" and select the file you just uploaded
@@ -66,8 +66,8 @@ Messaging
 *  Vonage webhook secret.
 *  SMS URL. URL of service to send SMS messages, or just "aws" if the AWS SMS service is to be used.
 
-Email
-+++++
+Email Server
+++++++++++++
 
 *  Email type. Select SMTP or AWS SES.
 *  AWS region (AWS SES).
@@ -92,6 +92,11 @@ Security
 
 *  Minimum password strength.
 *  Allow security managers to delete submissions.
+*  Turnstile Site Key
+*  Turnstile Secret Key
+
+If you specify the Turnstile keys and add your server domain to the domains protected by your Cloudflare account then Turnstile protection will be added
+to public forms.
 
 Server custom style sheet
 +++++++++++++++++++++++++
@@ -176,20 +181,20 @@ Mobile tracking
 WebForm Settings
 ----------------
 
-This tab allows customisation of webForm appearance:
+This tab allows customisation of WebForm appearance:
 
 *  Page background colour.
 *  Paper background colour.
 *  Footer position.  The position of the "powered by" icon in the footer of the page.
 *  Button colour.
-*  Button text colour
-*  Heading text colour
-*  The webForm banner logo
-*  Hiding the "save as draft" checkbox
+*  Button text colour.
+*  Heading text colour.
+*  The WebForm banner logo.
+*  Hiding the "save as draft" checkbox.
 
 Other
 -----
 
 This tab allows you to set other organisation level settings for the organisation that you are currently in:
 
-*  Minimum password strength
+*  Minimum password strength (organisation-level setting).
