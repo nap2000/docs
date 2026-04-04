@@ -16,7 +16,7 @@ columns-pack,"Very similar to ""columns"" however the labels are packed in with 
 coptic,Shows a Coptic calendar,"Use with type of ""date"""
 distress,"Shows a thermometer with a scale from 1-10 from which you can select values
 
-Only works on webForms and not in fieldTask",Use with integer questions.
+Only works on webForms and not in fieldTask","Use with range questions.  Set the starting value, end value and increment in parameters."
 draw,User draws an image with their finger,"Use with type of ""image"""
 ethiopian,Shows an Ethiopian calendar,"Use with type of ""date"""
 extendable,"Allows a repeat, that uses a count to set the intial number of rows, to have either additional rows added or rows removed.  ",Use with a begin repeat that has a repeat count.  The repeat count becomes just an initial setting and not an absolute value when extendable is set. Available from server version 23.09 and fieldTask version 6.814.

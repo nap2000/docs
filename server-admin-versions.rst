@@ -19,6 +19,7 @@ Release date: 2026-03-27
 #.  Add Pie Charts as a charting option on the analysis page
 
 Patches:
+
 *  2026-03-29. Fix a bug affecting the online editor when choices are added to a select question from a CSV file.
 
 25.10.44
