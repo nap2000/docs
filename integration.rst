@@ -31,3 +31,9 @@ Custom apps such as Progressive Web Apps, Native Mobile Apps or corporate system
 -----------------------
 
 From forms, running inside Field Task, external applications can be called to retrieve data.  (:ref:`external-applications`)
+
+4) SharePoint
+-------------
+
+Smap can write submission data to SharePoint lists and use SharePoint lists as shared
+reference data in forms.  (:ref:`sharepoint`)
