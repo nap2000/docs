@@ -6,6 +6,18 @@ Application Change History
 .. contents::
  :local:
 
+26.03.28
+--------
+
+Release date: 2026-05-01
+
+`Download 26.03.28 <https://smap-code.s3.us-east-1.amazonaws.com/os_smap_26_03_28_1759.tgz>`_
+
+#.  Improve Aria support in WebForms, Survey Management
+#.  Add text wrapping in table panels in the dashboard.  Previously text answers would be cut off and could not be made visible.
+#.  Add a menu option to expand a table record in the dashboard to show one page per record with the question answers displayed down the page.
+#.  Fix issues related to the migration to ESM
+
 26.03.09
 --------
 
@@ -18,9 +30,6 @@ Release date: 2026-03-27
 #.  Improve appearance of analysis page
 #.  Add Pie Charts as a charting option on the analysis page
 
-Patches:
-
-*  2026-03-29. Fix a bug affecting the online editor when choices are added to a select question from a CSV file.
 
 25.10.44
 --------

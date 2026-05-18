@@ -40,7 +40,6 @@ iteration, better decisions, and greater program impact.
   getting-started.rst
   applications.rst
   integration.rst
-  sharepoint.rst
   features.rst
   fieldTask.rst
   webforms.rst

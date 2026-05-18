@@ -234,6 +234,24 @@ If you open the drawer on a table panel, you can apply actions to the data,
 such as backing it up or importing new data. Refer to :doc:`analysis-archive`,
 :doc:`analysis-delete-restore`, and :doc:`analysis-backup`.
 
+Bad Records
++++++++++++
+
+Records that have been deleted are marked as "Bad". These are shown in table panels with a slightly red background.  No other panels use
+bad/deleted records. For examples graphs will not included data from deleted records.
+
+A user can toggle a record from good to bad and back again.  To do this the user needs to right click on the cell in the "Bad" column for the record they want to change. Then
+provide a "Reason" in the popup dialog.
+
+Record Level Operations
++++++++++++++++++++++++
+
+Each record has a menu option represented as an ellipses.   Clicking on this will open a dialog.  On this dialog the user can select an option to:
+
+*  edit the data
+*  download a PDF of the record
+*  Show the record data in an expanded view where each question for a single record is shown on one line
+
 Image panels
 ------------
 

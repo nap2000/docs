@@ -57,3 +57,4 @@ When sending data to the server using a POST request:
   contacts-api.rst
   campaign-api.rst
   owner-api.rst
+  notification-api.rst
