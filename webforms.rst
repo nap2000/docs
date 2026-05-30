@@ -151,16 +151,16 @@ queue click on the count of unsent records at top left or the "drawer" icon at l
    :width: 	 500px
    :alt:     Clicking on the queue counter on "open drawer" icon to access the webForm queue
 
-   Accessing the webform queue
+   Accessing the WebForm queue
 
 Once you have opened the drawer you can:
 
-#.  View the history of work in webforms
+#.  View the history of work in WebForms
 #.  Select a draft survey to edit it
 #.  OPen a draft survey for editing
 
 WebForms History
-++++++++++++++++
+----------------
 
 .. figure::  _images/webforms10.png
    :align:   center
@@ -176,6 +176,32 @@ in the History to a record in the Console of the server.
 Note the webForm history is not stored on the server, so if you are reconciling somebody’s work you will
 have to ask them to talk through what they see in their history.
 
+Notifications
+-------------
 
+Emails can be added in WebForms.  This means they can be added while offline and will be synchronised when the Submit button is pressed.
+Attachments can be added to the email.  This email and its attachments are stored with the record being edited and can be viewed in the
+history page of the console.
 
+ .. figure::  _images/webform-email.png
+    :align:   center
+    :width:   300px
+    :alt:     Shows a form to enter an email that is above a WebForm
 
+    Filling in an email within a WebForm
+
+Index
+-----
+
+Indexes into a WebForm have to be enabled in the server settings.  If this is done you can select "Index" from the menu in
+WebForms.
+
+ .. figure::  _images/webform-index.png
+    :align:   center
+    :width:   400px
+    :alt:     Shows an index and part of a WebForm
+
+    Using an index to navigate around a WebForm
+
+Indexes are very useful if you are using WebForms to update large cases.  You might want to quickly add a new entry to a
+repeating group. You can select the repeating group from the index make your changes and submit.

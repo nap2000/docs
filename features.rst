@@ -90,7 +90,7 @@ Case Management
   :ref:`Email tasks that can be completed by people who do not have an account on the system and are instead identified by their email address <email_tasks>`,
   :ref:`Notification Messages<notifications>`,
   :ref:`Manage work using the console<console>`,
-  :ref:`Audit trail of all changes<console_history>`,
+  :ref:`Audit trail of all changes including emails sent while editing a WebForm<console_history>`,
   :ref:`Automatic labelling of images; translation of text and transcription of audio<automation>`, 
   :ref:`Automatically escalate cases if they have not been addressed in a specified time or based on the data<case_escalation>`, 20.06
 
