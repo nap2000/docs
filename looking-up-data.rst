@@ -393,8 +393,8 @@ Other examples:
   :header-rows: 1
   :file: tables/pulldata-example-list.csv
 
-Online Lookup
-+++++++++++++
+Online Lookup and Search
+++++++++++++++++++++++++
 
 If you have a network connection when filling in the form then you can replace "pulldata" with "lookup". All other parameters remain the same.
 The lookup function requires an active connection and does not use local, unsent data.
@@ -402,6 +402,10 @@ For example::
 
   lookup('source', 'column to retrieve', 'filter expression')
   lookup('source', 'column to retrieve', 'filter column', 'filter value')
+
+Similarly with search just replace "search" with "lookup_choices"::
+
+  lookup_choices('source')
 
 When you have very large amounts of reference data lookup can be more practical. Refer to
 `this article <https://blog.smap.com.au/performance-issues-when-looking-up-reference-data//>`_ 

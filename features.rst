@@ -50,7 +50,7 @@ Administration
 
   :ref:`online-editor`,
   :ref:`Offline spreadsheet editor<xls-editor>`,
-  :ref:`A history of all changes made to a survey<change-history>`,
+  :ref:`A history of all changes made to a survey<survey-change-history>`,
   :ref:`Administration reports including access to forms; usage by user; usage of resources such as reference csv files by surveys; notifications that have been set etc<admin-reports>`,
 
 Geospatial
@@ -84,14 +84,16 @@ Case Management
   :header: Feature, Versions
   :widths: 80,20
 
+  :ref:`A workflow page<workflow>`, 26.05
   :ref:`Cases <case-management>`,
   :ref:`Tasks<editing-adding-tasks>`,
-  Email tasks that can be completed by people who do not have an account on the system and are instead identified by their email address,
-  Notification Messages,
+  :ref:`Email tasks that can be completed by people who do not have an account on the system and are instead identified by their email address <email_tasks>`,
+  :ref:`Notification Messages<notifications>`,
   :ref:`Manage work using the console<console>`,
-  Audit trail of all changes,
+  :ref:`Audit trail of all changes<console_history>`,
   :ref:`Automatic labelling of images; translation of text and transcription of audio<automation>`, 
-  :ref:`Automatically escalate cases if they have not been addressed in a specified time or based on the data<case_escalation>`, v20.06 
+  :ref:`Automatically escalate cases if they have not been addressed in a specified time or based on the data<case_escalation>`, 20.06
+
 
 Security
 --------
@@ -109,6 +111,7 @@ Security
   :ref:`html-sanitisation`, 23.02
   :ref:`delete-restore`
   :ref:`logs`
+  :ref:`admin-data-protection`, 26.05
   `Strong privacy commitment <https://smap.com.au/privacy.shtml>`_
 
 
@@ -121,5 +124,6 @@ Connectivity
 
   :ref:`Server APIs that allow programmatic access to collected data as well as other data such as survey definitions and administration information such as users and projects<apis>`,
   :ref:`APIs for the FieldTask Android App that support customisation and extension of the capabilities of the app<fieldtask-api>`,
-  :ref:`Call web hooks when an event happens such as a data submission or data is updated.<webhooks>`, Smap Server 21.05
+  :ref:`Call web hooks when an event happens such as a data submission or data is updated.<webhooks>`, 21.05
+  :ref:`sharepoint`, 26.05
 

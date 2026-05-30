@@ -1,7 +1,7 @@
 .. _admin-data-protection:
 
-Data Protection
-===============
+Data Protection (GDPR)
+======================
 
 .. note::
 
@@ -39,6 +39,12 @@ Setting PII flags
 
 In the **Online Editor**, select a question and use the three-button PII selector in the
 question settings panel.
+
+.. figure::  _images/dpo-pii.png
+   :align:   center
+   :alt:     Shows 3 questions in the online editor, each selecting a different PII flag
+
+   Setting the PII flag in the online editor
 
 In **XLSForm**, add a ``pii`` column to the ``survey`` sheet and set values to ``pii`` or
 ``anonymise`` (leave blank for not personal data).
@@ -80,6 +86,12 @@ The downloaded XLSX contains one sheet per survey/form. Each sheet includes:
 The export includes active records, edit-history rows, and soft-deleted records so that
 the full data held for an individual is disclosed.
 
+.. figure::  _images/dpo-dsar.png
+   :align:   center
+   :alt:     Shows a form with an identifier entered and a button labelled "Export".
+
+   Requesting a DSAR
+
 .. _rtbf:
 
 Right to be Forgotten
@@ -102,6 +114,12 @@ Phase 1 — Search
 Results are displayed in a table with columns for Project, Survey, Form, Status (Live /
 History / Deleted), and the matching field values. Each row has a checkbox selected by
 default. Deselect any rows that are false positives before proceeding.
+
+.. figure::  _images/dpo-rtbf.png
+   :align:   center
+   :alt:     Shows a table for results from aN RTBF search with a button labelled "Redact Selected"
+
+   Completed RBTF Search, ready to redact
 
 Phase 2 — Redact
 +++++++++++++++++

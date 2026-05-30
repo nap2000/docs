@@ -6,6 +6,17 @@ Application Change History
 .. contents::
  :local:
 
+26.03.32
+--------
+
+Release date: 2026-05-21
+
+`Download 26.03.32 <https://smap-code.s3.us-east-1.amazonaws.com/os_smap_26_03_32_9538.tgz>`_
+
+#.  Allow for dates to be represented as empty strings in JSON when creating new tasks via the API
+#.  Fix errors on online editor page for preloads
+
+
 26.03.28
 --------
 

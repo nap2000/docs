@@ -19,3 +19,4 @@ Tips and Tutorials
   emails.rst
   quotes.rst
   select-multiple-in-dashboard.rst
+  tips-edit-record-webforms.rst

@@ -34,6 +34,8 @@ These are tasks that are assigned to a user who has been setup on the system.
 
   An unassigned task is referred to as "new" in the :ref:`tasks-api`
 
+.. _email_tasks:
+
 Email Tasks
 -----------
 

@@ -15,27 +15,29 @@ interfaces in blue.  Typical external applications are shown in orange and the S
 
    Integration
    
-1) Data Lake
-------------
+Data Lake
+---------
 
 Data tables, images, video and other files collected using MDC can be pushed to a data lake where the data can be processed by data analytics tools 
 pushed to other systems.
 
-2) Smap Server API
-------------------
+Smap Server API
+----------------
 
 Custom apps such as Progressive Web Apps, Native Mobile Apps or corporate systems can call this API to retrieve and update data.
 (:ref:`apis`)
 
-3) Android External App
------------------------
+Android External App
+---------------------
 
 From forms, running inside Field Task, external applications can be called to retrieve data.  (:ref:`external-applications`)
 
-4) SharePoint
--------------
+.. _sharepoint:
 
-Requires SmapServer v26.03.19
+SharePoint
+-----------
+
+Requires SmapServer v26.05.01
 
 Smap can write submission data to SharePoint lists and use SharePoint lists as shared
 reference data in forms. 
@@ -199,6 +201,12 @@ additional fields appear:
 
    For update operations, if no matching row is found the notification will fail and
    an error will be recorded in the notification audit log.
+
+.. figure::  _images/sp-update.jpeg
+   :align:   center
+   :alt:     Shows a form with mappings between SharePoint column and survey field ready for update
+
+   Specifying a notification to update a SharePoint list
 
 .. _sharepoint-shared-resources:
 

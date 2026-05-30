@@ -320,6 +320,8 @@ A page is then displayed that allows you to make changes to all selected records
   will be determined by the first record that you are updating.  This might allow you then to set invalid values for other 
   records.
 
+.. _console_history:
+
 History Tab
 +++++++++++
 
