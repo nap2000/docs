@@ -373,6 +373,13 @@ An email notification can be sent with an attached PDF or a link to a WebForm co
 will also be shown in the record history.  Next to the notification will be shown a button labelled "Resend" that can be clicked
 to resend a notification.
 
+.. note::
+
+    This feature can be enabled in the settings for a survey.  The default is not to allow sending of emails from inside a WebForm.
+
+Replies to emails, including attachments, will also be shown in the History. This is currently only available when AWS SES is configured as
+the email server.
+
 Drilling Down to Related Data
 -----------------------------
 

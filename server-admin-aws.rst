@@ -9,7 +9,7 @@ Access to S3
 
 As ubuntu type::
 
-  For Ubuntu 24.04: sudo snap install aws-cli --classic
+  For Ubuntu 24.04 and later: sudo snap install aws-cli --classic
   Older Ubuntu versions: sudo apt install awscli
 
 Get Credentials

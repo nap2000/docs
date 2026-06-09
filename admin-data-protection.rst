@@ -109,7 +109,7 @@ Phase 1 — Search
 
 1. Open the **Privacy** page from the user menu.
 2. Enter the identifier to search for. Tick **Partial match** if needed.
-3. Click **Search**.
+3. Click **Search**.  PII questions that the user has access to are then searched.
 
 Results are displayed in a table with columns for Project, Survey, Form, Status (Live /
 History / Deleted), and the matching field values. Each row has a checkbox selected by
@@ -117,7 +117,7 @@ default. Deselect any rows that are false positives before proceeding.
 
 .. figure::  _images/dpo-rtbf.png
    :align:   center
-   :alt:     Shows a table for results from aN RTBF search with a button labelled "Redact Selected"
+   :alt:     Shows a table for results from an RTBF search with a button labelled "Redact Selected"
 
    Completed RBTF Search, ready to redact
 
@@ -130,6 +130,8 @@ Phase 2 — Redact
 Only the checked rows are redacted. Redaction cascades to any child (repeat) forms
 linked to the selected parent records. All redaction actions are audit-logged at
 the organisation level.
+
+This final step will be disabled unless the option to enable redactions is set in the organisation settings.
 
 .. _data-retention:
 
