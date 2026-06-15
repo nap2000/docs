@@ -99,8 +99,7 @@ Click on the settings button, as shown below, in order to access the columns dia
 
    The settings button
    
-The dialog allows you to select the columns that are shown, those that should be shown as a barcode and whether the value of a barcode should
-also be included in reports.
+The dialog allows you to select the columns that are shown and the order in which they should be shown.
 
 .. figure::  _images/console-columns.jpg
    :align:   center

@@ -8,7 +8,7 @@ Case Management
 
   cm-overview.rst
   cm-cases-assigned.rst
-  console.rst
+  console_module.rst
   cm-assign.rst
   cm-complete.rst
   cm-device.rst

@@ -47,10 +47,8 @@ iteration, better decisions, and greater program impact.
   admin.rst
   analysis.rst
   reports.rst
-  console.rst
-  workflow.rst
-  tasks.rst
-  notifications.rst
+  console_module.rst
+  workflow_module.rst
   campaigns.rst
   pdf-data-record.rst
   apis.rst
