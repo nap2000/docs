@@ -20,7 +20,7 @@ so that the map is shown.
    :width: 	 300px
    :alt:     Shows a map with an existing polygon drawn in grey and a new polygon being added
 
-   Appearance history-map in WebForms on a geoshape question - one previous location shown in blue
+   Appearance history-map in WebForms on a geoshape question - one previous location shown in blue (Requires Smap Server 16.06+)
 
 .. figure::  _images/tips-location2.png
    :align:   center
@@ -28,3 +28,15 @@ so that the map is shown.
    :alt:     Shows a map with an existing polygon drawn in grey and a new polygon being added
 
    Appearance history-map in FieldTask on a geopoint question - one previous location shown in blue
+
+Get a previous recorded location using pulldata
+-----------------------------------------------
+
+The pulldata function can reference location data form a CSV file or another survey to use in a form. In this example the previously recorded
+boundaries of a farm can be downloaded for editing.
+
+.. csv-table:: Farm Boundaries Form
+  :header: type, name, label, calculation
+
+  text, name, Farm Name,
+  geoshape, boundary, Record the boundary, "pulldata('linked_self', 'boundary', 'name', ${name})"
