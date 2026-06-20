@@ -20,3 +20,4 @@ Tips and Tutorials
   quotes.rst
   select-multiple-in-dashboard.rst
   tips-edit-record-webforms.rst
+  tips-reference-locations.rst

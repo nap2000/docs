@@ -43,7 +43,7 @@ Log Rotation
 
 Tomcat. /etc/logrotate.d/tomcat[?]. A reasonable configuration is::
 
-    /var/log/tomcat9/catalina.out {
+    /var/log/tomcat[?]/catalina.out {
       copytruncate
       daily
       rotate 10

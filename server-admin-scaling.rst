@@ -9,10 +9,9 @@ platform requirements:
 
 * One of the following Ubuntu LTS Server versions
 
+  * 26.04
   * 24.04
   * 22.04
-  * 20.04
-  * 18.04
 
 * 2GB memory (minimum)
 * 10GB disk (minimum)
