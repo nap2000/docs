@@ -24,11 +24,14 @@ Data can be sourced from:
 
 *  Reference files (CSV or XLSX)
 *  Surveys
+*  SharePoint lists
 
 Reference files can be CSV or XLSX. Use them for data that does not change too often as it is a manual process to upload an updated file onto the server. Data
-sourced from other surveys will be available automatically as soon as the data is submitted to the source survey.
+sourced from other surveys will be available automatically as soon as the data is submitted to the source survey. SharePoint lists are kept in sync with a
+SharePoint server and made available to every survey in the organisation; see :ref:`sharepoint-shared-resources` for how to set one up.
 
-Use reference files for stable lists. Use another survey when the reference data needs to update as soon as submissions arrive.
+Use reference files for stable lists. Use another survey when the reference data needs to update as soon as submissions arrive. Use a SharePoint list when the
+data is already maintained in SharePoint.
 
 In the remainder of this document the source of the data will be written as *SOURCE*. Replace this with the name of the reference file or the
 identifier of the survey that contains your data.
@@ -96,8 +99,8 @@ Replace SOURCE with "linked\_" followed by the ident of the survey. In the follo
 Use ``linked_self`` to look up data previously submitted in the same survey.
 
 The online editor will guide you through accessing another survey's data. For example to look up choices in another survey select
-**Appearance**, click **Edit**, and then select the **Search** tab. You can then look up available surveys without having to
-know their ident.
+**Appearance**, click **Edit**, and then select the **Search** tab. On that tab you choose the **source** — the choices worksheet, a CSV reference file, a
+survey, or a SharePoint list — and the editor lists the available surveys, files and lists so you do not need to know their ident or name.
 
 If you are editing your survey in a spreadsheet then you can find the ident of the survey that you are looking up by using the
 online editor. Open the survey you want to reference and then select **File** and then **Info**.
@@ -105,6 +108,22 @@ online editor. Open the survey you want to reference and then select **File** an
 .. warning::
 
   The survey that is referenced will need to be in the same organisation as the survey doing the referencing.
+
+.. _looking-up-data-sharepoint:
+
+Using a SharePoint List as the Source
++++++++++++++++++++++++++++++++++++++
+
+A SharePoint list can be used as a source once it has been published as a shared resource. Refer to it as ``sharepointlist_`` followed by the Smap name given
+to the list. For example::
+
+  search('sharepointlist_products', 'matches', 'Category', ${selected_category})
+  pulldata('sharepointlist_incidents', 'Reporter', 'IncidentId', ${incident_id})
+
+The online editor lists the available SharePoint lists for you, in the same way it lists surveys and reference files, so you do not need to know the name in
+advance.
+
+For details of how to connect a SharePoint server and publish a list as a shared resource see :ref:`sharepoint-shared-resources`.
 
 Looking up Choices
 ------------------
@@ -149,7 +168,7 @@ The Search Function
 +++++++++++++++++++
 
 The search function is placed in the **appearance** of the select question and tells the system where the source of data can be found. This function
-has between 1 and 5 parameters depending on how complex your filtering requirements are.
+has 1, 4 or 6 parameters depending on how complex your filtering requirements are.
 
 `search()` returns rows used to build the choice list.
 
@@ -162,7 +181,8 @@ Simple (1 parameter)
 
 Looks in SOURCE for the data.
 
-Only this simple form of the search function can be used with WebForms.
+This simple form is supported on every platform. The filtered forms described below also work in WebForms, subject to the version notes shown against each
+filter function.
 
 .. note::
 
@@ -185,9 +205,14 @@ The filter function can be one of:
 *  matches
 *  in
 *  not in
-*  eval (Requires FieldTask 6.505 and SmapServer 21.09; not available in WebForms)
+*  eval (Requires FieldTask 6.505 and SmapServer 21.09)
+
+Filter function names are not case sensitive, so ``startswith`` and ``startsWith`` are equivalent.
 
 The filter values for "in" and "not in" should be lists separated by spaces. Use it with filter values that come from select multiple questions.
+
+In the online editor you select the filter function from the **match** dropdown on the **Search** tab. The ``eval`` function is the exception: tick the
+**Use a filter expression** checkbox instead, then enter the expression (see :ref:`filter-expressions`).
 
 .. warning::
 
@@ -246,6 +271,33 @@ The Syntax::
 The most commonly used version is the one with 4 parameters. This is also the standard pulldata version
 that is used by other data collection tools.
 
+.. _looking-up-data-pulldata-editor:
+
+Building the function in the online editor
+++++++++++++++++++++++++++++++++++++++++++
+
+You can type the pulldata function directly into a calculation, or you can let the online editor build it for you.
+
+.. note::
+
+  The pulldata builder is only available with Smap Server version 26.06 and later. With earlier versions, enter the function manually as described in the
+  sections below.
+
+Add a calculate question (or any question that has a calculation), then select the **calculation** and click the **Look up data** button. This opens a dialog
+that builds the function for you so you do not have to remember the parameter order. The button is available when the calculation is empty, or already contains
+a single ``pulldata()`` or ``lookup()`` function that you want to edit.
+
+In the dialog you can set:
+
+*  **Source** — a reference file, another survey, or a SharePoint list. The editor lists the available sources so you do not need to know their names.
+*  **Access** — *Offline and online* generates a ``pulldata()`` function; *Online only* generates a :ref:`lookup() <looking-up-data-online>` function.
+*  **Column to retrieve** — the column or question whose value you want.
+*  **Filter** — either a filter column with a match type and value, or tick **Use a filter expression** to write an :ref:`expression <filter-expressions>`.
+*  **Look up repeating data** — tick this to return more than one matching value. You can then choose an **index** (a position, or one of the aggregations
+   *sum*, *mean*, *min*, *max*, *count* or *list*).
+
+The editor inserts the completed function into the calculation. The sections below describe each version of the function that the builder can produce.
+
 Get a value using a key (4 parameters)
 ++++++++++++++++++++++++++++++++++++++
 
@@ -253,7 +305,7 @@ Add a calculate question to your survey and give it a name. For the calculation 
 
   pulldata('source', 'column to retrieve', 'filter column', 'filter value')
 
-#.  The source can be the :ref:`name of a reference file <looking-up-data-file>`, without its extension or :ref:`the identifier for another survey <looking-up-data-survey>`.
+#.  The source can be the :ref:`name of a reference file <looking-up-data-file>` (without its extension), :ref:`the identifier for another survey <looking-up-data-survey>`, or a :ref:`SharePoint list <looking-up-data-sharepoint>`.
 #.  The column to retrieve is the name of the column in the reference file whose data you want, or the name of the question in the survey that you are looking up.
 #.  The filter column is the name of the column / question that identifies the value to retrieve. So if you are looking up the product name using the product code, then this parameter contains the name of the product code column.
 #.  The filter value is the value of the filter name that you want. So for the product example if the filter value was set to 'a10' then you would expect to get back the product name for the product with code 'a10'.
@@ -295,6 +347,8 @@ to "cast( #{age} as integer ) < ${max_age}". Refer to :ref:`server-expressions-c
   "if(string-length(${product_code}) > 0, pulldata('products', 'product_name', '#{product_code} = ${product_code} and #{region} = ${region}'), '')", Now an example that can't be implemented using the simple 4 parameter version.  This example assumes that product codes can be reused in different regions so to get the right product name you also want to filter by region.
   "if(string-length(${product_code}) > 0, pulldata('products', 'product_name', ""#{product_code} = ${product_code} and #{region} = ${region} and #{year} = '2022' ""), '')", An additional filter by year has been added. Note that because the year is fixed and enclosed in single quotes we have enclosed the whole expression in double quotes.
 
+.. _looking-up-data-multiple:
+
 Get multiple values (5 and 6 parameters)
 ++++++++++++++++++++++++++++++++++++++++
 
@@ -327,9 +381,13 @@ Instead of a number you can use one of the following aggregation functions as th
   *  **count** - The count of the number of matching records
   *  **list** - All the matching values separated by a space
  
+A fixed index can be written with or without quotation marks; for example ``3`` and ``'3'`` are equivalent. The online editor writes it with quotes.
+
 .. note::
 
-  Where the index is a number it does not have quotation marks.
+  If you use an expression such as ``position(..)`` as the index it must **not** be enclosed in quotation marks, because it has to be evaluated rather than
+  taken as a literal value. The online editor only lets you choose a fixed number or an aggregation; to use an expression like ``position(..)`` (for example to
+  step through a repeat) enter the function manually.
 
 Filter Type
 %%%%%%%%%%%
@@ -393,15 +451,24 @@ Other examples:
   :header-rows: 1
   :file: tables/pulldata-example-list.csv
 
+.. _looking-up-data-online:
+
 Online Lookup and Search
 ++++++++++++++++++++++++
 
-If you have a network connection when filling in the form then you can replace "pulldata" with "lookup". All other parameters remain the same.
-The lookup function requires an active connection and does not use local, unsent data.
-For example::
+If you have a network connection when filling in the form then you can replace "pulldata" with "lookup". The lookup function requires an active connection and
+does not use local, unsent data.
+
+``lookup()`` supports all the same variations as ``pulldata()``, with the same parameters, including the 5 and 6 parameter versions that
+:ref:`return multiple values <looking-up-data-multiple>`::
 
   lookup('source', 'column to retrieve', 'filter expression')
   lookup('source', 'column to retrieve', 'filter column', 'filter value')
+  lookup('source', 'column to retrieve', 'filter expression', 'index', 'eval')
+  lookup('source', 'column to retrieve', 'filter column', 'filter value', 'index', 'filter type')
+
+In the online editor, choose **Online only** as the access type to build a ``lookup()`` function instead of a ``pulldata()`` function; all the other options
+are the same.
 
 Similarly with search just replace "search" with "lookup_choices"::
 
