@@ -13,6 +13,12 @@ workflow for senior managers. It answers four questions at a glance: what is the
 workload, what is the trend, what is falling behind, and how are the units
 performing. To open it select the ``modules`` menu and then ``Operations``.
 
+.. figure::  _images/operations1.png
+   :align:   center
+   :alt:     A dashboard showing in-progress and resolved cases.
+
+   The operations dashboard
+
 Access is restricted to users in the ``admin`` security group. Data is scoped to
 your organisation and is further filtered by role-based access control (RBAC): a
 security manager sees every survey, while other users (including plain admins)
