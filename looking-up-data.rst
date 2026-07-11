@@ -158,7 +158,7 @@ Notes:
 *  The choice labels can be in multiple languages as you can specify a different column for each language just as you would normally specify different text for each language
 
 Adding fixed choices
-%%%%%%%%%%%%%%%%%%%%
+++++++++++++++++++++
 
 You can add fixed choices to the choices that are sourced from the reference file or survey. For example you may have a select question to look up
 geographic locations from a survey. These locations may be where your team is working and be maintained in a separate survey.
