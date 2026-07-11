@@ -1,5 +1,5 @@
-Survey References
-=================
+References
+==========
 
 .. toctree::
   :maxdepth: 1
