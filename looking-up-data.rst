@@ -9,40 +9,48 @@ Looking up Data
 Overview
 --------
 
-Lists of choices and reference data can be obtained from sources outside of the survey template. This allows you to:
+Lists of choices and lookup values can be obtained, and used in your survey, from sources outside of the survey template. This allows you to:
 
-*  Update the survey with new choices or reference values without changing the survey template.
+*  Update the survey with new choices or lookup values without changing the survey template.
 *  Share the same data between multiple surveys, for example lists of provinces and districts for a user to select.
-*  Use much larger numbers of potential choices and reference values than you could put directly into a survey without making it too slow to load.
+*  Use much larger numbers of potential choices and lookup values than you could put directly into a survey without making it too slow to load.
 
-Choices populate select lists; reference data fills calculate values using `pulldata()`.
+Choices populate select lists; lookup values fill "calculate" questions using `pulldata()`.
 
 Sources
 -------
 
 Data can be sourced from:
 
-*  Reference files (CSV or XLSX)
+*  CSV or XLSX file
 *  Surveys
 *  SharePoint lists
 
-Reference files can be CSV or XLSX. Use them for data that does not change too often as it is a manual process to upload an updated file onto the server. Data
+Lookup data in CSV/XLSX files when the data does not change too often as it is a manual process to upload an updated file onto the server. Data
 sourced from other surveys will be available automatically as soon as the data is submitted to the source survey. SharePoint lists are kept in sync with a
 SharePoint server and made available to every survey in the organisation; see :ref:`sharepoint-shared-resources` for how to set one up.
 
-Use reference files for stable lists. Use another survey when the reference data needs to update as soon as submissions arrive. Use a SharePoint list when the
-data is already maintained in SharePoint.
-
-In the remainder of this document the source of the data will be written as *SOURCE*. Replace this with the name of the reference file or the
+In the remainder of this document the source of the data will be written as *SOURCE*. Replace this with the name of the CSV/XLSX file or the
 identifier of the survey that contains your data.
+
+Offline and Online Lookups
+--------------------------
+
+You can lookup data locally in FieldTask or Webforms.  In this case the data is downloaded to the FieldTask app or inserted into the WebForm and it is
+available when you are both offline and online.
+
+Alternatively you can lookup data over the network, this will only work when you are online.  The online approach becomes preferred when you
+have large datasets and your users mostly are always connected to the Internet.  Often the choice of which approach to use is based
+on performance considerations, this article,
+`Performance Issues when looking up data <https://blog.smap.com.au/performance-issues-when-looking-up-reference-data/>`_, covers this in more detail.
 
 .. _looking-up-data-csv:
 
-Using Reference Files
-+++++++++++++++++++++
+Using CSV Files
+---------------
 
 Creating the file
-%%%%%%%%%%%%%%%%%
++++++++++++++++++
 
 The first row of the reference file contains the header. Use the same rules for specifying column headers as are used for question names,
 that is English characters and underscores with no spaces.
@@ -54,7 +62,7 @@ Subsequent rows contain the data. These can contain any characters supported by 
   The name of the reference file should not have any spaces.
 
 Loading a reference file onto the server
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+++++++++++++++++++++++++++++++++++++++++
 
 If your reference file might be used by more than one survey then you should load it onto the server as a shared resource.
 
@@ -76,8 +84,8 @@ If you want your reference file to be only used by a single survey then:
 
 .. _looking-up-data-file:
 
-Referring to the file
-%%%%%%%%%%%%%%%%%%%%%
+Referring to the file from the survey
++++++++++++++++++++++++++++++++++++++
 
 Replace SOURCE with the name of the file without the extension. In the following examples the full file name is "locations.csv"::
 
@@ -87,10 +95,9 @@ Replace SOURCE with the name of the file without the extension. In the following
 .. _looking-up-data-survey:
 
 Using another Survey as the Source
-++++++++++++++++++++++++++++++++++
+----------------------------------
 
 Replace SOURCE with "linked\_" followed by the ident of the survey. In the following examples the survey ident is s3_23::
-
 
   search('linked_s3_23')
   search('linked_self')
@@ -112,7 +119,7 @@ online editor. Open the survey you want to reference and then select **File** an
 .. _looking-up-data-sharepoint:
 
 Using a SharePoint List as the Source
-+++++++++++++++++++++++++++++++++++++
+-------------------------------------
 
 A SharePoint list can be used as a source once it has been published as a shared resource. Refer to it as ``sharepointlist_`` followed by the Smap name given
 to the list. For example::
@@ -247,11 +254,11 @@ For more information on using the **eval** function refer to :ref:`filter-expres
 
 .. _looking-up-data-pulldata:
 
-Getting Reference Data with the Pulldata Function
---------------------------------------------------
+Getting Lookup Values with the Pulldata Function
+------------------------------------------------
 
-The second type of data that you can get from a reference file, or another survey, is reference data. This is data that
-is "pulled" from its source and added as the answer to a calculate question.
+The second type of data that you can get from a source is a lookup value. This is data that
+is "pulled" from its source (a reference file, another survey, or a SharePoint list) and added as the answer to a calculate question.
 It can then be treated like any other answer, and be sent to the server, used in a relevance etc.
 
 There are four versions of the pulldata function with 3, 4, 5 or 6 parameters.
@@ -474,7 +481,7 @@ Similarly with search just replace "search" with "lookup_choices"::
 
   lookup_choices('source')
 
-When you have very large amounts of reference data lookup can be more practical. Refer to
+When you have very large amounts of source data lookup can be more practical. Refer to
 `this article <https://blog.smap.com.au/performance-issues-when-looking-up-reference-data//>`_ 
 for a discussion on why this is the case.
 
@@ -483,7 +490,7 @@ Local Data
 
 Available with FieldTask version 6.400 and SmapServer version 21.05
 
-Normally when you reference data in other surveys you are looking up data that is stored on the server and has then been copied onto your device.
+Normally when you look up data in other surveys you are looking up data that is stored on the server and has then been copied onto your device.
 However you may need to complete multiple surveys in a location without an internet connection and while at that remote location
 you may want to reference data that was entered in another survey but has not been submitted yet.
 
@@ -496,4 +503,6 @@ labelled **Lookup local, unsent data on device**.
 To enable local data searching using the XLSForm editor set a value of "yes" in the column "search_local_data" in the settings worksheet (:ref:`settings-reference`).
 
 Values from the local unsubmitted data will then be included in data returned from a search() or a pulldata() function. This happens transparently and
-no further action on your part is required.  
+no further action on your part is required.
+
+
