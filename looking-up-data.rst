@@ -26,7 +26,7 @@ Data can be sourced from:
 *  Surveys
 *  SharePoint lists
 
-Lookup data in CSV/XLSX files when the data does not change too often as it is a manual process to upload an updated file onto the server. Data
+Use CSV/XLSX files when the data does not change too often as it is a manual process to upload an updated file onto the server. Data
 sourced from other surveys will be available automatically as soon as the data is submitted to the source survey. SharePoint lists are kept in sync with a
 SharePoint server and made available to every survey in the organisation; see :ref:`sharepoint-shared-resources` for how to set one up.
 
@@ -36,11 +36,11 @@ identifier of the survey that contains your data.
 Offline and Online Lookups
 --------------------------
 
-You can lookup data locally in FieldTask or Webforms.  In this case the data is downloaded to the FieldTask app or inserted into the WebForm and it is
+You can look up data locally in FieldTask or Webforms.  In this case the data is downloaded to the FieldTask app or inserted into the WebForm and it is
 available when you are both offline and online.
 
-Alternatively you can lookup data over the network, this will only work when you are online.  The online approach becomes preferred when you
-have large datasets and your users mostly are always connected to the Internet.  Often the choice of which approach to use is based
+Alternatively you can look up data over the network, this will only work when you are online.  The online approach becomes preferred when you
+have large datasets and your users are almost always connected to the Internet.  Often the choice of which approach to use is based
 on performance considerations, this article,
 `Performance Issues when looking up data <https://blog.smap.com.au/performance-issues-when-looking-up-reference-data/>`_, covers this in more detail.
 
@@ -163,7 +163,7 @@ Adding fixed choices
 You can add fixed choices to the choices that are sourced from the reference file or survey. For example you may have a select question to look up
 geographic locations from a survey. These locations may be where your team is working and be maintained in a separate survey.
 That survey is presumably not going to have a value for a location of
-"none of these". Hence you can add that directly as a fixed choice. The value must be numeric to distinguish this choice from the choice that identifies in the reference file.
+"none of these". Hence you can add that directly as a fixed choice. The value must be numeric to distinguish this choice from the choices that come from the reference file.
 
 .. figure::  _images/lookup2.jpg
    :align:   center
@@ -482,7 +482,7 @@ Similarly with search just replace "search" with "lookup_choices"::
   lookup_choices('source')
 
 When you have very large amounts of source data lookup can be more practical. Refer to
-`this article <https://blog.smap.com.au/performance-issues-when-looking-up-reference-data//>`_ 
+`this article <https://blog.smap.com.au/performance-issues-when-looking-up-reference-data/>`_
 for a discussion on why this is the case.
 
 Local Data
@@ -505,4 +505,67 @@ To enable local data searching using the XLSForm editor set a value of "yes" in 
 Values from the local unsubmitted data will then be included in data returned from a search() or a pulldata() function. This happens transparently and
 no further action on your part is required.
 
+Filtering the Data from Surveys Before it is Downloaded to Devices
+------------------------------------------------------------------
 
+The filters described so far on this help page only filter within the data that has been downloaded to the device. For example in this
+search function::
+
+    search('locations', 'matches', 'region_v', ${region})
+
+However you may want to download only a subset of data for reasons of security and performance. This filtering only applies to data
+where the source is a survey.  The available filters are:
+
+  * Recently Submitted Data
+  * Data Relevant to the Requesting Survey
+  * Current Data (that is, data that has not been archived)
+  * Data Submitted by the Requesting User
+  * Access Control Rules for the Current User
+
+Recently Submitted Data
++++++++++++++++++++++++
+
+This filter will restrict the records included from the survey to the most recently submitted or updated up to a
+maximum number.  This is the most direct way of reducing download size as long as you don't mind data from older
+records dropping out of the list.
+
+The limit is set for each survey linked to from the survey that looks up the reference data.  So in the survey that
+references data from other surveys you can select the menu option "File" and then "Reference Filters". A page will then
+be shown with a list of surveys that are linked to.  For each of these you can click the filter button and set the
+maximum number of records.
+
+.. figure::  _images/filter_ref1.png
+   :align:   center
+   :alt:     Shows a list of surveys that are linked to and against each one, the maximum number of records to download
+
+   The Reference Filters page, where you set record limits and relevance filters for each linked survey
+
+This filter applies to all surveys in a bundle. It is also applied after the other filters, so you can first restrict the reference
+data to only the relevant records and then limit those to a maximum number.
+
+Data Relevant to the Requesting Survey
+++++++++++++++++++++++++++++++++++++++
+
+Sometimes only some of the data in the survey that you are referencing is relevant to the purpose of your survey. You can
+add a filter that restricts the data referenced by your survey.  This filter is set in the same place as the one for
+"Recently Submitted Data": on the **Reference Filters** page click the filter button for the linked survey and specify the
+condition that a record must meet to be included. In the picture for that filter you will see that data has been restricted to records where the
+question **is_vehicle** is set to yes.
+
+Current Data
+++++++++++++
+
+You can archive data that is no longer relevant so that only current data is included in a lookup. Archived records are
+excluded automatically; no filter setting is required. See :ref:`Archiving data <archive>`.
+
+Data Submitted by the Requesting User
++++++++++++++++++++++++++++++++++++++
+
+You can set a checkbox in the survey's settings so that when other surveys pull reference data from this survey they will only get
+data that the logged in user submitted. Open the survey being referenced in the online editor, select the menu **File** and then
+**Settings**, and tick the checkbox.
+
+Access Control Rules for the Current User
++++++++++++++++++++++++++++++++++++++++++
+
+You can control the records a specific user can access by using row filters and roles.   :ref:`Role Based Access Control <rbac>`
