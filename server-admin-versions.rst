@@ -14,7 +14,7 @@ Application Change History
 #.  A new operations monitor page to go with the console
 #.  A new pulldata / lookup point and click builder in the survey editor
 #.  Reference records.  A readonly case that can be assigned to multiple people
-#.  Period emails can include an operations summary
+#.  Periodic emails can attach an operations summary and not just reports
 #.  Dashboards have a relative data range that can be applied to all panels
 #.  Administrators can now manage other peoples dashboards
 #.  Multiple bug fixes
