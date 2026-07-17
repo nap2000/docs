@@ -6,10 +6,21 @@ Application Change History
 .. contents::
  :local:
 
-26.03.32
+26.06.12
 --------
 
-Release date: 2026-05-21
+`Download 26.06.12 <https://smap-code.s3.us-east-1.amazonaws.com/os_smap_26_06_12_926.tgz>`_
+
+#.  A new operations monitor page to go with the console
+#.  A new pulldata / lookup point and click builder in the survey editor
+#.  Reference records.  A readonly case that can be assigned to multiple people
+#.  Period emails can include an operations summary
+#.  Dashboards have a relative data range that can be applied to all panels
+#.  Administrators can now manage other peoples dashboards
+#.  Multiple bug fixes
+
+26.03.32
+--------
 
 `Download 26.03.32 <https://smap-code.s3.us-east-1.amazonaws.com/os_smap_26_03_32_9538.tgz>`_
 
@@ -19,8 +30,6 @@ Release date: 2026-05-21
 
 26.03.28
 --------
-
-Release date: 2026-05-01
 
 `Download 26.03.28 <https://smap-code.s3.us-east-1.amazonaws.com/os_smap_26_03_28_1759.tgz>`_
 
@@ -32,8 +41,6 @@ Release date: 2026-05-01
 26.03.09
 --------
 
-Release date: 2026-03-27
-
 `Download 26.03.09 <https://smap-code.s3.us-east-1.amazonaws.com/os_smap_26_03_09_360.tgz>`_
 
 #.  Add a tab for servers on the monitoring page.  This shows queue activity include whether queues are running or stopped
@@ -44,8 +51,6 @@ Release date: 2026-03-27
 
 25.10.44
 --------
-
-Release date: 2026-03-08
 
 `Download 25.10.44 <https://smap-code.s3.us-east-1.amazonaws.com/os_smap_25_10_44_2056.tgz>`_
 
@@ -63,8 +68,6 @@ Note this release was patched on 2026-03-13 from version 43 to 44 to fix a bug.
 25.10.37
 --------
 
-Release date: 2026-02-12
-
 `Download 25.10.37 <https://smap-code.s3.us-east-1.amazonaws.com/os_smap_25_10_37_2155.tgz>`_
 
 #.  Add support for fully multi-threaded subscribers so you should be able to start multiple subscribers on multiple servers to process uploads
@@ -80,8 +83,6 @@ Release date: 2026-02-12
 25.10.03
 --------
 
-Release date: 2025-10-14
-
 `Download 25.10.03 <https://smap-code.s3.us-east-1.amazonaws.com/os_smap_25_10_03_5919.tgz>`_
 
 #.  Use text-type questions in graphs on the analysis page
@@ -90,8 +91,6 @@ Release date: 2025-10-14
 
 25.09.11
 --------
-
-Release date: 2025-09-22
 
 `Download 25.09.11 <https://smap-code.s3.us-east-1.amazonaws.com/os_smap_25_09_11_708.tgz>`_
 
@@ -102,8 +101,6 @@ Release date: 2025-09-22
 
 25.09.03
 --------
-
-Release date: 2025-09-12
 
 `Download 25.09.03 <https://smap-code.s3.us-east-1.amazonaws.com/os_smap_25_09_03_7295.tgz>`_
 
@@ -121,8 +118,6 @@ Release date: 2025-09-12
 25.04.39
 --------
 
-Release date:  2025-08-21
-
 `Download 25.04.39 <https://smap-code.s3.us-east-1.amazonaws.com/os_smap_25_04_39_3887.tgz>`_
 
 #.  Include support for last-saved in WebForms
@@ -135,8 +130,6 @@ Release date:  2025-08-21
 
 25.04.33
 --------
-
-Release date:  2025-08-01
 
 `Download 25.04.33 <https://smap-code.s3.amazonaws.com/os_smap_25_04_33_6357.tgz>`_.
 

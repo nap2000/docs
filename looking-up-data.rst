@@ -574,4 +574,4 @@ Use online lookup
 +++++++++++++++++
 
 Finally of course, if you can, you can use online lookups then only the data you are referencing needs to be transferred your your devices.
-More details: :ref:`looking-up-data-online>`.
+More details: :ref:`Looking up data online<looking-up-data-online>`.
