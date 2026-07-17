@@ -10,7 +10,12 @@ Then, periodically (typically every few seconds), a batch job (the subscriber) r
 
 Application logs::
 
-  Use journalctl (Ubuntu 20.04)
+  Use journalctl (Ubuntu 26.04)
+  journalctl -u tomcat10 --since "today" --no-pager > tomcat10-today.log
+  journalctl -u tomcat10 --since "2026-07-16 00:00:00" --until "2026-07-17 00:00:00" --no-pager > tomcat10-2026-07-16.log
+  journalctl -u tomcat10 -o json --no-pager > tomcat10.json
+  journalctl -f
+
   /var/log/tomcat[x]/catalina.out (other Ubuntu versions)
 
 Subscriber logs::

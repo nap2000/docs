@@ -569,3 +569,9 @@ Access Control Rules for the Current User
 +++++++++++++++++++++++++++++++++++++++++
 
 You can control the records a specific user can access by using row filters and roles.   :ref:`Role Based Access Control <rbac>`
+
+Use online lookup
++++++++++++++++++
+
+Finally of course, if you can, you can use online lookups then only the data you are referencing needs to be transferred your your devices.
+More details: :ref:`looking-up-data-online>`.
