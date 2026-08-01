@@ -27,8 +27,8 @@ Submitted instances cannot be modified and will disappear after the next refresh
 An instance that is **finalized** (marked as complete but not submitted) cannot be edited, but you can review the data and
 add notes. This review can be disabled using the **Mobile App Options** tab on the user management page.
 
-Incomplete instances can be opened for editing. Long-press an incomplete instance or task to **reject** it. The instance is
-deleted and you must provide a reason.
+Incomplete instances can be opened for editing. To **reject** an instance or task, either swipe the row left or right, or use the
+menu at the right of the row. You must provide a reason. A rejected instance is deleted.
 
 Map
 +++
