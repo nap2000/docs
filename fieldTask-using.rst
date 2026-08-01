@@ -73,7 +73,7 @@ If you have to log on every time you open FieldTask then the logon page may be t
 that is not required then you may want to change the server, username, password or token. This can be done in settings. Select:
 
 #.  **Menu**
-#.  **General Settings**
+#.  **Settings**
 #.  **Server**
 
 You can then change your logon details in the same way you set them on the logon page.
@@ -241,10 +241,9 @@ list cannot be swiped.
 FieldTask Settings
 ------------------
 
-There are many settings that you can configure on the device using **Menu** and **General Settings**. Many of these can
+There are many settings that you can configure on the device using **Menu** and **Settings**. Many of these can
 also be specified on the server (:ref:`mobile-device-settings`).  Settings specified on the server override the settings
 on every device.
 
-.. note::
-
-  While completing a survey the settings menu item is labelled **Project settings**.
+The same settings can be reached while completing a survey by selecting **Menu** and then **Settings**. The one exception is the app
+language, under **User Interface**, which cannot be changed while a survey is open.

@@ -22,7 +22,7 @@ Guidance
 --------
 
 Longer help can be placed in the **guidance_hint** column.  The phone user can then control when they see the 
-guidance.  They do this in FieldTask by selecting **menu** then **General Settings** then **Form Management**.  Then under 
+guidance.  They do this in FieldTask by selecting **menu** then **Settings** then **Form Management**.  Then under
 "Show guidance for questions" they can select one of:
 
 *  No

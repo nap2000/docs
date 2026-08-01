@@ -31,5 +31,5 @@ The second column ``device identifier`` contains the globally unique identifier 
 identifier by:
 
 #.  Ensuring that the "Enable user and identify menu" option in :ref:`mobile-device-settings` is checked. If it wasn't set then set it and press ``refresh`` in FieldTask
-#.  In FieldTask select ``menu`` then ``General Settings`` then ``User and device identity`` then ``Form metadata``
+#.  In FieldTask select ``menu`` then ``Settings`` then ``User and device identity`` then ``Form metadata``
 #.  The device identifier will be shown on the screen

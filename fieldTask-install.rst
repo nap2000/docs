@@ -72,7 +72,7 @@ FieldTask should now install.
 4. Minimal Configuration
 ------------------------
 
-To start using FieldTask you will need to go to then menu and then "General Settings" to set
+To start using FieldTask you will need to go to the menu and then "Settings" to set
 
 *  The URL of the server
 *  Your username

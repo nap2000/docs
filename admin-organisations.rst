@@ -110,7 +110,7 @@ Using FieldTask
 +++++++++++++++
 
 If you have FieldTask version 6.300 or higher then you can select a new organisation from inside the app without having to log on to the server
-using a browser.  Select the **General Settings** menu and then **Form Management**.  You can then select the **Organization** option.
+using a browser.  Select the **Settings** menu and then **Form Management**.  You can then select the **Organization** option.
 
 .. figure::  _images/organisations1.jpg
    :align: center
