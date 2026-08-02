@@ -246,4 +246,59 @@ also be specified on the server (:ref:`mobile-device-settings`).  Settings speci
 on every device.
 
 The same settings can be reached while completing a survey by selecting **Menu** and then **Settings**. The one exception is the app
-language, under **User Interface**, which cannot be changed while a survey is open.
+language, under **User interface**, which cannot be changed while a survey is open.
+
+The settings page has five sections.
+
+Server
+++++++
+
+The details used to log on to the server. These are the same values that you can set on the logon page.
+
+*  **URL**. The address of your server
+*  **Username** and **Password**
+*  **Use a token to access the server**. Select this to log on with a QR code instead of a password. The server can force this option
+   on, in which case it cannot be unselected
+*  **Scan QR code** and **Authentication Token**. Shown when the token option is selected
+
+User interface
+++++++++++++++
+
+*  **Language**. The language used by the app itself. This is separate from the survey language, which is changed from the menu while
+   completing a survey. It cannot be changed while a survey is open
+*  **Text font size**
+*  **Navigation**. Whether you move between questions by swiping, by using the forward and back buttons, or both
+
+Maps
+++++
+
+*  **Basemap**. The **Source** of the map, such as Google or Mapbox, and the style of map shown for that source
+*  **Offline layers**. Select a **Layer** file to show over the basemap. This is useful where there is no network coverage in the field
+
+Form management
++++++++++++++++
+
+*  **Organization**. Move the device to another organisation without logging on to the server using a browser (:doc:`admin-organisations`)
+*  **Form submission**
+
+   *  **Auto send**. Send completed surveys to the server automatically, rather than waiting for a refresh
+   *  **Delete after send**. Remove instances from the device once they have been sent
+
+*  **Form filling**
+
+   *  **Constraint processing**. Whether constraints are validated as you move forward through the survey, or deferred until the
+      survey is finalized
+   *  **High res video**
+   *  **Image size**. Reduce the size of images to save space and upload time
+   *  **Show guidance for questions**. How guidance hints are shown (:doc:`xls-hints`)
+   *  **Use external app for audio recording**
+
+User and device identity
+++++++++++++++++++++++++
+
+*  **Form metadata**. The username, phone number and email that you can set yourself, and the device identifier set by the phone. These
+   values are recorded with each submission (:doc:`admin-mobiles`)
+
+.. note::
+
+  FieldTask does not collect usage data. Crash reports are still sent so that faults in the app can be diagnosed.
