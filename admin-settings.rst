@@ -169,6 +169,15 @@ Mobile media
    on the server. The image will be scaled according to this setting, so if the image on the phone is 2,000 by 1,000 pixels and you set a value here of
    **500** then the submitted image will be 500 by 250 pixels.
 
+Offline maps
+++++++++++++
+
+*  Manage offline map layers on the server. When set, FieldTask downloads the offline map layers belonging to the projects a
+   user has access to (:ref:`offline-maps`). The user chooses which of those layers is displayed, and cannot delete one that
+   came from the server, but they can still add their own layers on the phone. This setting applies to every user in the
+   organisation, so leaving the manual option available means someone who needs a layer larger than the 500 MB upload limit
+   is not blocked.
+
 Mobile tracking
 +++++++++++++++
 

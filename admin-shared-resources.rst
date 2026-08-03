@@ -13,6 +13,7 @@ Shared resources are made available to all surveys in an organisation.  They con
 *  Images, Video, Audio that can be included in questions and choices
 *  Spreadsheets that contain reference data accessed using the search() function and the pulldata() function
 *  Maps used on the server for analysis
+*  Offline map layers that are downloaded by FieldTask
 *  Locations
 
 Spreadsheets
@@ -58,6 +59,54 @@ above.
    :alt:     Dialog for adding a shared map
 
    Add Map Dialog
+
+.. _offline-maps:
+
+Offline Maps
+------------
+
+Select the **Offline Maps** tab.
+
+Offline map layers are mbtiles files that FieldTask shows over the basemap when there is no network coverage in the
+field.  Rather than copying the file onto each device by hand, you upload it here, choose which projects need it, and
+FieldTask downloads it the next time each device refreshes.
+
+To use this you must first select **Manage offline map layers on the server** in the Mobile App Options tab
+(:ref:`mobile-device-settings`).  The phone user chooses which of the layers they have been given is displayed, and a
+layer that came from the server can only be removed by unassigning it here.  They can still add their own layers on the
+device as before, which is the only way to load a file that is too large to upload here.
+
+To add a layer press the **Add Offline Map** button and then:
+
+*  Give the layer a **name**.  This is the name the phone user sees, and it must be unique within your organisation
+*  Add a **description** if it helps your administrators
+*  Select the **mbtiles file**.  Files of up to 500 MB are accepted
+*  Tick the **projects** that should get this layer
+
+The upload shows a progress bar as these files are large.  To replace a layer, edit it and select a new file.  Devices
+notice that the file has changed and download the new version.  If you only want to change the name, description or which
+projects get the layer then leave the file empty.
+
+Layers are assigned to projects rather than to individual users.  Everybody with access to a selected project gets the
+layer, in the same way that they get the surveys in that project.  A user in more than one project that has been given
+the same layer still only downloads it once.  If one person needs a layer, give it to a project that only they have
+access to.
+
+Checking that devices have the layer
+++++++++++++++++++++++++++++++++++++
+
+The **Devices** column counts the devices that have told the server they hold the current version of a layer.  Devices
+report this each time they refresh, so use it to confirm that a field team has its maps before they go out of coverage.
+
+The count only includes devices holding the **current** version.  If you replace a layer the count drops back and climbs
+again as devices download the new file.
+
+.. note::
+
+  These files are large and field devices are often on a poor or expensive connection.  A device only downloads a layer
+  automatically when it has wifi.  A download interrupted part way through resumes from where it stopped rather than
+  starting again, and a layer already on the device is never fetched twice.  A phone user who needs a layer sooner can
+  start the download over mobile data from **Settings** then **Maps** in FieldTask.
 
 Locations
 ---------

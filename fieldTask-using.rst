@@ -274,6 +274,16 @@ Maps
 
 *  **Basemap**. The **Source** of the map, such as Google or Mapbox, and the style of map shown for that source
 *  **Offline layers**. Select a **Layer** file to show over the basemap. This is useful where there is no network coverage in the field
+*  **Layers from the server**. Only shown when your administrator supplies the layers (:ref:`offline-maps`). It reports how
+   many of the layers assigned to you are on the device. They download on their own when the device has wifi, select this to
+   download them over mobile data instead
+
+.. note::
+
+  Layers supplied by the server appear in the list alongside any you have added yourself, and you choose which one to
+  show. A layer from the server has no delete button, as it would only be downloaded again on the next refresh; ask your
+  administrator to unassign it instead. You can still add your own layers in the usual way. If you have not chosen a layer
+  yourself then the first one to download is selected for you, so the map starts working without you having to do anything.
 
 Form management
 +++++++++++++++
