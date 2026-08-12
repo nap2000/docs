@@ -65,6 +65,8 @@ above.
 Offline Maps
 ------------
 
+Requires SmapServer 26.08+.
+
 Select the **Offline Maps** tab.
 
 Offline map layers are mbtiles files that FieldTask shows over the basemap when there is no network coverage in the
@@ -92,13 +94,56 @@ layer, in the same way that they get the surveys in that project.  A user in mor
 the same layer still only downloads it once.  If one person needs a layer, give it to a project that only they have
 access to.
 
-Checking that devices have the layer
-++++++++++++++++++++++++++++++++++++
+Creating an mbtiles file
+++++++++++++++++++++++++
 
-The **Devices** column counts the devices that have told the server they hold the current version of a layer.  Devices
+An mbtiles file holds a set of map tiles in a single file.  Smap does not create these files, you make
+them from your own map data before uploading them here.
+
+`QGIS <https://qgis.org>`_ can do this without any extra plugins.  Load the layers you want, then select
+**Processing**, **Toolbox**, **Raster tools**, **Generate XYZ tiles (MBTiles)**.  Set the extent to the
+area your field teams work in and choose the range of zoom levels you need.
+`MapTiler <https://www.maptiler.com/>`_ will also produce these files.  If you already use GDAL then::
+
+  gdal_translate -of MBTILES myimage.tif mylayer.mbtiles
+  gdaladdo -r average mylayer.mbtiles 2 4 8 16
+
+Keep both the area and the range of zoom levels as small as you can.  Each additional zoom level roughly
+quadruples the number of tiles, and the whole file has to be downloaded onto every phone that needs it.
+
+Raster and vector layers
+++++++++++++++++++++++++
+
+An mbtiles file contains either raster tiles, which are images, or vector tiles, which are shapes and
+their attributes.  To check which you have look at the format recorded in the file::
+
+  sqlite3 mylayer.mbtiles "select value from metadata where name = 'format';"
+
+A value of **png** or **jpg** is a raster layer.  A value of **pbf** is a vector layer.
+
+Use raster layers wherever you can.  They are shown whichever basemap the phone user has chosen, and they
+look on the phone the way they looked when you created them.
+
+Vector layers are much more limited:
+
+*  They are only drawn when the phone user has selected **Mapbox** as their basemap.  With Google or
+   OpenStreetMap selected the layer is ignored
+*  They are drawn without any styling.  FieldTask cannot tell that one shape is a road and another is a
+   river, so every layer inside the file is drawn as thin lines in a colour chosen automatically from the
+   layer name.  Areas appear as outlines rather than filled, and there are no place names
+
+Vector files are considerably smaller than the equivalent raster ones, which is worth having when a team
+is downloading over a poor connection.  Against that, a vector layer is only useful for showing something
+simple over the basemap, such as a boundary or a set of plot outlines.  It will not look like a map.  If
+your field teams need a readable map where there is no coverage, supply it as raster.
+
+Checking that devices have the offline map
+++++++++++++++++++++++++++++++++++++++++++
+
+The **Devices** column counts the devices that have told the server they hold the current version of an offline map.  Devices
 report this each time they refresh, so use it to confirm that a field team has its maps before they go out of coverage.
 
-The count only includes devices holding the **current** version.  If you replace a layer the count drops back and climbs
+The count only includes devices holding the **current** version.  If you replace an offline map the count drops back and climbs
 again as devices download the new file.
 
 .. note::
