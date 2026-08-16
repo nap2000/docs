@@ -274,9 +274,10 @@ Maps
 
 *  **Basemap**. The **Source** of the map, such as Google or Mapbox, and the style of map shown for that source
 *  **Offline layers**. Select a **Layer** file to show over the basemap. This is useful where there is no network coverage in the field
-*  **Layers from the server**. Only shown when your administrator supplies the layers (:ref:`offline-maps`). It reports how
+*  **Layers from the server**. (Requires FieldTask 5.3.01+ and the server must have a version of 26.08+) Only shown when your administrator
+   supplies the layers (:ref:`offline-maps`). It reports how
    many of the layers assigned to you are on the device. They download on their own when the device has wifi, select this to
-   download them over mobile data instead
+   download them over mobile data instead.
 
 .. note::
 

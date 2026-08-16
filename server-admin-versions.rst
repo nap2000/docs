@@ -6,6 +6,23 @@ Application Change History
 .. contents::
  :local:
 
+26.07.02
+--------
+
+`Download 26.07.02 <https://smap-code.s3.us-east-1.amazonaws.com/os_smap_26_07_02_2671.tgz>`_
+
+#.  Remove the legacy sdDataAccess module and move its remaining functionality into sdDAL
+#.  Fix user structure report so that it reports on enterprise and organisational administrators
+#.  Reduce the number of database access calls per webservice requests that are used for authorisation and to get user details
+#.  Fix an unresponsive button on some opt in emails
+#.  Move common code to shared libraries in Tomcat
+#.  Add logging of changes to notifications
+#.  Read report media using the S3 SDK and not over HTTP, improving performance and eliminating authorisation errors when embedding media in a report
+#.  Fix issues with automatic camera and location opening on mobile devices when using WebForms
+#.  Make the user assign select in notifications a combo button
+#.  Open tasks in WebForm by instanceid instead of primary key
+
+
 26.06.12
 --------
 
