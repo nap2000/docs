@@ -63,6 +63,7 @@ Geospatial
   Data is stored in PostGIS; a PostgresSQL database with geospatial extensions,
   :ref:`Point; Line and Area type location data can be collected<locations>`,
   :ref:`Specify custom base maps when visualising location data on the server<shared-maps>`,
+  :ref:`Upload offline map layers once and have FieldTask download them to the devices in the projects you choose<offline-maps>`, FieldTask 5.3.01 - SmapServer 26.08
 
 Analysis
 --------
