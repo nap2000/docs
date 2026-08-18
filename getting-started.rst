@@ -42,30 +42,12 @@ that you can access via the menu bar.
 Your Profile
 ++++++++++++
 
-On all screens the first menu option will be for your user profile. 
+On all screens the menu at the right hand end of the menu bar, shown as a person icon, holds your own
+settings.  From it you can set your name, language, email address and time zone, change your password,
+turn on :ref:`two-factor-authentication`, manage your :ref:`API tokens <user-profile-api-key>` and sign
+out.
 
-
-.. figure::  _images/profile.jpg
-   :align:   center
-   :width:   300px
-   :alt:     User Profile
-   
-   User Profile
-   
-Here you can set your:
- 
-*  Name.  Note this is not the identifier that you use to logon with
-*  Language.  The language of the server.  English, Spanish, French, Hindi, Arabic, Portuguese with the
-   first two being most complete.  If you want to contribute to translating the server into additional
-   languages then contact support.
-*  Your email address.  You will need this if you ever have to reset your password.
-*  Organisation. You may have access to multiple organisations in which case you can select the one you want
-   use here. 
-*  Enterprise.  A higher level of compartmentalisation than organisation.
-*  Time Zone.  Specify the time zone you want to use to view data in and for reports.
-*  Change your password.
-*  Logout.  Logout of your account.  Note if you are using Firefox you will also need to close Firefox in order to complete
-   the logout.
+:ref:`user-profile` describes each of these.
 
 Selecting a Project
 +++++++++++++++++++

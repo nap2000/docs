@@ -38,6 +38,7 @@ iteration, better decisions, and greater program impact.
   :hidden:
 
   getting-started.rst
+  user-profile.rst
   applications.rst
   integration.rst
   features.rst

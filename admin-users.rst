@@ -1,3 +1,5 @@
+.. _admin-users:
+
 Users
 =====
 
@@ -28,6 +30,7 @@ You can filter on:
 *  Projects
 *  Roles
 *  Organisations
+*  Two factor authentication - see :ref:`admin-security-two-factor`
 
 Add User
 --------
@@ -172,8 +175,8 @@ the system.
 Managing Users FieldTask Logon tokens
 -------------------------------------
 
-Users of fieldTask can logon using a token.  They can scan this token from a QR code that is displayed on the user management page.
-Users that have the "enumerator" security group will have a QR code button next to their name.you
+Users of FieldTask can sign in with a token instead of a password, by scanning a QR code shown on the user
+management page.  Users with the "enumerator" security group have a QR code button next to their name.
 
 .. figure::  _images/ftLogin3.png
    :align:   center
@@ -181,11 +184,19 @@ Users that have the "enumerator" security group will have a QR code button next 
 
    Button to show QR Code
 
-   The administrator can create, delete or refresh tokens.  Deleting or refreshing a token will prevent the existing users that have the
-   token from connecting via fieldTask and they will need to re-scan the token.
+Press the button to see whether the user already has a token, and to issue one.
 
-   .. figure::  _images/ftLogin4.png
-      :align:   center
-      :alt:     Popup showing QR Code
+.. figure::  _images/ftLogin4.png
+   :align:   center
+   :alt:     Popup showing QR Code
 
-      QR Code to Scan
+   QR Code to Scan
+
+.. warning::
+
+  The QR code can only be scanned while it is on screen.  The server keeps only a hash of the token and
+  cannot display it again, so re-opening the dialog later shows that a token exists but not what it is.
+  Have the device to hand before creating one.
+
+Creating a token withdraws any the user already had, as does deleting one.  In either case a device
+holding the old token stops being able to connect and has to scan the new code.

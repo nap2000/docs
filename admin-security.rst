@@ -53,6 +53,46 @@ following table shows sample password values and their strength;
 
   All of the above example passwords have been blocked from use if password strength is set above 0
 
+.. _admin-security-two-factor:
+
+Two Factor Authentication
+-------------------------
+
+Users can choose to protect their account with a code from an authenticator app in addition
+to their password.  It is set up by each user from their own profile menu, and
+:ref:`two-factor-authentication` describes how.
+
+There is no organisation wide setting to require it.
+
+Seeing who has it
++++++++++++++++++
+
+The user management page has a column showing which users have two factor authentication
+turned on, and a filter above the list so you can show only those who have it or only those
+who do not.  The exported user spreadsheet includes the same column.  Importing a
+spreadsheet never changes it, so two factor authentication cannot be turned on or off in
+bulk.
+
+Turning it off for a user
++++++++++++++++++++++++++
+
+There are no recovery codes, so a user who has lost the phone their authenticator was on
+needs an administrator to turn it off for them.  A button against the user in user
+management does this.  Only administrators and organisational administrators can use it, and
+only for users in their own organisation.
+
+The user then signs in with their password alone and may set it up again against a new phone
+whenever they choose.  They are not prompted to.
+
+Enrolment, removal, failed codes and administrator resets are all recorded in the
+:ref:`logs`.
+
+.. warning::
+
+  Two factor authentication applies to the web console only.  FieldTask and the API
+  authenticate with a password or a token and are unaffected.  A password that may have been
+  exposed still needs to be changed.
+
 .. _html-sanitisation:
 
 Sanitisation of WebForm HTML
