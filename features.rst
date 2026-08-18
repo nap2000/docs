@@ -108,6 +108,8 @@ Security
   :ref:`rbac`
   :ref:`security-groups`
   :ref:`password-strength`, 22.04
+  :ref:`Optional two factor authentication using any standard authenticator app<two-factor-authentication>`, 26.08
+  :ref:`Named API tokens that can be given an expiry and revoked individually<user-profile-api-key>`, 26.08
   :ref:`html-sanitisation`, 23.02
   :ref:`delete-restore`
   :ref:`logs`
