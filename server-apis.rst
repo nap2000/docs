@@ -19,8 +19,8 @@ There are 2 versions of the API:
 Version 2
 +++++++++
 
-Version 2 is available with Smap Server version 24.05.  The API key can be found by selecting the user profile menu option which
-has the head and shoulders icon.
+Version 2 is available with Smap Server version 24.05.  API keys are managed from the user profile menu,
+the one with the head and shoulders icon.
 
 .. figure::  _images/userprofile.png
    :align:   center
@@ -29,11 +29,32 @@ has the head and shoulders icon.
 
    API Key menu item
 
-Then select the menu item "API Key" and then "Create API key".  The generated key should then be copied and added as a
-header called "x-api-key" in your API request.
+Select the menu item "API Key".  Give the key a name saying what it is for, choose how long it should last -
+90 days, 365 days, or Never - and press "Create API key".  The key is displayed once, at that moment.  Copy it
+straight away and send it as a header called "x-api-key" on your API requests.  The server keeps only a hash of
+the key, so it cannot be shown again; a key that has been lost is replaced, not recovered.
 
-You can replace the API key at any time.  Only one key can be active at a time so API requests will start to fail if you replace or
-delete a key without updating the headers on your requests.
+.. figure::  _images/v2key.png
+   :align:   center
+   :width: 	 500px
+   :alt:     The API key dialog, showing a newly created key at the top and the list of keys already held below
+
+   Creating an API key
+
+From Smap Server version 26.08 you can hold several keys at once, each with its own expiry.  Give a separate
+key to each program that calls the API, and you can withdraw one without disturbing the others.
+
+The dialog lists the keys you already hold, showing the name, the first few characters of the key, when it was
+created, when it expires and when it was last used, with a "Revoke" button against each.  Revoking takes effect
+immediately.  An expired key stops working on its own, so a program using one starts getting 401 responses -
+create a replacement and update the program's headers before the old key runs out.
+
+.. figure::  _images/v2key.png
+   :align:   center
+   :width: 	 500px
+   :alt:     A dialog showing existing keys and a new key that has just been created
+
+   API Key Dialog
 
 Not all V1 API entry points may have also been converted to V2.  If V2 is supported it will be mentioned in the documentation.
 

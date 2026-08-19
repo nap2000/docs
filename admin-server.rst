@@ -95,6 +95,8 @@ per module, per minute. The API services currently managed by this limit are:
 
 *  /api/v1/data
 *  /api/v1/data.csv
+*  /api/v2/data
+*  /api/v2/data.csv
 *  /surveyKPI/items
 
 Minimum Password Strength
