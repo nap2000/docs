@@ -123,6 +123,12 @@ Turning it on
    shown underneath it into the app by hand instead.
 #. Enter the six digit code the app displays and press **Turn on**.
 
+.. figure::  _images/2fa.png
+   :align:   center
+   :alt:     The add 2 factor authentication dialog open showing a QR code that can be scanned by an authenticator app
+
+   Add two factor authentication
+
 The entry the app creates is labelled with the name of the server, so if you use more than
 one Smap server you can tell them apart.
 

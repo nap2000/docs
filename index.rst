@@ -38,12 +38,12 @@ iteration, better decisions, and greater program impact.
   :hidden:
 
   getting-started.rst
-  user-profile.rst
   applications.rst
   integration.rst
   features.rst
   fieldTask.rst
   webforms.rst
+  user-profile.rst
   surveys.rst
   admin.rst
   analysis.rst

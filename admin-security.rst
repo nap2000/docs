@@ -89,7 +89,7 @@ Enrolment, removal, failed codes and administrator resets are all recorded in th
 
 .. warning::
 
-  Two factor authentication applies to the web console only.  FieldTask and the API
+  Two factor authentication applies to the web client only.  FieldTask and the API
   authenticate with a password or a token and are unaffected.  A password that may have been
   exposed still needs to be changed.
 
