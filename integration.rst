@@ -409,8 +409,9 @@ DHIS2 organisation units as a shared resource
 +++++++++++++++++++++++++++++++++++++++++++++
 
 The organisation unit hierarchy can be cached in Smap and used as reference data in any survey
-in the organisation, in the same way as any other shared resource.  The cache is downloaded to
-Field Task, so the hierarchy is available offline.
+in the organisation, in the same way as any other shared resource.  Set this up on
+**Admin** then **Shared Resources**, on the **DHIS2** tab.  The cache is downloaded to Field
+Task, so the hierarchy is available offline.
 
 The hierarchy is flattened as it is read, because a cascading select cannot walk a tree on the
 device.  Each row describes one organisation unit and carries its ancestors as ordinary
@@ -445,35 +446,42 @@ columns, so a cascading select is a normal choice filter.
 Setting up the synchronisation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Each synchronisation is described by the following settings.
+Go to **Admin** then **Shared Resources** and select the **DHIS2** tab.  Set up the DHIS2
+connection on the settings page first, see :ref:`dhis2-connection`.
+
+You can add, edit or delete resources.  Adding and editing open a dialog that allows you to
+set:
 
 .. list-table::
    :header-rows: 1
    :widths: 30 70
 
-   * - Setting
+   * - Field
      - Description
-   * - Resource name
+   * - Resource Name
      - The internal name used to reference the data in forms.  Forms refer to this resource
-       as ``dhis2_<resource-name>``.  It must not contain spaces.
-   * - Resource type
-     - ``orgunits``.  Option sets and programs are planned for a later release.
-   * - Organisation unit filter
-     - Optional.  The identifier of an organisation unit, to synchronise only that subtree
-       rather than the whole hierarchy.
-   * - Refresh interval (minutes)
+       as ``dhis2_<resource-name>``.  It must not contain spaces.  The dialog shows the full
+       name a form will use as you type.
+   * - Filter
+     - Optional.  The identifier of an organisation unit, to copy only that part of the
+       hierarchy rather than all of it.
+   * - Refresh (mins)
      - How often the cache is refreshed.  Default 1440, a day, which suits metadata that
        changes slowly.
    * - Enabled
-     - Suspends synchronisation without deleting the setting.
+     - Suspends synchronisation without deleting the resource.
+
+Click **Sync Now** to copy the data immediately rather than waiting for the next refresh.
+
+The table shows how many rows each resource holds and when it was last synchronised.  Where a
+synchronisation failed, the reason is shown beneath the time, because the usual causes are
+ones you can act on: no DHIS2 connection set up, a token that has expired, or a filter that
+matches no organisation units.
 
 .. note::
 
-   In this release the synchronisation is configured through the server API.  An
-   administration page will follow.  The endpoints are ``/surveyKPI/dhis2/maps`` for the
-   list and for adding a resource, and ``/surveyKPI/dhis2/maps/<id>/sync`` to refresh one
-   immediately.  A refresh that fails returns the reason, which is also recorded against
-   the resource.
+   Only the organisation unit hierarchy can be copied in this release, so there is no type to
+   choose.  Option sets and programs are planned for a later release.
 
 Limiting the hierarchy
 ~~~~~~~~~~~~~~~~~~~~~~
