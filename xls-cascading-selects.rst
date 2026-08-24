@@ -1,3 +1,5 @@
+.. _xls-cascading-selects:
+
 Choice Filters and Cascading Selects
 ====================================
 

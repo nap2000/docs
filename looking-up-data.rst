@@ -132,6 +132,22 @@ advance.
 
 For details of how to connect a SharePoint server and publish a list as a shared resource see :ref:`sharepoint-shared-resources`.
 
+.. _looking-up-data-dhis2:
+
+Using DHIS2 Data as the Source
+-------------------------------
+
+Reference data synchronised from DHIS2 is used the same way.  Refer to it as ``dhis2_`` followed by the resource name.  The most useful is the
+organisation unit hierarchy, which arrives flattened so that each row carries its ancestors as ordinary columns::
+
+  search('dhis2_orgunits', 'matches', 'district_code', ${district})
+  pulldata('dhis2_orgunits', 'name', 'code', ${facility_code})
+
+Store the DHIS2 ``code`` rather than the name.  It does not change when a facility is renamed, and it is what DHIS2 expects if the data is later
+sent back to it.
+
+For details of how to connect a DHIS2 instance and synchronise its reference data see :ref:`dhis2-org-units`.
+
 Looking up Choices
 ------------------
 

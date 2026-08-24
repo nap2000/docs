@@ -203,6 +203,21 @@ This tab allows customisation of WebForm appearance:
 *  The WebForm banner logo.
 *  Hiding the "save as draft" checkbox.
 
+DHIS2
+-----
+
+Requires SmapServer v26.09
+
+This tab holds the connection to a DHIS2 instance.  One connection is held per organisation, so
+a test instance should be set up in its own organisation.
+
+From here you can set the DHIS2 URL and personal access token, optionally pin the API version,
+and test the connection.  The test reports the DHIS2 version, the user the token belongs to and
+how many organisation units that user can capture data for, so a connection that authenticates
+but cannot do anything useful is apparent before it is relied on.
+
+For the full description, including how to prepare the token in DHIS2, see :ref:`dhis2-connection`.
+
 Other
 -----
 

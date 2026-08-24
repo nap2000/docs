@@ -113,6 +113,25 @@ In /etc/default/tomcat[x] or ``setenv.sh`` (for Ubuntu 24.04+)::
 
   JAVA_OPTS="-Djava.awt.headless=true -Xms4096m -Xmx4096m"
 
+Loading large reference data files
+----------------------------------
+
+Requires SmapServer v26.09
+
+Shared resource CSV files, including data synchronised from SharePoint and DHIS2, are loaded
+into the database a batch at a time inside a single transaction.  A load that fails part way
+therefore leaves the previous data in place, rather than a partly filled table that lookups
+would quietly read as though it were complete.
+
+Batched inserts are considerably faster when the PostgreSQL driver is allowed to combine them.
+Add ``reWriteBatchedInserts=true`` to the URL of both data sources in ``context.xml``::
+
+  url="jdbc:postgresql://127.0.0.1:5432/survey_definitions?reWriteBatchedInserts=true"
+  url="jdbc:postgresql://127.0.0.1:5432/results?reWriteBatchedInserts=true"
+
+New installations pick this up automatically.  **Existing servers need it added by hand**, as
+``context.xml`` is not replaced by an upgrade.  Loading works without it, only more slowly.
+
 Configuring for a remote database
 ---------------------------------
 
