@@ -1,3 +1,5 @@
+.. _online-choices:
+
 Choices
 =======
 

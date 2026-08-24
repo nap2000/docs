@@ -143,8 +143,12 @@ organisation unit hierarchy, which arrives flattened so that each row carries it
   search('dhis2_orgunits', 'matches', 'district_code', ${district})
   pulldata('dhis2_orgunits', 'name', 'code', ${facility_code})
 
-Store the DHIS2 ``code`` rather than the name.  It does not change when a facility is renamed, and it is what DHIS2 expects if the data is later
-sent back to it.
+A DHIS2 option set can be used the same way, as the choice list for a question::
+
+  search('dhis2_referral_reasons')
+
+Store the DHIS2 ``code`` rather than the name.  It does not change when a facility or an option is relabelled, and it is what DHIS2 expects if the
+data is later sent back to it.
 
 For details of how to connect a DHIS2 instance and synchronise its reference data see :ref:`dhis2-org-units`.
 

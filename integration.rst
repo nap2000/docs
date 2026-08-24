@@ -458,13 +458,19 @@ set:
 
    * - Field
      - Description
+   * - Type
+     - **Organisation units** for the hierarchy, or **Option set** for a single DHIS2 option
+       set.
    * - Resource Name
      - The internal name used to reference the data in forms.  Forms refer to this resource
        as ``dhis2_<resource-name>``.  It must not contain spaces.  The dialog shows the full
        name a form will use as you type.
+   * - Option set
+     - For an option set resource only.  Chosen from the option sets on your DHIS2 instance,
+       so you do not need to know an identifier.
    * - Filter
-     - Optional.  The identifier of an organisation unit, to copy only that part of the
-       hierarchy rather than all of it.
+     - For an organisation unit resource only.  Optional.  The identifier of an organisation
+       unit, to copy only that part of the hierarchy rather than all of it.
    * - Refresh (mins)
      - How often the cache is refreshed.  Default 1440, a day, which suits metadata that
        changes slowly.
@@ -480,8 +486,39 @@ matches no organisation units.
 
 .. note::
 
-   Only the organisation unit hierarchy can be copied in this release, so there is no type to
-   choose.  Option sets and programs are planned for a later release.
+   Organisation units and option sets can be copied.  Programs are planned for a later release.
+
+.. _dhis2-option-sets:
+
+DHIS2 option sets as choice lists
++++++++++++++++++++++++++++++++++
+
+A DHIS2 option set can be copied and used as the choice list for a question, so that a form
+offers the client's own coded values rather than a separately maintained list.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30 70
+
+   * - Column
+     - Description
+   * - ``code``
+     - The DHIS2 option code.  This is the value to store in the form, because it is what
+       DHIS2 expects and it does not change when an option is relabelled.
+   * - ``name``
+     - The label to show to the user.
+   * - ``uid``
+     - The DHIS2 identifier of the option.
+   * - ``sortby``
+     - The order the options are held in within DHIS2.  Smap orders choices by a column of
+       this name automatically, so the list appears in the same order as it does in DHIS2.
+
+Use it in a form the same way as any other shared resource::
+
+   search('dhis2_referral_reasons')
+
+See :ref:`looking-up-data` for the ``search()`` function and :ref:`online-choices` for
+building a choice list from a shared resource.
 
 Limiting the hierarchy
 ~~~~~~~~~~~~~~~~~~~~~~
