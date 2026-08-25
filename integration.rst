@@ -292,13 +292,10 @@ It is built for aggregation, indicators and reporting.  Smap is built for case m
 assigning work to field staff, following it up and closing it, offline.  The two solve
 different halves of the same problem and work better connected.
 
-Smap can use reference data held in DHIS2, so that a form collects against the client's own
-organisation unit hierarchy rather than a separately maintained copy that drifts out of step.
-
-.. note::
-
-   Writing submission data back to DHIS2 as aggregate data values is planned for a later
-   release.  This release covers reference data coming from DHIS2 into Smap.
+Data moves in both directions.  Smap can use reference data held in DHIS2, so that a form
+collects against the client's own organisation unit hierarchy rather than a separately
+maintained copy that drifts out of step, and it can send submission data back to DHIS2 as
+aggregate data values.
 
 .. _dhis2-prepare:
 
@@ -338,7 +335,11 @@ the following, all of which cause the connection to be refused with a 401 if set
    * - Setting
      - Guidance
    * - Allowed HTTP methods
-     - **GET** must be permitted.  Smap reads metadata from DHIS2.
+     - **GET** must be permitted, for reading reference data.  **POST** is also required if
+       data is to be sent back to DHIS2.  A token allowing only GET reads metadata perfectly
+       well and then fails on export with
+       *Failed to authenticate API token, request http method is not allowed*, which looks
+       like a rejected token rather than a restricted one.
    * - Allowed IP addresses
      - Leave empty unless you have a reason not to.  DHIS2 validates the address from the
        ``X-Forwarded-For`` header, which a direct connection from the Smap server does not
@@ -566,3 +567,79 @@ and :ref:`xls-cascading-selects` for cascading selects.
 
    Store the DHIS2 ``code`` rather than the name.  It is what DHIS2 expects when data is sent
    back to it, and it does not change when a facility is renamed.
+
+.. _dhis2-export:
+
+Sending data to DHIS2
++++++++++++++++++++++
+
+Submissions can be sent to DHIS2 as aggregate data values, so that a monthly total collected
+in the field appears in the ministry's own reporting without anyone exporting a spreadsheet.
+
+An export belongs to a **survey bundle** rather than to a single survey, because the surveys
+in a bundle share data tables, so a question name means the same thing across all of them.  It
+is set up on the bundle settings page.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30 70
+
+   * - Field
+     - Description
+   * - Data set
+     - The DHIS2 data set the values are written to, chosen from your instance.
+   * - Period type
+     - Monthly, Weekly, Quarterly, Yearly or Daily.  Match the data set.
+   * - Period question
+     - The question supplying the reporting period.  Leave blank to use the time the
+       submission was uploaded.
+   * - Organisation unit question
+     - The question holding the DHIS2 organisation unit code.  Use a question whose choices
+       come from a synchronised organisation unit resource, so the code is certain to resolve.
+
+Each value is then mapped from a question to a DHIS2 data element:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 75
+
+   * - Setting
+     - Description
+   * - Question
+     - The Smap question the number comes from.
+   * - Aggregation
+     - **Sum** totals the answers for the period and organisation unit.  **Count** counts the
+       submissions.  **One** takes a single value where one submission is one report.
+   * - Data element
+     - The DHIS2 data element code.
+   * - Category option combo
+     - Only needed where the data element is disaggregated.  Leave blank for a data element
+       using the default category combination.
+
+Always run a **dry run** first.  DHIS2 validates everything and reports what it would do
+without storing anything, which is the only safe way to check a mapping before it writes into
+a reporting system.
+
+.. note::
+
+   Re-sending a period corrects it rather than duplicating it.  A DHIS2 data value is keyed by
+   data element, period, organisation unit and category option combination, so submissions that
+   arrive late are handled by exporting the period again.
+
+.. note::
+
+   Values are visible in DHIS2 data entry immediately, but will not appear in dashboards or
+   pivot tables until DHIS2 next generates its analytics tables.  That is DHIS2 working as
+   designed rather than the export failing, and it is the first question everyone asks.
+
+What the aggregation can and cannot do
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Counting and summing are deliberate limits.  DHIS2 has indicators, program indicators and
+predictors of its own, so the useful division of labour is to send it the smallest raw numbers
+and let it derive the rest.
+
+This means a form that collects **totals**, one report per facility per period, maps directly.
+A form that collects **one submission per case** can have its submissions counted, but cannot
+yet count only those with a particular answer, so it cannot fill a data element such as
+"malaria deaths" from a ``cause_of_death`` question.  Conditional counts are planned.
