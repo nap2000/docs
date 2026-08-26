@@ -632,6 +632,50 @@ a reporting system.
    pivot tables until DHIS2 next generates its analytics tables.  That is DHIS2 working as
    designed rather than the export failing, and it is the first question everyone asks.
 
+Keeping DHIS2 up to date
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Once a mapping has been proved with a dry run, there are two ways to keep DHIS2 in step
+without anyone pressing a button.  They are alternatives rather than companions.
+
+**Send automatically.**  Switch this on in the mapping and the export runs on its own, from
+the same background job that refreshes reference data.  Set how often it runs, and how many
+recent periods to re-send: because re-sending corrects rather than duplicates, re-sending the
+last period or two means a submission that arrives after its period closed is picked up on the
+next run without anyone acting.
+
+**Update as records change.**  Add a notification on the survey with **DHIS2** as the target.
+There is nothing to configure on the notification itself, because what is sent is set by the
+mapping.  Whenever a record is added, changed or deleted, the totals for the period and
+organisation unit that record belongs to are recalculated and sent.
+
+The second is the more immediate, and it makes several awkward cases ordinary.  A correction,
+a record deleted in the console, a bulk update, and a submission arriving weeks after its
+period closed are all the same operation: recalculate that facility and period, send it, and
+DHIS2 now agrees with Smap.
+
+.. note::
+
+   Deleting the last record for a facility and period removes the values from DHIS2 rather
+   than leaving the previous figures behind.  This happens only when a record has actually
+   changed.  A scheduled export that finds nothing leaves DHIS2 alone, because an empty result
+   is far more likely to mean a broken mapping than a genuinely empty period.
+
+Two things to expect
+~~~~~~~~~~~~~~~~~~~~
+
+**DHIS2 will show partial periods.**  If the totals are updated as records arrive, a dashboard
+read in the middle of the month shows the month so far, and the figure rises as more
+submissions come in.  That is the data being live rather than anything going wrong, but it is
+worth telling whoever reads the dashboards, because "the July number changed since I last
+looked" is otherwise a support call.
+
+**Updating on every record is one DHIS2 request per change.**  For a form receiving a few
+reports a day that is nothing.  For one receiving thousands, it is thousands of requests, and
+the scheduled export is the better choice.  A bulk update is not affected: the periods it
+touches are worked out first, so updating two hundred records in one facility and month is a
+single request.
+
 What the aggregation can and cannot do
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

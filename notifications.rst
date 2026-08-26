@@ -138,6 +138,7 @@ Notifications can be sent as:
 *  An email.
 *  An SMS.  Only if SMS has been enabled in the server settings (:ref:`admin-server`)
 *  Escalation (assignment) of a case to a user.
+*  DHIS2.  Keeps aggregate totals in DHIS2 up to date as records change.
 
 Email
 +++++
@@ -192,3 +193,15 @@ Settings are:
 
 An escalation can be accompanied by emails.  The settings are similar to the "email" target with the addition of a 
 checkbox that allows you to send the email to the assigned user
+
+DHIS2
++++++
+
+Requires SmapServer v26.09
+
+There are no settings.  Whenever a record is added, changed or deleted, the totals for the period and
+organisation unit that record belongs to are recalculated and sent to DHIS2.
+
+What is sent is set by the export mapping on the bundle, not here, so a notification is only the
+instruction to keep DHIS2 in step.  See :ref:`dhis2-export` for setting up the mapping and for what to
+expect once the totals update on their own.
