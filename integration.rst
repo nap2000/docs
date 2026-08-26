@@ -616,9 +616,26 @@ Each value is then mapped from a question to a DHIS2 data element:
      - Only needed where the data element is disaggregated.  Leave blank for a data element
        using the default category combination.
 
-Always run a **dry run** first.  DHIS2 validates everything and reports what it would do
-without storing anything, which is the only safe way to check a mapping before it writes into
-a reporting system.
+The mapping offers three actions:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 75
+
+   * - Action
+     - Description
+   * - Save
+     - Stores the mapping without sending anything.
+   * - Dry run
+     - Sends the values to DHIS2 with nothing stored.  DHIS2 validates everything and reports
+       what it would have done, which is the only safe way to check a mapping before it writes
+       into a reporting system.
+   * - Send to DHIS2
+     - Sends the values for real.  Existing values for the same periods and organisation units
+       are replaced.
+
+All three save what is on screen first, so a mapping can be adjusted and tried in one step.
+Always **dry run** before the first send.
 
 .. note::
 
@@ -632,27 +649,87 @@ a reporting system.
    pivot tables until DHIS2 next generates its analytics tables.  That is DHIS2 working as
    designed rather than the export failing, and it is the first question everyone asks.
 
+The period may not be open for data entry
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A DHIS2 data set controls how far ahead data may be entered, with a setting called **open
+future periods**.  Where it is zero, which is the usual default, only periods that have
+**ended** can be selected in the DHIS2 Data Entry app.  The month in progress cannot, so data
+sent for the current month is stored but cannot be seen there until the month closes.
+
+This matters most for a form collecting cases as they happen, because everything it sends is
+for the period in progress.  The values arrive, the Data Entry app offers only last month, and
+the export looks broken when it is working.
+
+Two ways to tell the difference:
+
+*  Ask the API instead, which is not restricted by the setting::
+
+     /api/dataValueSets?dataSet=<uid>&period=<period>&orgUnit=<uid>
+
+*  Read what the send reported.  A send that stored nothing says so.
+
+Where a data set is fed continuously from Smap rather than by a monthly form, consider setting
+**open future periods** to 1 on the data set in DHIS2 Maintenance.  The month in progress then
+becomes visible, which is what the people reading it expect.
+
+.. note::
+
+   The restriction applies to data entry, not to the import.  Sending values for a period
+   beyond the open future periods succeeds; only viewing them in the Data Entry app is
+   prevented.
+
 Keeping DHIS2 up to date
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Once a mapping has been proved with a dry run, there are two ways to keep DHIS2 in step
-without anyone pressing a button.  They are alternatives rather than companions.
-
-**Send automatically.**  Switch this on in the mapping and the export runs on its own, from
-the same background job that refreshes reference data.  Set how often it runs, and how many
-recent periods to re-send: because re-sending corrects rather than duplicates, re-sending the
-last period or two means a submission that arrives after its period closed is picked up on the
-next run without anyone acting.
+without anyone pressing a button.  They look like alternatives and are not: each covers what
+the other cannot, and **using both together is the recommended setup**.
 
 **Update as records change.**  Add a notification on the survey with **DHIS2** as the target.
 There is nothing to configure on the notification itself, because what is sent is set by the
 mapping.  Whenever a record is added, changed or deleted, the totals for the period and
 organisation unit that record belongs to are recalculated and sent.
 
-The second is the more immediate, and it makes several awkward cases ordinary.  A correction,
-a record deleted in the console, a bulk update, and a submission arriving weeks after its
-period closed are all the same operation: recalculate that facility and period, send it, and
-DHIS2 now agrees with Smap.
+This is the immediate one, and it makes several awkward cases ordinary.  A correction, a
+record deleted in the console, a bulk update, and a submission arriving weeks after its period
+closed are all the same operation: recalculate that facility and period, send it, and DHIS2
+now agrees with Smap.  It is also the only mechanism that **removes** values from DHIS2.
+
+**Send automatically.**  Switch this on in the mapping and the export runs on its own, from
+the same background job that refreshes reference data.  Set how often it runs, and how many
+recent periods to re-send.
+
+Its real value is repair rather than freshness.  A notification is sent once: if DHIS2 is
+unreachable, or the token has expired, the failure is recorded against the notification and
+that change is never sent again, leaving a stale total in DHIS2 that nothing will correct.
+The scheduled export re-sends its whole window on every run, so anything lost that way is put
+right on the next run, provided it falls within the periods being re-sent.  Re-sending
+corrects rather than duplicates, so the overlap with the notification costs a batch of
+requests and changes no data.
+
+Set **periods to re-send** wide enough to cover an outage you would not notice immediately.
+One or two periods is usually right for a monthly data set.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 34 33 33
+
+   * -
+     - Notification
+     - Scheduled
+   * - When
+     - Immediately on change
+     - Every interval
+   * - What is sent
+     - The period and organisation unit that changed
+     - Every period and organisation unit in the window
+   * - Removes values
+     - Yes
+     - No
+   * - Recovers from a failed send
+     - No
+     - Yes, within the window
 
 .. note::
 
@@ -660,6 +737,13 @@ DHIS2 now agrees with Smap.
    than leaving the previous figures behind.  This happens only when a record has actually
    changed.  A scheduled export that finds nothing leaves DHIS2 alone, because an empty result
    is far more likely to mean a broken mapping than a genuinely empty period.
+
+.. warning::
+
+   A delete is the one operation the scheduled export cannot repair.  If the notification for
+   a deleted record fails to reach DHIS2, the values stay there and no later run will remove
+   them, because the scheduled export never deletes.  Check the notification log after any
+   period in which DHIS2 was unavailable.
 
 Two things to expect
 ~~~~~~~~~~~~~~~~~~~~
@@ -684,6 +768,30 @@ predictors of its own, so the useful division of labour is to send it the smalle
 and let it derive the rest.
 
 This means a form that collects **totals**, one report per facility per period, maps directly.
-A form that collects **one submission per case** can have its submissions counted, but cannot
-yet count only those with a particular answer, so it cannot fill a data element such as
-"malaria deaths" from a ``cause_of_death`` question.  Conditional counts are planned.
+
+A form that collects **one submission per case** needs one more step, because a data element
+such as "malaria deaths" is a count of the cases matching a condition rather than a count of
+all of them.  The condition goes in the **form**, not in the mapping.
+
+Add a calculate that is ``1`` when the case matches and ``0`` when it does not, and map it
+with **Sum**.  Summing ones and zeros over a period counts the matching cases::
+
+    type        name                  calculation
+    calculate   c_malaria_death       if(${malaria_confirmed} = 'yes' and ${outcome} = 'died', 1, 0)
+
+Use **Sum** rather than Count.  Count would count every case, including the zeros.
+
+Disaggregation works the same way.  A data element split by age needs one calculate per
+category option combo, each testing the age as well as the condition, mapped to the same data
+element with a different combo.
+
+.. warning::
+
+   Put the condition **inside the calculation**.  Relevance is ignored on a calculate in Smap,
+   so a ``relevant`` expression on one has no effect and the calculate will be evaluated
+   regardless.
+
+This is deliberate rather than a limitation to be worked around later.  A form designer can
+already write any expression the form language allows, which is far more than an aggregation
+language invented for the export would offer, and the condition stays visible in the form
+where the rest of the logic lives.
