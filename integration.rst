@@ -349,12 +349,55 @@ the following, all of which cause the connection to be refused with a 401 if set
 
 Copy the token when it is shown.  DHIS2 displays it once.
 
-Organisation units and authorities
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+What the service account needs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The service account needs the organisation units it will work with assigned to it.  A token
-can be perfectly valid and every request still be refused because the DHIS2 user has no
-organisation units.  The connection test reports how many the account has.
+Three separate things, and they fail in different ways.  A token can be perfectly valid and
+every request still be refused because one of the other two is missing.
+
+**One authority.**  Give the account a user role containing ``F_DATAVALUE_ADD`` and nothing
+else.  That is the complete list.  Reading organisation units, option sets, data sets and
+programs needs no authority at all, because DHIS2 has no read authorities for those types:
+reading metadata is controlled by sharing.  Removing values needs no extra authority either,
+as there is no separate delete authority for data values.
+
+**Organisation units.**  Assign the data capture organisation units the account will write to.
+Assign the smallest subtree that covers them rather than the root.  The connection test
+reports how many the account has, and no organisation units means every write fails.
+
+**Data sharing on what it writes to.**  This is the one that is missed most often, because the
+account can look fully privileged without it.  Sharing has two halves, metadata and data, and
+they are set separately:
+
+.. code-block:: text
+
+   r w r - - - - -
+   │ │ │ └── data write        ← needed to send data
+   │ │ └──── data read
+   │ └────── metadata write
+   └──────── metadata read
+
+In the Maintenance app, open the data set, choose **Sharing settings**, and give the account
+or a group it belongs to **Data: can capture and view**.  Without it, a send fails with
+*Current user cannot enter data for data set*.
+
+Values that are disaggregated also need data write on every **category option** in the
+category combination, not only on the data set.
+
+.. note::
+
+   The permission is really per data element rather than per data set.  A data value is keyed
+   by data element, period, organisation unit and category option combination, so the data set
+   is not part of the key, and DHIS2 allows the write if the account can enter that data
+   element through **any** data set containing it.  A data element that appears in several data
+   sets can therefore be written even when the data set named in the mapping is not shared with
+   the account.  Do not treat a data set as a security boundary.
+
+.. warning::
+
+   A data set whose sharing has never been configured is writable by any authenticated user.
+   Unset is the open state, not the closed one.  It is worth checking sharing on the data sets
+   a new service account can reach rather than assuming it is contained by default.
 
 .. _dhis2-connection:
 
