@@ -355,11 +355,23 @@ What the service account needs
 Three separate things, and they fail in different ways.  A token can be perfectly valid and
 every request still be refused because one of the other two is missing.
 
-**One authority.**  Give the account a user role containing ``F_DATAVALUE_ADD`` and nothing
-else.  That is the complete list.  Reading organisation units, option sets, data sets and
-programs needs no authority at all, because DHIS2 has no read authorities for those types:
-reading metadata is controlled by sharing.  Removing values needs no extra authority either,
-as there is no separate delete authority for data values.
+**One user role.**  Give the account the **Data entry clerk** role, or any role granting the
+**Add/Update Data Value** authority (``F_DATAVALUE_ADD``).  That is the only authority the
+integration needs.  Reading organisation units, option sets, data sets and programs needs no
+authority at all, because DHIS2 has no read authorities for those types: reading metadata is
+controlled by sharing.  Removing values needs no extra authority either, as there is no
+separate delete authority for data values.
+
+Without it, a send fails with *Access is denied, requires one Authority from
+[F_DATAVALUE_ADD]*.
+
+.. note::
+
+   Authorities are not assigned to users, they are assigned to **roles**, and users are given
+   roles.  So the authority itself is only visible in **Users** then **User roles**, when
+   creating or editing a role, where it is listed under its name **Add/Update Data Value**
+   rather than its code.  On the user's own **Roles and groups** screen you choose a role, not
+   an authority, which is why ``F_DATAVALUE_ADD`` cannot be found there.
 
 **Organisation units.**  Assign the data capture organisation units the account will write to.
 Assign the smallest subtree that covers them rather than the root.  The connection test
@@ -377,9 +389,10 @@ they are set separately:
    │ └────── metadata write
    └──────── metadata read
 
-In the Maintenance app, open the data set, choose **Sharing settings**, and give the account
-or a group it belongs to **Data: can capture and view**.  Without it, a send fails with
-*Current user cannot enter data for data set*.
+In the Maintenance app, find the data set and choose **Sharing settings** from its menu.  This
+is on the data set's own menu in the list, not inside the edit form.  Add the account, or a
+group it belongs to, and give it **Can capture and view** data.  Metadata access alone is not
+enough: without data access a send fails with *Current user cannot enter data for data set*.
 
 Values that are disaggregated also need data write on every **category option** in the
 category combination, not only on the data set.
