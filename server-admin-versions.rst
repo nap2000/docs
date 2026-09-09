@@ -6,6 +6,18 @@ Application Change History
 .. contents::
  :local:
 
+26.08.15
+--------
+
+`Download 26.08.15 <https://smap-code.s3.us-east-1.amazonaws.com/os_smap_26_08_15_8452.tgz>`_
+
+#.  Manage offline maps from shared resources
+#.  Two factor authentication
+#.  A new report listing users with enterprise or organisational administration privilege
+#.  Performance improvements
+#.  Deploy shared libraries to the tomcat shared class loader to reduce size
+#.  Bug fixes
+
 26.07.02
 --------
 
