@@ -22,6 +22,7 @@ Administration
   server-admin.rst 
   admin-security.rst
   admin-data-protection.rst
+  admin-ai-access.rst
 
 You need to have at least the **admin** security group to access these administration functions. Some functions require the **Organisational Administrator**,
 **Enterprise Administrator** or **Server Administrator** security group.
