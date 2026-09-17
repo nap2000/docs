@@ -78,6 +78,33 @@ Click any item in the diagram, then click on the pencil icon, to edit or delete 
 refreshes to reflect the updated workflow.  To the edit panel will also include a link to the underlying task or notification so that
 advanced options can be set.
 
+Highlighting Elements
+---------------------
+
+Select the Highlight menu to highlight workflow elements by:
+
+*  Type. Task, case, Form etc.
+*  Project.
+*  Process.  The process or bundle that the element is in.
+*  Survey.  The survey (form) associated with the element.
+
+.. figure::  _images/wf-highlight.png
+   :align:   center
+   :alt:     Workflow elements coloured according to survey
+
+   Workflow highlighted by Survey
+
+Assignment View
+---------------
+
+Select the view menu and then "Who Doses What" to see who is assigned to each workflow element.
+
+.. figure::  _images/wf-assigned.png
+   :align:   center
+   :alt:     The user or role assigned to each workflow element
+
+   Assignments in a workflow
+
 Simplification
 --------------
 
