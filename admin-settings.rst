@@ -15,7 +15,6 @@ currently in.  Some tabs are only shown to users with a particular security grou
 
 .. figure::  _images/settings.jpg
    :align:   center
-   :width:   600px
    :alt:     The tabs available on the settings page
    
    Settings Tabs
