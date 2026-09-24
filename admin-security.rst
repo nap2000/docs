@@ -34,8 +34,9 @@ This feature is available with version 22.04 of the server.
 A minimum password strength can be set for user passwords. When a user changes their password
 they will be required to set a new password that is at least as strong as the minimum.
 
-The minimum strength can be set for the :ref:`server-settings` and/or the organisation :ref:`organisations-settings`.  
-The maximum of the two values set will be used.
+The minimum strength can be set for the server in the :ref:`server-settings` tab and/or for the organisation
+in the :ref:`other-settings` tab.  The maximum of the two values set will be used.  If both are zero then the strength
+of passwords is not checked.  Only a user with the security manager group can change the organisation value.
 
 The strength of a password reflects its randomness and avoidance of common words used by password breakers. The
 following table shows sample password values and their strength;

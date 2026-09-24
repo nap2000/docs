@@ -131,7 +131,7 @@ Only the checked rows are redacted. Redaction cascades to any child (repeat) for
 linked to the selected parent records. All redaction actions are audit-logged at
 the organisation level.
 
-This final step will be disabled unless the option to enable redactions is set in the organisation settings.
+This final step will be disabled unless the option to enable redactions is set in the :ref:`other-settings` tab of the settings page.
 
 .. _data-retention:
 

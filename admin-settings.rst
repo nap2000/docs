@@ -5,7 +5,13 @@ Settings
  :local:
 
 The settings page can be accessed from the **Admin** module.  It has multiple tabs that allow you to configure
-various parts of the system.
+various parts of the system.  Apart from the **Server** tab, the settings apply to the organisation that you are
+currently in.  Some tabs are only shown to users with a particular security group:
+
+*  **Server**. Server owner.
+*  **Organisation**. Organisational administrator.
+*  **Operations**. Administrator.
+*  **Sensitive Data**. Security manager.
 
 .. figure::  _images/settings.jpg
    :align:   center
@@ -105,6 +111,45 @@ Server custom style sheet
 
 This section sets a server wide custom style sheet. The approach is identical to that for the per organisation style sheet described in the appearance tab.
 
+.. _organisation-admin-settings:
+
+Organisation
+------------
+
+Requires SmapServer v26.10+.  In earlier versions these settings are in the organisation dialog on the
+**Organisations** tab of the users page.
+
+The organisation tab is only shown to users who have the organisational administrator group.  These settings apply
+to the organisation that you are currently in and cannot be changed by an administrator who does not also have
+the organisational administrator group.  To change them for a different organisation, first move to that
+organisation.
+
+Access
+++++++
+
+These settings control what the organisation is allowed to do.  If any of the "allow" settings are changed then an
+email is sent to the help email address set in the :ref:`email-settings` tab.
+
+*  Allow submissions. Allow data to be submitted to this organisation.
+*  Allow API access.
+*  Allow notifications.
+*  Allow sending of task emails.
+*  Allow SMS. Allow SMS messages to be sent in notifications.  Only shown if the server uses AWS to send SMS messages.
+*  Analysis auto refresh interval.  The interval in minutes at which charts and maps on the analysis dashboard are
+   refreshed.  Setting a value of zero disables automatic refresh.
+
+Monthly usage limits
+++++++++++++++++++++
+
+Limits on the use of chargeable services each month.  The current usage for the month is shown next to each limit.
+
+*  AWS Translate. Letters translated.
+*  AWS Transcribe. Seconds of audio transcribed.
+*  AWS Transcribe Medical. Seconds of audio transcribed.
+*  AWS Rekognition. Images analysed.
+*  AWS Comprehend. Sentiment analysis requests.
+*  Submissions. A limit of zero means submissions are unlimited.
+
 .. _mobile-device-settings:
 
 Mobile App Options
@@ -203,6 +248,24 @@ This tab allows customisation of WebForm appearance:
 *  The WebForm banner logo.
 *  Hiding the "save as draft" checkbox.
 
+.. _email-settings:
+
+Email Options
+-------------
+
+Sets up the email server that this organisation will use.  If these are not set then the email server specified
+in the :ref:`server-settings` tab is used.
+
+*  Email to get help.  The administrator email.  This address is also sent an email when the access settings in the
+   :ref:`organisation-admin-settings` tab are changed.
+*  SMTP host.  The host name of the SMTP relay that will forward email messages from the Smap server.
+*  Email domain.
+*  Email user name.
+*  Email password.
+*  Email server port.
+*  Content.  Default content for emails.
+*  Server identification.
+
 DHIS2
 -----
 
@@ -218,9 +281,24 @@ but cannot do anything useful is apparent before it is relied on.
 
 For the full description, including how to prepare the token in DHIS2, see :ref:`dhis2-connection`.
 
-Other
------
+.. _other-settings:
 
-This tab allows you to set other organisation level settings for the organisation that you are currently in:
+Other Options
+-------------
 
-*  Minimum password strength (organisation-level setting).
+This tab allows you to set other organisation level settings for the organisation that you are currently in.
+Before SmapServer v26.10 only the minimum password strength was set here, and the other settings were in the
+organisation dialog on the **Organisations** tab of the users page.
+
+*  Time zone.  The default time zone for the organisation.  Usually the time zone is obtained from a user's browser
+   settings.  However where reports are generated automatically this information may not be available and the time
+   zone set here will be used.
+*  Language.  The default language for the organisation.  As for time zone, normally the user's language is used.
+*  Map source.  The default source of background maps: Mapbox, Google or MapTiler.  The keys for these services are set
+   in the :ref:`server-settings` tab.
+*  Allow editing of results.  Allow results to be edited on the server.
+*  Allow notifications to be sent from WebForms.
+*  Enable opt in.  Require the recipient of an email to opt in before they are sent emails.
+*  Enable redactions.  Allow personal data to be redacted, see :ref:`rtbf`.
+*  Minimum password strength.  See :ref:`password-strength`.  Only a user with the security manager group can change
+   this setting.  Other administrators can see the value but not change it.

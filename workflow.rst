@@ -97,7 +97,7 @@ Select the Highlight menu to highlight workflow elements by:
 Assignment View
 ---------------
 
-Select the view menu and then "Who Doses What" to see who is assigned to each workflow element.
+Select the view menu and then "Who Does What" to see who is assigned to each workflow element.
 
 .. figure::  _images/wf-assigned.png
    :align:   center

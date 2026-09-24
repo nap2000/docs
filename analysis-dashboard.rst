@@ -275,8 +275,8 @@ the date question and then choose start and end dates. You can also specify an
 Automatic Refresh
 -----------------
 
-This can be enabled for a specific organisation in the Organisations tab on
-the Users page. You will find it under "Other Options". Setting a value of
+This can be enabled by an organisational administrator in the
+:ref:`organisation-admin-settings` tab of the settings page. Setting a value of
 zero disables auto refresh. Otherwise, you can specify the refresh interval in
 minutes.
 

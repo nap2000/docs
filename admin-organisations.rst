@@ -55,45 +55,25 @@ exactly the same as an organisation created by the org administrator except that
 Settings
 --------
 
-Click on the name of the organisation.  This will open a dialog to edit the settings.
+Click on the edit button next to the organisation.  This will open a dialog to edit:
 
-#. Organisation Details.  This is name and address details that can be automatically added to generated PDFs.
+*  Name.  The name of the organisation.
+*  Organisation details.  Name, address, phone and email details that can be automatically added to generated PDFs.
 
-#. Email options. Sets up the email proxy server that this organisation will use.
+.. note::
 
-  *  Email to get Help.  The administrator email.  If set this email address will also be sent emails notifying them of permission changes made to the organisation settings (See below for settings marked as "notify admin")
-  *  Smtp Host.  The host name of the smtp relay that will forward email messages from the smap server.
-  *  Email domain.
-  *  Email user name
-  *  Email password
-  *  Email server port
+  From SmapServer v26.10.  In earlier versions the dialog also contains the email, other options and monthly usage
+  limit settings.
 
-#. Appearance
+All other organisation settings are set on the :doc:`settings <admin-settings>` page for the organisation that you are
+currently in.  To change them for a different organisation, first move to that organisation.
 
-   *  Set the Banner logo for webForms
-   
-   *  Set the image for the home page
-   
-   *  Set the menu bar color
-
-#. Other
-
-   *  Allow results to be edited on the server (notify admin user if changed)
-   
-   *  Allow sending of tasks to email addresses (notify admin user if changed)
-   
-   *  Allow sending of notifications (notify admin user if changed)
-   
-   *  Allow submissions of data to this organisation (notify admin user if changed)
-   
-   *  Allow sending of SMS messages (in notifications) (notify admin user if changed)
-   
-   *  Set the default time zone for the organisation.  Usually time zone is obtained from a user's browser settings. However
-      where reports are generated automatically this information may not be available and the time zone set here will be used.
-	  
-   *  Set the default language for the organisation. As for timezone normally the user's language is used.
-
-   *  Minimum password strength
+*  Access settings and monthly usage limits.  :ref:`organisation-admin-settings` tab.  Organisational administrators only.
+*  Email server.  :ref:`email-settings` tab.
+*  Time zone, language, map source, editing of results, opt in, redactions and password strength.
+   :ref:`other-settings` tab.
+*  Logos, menu bar colour and style sheet.  **Appearance** tab.
+*  WebForm appearance.  **Webform Options** tab.
 
 Moving between organisations
 ----------------------------
