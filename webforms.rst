@@ -204,8 +204,8 @@ be sent from WebForms** on the **Other Options** tab of the settings page, see :
 Index
 -----
 
-Indexes into a WebForm have to be enabled in the server settings.  If this is done you can select "Index" from the menu in
-WebForms.
+An index has to be enabled for each survey.  In the online editor select the menu **File**, then **Settings**, and check
+**Show Form Index**.  You can then select "Index" from the menu in WebForms.
 
  .. figure::  _images/webform-index.png
     :align:   center
