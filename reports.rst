@@ -27,26 +27,27 @@ Public reports show data such as survey submissions. You can configure a
 report with filters and time ranges, then run it whenever you need the
 latest data.
 
-Click **Add Report** to create a report. Supported report types are XLS and
+Click **Add Report** to create a report. Supported report types are Excel and
 PDF. Give the report a name so it is easy to identify.
 
 To create and use a public report:
 
 #. Click **Add Report**.
-#. Select the report type and name it.
+#. Name the report, then select the report type and the survey.
 #. Configure filters and time range.
-#. Save, then run the report.
-#. Share the report URL if needed.
+#. Click **Create**.
+#. Click the report name, or select **Generate** from its **Action** menu, to download it.
+#. Click the **Copy Link** button (share icon) to copy the report URL if you want to send it to someone.
 
 A key difference between reports and simple exports is that a report link
 can be sent to someone who does not have an account on the system. They can
 use the URL to download the latest data.
 
-Reports can also be attached to./ periodic notifications. In this case, any
+Reports can also be attached to periodic notifications. In this case, any
 date range set in the report is ignored. The notification date range is
 used instead.
 
-From the report actions menu, you can run, edit, or delete a report.
+From the report's **Action** menu, you can **Generate**, **Edit**, or **Delete** a report.
 
 Administrative Reports
 ----------------------
