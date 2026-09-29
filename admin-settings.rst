@@ -67,9 +67,23 @@ Map services
 Messaging
 +++++++++
 
+Messaging settings are grouped by channel.  Leave a group blank if you do not use that channel.  Secrets are masked once
+they have been saved.
+
+**Vonage - SMS and WhatsApp**.  Send and receive SMS and WhatsApp messages through Vonage.  See :ref:`sms-server-admin`.
+
 *  Vonage application ID.
 *  Vonage webhook secret.
-*  SMS URL. URL of service to send SMS messages, or just "aws" if the AWS SMS service is to be used.
+
+**WhatsApp - Meta Cloud API**.  Connect WhatsApp directly to Meta without Vonage.  When the access token is set, WhatsApp
+messages are sent this way instead of through Vonage.  Requires Smap Server version 26.10+.  See :ref:`whatsapp-meta`.
+
+*  WhatsApp Access Token.
+*  WhatsApp App Secret.  Used to check that inbound messages came from Meta.
+*  WhatsApp Webhook Verify Token.  Any value you choose.  Enter the same value in Meta when you set up the webhook.
+*  API Version.  The Meta Graph API version.  Defaults to v21.0 if left blank.
+
+**SMS URL**.  URL of a service to send SMS notifications, or just "aws" if the AWS SMS service is to be used.
 
 Email Server
 ++++++++++++

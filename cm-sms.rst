@@ -22,7 +22,7 @@ Prerequisites
 
 To use message conversations, you'll need:
 
-* An SMS or WhatsApp number from a cloud provider (such as Vonage)
+* An SMS or WhatsApp number from a cloud provider (such as Vonage), or a WhatsApp number connected directly to Meta
 * Server owner access to connect the number to Smap
 * A survey configured to receive and organize messages
 
@@ -40,11 +40,12 @@ Complete these steps to enable message conversations on your server:
 
 #.  **Connect the provider to your Smap server**
 
-    In the Admin module, go to **Settings > Server** tab and enter your Vonage Application ID and Vonage Webhook secret.
+    In the Admin module, go to **Settings > Server** tab and under **Messaging** enter your Vonage Application ID and Vonage
+    Webhook secret, or for a WhatsApp number connected directly to Meta, the WhatsApp settings.  See :ref:`whatsapp-meta`.
 
 #.  **Link your phone number to a survey**
 
-    In the Admin module, go to **Users** and select the **Conversations** tab. Here you can connect your SMS or WhatsApp number to the survey that will receive messages.
+    In the Admin module, go to **Users** and select the **Conversation** tab. Here you can connect your SMS or WhatsApp number to the survey that will receive messages.
 
 #.  **Enable cases in your survey**
 
@@ -89,21 +90,37 @@ If a phone number has more than one open case, incoming messages will be added t
 Replying to Messages
 --------------------
 
-To reply to a message conversation:
+A reply always goes to the number that started the case, over the same channel (SMS or WhatsApp) and from the number linked
+to the survey.  You cannot choose a different number.  Replies are only possible for cases that were started by a message.
+
+**From the console:**
 
 #.  **Open the case** - Find and click on the case you want to respond to
 
-#.  **Click "Edit"** - This allows you to make changes to the case
+#.  **Click "Send Notification"** - Opens the notification dialog
 
-#.  **Click "Send notification"** - Opens the notification dialog
-
-#.  **Select "Message Conversation"** as the target
+#.  **Select "Message Conversation"** as the type.  The number the reply will go to is shown, it cannot be changed
 
 #.  **Type your response** in the message field
 
-#.  **Click "Send"** to send your reply
+#.  **Click "Save"** to send your reply
+
+**From a webform (version 26.10+):**
+
+When you edit a case in a webform, open the notification panel from the menu.
+
+#.  **Select "Reply to conversation"** as the type.  This is only offered if the case was started by a message.  The number
+    the reply will go to is shown, it cannot be changed
+
+#.  **Type your response** in the message field and click **Save**
+
+#.  **Submit the form**.  Replies are held until the form is submitted and then sent
+
+You can save several replies before submitting.  They are sent, and added to the conversation, in the order you saved them.
+The panel remembers the type you used last, so if you usually send messages it will be selected next time.
 
 Your response will be sent via SMS or WhatsApp to the phone number associated with the case. The message will also be added to the case record so you can see the full conversation history.
+Each reply is also recorded in the case's history, shown with a WhatsApp or SMS icon.
 
 .. tip::
    If your question type is set to "conversation", the messages will be formatted for easy reading, showing each message in the thread clearly.
@@ -116,6 +133,9 @@ Your response will be sent via SMS or WhatsApp to the phone number associated wi
    A conversation
 
 Any response from the sending number will also be added to the conversation.
+
+From version 26.10, the conversation is shown read only when a case is opened in a webform or in fieldTask.  Only messages
+change a conversation.
 
 Closing a Case
 --------------

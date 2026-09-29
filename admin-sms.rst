@@ -6,9 +6,9 @@ SMS
 .. contents::
  :local:  
  
-The SMS numbers that can be used to create cases and record a conversation within a case are set up here.  Only the Vonage cloud platform
-is currently supported as a source of numbers.  Details on how to get a number can be found here :ref:`sms-server-admin`.  Requires Smap
-Server version 24.09+.
+The SMS and WhatsApp numbers that can be used to create cases and record a conversation within a case are set up here.  Numbers
+can come from Vonage, see :ref:`sms-server-admin`, or for WhatsApp from Smap Server version 26.10, directly from Meta, see
+:ref:`whatsapp-meta`.  Requires Smap Server version 24.09+.
 
 Adding a number is a two step process.
 
@@ -18,7 +18,7 @@ Adding a number is a two step process.
 Add a Number
 ------------
 
-As the server owner navigate to the users page and select the SMS tab.  You will see a button labelled "Add".
+As the server owner navigate to the users page and select the **Conversation** tab.  You will see a button labelled "Add".
 
 .. figure::  _images/sms1.png
    :align:   center
@@ -27,7 +27,9 @@ As the server owner navigate to the users page and select the SMS tab.  You will
 
    Add Button
 
-The dialog then allows you to enter the number and select the organisation.
+The dialog then allows you to enter the number, its channel (SMS or WhatsApp) and select the organisation.  Enter the number
+with its country code and no spaces, for example +442071838451.  If the number is connected directly to Meta, also enter its
+**WhatsApp Phone Number Id**.
 
 .. figure::  _images/sms2.png
    :align:   center
@@ -60,7 +62,17 @@ Clicking on the edit button shows the edit dialog. Note there is no "Add" button
 The administrator can now set:
 
 *  The survey that will be populated when a message is received
-*  The question in the survey that will be used to store the number that sent the message
-*  The question in the survey that will be used to store the message
+*  **Question for calling number**.  The question used to store the number that sent the message.  Replies from the case
+   are only ever sent to this number
+*  **Conversation Question**.  The question used to store the conversation.  Both the messages received and the replies
+   sent from the case are stored here, so there is one conversation per case.  Use a question of type conversation so
+   that it is shown as a conversation
+*  **Multi case message**.  An automatic reply sent when the person has more than one open case, see :ref:`multiple-open-cases`
+
+The server owner can also change the number itself, its channel, its organisation and its WhatsApp Phone Number Id:
+
+*  Moving the number to another organisation removes its link to a survey.  An administrator in the new organisation
+   then links it to one of their surveys
+*  Messages already received on the old number stay with it, they are not moved to the new number
 
 
