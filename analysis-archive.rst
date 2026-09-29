@@ -12,7 +12,7 @@ only on current data.
 
 1.  In the **Analysis** module create a table view of your data
 2.  Select the "aside" button **<** to open the side panel
-3. Click on the **Archive** button
+3. Click on the **Archive Data** button
 
 A dialog will be shown that allows you to enter the date up to which you want to archive data. All data submitted
 up to and including this date will be archived into a new survey and removed from the survey you are archiving.

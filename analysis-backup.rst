@@ -28,12 +28,12 @@ Backup
    :width: 400px
    :alt: Image of button to backup a survey
    
-3. Click on the **Backup** button or the **Backup with Images** button
+3. Click on the **Backup** button or the **Backup with Media** button
 
 A dialog will be shown that allows you to enter the first and last record number (prikey) that are to be downloaded.  This is optional
 unless the number of records exceeds the limits which are:
 
-*  Backing up with images:  500
+*  Backing up with media:  500
 *  Standard backup: 10,000
 
 If you just enter the starting record number then all records up to the last one will be backed up.
@@ -76,7 +76,7 @@ Backup Format
 Data backups are in a zip file which consists of:
 
 *  An excel spreadsheet containing all the data.  One worksheet per form / sub form
-*  Optionally all the images
+*  Optionally all the media files (images, audio, video)
 
 ..  warning::
 
