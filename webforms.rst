@@ -19,9 +19,13 @@ WebForms allows you to complete surveys in a web browser.  The webForms launch p
 
    Launching WebForms
    
-There are 3 tabs on this page.  The Web Forms tab itself which allows launching of a blank survey.  The tasks tab where tasks
-can be selected for completion.  Finally a settings page where settings that can be changed by a user who only has **enum** privilege
-can be updated by that user.
+There are 3 tabs on this page:
+
+*  **Web Forms**.  Launch a blank survey.
+*  **Tasks**.  The tasks and cases assigned to you, see :ref:`tasks-webforms`.
+*  **References**.  Records you have been given read only access to, see :ref:`cm-references`.
+
+The number of items in each is shown on the tab.
 
 Styling the Survey
 ------------------
