@@ -75,7 +75,6 @@ Analysis
   Data is stored in a PostgresSQL relational database,
   :ref:`An internal dashboard is included which easily allows the creation of table; map; chart and image views of data. This is particularly useful for doing quality assurance and gaining quick insights into the data without requiring the effort and expense to setup a full featured BI tool<dashboard>`,
   Integration with external dashboards such as PowerBI and Tableau using the data API. `example live dashboard <https://www.meqadata.com/ul-reading-camps-bangladesh>`_,
-  Embedding of AWS Quicksight dashboards within the server.  This allows you to use the Smap Server to authenticate users and control access to the dashboard
   
 
 Case Management
@@ -94,6 +93,10 @@ Case Management
   :ref:`Audit trail of all changes including emails sent while editing a WebForm<console_history>`,
   :ref:`Automatic labelling of images; translation of text and transcription of audio<automation>`, 
   :ref:`Automatically escalate cases if they have not been addressed in a specified time or based on the data<case_escalation>`, 20.06
+  :ref:`Message conversations by SMS or WhatsApp that create and update cases<sms_case>`, 24.09
+  :ref:`Connect WhatsApp directly to Meta without a messaging provider<whatsapp-meta>`, 26.10
+  :ref:`References that give users read only access to a case<cm-references>`, 26.06
+  :ref:`An operations monitor showing workload; trends; overdue work and the performance of units<operations>`, 26.06
 
 
 Security
@@ -129,4 +132,5 @@ Connectivity
   :ref:`APIs for the FieldTask Android App that support customisation and extension of the capabilities of the app<fieldtask-api>`,
   :ref:`Call web hooks when an event happens such as a data submission or data is updated.<webhooks>`, 21.05
   :ref:`sharepoint`, 26.05
+  :ref:`Send aggregate data to DHIS2 and use its organisation units and option sets in forms<dhis2>`, 26.09
 
