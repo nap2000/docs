@@ -74,7 +74,8 @@ a single page in exactly the same way that you can do for fieldTask.
 Styling WebForms Itself
 -----------------------
 
-WebForm style options can be found on the users page in the "WebForm Options" tab.
+WebForm style options are set for each organisation on the **Webform Options** tab of the settings page in the
+**Admin** module, see :ref:`webform-settings`.
 
 .. figure::  _images/webforms4.jpg
    :align:   center
@@ -83,17 +84,15 @@ WebForm style options can be found on the users page in the "WebForm Options" ta
 
    Styling WebForms
 
-
-.. note::
-
-  If you have "organisational admin" privilege then you won't see the above tab instead you can change the webform style in the organisations
-  tab by selecting the organisation that you want to modify.
-  
 The following properties can be changed:
 
 *  The page background colour
 *  The paper background colour
 *  The position of the footer icon
+*  The button colour and button text colour
+*  The heading text colour
+*  The banner logo
+*  Whether the "save as draft" checkbox is hidden
 
 Using a WebForm offline on a mobile Device
 ------------------------------------------

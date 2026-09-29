@@ -264,8 +264,10 @@ Tracking & Geolocation
 *  Recording Interval. When the input method is automatic, the time in seconds between points.
 *  Accuracy. When the input method is automatic, the accuracy threshold in meters.
 
-WebForm Settings
-----------------
+.. _webform-settings:
+
+Webform Options
+---------------
 
 This tab allows customisation of WebForm appearance:
 
