@@ -272,6 +272,20 @@ You can apply filters. This can include a date range filter, where you select
 the date question and then choose start and end dates. You can also specify an
 **advanced** filter for data values.
 
+Dashboard Date Range
+++++++++++++++++++++
+
+Available from SmapServer v26.06.  The date range selector in the menu bar applies a relative date range to every panel that
+does not have a date range of its own: **All**, **Last day**, **Last week** or **Last month**.  This keeps a dashboard showing
+recent data without having to edit the dates of each panel.  The selection is remembered for you in your browser.
+
+Managing Another User's Dashboard
+---------------------------------
+
+Available from SmapServer v26.06.  Administrators see a **Manage panels for** selector in the menu bar listing the users who
+have access to the current project.  Select a user to see their dashboard and add, change or remove their panels, for example
+to set up a dashboard for somebody.  Select yourself to return to your own dashboard.
+
 Automatic Refresh
 -----------------
 
