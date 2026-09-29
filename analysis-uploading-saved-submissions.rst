@@ -14,26 +14,34 @@ Perhaps because the phone is broken.  One solution may be to remove the sd card 
 it into another phone that also has fieldTask installed.  It should then be possible to refresh the data and 
 send it to the server.
 
-Sometimes you may be able to get the raw submissions from the phone and copy them onto a laptop.  You 
-may then want to submit the data from the laptop.  Smap used to provide a java application called smapUploader
-for this purpose however this has now been replaced with a much simpler approach where the data is loaded
-directly to the server using an internet browser.
+If the phone cannot send, you can copy the raw submissions off it and send them to the server from a computer
+using the :doc:`submission API <form-submission-api>`.  There is no page in the browser for uploading them.
 
 Getting the data from the phone
 -------------------------------
 
-The approach can vary depending on the type of Android device that you have.  Once you have obtained access
-to the sdcard on your phone you will find the completed instances here::
+Connect the phone to a computer with a USB cable and allow file transfer.  The completed instances are in::
 
-  /sdcard/Android/data/org.smap.smapTask.XXXX/files/instances
+  Android/data/org.smap.smapTask.android/files/projects/<folder>/instances
 
-Where XXXX is the identifier for your variant of the fieldTask App.
+There is only one folder under ``projects``.  Its name is a random identifier created when fieldTask was
+installed, so it is different on each phone, and it contains an empty file called ``Default``.  If you use a
+variant of fieldTask then ``org.smap.smapTask.android`` will be different.
 
-Copy the instances folder onto your computer. Then compress it into a zip file.
+Each submission is a folder containing the submission XML file and any attachments such as photos.  Copy the
+folders you need onto your computer.
 
 Upload the instances
 --------------------
 
-*  Logon to the server using your browser.
+Send each submission as a multipart POST to ``/submission``.  The XML file is sent in a part called
+``xml_submission_file`` and each attachment in a part named after its file name.  For example using curl::
 
+  curl -u <user name> \
+    -F "xml_submission_file=@<instance>.xml;type=text/xml" \
+    -F "1718012345678.jpg=@1718012345678.jpg" \
+    "https://<your server>/submission?deviceID=recovered"
 
+curl asks for your password.  The user must be allowed to submit results for the survey.  A response of 201
+means the submission was accepted.  Sending the same submission twice is safe, the server recognises the
+instance ID and does not add the record again.
