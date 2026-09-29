@@ -6,6 +6,15 @@ Application Change History
 .. contents::
  :local:
 
+26.09.04
+--------
+
+`Download 26.09.04 <https://smap-code.s3.us-east-1.amazonaws.com/os_smap_26_09_04_4518.tgz>`_
+
+#.  FieldTask updated to version 5.4.02
+#.  DHIS2 integration
+#.  Bug fixes
+
 26.08.15
 --------
 
