@@ -37,3 +37,26 @@ Mapbox Request,Request a static map from Mapbox
 submissions,Submission of data
 anonymous submissions,Submission of data from an anonymous webform link
 task submissions,Submission of results from a task
+api token,An API token was created or revoked
+archive,Survey results were archived
+block,A survey was blocked or unblocked
+case management,A case was assigned or released or its case management settings were changed
+device refresh,Devices were notified to refresh after a change
+dsar,A data subject access request search or export was made
+duplicate,A submission was rejected as a duplicate of one already received
+notification error,A notification could not be sent
+report,A custom report was exported
+resources,Shared resources such as locations or NFC tags were uploaded
+security,A security event such as access to a record being refused by the role based access rules
+sentiment,A request was made to AWS Comprehend for sentiment analysis
+server,A server setting was changed
+submission error,A submission could not be applied to the database
+survey design,A change was made to the design of a survey
+task,A task was created or changed or its assignment changed
+two factor,Two factor authentication was turned on or off or reset or a code was rejected
+user,A user event such as a password expiry warning
+user details,A user changed their own details such as their password
+SMS,An SMS or WhatsApp message was sent
+Google Request,Request a static map from Google
+MapTiler Request,Request a static map from MapTiler
+Access instance data for a task,The data for a record was downloaded to complete a task

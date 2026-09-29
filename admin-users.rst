@@ -42,6 +42,13 @@ Edit
 
 Click on the user's name to edit their details.
 
+Move to another organisation
+----------------------------
+
+Select the checkbox next to one or more users and click **Move To Organisation**, then choose the organisation to move
+them to.  The same button on the **Projects** tab moves the selected projects.  It requires the administrator or
+organisational administrator security group.
+
 User Details
 ------------
 
@@ -90,6 +97,7 @@ Specify the security groups that they user belongs to. These include:
 *  Administrator:  Can manage users and passwords
 *  Analyst: Can view, modify or delete collected data
 *  Manage Console:  Can assign users in the console (v25.01+)
+*  Data Protection Officer:  Can use the data protection tools, see :ref:`admin-data-protection` (v26.05+)
 *  Enterprise Admin:  Can create enterprises and move between them
 *  Enumerator: Can download surveys and submit data
 *  Manage Data: Can access the console

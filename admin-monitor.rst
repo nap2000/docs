@@ -11,8 +11,8 @@ To access it select the `admin` module and then the `monitoring` menu option.
 
 The page has multiple tabs each of which show events from a different source.
 
-Submissions
------------
+Submitted
+---------
 
 Totals
 ++++++
@@ -64,16 +64,24 @@ Opt in messages
 Opt in messages are sent once to an email user before they are sent email tasks or email notifications.  You can view the status of these messages here. You
 can request a resend of an opt-in message but you should check first with the recipient that they do actually want to opt in to email messaging.
 
-Cases
------
+Server
+------
 
-Shows number of new cases created per day and the number closed for the selected survey.
+Only shown to users with the server owner security group.  This shows the state of the background processes that apply
+submissions and send messages, so you can see whether work is backing up.
 
-.. figure::  _images/monitor-cases.jpg
-   :align:   center
-   :alt:     The monitoring page showing cases created and closed per day as a bar chart
+There is a panel for each queue:
 
-   Cases
+*  Submissions.  Submitted results waiting to be written to the database.
+*  S3 Storage.  Media files waiting to be moved to storage.
+*  Messages.  Notifications, emails and other messages waiting to be sent.
+*  Restore.  Requests to restore data.
+
+Each panel shows the number of items being processed now (**Live**), the number waiting (**Backlog**), how many are arriving,
+completed and failing per minute, and the number of workers active.  Below the panels are a snapshot of the current queues, a
+chart of processing rates over the last 10 minutes, and a **Worker Detail** section listing each worker.
+
+A backlog that keeps growing, or a rising error rate, indicates a problem that should be investigated in the server logs.
 
 Client Errors
 -------------

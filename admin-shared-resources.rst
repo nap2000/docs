@@ -15,6 +15,9 @@ Shared resources are made available to all surveys in an organisation.  They con
 *  Maps used on the server for analysis
 *  Offline map layers that are downloaded by FieldTask
 *  Locations
+*  SharePoint lists used as reference data (from SmapServer v26.05), see :ref:`sharepoint-shared-resources`
+*  DHIS2 organisation units and option sets used as reference data (from SmapServer v26.09), see :ref:`dhis2-org-units`
+   and :ref:`dhis2-option-sets`
 
 Spreadsheets
 ------------

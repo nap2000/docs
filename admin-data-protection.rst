@@ -18,8 +18,13 @@ The Data Controller owns responsibility for responding to Data Subject requests,
 regulators of breaches, and defining retention policies. Smap provides the tools to execute
 those obligations.
 
-Access to data protection tools requires the **DPO** (Data Protection Officer) role or
-**Organisational Administrator** security group.
+Access to the data protection tools requires the **Data Protection Officer** security group.  From SmapServer v26.10
+no other security group gives access, including Analyst.  The group can be granted by a security manager, an
+organisational administrator, an enterprise administrator or the server owner, but not by an ordinary administrator.
+
+The Data Subject Access Request and Right to be Forgotten tools search every survey in the Data Protection Officer's
+organisation, whether or not they are a member of the survey's project or hold its roles, so that nothing held about a
+person is missed.  Every search, export and redaction is recorded in the :ref:`logs`.
 
 .. _pii-question-flags:
 
@@ -37,8 +42,9 @@ Each question can be set to one of three states:
 Setting PII flags
 +++++++++++++++++
 
-In the **Online Editor**, select a question and use the three-button PII selector in the
-question settings panel.
+In the **Online Editor**, set the property to be edited to **PII (Personal Data)** using the properties menu, which shows the
+property currently selected (by default **Question Text**).  Each question then shows three buttons: **Not Personal Data**,
+**Personal Data** and **Anonymise on Submit**.  Select one for each question and save the survey.
 
 .. figure::  _images/dpo-pii.png
    :align:   center
@@ -67,8 +73,8 @@ identifier value across every survey in the organisation.
 Accessing the DSAR tool
 ++++++++++++++++++++++++
 
-The DSAR tool is available from the **Privacy** page, accessible via the user menu
-(top-right dropdown) for users with the DPO or Analyst role.
+The DSAR tool is on the **Privacy** page.  Select the **Modules** menu and then **Privacy**.  The menu entry is shown to
+users with the Data Protection Officer security group.
 
 Running a DSAR
 ++++++++++++++
@@ -107,7 +113,7 @@ or over-broad redaction.
 Phase 1 — Search
 +++++++++++++++++
 
-1. Open the **Privacy** page from the user menu.
+1. Open the **Privacy** page from the **Modules** menu.
 2. Enter the identifier to search for. Tick **Partial match** if needed.
 3. Click **Search**.  PII questions that the user has access to are then searched.
 

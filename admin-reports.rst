@@ -21,6 +21,17 @@ This shows who has access to a survey and what level of access they have.  If th
   Select "Form Access Report"
   Select the form that you want
 
+Bundle Access Report
+--------------------
+
+This shows, for every survey in a bundle, its project and whether it is a data survey, an oversight survey, read only or
+hidden on devices, together with which users can access each survey.  Access takes account of the users' projects,
+security groups and roles::
+
+  Access from the Form Management Page
+  Select "Bundle Access Report"
+  Select a survey in the bundle
+
 
 Usage Report
 ------------
@@ -70,3 +81,22 @@ selected day.
 
   Access from the Log Management Page
   Select the "Hourly Summary" report
+
+Organisational Structure
+------------------------
+
+A list of the enterprises, organisations and projects on the server.  Requires the administrator security group::
+
+  Access from the Form Management Page
+  Select "Organisational Structure"
+
+Enterprise and Organisation Administrators
+------------------------------------------
+
+Available from SmapServer 26.08.  A list of the users who have the enterprise administrator or organisational
+administrator security group, with their ident, name, email, enterprise and organisation.  These users can reach data
+across organisations, so this report is a useful check of who holds that access.  Requires the organisational administrator or
+enterprise administrator security group::
+
+  Access from the Form Management Page
+  Select "Enterprise and Organisation Administrators"
