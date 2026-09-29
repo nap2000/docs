@@ -32,7 +32,7 @@ For the task you want to edit click on the button with the edit icon in the edit
    
    Select task from map view
    
-3. Or Click on the task calendar entry in the map view
+3. Or Click on the task calendar entry in the calendar view
 
 .. figure::  _images/tasks5.jpg
    :align:   center
@@ -116,9 +116,11 @@ Alternatively just click on the map and/or type in the ID of an NFC chip.
 When specifying a new location you can optionally update an existing named location or create a new named location with those
 coordinates and/or NFC id.
 
-8.  Optionally set the download distance
+8.  Optionally set the show distance
 
-If you are assigning a lot of tasks and you want the task to only be visible if the user is close to it then specify a 
-download distance.
+If you are assigning a lot of tasks and you want the task to only be visible if the user is close to it then specify a
+**Show distance (meters)**.  The task is still downloaded to the device but is only shown when the user is within that
+distance of it.  To stop the tasks being downloaded at all until the user is nearby, set the download distance on the
+task group instead (:ref:`task_groups`).
 
 9.  If this task updates a record of data then you can click on the button "Show in Console" to view the record in the console.
