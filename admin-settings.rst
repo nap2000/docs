@@ -311,6 +311,27 @@ but cannot do anything useful is apparent before it is relied on.
 
 For the full description, including how to prepare the token in DHIS2, see :ref:`dhis2-connection`.
 
+Operations
+----------
+
+Requires SmapServer v26.06.  Thresholds used by the :ref:`operations` page for the organisation that you are currently in.
+
+*  Stale interval (days).  Any open task or case older than this counts as stale.
+*  Trend window (days).  The period covered by the sparklines and backlog chart.
+*  RAG amber threshold (overdue %).  The overdue percentage at which a unit turns amber.
+*  RAG red threshold (overdue %).  The overdue percentage at which a unit turns red.
+
+Sensitive Data
+--------------
+
+This tab is only shown to users with the security manager group.  It sets restrictions on access to sensitive data for the
+organisation that you are currently in.
+
+*  Signature Questions.  **No restrictions** or **Admin Only**.  If set to Admin Only then signature questions, that is image
+   questions with the signature appearance, are hidden from users who do not have the administrator group.  They are left out of
+   the console, exports, analysis and the API.  To restrict other questions, or to restrict signatures by role, use
+   :ref:`rbac`.
+
 .. _other-settings:
 
 Other Options
