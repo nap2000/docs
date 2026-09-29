@@ -123,7 +123,8 @@ Data is returned as GeoJSON.
   :query start: The primary key to start from
   :query limit: The number of records to return
   :query sort: The column name to sort on
-  :query dirn: One of `asc` or `desc`, the sort direction
+  :query dirn: One of `asc` or `desc`, the sort direction.  If no sort is given the records are in submission order and
+    `desc` returns the newest first, with `start` the highest key to return.
   :query form: Form name of a sub form, to retrieve the audit data for the sub form
   :query start_parkey:  The parent key to start from.  This is only useful if you are getting the audit data for a subform and you want to limit the data to only one or more submissions
   :query parkey: Get audit data for a subform that corresponds to a single submission

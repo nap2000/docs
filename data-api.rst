@@ -176,7 +176,8 @@ Survey Data in JSON
   :query merge_select_multiple: Set to ``yes`` to combine all the selected choices for a select multiple into a single column / JSON
     text property.
   :query sort: Question name to sort on
-  :query dirn: Sort direction, either ``asc`` or ``desc``
+  :query dirn: Sort direction, either ``asc`` or ``desc``.  If no sort question is given the records are returned in the
+    order they were submitted, and ``desc`` returns the newest first.  In that case ``start`` is the highest key to return.
   :query key: The key to filter by. A key will need to have been specified for this survey.
   :query tz: The timezone for example ``Australia/Brisbane``. All date/time and date answers will be returned in this time zone.
   :query geom_question: When using geojson=yes, and if you have more than one geometry in the main form, then you can specify the
