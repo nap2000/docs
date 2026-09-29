@@ -40,8 +40,8 @@ Name
   changed here.
 
 Language
-  The language of the server.  English, Spanish, French, Hindi, Arabic and Portuguese are
-  available, with the first two being the most complete.  If you would like to help
+  The language of the server.  English, Spanish, Ukrainian, French, Hindi, Arabic and Portuguese
+  are available, with the first three being the most complete.  If you would like to help
   translate the server into another language, contact support.
 
 Email
