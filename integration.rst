@@ -51,7 +51,7 @@ Supported versions
 ++++++++++++++++++
 
 * **SharePoint Server 2019** (on-premises) — supported using S2S high-trust
-  certificate authentication.
+  certificate authentication, or Windows (NTLM) authentication with a service account.
 * **SharePoint Online** — planned for a future release.
 
 .. _sharepoint-server-config:
@@ -60,7 +60,7 @@ Server Configuration
 ++++++++++++++++++++
 
 SharePoint connection details are configured at the server level by a user with the
-**server** security group.  Go to **Admin** → **Users** → **Server** tab and scroll
+**server owner** security group.  Go to **Admin** → **Settings** → **Server** tab and scroll
 to the **SharePoint** section.
 
 .. list-table::
@@ -71,6 +71,18 @@ to the **SharePoint** section.
      - Description
    * - SharePoint URL
      - Base URL of your SharePoint server, e.g. ``https://sharepoint.example.org``
+   * - Authentication Type
+     - **S2S High-Trust (on-premises)** or **Windows (NTLM)**.  The fields shown below
+       depend on this choice.
+
+For **S2S High-Trust (on-premises)**:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 75
+
+   * - Field
+     - Description
    * - Client ID
      - The GUID of the app principal registered in SharePoint (see :ref:`sharepoint-register-app`).
    * - Realm
@@ -79,6 +91,26 @@ to the **SharePoint** section.
    * - Private Key (PEM)
      - The PKCS8 private key used to sign authentication tokens.
        See :ref:`sharepoint-prepare-cert` for preparation steps.
+
+If **Discover** reports that the server only uses Windows (NTLM/Negotiate) authentication,
+S2S has not been configured on SharePoint yet.  The realm can then be found by running
+``Get-SPFarm | Select Id`` on the SharePoint server.
+
+For **Windows (NTLM)**:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 75
+
+   * - Field
+     - Description
+   * - Windows Domain
+     - The Windows domain of the account.  Optional, if set the account is used as
+       ``DOMAIN\username``.
+   * - Username
+     - A Windows account with access to the SharePoint lists Smap will use.
+   * - Password
+     - The password for that account.
 
 .. _sharepoint-prepare-cert:
 

@@ -368,13 +368,20 @@ Tasks assigned to a record will be shown in the History tab where you can see th
 Sending Notifications
 +++++++++++++++++++++
 
-An email notification can be sent with an attached PDF or a link to a WebForm containing the record data. This notification
-will also be shown in the record history.  Next to the notification will be shown a button labelled "Resend" that can be clicked
-to resend a notification.
+Click **Send Notification** to send a notification about the record.  The types available are:
+
+*  Email.  An email that can have an attached PDF or a link to a WebForm containing the record data.
+*  Message Conversation.  A reply by SMS or WhatsApp to the number that started the case.  Only offered for cases that were
+   started by a message, see :ref:`replying-to-messages`.
+
+Notifications are shown in the record history.  Next to each notification is a button labelled "Resend" that can be
+clicked to resend it.
 
 .. note::
 
-    This feature can be enabled in the settings for a survey.  The default is not to allow sending of emails from inside a WebForm.
+    Notifications can also be added while editing a record in a WebForm.  They are sent when the form is submitted.  This
+    is switched off by default and is enabled for the organisation by the setting **Allow notifications to be sent from
+    WebForms** in the **Other Options** tab of the settings page, see :ref:`other-settings`.
 
 Replies to emails, including attachments, will also be shown in the History. This is currently only available when AWS SES is configured as
 the email server.

@@ -40,6 +40,10 @@ Starting a Workflow
 -------------------
 
 Click on the + symbol, inside a blue circle at the bottom right of the screen, to add a starting point for your workflow.
+With no item selected the starting point can be:
+
+*  **Form** - The submission of a survey starts the workflow.
+*  **Scheduled** - A periodic timer that runs a report and emails it.  See :ref:`notifications` for the periodic settings.
 
 Adding a Workflow Step
 ----------------------
@@ -63,8 +67,12 @@ For the Workflow step type, you can select:
 *  **Task** — assign a survey to a user or group to collect or update data. See :ref:`tasks`.
 *  **EmailTask** - Email a task to somebody who does not need an account on the system
 *  **Case** - Assign a case to somebody
+*  **Reference** - Give one or more users read only access to the case. See :ref:`cm-references`.
 *  **Email** — send an automated email. See :ref:`notifications`.
+*  **SMS** - Send an SMS message to a phone number.  This uses the SMS URL service set up in the server settings.
 *  **SharePoint List** - Push data into a SharePoint list.
+
+Email, SMS and SharePoint List steps end a branch of the workflow, no further steps can be added after them.
 
 Specify a label for the Workflow step so that it is meaningful to readers.  Specify other attributes of the Step, the exact
 attributes depend on the step type.

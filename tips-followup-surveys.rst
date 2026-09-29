@@ -29,7 +29,7 @@ Secondly we will assume our second survey is called "Follow Up".
 Create a Task Group
 +++++++++++++++++++
 
-*  Go to the tasks module by selecting **Modules** and then **Tasks** 
+*  Go to the tasks page by selecting **Modules** and then **Workflow**, then click **Tasks** in the menu bar
 *  Select the **Task Group** menu and then **Add Task Group**
 *  Give your task group a name (In our example an appropriate name might be the village)
 *  Click on the checkbox "Create from Existing Data"

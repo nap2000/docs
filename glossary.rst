@@ -8,7 +8,7 @@ Glossary
   Bundled Form,  A form that updates the same table of data as another form. :ref:`survey_groups`
   Case, A record of data that has a status can be marked as closed.
   Console, A module on the server that allows the user to view and update data records.
-  Conversation,  A series of messages from and to SMS and WhatsApp about a case.
+  Conversation,  A series of messages from and to SMS and WhatsApp about a case.  Emails sent about the case are included.
   Excel Editor, Using Excel to create and modify the definition of a survey so that it can be uploaded to the server.
   Form, An electronic form that can be filled in an app or a web browser to collect data.
   JavaRosa,  A standard API for connecting data collection apps to servers that manage the collected data.

@@ -110,7 +110,8 @@ Security
 ++++++++
 
 *  Minimum password strength.
-*  Allow security managers to delete submissions.
+*  Require security manager privilege to delete data.  When set, only users with the security manager group can
+   delete all the data for a survey or restore it, see :ref:`delete-restore`.  Deleting individual records is not affected.
 *  Turnstile Site Key
 *  Turnstile Secret Key
 
@@ -118,6 +119,19 @@ If you specify the Turnstile keys and add your server domain to the domains prot
 to a public form.  You will still need to specify the use of Turnstile in the form settings. This feature is available in version 26.03.09+.
 Turnstile provides protection against automated bots completing your public surveys
 and works in a similar way to CAPTCHA.
+
+SharePoint
+++++++++++
+
+Requires SmapServer v26.05.01.  The connection used to write submissions to SharePoint lists and to read SharePoint
+lists as shared reference data.
+
+*  SharePoint URL.
+*  Authentication Type.  S2S High-Trust (on-premises) or Windows (NTLM).
+*  Client ID, Realm and Private Key (PEM).  For S2S High-Trust.  The **Discover** button finds the realm.
+*  Windows Domain, Username and Password.  For Windows (NTLM).
+
+See :ref:`sharepoint-server-config` for how to set these up.
 
 Server custom style sheet
 +++++++++++++++++++++++++
@@ -172,62 +186,18 @@ This tab allows setting of options for FieldTask. When the user presses refresh 
 of these settings include the option "set on phone" as they can also be set by the phone user. However if another setting is selected then the
 on-phone setting will be overridden. These settings apply to all FieldTask instances logged on as a user in the current organisation.
 
-Mobile security
-+++++++++++++++
+Security
+++++++++
 
-*  Force login token. Requires FieldTask to use the server-issued token rather than a stored password.
+*  Force the use of tokens for logon. Requires FieldTask to use the server-issued token rather than a stored password.
 *  Password policy. How often the user needs to re-logon. By default the enumerator never has to logon to FieldTask. In this case as long as valid
    credentials have already been entered they can continue to use the device without knowing what those credentials are. Using this setting you can
-   override that default behaviour and require the user to logon every time they use FieldTask. You can also require periodic logons after the specified
-   number of days has elapsed.
-*  Disable exit and tracking menu. Hides the menu used to exit FieldTask and the tracking controls.
-*  Disable background stop menu. Prevents users from stopping background tracking on the device.
+   override that default behaviour and require the user to logon every time they use FieldTask. You can also require periodic logons, in which case
+   set the **Number of days before password expiry**.
+*  Disable exit menu. Hides the menu used to exit FieldTask and the tracking controls.
+*  Prevent background audio from being disabled. Stops users turning off background audio recording on the device.
 
-Mobile menus
-++++++++++++
-
-*  Enable ODK style menus. Usually a FieldTask user will just use the menu option "refresh". However you can also enable the ODK style menus where
-   downloading forms, uploading results etc are separate menu options.
-*  Enable ODK admin menu. The FieldTask admin menu is generally not used. Instead set admin values on the server as described here. However you can
-   enable the on device admin menu if you wish.
-*  Enable server settings menu. The menu to change the server can be disabled with this setting.
-*  Enable user and identity menu. The menu to set user identity can be disabled with this setting.
-*  Disable exit menu. The exit menu shuts down FieldTask. It can be disabled with this setting.
-
-Mobile completion
-+++++++++++++++++
-
-*  Allow finalised forms to be opened for review. If set the user will be able to view completed surveys in read only mode and add comments. They will not
-   be able to change the answers to any questions.
-*  Allow user to mark a completed form as not finalized. If enabled then a checkbox labelled **Mark form as finalized**, will be shown when the enumerator finishes a
-   survey and gets to the `save` screen. By default this will always be checked. If the enumerator unchecks this option then the survey will be saved as an
-   incomplete instance and the enumerator can open it to continue editing from the tasks tab. Note incomplete instances are not sent to the server.
-   (Requires version 21.02+ of the server and 6.302+ of FieldTask)
-*  Allow user to set instance name. Instance names can be set automatically using collected data. If you are combining multiple names use concat() or join(). For example **concat(${name}, ' ', ${last_name})**
-*  Backward navigation. The ability of the user to go back to a previous question can be blocked using this option.
-*  Screen navigation. Can be set to use swipes, buttons or both.
-*  Guidance. How and when survey guidance should be shown.
-
-Mobile sync
-+++++++++++
-
-*  Automatically synchronise. If set the phone will refresh when a form changes on the server. The refresh can be specified to occur if connected to wifi only or
-   when also connected via a cellular network. If the option **set on phone** is selected then the enumerator can enable or disable automatic synchronisation
-   using the menus on the phone.
-*  Delete submitted results from the phone. After a completed survey has been successfully submitted it can be automatically deleted from the device. This is
-   recommended to improve security. If you do not select this option then you should manually delete completed forms when you are confident that you have the
-   data.
-*  Maximum number of tasks to download. The tasks are ordered by due date in ascending order.
-
-Mobile media
-++++++++++++
-
-*  High resolution video. If set prevents the recording of high resolution videos.
-*  Maximum pixels of the long edge of an image. This is a very useful setting to reduce the size of images that have to be sent over the network and stored
-   on the server. The image will be scaled according to this setting, so if the image on the phone is 2,000 by 1,000 pixels and you set a value here of
-   **500** then the submitted image will be 500 by 250 pixels.
-
-Offline maps
+Offline Maps
 ++++++++++++
 
 *  Manage offline map layers on the server. When set, FieldTask downloads the offline map layers belonging to the projects a
@@ -236,16 +206,63 @@ Offline maps
    organisation, so leaving the manual option available means someone who needs a layer larger than the 500 MB upload limit
    is not blocked.
 
-Mobile tracking
+Menus
++++++
+
+The device must be restarted to see changes to these options.
+
+*  Enable ODK style menus to delete, submit, edit and get new forms. Usually a FieldTask user will just use the menu option "refresh". However you can
+   also enable the ODK style menus where downloading forms, uploading results etc are separate menu options.
+*  Enable ODK Admin menu. The FieldTask admin menu is generally not used. Instead set admin values on the server as described here. However you can
+   enable the on device admin menu if you wish.
+*  Enable server settings menu. The menu to change the server can be disabled with this setting.
+*  Enable user and identity menu. The menu to set user identity can be disabled with this setting.
+
+Form Completion
 +++++++++++++++
 
-*  Prevent disabling tracking. Locks tracking so it cannot be turned off on the device.
+*  Allow finalised forms to be opened for review. If set the user will be able to view completed surveys in read only mode and add comments. They will not
+   be able to change the answers to any questions.
+*  Allow user to mark forms as not finalized. If enabled then a checkbox labelled **Mark form as finalized**, will be shown when the enumerator finishes a
+   survey and gets to the `save` screen. By default this will always be checked. If the enumerator unchecks this option then the survey will be saved as an
+   incomplete instance and the enumerator can open it to continue editing from the tasks tab. Note incomplete instances are not sent to the server.
+   (Requires version 21.02+ of the server and 6.302+ of FieldTask)
+*  Allow user to set instance name. Instance names can be set automatically using collected data. If you are combining multiple names use concat() or join(). For example **concat(${name}, ' ', ${last_name})**
+*  Screen Navigation. Use horizontal swipes, forward/backward buttons, or both.
+*  Guidance. Whether survey guidance is shown: no, always shown, or collapsed.
+*  Backward navigation. The ability of the user to go back to a previous question can be blocked using this option.
+
+Sync & Connectivity
++++++++++++++++++++
+
+*  Automatically Synchronise. If set the phone will refresh when a form changes on the server. The refresh can be specified to occur if connected to wifi only or
+   when also connected via a cellular network. If the option **set on phone** is selected then the enumerator can enable or disable automatic synchronisation
+   using the menus on the phone.
+*  Delete submitted results from the phone. After a completed survey has been successfully submitted it can be automatically deleted from the device. This is
+   recommended to improve security. If you do not select this option then you should manually delete completed forms when you are confident that you have the
+   data.
+*  Maximum number of tasks to download. The tasks are ordered by due date in ascending order.
+
+Media
++++++
+
+*  High Resolution Video. Allow or prevent the recording of high resolution videos.
+*  Maximum pixels of the long edge of an image. This is a very useful setting to reduce the size of images that have to be sent over the network and stored
+   on the server. Select the original size from the camera or one of: Very small (640px), Small (1024px), Medium (2048px) or Large (3072px).  The image is
+   scaled so that its long edge is no larger than this, so if the image on the phone is 2,048 by 1,024 pixels and you select **Very small (640px)** then the
+   submitted image will be 640 by 320 pixels.
+
+Tracking & Geolocation
+++++++++++++++++++++++
+
+*  Prevent the disabling of location tracking. Locks tracking so it cannot be turned off on the device.
 *  Enable Geo-fence. Enables the geo fence feature that can download or show tasks when the user is within a specified perimeter.
-*  Send location. Controls whether FieldTask sends location updates when refreshing.
-*  Location input method. Sets how FieldTask records points (point, manual, or automatic).
-*  Automatic tracking interval. When input method is automatic, sets the time between points.
-*  Automatic tracking accuracy. When input method is automatic, sets the accuracy threshold in meters.
-*  GeoShape and GeoTrace input method. If these are set on the server then a dialog is no longer shown to FieldTask users before they start recording points. This reduces the time required to start recording and allows a consistent approach to recording geo poly types.
+*  Send location data on path of user. Controls whether FieldTask records and sends the path of the user.
+*  GeoShape and GeoTrace Input Method. How FieldTask records the points of a GeoShape or GeoTrace: placement by tapping, manual location recording or
+   automatic location recording.  If this is set on the server then a dialog is no longer shown to FieldTask users before they start recording points.
+   This reduces the time required to start recording and allows a consistent approach to recording geo poly types.
+*  Recording Interval. When the input method is automatic, the time in seconds between points.
+*  Accuracy. When the input method is automatic, the accuracy threshold in meters.
 
 WebForm Settings
 ----------------

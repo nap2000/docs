@@ -67,6 +67,11 @@ Create a table view of your survey. To do this click on the table button, then s
    
 You can then click on the button to delete the data.
 
+.. note::
+
+  If the server owner has set **Require security manager privilege to delete data** in the server settings
+  (:ref:`server-settings`) then only users with the security manager group can delete or restore all the data for a survey.
+
 Restoring All Records
 +++++++++++++++++++++
 

@@ -131,7 +131,7 @@ Repeat for the register and dispense forms enabling the appropriate role in each
 2.6 Configure Notifications
 +++++++++++++++++++++++++++
 
-Got to the tasks page by selecting the “modules” menu and then “tasks”.
+Go to the notifications page by selecting the “modules” menu and then “workflow”, then click “notifications” in the menu bar.
 
 2.6.1 Doctor Notifications
 ^^^^^^^^^^^^^^^^^^^^^^^^^^

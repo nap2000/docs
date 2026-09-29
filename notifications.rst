@@ -6,7 +6,7 @@ Notifications
 .. contents::
  :local:
 
-To get to the notifications page select the **Tasks** module and then **Notifications**.
+To get to the notifications page select **Modules** and then **Workflow**, then click **Notifications** in the menu bar.
 
 .. figure::  _images/notifications1.jpg
    :align:   center
@@ -136,9 +136,12 @@ Target
 Notifications can be sent as:
 
 *  An email.
-*  An SMS.  Only if SMS has been enabled in the server settings (:ref:`admin-server`)
+*  A web hook.  Calls a web service in another system with the data.
 *  Escalation (assignment) of a case to a user.
+*  A reference.  Gives one or more users read only access to the record.
+*  A SharePoint list.  Inserts or updates a row in a SharePoint list.
 *  DHIS2.  Keeps aggregate totals in DHIS2 up to date as records change.
+*  An SMS.  Only if SMS has been enabled in the server settings (:ref:`admin-server`)
 
 Email
 +++++
@@ -147,7 +150,11 @@ Settings are:
 
 *  Attach.  Attach a PDF of the record or a link to a webForm containing the data. (Not available for periodic triggers).
 *  Email.  One or more comma separated email addresses
-*  A question that contains the email address. (If the trigger is a submission of a completed survey, not periodic triggers)
+*  Email Question.  A question that contains the email address. (If the trigger is a submission of a completed survey, not periodic triggers)
+*  Email Meta Item.  A meta item of the submission whose value is the email address, for example **Submitter** when user
+   names are email addresses.  Values that are not valid email addresses are ignored.
+*  Send Email to assigned user.  Also send the email to the user the record is currently assigned to, using the email
+   address in their user details.
 *  Subject.  The subject of the email.
 *  Content.  The body content of the email.  
    
@@ -158,7 +165,7 @@ Settings are:
 The subject and message content can be customised using data from the submitted results.  Use the following placeholders in either:
 
 *  ${username} :  The user who submitted the results.
-*  ${surveyname) : The name of the survey
+*  ${surveyname} : The name of the survey
 *  ${hrk} : The key that is created on the server
 *  ${instancename} : The instance name that is generated on the server
 *  ${device} : The device IMEI used to submit the results
@@ -170,6 +177,12 @@ For example::
 
   ${username} has submitted ${surveyname} with a value of age of ${age}.
   
+Web Hook
+++++++++
+
+Settings are the callback URL and optionally a user name and password.  See :ref:`webhooks` for what is sent
+and how to monitor the calls.
+
 SMS
 +++
 
@@ -188,11 +201,36 @@ user because it has been "escalated" in importance, however it can be used to as
 
 Settings are:
 
-*  User to assign
-*  The survey for the user to complete. The survey needs to be in the same bundle as the survey that triggered the notification.
+*  Survey to complete. The survey for the user to complete. The survey needs to be in the same bundle as the survey that
+   triggered the notification.
+*  Assignment type.  **User** or **Role**.
+*  Assign User.  When the assignment type is user, one of:
 
-An escalation can be accompanied by emails.  The settings are similar to the "email" target with the addition of a 
-checkbox that allows you to send the email to the assigned user
+   *  A named user.
+   *  **Submitter**.  The user who submitted the record.
+   *  **Assign from data values**.  Select the question that contains the user ident.  If it has more than one value the
+      first is used.
+   *  **None**.  Leave the case unassigned, or unassign it.
+
+*  Assign to users with role.  When the assignment type is role, the case is assigned to the first user, in alphabetical
+   order of their ident, who has the role and is allowed to access the record by the role's row filter.  If there is no
+   such user the case is left unassigned.
+
+An escalation can be accompanied by emails.  The settings are the same as for the "email" target, including the
+**Send Email to assigned user** checkbox.
+
+Reference
++++++++++
+
+Requires SmapServer v26.06.  A reference gives users read only access to a record without changing who it is
+assigned to.  The users to reference are chosen in the same way as for an escalation.  See :ref:`cm-references`.
+
+SharePoint List
++++++++++++++++
+
+Requires SmapServer v26.05.01.  Writes the submission to a SharePoint list, either inserting a new row or updating an
+existing one, with a mapping of survey questions to SharePoint columns.  The SharePoint connection must first be set
+up by the server owner.  See :ref:`sharepoint-notifications`.
 
 DHIS2
 +++++

@@ -83,7 +83,10 @@ When someone sends a message to your Smap-connected number:
 
 **When there are multiple open cases:**
 
-If a phone number has more than one open case, incoming messages will be added to all open cases for that number. You can configure an automatic reply to help the sender specify which case they're referring to (see :ref:`multiple-open-cases` below).
+If a phone number has more than one open case, and the message does not include a case reference such as "#123", the
+message is not added to any of the cases.  Instead an automatic reply is sent asking the sender to say which case
+they are referring to, and they then need to send their message again with the case reference.  The automatic reply is
+only sent if it has been configured (see :ref:`multiple-open-cases` below).
 
 .. _replying-to-messages:
 
@@ -133,6 +136,10 @@ Each reply is also recorded in the case's history, shown with a WhatsApp or SMS 
    A conversation
 
 Any response from the sending number will also be added to the conversation.
+
+Emails sent about the case, either from **Send Notification** or by a notification that the case triggers, are also added
+to the conversation so that you can see everything sent to people about the case in one place.  Replies to those emails
+are not added to the conversation, they are shown in the case history (:ref:`console_history`).
 
 From version 26.10, the conversation is shown read only when a case is opened in a webform or in fieldTask.  Only messages
 change a conversation.

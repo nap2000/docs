@@ -39,7 +39,7 @@ Data Submission Webhooks
 Adding
 ++++++
 
-These web hooks are added on the notifications page which is in the tasks module. After clicking the ``Add`` button specify the target of the notification
+These web hooks are added on the notifications page, reached from **Modules** then **Workflow** then **Notifications**. After clicking the ``Add`` button specify the target of the notification
 as a Web Hook. You will then be able to specify the callback URL and optionally a user name and password.  The trigger of the notification can be set to:
 
 *  Submission.  New results submitted to the server.
