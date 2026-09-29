@@ -22,14 +22,21 @@ Options
 Type
 ++++
 
-*  XLS
+*  Excel
 *  CSV
-*  Shapefile
+*  Openstreetmap.  An OpenStreetMap XML file of the location data in the selected forms, for
+   use in OSM editing tools.
+*  Shape.  A shapefile of the location data.
 *  Media. A ZIP file containing media. The name of each media file is taken from questions
    specified in the dialog.
-*  KML
-*  Stata
-*  SPSS
+*  KML / KMZ
+*  VRT / CSV.  A CSV file of the data with a GDAL virtual file (VRT) describing its geometry, so that it
+   can be opened directly in GIS tools such as QGIS.
+*  Stata / CSV.  A CSV file with a Stata script to load it.
+*  SPSS / CSV.  A CSV file with an SPSS script to load it.
+
+For most types, **Include Read Only** adds questions that are read only to the export.  They are left out
+by default.
 
 Depending on the selected export type, other options change.
 
@@ -45,7 +52,11 @@ XLS Options
    separate columns.
 *  Embed images in Excel file. If selected, images are included in the exported Excel file.
    Image width is set to 300 pixels. Click an image in the spreadsheet to open the full-size image.
+*  HXL.  Add a row of `HXL <https://hxlstandard.org>`_ (Humanitarian Exchange Language) hashtags under the
+   headings.  The hashtag for a question is taken from any value in its appearance that starts with ``#``,
+   for example ``#affected+f``.  New XLSX format only.
 *  Include metadata. Select to include metadata in the export.
+*  Include Read Only. Include questions that are read only.
 
 
 Select Form
