@@ -107,14 +107,15 @@ data is filtered by dates determined by the selected period.
 
 The settings are:
 
-*  Report. The report to run (only XLS reports are supported). The report
-   must be set up as a public report in the Reports module.
+*  Report. The report to run. Either a survey report (only XLS reports are supported), which
+   must be set up as a public report in the Reports module, or the **Operations Summary**
+   of the organisation's case management and workflow, see :ref:`operations`.
 *  Target. Only email is available for periodic notifications
-*  Period. Daily, weekly, monthly or yearly
+*  Period. Daily, weekly, monthly, quarterly or yearly
 *  Time. The time of day at which the trigger should fire
 *  Day of the week. (Only if weekly is set as the period)
-*  Day of the month. (Only if monthly or yearly is set as the period)
-*  Month.  (Only if yearly is set as the period)
+*  Day of the month. (Only if monthly, quarterly or yearly is set as the period)
+*  Month.  (Only if yearly or quarterly is set as the period.  For quarterly it is the month within the quarter, 1 to 3)
 *  Email. A comma separated list of email addresses that should be sent the report
 *  Subject. The email subject.
 *  Content. The email content.

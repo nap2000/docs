@@ -117,8 +117,8 @@ Simplification
 --------------
 
 The workflow page presents a simplified view of notifications and tasks.  You can access all the options by selecting "Advanced"
-when editing a workflow item.  There are also some capabilities that are not currently accessible from the Workflow page; for example
-to add a periodic notification you will need to go directly to the notification page.
+when editing a workflow item.  A periodic notification can be added from the Workflow page by starting a workflow with a
+**Scheduled** step, which sets the report and the schedule, and then adding the recipients on the email step that follows it.
 
 Related Pages
 -------------

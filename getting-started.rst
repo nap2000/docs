@@ -35,8 +35,9 @@ Once you have logged on you can create surveys and manage your data collection.
 Navigation
 ++++++++++
 
-The Smap server is divided into **modules** including Admin, Analysis, Edit and Tasks.  To navigate between modules**
-select the **modules** menu and then the module you want to go to.  Within each module there will then be multiple functions
+The Smap server is divided into **modules** including Edit, Admin, Web Forms, Console, Analysis, Workflow, Campaigns,
+Reports and Privacy.  To navigate between modules select the **modules** menu and then the module you want to go to.  The
+modules shown depend on your security groups.  Within each module there will then be multiple functions
 that you can access via the menu bar.
 
 Your Profile
