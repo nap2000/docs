@@ -182,9 +182,17 @@ have to ask them to talk through what they see in their history.
 Notifications
 -------------
 
-Emails can be added in WebForms.  This means they can be added while offline and will be synchronised when the Submit button is pressed.
-Attachments can be added to the email.  This email and its attachments are stored with the record being edited and can be viewed in the
-history page of the console.
+Notifications can be added in WebForms.  This means they can be added while offline and will be sent when the Submit button is pressed.
+Open the notification panel from the menu, fill in the notification and click **Save** to add it to the list for the record.  Several can
+be added before submitting, and they are sent in the order they were added.
+
+*  Email.  Attachments can be added to the email.  The email and its attachments are stored with the record being edited and can be
+   viewed in the history page of the console.
+*  Reply to conversation.  A WhatsApp or SMS reply to the number that started the case.  Only offered when editing a case that was started
+   by a message, see :ref:`replying-to-messages`.
+
+Notifications in WebForms are switched off by default.  They are enabled for an organisation with the setting **Allow notifications to
+be sent from WebForms** on the **Other Options** tab of the settings page, see :ref:`other-settings`.
 
  .. figure::  _images/webform-email.png
     :align:   center
