@@ -63,7 +63,6 @@ Resources
               "name": "a.jpg",
               "url": "/surveyKPI/file/a.jpg/organisation",
               "thumbnailUrl": "/surveyKPI/file/a.jpg/organisation?thumbs=true",
-              "deleteUrl": "https://sg.smap.com.au/surveyKPI/upload/media/organisation/1/a.jpg",
               "type": "image",
               "size": 7946,
               "modified": "2019-04-21T22:32:42.000+0000"
@@ -72,7 +71,6 @@ Resources
               "name": "b.jpg",
               "url": "/surveyKPI/file/b.jpg/organisation",
               "thumbnailUrl": "/surveyKPI/file/b.jpg/organisation?thumbs=true",
-              "deleteUrl": "https://sg.smap.com.au/surveyKPI/upload/media/organisation/1/b.jpg",
               "type": "image",
               "size": 7236,
               "modified": "2019-04-21T22:32:42.000+0000"
@@ -81,7 +79,6 @@ Resources
               "name": "c.jpg",
               "url": "/surveyKPI/file/c.jpg/organisation",
               "thumbnailUrl": "/surveyKPI/file/c.jpg/organisation?thumbs=true",
-              "deleteUrl": "https://sg.smap.com.au/surveyKPI/upload/media/organisation/1/c.jpg",
               "type": "image",
               "size": 1075,
               "modified": "2019-04-21T22:32:42.000+0000"
@@ -90,7 +87,6 @@ Resources
               "name": "camps.csv",
               "url": "/surveyKPI/file/camps.csv/organisation",
               "thumbnailUrl": "/images/csv.png",
-              "deleteUrl": "https://sg.smap.com.au/surveyKPI/upload/media/organisation/1/camps.csv",
               "type": "csv",
               "size": 103116,
               "modified": "2019-09-12T06:36:19.000+0000"
