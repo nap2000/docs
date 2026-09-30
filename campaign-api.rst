@@ -109,15 +109,20 @@ Get Email Totals
 	Content-Type: application/json
 	
         {
-          "total": 0,
+          "total": 2,
           "complete": 0,
           "unsent": 2,
           "error": 0,
           "unsubscribed": 0,
           "pending": 0,
           "sent": 0,
-          "expired": 0
+          "expired": 0,
+          "manual": 0
         }
+
+  ``total`` is the number of emails in the campaign.  The other values count the emails with each status.
+  ``unsent`` counts emails with a status of new, and ``manual`` counts emails added with the ``manual``
+  action, whose links are sent by some other means.
 
   :reqheader Authorization: basic
   :statuscode 200: no error
