@@ -166,7 +166,7 @@ Survey Data in JSON
     the main form.
   :query start_parkey: Parent key to start from.  Only useful when working with subform data.
   :query parkey: Parent key. Return records in the subform that belong to the specified parent.
-  :query get_bad: Set to ``true``` or ``yes`` to return deleted records
+  :query bad: Set to ``yes`` to include deleted records or ``only`` to return only deleted records.  The default is ``none``.
   :query audit: Set to ``yes`` to return audit data. This data is the time in milliseconds that the user took to answer each question.
     You can also specify in the settings for the form that the GPS coordinates where each question was answered should be included.
     There is a third level of audit where every change made to a question during the course of an interview is recorded.
@@ -178,7 +178,12 @@ Survey Data in JSON
   :query sort: Question name to sort on
   :query dirn: Sort direction, either ``asc`` or ``desc``.  If no sort question is given the records are returned in the
     order they were submitted, and ``desc`` returns the newest first.  In that case ``start`` is the highest key to return.
-  :query key: The key to filter by. A key will need to have been specified for this survey.
+  :query key: The key to filter by. A key will need to have been specified for this survey.  ``hrk`` can be used instead of ``key``.
+  :query instanceid: Return only the record with this instance id.
+  :query dateName: The name of a date or date time question, or of a date column such as ``_upload_time`` or ``_start``, to filter by.
+    Use with ``startDate`` and ``endDate``.
+  :query startDate: Return records where ``dateName`` is on or after this date, for example ``2026-09-30``.
+  :query endDate: Return records where ``dateName`` is on or before this date.
   :query tz: The timezone for example ``Australia/Brisbane``. All date/time and date answers will be returned in this time zone.
   :query geom_question: When using geojson=yes, and if you have more than one geometry in the main form, then you can specify the
     name of the geometry question to use as the GeoJSON geometry here.
