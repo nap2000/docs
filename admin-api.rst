@@ -312,7 +312,7 @@ Upload
 
   :synopsis: Upload a survey template in the spreadsheet format
 
-  For server releases prior to 24.04 use the URL: "/surveyKPI/surveys/idents".
+  For server releases prior to 24.04 use the URL: "/surveyKPI/upload/surveytemplate".
 
   **Example request**:
   
@@ -404,7 +404,7 @@ Timezone
 
   **Example response**:
   
-  https://sg.smap.com.au/surveyKPI/utility/timezones
+  https://sg.smap.com.au/api/v1/misc/timezones
   
   A list of timezones. Each timezone consists of an "id" and a name. The "id" is what you should use to identifity the 
   time zone in a web service call. The name is just the "id" with the addition of the current hour offset from UTC. 
@@ -446,7 +446,7 @@ Get a PDF of a submitted Record
 
   :synopsis: Returns a PDF of the data in the submission. You can use the data API passing a parameter of links=true to see the URLs that will return a PDF of data.
 
-  For server releases prior to 24.04 use the URL: "/surveyKPI/utility/timezones".
+  For server releases prior to 24.04 use the URL: "/surveyKPI/pdf/(survey ident)".
 
   :query instance:  (Required) The instance id of the record you want to retrieve.  
   :query string tz: Set to a valid time zone.
