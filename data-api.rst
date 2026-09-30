@@ -196,14 +196,17 @@ Survey Data in CSV
 ------------------
 
 .. http:get:: /api/v1/data.csv/(survey ident)
+.. http:get:: /api/v2/data.csv/(survey ident)
 
-  :synopsis: Returns data for the specified survey. The example shows
+  :synopsis: Returns data for the specified survey as a CSV file.
   
   **Example response**:
   
-  https://sg.smap.com.au/api/v1/data.csv/s193_18568?links=true
+  https://sg.smap.com.au/api/v1/data.csv/s193_18568
 
-  All parameters in :ref:`survey-data-json` can be used.
+  The following parameters from :ref:`survey-data-json` can be used: ``start``, ``limit``, ``sort``, ``dirn``, ``form``,
+  ``start_parkey``, ``parkey``, ``bad``, ``audit``, ``tz``, ``filter`` and ``merge_select_multiple``.  To filter by key
+  use ``hrk``.  Meta data columns are always included.
   
   :query filename: The name of the file. Default is ``data.csv``.
 
