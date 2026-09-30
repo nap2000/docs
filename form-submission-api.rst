@@ -4,10 +4,14 @@ Submission
 .. contents::
  :local:
 
-.. http:post:: /submission?device={device identifier}
+.. http:post:: /submission?deviceID={device identifier}
 
   :synopsis: Submit data for a completed form to the server
-  
+
+  deviceID is optional.  The device recorded for the submission is taken from the ``_device`` meta item in the
+  submission file.  deviceID is only used when that item is empty, as it is for submissions from webforms, which
+  send the device type (webform, Android, iPhone, iPad or iPod) in deviceID instead.
+
 Contents::
 
   Content Type: multipart/form-data
