@@ -30,8 +30,8 @@ callback URLs generally include a long sequence of random characters so as long 
 Monitoring
 ----------
 
-Calls and their status, successful or otherwise can be monitored on the ``Monitoring`` page in the Admin module.  Select a source of "Notifications" and
-then specify ``Show`` as "last 200".
+Calls and their status, successful or otherwise, can be monitored on the :ref:`Monitoring <admin_monitor>` page in the Admin module.  Select the
+**Notifications** tab and then set **Show** to "(last 200)".
 
 Data Submission Webhooks
 ------------------------
