@@ -64,10 +64,9 @@ Two server settings limit what the API returns.  Both are shared by everybody in
 being per key, and your server administrator sets them (:ref:`admin-server`):
 
 *  **API requests per minute**.  Once the organisation has used them up, further requests are refused until the
-   next minute.  A refused request is answered with the text ``Rate exceeded. Access to this service is rate
-   limited to n requests per minute.`` in place of the data, so the dashboard reports a parsing error rather
-   than an obvious rate limit.  When a refresh fails in a way that makes no sense, this is worth ruling out
-   first.
+   next minute.  A refused request is answered with HTTP status 429 (Too Many Requests) and the text
+   ``Rate exceeded. Access to this service is rate limited to n requests per minute.``  Because the limit is
+   shared, a refresh can fail this way because of requests made by somebody else in the organisation.
 *  **Max records per API request**.  Where this is set, a request asking for more records than the limit is
    given the limit instead.  A dashboard showing fewer rows than the survey holds is usually this.
 
