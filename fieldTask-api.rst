@@ -52,7 +52,7 @@ Getting the URI of a form or instance chosen by the user
   static final int PICK_FORM_REQUEST = 1;  // The request code
   startActivityForResult(intent, PICK_FORM_REQUEST);
  
-To get the result, override ``onActivityResultMethod`` in the following way:
+To get the result, override ``onActivityResult`` in the following way:
 
 .. code-block:: java
 
@@ -85,7 +85,11 @@ If the URI of a form or instance is known, it can be viewed or edited. For examp
 .. code-block:: java
  
   Intent intent = new Intent(Intent.ACTION_EDIT);
-  intent.setData("content://org.odk.collect.android.provider.odk.forms/forms/2");
+  intent.setData(Uri.parse("content://org.odk.collect.android.provider.odk.forms.smap/forms/2"));
   startActivity(intent);
  
-The same thing can be done with a specific instance.
+The same thing can be done with a specific instance::
+
+  intent.setData(Uri.parse("content://org.odk.collect.android.provider.odk.instances.smap/instances/5"));
+
+The authorities end in ``.smap`` so that fieldTask can be installed alongside ODK Collect.
