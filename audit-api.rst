@@ -162,12 +162,14 @@ taken to answer the question.
 Raw Audit Log File
 ------------------
 
-.. http:get:: /api/v1/audit/(survey ident)
+.. http:get:: /api/v1/audit/log/(survey ident)/(instance id)
 
   :synopsis: Download the audit file that contains the original audit data before it is processed by the server
   
   **Example response**:
   
+  https://sg.smap.com.au/api/v1/audit/log/s193_18568/uuid:7d2b9a69-0cad-4e0c-8dd5-cb3e3c14eb14
+
   The URLs to the log file can be found by calling the data API with the links=yes query parameter.
 
   The downloaded file is in CSV format. 
