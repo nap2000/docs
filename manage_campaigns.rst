@@ -16,6 +16,7 @@ Select the **Project** and then the **Survey** that you are going to send.  Then
 *  Enter a "Subject" to be included with each email sent
 *  Enter the "content" of the email
 *  Optionally select the checkbox to allow multiple submissions from each email
+*  Optionally select **Anonymous** so that submissions are not linked to the recipient's email address
 
 Layout your email content as you want it to appear to the recipient using multiple lines.  The following special terms can be used:
 
@@ -47,6 +48,18 @@ Example::
   For most campaigns you would not select "multiple submissions".  Usually the objective would be to get
   a person to fill in a form once.  However you may want to create links that can open a form that can be
   completed any time.  Covid check in forms are a good example of this.  
+
+Anonymous campaigns
++++++++++++++++++++
+
+Normally a submission made from a campaign link is recorded with the recipient's email address as the user.
+In an anonymous campaign it is recorded with the name of the campaign instead, so the data does not show who
+submitted it.
+
+*  The setting is stored in each link when the link is created.  Changing it afterwards does not affect links
+   that have already been sent or generated.
+*  Only the submitted data is anonymous.  The recipients table on the campaign page still shows who has
+   responded: their status changes to Complete and the **Submissions** column counts their submissions.
 
 Adding Email Recipients
 -----------------------
