@@ -228,7 +228,7 @@ Details of a Single Task
   
   **Example response**:
   
-  https://sg.smap.com.au/api/v1/tasks
+  https://sg.smap.com.au/api/v1/tasks/2507
   
   .. sourcecode:: text
 
@@ -280,8 +280,7 @@ Create a Task
 
   .. sourcecode:: text
 
-    HTTP/1.1 200 OK
-    Vary: Accept
+    POST /api/v1/tasks HTTP/1.1
     Content-Type: application/x-www-form-urlencoded
 
     task = {
@@ -305,11 +304,10 @@ Initial data is included in the task.   In this second example the task "id" is 
 
   .. sourcecode:: text
 
-    HTTP/1.1 200 OK
-    Vary: Accept
+    POST /api/v1/tasks HTTP/1.1
     Content-Type: application/x-www-form-urlencoded
 
-    {
+    task = {
       "tg_id": 4,
       "name": "xxxx : A project : geopoint",
       "survey_ident": "s1_37",
@@ -409,11 +407,10 @@ instanceId of the record to update is included as "update_id".
 
   .. sourcecode:: text
 
-    HTTP/1.1 200 OK
-    Vary: Accept
+    POST /api/v1/tasks HTTP/1.1
     Content-Type: application/x-www-form-urlencoded
 
-    {
+    task = {
       "tg_id": 4,
       "name": "xxxx : A project : geopoint",
       "survey_ident": "s1_37",
