@@ -112,6 +112,10 @@ Security
 *  Minimum password strength.
 *  Require security manager privilege to delete data.  When set, only users with the security manager group can
    delete all the data for a survey or restore it, see :ref:`delete-restore`.  Deleting individual records is not affected.
+*  Allow anyone to register a new organisation.  When set, a **Register** menu is shown on the home page to people who are
+   not logged in, and anyone can use it to create a new organisation on the server, becoming its administrator.  The new
+   user is emailed a link to set their password, so the email server must be set up.  Off by default.  Leave it off
+   unless the server is meant to offer sign up to the public.
 *  Turnstile Site Key
 *  Turnstile Secret Key
 
