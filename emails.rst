@@ -35,6 +35,10 @@ The page shows the same message whether or not the address has unsubscribed from
 address belongs to.  Only one request can be made for an address every 10 minutes.  This applies to Smap Server version 26.11+, earlier
 versions listed the organisations on the page.
 
+The subscribe link works once and expires after 30 days.  If it has expired, or has already been used, ask for a new one on the
+subscriptions page.  The unsubscribe link in an email cannot be used to subscribe again after unsubscribing.  This applies to Smap Server
+version 26.11+.
+
 Opt in
 ------
 
@@ -44,7 +48,9 @@ confirm their email address.  Until the user opts in other emails are held in a 
 For email mailouts the opt in email is the first email that the person is sent.  If they complete the requested survey then the user is marked as 
 opted in.
 
-For notifications a special opt in email is sent allowing the user to confirm their email address.
+For notifications a special opt in email is sent allowing the user to confirm their email address.  From Smap Server version 26.11 the
+link in it works once and expires after 30 days.  If it expires before the person responds, the opt in email can be sent again from the
+monitoring page, see `Review opt in messages`_.
 
 Troubleshooting
 ---------------
