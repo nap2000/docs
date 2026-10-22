@@ -6,6 +6,21 @@ Application Change History
 .. contents::
  :local:
 
+26.10.02
+--------
+
+`Download 26.10.02 <https://smap-code.s3.us-east-1.amazonaws.com/os_smap_26_10_02_5656.tgz>`_
+
+#.  Security fixes.
+#.  Data protection requests (DSAR and right to be forgotten) now require the Data Protection Officer security group.  Give this group to whoever handles these requests before upgrading
+#.  WhatsApp and SMS conversations.  Direct support for the Meta WhatsApp Cloud API.  Reply to a case's conversation from the console and from WebForms
+#.  Organisation settings have moved from the Users page to a new Organisation tab on the Settings page
+#.  Messaging settings are split into separate Vonage, WhatsApp and SMS sections
+#.  The Submissions column in campaigns counts submissions from each recipient's link in that campaign
+#.  Webhooks can no longer call addresses on the server itself, webhook URLs with a port number now work, and webhooks time out instead of holding up notifications
+#.  Rate limited API requests now get HTTP status 429 (Too Many Requests)
+#.  Bug fixes
+
 26.09.04
 --------
 
