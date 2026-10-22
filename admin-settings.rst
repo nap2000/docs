@@ -131,13 +131,19 @@ Security
    not logged in, and anyone can use it to create a new organisation on the server, becoming its administrator.  The new
    user is emailed a link to set their password, so the email server must be set up.  Off by default.  Leave it off
    unless the server is meant to offer sign up to the public.  Requires Smap Server version 26.11+.
+
+   If the Turnstile keys below are set, the registration page shows the Turnstile check and a registration is only accepted
+   once it has been passed.  Set the keys on any server that allows registration, as without them automated programs can use
+   the page.  There is also a limit of 3 registrations an hour from one internet address and 20 an hour for the whole
+   server.  Requires Smap Server version 26.11+.
 *  Turnstile Site Key
 *  Turnstile Secret Key
 
 If you specify the Turnstile keys and add your server domain to the domains protected by your Cloudflare account then Turnstile protection can be added
 to a public form.  You will still need to specify the use of Turnstile in the form settings. This feature is available in version 26.03.09+.
 Turnstile provides protection against automated bots completing your public surveys
-and works in a similar way to CAPTCHA.
+and works in a similar way to CAPTCHA.  From version 26.11 the keys are also used to protect the registration page, see
+"Allow anyone to register a new organisation" above.
 
 SharePoint
 ++++++++++
