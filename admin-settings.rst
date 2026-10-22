@@ -96,6 +96,20 @@ Email Server
 *  Email password.
 *  Email server port.
 
+.. _smtp-encryption:
+
+Connections to an SMTP relay are encrypted:
+
+*  Port 465 uses TLS from the start.  Other ports, normally 587, use STARTTLS.
+*  If an email user name and password are set, the relay must offer STARTTLS, so the password is never sent unencrypted.
+*  Without a user name and password, STARTTLS is used when the relay offers it.
+*  The relay's certificate must be issued by a recognised certificate authority and name the SMTP host.  A relay with a
+   self signed certificate will not work until its certificate is added to the Java trust store on the Smap server.
+*  A relay on the Smap server itself, localhost, is not encrypted.
+
+If emails cannot be sent the reason, such as a certificate that cannot be verified, is shown in the monitor and in the
+log.
+
 Load management
 +++++++++++++++
 
@@ -298,7 +312,7 @@ in the :ref:`server-settings` tab is used.
 *  Email domain.
 *  Email user name.
 *  Email password.
-*  Email server port.
+*  Email server port.  See :ref:`smtp-encryption` for how the connection to the relay is encrypted.
 *  Content.  Default content for emails.
 *  Server identification.
 
