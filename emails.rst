@@ -32,7 +32,8 @@ their email address.  If they are unsubscribed from 1 or more organisations then
 organisations, with a link to subscribe to it again.  Clicking the link confirms the subscription.
 
 The page shows the same message whether or not the address has unsubscribed from anything, so it does not reveal which organisations an
-address belongs to.  Only one request can be made for an address every 10 minutes.
+address belongs to.  Only one request can be made for an address every 10 minutes.  This applies to Smap Server version 26.11+, earlier
+versions listed the organisations on the page.
 
 Opt in
 ------

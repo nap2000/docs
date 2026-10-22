@@ -108,7 +108,8 @@ Connections to an SMTP relay are encrypted:
 *  A relay on the Smap server itself, localhost, is not encrypted.
 
 If emails cannot be sent the reason, such as a certificate that cannot be verified, is shown in the monitor and in the
-log.
+log.  Requires Smap Server version 26.11+.  Earlier versions encrypted the connection only when the relay offered it and
+did not check the certificate.
 
 Load management
 +++++++++++++++
@@ -129,7 +130,7 @@ Security
 *  Allow anyone to register a new organisation.  When set, a **Register** menu is shown on the home page to people who are
    not logged in, and anyone can use it to create a new organisation on the server, becoming its administrator.  The new
    user is emailed a link to set their password, so the email server must be set up.  Off by default.  Leave it off
-   unless the server is meant to offer sign up to the public.
+   unless the server is meant to offer sign up to the public.  Requires Smap Server version 26.11+.
 *  Turnstile Site Key
 *  Turnstile Secret Key
 
