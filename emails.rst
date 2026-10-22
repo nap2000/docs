@@ -28,10 +28,11 @@ Subscribe
 ---------
 
 If someone wants to receive emails again they can go to the home page of the server and select subscribe.  They will then be asked to enter
-their email address and validate it.  If they are unsubscribed from 1 or more organisations then those organisations will be listed and the
-person can select the ones they want to subscribe to again.
+their email address.  If they are unsubscribed from 1 or more organisations then an email is sent to that address for each of those
+organisations, with a link to subscribe to it again.  Clicking the link confirms the subscription.
 
-They will then receive an email asking them to confirm the subscription.
+The page shows the same message whether or not the address has unsubscribed from anything, so it does not reveal which organisations an
+address belongs to.  Only one request can be made for an address every 10 minutes.
 
 Opt in
 ------
