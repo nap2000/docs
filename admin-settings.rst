@@ -132,10 +132,12 @@ Security
    user is emailed a link to set their password, so the email server must be set up.  Off by default.  Leave it off
    unless the server is meant to offer sign up to the public.  Requires Smap Server version 26.11+.
 
-   If the Turnstile keys below are set, the registration page shows the Turnstile check and a registration is only accepted
+   If both Turnstile keys below are set, the registration page shows the Turnstile check and a registration is only accepted
    once it has been passed.  Set the keys on any server that allows registration, as without them automated programs can use
-   the page.  There is also a limit of 3 registrations an hour from one internet address and 20 an hour for the whole
-   server.  Requires Smap Server version 26.11+.
+   the page.  If only one of the keys is set the check is not used, and a warning is written to the server log.  If the check
+   cannot be completed, for example because the server's domain has not been added to the Turnstile site in Cloudflare, the
+   page shows a message with the Turnstile error code.  There is also a limit of 3 registrations an hour from one internet
+   address and 20 an hour for the whole server.  Requires Smap Server version 26.11+.
 *  Turnstile Site Key
 *  Turnstile Secret Key
 

@@ -19,7 +19,9 @@ Subscriptions work at the organisation level.  Hence if you have unsubscribed fr
 Unsubscribe
 ------------
 
-Every email sent has an unsubscribe link. If the email recipient does not want to receive emails they can click on this which will take
+Every email sent has an unsubscribe link, apart from emails about a person's own account: password reset and new account emails.  From
+Smap Server version 26.11 these have no unsubscribe link, and a password reset is sent even if the address has unsubscribed, as the person
+asked for it.  In earlier versions unsubscribing from one of these emails stopped password resets.  If the email recipient does not want to receive emails they can click on this which will take
 them to a page with an unsubscribe button.  If they click on that button they will not receive any more emails.
 
 It is not possible to wake up one morning and decide to unsubscribe.  An unsubscribe link is needed in an email.
@@ -71,7 +73,7 @@ Select the ``modules`` menu then ``Campaigns`` and then contacts.  This will sho
 *  Unsubscribed.  The person has unsubscribed from receiving email messages.
 
 In the first case you can go to the monitoring page and resend the opt in message.  In the second case you will need to contact the person through some other
-channel as Smap will not send an email to an unsubscribed address. (other than an invitation to logon to a new account).  The person who owns the email address
+channel as Smap will not send an email to an unsubscribed address, other than a password reset that the person has asked for.  The person who owns the email address
 can then go to the server home page and select "Subscribe" to resubscribe to emails.
 
 Review opt in messages
