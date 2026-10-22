@@ -11,17 +11,19 @@ Installing
   cd smap/install
   sudo ./install.sh
 
-Edit the Apache config files::
-
-  This needs to be done to enable some security checks.   Edit smap.conf and smap-ssl.conf in /etc/apache2/sites-available.  Replace all
-  occurrences of {hostname} with the domain name that you will be using.  Or delete these rows.
-
 If the installer asks "Which services should be restarted", click ok, accepting the default values.
 
 .. note::
 
-  Important!  Due to some security updates you will need to edit the file /etc/apache2/sites-available/smap-ssl.conf.   Replace all
-  occurrences of {hostname} with the domain name of your server.  This assumes you are using a domain name.
+  If your server has a domain name, set it as the **Host name used in links sent by email** in the server settings, see
+  :ref:`server-settings`.  Links in emails use it, and when the server is next upgraded the web server is set to accept
+  requests for that name only.  Until it is set the web server accepts any host name.  To apply it straight away, edit
+  smap.conf and smap-ssl.conf in /etc/apache2/sites-available, set ServerName and ServerAlias to the domain name and add
+  the following inside each virtual host, then reload Apache::
+
+    <If "req('Host') != 'smap.example.com'">
+       Deny from all
+    </If>
 
 After the installation script finishes you should be able to logon with your browser using::
 

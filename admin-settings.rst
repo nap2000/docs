@@ -116,6 +116,12 @@ Security
    not logged in, and anyone can use it to create a new organisation on the server, becoming its administrator.  The new
    user is emailed a link to set their password, so the email server must be set up.  Off by default.  Leave it off
    unless the server is meant to offer sign up to the public.
+*  Host name used in links sent by email.  The domain name of the server, for example smap.example.com, with a port
+   number only if it is not the standard one, for example smap.example.com:8443.  It is used in the links in password
+   reset, new user, opt in, task, campaign and notification emails.  Without it the links use the host name each request
+   arrived with, which the person making the request can set to another site.  It is also the only host name the web
+   server accepts requests for, from the next time the server is upgraded, see :doc:`server-admin-install`.  Set it on every server
+   that has a domain name.
 *  Turnstile Site Key
 *  Turnstile Secret Key
 
