@@ -24,6 +24,10 @@ them to a page with an unsubscribe button.  If they click on that button they wi
 
 It is not possible to wake up one morning and decide to unsubscribe.  An unsubscribe link is needed in an email.
 
+Mail programs such as Gmail, Outlook and Apple Mail can also show their own unsubscribe button next to the sender.  This unsubscribes the
+person straight away, without opening the unsubscribe page.  Gmail and Yahoo expect this of organisations that send a lot of email, and
+without it people who want no more emails are more likely to report them as spam.  Requires Smap Server version 26.11+.
+
 Subscribe
 ---------
 
