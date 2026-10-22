@@ -194,6 +194,16 @@ be added before submitting, and they are sent in the order they were added.
 Notifications in WebForms are switched off by default.  They are enabled for an organisation with the setting **Allow notifications to
 be sent from WebForms** on the **Other Options** tab of the settings page, see :ref:`other-settings`.
 
+The server checks each notification when the form is submitted, and does not send it unless:
+
+*  The organisation has **Allow notifications to be sent from WebForms** set.
+*  The form is editing an existing record.  Notifications are not sent with a new record or from an anonymous public link.
+*  It is one of the types the user is offered.
+*  For a reply to a conversation, the case was started by a message.  The reply always goes to the number that started the case.
+
+Notifications that are not sent are recorded in the server log with the reason.  The text of an email is sent as it was typed, any HTML
+in it is shown as text.  These checks apply to Smap Server version 26.11+.
+
  .. figure::  _images/webform-email.png
     :align:   center
     :width:   300px
