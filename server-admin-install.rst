@@ -11,14 +11,14 @@ Installing
   cd smap/install
   sudo ./install.sh
 
-The installer asks for the domain name of the server.  The domain does not need to exist yet.  Apache will then refuse requests
-for any other host name, which stops a forged host name being used in links in emails.  Leave it blank if the server has no
-domain name, Apache will then accept requests for any host name.  To install without being asked set SMAP_DOMAIN first, for
-example ``sudo SMAP_DOMAIN=smap.example.com ./install.sh``.  Requires Smap Server version 26.11+.
+The installer asks for the domain name of the server, or its IP address if it has no domain name.  The domain does not need to
+exist yet.  Apache will then refuse requests for any other host name, which stops a forged host name being used in links in
+emails.  To install without being asked set SMAP_DOMAIN first, for example ``sudo SMAP_DOMAIN=smap.example.com ./install.sh``.
+Requires Smap Server version 26.11+.
 
-To add or change the domain name later, from the install directory::
+To change it later, for example when a server installed with its IP address is given a domain name, from the install directory::
 
-  sudo ./setDomain.sh {domain name}
+  sudo ./setDomain.sh {domain name or IP address}
 
 Before version 26.11 you needed to edit smap.conf and smap-ssl.conf in /etc/apache2/sites-available and replace all
 occurrences of {hostname} with the domain name, or delete those rows.  Until this was done every request was refused.
