@@ -38,6 +38,12 @@ The minimum strength can be set for the server in the :ref:`server-settings` tab
 in the :ref:`other-settings` tab.  The maximum of the two values set will be used.  If both are zero then the strength
 of passwords is not checked.  Only a user with the security manager group can change the organisation value.
 
+A new server starts with a minimum strength of 25, which rejects passwords such as "admin".  Upgraded servers keep
+their current setting.  Requires Smap Server version 26.11+.
+
+A new password must be different from the current one.  Before version 26.11 a password that was too weak was not
+changed but the change password page said that it had been.  Requires Smap Server version 26.11+.
+
 The strength of a password reflects its randomness and avoidance of common words used by password breakers. The
 following table shows sample password values and their strength;
 

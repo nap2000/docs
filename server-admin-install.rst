@@ -33,6 +33,11 @@ After the installation script finishes you should be able to logon with your bro
   You should change the password of the admin user before loading any data.  Alternatively create a new user with all permissions then delete
   the admin user.
 
+From Smap Server version 26.11+ the console takes you to the change password page when you first logon as admin, and the new
+password must be different and meet the minimum password strength, which is 25 on a new server.  See :ref:`password-strength`.
+Until it is changed FieldTask and API version 1 will not accept the admin logon.  Upgrading a server to 26.11 does the
+same if the admin user still has the password admin.  Other users are not affected.
+
 refer to (:ref:`network-encryption`)
 
 Using a different location for files
