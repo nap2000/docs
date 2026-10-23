@@ -11,17 +11,19 @@ Installing
   cd smap/install
   sudo ./install.sh
 
-Edit the Apache config files::
+The installer asks for the domain name of the server.  The domain does not need to exist yet.  Apache will then refuse requests
+for any other host name, which stops a forged host name being used in links in emails.  Leave it blank if the server has no
+domain name, Apache will then accept requests for any host name.  To install without being asked set SMAP_DOMAIN first, for
+example ``sudo SMAP_DOMAIN=smap.example.com ./install.sh``.  Requires Smap Server version 26.11+.
 
-  This needs to be done to enable some security checks.   Edit smap.conf and smap-ssl.conf in /etc/apache2/sites-available.  Replace all
-  occurrences of {hostname} with the domain name that you will be using.  Or delete these rows.
+To add or change the domain name later, from the install directory::
+
+  sudo ./setDomain.sh {domain name}
+
+Before version 26.11 you needed to edit smap.conf and smap-ssl.conf in /etc/apache2/sites-available and replace all
+occurrences of {hostname} with the domain name, or delete those rows.  Until this was done every request was refused.
 
 If the installer asks "Which services should be restarted", click ok, accepting the default values.
-
-.. note::
-
-  Important!  Due to some security updates you will need to edit the file /etc/apache2/sites-available/smap-ssl.conf.   Replace all
-  occurrences of {hostname} with the domain name of your server.  This assumes you are using a domain name.
 
 After the installation script finishes you should be able to logon with your browser using::
 
