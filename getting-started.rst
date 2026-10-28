@@ -22,14 +22,23 @@ Once you have set a password, log on using your email address.
 Registering creates an "organisation" and within this organisation you can add additional users, projects and surveys. Only users
 created by you in your organisation can access your data.
 
-.. note::
+Create Your First Survey
+------------------------
 
-  Not all the menu options and features described in this document will be visible to all users.
+#.  When you first log on, the survey management page is shown.  Click the green **Create new Form** button.
+#.  Enter a name for the survey and press **Create**.  The new empty survey opens in the editor.
+#.  Click on a question type, such as text or integer, in the question type toolbar.  The question is added to the end of the survey.
+#.  Enter a label for the question, that is the text the person filling in the survey will see.  Add a few more questions the
+    same way.
+#.  Click the green **Save** button.
+#.  Click the blue **Test** button.  The survey opens as a web form.
+#.  Fill in the web form and submit it.
+#.  Select **Modules** then **Console**.  The record you submitted is shown in the table.
+
+See :doc:`online-editor` for more on the editor and :ref:`console` for more on the console.
 
 Using the Server
 ----------------
-
-Once you have logged on, you can create surveys and manage your data collection.
 
 Navigation
 ++++++++++
@@ -54,27 +63,7 @@ Selecting a Project
 
 On most screens you can select a project which will change the surveys and other resources that are shown on the page.
 
-Create Your First Survey
-------------------------
-
-#.  Select **Modules** then **Edit**, then the menu **File** then **New**.
-#.  Enter a name for the survey and press **Create**.  The new empty survey opens in the editor.
-#.  Click on a question type, such as text or integer, in the question type toolbar.  The question is added to the end of the survey.
-#.  Enter a label for the question, that is the text the person filling in the survey will see.  Add a few more questions the
-    same way.
-#.  Click the green **Save** button.
-#.  Click the blue **Test** button.  The survey opens as a web form.
-#.  Fill in the web form and submit it.
-#.  Select **Modules** then **Console**.  The record you submitted is shown in the table.
-
-See :doc:`online-editor` for more on the editor and :ref:`console` for more on the console.
-
 Install Field Task on your Android Devices
 ------------------------------------------
 
 To collect data on Android devices, see :ref:`install-fieldtask`.
-
-Next Steps
-----------
-
-To create and launch your first survey, see :ref:`launch-survey-tutorial`.

@@ -40,8 +40,10 @@ Creating Surveys
 If you are creating a brand new survey using the XLS Form editor then you can first download a template by clicking on the 
 **Download Template** button.
 
-Clicking on the **Create new Form** button will show a dialog where you can select the XLS file and specify a name for 
+Clicking on the **Upload Form** button will show a dialog where you can select the XLS file and specify a name for
 your survey.
+
+To create a survey in the online editor instead, click on the **Create new Form** button, see :doc:`online-create`.
 
 The dialog also includes the option of grouping the new survey with an existing survey. Refer to :ref:`survey_groups` for details
 on what this means. Only do this if you want the new survey to share a common table with an existing survey. To add the
