@@ -137,7 +137,8 @@ Security
    the page.  If only one of the keys is set the check is not used, and a warning is written to the server log.  If the check
    cannot be completed, for example because the server's domain has not been added to the Turnstile site in Cloudflare, the
    page shows a message with the Turnstile error code.  There is also a limit of 3 registrations an hour from one internet
-   address and 20 an hour for the whole server.  Requires Smap Server version 26.11+.
+   address and 20 an hour for the whole server.  Requires Smap Server version 26.11+.  Behind a load balancer, set up
+   mod_remoteip first, or every registration counts as coming from one address, see :ref:`load-balancer`.
 *  Turnstile Site Key
 *  Turnstile Secret Key
 
