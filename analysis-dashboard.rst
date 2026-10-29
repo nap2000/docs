@@ -249,6 +249,23 @@ selected.
    
    Question level map view zoomed out to show clustering
 
+Time Series Map
++++++++++++++++
+
+When a question is selected you can also set **Time Series** to hour, day,
+week, month or year.  The records are then grouped into periods of that length
+using the panel's date question, and the map shows a window of one or more periods.
+
+Controls below the map select which periods are shown:
+
+*  **Interval** - how many periods are shown at once
+*  **Start** - play the periods in order, as an animation
+*  the slider - move to a period
+
+The dates of the periods shown are displayed next to the **Start** button.
+Points are coloured and clustered in the same way as a map without a time
+series.
+
 Table Panels
 ------------
 
