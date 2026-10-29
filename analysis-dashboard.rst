@@ -91,8 +91,8 @@ map panels, you can select one of:
 to survey-specific questions.
 
 **User Activity** shows information about the activities of a specific user
-for all surveys they have completed. This information includes metadata about
-a survey:
+for all surveys they have submitted. This information includes metadata about
+each submission:
 
 *  Location
 *  Survey name
@@ -106,16 +106,15 @@ a survey:
 
 **User Locations**
 
-For a map panel, this shows the location where users last refreshed FieldTask.
-Each user's location is represented by a coloured circle with their name shown
-in red next to it. The circle colour changes depending on how long it has been
-since they refreshed their phone:
+For a map panel, this shows the location where each user last refreshed FieldTask.
+Each user's location is shown as a coloured circle with their user ident in
+red next to it. The circle colour depends on how long it has been since they
+refreshed:
 
-*  less than 1 hour - red
-*  between 1 and 2 hours - orange
-*  between 2 and 3 hours - yellow
-*  between 3 and 4 hours - green
-*  more than 4 hours - blue
+*  less than 1 hour - green
+*  1 hour to 1.5 hours - yellow
+*  1.5 hours to 2 hours - orange
+*  2 hours or more - red
 
 For a table panel, the last refresh time is shown for each user.
 
@@ -135,13 +134,19 @@ Survey
 ++++++
 
 Select the survey whose data you want to show. This option is used only with
-"Data" subjects.
+the "Data" subject.
 
 User
 ++++
 
-Select the user whose activity you want to show. This option is only for
-"User Activity" subjects.
+Select the user whose activity you want to show. This option is used only with
+the "User Activity" subject.
+
+Include Read Only
++++++++++++++++++
+
+Include read only questions in the panel's data.  This option is shown for
+table and map panels with the "Data" subject.
 
 Graph Panels
 ------------
@@ -183,7 +188,28 @@ resulting map shows all locations where data was collected. If you click a
 point, details of the data at that point are shown.
 
 If you have multiple location questions in a survey, you can select the
-location question to show on the map.
+location question to show on the map.  Lines, such as those recorded by a
+geotrace question, are drawn in blue.
+
+User Activity Map
++++++++++++++++++
+
+A map with the "User Activity" subject shows the locations of the user's
+submissions.  Each point is numbered.  Where points are close together they
+are combined into a cluster, which is labelled with up to three of the record
+numbers followed by a count of the rest, for example "10, 9, 8 +3".  Zoom in
+to separate the cluster or click it to see the records.
+
+The map also shows the trail of locations recorded by FieldTask for that user
+as a blue line.  The trail follows the panel's date range, or the dashboard
+date range if the panel does not have one.
+
+Show On
++++++++
+
+By default a map panel is shown on its own map, "This Map".  Alternatively
+select another map panel to show this panel's data as a layer on that map.
+Only map panels that are not themselves shown on another map are listed.
 
 Map view of a select question
 +++++++++++++++++++++++++++++
@@ -237,26 +263,26 @@ such as backing it up or importing new data. Refer to :doc:`analysis-archive`,
 Bad Records
 +++++++++++
 
-Records that have been deleted are marked as "Bad". These are shown in table panels with a slightly red background.  No other panels use
-bad/deleted records. For examples graphs will not included data from deleted records.
+Records that have been deleted are marked as "Bad". These are shown in table panels with a light red background.  No other panels use
+bad or deleted records; for example, graphs do not include data from deleted records.
 
-A user can toggle a record from good to bad and back again.  To do this the user needs to right click on the cell in the "Bad" column for the record they want to change. Then
-provide a "Reason" in the popup dialog.
+A user can toggle a record from good to bad and back again.  To do this, right click on the cell in the "Bad" column for the record
+and then provide a "Reason" in the dialog.
 
 Record Level Operations
 +++++++++++++++++++++++
 
-Each record has a menu option represented as an ellipses.   Clicking on this will open a dialog.  On this dialog the user can select an option to:
+Each record has a menu shown as an ellipsis.  Clicking it opens a dialog where the user can:
 
 *  edit the data
 *  download a PDF of the record
-*  Show the record data in an expanded view where each question for a single record is shown on one line
+*  show the record in an expanded view, with each question on its own line
 
 Image panels
 ------------
 
-Image panels will show the images in a survey.  An image thumbnail is shown at the bottom of the panel and you
-can select this in order to see the full size image.
+Image panels show the images in a survey.  Thumbnails are shown at the bottom of the panel; select one
+to see the full size image.
 
 .. figure::  _images/analysis7.jpg
    :align:   center
@@ -294,4 +320,4 @@ This can be enabled by an organisational administrator in the
 zero disables auto refresh. Otherwise, you can specify the refresh interval in
 minutes.
 
-Only charts and maps will be automatically refreshed.
+Only graphs, maps and "User Locations" tables are refreshed automatically.
