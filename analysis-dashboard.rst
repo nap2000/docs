@@ -249,6 +249,30 @@ selected.
    
    Question level map view zoomed out to show clustering
 
+Group by Regions
+++++++++++++++++
+
+Requires Smap Server version 26.11+.
+
+When a question is selected, the records on a map can be grouped by area.  Each area is then
+coloured by the selected choice in the same way as clustered points.  Set **Group by** to one of:
+
+*  **Hex grids** - a grid of hexagons that you create for the survey
+*  **Polygons** - the shapes recorded by a geoshape question in the survey.  Set **Label** to
+   the question whose answer names each shape, for example the name of a farm.
+
+Records outside every area are not shown.  A record inside two overlapping shapes is counted in
+both.  Grouping by area also works with a time series.
+
+To create a hex grid, open the drawer on a map panel for the survey and go to **Grids**.  Zoom and
+pan the map to the area the grid should cover, enter a name and the cell size in metres, and
+select **Create**.  The whole area is covered, so cells that have no data yet will show data as it
+arrives.  Create a small grid over a busy area to see more detail there.  A grid can have up to
+20,000 cells; use a larger cell size or a smaller area if there are too many.
+
+Grids belong to the survey and the other surveys in its bundle.  Delete a grid from the same
+drawer.  Grids are deleted when the last survey in the bundle is erased.
+
 Time Series Map
 +++++++++++++++
 
