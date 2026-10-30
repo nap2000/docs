@@ -260,11 +260,21 @@ cluster of points: red if all of them have it, blue if none do, and orange, yell
 between.  This gives a quick picture of where an answer is common, for example the share of
 households in each district that report a problem.
 
+A map without a question can also be grouped by area.  Each area then shows how many records it
+holds, coloured from blue for the area with the fewest records to red for the area with the most.
+
+.. figure::  _images/mappanel1.jpg
+   :align:   center
+   :width:   300px
+   :alt:     Showing a map view grouped by a hexagonal grid, couloured by the count of records in each hexagon
+
+   Record Heatmap on a hexagonal grid
+
 Two kinds of area can be used:
 
 *  **Hex grids** - a grid of equal sized hexagons that you create over part of the map
-*  **Polygons** - the shapes recorded by a geoshape question in the survey, such as the
-   boundaries of farms, villages or districts
+*  **Polygons** - the shapes recorded by a geoshape question in the survey, or in another survey
+   in its bundle, such as the boundaries of farms, villages or districts
 
 Each record is placed using the panel's location question, the one selected for the map in the
 panel's settings.
@@ -272,11 +282,11 @@ panel's settings.
 Choosing the Regions
 ^^^^^^^^^^^^^^^^^^^^
 
-Select a question for the panel first, grouping colours the answers to that question.  Then set
-**Group by** to a grid or a polygon question.  This can be done in either of two places:
+Set **Group by** to a grid or a polygon question.  This can be done in either of two places:
 
 *  the panel's settings, where **Group by** lists the grids under **Hex grids** and the geoshape
-   questions under **Polygons**
+   questions under **Polygons**.  A question in another survey of the bundle is shown with the
+   name of its survey.
 *  the drawer on the map panel, under **Regions**.  A change made here is saved straight away and
    the map is redrawn.
 
@@ -310,13 +320,18 @@ A panel that was grouped by that grid goes back to showing points.
 Grids belong to the survey and to the other surveys in its bundle, and can be used by any of
 their map panels.  They are deleted when the last survey in the bundle is erased.
 
-Using Polygons from the Survey
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Using Polygons from Surveys
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Any geoshape question in the survey can be used, so the shapes can be collected with the other
-data, for example by recording each farm boundary once in a record of its own.  Deleted (bad)
-records are not used as shapes.  The label question must be in the same form as the geoshape
-question.
+Any geoshape question in the survey, or in another survey in the same bundle, can be used.  The
+shapes can be collected with the other data, for example by recording each farm boundary once in
+a record of its own, or in a separate survey of boundaries that is added to the bundle.  Only the
+surveys that you have access to are listed.
+
+*  The label question must be in the same form, of the same survey, as the geoshape question.
+*  Deleted (bad) records are not used as shapes.
+*  If your roles restrict the records you can see in the survey that holds the shapes, only the
+   shapes in those records are used.
 
 Colours and Details
 ^^^^^^^^^^^^^^^^^^^
