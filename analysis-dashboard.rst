@@ -254,25 +254,81 @@ Group by Regions
 
 Requires Smap Server version 26.11+.
 
-When a question is selected, the records on a map can be grouped by area.  Each area is then
-coloured by the selected choice in the same way as clustered points.  Set **Group by**, in the
-panel's settings or under **Regions** in the drawer on the map panel, to one of:
+A map with a question can group its records by area instead of showing each location.  Each area
+is then coloured by the share of its records that have the selected choice, in the same way as a
+cluster of points: red if all of them have it, blue if none do, and orange, yellow or green in
+between.  This gives a quick picture of where an answer is common, for example the share of
+households in each district that report a problem.
 
-*  **Hex grids** - a grid of hexagons that you create for the survey
-*  **Polygons** - the shapes recorded by a geoshape question in the survey.  Set **Label** to
-   the question whose answer names each shape, for example the name of a farm.
+Two kinds of area can be used:
 
-Records outside every area are not shown.  A record inside two overlapping shapes is counted in
-both.  Grouping by area also works with a time series.
+*  **Hex grids** - a grid of equal sized hexagons that you create over part of the map
+*  **Polygons** - the shapes recorded by a geoshape question in the survey, such as the
+   boundaries of farms, villages or districts
 
-To create a hex grid, open the drawer on a map panel for the survey and go to **Regions**.  Zoom and
-pan the map to the area the grid should cover, enter a name and the cell size in metres, and
-select **Create**.  The whole area is covered, so cells that have no data yet will show data as it
-arrives.  Create a small grid over a busy area to see more detail there.  A grid can have up to
-20,000 cells; use a larger cell size or a smaller area if there are too many.
+Each record is placed using the panel's location question, the one selected for the map in the
+panel's settings.
 
-Grids belong to the survey and the other surveys in its bundle.  Delete a grid from the same
-drawer.  Grids are deleted when the last survey in the bundle is erased.
+Choosing the Regions
+^^^^^^^^^^^^^^^^^^^^
+
+Select a question for the panel first, grouping colours the answers to that question.  Then set
+**Group by** to a grid or a polygon question.  This can be done in either of two places:
+
+*  the panel's settings, where **Group by** lists the grids under **Hex grids** and the geoshape
+   questions under **Polygons**
+*  the drawer on the map panel, under **Regions**.  A change made here is saved straight away and
+   the map is redrawn.
+
+When a polygon question is selected, also set **Label** to the question whose answer names each
+shape, for example the name of the farm.  Without a label the shapes are named by their record
+number.
+
+Set **Group by** to **None** to show the records as points again.
+
+Creating a Hex Grid
+^^^^^^^^^^^^^^^^^^^
+
+Analysts and administrators can create grids:
+
+#.  Open the drawer on a map panel for the survey and go to **Regions**.
+#.  Zoom and pan the map until it shows the area the grid should cover.
+#.  Enter a name for the grid and the cell size in metres.  The cell size is the length of a
+    side of each hexagon.
+#.  Select **Create**.  The grid is added to the **Group by** lists.
+
+The whole area showing on the map is covered, including places that have no data yet, so data
+submitted later is counted too.  You can create as many grids as you need, for example a coarse
+grid over the whole project area and a fine grid over a town where there are many records.
+
+A grid can have up to 20,000 cells.  If there would be more, use a larger cell size or zoom in to
+a smaller area.
+
+To delete a grid, select **Delete** next to it in the drawer and then select it again to confirm.
+A panel that was grouped by that grid goes back to showing points.
+
+Grids belong to the survey and to the other surveys in its bundle, and can be used by any of
+their map panels.  They are deleted when the last survey in the bundle is erased.
+
+Using Polygons from the Survey
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Any geoshape question in the survey can be used, so the shapes can be collected with the other
+data, for example by recording each farm boundary once in a record of its own.  Deleted (bad)
+records are not used as shapes.  The label question must be in the same form as the geoshape
+question.
+
+Colours and Details
+^^^^^^^^^^^^^^^^^^^
+
+Choose the answer that the colours show in the drawer, in the same way as for points.  Click an
+area to see its details, including the percentage or count of its records with that answer.
+
+*  Records that are outside every area are not shown.
+*  A record inside two overlapping shapes is counted in both.
+*  Areas with no records are not drawn.
+*  Grouping by area also works with a time series, the areas then show the records in the
+   periods selected.
 
 Time Series Map
 +++++++++++++++
@@ -288,8 +344,8 @@ Controls below the map select which periods are shown:
 *  the slider - move to a period
 
 The dates of the periods shown are displayed next to the **Start** button.
-Points are coloured and clustered in the same way as a map without a time
-series.
+Points are coloured and clustered, or grouped by region, in the same way as a
+map without a time series.
 
 Table Panels
 ------------
