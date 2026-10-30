@@ -224,23 +224,23 @@ for ``select_one`` or ``select_multiple`` question types.
    
    Question level map view
 
-The locations are colour coded according to relative frequency:
+The locations are colour coded by the share of their records that have the
+selected choice:
 
-*  Red: High
+*  Red: all of them
 *  Orange
 *  Yellow
 *  Green
-*  Blue: Low
+*  Blue: none of them
 
-These frequency values apply to one of the choices in the question. To view
-the results for a different choice, select that choice in the drawer to the
-right of the map.
+The colours apply to one of the choices in the question. To view the results
+for a different choice, select that choice in the drawer to the right of the
+map.
 
-If a location contains only a single record, it is coloured "red" if the choice
-was selected, or "blue" if the choice was not selected. However, if you have
-more than one record clustered at a single location, you will see the range of
-colours described above, depending on the percentage of times that choice was
-selected.
+A location with a single record is coloured red if the choice was selected, or
+blue if it was not.  A cluster of records, or an area when the map is grouped
+by regions, is coloured according to the percentage of its records where the
+choice was selected.
 
 .. figure::  _images/analysis6.jpg
    :align:   center
