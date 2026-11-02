@@ -6,6 +6,28 @@ Application Change History
 .. contents::
  :local:
 
+26.11.02
+--------
+
+#.  The connection to your mail server is now always encrypted and the certificate is checked.  Earlier versions encrypted the connection
+    when the mail server offered it but accepted any certificate    .
+
+    *   On port 465 the connection is encrypted from the start
+    *   On other ports the connection is encrypted with STARTTLS when the mail server offers it.  If a mail user name
+        and password are set the mail server must offer it, otherwise nothing is sent
+    *   The mail server's certificate must come from a public certificate authority and match the host name in your
+        email settings
+    *   A mail server on the Smap server itself (localhost or 127.0.0.1) is not affected
+
+    **Check before upgrading**.  Sending will stop if your mail server uses a self-signed or internal certificate, if
+    the host name in the email settings does not match its certificate (for example an IP address is entered but the
+    certificate names mail.example.com), or if it needs a password but does not offer STARTTLS.  The email error then
+    says which of these it is and names the mail server.
+
+    **To fix it** set the email host to the name on the mail server's certificate, give the mail server a certificate
+    from a public certificate authority, or, on your own server, add your internal certificate authority to the Java
+    trust store that Tomcat uses.  There is no setting to turn the check off.
+
 26.10.02
 --------
 
