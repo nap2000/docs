@@ -9,8 +9,8 @@ Application Change History
 26.11.02
 --------
 
-#.  The connection to your mail server is now always encrypted and the certificate is checked.  Earlier versions encrypted the connection
-    when the mail server offered it but accepted any certificate    .
+#.  When the connection to the  mail server is encrypted then its certificate is now checked.  Earlier versions encrypted the connection
+    when the mail server offered it but accepted any certificate.
 
     *   On port 465 the connection is encrypted from the start
     *   On other ports the connection is encrypted with STARTTLS when the mail server offers it.  If a mail user name
