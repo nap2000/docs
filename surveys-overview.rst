@@ -44,6 +44,11 @@ However you can also load surveys in an XML XForm format.  These can contain sop
 the above two editors.  If you have a survey in XML format then you can load it onto the server in the same way you would load a
 Survey created with Excel.  `Creating a survey in XML <https://opendatakit.github.io/xforms-spec>`_
 
+From Smap Server version 26.12+ an XForm is checked with the same rules as a survey created with Excel, and it can
+replace a survey or be added to a bundle.  An XForm cannot hold some Smap settings, see :ref:`replacing-surveys`.
+Where an XForm uses something that is not supported, such as choices from a csv file referred to by the XForm, the survey is
+still loaded and a warning lists what was left out.
+
 .. note::
 
   We use the terms "Survey" and "Form" interchangeably.  However more precisely there can be multiple forms in a survey. 

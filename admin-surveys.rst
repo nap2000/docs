@@ -54,8 +54,8 @@ new survey to a group select the name of the survey you want to group it with fr
 Replacing Surveys
 -----------------
 
-This only applies to surveys that you are editing in XLS.  After you have made changes in Excel you can replace the existing 
-survey.
+After you have made changes in Excel you can replace the existing survey.  You can also replace a survey with an XForm (XML
+file), see :ref:`replacing-with-xform`.
 
 .. figure::  _images/surveyManagement5.jpg
    :align:   center
@@ -88,6 +88,27 @@ then manually merge the required records from the old version to the new one.  H
   type of a question then that may cause problems that will require technical support.  For example if you had a text question 
   "What is the child's age?" with response such as "Five".  Then if you change that to an integer question the old data will
   not be compatible with this new question type.
+
+.. _replacing-with-xform:
+
+Replacing a Survey with an XForm
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Requires Smap Server version 26.12+.
+
+An XLS Form replaces everything in the survey.  An XForm cannot hold many of the settings of a Smap survey so, when an XForm
+replaces a survey, those settings are kept from the survey being replaced:
+
+*  The survey settings such as the key and key policy, data survey, oversight survey, read only, hide on device, search local
+   data, allow import, auto translate, the report logo and the public link
+*  Roles, including their row and column filters, and reference data filters
+*  Styles
+*  The display name, PII setting and style of each question, and the display name of each choice, matched by name
+*  Server calculations and PDF fields, which are not in an XForm
+*  Language codes
+
+The instance name, the audit (timing) settings, the default language and the survey style are taken from the XForm if it has
+them, otherwise they are kept.
 
 Deleting Surveys
 ----------------
