@@ -89,6 +89,13 @@ then manually merge the required records from the old version to the new one.  H
   "What is the child's age?" with response such as "Five".  Then if you change that to an integer question the old data will
   not be compatible with this new question type.
 
+.. note::
+
+  From Smap Server version 26.12+ the roles in an XLS Form are applied when it replaces a survey.  A role in the XLS Form
+  gets the row filter, column filter and filter group from the XLS Form, and a role that is in the XLS Form but not on the
+  survey is added.  A role that is on the survey but not in the XLS Form is kept, and a warning lists it.  Earlier versions
+  ignored the roles in an XLS Form that replaced a survey and kept the roles the survey already had.
+
 .. _replacing-with-xform:
 
 Replacing a Survey with an XForm
