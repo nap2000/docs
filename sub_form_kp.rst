@@ -6,7 +6,8 @@ to be treated the same way as the main form.
 
 .. note::
 
-  The Sub form key policy has no effect unless the :ref:`survey_keys` policy is set to "merge" or "replace".
+  When a submitted record has the same key as an existing record, the Sub form key policy has no effect unless the
+  :ref:`survey_keys` policy is set to "merge" or "replace".  When an existing record is edited the Sub form key policy always applies.
 
 Using
 -----
@@ -29,10 +30,13 @@ Defaults
 ++++++++
 
 If you don't specify a key policy for a subform then the default is applied.  This default depends on whether the submitted survey was
-in response to a task or just happened to have the same key as an existing record.
+an edit of an existing record or just happened to have the same key as an existing record.
 
-#.  In response to a task.  Here you are explicitly updating a record so the user probably had access to the existing sub form records when
-    completing the task and we want to replace them with the new sub form records.
+#.  Editing an existing record.  This is a record edited in the webform, a task that updates a record, or a later form in a case
+    management process.  The existing sub form records were loaded into the form, so the sub form records that are submitted replace
+    them.  Rows that were not changed are kept, and rows that were deleted in the form are removed.  The exception is a sub form
+    with an "instance_count" parameter, as then only some of the existing records were loaded.  Here the survey key policy
+    applies: "replace" replaces them, otherwise the submitted records are appended.
 
 #.  Submitted record happens to have the same key as an existing record.  In this case the user did not have access to the existing sub form
     records hence it seems reasonable to just append the new new records.

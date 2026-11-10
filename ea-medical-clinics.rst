@@ -279,7 +279,7 @@ hide a text, select1 etc question.
 +++++++++++++++++++++++++++++++++++++++
 
 You can scroll through multiple records that were added by a previous form however if you want to do this in reverse order, 
-most recent first, then you can add a parameter "order=reverse" to the new sub-form.
+most recent first, then you can add a parameter "instance_order=reverse" to the new sub-form.
 
 5.4 Limiting the number of records pulled back from a sub form
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
