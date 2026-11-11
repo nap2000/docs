@@ -6,8 +6,45 @@ Application Change History
 .. contents::
  :local:
 
-26.11.02
+26.12.01
 --------
+
+Release Pending.  Not available for download.
+
+#.  Editing a record that has repeating groups no longer adds the existing rows again.  Previously, each time a record was
+    edited in WebForms, updated by a task, or updated by a later survey in a case management process, the rows of its
+    repeating groups were duplicated.  Now the rows that are submitted replace the existing rows: unchanged rows are kept,
+    new rows are added and deleted rows are removed.
+
+    *   A repeating group that is not relevant in the survey doing the update is cleared, as for any other question that is
+        not relevant
+    *   A repeating group that the updating survey does not contain is not changed
+    *   A repeating group with a "key_policy" or "instance_count" parameter works as before.  See :doc:`sub_form_kp`
+
+    **Check before upgrading**.  If you update records through the API by submitting only the new rows of a repeating
+    group, or have update tasks that are meant to add rows to the existing ones, then set the parameter
+    ``key_policy=append`` on the repeating group so that the rows continue to be added.  Records that already have
+    duplicated rows are not changed.
+
+#.  Other
+
+     *  In a bundle of surveys, when the first survey in the bundle updates a record, rows that other surveys in the bundle
+        added to repeating groups are now kept.
+     *  A location passed as an initial value to a WebForm, or in the initial data of a mailout, is now set on a new record.
+     *  Operations status no longer counts records as open cases after case management has been turned off for a survey.
+
+26.11.04
+--------
+
+`Download 26.10.04 <https://smap-code.s3.us-east-1.amazonaws.com/os_smap_26_11_04_7101.tgz>`_
+
+#.  The installation scripts should work on additional linux distros including
+
+    *  Debian 13
+    *  RHEL 10
+    *  Amazon Linux Server
+
+#.  Group by on map panels and the ability to generate hexagonal grids to group by has been restored
 
 #.  When the connection to the  mail server is encrypted then its certificate is now checked.  Earlier versions encrypted the connection
     when the mail server offered it but accepted any certificate.
@@ -27,6 +64,20 @@ Application Change History
     **To fix it** set the email host to the name on the mail server's certificate, give the mail server a certificate
     from a public certificate authority, or, on your own server, add your internal certificate authority to the Java
     trust store that Tomcat uses.  There is no setting to turn the check off.
+
+#.  Other
+
+     *  Fix formatting of table list labels
+     *  Fix formatting of WebForm print to remove menu bar choices.
+     *  Self registration of new organisations is now a server setting, “Allow anyone to register a new organisation”, off by default.
+     *  The registration page uses Turnstile when the server has Turnstile keys, limited to 3 an hour from one address, and to 20 an hour per server when Turnstile is not set.
+     *  Email attachments that could run in a browser, such as html and svg files, are now downloaded rather than opened.
+     *  Emails include one click unsubscribe headers, so Gmail, Outlook and Apple Mail show their own unsubscribe button.
+     *  Re-subscribing: the subscriptions page now emails a link for each organisation instead of listing them on the page. Subscribe and opt in links work once and expire after 30 days.
+     *  Contacts: An unsubscribed contact can now be deleted while keeping the email address unsubscribed.
+     *  New servers have password strength set by default so that a strong password is required by default. The server admin user can then change the default password strength from the server settings page.
+     *  When the admin user first logs on to a new server they are forced to change their password.
+     *  When a password is changed the existing password cannot be reused.
 
 26.10.02
 --------
