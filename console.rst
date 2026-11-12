@@ -407,7 +407,7 @@ from a version that somebody else has changed since it was opened, the changes a
 Merges without a conflict are not recorded separately, they appear as a normal change in the history.  Each conflict is
 recorded in the record's history, with the status **Unresolved**.  Use the **Conflicts** slider to show or hide them.
 
-For each answer in conflict the history shows:
+Click the button showing the number of conflicting answers to see them.  For each answer in conflict the history shows:
 
 *  **When opened**.  The value when the person saving opened the record.
 *  **Other change**.  The value saved by the other person, who is named along with the time of their change.
