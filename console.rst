@@ -386,6 +386,53 @@ clicked to resend it.
 Replies to emails, including attachments, will also be shown in the History. This is currently only available when AWS SES is configured as
 the email server.
 
+.. _console_conflicts:
+
+Conflicting Updates
++++++++++++++++++++
+
+Requires Smap Server version 26.12+.
+
+Two people can work on the same record at the same time, for example a case worker on a phone that was offline and a
+manager in the console, or two stages of a case management process each with their own survey.  When a record is saved
+from a version that somebody else has changed since it was opened, the changes are merged:
+
+*  An answer that the person saving did not change keeps the other person's change.  So a survey that shows the
+   status of a case read only, or simply did not change it, will not put back the old status.
+*  Rows added to a repeating group by either person are kept.  Rows added by the other person are placed after the
+   rows of the person saving.
+*  An answer that both people changed is a **conflict**.  The answer of the person who saved last is kept.  This also
+   applies to a repeating group row that one person deleted and the other changed.
+
+Merges without a conflict are not recorded separately, they appear as a normal change in the history.  Each conflict is
+recorded in the record's history, with the status **Unresolved**.  Use the **Conflicts** slider to show or hide them.
+
+For each answer in conflict the history shows:
+
+*  **When opened**.  The value when the person saving opened the record.
+*  **Other change**.  The value saved by the other person, who is named along with the time of their change.
+*  **Applied**.  The value that was kept.
+
+To review a conflict choose, for each answer, **Keep applied** or **Use other change** and then select **Apply choices**.
+Answers left as **Review later** stay unresolved.  **Keep all applied** accepts every answer that has not been reviewed.
+Choosing **Use other change** puts the other person's value back, and this is shown as a new change in the history.
+When every answer has been reviewed the conflict status becomes **Resolved** and shows who reviewed it.
+
+A record with unresolved conflicts can still be updated and closed as normal.  To be told when a conflict happens create a
+notification with the trigger **Conflicting update**, see :ref:`notifications`.
+
+.. note::
+
+  Repeating group rows are matched between versions of a record using a hidden identifier that is added to each row.
+  Rows saved before version 26.12, or from a copy of the form downloaded to a phone before the upgrade, do not have one
+  and are matched by their answers.  FieldTask downloads a new copy of a form when the survey is next changed.
+
+.. note::
+
+  A change to a single record made in the console is saved as a new version of the record, as a submission is.  This means a
+  phone that opened the record before the change will not undo it when it is submitted.  Bulk changes to many records are
+  still made directly to the record.
+
 Drilling Down to Related Data
 -----------------------------
 

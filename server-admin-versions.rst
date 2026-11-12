@@ -26,12 +26,24 @@ Release Pending.  Not available for download.
     ``key_policy=append`` on the repeating group so that the rows continue to be added.  Records that already have
     duplicated rows are not changed.
 
+#.  Conflicting updates are merged.  When a record is saved from a version that somebody else has changed since it was
+    opened, answers the person saving did not change keep the other person's change, and rows added to a repeating group by
+    either person are kept.  Answers both people changed are recorded as a conflict in the record's history, where they
+    can be reviewed, and a notification can be sent.  See :ref:`console_conflicts`.
+
+    *   A change to a single record in the console now creates a new version of the record, as a submission does.  Bulk
+        changes are unchanged.
+    *   Rows of repeating groups now carry a hidden identifier.  ODK Collect will download each form again once after the
+        upgrade.  FieldTask picks up the identifier when a survey is next changed; until then rows are matched by their
+        answers.
+
 #.  Other
 
      *  In a bundle of surveys, when the first survey in the bundle updates a record, rows that other surveys in the bundle
         added to repeating groups are now kept.
      *  A location passed as an initial value to a WebForm, or in the initial data of a mailout, is now set on a new record.
      *  Operations status no longer counts records as open cases after case management has been turned off for a survey.
+     *  Setting a survey role to not enabled and then back to enabled no longer loses its row and column filters.
 
 26.11.04
 --------

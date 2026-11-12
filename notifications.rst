@@ -40,6 +40,7 @@ The following can trigger a notification:
 *  A case management alert.
 *  A periodic timer. Daily, weekly, monthly, quarterly or yearly.
 *  A Server Calculation change
+*  A conflicting update.  Somebody saved a record and changed answers that somebody else had changed after it was opened
 
 Submission
 ++++++++++
@@ -130,6 +131,16 @@ In notifications select a trigger of “Server Calculation”. You will also nee
 #.  The survey containing the server calculation
 #.  The Server Calculation question
 #.  The value that will trigger the notification. Note this value should be text and quotes are not required.
+
+Conflicting Update
+++++++++++++++++++
+
+Requires Smap Server version 26.12+.
+
+Sent whenever a record is saved with answers that somebody else changed after the record was opened, see
+:ref:`console_conflicts`.  Unlike a submission notification it is sent for every conflict, not once for each record.
+The settings are the same as for a submission: the survey or bundle and an optional filter.  Nothing is sent unless a
+notification with this trigger is created.
 
 Target
 ------
