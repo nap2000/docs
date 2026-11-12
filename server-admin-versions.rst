@@ -37,6 +37,11 @@ Release Pending.  Not available for download.
         upgrade.  FieldTask picks up the identifier when a survey is next changed; until then rows are matched by their
         answers.
 
+#.  Editing lines and shapes in WebForms is easier.  A whole line or shape can be dragged to a new place, points can be
+    added from a handle in the middle of each side, points are removed without a confirmation and can be put back with
+    undo, and all points can be removed at once.  Any point of a closed shape, including the first, can now be selected
+    and dragged.  See :ref:`editing-lines-shapes`.
+
 #.  Other
 
      *  In a bundle of surveys, when the first survey in the bundle updates a record, rows that other surveys in the bundle

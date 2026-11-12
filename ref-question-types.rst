@@ -1025,6 +1025,8 @@ Records a line
 The appearance **history-map** can be used on geotrace questions inside a repeat. Previous geotrace values
 added for that question will then be shown in the background for context. Requires FieldTask 6.703 or above.
 
+See :ref:`editing-lines-shapes` for drawing and changing the line in WebForms.
+
 geoshape
 ++++++++
 
@@ -1039,13 +1041,37 @@ Records a shape.
 The appearance **history-map** can be used on geoshape questions inside a repeat. Previous geoshape values
 added for that question will then be shown in the background for context. Requires FieldTask 6.703 or above.
 
+.. _editing-lines-shapes:
+
+Editing lines and shapes in WebForms
+++++++++++++++++++++++++++++++++++++
+
+Requires Smap Server version 26.12+.  This applies to geotrace, geoshape and geocompound questions.
+
+*  **Add points**.  Click the map to add a point at the end of the line.  To add a point between two others, click
+   the line or drag the small white handle in the middle of a side.
+*  **Close a shape**.  Click the first point, which has a green ring, or select **close polygon**.  Once a shape is
+   closed, clicking the map away from it does nothing, so the shape cannot be broken by accident.  Points are added
+   to a closed shape from the handles on its sides.
+*  **Move a point**.  Drag it.  Any point can be dragged, including the first point of a closed shape.
+*  **Move the whole line or shape**.  Drag the line, or the inside of the shape, to a new place.  All the points
+   move together.
+*  **Remove a point**.  Select it and click the trash button, right click it, long press it on a touch screen, or
+   press the Delete key while the map has the focus.  No confirmation is asked for.
+*  **Remove all points**.  Select **remove all points**.
+*  **Undo**.  The undo button next to the trash button reverses the last change: an added, moved or removed point,
+   a moved shape, or removing all the points.
+
+The sides of a shape cannot cross.  If a change would make them cross, a message is shown under the map and the
+point is put back.  The area of a shape is shown in its centre.
+
 .. _geocompound-widget:
 
 geocompound
 +++++++++++
 
 Similar to geotrace this type records a line, however attributes can also be added to points along the line. To set a marker on a line click on the point
-and a pop-up will be shown.
+and a pop-up will be shown.  See :ref:`editing-lines-shapes` for drawing and changing the line.
 
 **Type**
   geocompound
