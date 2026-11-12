@@ -413,6 +413,10 @@ For each answer in conflict the history shows:
 *  **Other change**.  The value saved by the other person, who is named along with the time of their change.
 *  **Applied**.  The value that was kept.
 
+For a location question, such as a point, polygon or line, the three values are shown on one map instead.  When opened is
+blue, the other change is light blue and the applied value is red, as listed under the map.  Click a location on the map to
+see which value it is.
+
 To review a conflict choose, for each answer, **Keep applied** or **Use other change** and then select **Apply choices**.
 Answers left as **Review later** stay unresolved.  **Keep all applied** accepts every answer that has not been reviewed.
 Choosing **Use other change** puts the other person's value back, and this is shown as a new change in the history.
