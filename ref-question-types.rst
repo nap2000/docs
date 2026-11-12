@@ -1048,6 +1048,10 @@ Editing lines and shapes in WebForms
 
 Requires Smap Server version 26.12+.  This applies to geotrace, geoshape and geocompound questions.
 
+On a phone or tablet these questions always have a map, opened full screen with the **Map** button, as in FieldTask.
+Earlier versions only showed the map if the question had the **maps** or **placement-map** appearance.  A geopoint
+question still needs one of these appearances to show a map on a phone or tablet.
+
 *  **Add points**.  Click the map to add a point at the end of the line.  To add a point between two others, click
    the line or drag the small white handle in the middle of a side.
 *  **Close a shape**.  Click the first point, which has a green ring, or select **close polygon**.  Once a shape is

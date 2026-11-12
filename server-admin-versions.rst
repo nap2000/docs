@@ -40,7 +40,8 @@ Release Pending.  Not available for download.
 #.  Editing lines and shapes in WebForms is easier.  A whole line or shape can be dragged to a new place, points can be
     added from a handle in the middle of each side, points are removed without a confirmation and can be put back with
     undo, and all points can be removed at once.  Any point of a closed shape, including the first, can now be selected
-    and dragged.  See :ref:`editing-lines-shapes`.
+    and dragged.  On a phone or tablet, geotrace and geoshape questions now always have a map, as in FieldTask, without
+    needing the maps or placement-map appearance.  See :ref:`editing-lines-shapes`.
 
 #.  Other
 
