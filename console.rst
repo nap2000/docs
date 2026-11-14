@@ -417,8 +417,9 @@ For a location question, such as a point, polygon or line, the three values are 
 blue, the other change is light blue and the applied value is red, as listed under the map.  Click a location on the map to
 see which value it is.
 
-To review a conflict choose, for each answer, **Keep applied** or **Use other change** and then select **Apply choices**.
-Answers left as **Review later** stay unresolved.  **Keep all applied** accepts every answer that has not been reviewed.
+To review a conflict choose, for each answer, **Keep applied** or **Use other change** and then select **Save** at the
+bottom of the panel.  Each answer starts as **Keep applied**, so saving without changing anything accepts the values
+that were applied.
 Choosing **Use other change** puts the other person's value back, and this is shown as a new change in the history.
 When every answer has been reviewed the conflict status becomes **Resolved** and shows who reviewed it.
 
