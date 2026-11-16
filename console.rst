@@ -386,6 +386,9 @@ clicked to resend it.
 Replies to emails, including attachments, will also be shown in the History. This is currently only available when AWS SES is configured as
 the email server.
 
+Case management alerts that have been triggered for the record are also shown in the History.  Use the **Alerts** slider to
+show or hide them.  Notifications sent by an alert are shown as separate entries.
+
 .. _console_conflicts:
 
 Conflicting Updates
