@@ -19,6 +19,10 @@ The diagram shows your current workflow as a visual map. Each triggering event (
 submission, a periodic timer, a server calculation change, or a case management alert) is shown on
 the left, with arrows connecting it to the tasks and notifications it triggers on the right.
 
+A **Conflicting update** trigger shows the survey whose records it watches.  Edit its notification
+with the pencil on the trigger or on the step it leads to.  Email and SMS steps show who they are
+sent to, and an email step its subject.
+
 This gives you an at-a-glance picture of how data collection events drive actions across your
 program, making it easy to:
 
