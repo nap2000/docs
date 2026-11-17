@@ -11,4 +11,5 @@ The console allows you to manage individual records or cases.  A case is just a 
 
   console.rst
   operations.rst
+  operational-issues.rst
 

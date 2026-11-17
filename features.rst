@@ -97,6 +97,7 @@ Case Management
   :ref:`Connect WhatsApp directly to Meta without a messaging provider<whatsapp-meta>`, 26.10
   :ref:`References that give users read only access to a case<cm-references>`, 26.06
   :ref:`An operations monitor showing workload; trends; overdue work and the performance of units<operations>`, 26.06
+  :ref:`A report of operational issues to fix, such as unreviewed conflicts and failing notifications<operational-issues>`, 26.12
 
 
 Security
