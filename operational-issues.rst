@@ -12,7 +12,8 @@ The operational issues report lists the problems in your projects that somebody 
 conflicting update that has not been reviewed or a notification whose filter no longer works.  Each issue has
 a **Fix** button that opens the page where it can be fixed.
 
-To open it select **Issues** on the :ref:`operations` page.  It opens in a new tab.
+To open it select **Issues** on the :ref:`operations` page, or, for analysts, in the console.  It opens in a new
+tab.  It is available to administrators and analysts.
 
 Scope
 -----
