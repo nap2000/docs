@@ -221,12 +221,18 @@ Settings are:
    *  A named user.
    *  **Submitter**.  The user who submitted the record.
    *  **Assign from data values**.  Select the question that contains the user ident.  If it has more than one value the
-      first is used.
+      first is used, unless the bundle allows multiple assignees and the question is a select multiple, when everyone
+      selected is assigned.
    *  **None**.  Leave the case unassigned, or unassign it.
 
 *  Assign to users with role.  When the assignment type is role, the case is assigned to the first user, in alphabetical
    order of their ident, who has the role and is allowed to access the record by the role's row filter.  If there is no
    such user the case is left unassigned.
+
+If the case's bundle allows multiple assignees (26.12.01+) an escalation adds its people instead of replacing whoever
+has the case, and takes off the people any earlier escalation added.  An escalation to a role assigns everyone in the
+role who is allowed to access the record.  The emails sent to the assigned user also go to the people the escalation
+took off the case.  See :ref:`multiple_assignees`.
 
 An escalation can be accompanied by emails.  The settings are the same as for the "email" target, including the
 **Send Email to assigned user** checkbox.

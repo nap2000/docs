@@ -119,6 +119,8 @@ Any person with :ref:`Analyst or Manage Data<security-groups>` privilege can cli
 to assign themselves to an unassigned case. If the user has finished with a case they can click the "Release" button
 to send it back to unassigned.
 
+From version 26.12.01 a bundle can allow a case to be assigned to several people at once, see :ref:`multiple_assignees`.
+
 Editing a record
 ----------------
 

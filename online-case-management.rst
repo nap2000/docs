@@ -24,6 +24,8 @@ On the settings tab specify:
 *  The question that identifies the criticality of the case
 *  The question that holds the status for a case
 *  The status value that indicates that the case is complete
+*  Allow multiple assignees (26.12.01+).  Let a case be assigned to more than one person at a time, or to everyone in
+   a role.  Escalations then add people rather than replacing them.  See :ref:`multiple_assignees`.
 
 
 .. figure::  _images/case1.jpg

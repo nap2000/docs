@@ -91,6 +91,9 @@ add up:
 * **Unassigned** - open cases with no owner.
 * **No unit** - work owned by a user who is not a member of any role.
 
+A case assigned to several people (26.12.01+, see :ref:`multiple_assignees`) counts once in each unit any of them
+belongs to, and once in each of their own counts, so a team of two in the same unit is one case for that unit.
+
 These rows link to the matching record list (L2). Non-security-managers only see
 the roles they are a member of.
 

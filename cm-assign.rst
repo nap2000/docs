@@ -40,6 +40,37 @@ Records can be automatically assigned to users using :ref:`notifications`. The n
 *  Submission of an update to a record.  Potentially resulting in escalation of the record or an initial assignment if tit is not currently assigned.
 *  A case alert.  The Survey has to be defined as a proper case with a status that can be set to closed.  Then if alerts can be created if the record is not closed within a set time and these can trigger a notification to escalate the case.
 
+.. _multiple_assignees:
+
+Multiple Assignees
+------------------
+
+Available with Smap Server version 26.12.01+.
+
+By default a case is assigned to one person at a time.  Turn on **Allow multiple assignees** in the bundle's case
+settings, see :ref:`case-management-config`, to let a case be assigned to several people at once, all with the same
+access to it.  Saves made by different people are merged, see :ref:`console_conflicts`.
+
+With multiple assignees:
+
+*  **Console.**  The **Assign User** dialog lists who has the case.  **Add user** adds somebody to them and
+   **Assign everyone in the role** adds every member of the selected role who can be given the case.  Each person
+   added is checked as a single assignment is.  An administrator can take anyone off with the remove button next to
+   their name, or take everybody off with **Unassign all**.
+*  **Lock for Editing** adds you to the people who have the case, even if others have it.  **Release** takes only you
+   off.
+*  **Devices.**  Everyone assigned gets the case.  Rejecting it on a device takes only that person off.
+*  **Escalation.**  An escalation adds its people, and takes off the people any earlier escalation added.  People
+   assigned in the console stay.  An escalation to a role adds every member of the role who can access the record,
+   and one that assigns from a select multiple question adds everyone selected.  See :ref:`notifications`.
+*  **Closing a case** takes everybody off it.
+*  **Emails** sent to the assigned user go to everyone assigned.
+*  The **Assigned** column lists everyone assigned, separated by commas.
+
+If a bundle does not allow multiple assignees, an escalation to a role assigns the first member of the role who can
+have the case, and setting up such an escalation shows a warning.  Turning the setting off leaves cases that already
+have several people assigned as they are until they are next changed.
+
 Choosing the Form
 -----------------
 
