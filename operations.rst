@@ -132,6 +132,11 @@ without needing to be a member of that project. The viewer shows the case
 metadata (owner, open/closed state) and its field values, and lets the manager
 **Assign** the case to a user or **Release** it.
 
+From version 26.12.01 the viewer also lists **Who has this case**: the people assigned to it and those who have it as a
+reference, how each was assigned (console, escalation, device, operations) and, if it was through a role, which role,
+and who added them and when.  The button beside each person takes them off the case.  Record lists show how many
+people have each case as a reference.
+
 Configuration
 -------------
 
