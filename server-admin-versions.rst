@@ -37,6 +37,22 @@ Release Pending.  Not available for download.
         upgrade.  FieldTask picks up the identifier when a survey is next changed; until then rows are matched by their
         answers.
 
+#.  A case can be assigned to more than one person.  Turn on **Allow multiple assignees** in a bundle's case settings
+    and everyone assigned has the same access to the case.  The setting is off by default, so existing bundles work as
+    before.  See :ref:`multiple_assignees`.
+
+    *   In the console, **Add user** adds somebody to the people who have the case and **Assign everyone in the role**
+        adds every member of a role who can be given it.  An administrator can take one person off, or everybody with
+        **Unassign all**.  **Release** takes only you off.
+    *   An escalation adds its people and takes off those an earlier escalation added; people assigned in the console
+        stay.  An escalation to a role adds every member of the role who can access the record.
+    *   Every person assigned gets the case on their device.  Rejecting it takes only that person off.  Closing a case
+        takes everybody off.
+    *   Emails to the assigned user go to everyone assigned, and the **Assigned** column lists them all.
+    *   In Operations the case viewer shows **Who has this case**: the people assigned and those with the case as a
+        reference, how and by whom each was added, and the role if it was through one.  Record lists show how many
+        people have each case as a reference.  See :doc:`operations`.
+
 #.  Editing lines and shapes in WebForms is easier.  A whole line or shape can be dragged to a new place, points can be
     added from a handle in the middle of each side, points are removed without a confirmation and can be put back with
     undo, and all points can be removed at once.  Any point of a closed shape, including the first, can now be selected
