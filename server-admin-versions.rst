@@ -59,6 +59,17 @@ Release Pending.  Not available for download.
     and dragged.  On a phone or tablet, geotrace and geoshape questions now always have a map, as in FieldTask, without
     needing the maps or placement-map appearance.  See :ref:`editing-lines-shapes`.
 
+#.  A new operational issues report lists the problems that somebody needs to fix: conflicting updates waiting for
+    review, notifications and alerts that failed, submissions that could not be loaded, filters that no longer work,
+    notifications whose survey has gone, and task problems.  It can be downloaded as a spreadsheet.  Administrators open
+    it from Operations, and analysts from the console.  See :doc:`operational-issues`.
+
+#.  Operations only shows the work of the projects you are a member of.  This applies to security managers too, who
+    still see every role.
+
+    **Check before upgrading**.  An administrator who used Operations to watch projects they are not a member of should
+    be added to those projects.
+
 #.  Other
 
      *  In a bundle of surveys, when the first survey in the bundle updates a record, rows that other surveys in the bundle
@@ -66,6 +77,30 @@ Release Pending.  Not available for download.
      *  A location passed as an initial value to a WebForm, or in the initial data of a mailout, is now set on a new record.
      *  Operations status no longer counts records as open cases after case management has been turned off for a survey.
      *  Setting a survey role to not enabled and then back to enabled no longer loses its row and column filters.
+     *  A record's history shows the case alerts it has raised, with a switch to hide them, and an email notification that
+        had nobody to send to is shown as "No recipients".
+     *  The workflow page shows the subject and recipients of email and SMS steps, and notifications on a bundle can be
+        edited from it.
+     *  In Operations a long list of open alerts scrolls within its panel.
+     *  In the console a record can be locked and edited from a row of one of its sub forms.  Sub form rows can no longer
+        be deleted or bulk edited on their own.
+     *  In the console map the layer switches show and hide the data and heatmap layers.  The add layer dialog, which made
+        unsaved copies of layers, has been removed.
+     *  When a change to a record is refused, the message says which question needs a number, date or location.
+        Clearing a number answer now empties it.
+     *  Dashboard map clusters count a missing answer as 0, and their percentages are weighted by the number of records.
+     *  Dashboard question tables no longer have a Record column, and a new panel selects the survey when there is only
+        one.
+     *  Dashboards need the Analyst, Admin or View Data security group.
+     *  Only administrators can change an organisation's CSS.
+     *  Replacing a survey with an XLSForm applies the roles in the XLSForm.  Roles not in it are kept and listed in a
+        warning.  The pii setting of questions is now saved on upload.
+     *  Uploading a survey as an XForm (.xml) file uses the same checks as an XLSForm, and translations of the same
+        language are merged.
+     *  A task rule that prepopulates its tasks no longer also marks them as blank.
+     *  On the settings page the Appearance tab is now Organisation Appearance and the Server tab is first.  The DHIS2
+        tab confirms a save, and all tabs show save errors on the page.
+     *  The case settings page is laid out more clearly.
 
 26.11.04
 --------
