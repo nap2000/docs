@@ -41,8 +41,8 @@ Release Pending.  Not available for download.
     and everyone assigned has the same access to the case.  The setting is off by default, so existing bundles work as
     before.  See :ref:`multiple_assignees`.
 
-    *   In the console, **Add user** adds somebody to the people who have the case and **Assign everyone in the role**
-        adds every member of a role who can be given it.  An administrator can take one person off, or everybody with
+    *   In the console, **Add user** adds somebody to the people who have the case, and choosing **Everyone in** a
+        role adds every member of the role who can be given it.  An administrator can take one person off, or everybody with
         **Unassign all**.  **Release** takes only you off.
     *   An escalation adds its people and takes off those an earlier escalation added; people assigned in the console
         stay.  An escalation to a role adds every member of the role who can access the record.

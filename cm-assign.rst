@@ -53,8 +53,9 @@ access to it.  Saves made by different people are merged, see :ref:`console_conf
 
 With multiple assignees:
 
-*  **Console.**  The **Assign User** dialog lists who has the case.  **Add user** adds somebody to them and
-   **Assign everyone in the role** adds every member of the selected role who can be given the case.  Each person
+*  **Console.**  The **Assign User** dialog lists who has the case.  Choose somebody in **Add user** and save to add
+   them.  To add a whole role, pick it in **Show users in role**, choose **Everyone in** the role at the top of
+   **Add user**, and save: every member of the role who can be given the case is added.  Each person
    added is checked as a single assignment is.  An administrator can take anyone off with the remove button next to
    their name, or take everybody off with **Unassign all**.
 *  **Lock for Editing** adds you to the people who have the case, even if others have it.  **Release** takes only you
