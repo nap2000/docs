@@ -61,8 +61,12 @@ Release Pending.  Not available for download.
 
 #.  A new operational issues report lists the problems that somebody needs to fix: conflicting updates waiting for
     review, notifications and alerts that failed, submissions that could not be loaded, filters that no longer work,
-    notifications whose survey has gone, and task problems.  It can be downloaded as a spreadsheet.  Administrators open
+    notifications whose survey has gone, task problems, and records assigned to people in a survey bundle that is not set
+    up for case management.  It can be downloaded as a spreadsheet.  Administrators open
     it from Operations, and analysts from the console.  See :doc:`operational-issues`.
+
+#.  Operations shows open cases and tasks by person, as well as by role and by survey bundle, and the panel that was
+    labelled Units (roles) is now named after the view it shows.  See :doc:`operations`.
 
 #.  Operations only shows the work of the projects you are a member of.  This applies to security managers too, who
     still see every role.

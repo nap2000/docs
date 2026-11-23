@@ -31,7 +31,7 @@ in turn links down to a single record.
 
 ::
 
-  L0  Overview        KPI tiles, backlog trend, open alerts, units table
+  L0  Overview        KPI tiles, backlog trend, open alerts, cases and tasks by role
         |
   L1  Unit (role)     one role's workload, throughput, overdue %, at-risk items
         |
@@ -75,10 +75,12 @@ The open alerts list shows the current case-management alerts, coloured by
 priority (high, medium, low) and showing the bundle and how long ago each was
 raised. Each alert links straight to the record it concerns.
 
-Units (roles)
-+++++++++++++
+Cases and tasks by role
++++++++++++++++++++++++
 
-A *unit* is a role from the ``role`` table - the organisation's unit of
+This panel has three views, chosen with the **By role**, **By survey bundle** and **By person** buttons in its header.
+
+**By role** (labelled *Units (roles)* before 26.12.01). A *unit* is a role from the ``role`` table - the organisation's unit of
 structure - not a security group. The units table lists one row per role that
 currently owns open work, with its open cases, open tasks, overdue tasks and
 overdue percentage. Each row is RAG-coloured on its overdue percentage (amber at
@@ -97,6 +99,17 @@ belongs to, and once in each of their own counts, so a team of two in the same u
 These rows link to the matching record list (L2). Non-security-managers only see
 the roles they are a member of.
 
+**By survey bundle** shows the status of the cases in each survey bundle that has open cases: the number open,
+how many are stale and how many are unassigned.  Each row is coloured red if any case is stale, or amber if any is
+unassigned.
+
+**By person** (26.12.01+) lists everybody with open work: the open cases they are an owner of, their open tasks,
+overdue tasks and overdue percentage, and the age in days of their oldest open case or task.  The most overdue are
+listed first, coloured as for roles.  The first 50 are shown; use the search box to find somebody further down.  Click
+a person to see the list of their open cases and tasks.  A case with several owners counts once for each of them, so
+the cases in this view can add up to more than the number of open cases.  As for roles, an administrator who is not a
+security manager only sees the people who share one of their roles.
+
 The time the figures were generated is shown beneath the table. Use the
 ``Refresh`` menu item to recompute the overview (results are cached briefly per
 user, so a refresh forces a fresh read).
@@ -104,7 +117,7 @@ user, so a refresh forces a fresh read).
 Unit detail (L1)
 ----------------
 
-Reached by clicking a role in the units table, the unit page shows that one
+Reached by clicking a role in the **Cases and tasks by role** panel, the unit page shows that one
 role's performance in depth:
 
 * open cases, open tasks, overdue count and overdue percentage;

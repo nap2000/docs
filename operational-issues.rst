@@ -42,6 +42,7 @@ Issues
    "Notification for a deleted survey", "An enabled notification whose survey, or every survey in whose bundle, has been deleted.  It will never be sent.", "The notification"
    "Tasks assigned to a deleted user", "Open tasks assigned to a user who has since been deleted", "The task group"
    "Task email not sent", "Emailed tasks that could not be sent", "The task group"
+   "Assigned records that are not cases", "Records in a survey bundle that are assigned to people, although the bundle is not set up for case management.  They reach the people they are assigned to but are not counted or shown as cases, so nobody is monitoring them.  Either set up case management for the bundle, with a status question, or take the people off the records.  The count is the number of records.  See :ref:`case-management-config`.", "The case management page for the bundle"
 
 Errors recorded before version 26.12.01 do not say which notification or alert they came from.  For these the
 Fix button opens the list of notifications, or the case management page, for the survey.
