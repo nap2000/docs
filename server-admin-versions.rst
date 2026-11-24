@@ -65,6 +65,16 @@ Release Pending.  Not available for download.
     up for case management.  It can be downloaded as a spreadsheet.  Administrators open
     it from Operations, and analysts from the console.  See :doc:`operational-issues`.
 
+#.  Server expressions are checked when they are saved.  A notification or case alert filter, task rule, PDF template
+    rule, role row filter, reference data filter or server calculation that will not work, for example because it names a
+    question the survey does not have or compares text with a number, is refused with a message that says why.  A survey
+    change that breaks an expression already saved warns about it, and the operational issues report lists it.  Filters
+    typed in the console and for exports get the same message.  A question whose name is longer than 52 characters can
+    now be used in an expression.  See :ref:`server-expressions-checks`.
+
+    **Check before upgrading**.  An integration that creates notifications, alerts or task rules through the API with
+    filters that do not work yet, expecting to fix them later, will now be refused.
+
 #.  Operations shows open cases and tasks by person, as well as by role and by survey bundle, and the panel that was
     labelled Units (roles) is now named after the view it shows.  See :doc:`operations`.
 

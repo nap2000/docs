@@ -39,6 +39,7 @@ Issues
    "Submission not loaded", "Submissions that could not be loaded into the database", "The monitor page, showing that survey"
    "Notification filter does not work", "An enabled notification whose filter no longer works with its survey, for example because a question it uses was deleted or renamed.  This is checked when the report is opened, so it is found before a submission fails.", "The notification"
    "Case alert filter does not work", "A case management alert whose filter no longer works with its survey", "The alert on the case management page"
+   "Server expression does not work", "A task rule, PDF template rule, role row filter, reference data filter or server calculation that no longer works with its survey bundle, for example because a question it uses was deleted (26.12.01+).  See :ref:`server-expressions-checks`.", "The task group, or the editor for a server calculation.  The templates, roles and reference filter pages open on your current survey."
    "Notification for a deleted survey", "An enabled notification whose survey, or every survey in whose bundle, has been deleted.  It will never be sent.", "The notification"
    "Tasks assigned to a deleted user", "Open tasks assigned to a user who has since been deleted", "The task group"
    "Task email not sent", "Emailed tasks that could not be sent", "The task group"

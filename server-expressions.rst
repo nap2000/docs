@@ -12,6 +12,37 @@ Introduction
 It is often useful to write expressions that manipulate data on the server.  These can be used to filter data for reports
 or in server calculations that create new, derived values, from the data already in a submission.
 
+.. _server-expressions-checks:
+
+Checking Expressions
+--------------------
+
+From version 26.12.01 an expression is checked when it is saved, and one that will not work is refused with a message
+that says why.  This applies to notification filters, case alert filters, task rule filters and the expression a task
+rule uses to find who to assign to, PDF template rules, role row filters, reference data filters and server
+calculations.  The check finds:
+
+*  A question that is not in the survey bundle, for example ``${agee} > 5``
+*  A question that does not store an answer, such as a group or a server calculation
+*  A question in a sub form where only the main form can be used.  Case alerts, reference data filters and the task rule
+   assignment only see the main form.
+*  Values of different types compared, for example a text question compared with a number ``${name} > 5``, or a number
+   question compared with text ``${age} = 'abc'``
+*  A filter that is not true or false, for example ``${name}`` on its own
+*  A function that cannot be used with the question, for example ``round(${name})`` on a text question
+*  A missing quote
+
+The check does not need any data, so it works before anything has been submitted.  An expression that is saved again
+without being changed is not checked, so a notification can still be turned off after a change to its survey has broken
+its filter.
+
+A filter typed in the console or for an export is checked in the same way before it is run, and gets the same message.
+
+When a change to a survey, in the editor or by uploading an XLSForm, stops an expression that is already saved from
+working, for example by deleting a question that a notification filter uses, the change is still made and a warning
+lists the expressions it broke.  The survey's own server calculations and role row filters must work for an upload to
+be accepted.  Expressions that no longer work are also listed in the :doc:`operational-issues` report.
+
 Referring to Questions
 ----------------------
 
