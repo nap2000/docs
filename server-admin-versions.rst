@@ -97,6 +97,11 @@ Release Pending.  Not available for download.
     *   A case closed by the submission that creates it, or by importing data, is recorded in its history.
     *   Operations record lists show how many times each case has been reopened.
 
+#.  The History tab in the console is replaced by a Timeline tab.  It shows everything that has happened to a record,
+    grouped by day, with buttons to show or hide each kind of event and a list of the record's files.  The details,
+    Resend and Edit Task buttons and conflict review work as they did in the History tab.  Messages sent in a WhatsApp
+    or SMS conversation are now shown as well.  See :ref:`console_timeline`.
+
 #.  Operations shows open cases and tasks by person, as well as by role and by survey bundle, and the panel that was
     labelled Units (roles) is now named after the view it shows.  See :doc:`operations`.
 

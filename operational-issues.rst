@@ -33,7 +33,7 @@ Issues
    :header: "Issue", "What it means", "Fix opens"
    :widths: 20, 50, 30
 
-   "Conflicting update", "Two people changed the same answers of a record and the conflict has not been reviewed.  See :ref:`console_conflicts`.", "The record in the console, review it in the History tab"
+   "Conflicting update", "Two people changed the same answers of a record and the conflict has not been reviewed.  See :ref:`console_conflicts`.", "The record in the console, review it in the Timeline tab"
    "Notification error", "A notification failed, for example its filter could not be evaluated or the email could not be sent", "The notification"
    "Case alert error", "A case management alert could not be evaluated", "The alert on the case management page"
    "Submission not loaded", "Submissions that could not be loaded into the database", "The monitor page, showing that survey"

@@ -323,34 +323,37 @@ A page is then displayed that allows you to make changes to all selected records
 
 .. _console_history:
 
-History Tab
-+++++++++++
+.. _console_timeline:
 
-Clicking on the history tab will show the changes that have been made to the record.  
+Timeline Tab
+++++++++++++
 
-.. figure::  _images/console3.jpg
-   :align:   center
-   :alt: Record History
+Requires Smap Server version 26.12+.  Earlier versions show the same events in a **History** tab.
 
-   Record History
-   
-In the case above there has been one change to the record.  That change only affected a single question.
+The timeline tab shows everything that has happened to a record, newest first, grouped by day.  Each entry has an icon,
+the time, what happened and who did it, the program that acted for them if there was one, and the survey used.
+Select **Details** under an entry to see more:
 
-If you click on the button labelled "1 Changes" then the change is shown.  In this case the work area was adjusted, The old work
-area being the blue square while the new work area is the red square.  
+*  An update shows the old and new value of each answer it changed.  A change to a location, such as a work area, is
+   shown on a map with the old value in blue and the new value in red.  The rows of a repeating group that changed are
+   shown in tabs.
+*  A task shows each change to its status, who it is assigned to and when it is scheduled.
+*  A notification shows the text that was sent and its attachments.  An email reply shows its text and attachments.
+*  A conflicting update shows the answers in conflict, where it can be reviewed, see :ref:`console_conflicts`.
 
-.. note::
+A notification has a **Resend** button and a task has an **Edit Task** button.
 
-  Of course if more than one value in the survey had changed then the label of the button would indicate the number of changes.
+Select the buttons at the top to show or hide:
 
-.. figure::  _images/console4.jpg
-   :align:   center
-   :alt: Record Change Detail
+*  **Forms**.  Submissions, updates, deletes and restores, and the case being opened, closed and reopened.
+*  **Messages**.  Notifications sent, email replies, and SMS and WhatsApp messages received and sent.
+*  **Tasks**, **Assignments**, **Alerts** and **Conflicts**.
+*  **Files**.  A list of the files of the record: the current answers to photo, audio, video and file questions, files
+   that an update replaced, files attached to notifications that were sent and files attached to email replies.  Click a
+   file to open it.
 
-   Record Change Detail
-   
-The history tab show changes, tasks and notifications associated with a record.  You can select **sliders** at the top left
-of the history page to filter / show these event types.
+Select **Newest first** to change the order to oldest first.  The choices are remembered in your browser.  The timeline
+shows the record itself, not the records in its sub forms.
 
 Assigning Tasks
 +++++++++++++++
@@ -365,7 +368,7 @@ The differences compared to the task management page are:
     can work on the current record where as other surveys not in the survey group cannot.
 3.  A task group with the same name as the selected survey will be created automatically to hold this task.
 
-Tasks assigned to a record will be shown in the History tab where you can see their status and edit them.
+Tasks assigned to a record are shown in the Timeline tab where you can see their status and edit them.
 
 Sending Notifications
 +++++++++++++++++++++
@@ -376,7 +379,7 @@ Click **Send Notification** to send a notification about the record.  The types 
 *  Message Conversation.  A reply by SMS or WhatsApp to the number that started the case.  Only offered for cases that were
    started by a message, see :ref:`replying-to-messages`.
 
-Notifications are shown in the record history.  Next to each notification is a button labelled "Resend" that can be
+Notifications are shown in the Timeline tab.  Next to each notification is a button labelled "Resend" that can be
 clicked to resend it.
 
 .. note::
@@ -385,10 +388,10 @@ clicked to resend it.
     is switched off by default and is enabled for the organisation by the setting **Allow notifications to be sent from
     WebForms** in the **Other Options** tab of the settings page, see :ref:`other-settings`.
 
-Replies to emails, including attachments, will also be shown in the History. This is currently only available when AWS SES is configured as
+Replies to emails, including attachments, will also be shown in the Timeline. This is currently only available when AWS SES is configured as
 the email server.
 
-Case management alerts that have been triggered for the record are also shown in the History.  Use the **Alerts** slider to
+Case management alerts that have been triggered for the record are also shown in the Timeline.  Use the **Alerts** button to
 show or hide them.  Notifications sent by an alert are shown as separate entries.
 
 .. _console_conflicts:
@@ -410,9 +413,10 @@ from a version that somebody else has changed since it was opened, the changes a
    applies to a repeating group row that one person deleted and the other changed.
 
 Merges without a conflict are not recorded separately, they appear as a normal change in the history.  Each conflict is
-recorded in the record's history, with the status **Unresolved**.  Use the **Conflicts** slider to show or hide them.
+recorded in the record's history, with the status **Unresolved**.  Use the **Conflicts** button in the Timeline tab to show or
+hide them.
 
-Click the button showing the number of conflicting answers to see them.  For each answer in conflict the history shows:
+Select **Details** under the conflict to see the answers.  For each answer in conflict the timeline shows:
 
 *  **When opened**.  The value when the person saving opened the record.
 *  **Other change**.  The value saved by the other person, who is named along with the time of their change.
@@ -425,7 +429,7 @@ see which value it is.
 To review a conflict choose, for each answer, **Keep applied** or **Use other change** and then select **Save** at the
 bottom of the panel.  Each answer starts as **Keep applied**, so saving without changing anything accepts the values
 that were applied.
-Choosing **Use other change** puts the other person's value back, and this is shown as a new change in the history.
+Choosing **Use other change** puts the other person's value back, and this is shown as a new change in the timeline.
 When every answer has been reviewed the conflict status becomes **Resolved** and shows who reviewed it.
 
 A record with unresolved conflicts can still be updated and closed as normal.  To be told when a conflict happens create a
