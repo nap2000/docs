@@ -93,6 +93,10 @@ Release Pending.  Not available for download.
     it, as a submission already did.  A later survey in a bundle that does not ask the status question no longer opens a
     closed case.  See :ref:`case_reopen`.
 
+    *   The closed statuses are chosen from the status question's answers when it is a select one question.
+    *   A case closed by the submission that creates it, or by importing data, is recorded in its history.
+    *   Operations record lists show how many times each case has been reopened.
+
 #.  Operations shows open cases and tasks by person, as well as by role and by survey bundle, and the panel that was
     labelled Units (roles) is now named after the view it shows.  See :doc:`operations`.
 

@@ -14,8 +14,9 @@ Closing and Reopening
 
 Requires Smap Server version 26.12+.
 
-Several status values can close a case, for example resolved, withdrawn and duplicate.  Enter them in **Closed statuses**
-in the case settings, separated by commas.
+Several status values can close a case, for example resolved, withdrawn and duplicate.  Choose them in **Closed statuses**
+in the case settings.  When the status question is a select one question its answers are listed to select from; hold
+Ctrl, or Cmd on a Mac, to select more than one.  For any other status question enter the values separated by commas.
 
 A case closes and reopens because of its data.  There is no separate action:
 
@@ -28,7 +29,11 @@ A case closes and reopens because of its data.  There is no separate action:
    trigger is sent, see :ref:`notifications`.
 
 The change can be a submission, including from a later survey in the bundle that does not ask the status question, an
-update in the console, a bulk update, or an update through the API.
+update in the console, a bulk update, or an update through the API.  A case can also be closed by the submission that
+creates it, or by importing data, and the history records that too.  An imported case keeps the closed date it brings
+with it.
+
+In Operations, record lists show how many times each case has been reopened.
 
 .. _criticality_case:
 
