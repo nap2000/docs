@@ -95,6 +95,10 @@ Release Pending.  Not available for download.
         had nobody to send to is shown as "No recipients".
      *  The workflow page shows the subject and recipients of email and SMS steps, and notifications on a bundle can be
         edited from it.
+     *  Saving a task step on the workflow page no longer removes a task rule that takes the assignee from the data.
+        The step now shows that rule, which is still changed in task management.  A rule removed this way by an earlier
+        version has to be set again in task management.
+     *  Errors when saving a PDF template rule, or a step on the workflow page, are now shown.
      *  In Operations a long list of open alerts scrolls within its panel.
      *  In the console a record can be locked and edited from a row of one of its sub forms.  Sub form rows can no longer
         be deleted or bulk edited on their own.
