@@ -332,7 +332,7 @@ Requires Smap Server version 26.12+.  Earlier versions show the same events in a
 
 The timeline tab shows everything that has happened to a record, newest first, grouped by day.  Each entry has an icon,
 the time, what happened and who did it, the program that acted for them if there was one, and the survey used.
-Select **Details** under an entry to see more:
+Select **Show details** under an entry to see more, and **Hide details** to close them again:
 
 *  An update shows the old and new value of each answer it changed.  A change to a location, such as a work area, is
    shown on a map with the old value in blue and the new value in red.  The rows of a repeating group that changed are
@@ -348,9 +348,9 @@ Select the buttons at the top to show or hide:
 *  **Forms**.  Submissions, updates, deletes and restores, and the case being opened, closed and reopened.
 *  **Messages**.  Notifications sent, email replies, and SMS and WhatsApp messages received and sent.
 *  **Tasks**, **Assignments**, **Alerts** and **Conflicts**.
-*  **Files**.  A list of the files of the record: the current answers to photo, audio, video and file questions, files
-   that an update replaced, files attached to notifications that were sent and files attached to email replies.  Click a
-   file to open it.
+*  **Files**.  A list of the files that came with the record's messages: files attached to notifications that were sent
+   and files attached to email replies.  Click a file to open it.  Photos and other files that are answers to questions
+   are part of the record's data, an update that changes one shows the old and new file in its details.
 
 Select **Newest first** to change the order to oldest first.  The choices are remembered in your browser.  The timeline
 shows the record itself, not the records in its sub forms.
@@ -416,7 +416,7 @@ Merges without a conflict are not recorded separately, they appear as a normal c
 recorded in the record's history, with the status **Unresolved**.  Use the **Conflicts** button in the Timeline tab to show or
 hide them.
 
-Select **Details** under the conflict to see the answers.  For each answer in conflict the timeline shows:
+Select **Show details** under the conflict to see the answers.  For each answer in conflict the timeline shows:
 
 *  **When opened**.  The value when the person saving opened the record.
 *  **Other change**.  The value saved by the other person, who is named along with the time of their change.
