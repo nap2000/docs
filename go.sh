@@ -7,6 +7,12 @@ else
   exit 1
 fi
 
+# The expression tables are generated from the spec the server checks expressions with
+if ! python3 tools/expression_tables.py --check; then
+  python3 tools/expression_tables.py || exit 1
+  echo "Expression tables updated from form-expressions.json, commit them with the docs" >&2
+fi
+
 mkdir -p _build/html
 make html
 tar -zcf docs.tgz --no-xattrs _build/html
