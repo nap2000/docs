@@ -7,6 +7,29 @@ A status question and the value of that status question that indicates a case is
 records, that are not assigned to a user, are then hidden by default in the console although they can be shown if the "Include Completed Cases" option is selected.
 (:ref:`case-management-config`)
 
+.. _case_reopen:
+
+Closing and Reopening
+---------------------
+
+Requires Smap Server version 26.12+.
+
+Several status values can close a case, for example resolved, withdrawn and duplicate.  Enter them in **Closed statuses**
+in the case settings, separated by commas.
+
+A case closes and reopens because of its data.  There is no separate action:
+
+*  When a change to a record sets its status to one of the closed values, the case closes.  The date it closed is
+   recorded, the history shows who had the case, and they are all taken off it.  Changing to another closed value
+   leaves it closed, with the date it first closed.
+*  When a change sets the status of a closed case to any other value, the case reopens.  The history records it, the
+   people who had the case when it closed get it back, unless they can no longer be given it, in which case the history
+   lists them.  Its alerts can fire again, timed from when it reopened, and a notification with the **Case reopened**
+   trigger is sent, see :ref:`notifications`.
+
+The change can be a submission, including from a later survey in the bundle that does not ask the status question, an
+update in the console, a bulk update, or an update through the API.
+
 .. _criticality_case:
 
 Criticality

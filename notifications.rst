@@ -41,6 +41,7 @@ The following can trigger a notification:
 *  A periodic timer. Daily, weekly, monthly, quarterly or yearly.
 *  A Server Calculation change
 *  A conflicting update.  Somebody saved a record and changed answers that somebody else had changed after it was opened
+*  A case reopened.  A change of status opened a closed case again
 
 Submission
 ++++++++++
@@ -141,6 +142,15 @@ Sent whenever a record is saved with answers that somebody else changed after th
 :ref:`console_conflicts`.  Unlike a submission notification it is sent for every conflict, not once for each record.
 The settings are the same as for a submission: the survey or bundle and an optional filter.  Nothing is sent unless a
 notification with this trigger is created.
+
+Case Reopened
++++++++++++++
+
+Requires Smap Server version 26.12+.
+
+Sent when a change to a record moves its status from a closed value back to an open one, see :ref:`complete_case`.
+This can be a submission, an update in the console or through the API.  The settings are the same as for a
+submission: the survey or bundle and an optional filter.
 
 Target
 ------

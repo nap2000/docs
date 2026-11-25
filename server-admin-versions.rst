@@ -86,6 +86,13 @@ Release Pending.  Not available for download.
     **Check before upgrading**.  Surveys are no longer checked by loading them with the JavaRosa library that
     FieldTask uses, so test new surveys in FieldTask before they are used.
 
+#.  Several status values can close a case, and a case reopens when a change of status moves it back to an open value.
+    The same rule applies to a submission, a console or bulk update, and an update through the API.  Closing records in
+    the history who had the case; reopening gives the case back to them, restarts its alerts from the reopening, and
+    sends notifications with the new **Case reopened** trigger.  Closing a case in the console now takes everyone off
+    it, as a submission already did.  A later survey in a bundle that does not ask the status question no longer opens a
+    closed case.  See :ref:`case_reopen`.
+
 #.  Operations shows open cases and tasks by person, as well as by role and by survey bundle, and the panel that was
     labelled Units (roles) is now named after the view it shows.  See :doc:`operations`.
 
