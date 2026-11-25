@@ -57,8 +57,7 @@ Text Functions
 Mathematical
 ------------
 
-Referring to data inside repeats, also called sub-forms, can be quite complex as you often need to identify which iteration of the 
-sub form you are referring to.  These functions can assist.
+These functions work with numbers.
 
 .. csv-table:: Math Functions:
   :width: 80

@@ -75,6 +75,17 @@ Release Pending.  Not available for download.
     **Check before upgrading**.  An integration that creates notifications, alerts or task rules through the API with
     filters that do not work yet, expecting to fix them later, will now be refused.
 
+#.  Survey expressions are checked when a survey is uploaded and, for the first time, when it is changed in the
+    online editor.  A relevant, constraint, calculation or choice filter that cannot be read, uses a function that does
+    not exist or gives it the wrong number of arguments, or calculations and relevance that depend on each other in a
+    loop, are reported with the question, the column and the character where the problem is.  A select with no
+    choices is also reported.  The editor does not save a change that causes one of these problems.  Problems already
+    in a survey, and a function used wrongly in a constraint or choice filter, are shown as warnings.  See
+    :ref:`expression-reference`.
+
+    **Check before upgrading**.  Surveys are no longer checked by loading them with the JavaRosa library that
+    FieldTask uses, so test new surveys in FieldTask before they are used.
+
 #.  Operations shows open cases and tasks by person, as well as by role and by survey bundle, and the panel that was
     labelled Units (roles) is now named after the view it shows.  See :doc:`operations`.
 
