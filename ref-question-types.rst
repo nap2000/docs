@@ -998,6 +998,8 @@ does not need to be where the user is standing.
 The appearance **history-map** can be used on geopoint questions inside a repeat. Previous geopoint values
 added for that question will then be shown in the background for context. Requires FieldTask 6.703 or above.
 
+The parameter **reference-geometry** shows existing features on the map for context, see :ref:`reference-geometry`.
+
 .. csv-table:: survey
   :header: type, name, label
 
@@ -1025,6 +1027,8 @@ Records a line
 The appearance **history-map** can be used on geotrace questions inside a repeat. Previous geotrace values
 added for that question will then be shown in the background for context. Requires FieldTask 6.703 or above.
 
+The parameter **reference-geometry** shows existing features on the map for context, see :ref:`reference-geometry`.
+
 See :ref:`editing-lines-shapes` for drawing and changing the line in WebForms.
 
 geoshape
@@ -1040,6 +1044,112 @@ Records a shape.
 
 The appearance **history-map** can be used on geoshape questions inside a repeat. Previous geoshape values
 added for that question will then be shown in the background for context. Requires FieldTask 6.703 or above.
+
+The parameter **reference-geometry** shows existing features on the map for context, see :ref:`reference-geometry`.
+
+.. _reference-geometry:
+
+Showing reference features on the map
++++++++++++++++++++++++++++++++++++++
+
+Requires Smap Server version 26.12.01+ and FieldTask 5.5.01+.  Not shown in WebForms.
+
+The **reference-geometry** parameter shows existing points, lines or shapes on the map of a geopoint, geotrace
+or geoshape question while it is being answered.  For example the boundaries of fields can be shown while a
+route is recorded, or the plots already recorded can be shown while a boundary is drawn around them.  The
+features are only for context, they are not part of the answer.
+
+The features can come from a choice list or from a repeat.
+
+**From a choice list**
+
+Set the parameter to the name of a list in the choices sheet.  The list needs a **geometry** column holding
+each feature.  The other columns, such as **name** and **label**, are set as for any choice.
+
+*Format of the geometry column*
+
+Each point is written as latitude, longitude, altitude and accuracy separated by spaces, in the same format that
+a geopoint question records.  Latitude and longitude are in decimal degrees, latitude first.  Altitude and
+accuracy can be set to 0.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 15 45 40
+
+   * - Feature
+     - Format
+     - Example
+   * - Point
+     - One point
+     - ``-27.4512 153.0151 0 0``
+   * - Line
+     - Two or more points separated by semicolons
+     - ``-27.4490 153.0120 0 0;-27.4500 153.0140 0 0;-27.4495 153.0170 0 0``
+   * - Shape
+     - Three or more points separated by semicolons, with the first point repeated at the end to close the shape
+     - ``-27.4480 153.0130 0 0;-27.4480 153.0160 0 0;-27.4505 153.0160 0 0;-27.4505 153.0130 0 0;-27.4480 153.0130 0 0``
+
+One list can hold a mix of points, lines and shapes.  A choice with an empty geometry is not shown, nor is a
+feature with any point outside the valid range (latitude -90 to 90, longitude -180 to 180).
+
+*Example*
+
+A geopoint question with a map, showing a bus stop, a path and a park near where the point is recorded:
+
+.. csv-table:: survey
+  :header: type, name, label, appearance, parameters
+
+  geopoint, meeting_point, Mark the meeting point, placement-map, reference-geometry=landmarks
+
+.. csv-table:: choices
+  :header: list_name, name, label, geometry
+
+  landmarks, bus_stop, Bus stop, -27.4512 153.0151 0 0
+  landmarks, path, Footpath, -27.4490 153.0120 0 0;-27.4500 153.0140 0 0;-27.4495 153.0170 0 0
+  landmarks, park, Park, -27.4480 153.0130 0 0;-27.4480 153.0160 0 0;-27.4505 153.0160 0 0;-27.4505 153.0130 0 0;-27.4480 153.0130 0 0
+
+*Filtering the features*
+
+A **choice_filter** limits the features shown, in the same way as for a select question.  Other columns in the
+choices sheet, such as region below, can be used in the filter.
+
+.. csv-table:: survey
+  :header: type, name, label, parameters, choice_filter
+
+  select_one regions, region, Region, ,
+  geotrace, route, Record the route, reference-geometry=fields, region = ${region}
+
+.. csv-table:: choices
+  :header: list_name, name, label, region, geometry
+
+  regions, north, North, ,
+  regions, south, South, ,
+  fields, f1, Field 1, north, -27.4480 153.0130 0 0;-27.4480 153.0160 0 0;-27.4505 153.0160 0 0;-27.4505 153.0130 0 0;-27.4480 153.0130 0 0
+  fields, f2, Field 2, south, -27.4510 153.0170 0 0;-27.4510 153.0200 0 0;-27.4535 153.0200 0 0;-27.4535 153.0170 0 0;-27.4510 153.0170 0 0
+  fields, f3, Field 3, north, -27.4450 153.0100 0 0;-27.4455 153.0125 0 0;-27.4475 153.0110 0 0;-27.4450 153.0100 0 0
+
+When North is selected only fields 1 and 3 are shown.
+
+**From a repeat**
+
+Set the parameter to ``${`` followed by the name of a repeat and ``}``.  The repeat must contain a question
+called **geometry**, and the answers to that question in each repeat are shown.
+
+.. csv-table:: survey
+  :header: type, name, label, parameters
+
+  begin repeat, plots, Plots,
+  text, plot_name, Plot name,
+  geopoint, geometry, Plot location,
+  end repeat, plots, ,
+  geoshape, boundary, Draw a boundary around the plots, reference-geometry=${plots}
+
+Notes:
+
+*  The map opens at the user's location and is not zoomed to the features.  Features outside the visible area
+   appear when the map is moved or zoomed out.
+*  The parameter can also be set in the online editor.  A choice filter can only be added in an XLSForm.
+*  The same parameter is used by pyxform, so forms written for ODK Collect work unchanged.
 
 .. _editing-lines-shapes:
 

@@ -29,6 +29,13 @@ so that the map is shown.
 
    Appearance history-map in FieldTask on a geopoint question - one previous location shown in blue
 
+Show features from a list or a repeat
+-------------------------------------
+
+The parameter **reference-geometry** on a geopoint, geotrace or geoshape question shows features from a choice
+list, or from the geometry question in a repeat, on the map while the question is answered.  A choice filter can
+limit the features shown.  See :ref:`reference-geometry`.  Requires Smap Server version 26.12.01+ and FieldTask 5.5.01+.
+
 Get a previous recorded location using pulldata
 -----------------------------------------------
 
