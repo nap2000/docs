@@ -959,6 +959,10 @@ handle starting at 50.
 A form that breaks one of these rules is rejected when it is uploaded, with a message giving the row and the
 problem.  The same parameters are used by pyxform, so forms written for ODK Collect work unchanged.
 
+In the online editor select **Parameters** from the property menu and click **Edit** on a range question.  Enter
+**Tick interval** and **Starting value shown**, and choose the list for **Tick labels**.  The values are checked
+when you click **Done**.  The **No ticks** option is under **Appearance**.
+
 Chart
 -----
  
@@ -1071,6 +1075,39 @@ The parameter **reference-geometry** shows existing features on the map for cont
 
    Results after requesting a geopoint
 
+
+.. _background-geopoint:
+
+background-geopoint
++++++++++++++++++++
+
+Requires Smap Server version 26.12.01+ and FieldTask 5.5.01+.  Not recorded in WebForms.
+
+Records the user's location, without showing a question, when the answer to another question changes.  For example
+to record where each sample was taken without asking the user to press a GPS button.
+
+**Type**
+  background-geopoint
+
+The **trigger** column names the question whose change records the location.  It is required.  A calculation
+cannot be used.
+
+.. csv-table:: survey
+  :header: type, name, label, trigger
+
+  text, sample_id, Sample ID,
+  background-geopoint, sample_location, , ${sample_id}
+
+Each time **sample_id** is changed the location is recorded in **sample_location**.  The location is stored as a
+normal geopoint so it can be shown on maps and exported.
+
+Notes:
+
+*  The location is taken a few seconds after the change, so it may be slightly behind a user who is moving.
+*  If the trigger question is answered again the location is replaced.
+*  In the online editor add a **Background GPS Point** question then select **Trigger** from the property menu and
+   enter the trigger question, for example ``${sample_id}``.
+*  The same type is used by pyxform, so forms written for ODK Collect work unchanged.
 
 geotrace
 ++++++++
@@ -1207,7 +1244,9 @@ Notes:
 
 *  The map opens at the user's location and is not zoomed to the features.  Features outside the visible area
    appear when the map is moved or zoomed out.
-*  The parameter can also be set in the online editor.  A choice filter can only be added in an XLSForm.
+*  In the online editor select **Parameters** from the property menu, click **Edit** on the question and choose
+   the list or repeat under **Reference features**.  A repeat is offered if it has a question called **geometry**.
+   A choice filter can only be added in an XLSForm.
 *  The same parameter is used by pyxform, so forms written for ODK Collect work unchanged.
 
 .. _editing-lines-shapes:
