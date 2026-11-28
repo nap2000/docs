@@ -900,6 +900,65 @@ When **rating** is specified as the appearance then the range is shown as stars 
 
    Rating Range widget in fieldTask
 
+.. _range-ticks:
+
+Range ticks, placeholder and labels
++++++++++++++++++++++++++++++++++++
+
+Requires Smap Server version 26.12.01+ and FieldTask 5.5.01+.  Not shown in WebForms, where the slider is unchanged.
+
+Three more parameters change how the slider looks.  They can be used with no appearance or with the **vertical** or
+**no-ticks** appearance.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 80
+
+   * - Parameter
+     - Effect
+   * - tick_interval
+     - Show a tick mark every this many units, rather than at every step.  It must be a multiple of **step**.
+   * - placeholder
+     - Show the slider handle at this value before an answer is given, as a hint.  It is not recorded as an
+       answer.  It must be **start** plus a multiple of **step**, between **start** and **end**.
+   * - tick_labelset
+     - The name of a list in the choices sheet whose choices label the ticks.  The **name** of each choice is the
+       value it labels and its **label** is the text shown.  Each name must be a number on a tick, that is
+       **start** plus a multiple of **tick_interval**, or of **step** if there is no tick_interval.
+
+The appearance **no-ticks** hides the tick marks.  With no-ticks the tick_labelset can only label **start** and
+**end**.
+
+If tick_interval or placeholder is a decimal the answer is recorded as a decimal, as for start, end and step.
+
+.. csv-table:: survey
+  :header: type, name, label, appearance, parameters
+
+  range, rating, How was the service?, , start=0 end=10 step=1 tick_interval=2 placeholder=4 tick_labelset=scale
+  range, agree, The training was useful, vertical, start=1 end=5 step=1 tick_labelset=agree
+  range, level, Pain level, no-ticks, start=0 end=100 step=5 placeholder=50 tick_labelset=ends
+
+.. csv-table:: choices
+  :header: list_name, name, label
+
+  scale, 0, Bad
+  scale, 6, OK
+  scale, 10, Good
+  agree, 1, Strongly disagree
+  agree, 2, Disagree
+  agree, 3, Neutral
+  agree, 4, Agree
+  agree, 5, Strongly agree
+  ends, 0, Low
+  ends, 100, High
+
+The first question shows a tick every 2 with the handle starting at 4, and Bad, OK and Good under 0, 6 and 10.  The
+second is a vertical slider with each value labelled.  The third has no ticks, Low and High at the ends, and the
+handle starting at 50.
+
+A form that breaks one of these rules is rejected when it is uploaded, with a message giving the row and the
+problem.  The same parameters are used by pyxform, so forms written for ODK Collect work unchanged.
+
 Chart
 -----
  

@@ -25,7 +25,6 @@ Surveys
   :ref:`Read and match finger prints<feature-fingerprints>`,yes, no, SmapServer 23.01
   :ref:`background-audio-recording`, yes, no, FieldTask 6.300 - SmapServer 21.03
   :ref:`choices-from-repeat`,yes, yes, SmapServer 21.04
-  :ref:`Show reference features on the map of a location question<reference-geometry>`, yes, no, FieldTask 5.5.01 - SmapServer 26.12.01
   :ref:`Matrix layout of questions<matrix>`,no, yes, 
 
 Using Reference Data in Surveys
